@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<idsng> 
+  <files>
+    <file>D:\AgnisysProjects\IDS-NextGen\IDSNextGen\ids_templates\DashBoard.html</file>
+    <file>C:\Users\Agnisys\Desktop\workspace\Allegro_test\test_import\test.idsng</file>
+    <file>C:\Users\Agnisys\Desktop\workspace\Allegro_test\test_import\193001AA_ASIC_Specification_24May.idsng</file>
+    <file>C:\Users\Agnisys\Desktop\workspace\Allegro_test\tcl_block\tcl_block.idsng</file>
+    <file>C:\Users\Agnisys\Desktop\workspace\Allegro_test\tcl_block\subblock.idsng</file>
+  </files>
+</idsng>

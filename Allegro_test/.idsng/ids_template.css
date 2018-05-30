@@ -1,0 +1,592 @@
+/************************************************************************param view start**********************************************************************/
+.seqcmd{
+	width: 10%
+}
+
+.seqcmdval{
+	width: 22%;
+}
+
+.seqcmddesc{
+	width: 24%;
+}
+
+.seqcmdrefpath{
+	width: 14%;
+}
+
+#regdivcontainer {
+	outline: none;
+}
+
+.dragtarget {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.overflow {
+	width: 10em;
+	outline: 1px solid #000;
+	margin: 0 0 2em 0;
+	/**			* Required properties to achieve text-overflow			*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.droptarget {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.regtab {
+	table-layout: fixed;
+	border: 1px solid #aaaaaa;
+	width: 100%;
+	height: 22px;
+	border-collapse: collapse;
+	font-size: 12px;
+}
+
+.regtab td {
+	border: 1px solid #aaaaaa;
+	height: 15px;
+	text-align: center;
+}
+
+.dragtarget1 {
+	background-color: #d4e0e2;
+	height: 100%;
+	width: 100%;
+}
+
+.regtab tr.regheader td {
+	background-color: black;
+	height: 3px;
+}
+
+.regcontainer {
+	table-layout: fixed;
+	width: 85%;
+	border: 1px solid #aaaa;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 12px;
+	font-family: serif;
+	margin-left: 5%;
+}
+
+.regcontainer td {
+	border: 1px solid grey;
+}
+
+.regcontainer .header {
+	width: 90px;
+}
+
+.reggroup, .endreggroupparam {
+	border: 1px solid #aaaa;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 12px;
+	font-family: serif;
+	margin-left: 5%;
+	width: 85%;
+	background-color: #334548;
+	color: white;
+}
+
+.reggroup td {
+	border: 1px solid grey;
+}
+
+body {
+	background-color: lightgrey;
+}
+
+.maindiv {
+	background-color: white;
+	width: 62%;
+	margin-left: 8%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	min-height: 500px;
+	box-shadow: 1px 1px 1px grey;
+	float: left;
+}
+
+.menu {
+	width: 150px;
+	box-shadow: 3px 3px 5px #888888;
+	border-style: solid;
+	border-width: 1px;
+	border-color: grey;
+	border-radius: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	position: fixed;
+	display: none;
+}
+
+.menu-item {
+	height: 20px;
+}
+
+.menu-item:hover {
+	background-color: #6CB5FF;
+	cursor: pointer;
+}
+
+#diffview {
+	height: 300px;
+	width: 180px;
+	border: 1px solid black;
+	float: left;
+	padding: 2px;
+}
+
+.difftab {
+	float: left;
+	border: 1px solid black;
+	width: 90px;
+}	
+/************************************************************************param view end***********************************************************************/
+
+.autocomplete {
+	/*the container must be positioned relative:*/
+	position: absolute;
+	/*display: inline-block;*/;
+}
+
+input {
+	border: 1px solid transparent;
+	background-color: #f1f1f1;
+	padding: 10px;
+	font-size: 16px;
+}
+
+input[type=text] {
+	background-color: #f1f1f1;
+	/*width: 100%;*/;
+}
+
+input[type=submit] {
+	background-color: DodgerBlue;
+	color: #fff;
+	cursor: pointer;
+}
+
+.autocomplete-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	opacity: 0.9;
+}
+
+.autocomplete-items div {
+	padding: 5px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+	/*when hovering an item:*/
+	background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+	/*when navigating through the items using the arrow keys:*/
+	background-color: DodgerBlue !important;
+	color: #ffffff;
+}
+
+#mlHintClose {
+	float: right;
+	margin-top: -2%;
+	margin-right: -9%;
+	font-size: 20px;
+}
+
+#mlHintContainer {
+	border: 1px solid grey;
+	width: 15%;
+	position: fixed;
+	margin-top: 12%;
+	margin-left: 66%;
+	padding: 0px 20px 2px 8px;
+	font-family: serif;
+	font-size: 12px;
+	box-shadow: 1px 1px grey;
+	background-color: white;
+	z-index: 99;
+
+}
+
+#seqdivcontainer {
+	-webkit-user-modify: read-write;
+	outline: none;
+}
+
+.seq {
+	width: 100% !important;
+	margin-left: 0px !important;
+}
+
+.seq table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	margin-left: 0px !important;
+}
+
+.command .lblvalue {
+	width: 5%;
+}
+
+.hintcls {
+	width: 200px;
+	height: 46px;
+	position: absolute;
+	margin-left: 208px;
+}
+
+.disablecell {
+	background-color: #e4e4e4;
+	-webkit-user-modify: read-only !important;
+}
+
+.refpathtd {
+	padding: 0;
+	padding-left: 0 !important;
+}
+
+.refpathtab {
+	width: 100% !important;
+	margin-left: 0 !important;
+	border: none;
+	box-shadow: none;
+}
+
+.lblrefname {
+	width: 8%;
+}
+
+.lblpath {
+	width: 7%;
+}
+
+.lbltype {
+	width: 8%;
+}
+
+.reftype {
+	width: 17%;
+	-webkit-user-modify: read-write;
+}
+
+.lblfieldname {
+	width: 22%;
+}
+
+.fields {
+	width: 100% !important;
+	/* float: left; */
+	position: relative;
+	margin-left: 0px !important;
+	border: none;
+	box-shadow: none;
+}
+
+.fieldtd {
+	padding: 0;
+	padding-left: 0 !important;
+}
+
+.ddregbits {
+	width: 10%;
+}
+
+.lblsw {
+	width: 9%;
+}
+
+.lblhw {
+	width: 9%;
+}
+
+.lbldefault {
+	width: 9%;
+}
+
+.spectoolbar {
+	width: 100%;
+	background-color: #d6d5d5;
+	float: left;
+	-webkit-user-modify: read-only;
+	padding: 2px;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px grey;
+}
+
+.spectoolbar button {
+	font-family: -webkit-body;
+	font-size: 11px;
+}
+
+.maindiv {
+	background-color: white;
+	width: 75%;
+	margin-left: 8%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	min-height: 500px;
+	box-shadow: 1px 1px 1px grey;
+}
+
+.mainBody {
+	background-color: lightgrey;
+}
+
+.signals {
+}
+
+.hideWidth {
+	color: transparent;
+	width: 0%;
+	display: none;
+}
+
+
+.enumname {
+	width: 60% !important;
+}
+
+.param {
+}
+
+.tocTable {
+	text-align: left;
+}
+
+table.tocTable th {
+}
+
+.header {
+	width: 80px;
+	background-color: #C2D9E9;
+}
+
+.name {
+	width: 16%;
+	-webkit-user-modify: read-write;
+}
+
+.offset {
+	width: 13%;
+	-webkit-user-modify: read-write;
+}
+
+.add {
+	font-size: 9px !important;
+	background-color: #C2D9E9;
+	width: 176px;
+	height: 24px !important;
+}
+
+.img {
+	width: 25px;
+}
+
+.descclass {
+	width: 485px;
+	height: 18px !important;
+	-webkit-user-modify: read-write;
+}
+
+.desc{
+	text-align: left;
+}
+
+
+
+.propclass {
+	width: 485px;
+	height: 18px !important;
+	-webkit-user-modify: read-write;
+	background-color: #d1e4f5;
+	text-align: left;
+}
+
+.tocheader {
+	height: 18px !important;
+	-webkit-user-modify: read-only;
+	background-color: #C2D9E9;
+	/*color change*/;
+}
+
+.field {
+	width: 485px;
+	text-align: center;
+}
+
+.size {
+	width: 75px;
+}
+
+.fieldname {
+	width: 150px;
+}
+
+.default {
+	width: 105px;
+}
+
+.sw {
+	width: 75px;
+}
+
+.hw {
+	width: 75px;
+}
+
+.refname {
+	-webkit-user-modify: read-write;
+	width: 22%;
+}
+
+.refpath {
+	-webkit-user-modify: read-write;
+}
+
+.fielddesc {
+	/*width: 150px;*/;
+}
+
+
+.endreggroup {
+	text-align: center;
+	width: 495px;
+}
+
+textArea {
+	width: 98%;
+	height: 14px;
+	font-size: 11px;
+}
+
+.specImage {
+	width: 30px;
+	font-size: 10px;
+	text-align: center;
+}
+
+.wideWidthName {
+	width: 173px;
+}
+
+.address {
+	width: 22%;
+}
+
+.header {
+	width: 80px;
+}
+
+.propInput {
+	background-color: #ECD0BF;
+	border: none;
+}
+
+.descInput {
+	background-color: white;
+}
+
+.label {
+	background-color: #98BAD3;
+}
+
+label {
+}
+
+.readOnly {
+	background-color: #C2D9E9;
+}
+
+.addCell {
+	text-align: left;
+}
+
+.thirdCell {
+	width: 100%;
+}
+
+.dropDownBitSize {
+	width: 100%;
+	font-size: 11px;
+}
+
+.idsTemp {
+	width: 88%;
+	-webkit-user-modify: read-only;
+	box-shadow: rgb(128, 128, 128) 1px 1px 1px;
+}
+
+.idsTemp tr.edited > td {
+	-webkit-user-modify: read-write;
+}
+
+.splitVer {
+	height: 10px;
+	font-size: 9px;
+}
+
+.setBorder {
+	border-bottom: 1px solid grey;
+}
+
+input {
+	border: none;
+	font-size: 12px;
+	width: 98%;
+	height: 100%;
+}
+
+table.idsTemp {
+	border-collapse: collapse;
+	margin-left: 5%;
+	font-family: serif;
+	font-size: 12px;
+	text-align: center;
+	word-wrap: break-word;
+	table-layout: fixed;
+	box-shadow: 1px 1px grey;
+}
+
+td {
+	height: 15px;
+}
+
+table.idsTemp, th, td {
+	border: 1px solid grey;
+	word-wrap: break-word;
+}
+
+.bits {
+	width: 80px;
+}
+
+.border {
+	background-color: #6791B0;
+	height: 4px;
+}
