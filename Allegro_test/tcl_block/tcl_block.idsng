@@ -40,6 +40,21 @@
   <script id="ids_prop" src="..\.idsng\prop.js"></script> 
   <script id="ids_prop" src="..\.idsng\prop.js"></script> 
   <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
+  <script id="ids_prop" src="..\.idsng\prop.js"></script> 
   <script id="ids_prop" src="..\.idsng\prop.js"></script>   
   <script id="ids_prop" src="..\.idsng\prop.js"></script>   
   <link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng\ids_template.css">
@@ -61,11 +76,11 @@
      <button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
     </div> 
     <br> 
-    <h3>IDS Register Specification</h3> 
+    <h3>IDS Register Specification</h3> &nbsp; 
     <br> 
-    <div class="tocClass" readonly="true"></div> sumeet vishwas&nbsp;
+    <div class="tocClass" readonly="true"></div> sumeet vishwas&nbsp; 
     <div>
-     hello there &nbsp; &nbsp;&nbsp;
+      hello there &nbsp; &nbsp;&nbsp; 
      <br> 
      <br> 
      <table contenteditable="false" id="tab00.34965997814067074" class="tocTable idsTemp" border="2" onclick="tabClick(this)"> 
@@ -234,7 +249,7 @@
      <br> 
      <br> 
      <br> 
-    </div>
+    </div> 
    </div> 
    <div id="param_main" style="display:none;"> 
     <div id="divyml"> 
