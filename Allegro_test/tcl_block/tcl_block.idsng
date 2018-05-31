@@ -1,7 +1,7 @@
 <html><head> 
   <title>
 		Agnisys Register Spec
-	</title>                                                                       
+	</title>      
   <link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng\ids_template.css">
   <script id="jqueryLib" src="..\.idsng\jquery-3.2.1.min.js"></script>
   <script id="ids_prop" src="..\.idsng\prop.js"></script>
@@ -25,8 +25,7 @@
     <br> 
     <div class="tocClass" readonly="true"></div> sumeet vishwas&nbsp; 
     <div>
-      hello there &nbsp; &nbsp;&nbsp; 
-     <br> 
+      hello there &nbsp; &nbsp; &nbsp; &nbsp;<br> 
      <br> 
      <table contenteditable="false" id="tab00.34965997814067074" class="tocTable idsTemp" border="2" onclick="tabClick(this)"> 
       <tbody> 
