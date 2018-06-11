@@ -1,5 +1,4 @@
-<html>
- <head> 
+<html><head> 
   <title>
 		Agnisys Register Spec
 	</title>      
@@ -11,9 +10,8 @@
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv"> 
-   <div id="regdivcontainer" contenteditable="true" style="display:none"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
     <div id="mlHintContainer" style="display:none"> 
-     <a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
      <h4>Machine Learning hints :</h4> 
      <p id="mlHintPara"></p> 
     </div> 
@@ -27,7 +25,7 @@
     <div class="tocClass" readonly="true"></div> 
     <br> 
     <br> 
-    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab00.8891196088952421"> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab00.5457747461990052"> 
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
@@ -45,7 +43,7 @@
      </tbody> 
     </table> 
     <br> 
-    <table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab10.7558771286135236"> 
+    <table contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab10.6962142812093268"> 
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
@@ -73,7 +71,7 @@
       </tr> 
       <tr> 
        <td colspan="6" class="fieldtd"> 
-        <table class="fields idsTemp" id="tab20.9997660049676537"> 
+        <table class="fields idsTemp" id="tab00.06942484103584057" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="label"> 
            <td class="ddregbits">bits</td> 
@@ -83,13 +81,13 @@
            <td class="lbldefault">default</td> 
            <td class="lbldesc">description</td> 
           </tr> 
-          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tabf00.8728682575393899" class="field edited"> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab00.6056647081393235" class="field edited"> 
            <td title="bits" class="bits">0:31</td> 
            <td title="field name" class="fieldname">f</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw"></td> 
            <td title="default" class="default">1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -99,7 +97,7 @@
     <br> 
     <br> 
     <br> 
-    <table contenteditable="false" class="section idsTemp" onclick="tabClick(this)" id="tab30.31670914097391845"> 
+    <table contenteditable="false" class="section idsTemp" onclick="tabClick(this)" id="tab30.8569622600015098"> 
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
@@ -119,7 +117,7 @@
     <br> 
     <br> 
     <br> 
-    <table data-width="8" contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab40.06630669457148342"> 
+    <table data-width="8" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab40.8064443757723702"> 
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
@@ -147,7 +145,7 @@
       </tr> 
       <tr> 
        <td colspan="6" class="fieldtd"> 
-        <table class="fields idsTemp" id="tab50.28340890144779907"> 
+        <table class="fields idsTemp" id="tab10.8367216749624931" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="label"> 
            <td class="ddregbits">bits</td> 
@@ -157,13 +155,21 @@
            <td class="lbldefault">default</td> 
            <td class="lbldesc">description</td> 
           </tr> 
-          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tabf10.18645614058999915" class="field edited"> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab10.7527813527002091" class="field edited"> 
            <td title="bits" class="bits">7:0</td> 
            <td title="field name" class="fieldname">f</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw"></td> 
            <td title="default" class="default">1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" id="tab20.45356697108791666" onkeyup="setCurrRow(this)"> 
+           <td class="bits" title="bits"></td> 
+           <td class="fieldname" title="field name"></td> 
+           <td class="sw thirdCell" title="software access"></td> 
+           <td class="hw thirdCell" title="hardware access"></td> 
+           <td title="default" class="default"></td> 
+           <td onkeydown="insertNewRow(event,this)" class="desc fielddesc" title="description"></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -172,7 +178,7 @@
     </table> 
     <br> 
     <br> 
-    <table data-width="16" contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab60.8020393697618969"> 
+    <table data-width="16" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab60.6409526737630624"> 
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
@@ -206,7 +212,7 @@
           <input type="hidden" value="rw"> 
          </div> 
         </div> 
-        <table class="fields idsTemp" id="tab70.26356897198090734"> 
+        <table class="fields idsTemp" id="tab20.5402138754150269" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="label"> 
            <td class="ddregbits">bits</td> 
@@ -216,13 +222,13 @@
            <td class="lbldefault">default</td> 
            <td class="lbldesc">description</td> 
           </tr> 
-          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tabf20.6239295949953902" class="field edited"> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab30.4503403155760469" class="field edited"> 
            <td title="bits" class="bits">15:0</td> 
            <td title="field name" class="fieldname">f</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw"></td> 
            <td title="default" class="default">1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -232,7 +238,7 @@
     <br> 
     <br> 
     <br> 
-    <table class="endreggroup idsTemp" id="tab80.0835720724482143"> 
+    <table class="endreggroup idsTemp" id="tab80.9284091217062208" onclick="tabClick(this)"> 
      <tbody> 
       <tr class="label"> 
        <td>End RegGroup</td> 
@@ -242,11 +248,49 @@
     <br> 
     <br> 
     <br> 
+    <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:arial,sans,sans-serif;width:0px;border-collapse:collapse;border:none"> 
+     <colgroup> 
+      <col width="100"> 
+      <col width="100"> 
+      <col width="100"> 
+     </colgroup> 
+     <tbody> 
+      <tr style="height:21px;"> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+      </tr> 
+      <tr style="height:21px;"> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;cxzczc&quot;}">cxzczc</td> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;xzczxcxzc&quot;}">xzczxcxzc</td> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+      </tr> 
+      <tr style="height:21px;"> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+       <td style="overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
     <br> 
     <br> 
-    <br> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
    </div> 
-   <div id="param_main" style="display:block"> 
+   <div id="param_main" style="display:none"> 
     <div id="divyml"> 
      <label>Yaml Source : </label> 
      <label id="lblyml"></label> 
@@ -402,5 +446,5 @@
     <br> 
    </div> 
   </div> 
- </body>
-</html>
+ 
+</body></html>

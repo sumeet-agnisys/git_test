@@ -280,10 +280,6 @@ var curr_row_obj=null;
 var isFileSaved=true;
 var DESC_CLS_OBJ_LIST=[];
 var ids_json;
-var clickedEl = null;
-var selected_rows=[];
-var alphabets='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
 
 $(document).ready(function(){
 	bindJSONObj();
@@ -369,60 +365,7 @@ $(document).ready(function(){
 	$('.propInput').keyup(function(){		
 		auto_grow(this);	
 	});
-
-	document.getElementById("idsexcelcontainer").addEventListener("click",function(event){
-		$('#excelmenu').css({'display':'none'});
-	});
-
-
-	document.getElementById("spreadsheetcontainer").addEventListener("mousedown", function(event){
-		//right click
-		if(event.button == 2) { 
-			clickedEl = event.target;
-		}
-	}, true);
-
-
-	$("#menucopy").hover(function(){
-		$("#submenucopy").css("display", "block");
-	}, function(){
-		$("#submenucopy").css("display", "none");
-	});
-
-	$("#menudelete").hover(function(){
-		$("#submenudelete").css("display", "block");
-	}, function(){
-		$("#submenudelete").css("display", "none");
-	});
-
-	$(".submenu").hover(function(){
-		$(this).css("display", "block");
-	}, function(){
-		$(this).css("display", "none");
-	});
-
-	document.getElementById("backhidder").addEventListener("click",function(e){ hidetemplate()});
-
 });
-
-
-function placeCaretAtEnd(el) {
-	el.focus();
-	if (typeof window.getSelection != "undefined"
-		&& typeof document.createRange != "undefined") {
-		var range = document.createRange();
-		range.selectNodeContents(el);
-		range.collapse(false);
-		var sel = window.getSelection();
-		sel.removeAllRanges();
-		sel.addRange(range);
-	} else if (typeof document.body.createTextRange != "undefined") {
-		var textRange = document.body.createTextRange();
-		textRange.moveToElementText(el);
-		textRange.collapse(false);
-		textRange.select();
-	}
-}
 
 $(document).bind("click", function(event) {
 	/*document.getElementById("rmenu").className = "hide";*/
@@ -830,6 +773,12 @@ function setTabID(){
 		random_Num=Math.random();
 		field[i].setAttribute('id','tabf'+i+random_Num);
 	}
+	var edited = document.getElementsByClassName("edited");
+	for(var i = 0; i < edited.length; i++)
+	{
+		random_Num=Math.random();
+		edited[i].setAttribute('id','tabed'+i+random_Num);
+	}
 }
 
 
@@ -1017,7 +966,7 @@ function insertMemory(imgPath){
 function insertEnum(){
 	addIntoHistory();
 	random_Num=Math.random();
-	var element=htmlToElements(ids_json.enum);
+	var element=htmlToElements(ids_json.enum1);
 	element.id='tab_enum'+random_Num;
 	/*query="<table class='enum idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_enum"+random_Num+"'> <tbody><tr><td class='header readOnly'></td><td title='enum name' class='name'>enum_name</td><td class='address addCell readOnly'><label class='label'>address |</label><label></label></td></tr><tr><td class='label'>mnemonic name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='m_name'></td><td class='value'></td><td title='add description here' class='desc enumdesc' onkeydown='insertEnumRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
@@ -1066,6 +1015,8 @@ function insertSeq(){
 	element.id='tab_sequence'+random_Num;
 
 	element.getElementsByClassName("seqip")[0].getElementsByClassName("edited")[0].id="seq_ip_"+random_Num;
+	element.getElementsByClassName("seqip")[0].getElementsByClassName("ip")[0].innerHTML=getCurrentDocumentPath();
+
 
 	var arg=element.getElementsByClassName("arg")[0];
 	arg.id="arg"+random_Num;
@@ -1084,6 +1035,7 @@ function insertSeq(){
 	cmd.getElementsByClassName("edited")[0].id="seq_cmd"+random_Num;
 
 	pasteHtmlAtCaret(addstrToCaret(element));
+	load_ips(element);
 	/*query="<br><table class='seq idsTemp' id='seq"+random_Num+"'><tbody><tr><td><table id='seqip"+random_Num+"' class='seqip idsTemp'><tbody><tr class='header readOnly'><td>sequence name</td><td>ip</td><td>description</td></tr><tr class='edited'><td class='seqname'></td><td class='ip' onfocusout='load_ips(this);'></td><td class='seqdesc'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='arg"+random_Num+"' class='idsTemp arg'><tbody><tr class='header readOnly'><td>arguments</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='argname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqArgRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='const"+random_Num+"' class='idsTemp const'><tbody><tr class='header readOnly'><td>constants</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='constname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqConstRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='var"+random_Num+"' class='idsTemp var'><tbody><tr class='header readOnly'><td>variables</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='varname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqVarnameRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='cmd"+random_Num+"' class='command idsTemp'><tbody><tr class='header readOnly'><td class='seqcmd'>command</td><td >step</td><td class='seqcmdval'>value</td><td class='seqcmddesc'>description</td><td class='seqcmdrefpath'>refpath</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='cmdname'></td><td class='step'></td><td class='seqvalue'></td><td class='seqdesc'></td><td class='refpath' onkeydown='insertSeqCmdRow(event,this);'></td></tr></tbody></table></td></tr></tbody></table><br>";*/
 	/*
 	var str=document.getElementById("seqdivcontainer").innerHTML;
@@ -2054,10 +2006,12 @@ function runGUICheck(){
 	var errorconter=0;
 	resetAllChecks();
 
+	checkTop();
 	checkRegTemplate();
 	checkCommon();
 	checkMem();
 	checkSeqTemplate();
+
 
 
 
@@ -2170,6 +2124,8 @@ function runGUICheck(){
 
 		$(".idscheck").removeAttr();
 		$(".idscheck").remove();
+
+		$(".idsTemp td.name").removeAttr("style");
 		errorconter=0;
 		errorlist="";
 	}
@@ -2189,6 +2145,31 @@ function runGUICheck(){
 			}
 		});	
 
+	}
+
+	function checkTop(){
+		try{
+
+			$(".idsTemp").each(function(i){
+				var cls=$(this).attr("class").split(" ");
+				for(var i=0;i<cls.length;i++){
+					if(cls[i]==="block"||cls[i]==="chip"||cls[i]==="system"||cls[i]==="board"||cls[i]==="section"||cls[i]==="reg"||cls[i]==="ref"||
+					   cls[i]==="mem"||cls[i]==="enum"||cls[i]==="param"||cls[i]==="variant"||cls[i]==="busdomain"||cls[i]==="signals"){
+						
+						if(cls[i]==="reg"||cls[i]==="section"||cls[i]==="signals"){
+							addErrJson("Error-G  Top is missing!",this.getElementsByClassName("name")[0]);
+						}
+						return false;
+					}
+				}
+			});
+
+
+
+
+		}catch(e){
+			alert("Err checkTop : "+e.message);
+		}
 	}
 
 	return false;
@@ -2640,11 +2621,15 @@ function bindJSONObj(){
 	try{
 		var doc=document.getElementsByClassName("ip")[0];
 		if(doc){
-			var ip_name=doc.innerText.trim();
-			var document_name=getDocumentName().split(".")[0];
+			var ip_name=doc.innerText.trim().split(".")[0];
+			var document_name=getDocumentName().replace(".~$","").split(".")[0];
 			var regdiv;
 			if(document_name==ip_name||getDocumentName()==ip_name){
 				regdiv=document.getElementById("regdivcontainer");
+				var refdiv=document.getElementById("refdiv");
+				if(refdiv){
+					refdiv.innerHTML="";
+				}
 			}
 			else{
 				regdiv=document.getElementById("refdiv");
@@ -2670,6 +2655,11 @@ function bindJSONObj(){
 	catch(e){}
 }
 
+function getCurrentDocumentPath(){
+	var p=getDocumentName().replace(".~$","").split(".")[0];
+	return p+".idsng";
+}
+
 function create_reg_arr(regdiv){
 	var ids_temps=regdiv.getElementsByClassName("idsTemp");
 	var str={};
@@ -2685,7 +2675,6 @@ function create_reg_arr(regdiv){
 }
 
 function get_section_reglist(section,refele){
-	console.log("call section");
 	var tab_list=refele.getElementsByClassName("idsTemp");
 	var reg_list=[];
 	var start_reg=false;
@@ -2782,7 +2771,6 @@ function load_ips(obj){
 		var refelement=document.getElementById("refdiv");
 		if(refelement){
 			refelement.parentElement.removeChild(refelement);
-			console.log("--ref element deleted !");
 		}
 	}
 	catch(e){
@@ -2804,511 +2792,3 @@ function load_ips(obj){
 }
 /*****************************************Auto property hints work end*******************************************************/
 var regdivcontainer;
-
-
-/*****************************************Excel work starts from here*******************************************************/
-
-$(function() {
-	$( "#selectable" ).selectable({
-		selected: function() {
-			//var result = $( "#result" ).empty();
-			selected_rows=[];
-			$( ".ui-selected", this ).each(function() {
-				var index = $( "#selectable tr" ).index( this );
-				if(index>-1){
-					selected_rows.push(index);
-				}
-				//result.append( ( index + 1 ) );
-				//result.append( " ," );
-			});
-		}
-	});
-
-	$("#selectable").on('click','td',function(source) { 
-		var source = event.target || event.srcElement;
-		placeCaretAtEnd(source);
-		$('#excelmenu').css({'display':'none'});
-	});
-
-});
-
-function getselected(){
-	console.log("alph="+getAlphabetsForColumn(0));
-	console.log("alph="+getAlphabetsForColumn(2));
-	console.log("alph="+getAlphabetsForColumn(5));
-	console.log("alph25="+getAlphabetsForColumn(25));
-	console.log("alph26="+getAlphabetsForColumn(26));
-	console.log("alph27="+getAlphabetsForColumn(27));
-	console.log("alph28="+getAlphabetsForColumn(50));
-	console.log("alph="+getAlphabetsForColumn(53));	
-	
-}
-
-
-function getAlphabetsForColumn(index){
-	var alphas=alphabets.split('');
-	
-	var num=index;
-	var finalAlpa="";
-	while(num>-1){
-		if(num>24){
-			finalAlpa=finalAlpa+alphas[0];
-			num=num-25;
-		}else{
-			finalAlpa=finalAlpa+alphas[num];
-			num=-1;
-		}
-	}
-	return finalAlpa;
-}
-
-function insertcolright(obj){
-	while(clickedEl.tagName.toUpperCase() !== "TD") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var col_num=clickedEl.cellIndex;
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-
-	var rows=table.getElementsByTagName("tr");
-
-	for(var i=0;i<rows.length;i++){
-		var newEl = document.createElement('td');
-
-		if(i==0){
-			newEl.innerHTML = '<div class="col"></div>';
-		}
-		else{
-			newEl.setAttribute("tabindex","0");
-		}
-		table.rows[i].cells[col_num].after(newEl);
-	}
-	reArrangeColNum(table);
-}
-
-function insertrowbelow(obj){
-	while(clickedEl.tagName.toUpperCase() !== "TR") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var tabrow=clickedEl;
-
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-	var row_num=tabrow.rowIndex;
-
-	var row = table.insertRow(row_num+1);
-	row.setAttribute('class','edited');
-	var col_count=table.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
-	var cell;
-	for(var i=0;i<col_count;i++){
-		cell=row.insertCell(i);
-		if(i==0){
-			cell.setAttribute("class","leftheader");			 
-		}
-		else{
-			cell.setAttribute("tabindex","0");			
-		}
-	}
-	reArrangeRowNum(table);
-}
-
-function reArrangeRowNum(table){
-	var row=table.getElementsByClassName("leftheader");
-	for(var i=0;i<row.length;i++){
-		row[i].innerHTML=i+1;
-	}
-}
-
-function reArrangeColNum(table){
-	console.log("call rearrg col");
-	var col=table.rows[0].getElementsByTagName("td");
-	for(var i=1;i<col.length;i++){
-		col[i].innerHTML=getAlphabetsForColumn(i-1);
-	}
-}
-
-var excellastselect=document.createElement("div");
-
-
-function insertAfter(newNode, referenceNode) {
-	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
-
-var iscopy=true;
-var row_copy_req=true;
-var copycolele=null;
-function cutrow(obj){
-	iscopy=false;
-}
-
-function copyrow(obj){
-	row_copy_req=true;
-	/*copyrow=true;
-	while(clickedEl.tagName.toUpperCase() !== "TR") {
-		clickedEl = clickedEl.parentNode;
-	}
-	excellastselect=clickedEl.outerHTML;
-	*/
-	excellastselect.innerHTML="";
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-
-	var tempTable=document.createElement("table");
-	for(var i=0;i<selected_rows.length;i++){
-		var tempRow=tempTable.insertRow(i);
-		tempRow.innerHTML=table.rows[selected_rows[i]].outerHTML;
-	}
-	excellastselect.appendChild(tempTable);
-}
-
-function copycolumn(obj){
-	row_copy_req=false;
-	while(clickedEl.tagName.toUpperCase() !== "TD") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var cellindex=clickedEl.cellIndex;
-
-
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-	var rows=table.rows;
-
-	var temprow=document.createElement("tr");
-
-	for(var i=0;i<rows.length;i++){
-		var tempcol=temprow.insertCell(i);
-		tempcol.innerHTML=rows[i].cells[cellindex].innerHTML;
-
-		if(i>0){
-			tempcol.setAttribute("tabindex","0");
-		}
-	}
-	copycolele=temprow;
-	console.log("--tempcol="+temprow.outerHTML);
-}
-
-function copyexcelrow(){
-	try 
-	{
-		iscopy=true;
-		//var table = document.getElementById(tableID);
-		var isrowdelete=false;
-		var rowCount = table.rows.length;
-		for(var i=0; i<rowCount; i++) 
-		{
-			var row    = table.rows[i];
-			var chkbox = row.cells[0].getElementsByTagName("input")[0];
-			if(null != chkbox && true == chkbox.checked) 
-			{
-				var count =excelcount;
-				var c = parseInt(count)-parseInt(1); 
-				if(rowCount <= 1) 
-				{
-					alert("Cannot delete all the rows.");
-					break;
-				}
-				table.deleteRow(i);
-				rowCount--;
-				i--;
-				excelcount=c;
-				isrowdelete=true;
-				/*$('#count').val(c);*/
-			}
-		}
-		return isrowdelete;
-	}
-	catch(e)
-	{
-		alert(e);
-	}
-	return isrowdelete;
-}
-
-function pasterow(obj){
-	if(row_copy_req){
-		if(excellastselect){
-			/*
-			while(clickedEl.tagName.toUpperCase() !== "TR") {
-				clickedEl = clickedEl.parentNode;
-			}
-			var tabrow=clickedEl;
-			var rowindex=clickedEl.rowIndex;
-
-			while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-				clickedEl = clickedEl.parentNode;
-			}
-			var table=clickedEl;
-
-
-			var ismutiple=pasteMultipleRows(table,rowindex);
-			if(!ismutiple)		{
-				var row = table.insertRow(parseInt(rowindex+1));
-				row.innerHTML=excellastselect;
-			}
-			else{
-				console.log("not deleted");
-			}
-			*/
-			console.log("excellaste selected true");
-			while(clickedEl.tagName.toUpperCase() !== "TR") {
-				clickedEl = clickedEl.parentNode;
-			}
-			var rowindex=clickedEl.rowIndex;
-			while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-				clickedEl = clickedEl.parentNode;
-			}
-			var table=clickedEl;
-
-			var rowCount = table.rows.length;
-			var deleteCount=0;
-			var index=0;
-			var copiedRows=excellastselect.getElementsByTagName("table")[0].rows;
-
-			for(var i=copiedRows.length-1;i>=0;i--){
-				var curRow=table.insertRow(rowindex+1);
-				curRow.innerHTML=copiedRows[i].innerHTML;
-			}
-
-			reArrangeRowNum(table);
-			excellastselect.innerHTML="";
-
-		}
-	}
-	else {
-		while(clickedEl.tagName.toUpperCase() !== "TD") {
-			clickedEl = clickedEl.parentNode;
-		}
-		var col_num=clickedEl.cellIndex;
-		while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-			clickedEl = clickedEl.parentNode;
-		}
-		var table=clickedEl;
-
-		var rows=table.getElementsByTagName("tr");
-		if(copycolele){
-			for(var i=0;i<rows.length;i++){
-				var newEl = document.createElement('td');
-
-				if(i==0){
-					//newEl.innerHTML = '<div class="col"><input tabindex="-1" class="cellrb" name="col" type="radio"></div>';
-				}
-				else{
-					newEl.setAttribute("tabindex","0");
-				}
-				newEl.innerHTML=copycolele.cells[i].innerHTML;
-				table.rows[i].cells[col_num].after(newEl);
-
-			}
-		}
-	}	
-}
-
-function pasteMultipleRows(table,curr_index){
-	try 
-	{
-		//var table = document.getElementById(tableID);
-		var isrowdelete=false;
-		var rowCount = table.rows.length;
-		for(var i=rowCount-1; i>=0; i--) 
-		{
-			try{
-				var row    = table.rows[i];
-
-				var chkbox = row.cells[0].getElementsByTagName("input")[0];
-				if(null != chkbox && true == chkbox.checked) 
-				{
-
-					var row2=table.insertRow(curr_index+1);
-					row2.innerHTML=row.innerHTML;
-					isrowdelete=true;
-				}
-			}catch(ee){}
-		}
-		return isrowdelete;
-	}
-	catch(e)
-	{
-		console.log(e);
-	}
-	return isrowdelete;
-}
-
-function deleterow(obj){
-	/*
-	while(clickedEl.tagName.toUpperCase() !== "TR") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var tabrow=clickedEl;
-
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-
-	if(!deleteExcelRow(table)){
-		table.deleteRow(tabrow.rowIndex);
-	}
-
-	reArrangeRowNum(table);
-	*/
-
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-
-	var rowCount = table.rows.length;
-	var deleteCount=0;
-	var index=0;
-	for(var i=0;i<selected_rows.length;i++){
-		index=selected_rows[i]-deleteCount;
-		table.deleteRow(index);
-		deleteCount++;
-	}
-
-}
-
-
-function deletecolumn(obj){
-	while(clickedEl.tagName.toUpperCase() !== "TD") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var tabcell=clickedEl;
-
-
-	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-		clickedEl = clickedEl.parentNode;
-	}
-	var table=clickedEl;
-	var exelrows=table.rows;
-	var rows=table.rows;
-	var cellindex=tabcell.cellIndex;
-	for(var i=0;i<rows.length;i++){
-		rows[i].deleteCell(cellindex);
-	}
-}
-
-
-function openexcelmenu(event){
-	event.preventDefault();
-	var x=event.pageX;
-	var y=event.pageY;
-	$('#excelmenu').css({'display':'block','left':x,'top':y});
-
-}
-
-function hidetemplate(){
-	document.getElementById("exceltemplate").style.display="none";
-	$("#backhidder").css("z-index","-1")
-}
-
-function showTemplate(){
-	document.getElementById("exceltemplate").style.display="block";
-	$("#backhidder").css("z-index","0");
-}
-
-function deletetemprow(row){
-	var rowindex=row.parentNode.parentNode.rowIndex;
-	while(row.tagName.toUpperCase() !== "TABLE") {
-		row = row.parentNode;
-	}
-	row.deleteRow(rowindex);
-}
-
-function addtemprow(row){
-	var rowindex=row.parentNode.parentNode.rowIndex;
-	while(row.tagName.toUpperCase() !== "TABLE") {
-		row = row.parentNode;
-	}
-
-	var table=row;
-
-	var newrow = table.insertRow(parseInt(rowindex+1));
-	var cell=newrow.insertCell(0);
-	cell.innerHTML="<a href='#' onclick='addtemprow(this);' title='add row' >+</a><span> </span><a title='delete row' href='#' onclick='deletetemprow(this);' >x</a>";
-
-	newrow.insertCell(1);
-	newrow.insertCell(2);	
-}
-
-
-
-
-function resizeexcel(){
-	var exceltab=document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable");
-	for(var i=0;i<exceltab.length;i++){
-		var td=exceltab[i].getElementsByTagName("td");
-		for(var j=0;j<td.length;j++){
-			var div=td[j].getElementsByTagName("div")[0];
-			if(div){
-				div.style.removeProperty("width");
-				div.style.removeProperty("height");
-			}
-		}
-	}
-}
-
-var excelcount=1;
-function deleteExcelRow(table) 
-{
-	try 
-	{
-		//var table = document.getElementById(tableID);
-		var isrowdelete=false;
-		var rowCount = table.rows.length;
-		for(var i=0; i<rowCount; i++) 
-		{
-			var row    = table.rows[i];
-			var chkbox = row.cells[0].getElementsByTagName("input")[0];
-			if(null != chkbox && true == chkbox.checked) 
-			{
-				var count =excelcount;
-				var c = parseInt(count)-parseInt(1); 
-				if(rowCount <= 1) 
-				{
-					alert("Cannot delete all the rows.");
-					break;
-				}
-				table.deleteRow(i);
-				rowCount--;
-				i--;
-				excelcount=c;
-				isrowdelete=true;
-				/*$('#count').val(c);*/
-			}
-		}
-		return isrowdelete;
-	}
-	catch(e)
-	{
-		alert(e);
-	}
-	return isrowdelete;
-}
-
-function deleteExcelCol(table){
-	var cellrb=table.getElementsByClassName("cellrb");
-	for(var i=0;i<cellrb.length;i++){
-		if(null!=cellrb[i]&&cellrb[i].checked==true){
-			var cellInex=cellrb[i].parentNode.parentNode.cellIndex;
-			var rows=table.rows;
-			for(var i=0;i<rows.length;i++){
-				rows[i].deleteCell(cellInex);
-			}
-			break;
-		}
-	}
-}
-
-
-
-/*****************************************Excel work end here*******************************************************/
-

@@ -1,0 +1,1239 @@
+<html><head> 
+  <title>
+		Agnisys Register Spec
+	</title> 
+   <link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng\ids_template.css"> 
+   <link rel="stylesheet" href="../.idsng/assets/css/jquery.jcalendar.css" type="text/css" />
+   <link rel="stylesheet" href="../.idsng/assets/css/jquery.jexcel.css" type="text/css" />
+   <link rel="stylesheet" href="../.idsng/assets/css/custom-style.css" type="text/css" />    
+ </head> 
+ <body class="mainBody list" id='example-1-1' spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+      <div class="setting">
+            <button id='btn_ZoomIn'>Zoom IN</button>
+            <br>
+            <button id='btn_ZoomOut'>Zoom Out</button>
+            <br>
+            <button id='btn_ZoomReset'>Reset</button>
+        </div>
+  <div class="maindiv sortable-list"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="mlHintContainer" style="display:none"> 
+     <a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
+     <h4>Machine Learning hints :</h4> 
+     <p id="mlHintPara"></p> 
+    </div> 
+    <div class="spectoolbar"> 
+     <button onclick="click_btnprop()" id="btnprop">Hide Prop</button> 
+     <button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
+    </div> 
+    <br> 
+    <h3>IDS Register Specification</h3> 
+    <br> 
+    <div class="tocClass" readonly="true"></div> IDesignSpec - Register verification 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br>  
+       
+        <ul class='simple_with_drop vertical'>
+        <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+            <div id="firstTable" >
+         <table class="enum idsTemp tab1  " contenteditable="false" onclick="tabClick(this)" id="tab00.22308697063401928"> 
+       <tr class="jexcel_label"> 
+        <th class="header readOnly"></th> 
+        <th title="enum name" class="name">enum_name</th> 
+        <th class="address addCell readOnly"><label class="label">address |</label><label></label></th> 
+       </tr>
+             <tbody>        
+       <tr> 
+        <td class="label ">mnemonic name</td> 
+        <td class="label">value</td> 
+        <td class="label">description</td> 
+       </tr> 
+       <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+        <td class="m_name">key1</td> 
+        <td class="value">val1</td> 
+        <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key1</td> 
+       </tr> 
+           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+        <td class="m_name">key1</td> 
+        <td class="value">val1</td> 
+        <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key1</td> 
+       </tr> 
+           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+        <td class="m_name">key1</td> 
+        <td class="value">val1</td> 
+        <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key1</td> 
+       </tr> 
+           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+        <td class="m_name">key1</td> 
+        <td class="value">val1</td> 
+        <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key1</td> 
+       </tr> 
+       <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="m_name">key2</td> 
+        <td class="value">val2</td> 
+        <td class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key2</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+        </div></li>
+            <br>
+            <br>
+        <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+            <div id="secondTable" align='left'>
+     <table class="param tab2 idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab10.6535586054341394"> 
+     <tr class=""> 
+        <th class="label">define name</th> 
+        <th class="label">value</th> 
+        <th class="label">description</th> 
+        <th class="label">private</th> 
+       </tr> 
+         <tbody> 
+        
+       <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+        <td class="name">def1</td> 
+        <td class="value">val1</td> 
+        <td title="add description here" class="desc"></td> 
+        <td class="private" onkeydown="insertDefineRow(event,this);"></td> 
+       </tr> 
+       <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">def2</td> 
+        <td class="value">val2</td> 
+        <td class="desc">this is def2</td> 
+        <td class="private" onkeydown="insertDefineRow(event,this);">true</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+        </div></li>
+            <br>
+            <br>
+        <li> <div id="thirdTable">
+                        <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+     <table class="busdomain tab3 idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab20.0258074201186278"> 
+      <tr> 
+        <th class="label">bus domain name</th> 
+        <th class="label">address unit</th> 
+        <th class="label">description</th> 
+        <th class="label">bus</th> 
+       </tr> 
+         <tbody> 
+          
+       <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+        <td class="name" style="border: 2px solid red;">bus1<a class="idscheck" name="target0"></a></td> 
+        <td class="unit">0x00</td> 
+        <td title="add description here" class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);"></td> 
+       </tr> 
+       <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">bus2</td> 
+        <td class="unit">0x00</td> 
+        <td class="desc"></td> 
+        <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+       </tr>
+      </tbody> 
+     </table> 
+        </div></li>
+       <li>
+           <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+           <div id="fourthTable">
+     <table class="signals tab4 idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab30.2641003439561742"> 
+         <tr> 
+        <th class="header readOnly"></th> 
+        <th title="signal name" class="name">signal_name</th> 
+        <th class="specImage"><img id="getImg" title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4T6WSvUsCYRzHv2W+kJE0KBkE1lCEa7T2LwQuuQjREEIIjZVt4eLeYGA4GBW0ObgVQqBmDYIv6SChFRroXVpXnfjrnqfr5XBo6AM/7p7vfe/7/J6XAVKASvNZxr3whtnxYeh1g6r6Nyyi2+1Cr9dDE7ifuMPp9SN2l6Yx7xjlmtvtRjab5WaGLMuQJAmpVApWqxWtVgvpdBq5XA4+n+8nUJC6WD0owDA0iIWpUczNTGLDtYjiVYIH/aZaraLT6cBsNiMWiyEcDsPhcCAajfJ2qf70xh50ftOk/H2bv29u77CJNGWxWKhYLJKyPFK65L5CoUDxeJzK5TIfo9l5p2D8lvbOalxgnBwf9YWxSiaTqoNIFEUKBAKkdKcqnwytH5bw8t5TljqACesY8hcxbK0tK/9rsdvtaDQaCIVC0Ol0UDpCJpOB0+nkus1m+zReVkRaOchTWyYSXolMwyN9nQWDQT57vV7nJQgC+f1+8ng8VCqV+Lcv0Ov1KPcgUVts9QWx8nq9qlVLpVKhWu1nm774PuVIJAKj0QiTycSGHHY9XC4XDAaDqvyN5h7+H+AD3W9Zy3A0RZQAAAAASUVORK5CYII="></th> 
+        <th class="addCell readOnly"></th>
+       </tr> 
+      <tbody> 
+       <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited"> 
+        <td class="name">s1</td> 
+        <td class="direction">in</td> 
+        <td colspan="2" title="add description here" class="desc testd signaldesc" onkeydown="insertNewRowSignals(event,this);">ss</td> 
+       </tr> 
+       <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">s2</td> 
+        <td class="direction">out</td> 
+        <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc"></td> 
+       </tr> 
+       <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">s3</td> 
+        <td class="direction">out</td> 
+        <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc"></td> 
+       </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">s3</td> 
+        <td class="direction">out</td> 
+        <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc"></td> 
+       </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+        <td class="name">s3</td> 
+        <td class="direction">out</td> 
+        <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc"></td> 
+       </tr> 
+          
+      </tbody> 
+     </table> 
+           </div>
+            </li>
+     <br>resigter spec starts from here 
+     <br> 
+     <br> 
+        <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+             <div id="fivthTable">
+          <table contenteditable="false" class="chip tab5 idsTemp" onclick="tabClick(this)" id="tab40.6821372793299256"> 
+         <tr> 
+        <th class="header readOnly"></th> 
+        <th title="signal name" class="name">chip_name</th> 
+        <th class="specImage"><img id="getImg2" title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></th> 
+        <th class="addCell readOnly">address</th>
+              </tr>
+       <tbody class="b"> 
+        
+        <tr> 
+         <td colspan="5" title="add properties" class="propclass"></td> 
+        </tr> 
+        <tr> 
+         <td colspan="5" title="add description here" class="propclass"></td> 
+        </tr> 
+       </tbody> 
+      </table>
+         </div>
+</li>
+      <br> 
+      <br> 
+   <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+         <div id="sixthTable">
+      <table contenteditable="false" class="block tab6 idsTemp " onclick="tabClick(this)" id="tab50.7929085856620243"> 
+        <tr> 
+        <th class="header readOnly"></th> 
+        <th title="signal name" class="name">test</th> 
+        <th class="specImage"><img id="getImg3" title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></th> 
+        <th class="addCell readOnly">address</th>
+              </tr> 
+          <tbody> 
+         
+        <tr> 
+         <td colspan="5" title="add properties" class="propclass"></td> 
+        </tr> 
+        <tr> 
+         <td colspan="5" title="add description here" class="desc descclass"></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+                </div></li>
+      <br>
+      <br> registers starts 
+      <br>
+    <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+        <div id="seventhTable1">
+
+             <table class="  texcel  reg idsTemp " id=''>
+                <thead class="">
+                    <tr>
+                        <td width="84" class="jexcel_label"></td>
+                        <td width="100" align="center" title=" " class=" ">reg_name </td>
+                        <td  width="200" align="center" title="" class=" "></td>
+                        <td  width="100" align="center" title="" class=" "><img title="64 bits register" alt="Register" src="data:image/png;base64,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"></td>
+                        <td width="203" align="left" title="" class="resizing ">
+                            <div class="splitVer setBorder" title="address"> 
+           <label class="label">address|</label> 
+           <label class="addrvalue"></label> 
+          </div> 
+          <div class="splitVer" title="Default"> 
+           <label class="label">default |</label> 
+           <label class="defvalue"></label> 
+          </div>
+                        </td>
+                    </tr>
+                 </thead>
+                 <tbody>
+             
+        <tr> 
+         <td  title="add properties" class="propclass" contenteditable="true" style="width: 683px; height: 28px;"></td> 
+        </tr> 
+        <tr> 
+         <td title="add description here" class="desc descclass" style="width: 683px; height: 28px;"></td> 
+        </tr> 
+        <tr> 
+         <td class="border" style="width: 683px; height: 28px;"></td> 
+        </tr>
+        <tr id='seventhTable'>
+        <td >
+         <table contenteditable="false" onclick="tabClick(this);" class="reg tab7 idsTemp" id="tab70.978029841794714"> 
+          
+           <tbody> 
+            <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+             <td title="bits" class="bits">0:2</td> 
+             <td title="field name" class="fieldname">f1</td> 
+             <td title="software access" class="sw">rw</td> 
+             <td title="hardware access" class="hw"></td> 
+             <td title="default" class="default">0</td> 
+             <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+            </tr> 
+                 
+       </tbody> 
+      </table>
+            </td>
+        </tr>
+            </tbody>
+            </table>
+        </div>
+            </li>
+      <br> 
+      <br> 
+       <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+        <div id="eightTable1">
+
+             <table class="  texcel  reg idsTemp " id=''>
+                <thead class="">
+                    <tr>
+                        <td width="84" class="jexcel_label"></td>
+                        <td width="100" align="center" title=" " class=" ">reg_name </td>
+                        <td  width="200" align="center" title="" class=" "></td>
+                        <td  width="100" align="center" title="" class=" ">
+                            <img title="64 bits register" alt="Register" src="data:image/png;base64,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"></td>
+                        <td width="203" align="left" title="" class="resizing ">
+                            <div class="splitVer setBorder" title="address"> 
+           <label class="label">address|</label> 
+           <label class="addrvalue"></label> 
+          </div> 
+          <div class="splitVer" title="Default"> 
+           <label class="label">default |</label> 
+           <label class="defvalue"></label> 
+          </div>
+                        </td>
+                    </tr>
+                 </thead>
+                 <tbody>
+             
+        <tr> 
+         <td  title="add properties" class="propclass" contenteditable="true" style="width: 683px; height: 28px;"></td> 
+        </tr> 
+        <tr> 
+         <td title="add description here" class="desc descclass" style="width: 683px; height: 28px;"></td> 
+        </tr> 
+        <tr> 
+         <td class="border" style="width: 683px; height: 28px;"></td> 
+        </tr>
+        <tr id='eightTable'>
+        <td >
+         <table contenteditable="false" onclick="tabClick(this);" class="reg tab8 idsTemp" id="tab90.8858789638253238"> 
+          
+           <tbody> 
+            <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+             <td title="bits" class="bits">7:0</td> 
+             <td title="field name" class="fieldname">x_f</td> 
+             <td title="software access" class="sw">rw</td> 
+             <td title="hardware access" class="hw">rw</td> 
+             <td title="default" class="default">0</td> 
+             <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+            </tr>                  
+       </tbody> 
+      </table>
+            </td>
+        </tr>
+            </tbody>
+            </table>
+        </div>
+            </li>
+      <br> 
+      <br>  
+         <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+         <div id="nineTable">
+      <table contenteditable="false" class="block tab9 idsTemp " onclick="tabClick(this)" id="tab50.7929085856620243"> 
+        <tr> 
+        <th class="header readOnly"></th> 
+        <th title="signal name" class="name">reggroup_name</th> 
+        <th class="specImage"><img id="getImg4" title="RegGroup" alt="RegGrou[]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABkSURBVHjaYvz//z8DJYBFOqSVIhNYQMTkugwUwdymGShiyHx0NhMDhYBRKriFci+snFjO8PX7T4akiglYnYrPa2AvsLCwMLAwMw+gF3CF+BCKBUKhjc87FHth4MOAkdLsDBBgAAAIP+g8PM01AAAAAElFTkSuQmCC"></th> 
+        <th class="addCell readOnly">address|</th>
+              </tr> 
+          <tbody> 
+         
+        <tr> 
+         <td colspan="5" title="add properties" class="propclass"></td> 
+        </tr> 
+        <tr> 
+         <td colspan="5" title="add description here" class="desc descclass"></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+                </div></li>
+      <br> 
+      <br>
+          <li>
+            <i class="icon-move"><img src="../.idsng/assets/arrows-icon.png"></i>
+        <div id="tenTable1">
+
+             <table class="  texcel  reg idsTemp " id='tab110.7780532060872721'>
+                <thead class="">
+                    <tr>
+                        <td width="84" class="jexcel_label"></td>
+                        <td width="100" align="center" title=" " class=" ">reg_name2</td>
+                        <td  width="200" align="center" title="" class=" "></td>
+                        <td  width="100" align="center" title="" class=" ">
+                            <img title="64 bits register" alt="Register" src="data:image/png;base64,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"></td>
+                        <td width="203" align="left" title="" class="resizing ">
+                            <div class="splitVer setBorder" title="address"> 
+           <label class="label">address|</label> 
+           <label class="addrvalue"></label> 
+          </div> 
+          <div class="splitVer" title="Default"> 
+           <label class="label">default |</label> 
+           <label class="defvalue"></label> 
+          </div>
+                        </td>
+                    </tr>
+                 </thead>
+                 <tbody>
+             
+        <tr> 
+         <td  title="add properties" class="propclass" contenteditable="true" style="width: 683px; height: 28px;"></td> 
+        </tr> 
+        <tr> 
+         <td title="add description here" class="desc descclass" style="width: 683px; height: 28px;"></td> 
+        </tr> 
+        <tr> 
+         <td class="border" style="width: 683px; height: 28px;"></td> 
+        </tr>
+        <tr id='tenTable'>
+        <td >
+         <table contenteditable="false" onclick="tabClick(this);" class="reg tab10 idsTemp" id="tab120.8246659810296402"> 
+          
+           <tbody> 
+            <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+             <td title="bits" class="bits">7:0</td> 
+             <td title="field name" class="fieldname">x_f</td> 
+             <td title="software access" class="sw">rw</td> 
+             <td title="hardware access" class="hw">rw</td> 
+             <td title="default" class="default">0</td> 
+             <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+            </tr>                  
+       </tbody> 
+      </table>
+            </td>
+        </tr>
+            </tbody>
+            </table>
+        </div>
+            </li>
+        </ul>
+       </div>
+       <div id="param_main" style="display:none"> 
+    <div id="divyml"> 
+     <label>Yaml Source : </label> 
+     <label id="lblyml"></label> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false"> 
+     <br> 
+     <table id="tab60.714233718314399" data-header="" data-name="reg_name" data-offset="" data-addr="" data-def="" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="regname" contenteditable="true">reg_name</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="" class="regtab"> 
+          <tbody> 
+           <tr class="regheader"> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+           </tr> 
+           <tr> 
+            <td class="droptarget" colspan="10" style="background-color: #d4e0e2"><p id="dragtar7" data-id="field0.02971836832253061" data-size="10" data-name="f5" data-sw="ro" data-hw="" data-default="1" data-desc="" draggable="true" class="dragtarget" title="f5 : 10">f5</p></td> 
+            <td class="droptarget" colspan="6" style="background-color: #d4e0e2"><p id="dragtar6" data-id="field0.31847858573359156" data-size="6" data-name="f4" data-sw="r/wc" data-hw="ro" data-default="1" data-desc="" draggable="true" class="dragtarget" title="f4 : 6">f4</p></td> 
+            <td class="droptarget" colspan="8" style="background-color: #d4e0e2"><p id="dragtar5" data-id="field0.5645502412978025" data-size="8" data-name="f3" data-sw="ro" data-hw="ro" data-default="1" data-desc="" draggable="true" class="dragtarget" title="f3 : 8">f3</p></td> 
+            <td class="droptarget" colspan="5" style="background-color: #d4e0e2"><p id="dragtar4" data-id="field0.19405339069913496" data-size="5" data-name="f2" data-sw="rw" data-hw="rw" data-default="1" data-desc="" draggable="true" class="dragtarget" title="f2 : 5">f2</p></td> 
+            <td class="droptarget" colspan="3" style="background-color: #d4e0e2"><p id="dragtar3" data-id="field" data-size="3" data-name="f1" data-sw="rw" data-hw="" data-default="0" data-desc="" draggable="true" class="dragtarget" title="f1 : 3">f1</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <br> 
+     <table id="tab80.4523068139307156" data-header="" data-name="reg_name2" data-offset="" data-addr="" data-def="" data-desc="" data-prop="" data-size="8" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="regname" contenteditable="true">reg_name2</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="" class="regtab"> 
+          <tbody> 
+           <tr class="regheader"> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+           </tr> 
+           <tr> 
+            <td class="droptarget" colspan="8" style="background-color: #d4e0e2"><p id="dragtar8" data-id="field" data-size="8" data-name="x_f" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="x_f : 8">x_f</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <br> 
+     <table id="tab100.7723538052291903" data-header="" data-name="reggroup_name" data-offset="" data-addr="address|" data-desc="" data-prop="" class="reggroup"> 
+      <tbody> 
+       <tr> 
+        <td>reggroup_name</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <br> 
+     <table id="tab110.7780532060872721" data-header="" data-name="reg_name" data-offset="" data-addr="" data-def="" data-desc="" data-prop="" data-size="64" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="regname" contenteditable="true">reg_name</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="tab100.7723538052291903" class="regtab"> 
+          <tbody> 
+           <tr class="regheader"> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+           </tr> 
+           <tr> 
+            <td class="droptarget" colspan="64" style="background-color: #d4e0e2"><p id="dragtar9" data-id="field" data-size="64" data-name="z_f" data-sw="rw" data-hw="rw" data-default="1" data-desc="" draggable="true" class="dragtarget" title="z_f : 64">z_f</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <br> 
+     <table class="endreggroupparam"> 
+      <tbody> 
+       <tr> 
+        <td></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+   </div> 
+   <div id="seqdivcontainer" style="display:none"> 
+    <h2>Sequences</h2> 
+    <br> 
+    <br> 
+    <br> 
+    <table class="seq idsTemp" id="tab_sequence0.9401078808140112"> 
+     <tbody> 
+      <tr> 
+       <td> 
+        <table id="seqip" class="seqip idsTemp"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>sequence name</td> 
+           <td>ip</td> 
+           <td>description</td> 
+          </tr> 
+          <tr class="edited"> 
+           <td class="seqname">seq1</td> 
+           <td class="ip" onfocusout="load_ips(this);">test.idsng</td> 
+           <td class="seqdesc"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="arg0.9401078808140112" class="idsTemp arg"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>arguments</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9401078808140112"> 
+           <td class="argname">arg1</td> 
+           <td class="value">val1</td> 
+           <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.7695665565811188"> 
+           <td class="argname">arg2</td> 
+           <td class="value">val2</td> 
+           <td class="seqdesc" onkeydown="insertSeqRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="cons0.9401078808140112" class="idsTemp const"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>constants</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9401078808140112"> 
+           <td class="constname">const1</td> 
+           <td class="value">val2</td> 
+           <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="var0.9401078808140112" class="idsTemp var"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>variables</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9401078808140112"> 
+           <td class="varname">var1</td> 
+           <td class="value">val1</td> 
+           <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9188682730068729"> 
+           <td class="varname">var2</td> 
+           <td class="value">val2</td> 
+           <td class="seqdesc" onkeydown="insertSeqRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <div id="autocomplete-list" class="autocomplete-items" style="left: 48%; display: none;"></div>
+        <table id="cmd0.9401078808140112" class="command idsTemp"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td class="seqcmd">command</td> 
+           <td>step</td> 
+           <td class="seqcmdval">value</td> 
+           <td class="seqcmddesc">description</td> 
+           <td class="seqcmdrefpath">refpath</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9401078808140112"> 
+           <td class="cmdname">write</td> 
+           <td class="step">reg_name2.x_f</td> 
+           <td class="seqvalue">1</td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.007136104867064952"> 
+           <td class="cmdname">write</td> 
+           <td class="step">reg_name.f2</td> 
+           <td class="seqvalue">2</td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <div id="refdiv" style="display:none"> 
+     <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+      <div id="mlHintContainer" style="display:none"> 
+       <a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
+       <h4>Machine Learning hints :</h4> 
+       <p id="mlHintPara"></p> 
+      </div> 
+      <div class="spectoolbar"> 
+       <button onclick="click_btnprop()" id="btnprop">Hide Prop</button> 
+       <button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
+      </div> 
+      <br> 
+      <h3>IDS Register Specification</h3> 
+      <br> 
+      <div class="tocClass" readonly="true"></div> IDesignSpec - Register verification 
+      <div> 
+       <br> 
+      </div> 
+      <div> 
+       <br> 
+       <table class="enum idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab00.22308697063401928"> 
+        <tbody> 
+         <tr> 
+          <td class="header readOnly"></td> 
+          <td title="enum name" class="name">enum_name</td> 
+          <td class="address addCell readOnly"><label class="label">address |</label><label></label></td> 
+         </tr> 
+         <tr> 
+          <td class="label">mnemonic name</td> 
+          <td class="label">value</td> 
+          <td class="label">description</td> 
+         </tr> 
+         <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+          <td class="m_name">key1</td> 
+          <td class="value">val1</td> 
+          <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key1</td> 
+         </tr> 
+         <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+          <td class="m_name">key2</td> 
+          <td class="value">val2</td> 
+          <td class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key2</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <br> 
+       <table class="param idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab10.6535586054341394"> 
+        <tbody> 
+         <tr> 
+          <td class="label">define name</td> 
+          <td class="label">value</td> 
+          <td class="label">description</td> 
+          <td class="label">private</td> 
+         </tr> 
+         <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+          <td class="name">def1</td> 
+          <td class="value">val1</td> 
+          <td title="add description here" class="desc"></td> 
+          <td class="private" onkeydown="insertDefineRow(event,this);"></td> 
+         </tr> 
+         <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+          <td class="name">def2</td> 
+          <td class="value">val2</td> 
+          <td class="desc">this is def2</td> 
+          <td class="private" onkeydown="insertDefineRow(event,this);">true</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <br> 
+       <table class="busdomain idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab20.0258074201186278"> 
+        <tbody> 
+         <tr> 
+          <td class="label">bus domain name</td> 
+          <td class="label">address unit</td> 
+          <td class="label">description</td> 
+          <td class="label">bus</td> 
+         </tr> 
+         <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+          <td class="name" style="border: 2px solid red;">bus1<a class="idscheck" name="target0"></a></td> 
+          <td class="unit">0x00</td> 
+          <td title="add description here" class="desc"></td> 
+          <td class="bus" onkeydown="insertBusRow(event,this);"></td> 
+         </tr> 
+         <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+          <td class="name">bus2</td> 
+          <td class="unit">0x00</td> 
+          <td class="desc"></td> 
+          <td class="bus" onkeydown="insertBusRow(event,this);">AMBA</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br> 
+       <br> 
+       <table class="signals idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab30.2641003439561742"> 
+        <tbody> 
+         <tr> 
+          <td class="header readOnly"></td> 
+          <td title="signal name" class="name">signal_name</td> 
+          <td class="specImage"><img title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4T6WSvUsCYRzHv2W+kJE0KBkE1lCEa7T2LwQuuQjREEIIjZVt4eLeYGA4GBW0ObgVQqBmDYIv6SChFRroXVpXnfjrnqfr5XBo6AM/7p7vfe/7/J6XAVKASvNZxr3whtnxYeh1g6r6Nyyi2+1Cr9dDE7ifuMPp9SN2l6Yx7xjlmtvtRjab5WaGLMuQJAmpVApWqxWtVgvpdBq5XA4+n+8nUJC6WD0owDA0iIWpUczNTGLDtYjiVYIH/aZaraLT6cBsNiMWiyEcDsPhcCAajfJ2qf70xh50ftOk/H2bv29u77CJNGWxWKhYLJKyPFK65L5CoUDxeJzK5TIfo9l5p2D8lvbOalxgnBwf9YWxSiaTqoNIFEUKBAKkdKcqnwytH5bw8t5TljqACesY8hcxbK0tK/9rsdvtaDQaCIVC0Ol0UDpCJpOB0+nkus1m+zReVkRaOchTWyYSXolMwyN9nQWDQT57vV7nJQgC+f1+8ng8VCqV+Lcv0Ov1KPcgUVts9QWx8nq9qlVLpVKhWu1nm774PuVIJAKj0QiTycSGHHY9XC4XDAaDqvyN5h7+H+AD3W9Zy3A0RZQAAAAASUVORK5CYII="></td> 
+          <td class="addCell readOnly"></td> 
+         </tr> 
+         <tr> 
+          <td colspan="4" class="border"></td> 
+         </tr> 
+         <tr> 
+          <td class="label">name</td> 
+          <td class="label">port type</td> 
+          <td colspan="2" class="label">description</td> 
+         </tr> 
+         <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited"> 
+          <td class="name">s1</td> 
+          <td class="direction">in</td> 
+          <td colspan="2" title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event,this);"></td> 
+         </tr> 
+         <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+          <td class="name">s2</td> 
+          <td class="direction">out</td> 
+          <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc"></td> 
+         </tr> 
+         <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+          <td class="name">s3</td> 
+          <td class="direction">out</td> 
+          <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc"></td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <br>resigter spec starts from here 
+       <br> 
+       <div> 
+        <br> 
+        <table contenteditable="false" class="chip idsTemp" onclick="tabClick(this)" id="tab40.6821372793299256"> 
+         <tbody> 
+          <tr> 
+           <td class="header readOnly"></td> 
+           <td title="chip name" class="name">chip_name</td> 
+           <td title="offset" class="offset"></td> 
+           <td class="specImage"><img title="Chip" alt="Chip" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIySURBVHjazFM7axVBFP7OPHZ2b26Uq43RFPbiE8Ei6B+wsVCLFL4Qo1UKQSsRjBBNpXY2goWgKZSQKlUqsdBGwTRqE4IxCrnG+9zHzPHs3mgvaRx29uw8zvd9881ZMDP+9LFTN/hfYtkVttioRLl0+wkvLi3DgxECYAoPFdfhiz6UtgieYeMauu0NKGIYG+HwyDBePZokKuWomsOVqxdRUEDiIqhASLtNUJKA8hR9sjAIcHEioBkMBzx+No8fn5YHCiZmnvPeIycAFkZZDDnBOIYPKTRppFwgiix6nR5qAmK0wZuF15idPkdm7PR17sQNDO0axTYXkKUZiByUNYAcAaVNxqOdB8TWYWO9CaU0Vr6v4ujJSa4UnL/3ksPO3bDoVgo4WOSZh7WxpBMKlcscy5eMxKNyvvnlI2bvXyA6Nn6L13wD+w8dFKL+wFlh6DOEkcRYA5W1EEii1ihhSAA+v3sPvbHpweWZef7aFudDLstiBRGsS9DttgTNIFK+As2LMiqIGDjZN3f3DNGBs9PcCgZ7RhrCYGCMgveiM3hoGf8tNO8rBWJQ+eDbShtZK9usg6kX/GH1lzBbSRYWls2FqDEORu6dtUTxslwrikJugeS6PRYfTBAdH5/itb6CGa4jFWFemOuxhVMGWZaJeQGSgiLIW6id1QJUgH6uw6duoODanae88HYJqO0Q0+QInSbc0HbovAcvSYGial5zXhWU1Cv2jSaYe3iT8H/8TFtpvwUYANw+W2VPE6rlAAAAAElFTkSuQmCC"></td> 
+           <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+          </tr> 
+          <tr> 
+           <td colspan="5" title="add properties" class="propclass"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="5" title="add description here" class="desc descclass"></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> 
+        <br> 
+        <br> 
+        <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab50.7929085856620243"> 
+         <tbody> 
+          <tr> 
+           <td class="header readOnly"></td> 
+           <td title="block name" class="name">test</td> 
+           <td title="offset" class="offset"></td> 
+           <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+           <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+          </tr> 
+          <tr> 
+           <td colspan="5" title="add properties" class="propclass"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="5" title="add description here" class="desc descclass"></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> registers starts 
+       </div> 
+       <div> 
+        <br> 
+        <table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab60.714233718314399"> 
+         <tbody> 
+          <tr> 
+           <td class="header readOnly"></td> 
+           <td title="reg name" class="name">reg_name</td> 
+           <td title="offset" class="offset" colspan="2"></td> 
+           <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+           <td class="address addCell readOnly"> 
+            <div class="splitVer setBorder" title="address"> 
+             <label class="label">address|</label> 
+             <label class="addrvalue"></label> 
+            </div> 
+            <div class="splitVer" title="Default"> 
+             <label class="label">default |</label> 
+             <label class="defvalue"></label> 
+            </div> </td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" title="add description here" class="desc descclass"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" class="border"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" class="fieldtd"> 
+            <table class="fields idsTemp" id="tab70.978029841794714"> 
+             <tbody> 
+              <tr class="label"> 
+               <td class="ddregbits">bits</td> 
+               <td class="lblfieldname">name</td> 
+               <td class="lblsw">s/w</td> 
+               <td class="lblhw">h/w</td> 
+               <td class="lbldefault">default</td> 
+               <td class="lbldesc">description</td> 
+              </tr> 
+              <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+               <td title="bits" class="bits">0:2</td> 
+               <td title="field name" class="fieldname">f1</td> 
+               <td title="software access" class="sw">rw</td> 
+               <td title="hardware access" class="hw"></td> 
+               <td title="default" class="default">0</td> 
+               <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+              </tr> 
+              <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" id="field0.19405339069913496"> 
+               <td class="bits" title="bits">3:7</td> 
+               <td class="fieldname" title="field name">f2</td> 
+               <td class="sw thirdCell" title="software access">rw</td> 
+               <td class="hw thirdCell" title="hardware access">rw</td> 
+               <td title="default" class="default">1</td> 
+               <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
+              </tr> 
+              <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" id="field0.5645502412978025"> 
+               <td class="bits" title="bits">8:15</td> 
+               <td class="fieldname" title="field name">f3</td> 
+               <td class="sw thirdCell" title="software access">ro</td> 
+               <td class="hw thirdCell" title="hardware access">ro</td> 
+               <td title="default" class="default">1</td> 
+               <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
+              </tr> 
+              <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" id="field0.31847858573359156"> 
+               <td class="bits" title="bits">16:21</td> 
+               <td class="fieldname" title="field name">f4</td> 
+               <td class="sw thirdCell" title="software access">r/wc</td> 
+               <td class="hw thirdCell" title="hardware access">ro</td> 
+               <td title="default" class="default">1</td> 
+               <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
+              </tr> 
+              <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" id="field0.02971836832253061"> 
+               <td class="bits" title="bits">22:31</td> 
+               <td class="fieldname" title="field name">f5</td> 
+               <td class="sw thirdCell" title="software access">ro</td> 
+               <td class="hw thirdCell" title="hardware access"></td> 
+               <td title="default" class="default">1</td> 
+               <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
+              </tr> 
+             </tbody> 
+            </table></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        <table data-width="8" contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab80.4523068139307156"> 
+         <tbody> 
+          <tr> 
+           <td class="header readOnly"></td> 
+           <td title="reg name" class="name">reg_name2</td> 
+           <td title="offset" class="offset" colspan="2"></td> 
+           <td class="specImage"><img title="8 bits register" alt="Register" src="data:image/png;base64,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"></td> 
+           <td class="address addCell readOnly"> 
+            <div class="splitVer setBorder" title="address"> 
+             <label class="label">address|</label> 
+             <label class="addrvalue"></label> 
+            </div> 
+            <div class="splitVer" title="Default"> 
+             <label class="label">default |</label> 
+             <label class="defvalue"></label> 
+            </div> </td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" title="add description here" class="desc descclass"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" class="border"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" class="fieldtd"> 
+            <table class="fields idsTemp" id="tab90.8858789638253238"> 
+             <tbody> 
+              <tr class="label"> 
+               <td class="ddregbits">bits</td> 
+               <td class="lblfieldname">name</td> 
+               <td class="lblsw">s/w</td> 
+               <td class="lblhw">h/w</td> 
+               <td class="lbldefault">default</td> 
+               <td class="lbldesc">description</td> 
+              </tr> 
+              <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+               <td title="bits" class="bits">7:0</td> 
+               <td title="field name" class="fieldname">x_f</td> 
+               <td title="software access" class="sw">rw</td> 
+               <td title="hardware access" class="hw">rw</td> 
+               <td title="default" class="default">0</td> 
+               <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+              </tr> 
+             </tbody> 
+            </table></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> 
+        <br> 
+        <table contenteditable="false" class="section idsTemp" onclick="tabClick(this)" id="tab100.7723538052291903"> 
+         <tbody> 
+          <tr> 
+           <td class="header readOnly"></td> 
+           <td class="name" title="reg group name">reggroup_name</td> 
+           <td title="offset" class="offset"></td> 
+           <td class="specImage"><img title="RegGroup" alt="RegGrou[]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABkSURBVHjaYvz//z8DJYBFOqSVIhNYQMTkugwUwdymGShiyHx0NhMDhYBRKriFci+snFjO8PX7T4akiglYnYrPa2AvsLCwMLAwMw+gF3CF+BCKBUKhjc87FHth4MOAkdLsDBBgAAAIP+g8PM01AAAAAElFTkSuQmCC"></td> 
+           <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+          </tr> 
+          <tr> 
+           <td colspan="5" title="add properties" class="propclass"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="5" title="add description here" class="desc descclass"></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> 
+        <br> 
+        <table data-width="64" contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab110.7780532060872721"> 
+         <tbody> 
+          <tr> 
+           <td class="header readOnly"></td> 
+           <td title="reg name" class="name">reg_name2</td> 
+           <td title="offset" class="offset" colspan="2"></td> 
+           <td class="specImage"><img title="64 bits register" alt="Register" src="data:image/png;base64,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"></td> 
+           <td class="address addCell readOnly"> 
+            <div class="splitVer setBorder" title="address"> 
+             <label class="label">address|</label> 
+             <label class="addrvalue"></label> 
+            </div> 
+            <div class="splitVer" title="Default"> 
+             <label class="label">default |</label> 
+             <label class="defvalue"></label> 
+            </div> </td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" title="add description here" class="desc descclass"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" class="border"></td> 
+          </tr> 
+          <tr> 
+           <td colspan="6" class="fieldtd"> 
+            <table class="fields idsTemp" id="tab120.8246659810296402"> 
+             <tbody> 
+              <tr class="label"> 
+               <td class="ddregbits">bits</td> 
+               <td class="lblfieldname">name</td> 
+               <td class="lblsw">s/w</td> 
+               <td class="lblhw">h/w</td> 
+               <td class="lbldefault">default</td> 
+               <td class="lbldesc">description</td> 
+              </tr> 
+              <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+               <td title="bits" class="bits">63:0</td> 
+               <td title="field name" class="fieldname">z_f</td> 
+               <td title="software access" class="sw">rw</td> 
+               <td title="hardware access" class="hw">rw</td> 
+               <td title="default" class="default">1</td> 
+               <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+              </tr> 
+             </tbody> 
+            </table></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        <table class="endreggroup idsTemp" id="tab130.4136528921368694"> 
+         <tbody> 
+          <tr class="label"> 
+           <td>End RegGroup</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="config" style="display:none">
+     &lt;settings&gt; &lt;company&gt;Agnisys, Inc.&lt;/company&gt; &lt;copyright&gt;***** Copyright 2018 All Rights Reserved. *****&lt;/copyright&gt; &lt;log&gt;true&lt;/log&gt; &lt;outdir&gt;output&lt;/outdir&gt; &lt;outputs&gt; &lt;ivs&gt;false&lt;/ivs&gt; &lt;arv&gt;false&lt;/arv&gt; &lt;special_reg/&gt; &lt;cmsis&gt;false&lt;/cmsis&gt; &lt;uvm&gt;false&lt;/uvm&gt; &lt;perl&gt;false&lt;/perl&gt; &lt;python&gt;false&lt;/python&gt; &lt;cpp&gt;false&lt;/cpp&gt; &lt;vheader&gt;false&lt;/vheader&gt; &lt;vhdheader&gt;false&lt;/vhdheader&gt; &lt;formal&gt;false&lt;/formal&gt; &lt;pdf&gt;false&lt;/pdf&gt; &lt;ovm&gt;false&lt;/ovm&gt; &lt;vmm&gt;false&lt;/vmm&gt; &lt;iss_firmware&gt;true&lt;/iss_firmware&gt; &lt;iss_csv&gt;false&lt;/iss_csv&gt; &lt;iss_html&gt;false&lt;/iss_html&gt; &lt;iss_sv&gt;true&lt;/iss_sv&gt; &lt;iss_uvm&gt;true&lt;/iss_uvm&gt; &lt;iss_matlab&gt;false&lt;/iss_matlab&gt; &lt;header&gt;false&lt;/header&gt; &lt;html&gt;false&lt;/html&gt; &lt;xrsl&gt;false&lt;/xrsl&gt; &lt;rdl&gt;false&lt;/rdl&gt; &lt;erm&gt;false&lt;/erm&gt; &lt;ivsxml&gt;false&lt;/ivsxml&gt; &lt;svheader&gt;false&lt;/svheader&gt; &lt;svg&gt;false&lt;/svg&gt; &lt;datasheet&gt;false&lt;/datasheet&gt; &lt;customcsv&gt;false&lt;/customcsv&gt; &lt;customxml&gt;false&lt;/customxml&gt; &lt;csharp&gt;false&lt;/csharp&gt; &lt;sv&gt;false&lt;/sv&gt; &lt;/outputs&gt; &lt;rtl_wire&gt;false&lt;/rtl_wire&gt; &lt;limit_toc/&gt; &lt;lowpower&gt;false&lt;/lowpower&gt; &lt;auto_sequence/&gt; &lt;interrupt/&gt; &lt;mbd/&gt; &lt;arv_assertion/&gt; &lt;memtechmapping&gt;false&lt;/memtechmapping&gt; &lt;sv_w_intf/&gt; &lt;sv_wo_intf/&gt; &lt;uvm_env/&gt; &lt;hdlpath&gt;false&lt;/hdlpath&gt; &lt;arv_coverage&gt;true&lt;/arv_coverage&gt; &lt;coverage&gt;true&lt;/coverage&gt; &lt;illegalbins&gt;false&lt;/illegalbins&gt; &lt;arv_constraint&gt;false&lt;/arv_constraint&gt; &lt;bus&gt;proprietary&lt;/bus&gt; &lt;reg_width&gt;32&lt;/reg_width&gt; &lt;bus_width&gt;8&lt;/bus_width&gt; &lt;unit&gt;8&lt;/unit&gt; &lt;block_size&gt;4096&lt;/block_size&gt; &lt;chip_size/&gt; &lt;board_size/&gt; &lt;c_type/&gt; &lt;big_endian&gt;false&lt;/big_endian&gt; &lt;little_endian&gt;false&lt;/little_endian&gt; &lt;check_only&gt;true&lt;/check_only&gt; &lt;preserve_name&gt;true&lt;/preserve_name&gt; &lt;addr_sort&gt;true&lt;/addr_sort&gt; &lt;seqconfig&gt; &lt;output&gt; &lt;seq_outputs&gt; &lt;firmware&gt;true &lt;multioutput&gt;false&lt;/multioutput&gt; &lt;/firmware&gt; &lt;sv&gt;true &lt;multioutput&gt;false&lt;/multioutput&gt; &lt;/sv&gt; &lt;uvm&gt;true &lt;multioutput&gt;false&lt;/multioutput&gt; &lt;/uvm&gt; &lt;/seq_outputs&gt; &lt;uvm&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;regmodel oid="0"&gt;default&lt;/regmodel&gt; &lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt; &lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;true&lt;/consolidated&gt; &lt;nameformat&gt;uvm_%s_seq&lt;/nameformat&gt; &lt;mout/&gt; &lt;/uvm&gt; &lt;sv&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;bus oid="0"&gt;default&lt;/bus&gt; &lt;write oid="0"&gt;write_mirror(%a,%d,0,0)&lt;/write&gt; &lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;s&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;s&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;true&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/sv&gt; &lt;firmware&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;true&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/firmware&gt; &lt;matlab&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;timeunit1/&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1/&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting/&gt; &lt;nameformat/&gt; &lt;mout/&gt; &lt;/matlab&gt; &lt;csv&gt; &lt;commands&gt; &lt;isscmd oid="0"&gt;write&lt;/isscmd&gt; &lt;cmd oid="0"&gt;WRITE&lt;/cmd&gt; &lt;isscmd oid="1"&gt;write_1_set&lt;/isscmd&gt; &lt;cmd oid="1"&gt;WRITE_SET&lt;/cmd&gt; &lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt; &lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt; &lt;isscmd oid="3"&gt;call&lt;/isscmd&gt; &lt;cmd oid="3"&gt;CALL&lt;/cmd&gt; &lt;isscmd oid="4"&gt;switch&lt;/isscmd&gt; &lt;cmd oid="4"&gt;SWITCH&lt;/cmd&gt; &lt;isscmd oid="5"&gt;wait&lt;/isscmd&gt; &lt;cmd oid="5"&gt;WAIT&lt;/cmd&gt; &lt;/commands&gt; &lt;headers&gt; &lt;issheader oid="0"&gt;command&lt;/issheader&gt; &lt;header oid="0"&gt;command&lt;/header&gt; &lt;issheader oid="1"&gt;step&lt;/issheader&gt; &lt;header oid="1"&gt;step&lt;/header&gt; &lt;issheader oid="2"&gt;value&lt;/issheader&gt; &lt;header oid="2"&gt;value&lt;/header&gt; &lt;issheader oid="3"&gt;address&lt;/issheader&gt; &lt;header oid="3"&gt;address&lt;/header&gt; &lt;issheader oid="4"&gt;description&lt;/issheader&gt; &lt;header oid="4"&gt;description&lt;/header&gt; &lt;/headers&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;11&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;/csv&gt; &lt;/output&gt; &lt;/seqconfig&gt; &lt;/settings&gt; 
+   </div> 
+      </div>
+<input type="button" value="Open New Page" onclick="openWin()">
+     </div>
+     <script id="jqueryLib" src="..\.idsng\jquery-3.2.1.min.js"></script> 
+  <script id="ids_js" src="..\.idsng\ids_template.js"></script> 
+  <script id="ids_js" src="..\.idsng\ids_template.json"></script> 
+     <script src="../.idsng/assets/js/jquery.jexcel.js"></script>
+     <script src="../.idsng/assets/js/jquery.simplePagination.js"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <script src="../.idsng/assets/js/sortable.js"></script>
+     <script src="../.idsng/assets/js/Script.js"></script>
+     <script>
+         
+     </script>
+
+</body></html>

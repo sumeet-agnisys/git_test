@@ -1,0 +1,234 @@
+<html><head> 
+	<title>
+		Agnisys Register Spec
+	</title>      
+	<link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng\ids_template.css"> 
+	<link rel="stylesheet" href="../.idsng/assets/css/jquery.jcalendar.css" type="text/css">
+	<link rel="stylesheet" href="../.idsng/assets/css/jquery.jexcel.css" type="text/css">
+	<link rel="stylesheet" href="../.idsng/assets/css/custom-style.css" type="text/css"> 
+	<script id="jqueryLib" src="..\.idsng - Copy\jquery-3.2.1.min.js"></script>
+	<script id="ids_prop" src="..\.idsng - Copy\prop.js"></script>
+	<script id="ids_js" src="..\.idsng - Copy\ids_template.js"></script>
+	<script id="ids_js" src="..\.idsng - Copy\ids_template.json"></script>
+	<script id="ids_js" src="..\.idsng - Copy\colResizable-1.6.js"></script><style type="text/css">  .JColResizer{table-layout:fixed;} .JColResizer > tbody > tr > td, .JColResizer > tbody > tr > th{overflow:hidden;padding-left:0!important; padding-right:0!important;}  .JCLRgrips{ height:0px; position:relative;} .JCLRgrip{margin-left:-5px; position:absolute; z-index:5; } .JCLRgrip .JColResizer{position:absolute;background-color:red;filter:alpha(opacity=1);opacity:0;width:10px;height:100%;cursor: e-resize;top:0px} .JCLRLastGrip{position:absolute; width:1px; } .JCLRgripDrag{ border-left:1px dotted black;	} .JCLRFlex{width:auto!important;} .JCLRgrip.JCLRdisabledGrip .JColResizer{cursor:default; display:none;}</style>
+	<script type="text/javascript">
+		$(function(){	
+
+
+			$(".excTemp").colResizable({
+				liveDrag:true, 
+				gripInnerHtml:"<div class='grip'></div>", 
+				draggingClass:"dragging", 
+				resizeMode:'fit'
+			});
+
+			$("#flex").colResizable({
+				liveDrag:true, 
+				gripInnerHtml:"<div class='grip'></div>", 
+				draggingClass:"dragging", 
+				resizeMode:'flex'
+			});
+
+
+			$("#overflow").colResizable({
+				liveDrag:true, 
+				gripInnerHtml:"<div class='grip'></div>", 
+				draggingClass:"dragging", 
+				resizeMode:'overflow'
+			});
+
+
+			$("#disabled").colResizable({
+				liveDrag:true, 
+				gripInnerHtml:"<div class='grip'></div>", 
+				draggingClass:"dragging", 
+				resizeMode:'overflow',
+				disabledColumns: [2]
+			});
+
+
+		});	
+	</script>
+	<style>
+		#contextMenu {
+			position: absolute;
+			display: none;
+		}
+
+		.wrap{
+			width:90%;
+			display:block;
+			margin:0 auto;
+		}
+
+		table{border:1px solid rgba(221, 221, 221, 1);}
+
+		tr:nth-child(even) {background: #F5F5F5}
+
+		tr{
+			position:relative;
+		}
+
+		tr:hover{
+			background:#c9e8f7;
+			position:relative;
+		}
+	</style>
+	</head> 
+	<body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+		<div class="maindiv"> 
+			<div id="regdivcontainer" contenteditable="true" style="display:block;"> 
+				<div id="mlHintContainer" style="display:none"> 
+					<a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
+					<h4>Machine Learning hints :</h4> 
+					<p id="mlHintPara"></p> 
+				</div> 
+				<div class="spectoolbar"> 
+					<button onclick="click_btnprop()" id="btnprop">Hide Prop</button> 
+					<button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
+				</div> 
+				<br> 
+				<h3>IDS Register Specification</h3> 
+				<br> 
+				<div class="tocClass" readonly="true"></div> 
+				<br> 
+				<br> 
+				<table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab_block0.3420310191950159"> 
+					<tbody> 
+						<tr> 
+							<td class="header readOnly"></td> 
+							<td title="block name" class="name">Excel_Test</td> 
+							<td title="offset" class="offset"></td> 
+							<td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+							<td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+						</tr> 
+						<tr> 
+							<td colspan="5" title="add properties" class="propclass"></td> 
+						</tr> 
+						<tr> 
+							<td colspan="5" title="add description here" class="desc descclass"></td> 
+						</tr> 
+					</tbody> 
+				</table> 
+				<br> 
+				<table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab_reg0.7487991589321673"> 
+					<tbody> 
+						<tr> 
+							<td class="header readOnly"></td> 
+							<td title="reg name" class="name">reg_name</td> 
+							<td title="offset" class="offset" colspan="2"></td> 
+							<td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+							<td class="address addCell readOnly"> 
+								<div class="splitVer setBorder" title="address"> 
+									<label class="label">address|</label> 
+									<label class="addrvalue"></label> 
+								</div> 
+								<div class="splitVer" title="Default"> 
+									<label class="label">default |</label> 
+									<label class="defvalue"></label> 
+								</div> </td> 
+						</tr> 
+						<tr> 
+							<td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+						</tr> 
+						<tr> 
+							<td colspan="6" title="add description here" class="desc descclass"></td> 
+						</tr> 
+						<tr> 
+							<td colspan="6" class="border"></td> 
+						</tr> 
+						<tr> 
+							<td colspan="6" class="fieldtd"> 
+								<table class="fields idsTemp" id="tab_field0.09645731194249141"> 
+									<tbody> 
+										<tr class="label"> 
+											<td class="ddregbits">bits</td> 
+											<td class="lblfieldname">name</td> 
+											<td class="lblsw">s/w</td> 
+											<td class="lblhw">h/w</td> 
+											<td class="lbldefault">default</td> 
+											<td class="lbldesc">description</td> 
+										</tr> 
+										<tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+											<td title="bits" class="bits"></td> 
+											<td title="field name" class="fieldname"><br></td> 
+											<td title="software access" class="sw"><br></td> 
+											<td title="hardware access" class="hw"></td> 
+											<td title="default" class="default"><br></td> 
+											<td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+										</tr> 
+									</tbody> 
+								</table></td> 
+						</tr> 
+					</tbody> 
+				</table> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+			</div> 
+			<div id="param_main" style="display:none;"> 
+				<div id="divyml"> 
+					<label>Yaml Source : </label> 
+					<label id="lblyml"></label> 
+				</div> 
+				<div id="paramcontainer" contenteditable="false"></div> 
+			</div> 
+			<div id="seqdivcontainer" style="display:none;"> 
+				<h2>Sequences</h2> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+				<br> 
+			</div> 
+
+			<div id="idsexcelcontainer" style="display: block">
+
+				<table class="enum idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab00.22308697063401928"> 
+						<tbody><tr class="jexcel_label"> 
+							<td class="header readOnly"></td> 
+							<td title="enum name" class="name">enum_name</td> 
+							<td class="address addCell readOnly"><label class="label">address |</label><label></label></td> 
+						</tr> 
+						<tr> 
+							<td class="label">mnemonic name</td> 
+							<td class="label">value</td> 
+							<td class="label">description</td> 
+						</tr> 
+						<tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited"> 
+							<td class="m_name">key1</td> 
+							<td class="value">val1</td> 
+							<td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key1</td> 
+						</tr> 
+						<tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited"> 
+							<td class="m_name">key2</td> 
+							<td class="value">val2</td> 
+							<td class="desc enumdesc" onkeydown="insertEnumRow(event,this);">this is key2</td> 
+						</tr> 
+				</tbody></table> 
+
+				<table id="tab1" class="excelTab">
+						<tbody><tr class="jexcel_label"><th class=""><a href="#" onclick="insertcol(this);">+</a></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+					<tr onclick="setCurrRow(this);" id="excel1" class="edited"><th><a href="#" onclick="insertexcelrow(this);">+</a></th><td class="left"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+				</tbody></table>
+
+				<br>
+				<br>
+			
+			</div>
+		</div>  
+
+
+	</body></html>

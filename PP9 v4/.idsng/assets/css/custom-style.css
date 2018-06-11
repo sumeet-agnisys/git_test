@@ -1,0 +1,144 @@
+td{
+    height: auto;
+}
+.jexcel > tbody > tr > td:first-child{
+background-color: #ddd}
+tr td:last-child{
+    resize: auto
+}
+/*
+#fivthTable .jexcel thead:nth-last-child(2),#sixthTable .jexcel thead:nth-last-child(2),#nineTable .jexcel thead:nth-last-child(2),#seventhTable1 .jexcel thead:nth-last-child(2),#eightTable1 .jexcel thead:nth-last-child(2),#tenTable1 .jexcel thead:nth-last-child(2){
+    display: none
+}
+*/
+.btn-next, .btn-previous{
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 1px 1px
+}
+.btn-next{
+    background-color: 
+}
+.btn-previous{
+    background-color: #
+}
+hr{color:#000;}
+.setting{
+ position: fixed;
+    left: 0;   
+}
+.setting button{
+    border: none;
+    width: 75px;
+    text-align: left;
+    margin-top: 3px;
+    padding: 5px;
+}
+.setting button:hover{
+    width: 85px;
+    background-color: #000;
+    color: #ddd;
+    padding-left: 10px;
+    transition: .4s
+}  
+    
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+ol.example li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol.example li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+.icon-move{
+    width: 10px;
+    height: 10px;
+}
+.icon-move img{
+    width: 20px;
+    height: 20px
+}
+li{
+    list-style: none
+}
+#seventhTable1,#eightTable1,#tenTable1{
+    margin-bottom: -3px
+}
+
+.img1  {
+background-color: red;
+resize: auto;
+    height: 65px
+    
+}
+.img1,.img2,.img3 {
+    width: 100%;
+    height: 100%;
+    
+}
+#fivthTable .jexcel tbody tr:first-child td:nth-child(1),#sixthTable .jexcel tbody tr:first-child td:nth-child(1),#nineTable .jexcel tbody tr:first-child td:nth-child(1){
+    width: 27px
+}
+#fivthTable .jexcel tbody tr td:nth-child(2),#sixthTable .jexcel tbody tr td:nth-child(2),#nineTable .jexcel tbody tr td:nth-child(2){
+    width: 100%;
+    resize: auto
+}
+#fivthTable .jexcel tbody tr:first-child td:nth-child(2),#sixthTable .jexcel tbody tr:first-child td:nth-child(2),#nineTable .jexcel tbody tr:first-child td:nth-child(2){
+    resize: none;
+    width: 203px;
+}
+#fivthTable tr td:last-child,#sixthTable tr td:last-child,#nineTable tr td:last-child{
+    display: none
+}
+#fivthTable tr:first-child td:last-child,#sixthTable tr:first-child td:last-child,#nineTable tr:first-child td:last-child{
+    display: block
+}
+#fivthTable .jexcel tbody tr td:nth-child(3),#fivthTable .jexcel tbody tr td:nth-child(4),
+#sixthTable .jexcel tbody tr td:nth-child(3),#sixthTable .jexcel tbody tr td:nth-child(4),
+#nineTable .jexcel tbody tr td:nth-child(3),#nineTable .jexcel tbody tr td:nth-child(4){
+    display: none;
+}
+#fivthTable .jexcel tbody tr:first-child td:nth-child(3),#fivthTable .jexcel tbody tr:first-child td:nth-child(4),
+#sixthTable .jexcel tbody tr:first-child td:nth-child(3),#sixthTable .jexcel tbody tr:first-child td:nth-child(4),
+#nineTable .jexcel tbody tr:first-child td:nth-child(3),#nineTable .jexcel tbody tr:first-child td:nth-child(4){
+ display: block
+}
+.jexcel img,.texcel tr td img{
+    width: 100%;
+    height: 100%
+}
+#fivthTable .jexcel tbody tr:first-child td:nth-child(4),
+#fourthTable .jexcel tbody tr:first-child td:nth-child(4),
+#sixthTable .jexcel tbody tr:first-child td:nth-child(4),
+#nineTable .jexcel tbody tr:first-child td:nth-child(4)
+{
+    resize: vertical
+}
+.texcel thead  tr:first-child td:nth-child(4){
+    resize: both
+}
+.testd{
+    width: 250px;
+    resize: both
+}
+#fourthTable .jexcel tbody tr:first-child td:nth-child(4){
+    width: 200px
+}
+#fourthTable .jexcel tbody tr td:last-child{
+    display: none
+}
+#fourthTable .jexcel tbody tr:first-child td:last-child{
+    display: block
+}
