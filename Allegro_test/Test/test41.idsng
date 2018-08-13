@@ -228,7 +228,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee">fd</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">dddd</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -256,7 +256,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">rr</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -532,7 +532,7 @@
       </tbody> 
      </table> 
     </div> 
-    <div id="excelmenu" style="display: none; left: 325px; top: 214px;"> 
+    <div id="excelmenu" style="display: none; left: 585px; top: 175px;"> 
      <a href="#" onclick="insertrowbelow(this);">Insert Row Below</a> 
      <a href="#" onclick="insertcolright(this);">Insert Column Right</a> 
      <a href="#" id="menucopy" class="context-menu">Copy </a> 
@@ -549,6 +549,6 @@
      <a href="#" class="context-menu" id="menudelete" onclick="refreshPage();">Refresh</a> 
     </div> 
    </div> 
-  </div>  
+  </div> 
  
 </body></html>
