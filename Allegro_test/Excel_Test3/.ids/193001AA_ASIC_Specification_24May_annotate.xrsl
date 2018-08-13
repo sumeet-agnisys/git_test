@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab00.3359314217040683" name="reg_map" offset="0" output_file_name="reg_map" module_name="reg_map" reset_type="async" rtl.bit_enable="true" rtl.byte_enable="true" u_field_names="true" u_use_eeprom="true" gen_pin_complex_functions="false" lock_bitmask="true" uid="2018-06-19T16:07:24.261+05:30d14e1" keypath="reg_map" coverage="on" caddress="0" hwmapaddr="36" csize="4096" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>16</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <blocksize>4096</blocksize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <doc/>
+   <emptyspace address="0x4C" endaddress="0x7F">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" address="0x4C" endaddress="0x7F"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <emptyspace address="0x90" endaddress="0xBF">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" address="0x90" endaddress="0xBF"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <emptyspace address="0xE0" endaddress="0xFFF">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" address="0xE0" endaddress="0xFFF"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <section heading="1.1" child_no="1" id="tab10.657688510750918" name="volatile" offset="0" uid="2018-06-19T16:07:24.261+05:30d14e16" keypath="reg_map.volatile,volatile" keypathdown="volatile.status_0.ee_cfg.ee_status0.ee_status1.ee_pat_test.ee_mar_test.ee_test_cfg.mux_control.test_control.asil_diag.ch1_idiff.ch1_npeak.ch1_ppeak.ch1_pk_pk.ch2_idiff.ch2_npeak.ch2_ppeak.ch2_pk_pk.unlock,status_0,ee_cfg,ee_status0,ee_status1,ee_pat_test,ee_mar_test,ee_test_cfg,mux_control,test_control,asil_diag,ch1_idiff,ch1_npeak,ch1_ppeak,ch1_pk_pk,ch2_idiff,ch2_npeak,ch2_ppeak,ch2_pk_pk,unlock" coverage="on" hwmapaddr="37" max_reg_size="32" csize="76" caddress="0" address="0x0000" endaddress="0x4B" size="76">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x4B" size="76"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="tab20.8356044127608112" name="status_0" external="true" no_reg_hw_reset_test="true" no_reg_bit_bash_test="true" uid="2018-06-19T16:07:24.261+05:30d14e18" keypath="reg_map.volatile.status_0,volatile.status_0,status_0" coverage="on" hwmapaddr="38" csize="4" offset="0" caddress="0" address="0x0000" endaddress="0x3" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed00.5045556042911826" offset="3:0" name="dsc_major" hdl_path="wrapper.u_dig_top.dsc_major_dft" uid="2018-06-19T16:07:24.261+05:30d14e23" keypath="reg_map.volatile.status_0.dsc_major,volatile.status_0.dsc_major,status_0.dsc_major,dsc_major">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed10.4616825739643782" offset="7:4" name="dsc_minor" hdl_path="wrapper.u_dig_top.dsc_minor_dft" uid="2018-06-19T16:07:24.261+05:30d14e31" keypath="reg_map.volatile.status_0.dsc_minor,volatile.status_0.dsc_minor,status_0.dsc_minor,dsc_minor">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed20.2503604857193926" offset="15:8" name="dsc_rtl" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_dsc_rtl_tieoffs.dsc_rtl" uid="2018-06-19T16:07:24.261+05:30d14e39" keypath="reg_map.volatile.status_0.dsc_rtl,volatile.status_0.dsc_rtl,status_0.dsc_rtl,dsc_rtl">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">00000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" id="tab40.3543075330996662" name="ee_cfg" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_cfg_" no_reg_bit_bash_test="true" no_reg_access_test="true" uid="2018-06-19T16:07:24.261+05:30d14e47" keypath="reg_map.volatile.ee_cfg,volatile.ee_cfg,ee_cfg" hwmapaddr="39" csize="4" offset="4" caddress="4" address="0x0004" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="ro rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x0004" endaddress="0x7" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed50.8266582494339869" offset="3:2" name="ee_block_mode" hdl_path="ee_block_mode_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e68" keypath="reg_map.volatile.ee_cfg.ee_block_mode,volatile.ee_cfg.ee_block_mode,ee_cfg.ee_block_mode,ee_block_mode">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed60.26519144692706087" offset="6:4" name="ee_vread" hdl_path="ee_vread_q" uid="2018-06-19T16:07:24.261+05:30d14e76" keypath="reg_map.volatile.ee_cfg.ee_vread,volatile.ee_cfg.ee_vread,ee_cfg.ee_vread,ee_vread">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed130.6120074555012474" offset="14:13" name="ee_override" hdl_path="ee_override_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e133" keypath="reg_map.volatile.ee_cfg.ee_override,volatile.ee_cfg.ee_override,ee_cfg.ee_override,ee_override">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed30.9734746138202731" offset="0" name="ee_erase" hdl_path="ee_erase_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e52" keypath="reg_map.volatile.ee_cfg.ee_erase,volatile.ee_cfg.ee_erase,ee_cfg.ee_erase,ee_erase">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed40.7351431989994537" offset="1" name="ee_prog" hdl_path="ee_prog_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e60" keypath="reg_map.volatile.ee_cfg.ee_prog,volatile.ee_cfg.ee_prog,ee_cfg.ee_prog,ee_prog">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed70.8115186826512047" offset="7" name="ee_force_sbe" hdl_path="ee_force_sbe_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e84" keypath="reg_map.volatile.ee_cfg.ee_force_sbe,volatile.ee_cfg.ee_force_sbe,ee_cfg.ee_force_sbe,ee_force_sbe">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed80.6987963037564909" offset="8" name="ee_force_dbe" hdl_path="ee_force_dbe_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e92" keypath="reg_map.volatile.ee_cfg.ee_force_dbe,volatile.ee_cfg.ee_force_dbe,ee_cfg.ee_force_dbe,ee_force_dbe">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed90.82040970797468" offset="9" name="ee_dis_ecc" hdl_path="ee_dis_ecc_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e100" keypath="reg_map.volatile.ee_cfg.ee_dis_ecc,volatile.ee_cfg.ee_dis_ecc,ee_cfg.ee_dis_ecc,ee_dis_ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed100.22071726624051924" offset="10" name="ee_no_ecc" hdl_path="ee_no_ecc_q" uid="2018-06-19T16:07:24.261+05:30d14e108" keypath="reg_map.volatile.ee_cfg.ee_no_ecc,volatile.ee_cfg.ee_no_ecc,ee_cfg.ee_no_ecc,ee_no_ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed110.042254699488287306" offset="11" name="ee_raw_ecc" hdl_path="ee_raw_ecc_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e116" keypath="reg_map.volatile.ee_cfg.ee_raw_ecc,volatile.ee_cfg.ee_raw_ecc,ee_cfg.ee_raw_ecc,ee_raw_ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed120.7696300844995119" offset="12" name="ee_en_override" hdl_path="ee_en_override_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e125" keypath="reg_map.volatile.ee_cfg.ee_en_override,volatile.ee_cfg.ee_en_override,ee_cfg.ee_en_override,ee_en_override">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed140.003455975274669121" offset="15" name="ee_force_reload" hdl_path="ee_force_reload_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e141" keypath="reg_map.volatile.ee_cfg.ee_force_reload,volatile.ee_cfg.ee_force_reload,ee_cfg.ee_force_reload,ee_force_reload">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed150.7556100773360579" offset="16" name="ee_noload" hdl_path="ee_noload_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e149" keypath="reg_map.volatile.ee_cfg.ee_noload,volatile.ee_cfg.ee_noload,ee_cfg.ee_noload,ee_noload">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed160.4772560467747281" offset="17" name="ee_abort" hdl_path="ee_abort_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e157" keypath="reg_map.volatile.ee_cfg.ee_abort,volatile.ee_cfg.ee_abort,ee_cfg.ee_abort,ee_abort">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.3" child_no="3" id="tab60.9640980357415958" name="ee_status0" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_status0_" no_reg_hw_reset_test="true" no_reg_bit_bash_test="true" no_reg_access_test="true" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e165" keypath="reg_map.volatile.ee_status0,volatile.ee_status0,ee_status0" hwmapaddr="40" csize="4" offset="8" caddress="8" address="0x0008" endaddress="0xB" size="4" default="0x00000400" sw="ro rw rc" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x0008" endaddress="0xB" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed200.01901649157434049" offset="7:3" name="ee_err_status" hdl_path="ee_err_status_q" uid="2018-06-19T16:07:24.261+05:30d14e194" keypath="reg_map.volatile.ee_status0.ee_err_status,volatile.ee_status0.ee_err_status,ee_status0.ee_err_status,ee_err_status">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed210.8349484805682337" offset="10:8" name="ee_addr" hdl_path="ee_addr_q" uid="2018-06-19T16:07:24.261+05:30d14e202" keypath="reg_map.volatile.ee_status0.ee_addr,volatile.ee_status0.ee_addr,ee_status0.ee_addr,ee_addr">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x4">100</default>
+         </field>
+         <field id="tabed220.6204142974596245" offset="16:11" name="ee_ecc" hdl_path="ee_ecc_q" uid="2018-06-19T16:07:24.261+05:30d14e210" keypath="reg_map.volatile.ee_status0.ee_ecc,volatile.ee_status0.ee_ecc,ee_status0.ee_ecc,ee_ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed170.03625896727074207" offset="0" name="ee_dbe_flag" hdl_path="ee_dbe_flag_q" uid="2018-06-19T16:07:24.261+05:30d14e170" keypath="reg_map.volatile.ee_status0.ee_dbe_flag,volatile.ee_status0.ee_dbe_flag,ee_status0.ee_dbe_flag,ee_dbe_flag">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed180.09988746214046562" offset="1" name="ee_sbe_flag" hdl_path="ee_sbe_flag_q" uid="2018-06-19T16:07:24.261+05:30d14e178" keypath="reg_map.volatile.ee_status0.ee_sbe_flag,volatile.ee_status0.ee_sbe_flag,ee_status0.ee_sbe_flag,ee_sbe_flag">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed190.8269401748896571" offset="2" name="ee_err" hdl_path="ee_err_q" uid="2018-06-19T16:07:24.261+05:30d14e186" keypath="reg_map.volatile.ee_status0.ee_err,volatile.ee_status0.ee_err,ee_status0.ee_err,ee_err">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rc</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.4" child_no="4" id="tab80.1427927517151586" name="ee_status1" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_status1_" no_reg_bit_bash_test="true" no_reg_access_test="true" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e218" keypath="reg_map.volatile.ee_status1,volatile.ee_status1,ee_status1" hwmapaddr="41" csize="4" offset="12" caddress="12" address="0x000C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x000C" endaddress="0xF" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed230.33383288153635937" offset="25:0" name="ee_data" hdl_path="ee_data_q" uid="2018-06-19T16:07:24.261+05:30d14e223" keypath="reg_map.volatile.ee_status1.ee_data,volatile.ee_status1.ee_data,ee_status1.ee_data,ee_data">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.5" child_no="5" id="tab100.2437208685177492" name="ee_pat_test" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_pat_test_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e231" keypath="reg_map.volatile.ee_pat_test,volatile.ee_pat_test,ee_pat_test" hwmapaddr="42" csize="4" offset="16" caddress="16" address="0x0010" endaddress="0x13" size="4" default="0x00000000" sw="ro rw" hw="wo ro rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x0010" endaddress="0x13" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed250.7574973768947666" offset="2:1" name="pat_test_status" hdl_path="pat_test_status_q" uid="2018-06-19T16:07:24.261+05:30d14e244" keypath="reg_map.volatile.ee_pat_test.pat_test_status,volatile.ee_pat_test.pat_test_status,ee_pat_test.pat_test_status,pat_test_status">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed260.8307095312284488" offset="4:3" name="pat_test_pattern" hdl_path="pat_test_pattern_q" uid="2018-06-19T16:07:24.261+05:30d14e252" keypath="reg_map.volatile.ee_pat_test.pat_test_pattern,volatile.ee_pat_test.pat_test_pattern,ee_pat_test.pat_test_pattern,pat_test_pattern">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed240.16237620122752072" offset="0" name="pat_test_start" hdl_path="pat_test_start_q" uid="2018-06-19T16:07:24.261+05:30d14e236" keypath="reg_map.volatile.ee_pat_test.pat_test_start,volatile.ee_pat_test.pat_test_start,ee_pat_test.pat_test_start,pat_test_start">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.6" child_no="6" id="tab120.7724708297951858" name="ee_mar_test" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_mar_test_" lock="(shadow_opt_2.lock_t &amp; shadow_opt_2.lock_a &amp; shadow_opt_2.lock_c &amp; shadow_opt_2.lock_o &amp; shadow_opt_2.lock_s &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e260" keypath="reg_map.volatile.ee_mar_test,volatile.ee_mar_test,ee_mar_test" hwmapaddr="43" csize="4" offset="20" caddress="20" address="0x0014" endaddress="0x17" size="4" default="0x00000000" sw="ro rw" hw="wo rw ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x0014" endaddress="0x17" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed300.060242812909879095" offset="4:3" name="margin_status" hdl_path="margin_status_q" uid="2018-06-19T16:07:24.261+05:30d14e289" keypath="reg_map.volatile.ee_mar_test.margin_status,volatile.ee_mar_test.margin_status,ee_mar_test.margin_status,margin_status">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed270.8876644533546956" offset="0" name="margin_start" hdl_path="margin_start_q" uid="2018-06-19T16:07:24.261+05:30d14e265" keypath="reg_map.volatile.ee_mar_test.margin_start,volatile.ee_mar_test.margin_start,ee_mar_test.margin_start,margin_start">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed280.6552195921213076" offset="1" name="margin_no_max" hdl_path="margin_no_max_q" uid="2018-06-19T16:07:24.261+05:30d14e273" keypath="reg_map.volatile.ee_mar_test.margin_no_max,volatile.ee_mar_test.margin_no_max,ee_mar_test.margin_no_max,margin_no_max">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed290.15075731978260376" offset="2" name="margin_no_min" hdl_path="margin_no_min_q" uid="2018-06-19T16:07:24.261+05:30d14e281" keypath="reg_map.volatile.ee_mar_test.margin_no_min,volatile.ee_mar_test.margin_no_min,ee_mar_test.margin_no_min,margin_no_min">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed310.34475790618078384" offset="5" name="margin_min_max_fail" hdl_path="margin_min_max_fail_q" uid="2018-06-19T16:07:24.261+05:30d14e297" keypath="reg_map.volatile.ee_mar_test.margin_min_max_fail,volatile.ee_mar_test.margin_min_max_fail,ee_mar_test.margin_min_max_fail,margin_min_max_fail">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.7" child_no="7" id="tab140.10264744165146122" name="ee_test_cfg" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_test_cfg_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e305" keypath="reg_map.volatile.ee_test_cfg,volatile.ee_test_cfg,ee_test_cfg" hwmapaddr="44" csize="4" offset="24" caddress="24" address="0x0018" endaddress="0x1B" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="24" address="0x0018" endaddress="0x1B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed340.29821533127848165" offset="4:2" name="ee_test_addr" hdl_path="ee_test_addr_q" uid="2018-06-19T16:07:24.261+05:30d14e326" keypath="reg_map.volatile.ee_test_cfg.ee_test_addr,volatile.ee_test_cfg.ee_test_addr,ee_test_cfg.ee_test_addr,ee_test_addr">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed320.9615411021577209" offset="0" name="ee_loop" hdl_path="ee_loop_q" uid="2018-06-19T16:07:24.261+05:30d14e310" keypath="reg_map.volatile.ee_test_cfg.ee_loop,volatile.ee_test_cfg.ee_loop,ee_test_cfg.ee_loop,ee_loop">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed330.6720366462047781" offset="1" name="ee_use_test_addr" hdl_path="ee_use_test_addr_q" uid="2018-06-19T16:07:24.261+05:30d14e318" keypath="reg_map.volatile.ee_test_cfg.ee_use_test_addr,volatile.ee_test_cfg.ee_use_test_addr,ee_test_cfg.ee_use_test_addr,ee_use_test_addr">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.8" child_no="8" id="tab160.5221169398854105" name="mux_control" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_mux_control_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e334" keypath="reg_map.volatile.mux_control,volatile.mux_control,mux_control" hwmapaddr="45" csize="4" offset="28" caddress="28" address="0x001C" endaddress="0x1F" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x001C" endaddress="0x1F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed360.7692882371466657" offset="2:1" name="rma_mux1_override_dig" hdl_path="rma_mux1_override_dig_q" uid="2018-06-19T16:07:24.261+05:30d14e347" keypath="reg_map.volatile.mux_control.rma_mux1_override_dig,volatile.mux_control.rma_mux1_override_dig,mux_control.rma_mux1_override_dig,rma_mux1_override_dig">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed370.9780378126321695" offset="8:3" name="rma_mux1_override_ctrl" hdl_path="rma_mux1_override_ctrl_q" uid="2018-06-19T16:07:24.261+05:30d14e355" keypath="reg_map.volatile.mux_control.rma_mux1_override_ctrl,volatile.mux_control.rma_mux1_override_ctrl,mux_control.rma_mux1_override_ctrl,rma_mux1_override_ctrl">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed390.06375383403733559" offset="11:10" name="rma_mux2_override_dig" hdl_path="rma_mux2_override_dig_q" uid="2018-06-19T16:07:24.261+05:30d14e371" keypath="reg_map.volatile.mux_control.rma_mux2_override_dig,volatile.mux_control.rma_mux2_override_dig,mux_control.rma_mux2_override_dig,rma_mux2_override_dig">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed400.6445709012492048" offset="17:12" name="rma_mux2_override_ctrl" hdl_path="rma_mux2_override_ctrl_q" uid="2018-06-19T16:07:24.261+05:30d14e379" keypath="reg_map.volatile.mux_control.rma_mux2_override_ctrl,volatile.mux_control.rma_mux2_override_ctrl,mux_control.rma_mux2_override_ctrl,rma_mux2_override_ctrl">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed350.6118236127276194" offset="0" name="rma_mux1_override_en" hdl_path="rma_mux1_override_en_q" uid="2018-06-19T16:07:24.261+05:30d14e339" keypath="reg_map.volatile.mux_control.rma_mux1_override_en,volatile.mux_control.rma_mux1_override_en,mux_control.rma_mux1_override_en,rma_mux1_override_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed380.6469357183295054" offset="9" name="rma_mux2_override_en" hdl_path="rma_mux2_override_en_q" uid="2018-06-19T16:07:24.261+05:30d14e363" keypath="reg_map.volatile.mux_control.rma_mux2_override_en,volatile.mux_control.rma_mux2_override_en,mux_control.rma_mux2_override_en,rma_mux2_override_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.9" child_no="9" id="tab180.6904493903276939" name="test_control" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_test_control_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e387" keypath="reg_map.volatile.test_control,volatile.test_control,test_control" hwmapaddr="46" csize="4" offset="32" caddress="32" address="0x0020" endaddress="0x23" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="32" address="0x0020" endaddress="0x23" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed410.6270340226722357" offset="11:0" name="rma_dac_direct" hdl_path="rma_dac_direct_q" uid="2018-06-19T16:07:24.261+05:30d14e392" keypath="reg_map.volatile.test_control.rma_dac_direct,volatile.test_control.rma_dac_direct,test_control.rma_dac_direct,rma_dac_direct">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">000000000000</default>
+         </field>
+         <field id="tabed430.6463565870586754" offset="15:13" name="rma_pulse_train_sel" hdl_path="rma_pulse_train_sel_q" uid="2018-06-19T16:07:24.261+05:30d14e408" keypath="reg_map.volatile.test_control.rma_pulse_train_sel,volatile.test_control.rma_pulse_train_sel,test_control.rma_pulse_train_sel,rma_pulse_train_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed420.6204387483358988" offset="12" name="rma_pulse_train_en" hdl_path="rma_pulse_train_en_q" uid="2018-06-19T16:07:24.261+05:30d14e400" keypath="reg_map.volatile.test_control.rma_pulse_train_en,volatile.test_control.rma_pulse_train_en,test_control.rma_pulse_train_en,rma_pulse_train_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.10" child_no="10" id="tab200.9198964491753826" name="asil_diag" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_asil_diag_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e416" keypath="reg_map.volatile.asil_diag,volatile.asil_diag,asil_diag" coverage="on" hwmapaddr="47" csize="4" offset="36" caddress="36" address="0x0024" endaddress="0x27" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="36" address="0x0024" endaddress="0x27" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed440.5771477709630386" offset="1:0" name="force_asil_diag_fe_l" hdl_path="force_asil_diag_fe_l_q" uid="2018-06-19T16:07:24.261+05:30d14e421" keypath="reg_map.volatile.asil_diag.force_asil_diag_fe_l,volatile.asil_diag.force_asil_diag_fe_l,asil_diag.force_asil_diag_fe_l,force_asil_diag_fe_l">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed450.96596740410149" offset="3:2" name="force_asil_diag_fe_r" hdl_path="force_asil_diag_fe_r_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e429" keypath="reg_map.volatile.asil_diag.force_asil_diag_fe_r,volatile.asil_diag.force_asil_diag_fe_r,asil_diag.force_asil_diag_fe_r,force_asil_diag_fe_r">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed460.1926042480265895" offset="5:4" name="force_asil_diag_sdm1" hdl_path="force_asil_diag_sdm1_q" uid="2018-06-19T16:07:24.261+05:30d14e437" keypath="reg_map.volatile.asil_diag.force_asil_diag_sdm1,volatile.asil_diag.force_asil_diag_sdm1,asil_diag.force_asil_diag_sdm1,force_asil_diag_sdm1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed470.0385425548442746" offset="7:6" name="force_asil_diag_sdm2" hdl_path="force_asil_diag_sdm2_q" uid="2018-06-19T16:07:24.261+05:30d14e445" keypath="reg_map.volatile.asil_diag.force_asil_diag_sdm2,volatile.asil_diag.force_asil_diag_sdm2,asil_diag.force_asil_diag_sdm2,force_asil_diag_sdm2">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed480.296301162427807" offset="8" name="force_asil_diag_vreg" hdl_path="force_asil_diag_vreg_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e453" keypath="reg_map.volatile.asil_diag.force_asil_diag_vreg,volatile.asil_diag.force_asil_diag_vreg,asil_diag.force_asil_diag_vreg,force_asil_diag_vreg">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed490.13905122008868298" offset="9" name="force_asil_diag_vregd" hdl_path="force_asil_diag_vregd_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e461" keypath="reg_map.volatile.asil_diag.force_asil_diag_vregd,volatile.asil_diag.force_asil_diag_vregd,asil_diag.force_asil_diag_vregd,force_asil_diag_vregd">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed500.17325626114074166" offset="10" name="force_asil_diag_ibias" hdl_path="force_asil_diag_ibias_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e469" keypath="reg_map.volatile.asil_diag.force_asil_diag_ibias,volatile.asil_diag.force_asil_diag_ibias,asil_diag.force_asil_diag_ibias,force_asil_diag_ibias">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed510.48705402553037014" offset="11" name="force_asil_diag_im" hdl_path="force_asil_diag_im_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e477" keypath="reg_map.volatile.asil_diag.force_asil_diag_im,volatile.asil_diag.force_asil_diag_im,asil_diag.force_asil_diag_im,force_asil_diag_im">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed520.45620421662994926" offset="12" name="force_asil_diag_hdrive" hdl_path="force_asil_diag_hdrive_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e485" keypath="reg_map.volatile.asil_diag.force_asil_diag_hdrive,volatile.asil_diag.force_asil_diag_hdrive,asil_diag.force_asil_diag_hdrive,force_asil_diag_hdrive">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed530.24035700627471945" offset="13" name="force_asil_diag_ob" hdl_path="force_asil_diag_ob_q" uid="2018-06-19T16:07:24.261+05:30d14e494" keypath="reg_map.volatile.asil_diag.force_asil_diag_ob,volatile.asil_diag.force_asil_diag_ob,asil_diag.force_asil_diag_ob,force_asil_diag_ob">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed540.43988208652291727" offset="14" name="force_asil_diag_overfreq" hdl_path="force_asil_diag_overfreq_q" uid="2018-06-19T16:07:24.261+05:30d14e502" keypath="reg_map.volatile.asil_diag.force_asil_diag_overfreq,volatile.asil_diag.force_asil_diag_overfreq,asil_diag.force_asil_diag_overfreq,force_asil_diag_overfreq">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed550.4123011331039361" offset="15" name="force_asil_diag_collision" hdl_path="force_asil_diag_collision_q" uid="2018-06-19T16:07:24.261+05:30d14e510" keypath="reg_map.volatile.asil_diag.force_asil_diag_collision,volatile.asil_diag.force_asil_diag_collision,asil_diag.force_asil_diag_collision,force_asil_diag_collision">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.1.11" child_no="11" id="tab220.2509423291694397" name="ch1_idiff" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e519" keypath="reg_map.volatile.ch1_idiff,volatile.ch1_idiff,ch1_idiff" coverage="on" hwmapaddr="48" csize="4" offset="40" caddress="40" address="0x0028" endaddress="0x2B" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="40" address="0x0028" endaddress="0x2B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed560.08432484883332736" offset="15:0" name="ch1_idiff" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_sdm_filter.idiff" uid="2018-06-19T16:07:24.261+05:30d14e524" keypath="reg_map.volatile.ch1_idiff.ch1_idiff,volatile.ch1_idiff.ch1_idiff,ch1_idiff.ch1_idiff,ch1_idiff">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.12" child_no="12" id="tab240.6211225452048142" name="ch1_npeak" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e532" keypath="reg_map.volatile.ch1_npeak,volatile.ch1_npeak,ch1_npeak" coverage="on" hwmapaddr="49" csize="4" offset="44" caddress="44" address="0x002C" endaddress="0x2F" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="44" address="0x002C" endaddress="0x2F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed570.6057051922129295" offset="15:0" name="ch1_npeak" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_peak_tracking.npeak" uid="2018-06-19T16:07:24.261+05:30d14e537" keypath="reg_map.volatile.ch1_npeak.ch1_npeak,volatile.ch1_npeak.ch1_npeak,ch1_npeak.ch1_npeak,ch1_npeak">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.13" child_no="13" id="tab260.5934247411809929" name="ch1_ppeak" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e545" keypath="reg_map.volatile.ch1_ppeak,volatile.ch1_ppeak,ch1_ppeak" coverage="on" hwmapaddr="50" csize="4" offset="48" caddress="48" address="0x0030" endaddress="0x33" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="48" address="0x0030" endaddress="0x33" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed580.6055165294513403" offset="15:0" name="ch1_ppeak" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_peak_tracking.ppeak" uid="2018-06-19T16:07:24.261+05:30d14e550" keypath="reg_map.volatile.ch1_ppeak.ch1_ppeak,volatile.ch1_ppeak.ch1_ppeak,ch1_ppeak.ch1_ppeak,ch1_ppeak">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.14" child_no="14" id="tab280.9645067672805042" name="ch1_pk_pk" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e558" keypath="reg_map.volatile.ch1_pk_pk,volatile.ch1_pk_pk,ch1_pk_pk" coverage="on" hwmapaddr="51" csize="4" offset="52" caddress="52" address="0x0034" endaddress="0x37" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="52" address="0x0034" endaddress="0x37" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed590.13455185741686249" offset="15:0" name="ch1_pk_pk" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_peak_tracking.pk_pk_r" uid="2018-06-19T16:07:24.261+05:30d14e563" keypath="reg_map.volatile.ch1_pk_pk.ch1_pk_pk,volatile.ch1_pk_pk.ch1_pk_pk,ch1_pk_pk.ch1_pk_pk,ch1_pk_pk">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.15" child_no="15" id="tab300.8458091017013237" name="ch2_idiff" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e571" keypath="reg_map.volatile.ch2_idiff,volatile.ch2_idiff,ch2_idiff" coverage="on" hwmapaddr="52" csize="4" offset="56" caddress="56" address="0x0038" endaddress="0x3B" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="56" address="0x0038" endaddress="0x3B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed600.6080935999447126" offset="15:0" name="ch2_idiff" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_sdm_filter.idiff" uid="2018-06-19T16:07:24.261+05:30d14e576" keypath="reg_map.volatile.ch2_idiff.ch2_idiff,volatile.ch2_idiff.ch2_idiff,ch2_idiff.ch2_idiff,ch2_idiff">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.16" child_no="16" id="tab320.011281015241060288" name="ch2_npeak" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e584" keypath="reg_map.volatile.ch2_npeak,volatile.ch2_npeak,ch2_npeak" coverage="on" hwmapaddr="53" csize="4" offset="60" caddress="60" address="0x003C" endaddress="0x3F" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="60" address="0x003C" endaddress="0x3F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed610.6871270760017549" offset="15:0" name="ch2_npeak" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_peak_tracking.npeak" uid="2018-06-19T16:07:24.261+05:30d14e589" keypath="reg_map.volatile.ch2_npeak.ch2_npeak,volatile.ch2_npeak.ch2_npeak,ch2_npeak.ch2_npeak,ch2_npeak">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.17" child_no="17" id="tab340.08183414576700887" name="ch2_ppeak" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e597" keypath="reg_map.volatile.ch2_ppeak,volatile.ch2_ppeak,ch2_ppeak" coverage="on" hwmapaddr="54" csize="4" offset="64" caddress="64" address="0x0040" endaddress="0x43" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="64" address="0x0040" endaddress="0x43" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed620.4803206619268001" offset="15:0" name="ch2_ppeak" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_peak_tracking.ppeak" uid="2018-06-19T16:07:24.261+05:30d14e602" keypath="reg_map.volatile.ch2_ppeak.ch2_ppeak,volatile.ch2_ppeak.ch2_ppeak,ch2_ppeak.ch2_ppeak,ch2_ppeak">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.18" child_no="18" id="tab360.322203005693095" name="ch2_pk_pk" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e610" keypath="reg_map.volatile.ch2_pk_pk,volatile.ch2_pk_pk,ch2_pk_pk" coverage="on" hwmapaddr="55" csize="4" offset="68" caddress="68" address="0x0044" endaddress="0x47" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="68" address="0x0044" endaddress="0x47" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed630.10319740013642198" offset="15:0" name="ch2_pk_pk" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_peak_tracking.pk_pk_r" uid="2018-06-19T16:07:24.261+05:30d14e615" keypath="reg_map.volatile.ch2_pk_pk.ch2_pk_pk,volatile.ch2_pk_pk.ch2_pk_pk,ch2_pk_pk.ch2_pk_pk,ch2_pk_pk">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.19" child_no="19" id="tab380.7077642261829501" name="unlock" external="true" no_reg_hw_reset_test="true" uid="2018-06-19T16:07:24.261+05:30d14e623" keypath="reg_map.volatile.unlock,volatile.unlock,unlock" coverage="on" hwmapaddr="56" csize="4" offset="72" caddress="72" address="0x0048" endaddress="0x4B" size="4" default="0x00000000" sw="ro" hw="wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="72" address="0x0048" endaddress="0x4B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed640.3779506673762938" offset="0" name="unlock" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.unlock" uid="2018-06-19T16:07:24.261+05:30d14e628" keypath="reg_map.volatile.unlock.unlock,volatile.unlock.unlock,unlock.unlock,unlock">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd"/>
+            </doc>
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+   </section>
+   <section heading="1.2" child_no="2" id="tab410.043744969261450994" name="shadow" offset="128" uid="2018-06-19T16:07:24.261+05:30d14e636" keypath="reg_map.shadow,shadow" keypathdown="shadow.shadow_trim_0.shadow_opt_0.shadow_opt_1.shadow_opt_2,shadow_trim_0,shadow_opt_0,shadow_opt_1,shadow_opt_2" coverage="on" hwmapaddr="57" max_reg_size="32" csize="16" caddress="128" address="0x0080" endaddress="0x8F" size="16">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="128" address="0x0080" endaddress="0x8F" size="16"/>
+         </busdomains>
+      </config>
+      <reg heading="1.2.1" child_no="1" id="tab420.06870268466684504" name="shadow_trim_0" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.shadow_shadow_trim_0_" u_shadow_address="0x34" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e638" keypath="reg_map.shadow.shadow_trim_0,shadow.shadow_trim_0,shadow_trim_0" coverage="on" hwmapaddr="58" csize="4" offset="0" caddress="0" address="0x0080" endaddress="0x83" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0080" endaddress="0x83" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed650.25207774453403786" offset="4:0" name="trim_osc" registered="false" hdl_path="trim_osc_in" uid="2018-06-19T16:07:24.261+05:30d14e643" keypath="reg_map.shadow.shadow_trim_0.trim_osc,shadow.shadow_trim_0.trim_osc,shadow_trim_0.trim_osc,trim_osc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed660.9038232510748252" offset="9:5" name="trim_icc_low" hdl_path="trim_icc_low_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e651" keypath="reg_map.shadow.shadow_trim_0.trim_icc_low,shadow.shadow_trim_0.trim_icc_low,shadow_trim_0.trim_icc_low,trim_icc_low">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed670.2861219879818111" offset="13:10" name="trim_icc_high" hdl_path="trim_icc_high_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e659" keypath="reg_map.shadow.shadow_trim_0.trim_icc_high,shadow.shadow_trim_0.trim_icc_high,shadow_trim_0.trim_icc_high,trim_icc_high">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed680.22369045676173305" offset="18:14" name="trim_sens" hdl_path="trim_sens_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e667" keypath="reg_map.shadow.shadow_trim_0.trim_sens,shadow.shadow_trim_0.trim_sens,shadow_trim_0.trim_sens,trim_sens">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed690.6458207988312746" offset="22:19" name="trim_mag_tc" hdl_path="trim_mag_tc_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e675" keypath="reg_map.shadow.shadow_trim_0.trim_mag_tc,shadow.shadow_trim_0.trim_mag_tc,shadow_trim_0.trim_mag_tc,trim_mag_tc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed700.6371696388487524" offset="24:23" name="trim_icc_tc" hdl_path="trim_icc_tc_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e683" keypath="reg_map.shadow.shadow_trim_0.trim_icc_tc,shadow.shadow_trim_0.trim_icc_tc,shadow_trim_0.trim_icc_tc,trim_icc_tc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed710.45242118137047893" offset="25" name="ibias_diag_analog_en" hdl_path="ibias_diag_analog_en_q" output_coupling="true" uid="2018-06-19T16:07:24.261+05:30d14e691" keypath="reg_map.shadow.shadow_trim_0.ibias_diag_analog_en,shadow.shadow_trim_0.ibias_diag_analog_en,shadow_trim_0.ibias_diag_analog_en,ibias_diag_analog_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.2.2" child_no="2" id="tab440.5499412401130502" name="shadow_opt_0" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.shadow_shadow_opt_0_" u_shadow_address="0x35" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e699" keypath="reg_map.shadow.shadow_opt_0,shadow.shadow_opt_0,shadow_opt_0" coverage="on" hwmapaddr="59" csize="4" offset="4" caddress="4" address="0x0084" endaddress="0x87" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x0084" endaddress="0x87" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed740.490089465382319" offset="3:2" name="rma_out_mode_default" hdl_path="rma_out_mode_default_q" uid="2018-06-19T16:07:24.261+05:30d14e720" keypath="reg_map.shadow.shadow_opt_0.rma_out_mode_default,shadow.shadow_opt_0.rma_out_mode_default,shadow_opt_0.rma_out_mode_default,rma_out_mode_default">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed760.4839560829667592" offset="11:5" name="rma_mux1_default" hdl_path="rma_mux1_default_q" uid="2018-06-19T16:07:24.261+05:30d14e736" keypath="reg_map.shadow.shadow_opt_0.rma_mux1_default,shadow.shadow_opt_0.rma_mux1_default,shadow_opt_0.rma_mux1_default,rma_mux1_default">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+         </field>
+         <field id="tabed770.36642175733129856" offset="18:12" name="rma_mux1_twowire_default" hdl_path="rma_mux1_twowire_default_q" uid="2018-06-19T16:07:24.261+05:30d14e744" keypath="reg_map.shadow.shadow_opt_0.rma_mux1_twowire_default,shadow.shadow_opt_0.rma_mux1_twowire_default,shadow_opt_0.rma_mux1_twowire_default,rma_mux1_twowire_default">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+         </field>
+         <field id="tabed780.014975179066005206" offset="25:19" name="rma_mux2_position" hdl_path="rma_mux2_position_q" uid="2018-06-19T16:07:24.261+05:30d14e752" keypath="reg_map.shadow.shadow_opt_0.rma_mux2_position,shadow.shadow_opt_0.rma_mux2_position,shadow_opt_0.rma_mux2_position,rma_mux2_position">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+         </field>
+         <field id="tabed720.47873091336320917" offset="0" name="opt_sag_timer_disable" hdl_path="opt_sag_timer_disable_q" uid="2018-06-19T16:07:24.261+05:30d14e704" keypath="reg_map.shadow.shadow_opt_0.opt_sag_timer_disable,shadow.shadow_opt_0.opt_sag_timer_disable,shadow_opt_0.opt_sag_timer_disable,opt_sag_timer_disable">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed730.9923723773443662" offset="1" name="opt_sag_timer_run_disable" hdl_path="opt_sag_timer_run_disable_q" uid="2018-06-19T16:07:24.261+05:30d14e712" keypath="reg_map.shadow.shadow_opt_0.opt_sag_timer_run_disable,shadow.shadow_opt_0.opt_sag_timer_run_disable,shadow_opt_0.opt_sag_timer_run_disable,opt_sag_timer_run_disable">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed750.6159679395259383" offset="4" name="rma_mux_to_outpin" hdl_path="rma_mux_to_outpin_q" uid="2018-06-19T16:07:24.261+05:30d14e728" keypath="reg_map.shadow.shadow_opt_0.rma_mux_to_outpin,shadow.shadow_opt_0.rma_mux_to_outpin,shadow_opt_0.rma_mux_to_outpin,rma_mux_to_outpin">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.2.3" child_no="3" id="tab460.3764688147109766" name="shadow_opt_1" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.shadow_shadow_opt_1_" u_shadow_address="0x36" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e760" keypath="reg_map.shadow.shadow_opt_1,shadow.shadow_opt_1,shadow_opt_1" coverage="on" hwmapaddr="60" csize="4" offset="8" caddress="8" address="0x0088" endaddress="0x8B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x0088" endaddress="0x8B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed790.8120727654635328" offset="3:0" name="opt_lockout_sel" hdl_path="opt_lockout_sel_q" uid="2018-06-19T16:07:24.261+05:30d14e765" keypath="reg_map.shadow.shadow_opt_1.opt_lockout_sel,shadow.shadow_opt_1.opt_lockout_sel,shadow_opt_1.opt_lockout_sel,opt_lockout_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed800.3835163623561315" offset="6:4" name="opt_lockout_hyst_sel" hdl_path="opt_lockout_hyst_sel_q" uid="2018-06-19T16:07:24.261+05:30d14e773" keypath="reg_map.shadow.shadow_opt_1.opt_lockout_hyst_sel,shadow.shadow_opt_1.opt_lockout_hyst_sel,shadow_opt_1.opt_lockout_hyst_sel,opt_lockout_hyst_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed810.6676218891566519" offset="8:7" name="opt_warn_level_sel" hdl_path="opt_warn_level_sel_q" uid="2018-06-19T16:07:24.261+05:30d14e781" keypath="reg_map.shadow.shadow_opt_1.opt_warn_level_sel,shadow.shadow_opt_1.opt_warn_level_sel,shadow_opt_1.opt_warn_level_sel,opt_warn_level_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed820.5037651275417727" offset="9" name="opt_warn_run_en" hdl_path="opt_warn_run_en_q" uid="2018-06-19T16:07:24.261+05:30d14e789" keypath="reg_map.shadow.shadow_opt_1.opt_warn_run_en,shadow.shadow_opt_1.opt_warn_run_en,shadow_opt_1.opt_warn_run_en,opt_warn_run_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed830.14015451560013137" offset="10" name="opt_warn_cal_en" hdl_path="opt_warn_cal_en_q" uid="2018-06-19T16:07:24.261+05:30d14e797" keypath="reg_map.shadow.shadow_opt_1.opt_warn_cal_en,shadow.shadow_opt_1.opt_warn_cal_en,shadow_opt_1.opt_warn_cal_en,opt_warn_cal_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed840.9484242444910582" offset="11" name="opt_el_en" hdl_path="opt_el_en_q" uid="2018-06-19T16:07:24.261+05:30d14e805" keypath="reg_map.shadow.shadow_opt_1.opt_el_en,shadow.shadow_opt_1.opt_el_en,shadow_opt_1.opt_el_en,opt_el_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed850.38601988605708526" offset="12" name="opt_fwd_width" hdl_path="opt_fwd_width_q" uid="2018-06-19T16:07:24.261+05:30d14e813" keypath="reg_map.shadow.shadow_opt_1.opt_fwd_width,shadow.shadow_opt_1.opt_fwd_width,shadow_opt_1.opt_fwd_width,opt_fwd_width">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed860.9326381844436356" offset="13" name="opt_dir_sel" hdl_path="opt_dir_sel_q" uid="2018-06-19T16:07:24.261+05:30d14e821" keypath="reg_map.shadow.shadow_opt_1.opt_dir_sel,shadow.shadow_opt_1.opt_dir_sel,shadow_opt_1.opt_dir_sel,opt_dir_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed870.46249604603110517" offset="14" name="opt_ch_wd_dis" hdl_path="opt_ch_wd_dis_q" uid="2018-06-19T16:07:24.261+05:30d14e829" keypath="reg_map.shadow.shadow_opt_1.opt_ch_wd_dis,shadow.shadow_opt_1.opt_ch_wd_dis,shadow_opt_1.opt_ch_wd_dis,opt_ch_wd_dis">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed880.7639662104739483" offset="15" name="opt_standstill_en" hdl_path="opt_standstill_en_q" uid="2018-06-19T16:07:24.261+05:30d14e838" keypath="reg_map.shadow.shadow_opt_1.opt_standstill_en,shadow.shadow_opt_1.opt_standstill_en,shadow_opt_1.opt_standstill_en,opt_standstill_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed890.26609794186084823" offset="16" name="opt_pk_update_sel" hdl_path="opt_pk_update_sel_q" uid="2018-06-19T16:07:24.261+05:30d14e846" keypath="reg_map.shadow.shadow_opt_1.opt_pk_update_sel,shadow.shadow_opt_1.opt_pk_update_sel,shadow_opt_1.opt_pk_update_sel,opt_pk_update_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed900.47934548259064336" offset="17" name="asil_fe_diag_en" hdl_path="asil_fe_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e854" keypath="reg_map.shadow.shadow_opt_1.asil_fe_diag_en,shadow.shadow_opt_1.asil_fe_diag_en,shadow_opt_1.asil_fe_diag_en,asil_fe_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed910.00801103119944424" offset="18" name="asil_vreg_diag_en" hdl_path="asil_vreg_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e862" keypath="reg_map.shadow.shadow_opt_1.asil_vreg_diag_en,shadow.shadow_opt_1.asil_vreg_diag_en,shadow_opt_1.asil_vreg_diag_en,asil_vreg_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed920.18447888113744304" offset="19" name="asil_ibias_diag_en" hdl_path="asil_ibias_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e870" keypath="reg_map.shadow.shadow_opt_1.asil_ibias_diag_en,shadow.shadow_opt_1.asil_ibias_diag_en,shadow_opt_1.asil_ibias_diag_en,asil_ibias_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed930.5145374971684855" offset="20" name="asil_hdrive_diag_en" hdl_path="asil_hdrive_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e878" keypath="reg_map.shadow.shadow_opt_1.asil_hdrive_diag_en,shadow.shadow_opt_1.asil_hdrive_diag_en,shadow_opt_1.asil_hdrive_diag_en,asil_hdrive_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed940.3456804972912376" offset="21" name="asil_ob_diag_en" hdl_path="asil_ob_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e886" keypath="reg_map.shadow.shadow_opt_1.asil_ob_diag_en,shadow.shadow_opt_1.asil_ob_diag_en,shadow_opt_1.asil_ob_diag_en,asil_ob_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed950.6628273783084813" offset="22" name="asil_overfreq_diag_en" hdl_path="asil_overfreq_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e894" keypath="reg_map.shadow.shadow_opt_1.asil_overfreq_diag_en,shadow.shadow_opt_1.asil_overfreq_diag_en,shadow_opt_1.asil_overfreq_diag_en,asil_overfreq_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed960.5253411467315234" offset="23" name="asil_sat_diag_en" hdl_path="asil_sat_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e902" keypath="reg_map.shadow.shadow_opt_1.asil_sat_diag_en,shadow.shadow_opt_1.asil_sat_diag_en,shadow_opt_1.asil_sat_diag_en,asil_sat_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed970.4647513035888583" offset="24" name="asil_collision_diag_en" hdl_path="asil_collision_diag_en_q" uid="2018-06-19T16:07:24.261+05:30d14e910" keypath="reg_map.shadow.shadow_opt_1.asil_collision_diag_en,shadow.shadow_opt_1.asil_collision_diag_en,shadow_opt_1.asil_collision_diag_en,asil_collision_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed980.007224275436423566" offset="25" name="asil_en" hdl_path="asil_en_q" uid="2018-06-19T16:07:24.261+05:30d14e918" keypath="reg_map.shadow.shadow_opt_1.asil_en,shadow.shadow_opt_1.asil_en,shadow_opt_1.asil_en,asil_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.2.4" child_no="4" id="tab480.36468467625818834" name="shadow_opt_2" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top." u_shadow_address="0x37" no_reg_bit_bash_test="true" no_reg_access_test="true" uid="2018-06-19T16:07:24.261+05:30d14e926" keypath="reg_map.shadow.shadow_opt_2,shadow.shadow_opt_2,shadow_opt_2" coverage="on" hwmapaddr="61" csize="4" offset="12" caddress="12" address="0x008C" endaddress="0x8F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x008C" endaddress="0x8F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1060.2841125558928749" offset="8:7" name="opt_thresh_monitor_cnt" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_thresh_monitor_cnt_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e987" keypath="reg_map.shadow.shadow_opt_2.opt_thresh_monitor_cnt,shadow.shadow_opt_2.opt_thresh_monitor_cnt,shadow_opt_2.opt_thresh_monitor_cnt,opt_thresh_monitor_cnt">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed1080.21191656246878132" offset="12:10" name="opt_lockout_startup_standstill_lor" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_lockout_startup_standstill_lor_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e1004" keypath="reg_map.shadow.shadow_opt_2.opt_lockout_startup_standstill_lor,shadow.shadow_opt_2.opt_lockout_startup_standstill_lor,shadow_opt_2.opt_lockout_startup_standstill_lor,opt_lockout_startup_standstill_lor">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed990.04570185731330678" offset="0" name="lock_bd" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_lock_bd_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e931" keypath="reg_map.shadow.shadow_opt_2.lock_bd,shadow.shadow_opt_2.lock_bd,shadow_opt_2.lock_bd,lock_bd">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1000.4229014922219815" offset="1" name="lock_t" hdl_path="lock_t_in" registered="false" lock="shadow_opt_2.lock_t" uid="2018-06-19T16:07:24.261+05:30d14e939" keypath="reg_map.shadow.shadow_opt_2.lock_t,shadow.shadow_opt_2.lock_t,shadow_opt_2.lock_t,lock_t">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1010.4011960255958654" offset="2" name="lock_a" hdl_path="lock_a_in" registered="false" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e947" keypath="reg_map.shadow.shadow_opt_2.lock_a,shadow.shadow_opt_2.lock_a,shadow_opt_2.lock_a,lock_a">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1020.8621456465083439" offset="3" name="lock_c" hdl_path="lock_c_in" registered="false" lock="shadow_opt_2.lock_c" uid="2018-06-19T16:07:24.261+05:30d14e955" keypath="reg_map.shadow.shadow_opt_2.lock_c,shadow.shadow_opt_2.lock_c,shadow_opt_2.lock_c,lock_c">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1030.9938769036039706" offset="4" name="lock_o" hdl_path="lock_o_in" registered="false" lock="shadow_opt_2.lock_o" uid="2018-06-19T16:07:24.261+05:30d14e963" keypath="reg_map.shadow.shadow_opt_2.lock_o,shadow.shadow_opt_2.lock_o,shadow_opt_2.lock_o,lock_o">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1040.9339343247533152" offset="5" name="lock_s" hdl_path="lock_s_in" registered="false" lock="shadow_opt_2.lock_s" uid="2018-06-19T16:07:24.261+05:30d14e971" keypath="reg_map.shadow.shadow_opt_2.lock_s,shadow.shadow_opt_2.lock_s,shadow_opt_2.lock_s,lock_s">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1050.6812340966934209" offset="6" name="out_2wire" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_out_2wire_in" registered="false" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e979" keypath="reg_map.shadow.shadow_opt_2.out_2wire,shadow.shadow_opt_2.out_2wire,shadow_opt_2.out_2wire,out_2wire">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1070.2928065836767837" offset="9" name="opt_thresh_monitor_dis" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_thresh_monitor_dis_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e995" keypath="reg_map.shadow.shadow_opt_2.opt_thresh_monitor_dis,shadow.shadow_opt_2.opt_thresh_monitor_dis,shadow_opt_2.opt_thresh_monitor_dis,opt_thresh_monitor_dis">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1090.07040282294262334" offset="13" name="opt_force_asil_diag_sample" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_force_asil_diag_sample_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e1012" keypath="reg_map.shadow.shadow_opt_2.opt_force_asil_diag_sample,shadow.shadow_opt_2.opt_force_asil_diag_sample,shadow_opt_2.opt_force_asil_diag_sample,opt_force_asil_diag_sample">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1100.287313207710301" offset="14" name="rma_spare_0" output_coupling="true" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_rma_spare_0_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e1020" keypath="reg_map.shadow.shadow_opt_2.rma_spare_0,shadow.shadow_opt_2.rma_spare_0,shadow_opt_2.rma_spare_0,rma_spare_0">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1110.8649414181212365" offset="15" name="rma_spare_1" output_coupling="true" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_rma_spare_1_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e1028" keypath="reg_map.shadow.shadow_opt_2.rma_spare_1,shadow.shadow_opt_2.rma_spare_1,shadow_opt_2.rma_spare_1,rma_spare_1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+   </section>
+   <section heading="1.3" child_no="3" id="tab510.5140474781762987" name="eeprom" offset="192" external="true" no_reg_hw_reset_test="true" wr_rd_valids="true" uid="2018-06-19T16:07:24.261+05:30d14e1036" keypath="reg_map.eeprom,eeprom" keypathdown="eeprom.factory_0.factory_1.factory_2.factory_3.trim_0.opt_0.opt_1.opt_2,factory_0,factory_1,factory_2,factory_3,trim_0,opt_0,opt_1,opt_2" coverage="on" hwmapaddr="62" max_reg_size="32" csize="32" caddress="192" address="0x00C0" endaddress="0xDF" size="32">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="192" address="0x00C0" endaddress="0xDF" size="32"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <reg heading="1.3.1" child_no="1" id="tab520.33622642927171364" name="factory_0" hdl_path="u_eeprom_top.eeprom_array.mem[0]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1039" keypath="reg_map.eeprom.factory_0,eeprom.factory_0,factory_0" coverage="on" hwmapaddr="63" csize="4" offset="0" caddress="0" address="0x00C0" endaddress="0xC3" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00C0" endaddress="0xC3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1120.4545650667709308" offset="25:0" name="factory_0" uid="2018-06-19T16:07:24.261+05:30d14e1044" keypath="reg_map.eeprom.factory_0.factory_0,eeprom.factory_0.factory_0,factory_0.factory_0,factory_0">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+         </field>
+         <field id="tabed1130.08855031724344231" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1051" keypath="reg_map.eeprom.factory_0.ecc,eeprom.factory_0.ecc,factory_0.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.2" child_no="2" id="tab540.2860570546903828" name="factory_1" hdl_path="u_eeprom_top.eeprom_array.mem[1]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1058" keypath="reg_map.eeprom.factory_1,eeprom.factory_1,factory_1" coverage="on" hwmapaddr="64" csize="4" offset="4" caddress="4" address="0x00C4" endaddress="0xC7" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x00C4" endaddress="0xC7" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1140.8110548946078644" offset="25:0" name="factory_1" uid="2018-06-19T16:07:24.261+05:30d14e1063" keypath="reg_map.eeprom.factory_1.factory_1,eeprom.factory_1.factory_1,factory_1.factory_1,factory_1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+         </field>
+         <field id="tabed1150.6492243817979356" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1070" keypath="reg_map.eeprom.factory_1.ecc,eeprom.factory_1.ecc,factory_1.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.3" child_no="3" id="tab560.6345277416629258" name="factory_2" hdl_path="u_eeprom_top.eeprom_array.mem[2]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1077" keypath="reg_map.eeprom.factory_2,eeprom.factory_2,factory_2" coverage="on" hwmapaddr="65" csize="4" offset="8" caddress="8" address="0x00C8" endaddress="0xCB" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x00C8" endaddress="0xCB" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1160.11357133545622411" offset="25:0" name="factory_2" uid="2018-06-19T16:07:24.261+05:30d14e1082" keypath="reg_map.eeprom.factory_2.factory_2,eeprom.factory_2.factory_2,factory_2.factory_2,factory_2">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+         </field>
+         <field id="tabed1170.8915666362304789" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1089" keypath="reg_map.eeprom.factory_2.ecc,eeprom.factory_2.ecc,factory_2.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.4" child_no="4" id="tab580.6486386596116749" name="factory_3" hdl_path="u_eeprom_top.eeprom_array.mem[3]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1096" keypath="reg_map.eeprom.factory_3,eeprom.factory_3,factory_3" coverage="on" hwmapaddr="66" csize="4" offset="12" caddress="12" address="0x00CC" endaddress="0xCF" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x00CC" endaddress="0xCF" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1180.7515414628990852" offset="25:0" name="factory_3" uid="2018-06-19T16:07:24.261+05:30d14e1101" keypath="reg_map.eeprom.factory_3.factory_3,eeprom.factory_3.factory_3,factory_3.factory_3,factory_3">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+         </field>
+         <field id="tabed1190.8791913108702705" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1108" keypath="reg_map.eeprom.factory_3.ecc,eeprom.factory_3.ecc,factory_3.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.5" child_no="5" id="tab600.6645902347943716" name="trim_0" hdl_path="u_eeprom_top.eeprom_array.mem[4]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1115" keypath="reg_map.eeprom.trim_0,eeprom.trim_0,trim_0" coverage="on" hwmapaddr="67" csize="4" offset="16" caddress="16" address="0x00D0" endaddress="0xD3" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x00D0" endaddress="0xD3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1200.23276153775064656" offset="4:0" name="trim_osc" uid="2018-06-19T16:07:24.261+05:30d14e1120" keypath="reg_map.eeprom.trim_0.trim_osc,eeprom.trim_0.trim_osc,trim_0.trim_osc,trim_osc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed1210.7583449518075887" offset="9:5" name="trim_icc_low" uid="2018-06-19T16:07:24.261+05:30d14e1127" keypath="reg_map.eeprom.trim_0.trim_icc_low,eeprom.trim_0.trim_icc_low,trim_0.trim_icc_low,trim_icc_low">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed1220.23239305960314882" offset="13:10" name="trim_icc_high" uid="2018-06-19T16:07:24.261+05:30d14e1134" keypath="reg_map.eeprom.trim_0.trim_icc_high,eeprom.trim_0.trim_icc_high,trim_0.trim_icc_high,trim_icc_high">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed1230.0007953709133665665" offset="18:14" name="trim_sens" uid="2018-06-19T16:07:24.261+05:30d14e1141" keypath="reg_map.eeprom.trim_0.trim_sens,eeprom.trim_0.trim_sens,trim_0.trim_sens,trim_sens">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="tabed1240.623932515283253" offset="22:19" name="trim_mag_tc" uid="2018-06-19T16:07:24.261+05:30d14e1148" keypath="reg_map.eeprom.trim_0.trim_mag_tc,eeprom.trim_0.trim_mag_tc,trim_0.trim_mag_tc,trim_mag_tc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed1250.003489788114466319" offset="24:23" name="trim_icc_tc" uid="2018-06-19T16:07:24.261+05:30d14e1155" keypath="reg_map.eeprom.trim_0.trim_icc_tc,eeprom.trim_0.trim_icc_tc,trim_0.trim_icc_tc,trim_icc_tc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed1270.17034188594367183" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1169" keypath="reg_map.eeprom.trim_0.ecc,eeprom.trim_0.ecc,trim_0.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed1260.6677374570625728" offset="25" name="ibias_diag_analog_en" uid="2018-06-19T16:07:24.261+05:30d14e1162" keypath="reg_map.eeprom.trim_0.ibias_diag_analog_en,eeprom.trim_0.ibias_diag_analog_en,trim_0.ibias_diag_analog_en,ibias_diag_analog_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.3.6" child_no="6" id="tab620.8348586334902593" name="opt_0" hdl_path="u_eeprom_top.eeprom_array.mem[5]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1176" keypath="reg_map.eeprom.opt_0,eeprom.opt_0,opt_0" coverage="on" hwmapaddr="68" csize="4" offset="20" caddress="20" address="0x00D4" endaddress="0xD7" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x00D4" endaddress="0xD7" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1300.8612070757818134" offset="3:2" name="rma_out_mode_default" uid="2018-06-19T16:07:24.261+05:30d14e1195" keypath="reg_map.eeprom.opt_0.rma_out_mode_default,eeprom.opt_0.rma_out_mode_default,opt_0.rma_out_mode_default,rma_out_mode_default">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed1320.8530833440465743" offset="11:5" name="rma_mux1_default" uid="2018-06-19T16:07:24.261+05:30d14e1209" keypath="reg_map.eeprom.opt_0.rma_mux1_default,eeprom.opt_0.rma_mux1_default,opt_0.rma_mux1_default,rma_mux1_default">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+         </field>
+         <field id="tabed1330.6442637986571398" offset="18:12" name="rma_mux1_twowire_default" uid="2018-06-19T16:07:24.261+05:30d14e1216" keypath="reg_map.eeprom.opt_0.rma_mux1_twowire_default,eeprom.opt_0.rma_mux1_twowire_default,opt_0.rma_mux1_twowire_default,rma_mux1_twowire_default">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+         </field>
+         <field id="tabed1340.8410396979187033" offset="25:19" name="rma_mux2_position" uid="2018-06-19T16:07:24.261+05:30d14e1223" keypath="reg_map.eeprom.opt_0.rma_mux2_position,eeprom.opt_0.rma_mux2_position,opt_0.rma_mux2_position,rma_mux2_position">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+         </field>
+         <field id="tabed1350.9428761487416856" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1230" keypath="reg_map.eeprom.opt_0.ecc,eeprom.opt_0.ecc,opt_0.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed1280.7537065603370776" offset="0" name="opt_sag_timer_disable" uid="2018-06-19T16:07:24.261+05:30d14e1181" keypath="reg_map.eeprom.opt_0.opt_sag_timer_disable,eeprom.opt_0.opt_sag_timer_disable,opt_0.opt_sag_timer_disable,opt_sag_timer_disable">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1290.2747157664517046" offset="1" name="opt_sag_timer_run_disable" uid="2018-06-19T16:07:24.261+05:30d14e1188" keypath="reg_map.eeprom.opt_0.opt_sag_timer_run_disable,eeprom.opt_0.opt_sag_timer_run_disable,opt_0.opt_sag_timer_run_disable,opt_sag_timer_run_disable">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1310.7760088962825484" offset="4" name="rma_mux_to_outpin" uid="2018-06-19T16:07:24.261+05:30d14e1202" keypath="reg_map.eeprom.opt_0.rma_mux_to_outpin,eeprom.opt_0.rma_mux_to_outpin,opt_0.rma_mux_to_outpin,rma_mux_to_outpin">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.3.7" child_no="7" id="tab640.002932291266752096" name="opt_1" hdl_path="u_eeprom_top.eeprom_array.mem[6]" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1237" keypath="reg_map.eeprom.opt_1,eeprom.opt_1,opt_1" coverage="on" hwmapaddr="69" csize="4" offset="24" caddress="24" address="0x00D8" endaddress="0xDB" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="24" address="0x00D8" endaddress="0xDB" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1360.21469439337752705" offset="3:0" name="opt_lockout_sel" uid="2018-06-19T16:07:24.261+05:30d14e1242" keypath="reg_map.eeprom.opt_1.opt_lockout_sel,eeprom.opt_1.opt_lockout_sel,opt_1.opt_lockout_sel,opt_lockout_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+         </field>
+         <field id="tabed1370.21487625558313606" offset="6:4" name="opt_lockout_hyst_sel" uid="2018-06-19T16:07:24.261+05:30d14e1249" keypath="reg_map.eeprom.opt_1.opt_lockout_hyst_sel,eeprom.opt_1.opt_lockout_hyst_sel,opt_1.opt_lockout_hyst_sel,opt_lockout_hyst_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed1380.8374667920415337" offset="8:7" name="opt_warn_level_sel" uid="2018-06-19T16:07:24.261+05:30d14e1256" keypath="reg_map.eeprom.opt_1.opt_warn_level_sel,eeprom.opt_1.opt_warn_level_sel,opt_1.opt_warn_level_sel,opt_warn_level_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed1560.45727916999208806" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1384" keypath="reg_map.eeprom.opt_1.ecc,eeprom.opt_1.ecc,opt_1.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed1390.31468910840693076" offset="9" name="opt_warn_run_en" uid="2018-06-19T16:07:24.261+05:30d14e1263" keypath="reg_map.eeprom.opt_1.opt_warn_run_en,eeprom.opt_1.opt_warn_run_en,opt_1.opt_warn_run_en,opt_warn_run_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1400.19698328988383973" offset="10" name="opt_warn_cal_en" uid="2018-06-19T16:07:24.261+05:30d14e1270" keypath="reg_map.eeprom.opt_1.opt_warn_cal_en,eeprom.opt_1.opt_warn_cal_en,opt_1.opt_warn_cal_en,opt_warn_cal_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1410.1584979118547465" offset="11" name="opt_el_en" uid="2018-06-19T16:07:24.261+05:30d14e1277" keypath="reg_map.eeprom.opt_1.opt_el_en,eeprom.opt_1.opt_el_en,opt_1.opt_el_en,opt_el_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1420.7299183814901196" offset="12" name="opt_fwd_width" uid="2018-06-19T16:07:24.261+05:30d14e1284" keypath="reg_map.eeprom.opt_1.opt_fwd_width,eeprom.opt_1.opt_fwd_width,opt_1.opt_fwd_width,opt_fwd_width">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1430.9267629245387375" offset="13" name="opt_dir_sel" uid="2018-06-19T16:07:24.261+05:30d14e1291" keypath="reg_map.eeprom.opt_1.opt_dir_sel,eeprom.opt_1.opt_dir_sel,opt_1.opt_dir_sel,opt_dir_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1440.010049242845066364" offset="14" name="opt_ch_wd_dis" uid="2018-06-19T16:07:24.261+05:30d14e1298" keypath="reg_map.eeprom.opt_1.opt_ch_wd_dis,eeprom.opt_1.opt_ch_wd_dis,opt_1.opt_ch_wd_dis,opt_ch_wd_dis">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1450.6920892204036612" offset="15" name="opt_standstill_en" uid="2018-06-19T16:07:24.261+05:30d14e1306" keypath="reg_map.eeprom.opt_1.opt_standstill_en,eeprom.opt_1.opt_standstill_en,opt_1.opt_standstill_en,opt_standstill_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1460.8340901882715884" offset="16" name="opt_pk_update_sel" uid="2018-06-19T16:07:24.261+05:30d14e1313" keypath="reg_map.eeprom.opt_1.opt_pk_update_sel,eeprom.opt_1.opt_pk_update_sel,opt_1.opt_pk_update_sel,opt_pk_update_sel">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1470.9091222924303201" offset="17" name="asil_fe_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1320" keypath="reg_map.eeprom.opt_1.asil_fe_diag_en,eeprom.opt_1.asil_fe_diag_en,opt_1.asil_fe_diag_en,asil_fe_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1480.4425439704594699" offset="18" name="asil_vreg_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1327" keypath="reg_map.eeprom.opt_1.asil_vreg_diag_en,eeprom.opt_1.asil_vreg_diag_en,opt_1.asil_vreg_diag_en,asil_vreg_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1490.9998879116477507" offset="19" name="asil_ibias_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1334" keypath="reg_map.eeprom.opt_1.asil_ibias_diag_en,eeprom.opt_1.asil_ibias_diag_en,opt_1.asil_ibias_diag_en,asil_ibias_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1500.6648441255882978" offset="20" name="asil_hdrive_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1341" keypath="reg_map.eeprom.opt_1.asil_hdrive_diag_en,eeprom.opt_1.asil_hdrive_diag_en,opt_1.asil_hdrive_diag_en,asil_hdrive_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1510.8680866776724159" offset="21" name="asil_ob_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1348" keypath="reg_map.eeprom.opt_1.asil_ob_diag_en,eeprom.opt_1.asil_ob_diag_en,opt_1.asil_ob_diag_en,asil_ob_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1520.9578315817571119" offset="22" name="asil_overfreq_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1355" keypath="reg_map.eeprom.opt_1.asil_overfreq_diag_en,eeprom.opt_1.asil_overfreq_diag_en,opt_1.asil_overfreq_diag_en,asil_overfreq_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1530.30846948948716246" offset="23" name="asil_sat_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1362" keypath="reg_map.eeprom.opt_1.asil_sat_diag_en,eeprom.opt_1.asil_sat_diag_en,opt_1.asil_sat_diag_en,asil_sat_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1540.15154738870615347" offset="24" name="asil_collision_diag_en" uid="2018-06-19T16:07:24.261+05:30d14e1369" keypath="reg_map.eeprom.opt_1.asil_collision_diag_en,eeprom.opt_1.asil_collision_diag_en,opt_1.asil_collision_diag_en,asil_collision_diag_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1550.22182753136286892" offset="25" name="asil_en" uid="2018-06-19T16:07:24.261+05:30d14e1376" keypath="reg_map.eeprom.opt_1.asil_en,eeprom.opt_1.asil_en,opt_1.asil_en,asil_en">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.3.8" child_no="8" id="tab660.8090821951999061" name="opt_2" hdl_path="u_eeprom_top.eeprom_array.mem[7]" no_reg_bit_bash_test="true" no_reg_access_test="true" uid="2018-06-19T16:07:24.261+05:30d14e1391" keypath="reg_map.eeprom.opt_2,eeprom.opt_2,opt_2" coverage="on" hwmapaddr="70" csize="4" offset="28" caddress="28" address="0x00DC" endaddress="0xDF" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x00DC" endaddress="0xDF" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed1640.2261019898970138" offset="8:7" name="opt_thresh_monitor_cnt" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1452" keypath="reg_map.eeprom.opt_2.opt_thresh_monitor_cnt,eeprom.opt_2.opt_thresh_monitor_cnt,opt_2.opt_thresh_monitor_cnt,opt_thresh_monitor_cnt">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="tabed1660.5804112780310366" offset="12:10" name="opt_lockout_startup_standstill_lor" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1469" keypath="reg_map.eeprom.opt_2.opt_lockout_startup_standstill_lor,eeprom.opt_2.opt_lockout_startup_standstill_lor,opt_2.opt_lockout_startup_standstill_lor,opt_lockout_startup_standstill_lor">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+         </field>
+         <field id="tabed1700.5178271974567282" offset="25:16" name="unused_0" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1501" keypath="reg_map.eeprom.opt_2.unused_0,eeprom.opt_2.unused_0,opt_2.unused_0,unused_0">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000000</default>
+         </field>
+         <field id="tabed1710.5725948072053715" offset="31:26" name="ecc" uid="2018-06-19T16:07:24.261+05:30d14e1509" keypath="reg_map.eeprom.opt_2.ecc,eeprom.opt_2.ecc,opt_2.ecc,ecc">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="tabed1570.5336510461098425" offset="0" name="lock_bd" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1396" keypath="reg_map.eeprom.opt_2.lock_bd,eeprom.opt_2.lock_bd,opt_2.lock_bd,lock_bd">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1580.4934116919165874" offset="1" name="lock_t" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e1404" keypath="reg_map.eeprom.opt_2.lock_t,eeprom.opt_2.lock_t,opt_2.lock_t,lock_t">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1590.06061791072772149" offset="2" name="lock_a" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1412" keypath="reg_map.eeprom.opt_2.lock_a,eeprom.opt_2.lock_a,opt_2.lock_a,lock_a">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1600.20735684150401523" offset="3" name="lock_c" lock="shadow_opt_2.lock_c" uid="2018-06-19T16:07:24.261+05:30d14e1420" keypath="reg_map.eeprom.opt_2.lock_c,eeprom.opt_2.lock_c,opt_2.lock_c,lock_c">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1610.09668362694498223" offset="4" name="lock_o" lock="shadow_opt_2.lock_o" uid="2018-06-19T16:07:24.261+05:30d14e1428" keypath="reg_map.eeprom.opt_2.lock_o,eeprom.opt_2.lock_o,opt_2.lock_o,lock_o">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1620.9335851231244644" offset="5" name="lock_s" lock="shadow_opt_2.lock_s" uid="2018-06-19T16:07:24.261+05:30d14e1436" keypath="reg_map.eeprom.opt_2.lock_s,eeprom.opt_2.lock_s,opt_2.lock_s,lock_s">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1630.5489650875309657" offset="6" name="out_2wire" lock="(shadow_opt_2.lock_a &amp; !unlock.unlock)" uid="2018-06-19T16:07:24.261+05:30d14e1444" keypath="reg_map.eeprom.opt_2.out_2wire,eeprom.opt_2.out_2wire,opt_2.out_2wire,out_2wire">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1650.23344433628137085" offset="9" name="opt_thresh_monitor_dis" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1460" keypath="reg_map.eeprom.opt_2.opt_thresh_monitor_dis,eeprom.opt_2.opt_thresh_monitor_dis,opt_2.opt_thresh_monitor_dis,opt_thresh_monitor_dis">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1670.3495153168655025" offset="13" name="opt_force_asil_diag_sample" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1477" keypath="reg_map.eeprom.opt_2.opt_force_asil_diag_sample,eeprom.opt_2.opt_force_asil_diag_sample,opt_2.opt_force_asil_diag_sample,opt_force_asil_diag_sample">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1680.9575135404205053" offset="14" name="rma_spare_0" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1485" keypath="reg_map.eeprom.opt_2.rma_spare_0,eeprom.opt_2.rma_spare_0,opt_2.rma_spare_0,rma_spare_0">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="tabed1690.623275062297135" offset="15" name="rma_spare_1" lock="shadow_opt_2.lock_a" uid="2018-06-19T16:07:24.261+05:30d14e1493" keypath="reg_map.eeprom.opt_2.rma_spare_1,eeprom.opt_2.rma_spare_1,opt_2.rma_spare_1,rma_spare_1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+      </reg>
+   </section>
+</block>

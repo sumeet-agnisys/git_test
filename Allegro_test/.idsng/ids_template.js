@@ -57,100 +57,117 @@ function writeparam(str) {
 	document.getElementById("paramcontainer").innerHTML = str;
 	document.getElementById("paramcontainer").style.display = "block";
 	addIntoHistory();
-} /* Events fired on the drag target */
-document.addEventListener("dragstart", function(event) { /* The dataTransfer.setData() method sets the data type and the value of the dragged data*/
-	event.dataTransfer.setData("Text", event.target.id); /* Output some text when starting to drag the p element					document.getElementById("demo").innerHTML = "Started to drag the p element.";*/ /* Change the opacity of the draggable element*/
-	event.target.style.opacity = "0.4"; /*event.target.style.backgroundColor="transparent";*/ /*console.log("drag target="+event.target.id);*/
-}); /* While dragging the p element, change the color of the output text				this event fire when drag starts.				event.target have source element object*/
+} 
 var regsource;
-document.addEventListener("drag", function(event) { /*document.getElementById("demo").style.color = "red";*/
-	event.target.parentElement.style.backgroundColor = "white";
-	regsource = event; /*console.log("source index="+regsource.target.parentElement.cellIndex);*/
-}); /* Output some text when finished dragging the p element and reset the opacity*/
-document.addEventListener("dragend", function(event) { /*document.getElementById("demo").innerHTML = "Finished dragging the p element.";*/
-	event.target.style.opacity = "1";
-}); /* Events fired on the drop target */ /* When the draggable p element enters the droptarget, change the DIVS's border style*/
-document.addEventListener("dragenter", function(event) {
-	if (event.target.className == "droptarget") {
-		event.target.style.border = "2px solid red";
-	}
-}); /* By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element*/
-document.addEventListener("dragover", function(event) {
-	event.preventDefault();
-}); /* When the draggable p element leaves the droptarget, reset the DIVS's border style*/
-document.addEventListener("dragleave", function(event) {
-	if (event.target.className == "droptarget") {
-		event.target.style.border = "";
-	}
-}); /* On drop - Prevent the browser default handling of the data (default is open as link on drop)   Reset the color of the output text and DIV's border color   Get the dragged data with the dataTransfer.getData() method   The dragged data is the id of the dragged element ("drag1")   Append the dragged element into the drop element*/
-document.addEventListener("drop", function(event) {
-	event.preventDefault();
-	if (event.target.className == "droptarget") {
-		try {
-			var vali = validateCell(event);
-			if (vali) {
-				console.log("Warning : Space is full");
-				event.target.style.border = "";
-				regsource.target.style.backgroundColor = "#d4e0e2";
-			} else { /*document.getElementById("demo").style.color = "";*/
-				event.target.style.border = ""; /*var data = event.dataTransfer.getData("Text");*/
-				var data = event.dataTransfer.getData("Text");
-				event.target.appendChild(document.getElementById(data));
-				event.target.style.backgroundColor = "#d4e0e2";
-				var cellindex = event.target.cellIndex;
-				var data2 = parseInt(regsource.target.getAttribute("data-size"));
-				var range = data2 + cellindex;
-				event.target.closest("tr").cells[cellindex].colSpan = data2;
-				var temp;
-				var reversecell = 0;
-				for (i = cellindex + 1; i < range; i++) {
-					temp = event.target.closest("tr").cells[cellindex + 1];
-					if ((typeof(temp) === "undefined" || temp === null)) {
-						reversecell++;
-						temp = event.target.closest("tr").cells[cellindex - reversecell].innerHTML.trim();
-						if (temp == '') {
-							event.target.closest("tr").cells[cellindex - reversecell].remove();
-						}
-					} else {
-						temp = temp.innerHTML.trim();
-						if (temp === "") {
-							event.target.closest("tr").cells[cellindex + 1].remove();
-						} else {
+
+function initilizeParamEvents(){
+
+	/* Events fired on the drag target */
+	document.getElementById("paramcontainer").addEventListener("dragstart", function(event) { /* The dataTransfer.setData() method sets the data type and the value of the dragged data*/		
+		event.dataTransfer.setData("Text", event.target.id); /* Output some text when starting to drag the p element					document.getElementById("demo").innerHTML = "Started to drag the p element.";*/ /* Change the opacity of the draggable element*/
+		event.target.style.opacity = "0.4"; /*event.target.style.backgroundColor="transparent";*/ /*console.log("drag target="+event.target.id);*/
+		try{
+			document.getElementById("scroller").style="display:block";		
+		}
+		catch(e){}
+	}); /* While dragging the p element, change the color of the output text				this event fire when drag starts.				event.target have source element object*/
+	document.getElementById("paramcontainer").addEventListener("drag", function(event) { /*document.getElementById("demo").style.color = "red";*/
+		event.target.parentElement.style.backgroundColor = "white";
+		regsource = event; /*console.log("source index="+regsource.target.parentElement.cellIndex);*/
+	}); /* Output some text when finished dragging the p element and reset the opacity*/
+	document.getElementById("paramcontainer").addEventListener("dragend", function(event) { /*document.getElementById("demo").innerHTML = "Finished dragging the p element.";*/
+		event.target.style.opacity = "1";
+	}); /* Events fired on the drop target */ /* When the draggable p element enters the droptarget, change the DIVS's border style*/
+	document.getElementById("paramcontainer").addEventListener("dragenter", function(event) {
+		if (event.target.className == "droptarget") {
+			event.target.style.border = "2px solid red";
+		}
+	}); /* By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element*/
+	document.getElementById("param_main").addEventListener("dragover", function(event) {
+		event.preventDefault();
+		if(event.target.id=="scr_down"){
+			window.scrollBy(0,20);
+		}
+		else if(event.target.id=="scr_up"){
+			window.scrollBy(0,-20);
+		}
+	}); /* When the draggable p element leaves the droptarget, reset the DIVS's border style*/
+	document.getElementById("paramcontainer").addEventListener("dragleave", function(event) {
+		if (event.target.className == "droptarget") {
+			event.target.style.border = "";
+		}
+	}); /* On drop - Prevent the browser default handling of the data (default is open as link on drop)   Reset the color of the output text and DIV's border color   Get the dragged data with the dataTransfer.getData() method   The dragged data is the id of the dragged element ("drag1")   Append the dragged element into the drop element*/
+	document.getElementById("paramcontainer").addEventListener("drop", function(event) {
+		event.preventDefault();	
+		try{
+			document.getElementById("scroller").style="display:none";
+		}
+		catch(e){}
+		if (event.target.className == "droptarget") {
+			try {
+				var vali = validateCell(event);
+				if (vali) {
+					console.log("Warning : Space is full");
+					event.target.style.border = "";
+					regsource.target.style.backgroundColor = "#d4e0e2";
+				} else { /*document.getElementById("demo").style.color = "";*/
+					event.target.style.border = ""; /*var data = event.dataTransfer.getData("Text");*/
+					var data = event.dataTransfer.getData("Text");
+					event.target.appendChild(document.getElementById(data));
+					event.target.style.backgroundColor = "#d4e0e2";
+					var cellindex = event.target.cellIndex;
+					var data2 = parseInt(regsource.target.getAttribute("data-size"));
+					var range = data2 + cellindex;
+					event.target.closest("tr").cells[cellindex].colSpan = data2;
+					var temp;
+					var reversecell = 0;
+					for (i = cellindex + 1; i < range; i++) {
+						temp = event.target.closest("tr").cells[cellindex + 1];
+						if ((typeof(temp) === "undefined" || temp === null)) {
 							reversecell++;
-							temp = event.target.closest("tr").cells[cellindex - reversecell + 1].getElementsByTagName("p")[0];
-							if ((typeof(temp) !== "undefined" || temp !== null)) {
-								var iiid = temp.id;
-								if (iiid === regsource.target.id) {
-									var j;
-									var delindex = cellindex - reversecell ;
-									var counter = 0;
-									for (j = i; j < range; j++) {
-										event.target.closest("tr").cells[delindex - counter].remove();
-										counter++;
-									}
-									break;
-								}
-							} /*										temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();										console.log("--reverseTtemp="+temp+"--index="+(cellindex-reversecell));										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell+1].innerHTML.trim());										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell-2].innerHTML.trim());*/
+							temp = event.target.closest("tr").cells[cellindex - reversecell].innerHTML.trim();
 							if (temp == '') {
 								event.target.closest("tr").cells[cellindex - reversecell].remove();
 							}
-						}
-					} /*								if((typeof(temp) === "undefined" || temp === null)||((typeof(temp) === "undefined" || temp === null)&&																					 temp==='')){									event.target.closest("tr").cells[cellindex+1].remove();cell index remain same after deletion, hence it is fixed index deletion								}								else if(temp!==''){									reversecell++;									temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();									if(temp==''){										event.target.closest("tr").cells[cellindex-reversecell].remove();									}								}								*/
+						} else {
+							temp = temp.innerHTML.trim();
+							if (temp === "") {
+								event.target.closest("tr").cells[cellindex + 1].remove();
+							} else {
+								reversecell++;
+								temp = event.target.closest("tr").cells[cellindex - reversecell + 1].getElementsByTagName("p")[0];
+								if ((typeof(temp) !== "undefined" || temp !== null)) {
+									var iiid = temp.id;
+									if (iiid === regsource.target.id) {
+										var j;
+										var delindex = cellindex - reversecell ;
+										var counter = 0;
+										for (j = i; j < range; j++) {
+											event.target.closest("tr").cells[delindex - counter].remove();
+											counter++;
+										}
+										break;
+									}
+								} /*										temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();										console.log("--reverseTtemp="+temp+"--index="+(cellindex-reversecell));										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell+1].innerHTML.trim());										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell-2].innerHTML.trim());*/
+								if (temp == '') {
+									event.target.closest("tr").cells[cellindex - reversecell].remove();
+								}
+							}
+						} /*								if((typeof(temp) === "undefined" || temp === null)||((typeof(temp) === "undefined" || temp === null)&&																					 temp==='')){									event.target.closest("tr").cells[cellindex+1].remove();cell index remain same after deletion, hence it is fixed index deletion								}								else if(temp!==''){									reversecell++;									temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();									if(temp==''){										event.target.closest("tr").cells[cellindex-reversecell].remove();									}								}								*/
+					}
 				}
+			} catch (ex) {
+				console.log("Error dop event : " + ex.message);
 			}
-		} catch (ex) {
-			console.log("Error dop event : " + ex.message);
+			addIntoHistory();
+		} else {
+			regsource.target.style.backgroundColor = "#d4e0e2";
 		}
-		addIntoHistory();
-	} else {
-		regsource.target.style.backgroundColor = "#d4e0e2";
-	}
-});
-
+	});
+}
 function validateCell(src) {
 	var cellindex = src.target.cellIndex;
 	var d = regsource.target.getAttribute("data-size");
-	console.log("--d=" + d);
 	var data = parseInt(d);
 	var range = data + cellindex;
 	console.log("--cellindex=" + cellindex);
@@ -207,6 +224,11 @@ function validateCell(src) {
 				iscellavail = false;
 				break;
 			} else {
+				console.log("--class exist="+ currcell.classList.contains("droptarget"));
+				if(!currcell.classList.contains("droptarget")){
+					iscellavail = false;
+					break;
+				}
 				if (currcell.innerHTML.trim() != "") {
 					descId = currcell.getElementsByTagName("p")[0];
 					if ((typeof(descId) !== "undefined" || descId !== null)) {
@@ -384,12 +406,29 @@ $(document).ready(function(){
 
 
 	$("#menucopy").hover(function(){
+		var x=event.pageX;
+		var spreadwidth=$( "#spreadsheetcontainer" ).width();
+		if((spreadwidth-x)<100){
+			$("#submenucopy").css("left", "-100%");	
+		}
+		else{
+			$("#submenucopy").css("left", "100%");	
+		}
+
 		$("#submenucopy").css("display", "block");
 	}, function(){
 		$("#submenucopy").css("display", "none");
 	});
 
-	$("#menudelete").hover(function(){
+	$("#menudelete").hover(function(event){
+		var x=event.pageX;
+		var spreadwidth=$( "#spreadsheetcontainer" ).width();
+		if((spreadwidth-x)<100){
+			$("#submenudelete").css("left", "-100%");	
+		}
+		else{
+			$("#submenudelete").css("left", "100%");
+		}
 		$("#submenudelete").css("display", "block");
 	}, function(){
 		$("#submenudelete").css("display", "none");
@@ -402,8 +441,46 @@ $(document).ready(function(){
 	});
 
 	document.getElementById("backhidder").addEventListener("click",function(e){ hidetemplate()});
+	document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].addEventListener("keydown",function(e){ spreadsheetKeyEventHandler()});
+
+
+	$( "#selectable" ).selectable({
+		selected: function() {
+			//var result = $( "#result" ).empty();
+			selected_rows=[];
+
+			$( ".ui-selected", this ).each(function() {
+
+				var index = $( "#selectable tr" ).index( this );
+				if(index>-1){
+					selected_rows.push(index);
+				}
+				//result.append( ( index + 1 ) );
+				//result.append( " ," );
+			});
+		}
+	});
+
+	$("#selectable").on('click','td',function(source) { 
+		var source = event.target || event.srcElement;
+		try{
+			placeCaretAtEnd(source);
+		}catch(e){alert("Err "+e.message);}
+		$('#excelmenu').css({'display':'none'});
+	});
+
+	initilizeParamEvents();
+
+	document.getElementById("scr_up").addEventListener("click",function(e){ 
+		window.scrollBy(0,-20);
+	});
+
+	document.getElementById("scr_down").addEventListener("click",function(e){ 
+		window.scrollBy(0,20);
+	});
 
 });
+
 
 
 function placeCaretAtEnd(el) {
@@ -830,6 +907,26 @@ function setTabID(){
 		random_Num=Math.random();
 		field[i].setAttribute('id','tabf'+i+random_Num);
 	}
+	var edited = document.getElementsByClassName("edited");
+	for(var i = 0; i < edited.length; i++)
+	{
+		random_Num=Math.random();
+		edited[i].setAttribute('id','tabed'+i+random_Num);
+	}
+}
+
+/*JAVAFX*/
+function setSpreadsheetID(){
+	try{
+		var  idsTables=document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
+		for(var i = 0; i < idsTables.length; i++)
+		{
+			random_Num=Math.random();
+			/*idsTables[i].setAttribute('id','tab'+i);*/
+			idsTables[i].setAttribute('id','tab'+i+random_Num);
+		}
+	}
+	catch(e){}
 }
 
 
@@ -1017,8 +1114,10 @@ function insertMemory(imgPath){
 function insertEnum(){
 	addIntoHistory();
 	random_Num=Math.random();
-	var element=htmlToElements(ids_json.enum);
+	var element=htmlToElements(ids_json.enum1);
 	element.id='tab_enum'+random_Num;
+	var enum_row=element.getElementsByClassName("edited")[0];
+	enum_row.id='enum'+random_Num;
 	/*query="<table class='enum idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_enum"+random_Num+"'> <tbody><tr><td class='header readOnly'></td><td title='enum name' class='name'>enum_name</td><td class='address addCell readOnly'><label class='label'>address |</label><label></label></td></tr><tr><td class='label'>mnemonic name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='m_name'></td><td class='value'></td><td title='add description here' class='desc enumdesc' onkeydown='insertEnumRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -1028,6 +1127,8 @@ function insertDefine(){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.define);
 	element.id='tab_define'+random_Num;
+	var define_row=element.getElementsByClassName("edited")[0];
+	define_row.id='def'+random_Num;
 	/*query="<table class='param idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_def"+random_Num+"'><tbody><tr><td class='label'>define name</td><td class='label'>value</td><td class='label'>description</td><td class='label'>private</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='value'></td><td title='add description here' class='desc'></td><td class='private' onkeydown='insertDefineRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -1037,6 +1138,8 @@ function insertVariant(){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.variant);
 	element.id='tab_variant'+random_Num;
+	var var_row=element.getElementsByClassName("edited")[0];
+	var_row.id='var'+random_Num;
 	/*query="<table class='variant idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_var"+random_Num+"'> <tbody><tr><td class='label'>variant name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='value'></td><td title='add description here' class='desc' onkeydown='insertVariantRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -1046,6 +1149,8 @@ function insertBusDomain(){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.busdomain);
 	element.id='tab_busdomain'+random_Num;
+	var bus_row=element.getElementsByClassName("edited")[0];
+	bus_row.id='bus'+random_Num;
 	/*query="<table class='busdomain idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_bus"+random_Num+"'><tbody><tr><td class='label'>bus domain name</td><td class='label'>address unit</td><td class='label'>description</td><td class='label'>bus</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='unit'></td><td title='add description here' class='desc'></td><td class='bus' onkeydown='insertBusRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -1055,6 +1160,8 @@ function insertSignals(imgPath){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.signal);
 	element.id='tab_signal'+random_Num;
+	var singal_row=element.getElementsByClassName("edited")[0];
+	singal_row.id='sig'+random_Num;
 	/*query="<table class='signals idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_bus"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='signal name' class='name'>signal_name</td><td class='specImage'><img title='signals' alt='signals' src="+imgPath+"></td><td class='addCell readOnly'></td></tr><tr><td colspan='4' class='border'></td></tr><tr ><td class='label'>name</td><td class='label'>port type</td><td colspan='2' class='label'>description</td></tr><tr onclick='setCurrRow(this);' onkeydown='setCurrRow(this);' class='edited'><td class='name'></td><td class='direction'></td><td colspan='2' title='add description here' class='desc signaldesc' onkeydown='insertNewRowSignals(event,this);'></td></td></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -1066,6 +1173,8 @@ function insertSeq(){
 	element.id='tab_sequence'+random_Num;
 
 	element.getElementsByClassName("seqip")[0].getElementsByClassName("edited")[0].id="seq_ip_"+random_Num;
+	element.getElementsByClassName("seqip")[0].getElementsByClassName("ip")[0].innerHTML=getCurrentDocumentPath();
+
 
 	var arg=element.getElementsByClassName("arg")[0];
 	arg.id="arg"+random_Num;
@@ -1084,16 +1193,17 @@ function insertSeq(){
 	cmd.getElementsByClassName("edited")[0].id="seq_cmd"+random_Num;
 
 	pasteHtmlAtCaret(addstrToCaret(element));
-	/*query="<br><table class='seq idsTemp' id='seq"+random_Num+"'><tbody><tr><td><table id='seqip"+random_Num+"' class='seqip idsTemp'><tbody><tr class='header readOnly'><td>sequence name</td><td>ip</td><td>description</td></tr><tr class='edited'><td class='seqname'></td><td class='ip' onfocusout='load_ips(this);'></td><td class='seqdesc'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='arg"+random_Num+"' class='idsTemp arg'><tbody><tr class='header readOnly'><td>arguments</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='argname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqArgRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='const"+random_Num+"' class='idsTemp const'><tbody><tr class='header readOnly'><td>constants</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='constname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqConstRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='var"+random_Num+"' class='idsTemp var'><tbody><tr class='header readOnly'><td>variables</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='varname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqVarnameRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='cmd"+random_Num+"' class='command idsTemp'><tbody><tr class='header readOnly'><td class='seqcmd'>command</td><td >step</td><td class='seqcmdval'>value</td><td class='seqcmddesc'>description</td><td class='seqcmdrefpath'>refpath</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='cmdname'></td><td class='step'></td><td class='seqvalue'></td><td class='seqdesc'></td><td class='refpath' onkeydown='insertSeqCmdRow(event,this);'></td></tr></tbody></table></td></tr></tbody></table><br>";*/
-	/*
-	var str=document.getElementById("seqdivcontainer").innerHTML;
-	str=str+query;
-	document.getElementById("seqdivcontainer").innerHTML=str;
-	*/
+	load_ips(element);
 }
 
 function reloadPage(){
 	var v=location.reload();
+}
+
+function refreshPage(){
+	$('#excelmenu').css({'display':'none'});
+	clickController.savepage();
+	reloadPage();
 }
 
 function pasteHtmlAtCaret( html ) {
@@ -1139,11 +1249,11 @@ function insertBusRow(evt, obj){
 
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');
-
+		row.setAttribute('class','edited bus_row');
+		row.setAttribute('id','bus'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1179,10 +1289,11 @@ function insertVariantRow(evt, obj){
 
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');
+		row.setAttribute('class','edited var_row');
+		row.setAttribute('id','var'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1213,10 +1324,11 @@ function insertDefineRow(evt, obj){
 
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');
+		row.setAttribute('class','edited def_row');
+		row.setAttribute('id','def'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1246,10 +1358,11 @@ function insertEnumRow(evt,obj){
 		}
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');	
+		row.setAttribute('class','edited enum_row');	
+		row.setAttribute('id','enum'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1280,7 +1393,8 @@ function insertNewRowSignals(evt,obj){
 		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeydown','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class',"edited");
+		row.setAttribute('class',"edited sig_row");
+		row.setAttribute('id','sig'+Math.random());
 
 		var input;
 		var cell;
@@ -1835,11 +1949,18 @@ function KeyPress(e) {
 	var evtobj = window.event? event : e;
 
 	/*undo*/
-	if (evtobj.keyCode === 90 && evtobj.ctrlKey) {				
+	if (evtobj.keyCode === 90 && evtobj.ctrlKey) {		
+		var disp=document.getElementById("idsexcelcontainer").style.display;
+
 		if(typeof(bodyArr[index-1])!=='undefined'&&bodyArr[index-1]!==null){
 			index--;
 			document.body.innerHTML=bodyArr[index];
-		}		
+		}
+
+		if(disp=="block"){
+			/*alert("Please save file ( ctrl+s ) and refresh (by right click outside from spreadsheet)");*/
+		}
+
 		return false;
 	}
 	/*redo*/
@@ -1878,8 +1999,14 @@ function KeyPress(e) {
 				idsclass[i].setAttribute("onclick","tabClick(this)");
 				random_Num=Math.random();
 				idsclass[i].setAttribute('id','tab'+i+random_Num);
+				$(idsclass[i]).removeAttr('style');
+				$(idsclass[i]).find("[style]").removeAttr('style');	/*reset style attribute becouse whenever copy paste done, browser set default width location
+				and it ruin the style*/		
+
 			}
 		}
+
+
 
 
 		idsclass=document.getElementsByClassName("edited");
@@ -1977,6 +2104,16 @@ function textNode(txt) {
 	return document.createTextNode(txt);
 }
 
+function openfile(obj){	
+	try{
+		var file=$(obj).text();
+		clickController.openFile(file);
+	}
+	catch(e){
+		alert('err openfile : '+e.message);
+	}	
+}
+
 function openFindWindow(event){
 	try{
 		location.reload();
@@ -2002,7 +2139,7 @@ function unSetsaved(){
 		clickController.setSaveSymbol();
 	}
 	catch(e){
-		alert('err unSetUnsaved : '+e.message);
+		alert('err unSetSaved : '+e.message);
 	}
 }
 
@@ -2054,10 +2191,12 @@ function runGUICheck(){
 	var errorconter=0;
 	resetAllChecks();
 
+	checkTop();
 	checkRegTemplate();
 	checkCommon();
 	checkMem();
 	checkSeqTemplate();
+
 
 
 
@@ -2118,11 +2257,12 @@ function runGUICheck(){
 			}
 		});
 
+		/*
 		$("table.idsTemp td.default").each(function(i){
 			if($(this).text()==""){			
 				addErrJson("Error-G  default value should not be empty",this);
 			}
-		});
+		});*/
 
 		$("table.idsTemp td.name").each(function(i){
 			if(!$(this).text().match(/^\s*[\\$]?[a-zA-Z][a-zA-Z0-9 _]*\s*/)){
@@ -2170,6 +2310,8 @@ function runGUICheck(){
 
 		$(".idscheck").removeAttr();
 		$(".idscheck").remove();
+
+		$(".idsTemp td.name").removeAttr("style");
 		errorconter=0;
 		errorlist="";
 	}
@@ -2189,6 +2331,31 @@ function runGUICheck(){
 			}
 		});	
 
+	}
+
+	function checkTop(){
+		try{
+
+			$(".idsTemp").each(function(i){
+				var cls=$(this).attr("class").split(" ");
+				for(var i=0;i<cls.length;i++){
+					if(cls[i]==="block"||cls[i]==="chip"||cls[i]==="system"||cls[i]==="board"||cls[i]==="section"||cls[i]==="reg"||cls[i]==="ref"||
+					   cls[i]==="mem"||cls[i]==="enum"||cls[i]==="param"||cls[i]==="variant"||cls[i]==="busdomain"||cls[i]==="signals"){
+
+						if(cls[i]==="reg"||cls[i]==="section"){
+							addErrJson("Error-G  Top is missing!",this.getElementsByClassName("name")[0]);
+						}
+						return false;
+					}
+				}
+			});
+
+
+
+
+		}catch(e){
+			alert("Err checkTop : "+e.message);
+		}
 	}
 
 	return false;
@@ -2309,7 +2476,6 @@ function autocomplete(inp, arr) {
 	inp.addEventListener("input", function(e) {
 
 
-		console.log("call input");
 		var a, b, i, val = inp.innerText;
 		/*close any already open lists of autocompleted values*/
 		closeAllLists();
@@ -2341,7 +2507,7 @@ function autocomplete(inp, arr) {
 		else if(nodetype=="fields"){
 			var cur_node=e.target.getAttribute("class").split(" ")[0];
 			if(cur_node=="sw"){
-				a.setAttribute("style", "left:35%");	
+				a.setAttribute("style", "left:35%;");
 			}
 			else if(cur_node=="hw"){
 				a.setAttribute("style", "left:44%");	
@@ -2363,12 +2529,17 @@ function autocomplete(inp, arr) {
 			/*a.setAttribute("style", "left: 29%;");*/
 		}
 
-
 		/*append the DIV element as a child of the autocomplete container:*/
 		e.target.parentNode.after(a);
 
+
+		var hintoffsetHeight=$(a).offset().top;
+		var offsetHeight = document.getElementById('regdivcontainer').offsetHeight;//$(document).height();
+		hintoffsetHeight=offsetHeight-(hintoffsetHeight);
+		var attr=a.getAttribute("style")+";max-height:"+hintoffsetHeight+"px;overflow:auto";
+		a.setAttribute("style",attr);
+
 		var checkvalid=checkvalidprop(inp);
-		console.log("--checkvalid="+checkvalid);
 		/*console.log("--nodetype="+nodetype);*/
 
 		if(checkvalid==""){
@@ -2445,6 +2616,8 @@ function autocomplete(inp, arr) {
 			/*and and make the current item more visible:*/
 			addActive(x);
 			var carpost=getCaretPosition(inp);
+			document.getElementById("autocomplete-list").scrollTop=document.getElementById("autocomplete-list").scrollTop+20;
+			//			console.log("--scroll pos="+document.getElementById("autocomplete-list").scrollTop);
 
 		} else if (e.keyCode == 38) { 
 			/*If the arrow UP key is pressed,
@@ -2454,6 +2627,7 @@ function autocomplete(inp, arr) {
 			currentFocus--;
 			/*and and make the current item more visible:*/
 			addActive(x);
+			document.getElementById("autocomplete-list").scrollTop=document.getElementById("autocomplete-list").scrollTop-20;
 		}
 		else if (e.keyCode == 13) {
 			/*If the ENTER key is pressed, prevent the form from being submitted,*/
@@ -2640,11 +2814,15 @@ function bindJSONObj(){
 	try{
 		var doc=document.getElementsByClassName("ip")[0];
 		if(doc){
-			var ip_name=doc.innerText.trim();
-			var document_name=getDocumentName().split(".")[0];
+			var ip_name=doc.innerText.trim().split(".")[0];
+			var document_name=getDocumentName().replace(".~$","").split(".")[0];
 			var regdiv;
 			if(document_name==ip_name||getDocumentName()==ip_name){
 				regdiv=document.getElementById("regdivcontainer");
+				var refdiv=document.getElementById("refdiv");
+				if(refdiv){
+					refdiv.innerHTML="";
+				}
 			}
 			else{
 				regdiv=document.getElementById("refdiv");
@@ -2670,6 +2848,10 @@ function bindJSONObj(){
 	catch(e){}
 }
 
+function getCurrentDocumentPath(){
+	var p=getDocumentName().replace(".~$","").split(".")[0];
+	return p+".idsng";
+}
 function create_reg_arr(regdiv){
 	var ids_temps=regdiv.getElementsByClassName("idsTemp");
 	var str={};
@@ -2699,7 +2881,6 @@ function get_section_reglist(section,refele){
 		}
 		if(start_reg){
 			clss=tab_list[i].getAttribute("class").split(" ")[0];
-			console.log("--clss==="+clss);
 			if(clss=="endreggroup"){
 				break;
 			}
@@ -2808,46 +2989,46 @@ var regdivcontainer;
 
 /*****************************************Excel work starts from here*******************************************************/
 
-$(function() {
-	$( "#selectable" ).selectable({
-		selected: function() {
-			//var result = $( "#result" ).empty();
-			selected_rows=[];
-			$( ".ui-selected", this ).each(function() {
-				var index = $( "#selectable tr" ).index( this );
-				if(index>-1){
-					selected_rows.push(index);
-				}
-				//result.append( ( index + 1 ) );
-				//result.append( " ," );
-			});
-		}
-	});
-
-	$("#selectable").on('click','td',function(source) { 
-		var source = event.target || event.srcElement;
-		placeCaretAtEnd(source);
-		$('#excelmenu').css({'display':'none'});
-	});
-
-});
-
-function getselected(){
-	console.log("alph="+getAlphabetsForColumn(0));
-	console.log("alph="+getAlphabetsForColumn(2));
-	console.log("alph="+getAlphabetsForColumn(5));
-	console.log("alph25="+getAlphabetsForColumn(25));
-	console.log("alph26="+getAlphabetsForColumn(26));
-	console.log("alph27="+getAlphabetsForColumn(27));
-	console.log("alph28="+getAlphabetsForColumn(50));
-	console.log("alph="+getAlphabetsForColumn(53));	
-	
+function dotheneedful(sibling,start) {
+	if (sibling != null) {
+		start.focus();		
+		sibling.focus();
+		start = sibling;
+	}
 }
 
 
+function spreadsheetKeyEventHandler(e) {
+	e = e || window.event;
+	var start= event.target || event.srcElement;
+	if (e.keyCode == '38') {
+		// up arrow
+		var idx = start.cellIndex;
+		var nextrow = start.parentElement.previousElementSibling;
+		if (nextrow != null) {
+			var sibling = nextrow.cells[idx];
+			dotheneedful(sibling,start);
+		}
+	} else if (e.keyCode == '40') {
+		// down arrow
+		var idx = start.cellIndex;
+		var nextrow = start.parentElement.nextElementSibling;
+		if (nextrow != null) {
+			var sibling = nextrow.cells[idx];
+			dotheneedful(sibling,start);
+		}
+	} 
+}
+
+
+$(function() {
+
+
+});
+
 function getAlphabetsForColumn(index){
 	var alphas=alphabets.split('');
-	
+
 	var num=index;
 	var finalAlpa="";
 	while(num>-1){
@@ -2863,6 +3044,7 @@ function getAlphabetsForColumn(index){
 }
 
 function insertcolright(obj){
+	addIntoHistory();
 	while(clickedEl.tagName.toUpperCase() !== "TD") {
 		clickedEl = clickedEl.parentNode;
 	}
@@ -2886,9 +3068,11 @@ function insertcolright(obj){
 		table.rows[i].cells[col_num].after(newEl);
 	}
 	reArrangeColNum(table);
+	addIntoHistory();
 }
 
 function insertrowbelow(obj){
+	addIntoHistory();
 	while(clickedEl.tagName.toUpperCase() !== "TR") {
 		clickedEl = clickedEl.parentNode;
 	}
@@ -2902,6 +3086,7 @@ function insertrowbelow(obj){
 
 	var row = table.insertRow(row_num+1);
 	row.setAttribute('class','edited');
+	row.setAttribute('id',"tab"+Math.random());
 	var col_count=table.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
 	var cell;
 	for(var i=0;i<col_count;i++){
@@ -2914,6 +3099,7 @@ function insertrowbelow(obj){
 		}
 	}
 	reArrangeRowNum(table);
+	addIntoHistory();
 }
 
 function reArrangeRowNum(table){
@@ -3033,6 +3219,7 @@ function copyexcelrow(){
 }
 
 function pasterow(obj){
+	addIntoHistory();
 	if(row_copy_req){
 		if(excellastselect){
 			/*
@@ -3057,7 +3244,6 @@ function pasterow(obj){
 				console.log("not deleted");
 			}
 			*/
-			console.log("excellaste selected true");
 			while(clickedEl.tagName.toUpperCase() !== "TR") {
 				clickedEl = clickedEl.parentNode;
 			}
@@ -3075,11 +3261,11 @@ function pasterow(obj){
 			for(var i=copiedRows.length-1;i>=0;i--){
 				var curRow=table.insertRow(rowindex+1);
 				curRow.innerHTML=copiedRows[i].innerHTML;
+				curRow.setAttribute("id","row"+Math.random());
 			}
 
 			reArrangeRowNum(table);
 			excellastselect.innerHTML="";
-
 		}
 	}
 	else {
@@ -3108,13 +3294,14 @@ function pasterow(obj){
 
 			}
 		}
-	}	
+	}
+	addIntoHistory();
 }
 
 function pasteMultipleRows(table,curr_index){
 	try 
 	{
-		//var table = document.getElementById(tableID);
+		addIntoHistory();
 		var isrowdelete=false;
 		var rowCount = table.rows.length;
 		for(var i=rowCount-1; i>=0; i--) 
@@ -3138,6 +3325,7 @@ function pasteMultipleRows(table,curr_index){
 	{
 		console.log(e);
 	}
+	addIntoHistory();
 	return isrowdelete;
 }
 
@@ -3159,7 +3347,7 @@ function deleterow(obj){
 
 	reArrangeRowNum(table);
 	*/
-
+	addIntoHistory();
 	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
 		clickedEl = clickedEl.parentNode;
 	}
@@ -3173,11 +3361,13 @@ function deleterow(obj){
 		table.deleteRow(index);
 		deleteCount++;
 	}
-
+	reArrangeRowNum(table);
+	addIntoHistory();
 }
 
 
 function deletecolumn(obj){
+	addIntoHistory();
 	while(clickedEl.tagName.toUpperCase() !== "TD") {
 		clickedEl = clickedEl.parentNode;
 	}
@@ -3194,6 +3384,8 @@ function deletecolumn(obj){
 	for(var i=0;i<rows.length;i++){
 		rows[i].deleteCell(cellindex);
 	}
+	reArrangeColNum(table);
+	addIntoHistory();
 }
 
 

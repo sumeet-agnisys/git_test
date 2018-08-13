@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="chip_name_model" vendor="Agnisys_Inc." library="Agnisys_Inc." version="1.0">
+   <doc/>
+   <section name="chip_name">
+      <doc/>
+      <section name="B1" offset="0">
+         <doc/>
+         <section max_reg_size="32" name="reg_group_name" count="2" offset="0">
+            <config>
+               <sectionsize>8</sectionsize>
+            </config>
+            <doc/>
+            <reg name="R1" offset="0">
+               <field offset="31:0" name="F1">
+                  <sw>rw</sw>
+                  <hw>rw</hw>
+                  <default>0</default>
+               </field>
+               <config>
+                  <regwidth>32</regwidth>
+               </config>
+            </reg>
+            <reg name="R2" offset="4">
+               <field offset="31:0" name="F2">
+                  <sw>rw</sw>
+                  <hw>rw</hw>
+                  <default>0</default>
+               </field>
+               <config>
+                  <regwidth>32</regwidth>
+               </config>
+            </reg>
+         </section>
+         <config/>
+         <config>
+            <sectionsize>4096</sectionsize>
+         </config>
+      </section>
+      <config>
+         <chipbits>0</chipbits>
+         <regwidth>32</regwidth>
+         <addressunit>8</addressunit>
+      </config>
+   </section>
+   <config>
+      
+      
+      
+      <chipbits>0</chipbits>
+      <blockbits>1</blockbits>
+      <regbits>12</regbits>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+   <regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config>
+</block>

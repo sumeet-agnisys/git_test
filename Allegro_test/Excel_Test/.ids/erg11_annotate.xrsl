@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" name="blk" uid="2018-07-04T11:36:58.001+05:30d14e1" keypath="blk" offset="0" caddress="0" hwmapaddr="1" max_reg_size="8" csize="4096" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <blocksize>4096</blocksize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed00.2656347882860177" orig_path="erg11.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Excel_Test\erg11.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs/>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>uvm_%s_seq</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a,%d,0,0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>s</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">sss</templatename>
+               <write oid="0">aaxx</write>
+               <read oid="0">ddd</read>
+               <templatename oid="1">swww</templatename>
+               <write oid="1">aa</write>
+               <read oid="1">ddd</read>
+               <fieldtemplatename oid="0">aaaaa</fieldtemplatename>
+               <fieldwrite oid="0">cccc</fieldwrite>
+               <fieldread oid="0">cccc</fieldread>
+               <fieldtemplatename oid="1">dddd</fieldtemplatename>
+               <fieldwrite oid="1">cccc</fieldwrite>
+               <fieldread oid="1">cccc</fieldread>
+               <fieldtemplatename oid="2">ff</fieldtemplatename>
+               <fieldwrite oid="2">ccccw</fieldwrite>
+               <fieldread oid="2">cccc</fieldread>
+               <timeunit1/>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">write</isscmd>
+                  <cmd oid="0">WRITE</cmd>
+                  <isscmd oid="1">write_1_set</isscmd>
+                  <cmd oid="1">WRITE_SET</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">call</isscmd>
+                  <cmd oid="3">CALL</cmd>
+                  <isscmd oid="4">switch</isscmd>
+                  <cmd oid="4">SWITCH</cmd>
+                  <isscmd oid="5">wait</isscmd>
+                  <cmd oid="5">WAIT</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">command</issheader>
+                  <header oid="0">command</header>
+                  <issheader oid="1">step</issheader>
+                  <header oid="1">step</header>
+                  <issheader oid="2">value</issheader>
+                  <header oid="2">value</header>
+                  <issheader oid="3">address</issheader>
+                  <header oid="3">address</header>
+                  <issheader oid="4">description</issheader>
+                  <header oid="4">description</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>11</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <reg heading="1.1" child_no="1" name="reg1" uid="2018-07-04T11:36:58.001+05:30d14e15" keypath="blk.reg1,reg1" hdl_path="reg1" abs_hdl_path="blk_ids.reg1" hwmapaddr="2" csize="1" offset="0" caddress="0" address="0x0000" endaddress="0x0" size="1" default="0x00" sw="rw" hw="rw">
+      <config>
+         <regwidth>8</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x0" size="1"/>
+         </busdomains>
+      </config>
+      <field name="f" offset="0:7" uid="2018-07-04T11:36:58.001+05:30d14e19" keypath="blk.reg1.f,reg1.f,f" hdl_path="_f_q" abs_hdl_path="blk_ids.reg1_f_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+</block>

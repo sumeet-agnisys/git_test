@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab0.03214767627241211" name="block_name" uid="2018-08-13T11:57:47.97+05:30d14e1" keypath="block_name" offset="0" caddress="0" hwmapaddr="1" max_reg_size="8" csize="1" address="0x0" endaddress="0x0" size="1">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x0" size="1"/>
+      </busdomains>
+   </config>
+   <reg heading="1.1" child_no="1" id="tab0.6521513490074854" name="reg_name" uid="2018-08-13T11:57:47.97+05:30d14e13" keypath="block_name.reg_name,reg_name" hwmapaddr="2" csize="1" offset="0" caddress="0" address="0x0" endaddress="0x0" size="1" default="0x01" sw="rw" hw="ro">
+      <config>
+         <regwidth>8</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x0" size="1"/>
+         </busdomains>
+      </config>
+      <field id="field_0" offset="7:0" name="F" uid="2018-08-13T11:57:47.97+05:30d14e17" keypath="block_name.reg_name.F,reg_name.F,F">
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="1">00000001</default>
+         <doc> Hello</doc>
+      </field>
+   </reg>
+</block>

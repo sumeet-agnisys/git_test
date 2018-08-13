@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" id="tab10.9003076257264947" name="chip_1" offset="1088" page_select="1" uid="2018-07-16T13:01:08.734+05:30d14e1" keypath="chip_1" caddress="1088" hwmapaddr="19" csize="4096" diff_regwidth="true" address="0x0440" endaddress="0x143F" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <chipsize>4096</chipsize>
+      <busdomains>
+         <busdomain name="default_map" bus="AXI" addressUnit="8" offset="1088" address="0x0440" endaddress="0x143F" size="4096"/>
+      </busdomains>
+   </config>
+   <doc>this is chip_1<list type="define" uid="2018-07-16T13:01:08.734+05:30d14e17">
+         <value name="de11" private="1" doc="sds" uid="2018-07-16T13:01:08.734+05:30d14e18">0x4</value>
+         <value name="de2" private="11" doc="sss" uid="2018-07-16T13:01:08.734+05:30d14e20">0x4400</value>
+      </list>
+   </doc>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed130.7654793063070732" orig_path="merg3.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Merger\merg3.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs/>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>uvm_%s_seq</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a,%d,0,0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>s</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">sss</templatename>
+               <write oid="0">aaxx</write>
+               <read oid="0">ddd</read>
+               <templatename oid="1">swww</templatename>
+               <write oid="1">aa</write>
+               <read oid="1">ddd</read>
+               <fieldtemplatename oid="0">aaaaa</fieldtemplatename>
+               <fieldwrite oid="0">cccc</fieldwrite>
+               <fieldread oid="0">cccc</fieldread>
+               <fieldtemplatename oid="1">dddd</fieldtemplatename>
+               <fieldwrite oid="1">cccc</fieldwrite>
+               <fieldread oid="1">cccc</fieldread>
+               <fieldtemplatename oid="2">ff</fieldtemplatename>
+               <fieldwrite oid="2">ccccw</fieldwrite>
+               <fieldread oid="2">cccc</fieldread>
+               <timeunit1/>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">write</isscmd>
+                  <cmd oid="0">WRITE</cmd>
+                  <isscmd oid="1">write_1_set</isscmd>
+                  <cmd oid="1">WRITE_SET</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">call</isscmd>
+                  <cmd oid="3">CALL</cmd>
+                  <isscmd oid="4">switch</isscmd>
+                  <cmd oid="4">SWITCH</cmd>
+                  <isscmd oid="5">wait</isscmd>
+                  <cmd oid="5">WAIT</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">command</issheader>
+                  <header oid="0">command</header>
+                  <issheader oid="1">step</issheader>
+                  <header oid="1">step</header>
+                  <issheader oid="2">value</issheader>
+                  <header oid="2">value</header>
+                  <issheader oid="3">address</issheader>
+                  <header oid="3">address</header>
+                  <issheader oid="4">description</issheader>
+                  <header oid="4">description</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>11</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <emptyspace heading="1.1" child_no="1" address="0x440" endaddress="0x47F">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" address="0x440" endaddress="0x47F"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <block heading="1.2" child_no="2" id="tab20.5836949757986905" name="merg32" offset="64" uid="2018-07-16T13:01:08.734+05:30d14e22" keypath="chip_1.merg32,merg32" hdl_path="merg32_idsinst" abs_hdl_path="chip1_ids.merg32_idsinst" hwmapaddr="20" max_reg_size="32" csize="7" caddress="1152" address="0x0480" endaddress="0x486" size="7">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="64" address="0x0480" endaddress="0x486" size="7"/>
+         </busdomains>
+      </config>
+      <doc>
+         <list type="define" uid="2018-07-16T13:01:08.734+05:30d14e25">
+            <value name="de11" private="1" doc="sds" uid="2018-07-16T13:01:08.734+05:30d14e26">0x4</value>
+            <value name="de2" private="11" doc="sss" uid="2018-07-16T13:01:08.734+05:30d14e28">0x4400</value>
+         </list>
+      </doc>
+      <reg heading="1.2.1" child_no="1" id="tab30.9321989015246525" name="reg_name" uid="2018-07-16T13:01:08.734+05:30d14e30" keypath="chip_1.merg32.reg_name,merg32.reg_name,reg_name" hdl_path="regname" abs_hdl_path="chip1_ids.merg32_idsinst.regname" hwmapaddr="21" csize="4" offset="0" caddress="0" address="0x0480" endaddress="0x483" size="4" default="0x00880040" sw="rw ro" hw="rw ro">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0480" endaddress="0x483" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tabed20.11028304299470226" offset="0:5" name="f12" uid="2018-07-16T13:01:08.734+05:30d14e32" keypath="chip_1.merg32.reg_name.f12,merg32.reg_name.f12,reg_name.f12,f12" hdl_path="_f12_q" abs_hdl_path="chip1_ids.merg32_idsinst.regname_f12_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000</default>
+         </field>
+         <field id="tabed30.41826225658906047" offset="6:15" name="f2" uid="2018-07-16T13:01:08.734+05:30d14e39" keypath="chip_1.merg32.reg_name.f2,merg32.reg_name.f2,reg_name.f2,f2" hdl_path="_f2_q" abs_hdl_path="chip1_ids.merg32_idsinst.regname_f2_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="1">0000000001</default>
+         </field>
+         <field id="tabed40.15014376055372958" offset="16:18" name="f3" uid="2018-07-16T13:01:08.734+05:30d14e46" keypath="chip_1.merg32.reg_name.f3,merg32.reg_name.f3,reg_name.f3,f3" hdl_path="_f3_q" abs_hdl_path="chip1_ids.merg32_idsinst.regname_f3_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd">bins vals[] = {'h0}; illegal_bins err = default;</uvm>
+            </doc>
+            <sw>ro</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="tabed50.31696775483311757" offset="19:21" name="f4" uid="2018-07-16T13:01:08.734+05:30d14e53" keypath="chip_1.merg32.reg_name.f4,merg32.reg_name.f4,reg_name.f4,f4" hdl_path="_f4_q" abs_hdl_path="chip1_ids.merg32_idsinst.regname_f4_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="1">001</default>
+         </field>
+         <field id="tabed60.6726604172423112" offset="22:27" name="f5" uid="2018-07-16T13:01:08.734+05:30d14e60" keypath="chip_1.merg32.reg_name.f5,merg32.reg_name.f5,reg_name.f5,f5" hdl_path="_f5_q" abs_hdl_path="chip1_ids.merg32_idsinst.regname_f5_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd">bins vals[] = {'h0}; illegal_bins err = default;</uvm>
+            </doc>
+            <sw>ro</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="2">000010</default>
+         </field>
+      </reg>
+      <section heading="1.2.2" child_no="2" id="tab50.21129894283823258" name="reggroup_name" uid="2018-07-16T13:01:08.734+05:30d14e67" keypath="chip_1.merg32.reggroup_name,merg32.reggroup_name,reggroup_name" keypathdown="reggroup_name.reg2.reg3,reg2,reg3" hwmapaddr="22" max_reg_size="16" csize="3" offset="4" caddress="4" address="0x0484" endaddress="0x486" size="3">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x0484" endaddress="0x486" size="3"/>
+            </busdomains>
+         </config>
+         <reg heading="1.2.2.1" child_no="1" id="tab60.49091967105155854" name="reg2" uid="2018-07-16T13:01:08.734+05:30d14e69" keypath="chip_1.merg32.reggroup_name.reg2,merg32.reggroup_name.reg2,reggroup_name.reg2,reg2" hdl_path="reggroupname_reg2" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg2" hwmapaddr="23" csize="1" offset="0" caddress="0" address="0x0484" endaddress="0x484" size="1" default="0x40" sw="rw ro" hw="ro rw">
+            <config>
+               <regwidth>8</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0484" endaddress="0x484" size="1"/>
+               </busdomains>
+            </config>
+            <field id="tabed70.07794289210579586" offset="0:2" name="f" uid="2018-07-16T13:01:08.734+05:30d14e73" keypath="chip_1.merg32.reggroup_name.reg2.f,merg32.reggroup_name.reg2.f,reggroup_name.reg2.f,reg2.f,f" hdl_path="_f_q" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg2_f_q">
+               <doc>
+                  <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               </doc>
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">000</default>
+            </field>
+            <field id="tabed90.8531785420326337" offset="4:5" name="f22" uid="2018-07-16T13:01:08.734+05:30d14e87" keypath="chip_1.merg32.reggroup_name.reg2.f22,merg32.reggroup_name.reg2.f22,reggroup_name.reg2.f22,reg2.f22,f22" hdl_path="_f22_q" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg2_f22_q">
+               <doc>
+                  <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.f.rd">bins vals[] = {'h0}; illegal_bins err = default;</uvm>
+               </doc>
+               <sw>ro</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">00</default>
+            </field>
+            <field id="tabed100.7970376361964018" offset="6" name="f23" uid="2018-07-16T13:01:08.734+05:30d14e94" keypath="chip_1.merg32.reggroup_name.reg2.f23,merg32.reggroup_name.reg2.f23,reggroup_name.reg2.f23,reg2.f23,f23" hdl_path="_f23_q" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg2_f23_q">
+               <doc>
+                  <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               </doc>
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="1">1</default>
+            </field>
+            <field id="tabed80.06407930964623709" offset="7" name="f21" uid="2018-07-16T13:01:08.734+05:30d14e80" keypath="chip_1.merg32.reggroup_name.reg2.f21,merg32.reggroup_name.reg2.f21,reggroup_name.reg2.f21,reg2.f21,f21" hdl_path="_f21_q" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg2_f21_q">
+               <doc>
+                  <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               </doc>
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">0</default>
+            </field>
+         </reg>
+         <reg heading="1.2.2.2" child_no="2" id="tab80.4556728870514528" name="reg3" uid="2018-07-16T13:01:08.734+05:30d14e101" keypath="chip_1.merg32.reggroup_name.reg3,merg32.reggroup_name.reg3,reggroup_name.reg3,reg3" hdl_path="reggroupname_reg3" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg3" hwmapaddr="24" csize="2" offset="1" caddress="1" address="0x0485" endaddress="0x486" size="2" default="0x0010" sw="rw ro" hw="rw ro">
+            <config>
+               <regwidth>16</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="1" address="0x0485" endaddress="0x486" size="2"/>
+               </busdomains>
+            </config>
+            <field id="tabed110.22146040595733163" offset="0:3" name="x1" uid="2018-07-16T13:01:08.734+05:30d14e105" keypath="chip_1.merg32.reggroup_name.reg3.x1,merg32.reggroup_name.reg3.x1,reggroup_name.reg3.x1,reg3.x1,x1" hdl_path="_x1_q" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg3_x1_q">
+               <doc>
+                  <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               </doc>
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">0000</default>
+            </field>
+            <field id="tabed120.6974551511669401" offset="4:6" name="x2" uid="2018-07-16T13:01:08.734+05:30d14e112" keypath="chip_1.merg32.reggroup_name.reg3.x2,merg32.reggroup_name.reg3.x2,reggroup_name.reg3.x2,reg3.x2,x2" hdl_path="_x2_q" abs_hdl_path="chip1_ids.merg32_idsinst.reggroupname_reg3_x2_q">
+               <doc>
+                  <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+                  <uvm loc="coverpoint.f.rd">bins vals[] = {'h0}; illegal_bins err = default;</uvm>
+               </doc>
+               <sw>ro</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="1">001</default>
+            </field>
+         </reg>
+      </section>
+   </block>
+</chip>

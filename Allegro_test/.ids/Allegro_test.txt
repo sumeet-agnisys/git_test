@@ -1,0 +1,530 @@
+<CMD> idsbatch -reset D:\AgnisysProjects\git_test\Allegro_test\sss.idsng -config_file D:\AgnisysProjects\git_test\Allegro_test\.idsng\idsngconfig.xml -dir D:\AgnisysProjects\git_test\Allegro_test\.idsng -debug    CHECK IDS_TEMPLATES AMBA AVALON OCP PROPRIETARY AMBA_AXI AMBA3AHBLITE AMBA_APB WB XRSL IPXACT SYSTEMRDL CMSIS VERILOG SV VHDL UVM OVM VMM ERM IVSEXCELOUT PERL_DS PYTHON_DS SVHEADER CHEADER MISRAC HTML SVG PDF PDFALT2 WORD2007 WORD2010 ROWO MBD ALIAS LOCK COUNTER SCS PARAM ADVD PREPROCESSOR DATASHEET SIGNALS SYSTEMC VHDLALT2 CSHARP SHAREPOINT IDS_TURBO PROPERTY_HINT RTL_SYSC UVM_SYSC VP_SYSC CUSTOM_XML INTERRUPT CONSTRAINT CUSTOM_CIRCUIT SHADOW INDIRECT CPP CUSTOMCSV FIFO STRUCT SOC_ENTERPRISE SOC_HTML SOC_VERILOG SOC_VHDL SOC_DATASHEET SOC_ASSERTION SOC_IPXACT SEQUENCE_FIRMWARE SEQUENCE_UVM SEQUENCE SEQUENCE_CSV SEQUENCE_VERILOG SEQUENCE_HTML ARV FORMAL OUT_THIRD_PARTY_D 
+Input file type set to 'null'.
+File w/ extension idsng found.
+Infered Input file type is 'html.
+INFO: Output(s) will be generated in 'D:\AgnisysProjects\git_test\Allegro_test\.idsng'.
+Backdoor License is avaialble :true
+Setting IDSBatch install path = 'null'.
+Reading from config file D:\AgnisysProjects\git_test\Allegro_test\.idsng\idsngconfig.xml
+Parse setting from string = <?xml version="1.0" encoding="UTF-8"?>
+
+<settings> 
+  <company>Agnisys, Inc.</company>  
+  <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>  
+  <log>true</log>  
+  <outdir>output</outdir>  
+  <outputs> 
+    <ivs>false</ivs>  
+    <arv>false</arv>  
+    <special_reg/>  
+    <cmsis>false</cmsis>  
+    <uvm>false</uvm>  
+    <perl>false</perl>  
+    <python>false</python>  
+    <cpp>false</cpp>  
+    <vheader>false</vheader>  
+    <vhdheader>false</vhdheader>  
+    <formal>false</formal>  
+    <pdf>false</pdf>  
+    <ovm>false</ovm>  
+    <vmm>false</vmm>  
+    <iss_firmware>false</iss_firmware>  
+    <iss_csv>false</iss_csv>  
+    <iss_html>false</iss_html>  
+    <iss_sv>false</iss_sv>  
+    <iss_uvm>false</iss_uvm>  
+    <iss_matlab>false</iss_matlab>  
+    <header>false</header>  
+    <html>false</html>  
+    <xrsl>false</xrsl>  
+    <word>false</word>  
+    <rdl>false</rdl>  
+    <erm>false</erm>  
+    <ivsxml>false</ivsxml>  
+    <svheader>false</svheader>  
+    <svg>false</svg>  
+    <datasheet>false</datasheet>  
+    <customcsv>false</customcsv>  
+    <customxml>false</customxml>  
+    <csharp>false</csharp>  
+    <sv>false</sv> 
+  </outputs>  
+  <rtl_wire>false</rtl_wire>  
+  <limit_toc/>  
+  <lowpower>false</lowpower>  
+  <auto_sequence/>  
+  <interrupt/>  
+  <mbd/>  
+  <arv_assertion/>  
+  <memtechmapping>false</memtechmapping>  
+  <sv_w_intf/>  
+  <sv_wo_intf/>  
+  <uvm_env/>  
+  <hdlpath>true</hdlpath>  
+  <coverage>false</coverage>  
+  <arv_coverage>false</arv_coverage>  
+  <illegalbins>true</illegalbins>  
+  <arv_constraint>false</arv_constraint>  
+  <bus>proprietary</bus>  
+  <reg_width>32</reg_width>  
+  <bus_width>32</bus_width>  
+  <unit>8</unit>  
+  <block_size>4096</block_size>  
+  <chip_size/>  
+  <board_size/>  
+  <c_type/>  
+  <big_endian>false</big_endian>  
+  <little_endian>false</little_endian>  
+  <template_dir>D:\AgnisysProjects\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>  
+  <check_only>true</check_only>  
+  <preserve_names>false</preserve_names>  
+  <addr_sort>true</addr_sort>  
+  <seqconfig> 
+    <output> 
+      <seq_outputs/>  
+      <uvm> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <regmodel oid="0">default</regmodel>  
+        <write oid="0">write(status, %d, .parent(this))</write>  
+        <read oid="0">read(status, %lhs, .parent(this))</read>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>true</consolidated>  
+        <nameformat>uvm_%s_seq</nameformat>  
+        <mout/> 
+      </uvm>  
+      <sv> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>integer</arguments>  
+          <constant>integer</constant>  
+          <variable>integer</variable> 
+        </datatype>  
+        <bus oid="0">default</bus>  
+        <write oid="0">write_mirror(%a,%d,0,0)</write>  
+        <read oid="0">read_mirror(%a)</read>  
+        <timeunit1>1</timeunit1>  
+        <timeunit2>s</timeunit2>  
+        <timeprecision1>1</timeprecision1>  
+        <timeprecision2>s</timeprecision2>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>true</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </sv>  
+      <firmware> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <templatename oid="0">default</templatename>  
+        <write oid="0">REG_WRITE(%a,%d)</write>  
+        <read oid="0">REG_READ(%a)</read>  
+        <fieldtemplatename oid="0">default</fieldtemplatename>  
+        <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>  
+        <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>true</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </firmware>  
+      <matlab> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <templatename oid="0">sss</templatename>  
+        <write oid="0">aaxx</write>  
+        <read oid="0">ddd</read>  
+        <templatename oid="1">swww</templatename>  
+        <write oid="1">aa</write>  
+        <read oid="1">ddd</read>  
+        <fieldtemplatename oid="0">aaaaa</fieldtemplatename>  
+        <fieldwrite oid="0">cccc</fieldwrite>  
+        <fieldread oid="0">cccc</fieldread>  
+        <fieldtemplatename oid="1">dddd</fieldtemplatename>  
+        <fieldwrite oid="1">cccc</fieldwrite>  
+        <fieldread oid="1">cccc</fieldread>  
+        <fieldtemplatename oid="2">ff</fieldtemplatename>  
+        <fieldwrite oid="2">ccccw</fieldwrite>  
+        <fieldread oid="2">cccc</fieldread>  
+        <timeunit1/>  
+        <timeunit2>ns</timeunit2>  
+        <timeprecision1/>  
+        <timeprecision2>ns</timeprecision2>  
+        <maxnesting/>  
+        <nameformat/>  
+        <mout/> 
+      </matlab>  
+      <csv> 
+        <commands> 
+          <isscmd oid="0">write</isscmd>  
+          <cmd oid="0">WRITE</cmd>  
+          <isscmd oid="1">write_1_set</isscmd>  
+          <cmd oid="1">WRITE_SET</cmd>  
+          <isscmd oid="2">write_1_clr</isscmd>  
+          <cmd oid="2">WRITE_CLR</cmd>  
+          <isscmd oid="3">call</isscmd>  
+          <cmd oid="3">CALL</cmd>  
+          <isscmd oid="4">switch</isscmd>  
+          <cmd oid="4">SWITCH</cmd>  
+          <isscmd oid="5">wait</isscmd>  
+          <cmd oid="5">WAIT</cmd> 
+        </commands>  
+        <headers> 
+          <issheader oid="0">command</issheader>  
+          <header oid="0">command</header>  
+          <issheader oid="1">step</issheader>  
+          <header oid="1">step</header>  
+          <issheader oid="2">value</issheader>  
+          <header oid="2">value</header>  
+          <issheader oid="3">address</issheader>  
+          <header oid="3">address</header>  
+          <issheader oid="4">description</issheader>  
+          <header oid="4">description</header> 
+        </headers>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>11</maxnesting>  
+        <nameformat>%s</nameformat> 
+      </csv> 
+    </output> 
+  </seqconfig> 
+</settings>
+
+Debug: Default Settings extracted from external conf. : <?xml version="1.0" encoding="UTF-8"?>
+<settings> 
+  <company>Agnisys, Inc.</company>  
+  <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>  
+  <log>true</log>  
+  <outdir>output</outdir>  
+  <outputs> 
+    <ivs>false</ivs>  
+    <arv>false</arv>  
+    <special_reg/>  
+    <cmsis>false</cmsis>  
+    <uvm>false</uvm>  
+    <perl>false</perl>  
+    <python>false</python>  
+    <cpp>false</cpp>  
+    <vheader>false</vheader>  
+    <vhdheader>false</vhdheader>  
+    <formal>false</formal>  
+    <pdf>false</pdf>  
+    <ovm>false</ovm>  
+    <vmm>false</vmm>  
+    <iss_firmware>false</iss_firmware>  
+    <iss_csv>false</iss_csv>  
+    <iss_html>false</iss_html>  
+    <iss_sv>false</iss_sv>  
+    <iss_uvm>false</iss_uvm>  
+    <iss_matlab>false</iss_matlab>  
+    <header>false</header>  
+    <html>false</html>  
+    <xrsl>false</xrsl>  
+    <word>false</word>  
+    <rdl>false</rdl>  
+    <erm>false</erm>  
+    <ivsxml>false</ivsxml>  
+    <svheader>false</svheader>  
+    <svg>false</svg>  
+    <datasheet>false</datasheet>  
+    <customcsv>false</customcsv>  
+    <customxml>false</customxml>  
+    <csharp>false</csharp>  
+    <sv>false</sv> 
+  </outputs>  
+  <rtl_wire>false</rtl_wire>  
+  <limit_toc/>  
+  <lowpower>false</lowpower>  
+  <auto_sequence/>  
+  <interrupt/>  
+  <mbd/>  
+  <arv_assertion/>  
+  <memtechmapping>false</memtechmapping>  
+  <sv_w_intf/>  
+  <sv_wo_intf/>  
+  <uvm_env/>  
+  <hdlpath>true</hdlpath>  
+  <coverage>false</coverage>  
+  <arv_coverage>false</arv_coverage>  
+  <illegalbins>true</illegalbins>  
+  <arv_constraint>false</arv_constraint>  
+  <bus>proprietary</bus>  
+  <reg_width>32</reg_width>  
+  <bus_width>32</bus_width>  
+  <unit>8</unit>  
+  <block_size>4096</block_size>  
+  <chip_size/>  
+  <board_size/>  
+  <c_type/>  
+  <big_endian>false</big_endian>  
+  <little_endian>false</little_endian>  
+  <template_dir>D:\AgnisysProjects\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>  
+  <check_only>true</check_only>  
+  <preserve_names>false</preserve_names>  
+  <addr_sort>true</addr_sort>  
+  <seqconfig> 
+    <output> 
+      <seq_outputs/>  
+      <uvm> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <regmodel oid="0">default</regmodel>  
+        <write oid="0">write(status, %d, .parent(this))</write>  
+        <read oid="0">read(status, %lhs, .parent(this))</read>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>true</consolidated>  
+        <nameformat>uvm_%s_seq</nameformat>  
+        <mout/> 
+      </uvm>  
+      <sv> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>integer</arguments>  
+          <constant>integer</constant>  
+          <variable>integer</variable> 
+        </datatype>  
+        <bus oid="0">default</bus>  
+        <write oid="0">write_mirror(%a,%d,0,0)</write>  
+        <read oid="0">read_mirror(%a)</read>  
+        <timeunit1>1</timeunit1>  
+        <timeunit2>s</timeunit2>  
+        <timeprecision1>1</timeprecision1>  
+        <timeprecision2>s</timeprecision2>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>true</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </sv>  
+      <firmware> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <templatename oid="0">default</templatename>  
+        <write oid="0">REG_WRITE(%a,%d)</write>  
+        <read oid="0">REG_READ(%a)</read>  
+        <fieldtemplatename oid="0">default</fieldtemplatename>  
+        <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>  
+        <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>true</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </firmware>  
+      <matlab> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <templatename oid="0">sss</templatename>  
+        <write oid="0">aaxx</write>  
+        <read oid="0">ddd</read>  
+        <templatename oid="1">swww</templatename>  
+        <write oid="1">aa</write>  
+        <read oid="1">ddd</read>  
+        <fieldtemplatename oid="0">aaaaa</fieldtemplatename>  
+        <fieldwrite oid="0">cccc</fieldwrite>  
+        <fieldread oid="0">cccc</fieldread>  
+        <fieldtemplatename oid="1">dddd</fieldtemplatename>  
+        <fieldwrite oid="1">cccc</fieldwrite>  
+        <fieldread oid="1">cccc</fieldread>  
+        <fieldtemplatename oid="2">ff</fieldtemplatename>  
+        <fieldwrite oid="2">ccccw</fieldwrite>  
+        <fieldread oid="2">cccc</fieldread>  
+        <timeunit1/>  
+        <timeunit2>ns</timeunit2>  
+        <timeprecision1/>  
+        <timeprecision2>ns</timeprecision2>  
+        <maxnesting/>  
+        <nameformat/>  
+        <mout/> 
+      </matlab>  
+      <csv> 
+        <commands> 
+          <isscmd oid="0">write</isscmd>  
+          <cmd oid="0">WRITE</cmd>  
+          <isscmd oid="1">write_1_set</isscmd>  
+          <cmd oid="1">WRITE_SET</cmd>  
+          <isscmd oid="2">write_1_clr</isscmd>  
+          <cmd oid="2">WRITE_CLR</cmd>  
+          <isscmd oid="3">call</isscmd>  
+          <cmd oid="3">CALL</cmd>  
+          <isscmd oid="4">switch</isscmd>  
+          <cmd oid="4">SWITCH</cmd>  
+          <isscmd oid="5">wait</isscmd>  
+          <cmd oid="5">WAIT</cmd> 
+        </commands>  
+        <headers> 
+          <issheader oid="0">command</issheader>  
+          <header oid="0">command</header>  
+          <issheader oid="1">step</issheader>  
+          <header oid="1">step</header>  
+          <issheader oid="2">value</issheader>  
+          <header oid="2">value</header>  
+          <issheader oid="3">address</issheader>  
+          <header oid="3">address</header>  
+          <issheader oid="4">description</issheader>  
+          <header oid="4">description</header> 
+        </headers>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>11</maxnesting>  
+        <nameformat>%s</nameformat> 
+      </csv> 
+    </output> 
+  </seqconfig> 
+</settings>
+Requested setting : outputs
+Returning valuenull
+Requested setting : tcloutputs
+Returning valuenull
+Requested setting : c_type
+Returning valuenull
+Requested setting : bus
+Returning valueproprietary
+Requested setting : company
+Returning valueAgnisys, Inc.
+Requested setting : copyright
+Returning value***** Copyright 2018 All Rights Reserved. *****
+Requested setting : little_endian
+Returning valuefalse
+Requested setting : big_endian
+Returning valuefalse
+Requested setting : board_size
+Returning valuenull
+Requested setting : chip_size
+Returning valuenull
+Requested setting : block_size
+Returning value4096
+Requested setting : reg_width
+Returning value32
+Requested setting : bus_width
+Returning value32
+Requested setting : unit
+Returning value8
+Requested setting : debug
+Returning valuenull
+Requested setting : verbose
+Returning valuenull
+Requested setting : ddnr
+Returning valuenull
+Requested setting : distributed_decode_n_readback
+Returning valuenull
+Requested setting : preserve_names
+Returning valuefalse
+Requested setting : hdlpath
+Returning valuetrue
+Requested setting : import
+Returning valuenull
+Requested setting : illegalbins
+Returning valuetrue
+Requested setting : lowpower
+Returning valuefalse
+Requested setting : coverage
+Returning valuefalse
+Requested setting : arv_coverage
+Returning valuefalse
+Requested setting : arv_constraint
+Returning valuefalse
+Requested setting : arv_assertion
+Returning valuenull
+Requested setting : rtl_wire
+Returning valuefalse
+Requested setting : noheirarchy
+Returning valuenull
+Requested setting : svinterface
+Returning valuenull
+Requested setting : memtechmapping
+Returning valuefalse
+Requested setting : if
+Returning valuenull
+Requested setting : if_header
+Returning valuenull
+Requested setting : if_verilog
+Returning valuenull
+Requested setting : if_uvm
+Returning valuenull
+Requested setting : if_pdf
+Returning valuenull
+Requested setting : if_svheader
+Returning valuenull
+Requested setting : ltoc
+Returning valuenull
+Requested setting : addr_sort
+Returning valuetrue
+Requested setting : no_formatting
+Returning valuenull
+Requested setting : c_api
+Returning valuenull
+Requested setting : c_tests
+Returning valuenull
+Requested setting : check_only
+Returning valuetrue
+Requested setting : template_dir
+Returning valueD:\AgnisysProjects\IDS-NextGen\IDSNextGen\ids_templates\datasheet
+Requested setting : template_file
+Returning valuenull
+Requested setting : top_element
+Returning valuenull
+Requested setting : sheet_name
+Returning valuenull
+*********************************************************************************************
+                    Generated By : IDSBATCH VER - 4.16.26.2
+*********************************************************************************************
+Debug: Start processing...
+Reading input html file 'D:\AgnisysProjects\git_test\Allegro_test\sss.idsng'..
+Transforming html to IDS xml format..
+Start reading html file...
+Converting html to xHtml...
+Create xml dom... 
+start parseing  Spread Sheet...... 
+Start converting html to IDSXML...... 
+stop parsing RegSpec 
+ Start parsing secquence Spec
+stop parsing secquence Spec 
+stop converting html to IDSXML...... 
+finish...... <?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="blk1"><reg name="Reg0"><config><regwidth>32</regwidth></config><field name="pol_f" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="pol_diag" offset="1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="pol_c" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_out_inv" offset="3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_in_inv" offset="4"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_e" offset="5"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_bin_e" offset="6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lin_scalar" offset="7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="hptest_lvl" offset="11:8"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="hall_isel" offset="16:12"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bw_sel" offset="19:17"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bg_adc_ref_err_max" offset="20"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="asil_ftt" offset="21"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_zero_config" offset="22"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_hpdrv_chop" offset="24:23"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_gain" offset="26:25"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_adcchp" offset="28:27"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="adc_zero" offset="29"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="fire" offset="30"><default>0</default><sw>rw</sw><hw>rw</hw><doc>water1 changed to fire</doc></field><field name="water1111" offset="31"><default>0</default><sw>rw</sw><hw>rw</hw><doc>new addition</doc></field></reg><reg name="Reg1"><config><regwidth>32</regwidth></config><field name="afe_hpsig_phase" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_bg" offset="10:1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint00" offset="23:11"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_bin_hyst" offset="31:24"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg2"><config><regwidth>32</regwidth></config><field name="hall_ref_err_max" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="d_reg_ldo_boost" offset="2:1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bw_sel_min" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint02" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint01" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg3"><config><regwidth>32</regwidth></config><field name="spdiag_en" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="regref_err_max" offset="1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_en" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="filt_ada_gain" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint04" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint03" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg4"><config><regwidth>32</regwidth></config><field name="spdiag_rate" offset="1:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="spdiag_in_e" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sensm_c" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint06" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint05" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg5"><config><regwidth>32</regwidth></config><field name="toff" offset="4:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint08" offset="17:5"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint07" offset="30:18"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg6"><config><regwidth>32</regwidth></config><field name="tsen_chop_cfg" offset="1:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint10" offset="14:2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint09" offset="27:15"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg7"><config><regwidth>32</regwidth></config><field name="lint12" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint11" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg8"><config><regwidth>32</regwidth></config><field name="lint14" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint13" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg9"><config><regwidth>32</regwidth></config><field name="lint16" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint15" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg10"><config><regwidth>32</regwidth></config><field name="tslp" offset="6:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="plin_sens" offset="18:7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="plin_qvo" offset="30:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg11"><config><regwidth>32</regwidth></config><field name="qotc_cld_c" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="qo_c" offset="29:12"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg12"><config><regwidth>32</regwidth></config><field name="tzero" offset="6:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="clamp_h" offset="18:7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="qotc_hot_c" offset="30:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg13"><config><regwidth>32</regwidth></config><field name="senstc2_cld_c" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_hall" offset="19:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="clamp_l" offset="31:20"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg14"><config><regwidth>32</regwidth></config><field name="senstc2_cld_f" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_diag" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_c" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg15"><config><regwidth>32</regwidth></config><field name="senstc2_hot_c" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_c" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_f" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg16"><config><regwidth>32</regwidth></config><field name="senstc2_hot_f" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_f" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg17"><config><regwidth>32</regwidth></config><field name="senstc1_hot_diag" offset="10:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_hot_c" offset="21:11"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg18"><config><regwidth>32</regwidth></config><field name="spdiag_in" offset="17:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_hot_f" offset="28:18"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg19"><config><regwidth>32</regwidth></config><field name="vostc_cld_f" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="vos_f" offset="25:12"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg20"><config><regwidth>32</regwidth></config><field name="vostc_hot_f" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg21"><config><regwidth>32</regwidth></config><field name="byp_bw_sel" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_adc_iir" offset="1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="mag_in_e" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="mag_in" offset="20:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hptest_half_scale" offset="21"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_dis" offset="22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero_cm" offset="23"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero" offset="24"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hptest_chop" offset="26:25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hallph_ext" offset="29:27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="water" offset="31:30"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg22"><config><regwidth>32</regwidth></config><field name="temp_in_e" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="temp_in" offset="12:1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_single" offset="13"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sdm_order2" offset="14"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_sel" offset="17:15"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_eval_start" offset="18"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tsen_trim" offset="19"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_f" offset="20"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_diag" offset="21"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_c" offset="22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_f" offset="23"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_diag" offset="24"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_c" offset="25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_plin" offset="26"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_lin" offset="27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_diag_filt" offset="28"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_clamp" offset="29"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg23"><config><regwidth>32</regwidth></config><field name="lint_out_inv" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_in_inv" offset="1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_e" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_bin_hyst" offset="10:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_bin_e" offset="11"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lin_scalar" offset="12"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hptest_lvl" offset="16:13"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_isel" offset="21:17"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bw_sel" offset="24:22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bg_adc_ref_err_max" offset="25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="asil_ftt" offset="26"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero_config" offset="27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hpdrv_chop" offset="29:28"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_gain" offset="31:30"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg24"><config><regwidth>32</regwidth></config><field name="d_reg_ldo_boost" offset="1:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hpsig_phase" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_f" offset="3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_diag" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_c" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint01" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint00" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg25"><config><regwidth>32</regwidth></config><field name="filt_ada_gain" offset="2:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bw_sel_min" offset="5:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint03" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint02" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg26"><config><regwidth>32</regwidth></config><field name="sensm_c" offset="2:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="regref_err_max" offset="3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_en" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_ref_err_max" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint05" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint04" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg27"><config><regwidth>32</regwidth></config><field name="tsen_chop_cfg" offset="1:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_rate" offset="3:2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_in_e" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_en" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint07" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint06" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg28"><config><regwidth>32</regwidth></config><field name="toff" offset="4:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint09" offset="17:5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint08" offset="30:18"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg29"><config><regwidth>32</regwidth></config><field name="lint11" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint10" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg30"><config><regwidth>32</regwidth></config><field name="lint13" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint12" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg31"><config><regwidth>32</regwidth></config><field name="lint15" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint14" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg32"><config><regwidth>32</regwidth></config><field name="tslp" offset="6:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="plin_qvo" offset="18:7"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint16" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg33"><config><regwidth>32</regwidth></config><field name="qo_c" offset="17:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="plin_sens" offset="29:18"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg34"><config><regwidth>32</regwidth></config><field name="tzero" offset="6:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="qotc_hot_c" offset="18:7"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="qotc_cld_c" offset="30:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg35"><config><regwidth>32</regwidth></config><field name="refsigmon_hall" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="clamp_h" offset="21:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_bg" offset="31:22"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg36"><config><regwidth>32</regwidth></config><field name="sens_c" offset="10:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="clamp_l" offset="22:11"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg37"><config><regwidth>32</regwidth></config><field name="senstc2_cld_c" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sens_f" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sens_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg38"><config><regwidth>32</regwidth></config><field name="senstc2_cld_f" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_diag" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_c" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg39"><config><regwidth>32</regwidth></config><field name="senstc2_hot_c" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_c" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_f" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg40"><config><regwidth>32</regwidth></config><field name="senstc2_hot_f" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_f" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg41"><config><regwidth>32</regwidth></config><field name="vos_f" offset="13:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_in" offset="31:14"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg42"><config><regwidth>32</regwidth></config><field name="vostc_hot_f" offset="11:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="vostc_cld_f" offset="23:12"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><config><regwidth>32</regwidth><addressunit>8</addressunit></config><sequences><sequence name="seq_name" sid="1:0" eid="tabed00.9110050544937044" orig_path="sss.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\sss.idsng"><doc></doc><arguments/><constants/><variables/><seqsteps/></sequence><seqconfig> <output> <seq_outputs/> <uvm> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <regmodel oid="0">default</regmodel> <write oid="0">write(status, %d, .parent(this))</write> <read oid="0">read(status, %lhs, .parent(this))</read> <timemultiplier>100</timemultiplier> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>uvm_%s_seq</nameformat> <mout/> </uvm> <sv> <datatype> <inlinefunction>int</inlinefunction> <arguments>integer</arguments> <constant>integer</constant> <variable>integer</variable> </datatype> <bus oid="0">default</bus> <write oid="0">write_mirror(%a,%d,0,0)</write> <read oid="0">read_mirror(%a)</read> <timeunit1>1</timeunit1> <timeunit2>s</timeunit2> <timeprecision1>1</timeprecision1> <timeprecision2>s</timeprecision2> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>%s</nameformat> <mout/> </sv> <firmware> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <templatename oid="0">default</templatename> <write oid="0">REG_WRITE(%a,%d)</write> <read oid="0">REG_READ(%a)</read> <fieldtemplatename oid="0">default</fieldtemplatename> <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite> <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread> <timemultiplier>100</timemultiplier> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>%s</nameformat> <mout/> </firmware> <matlab> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <templatename oid="0">sss</templatename> <write oid="0">aaxx</write> <read oid="0">ddd</read> <templatename oid="1">swww</templatename> <write oid="1">aa</write> <read oid="1">ddd</read> <fieldtemplatename oid="0">aaaaa</fieldtemplatename> <fieldwrite oid="0">cccc</fieldwrite> <fieldread oid="0">cccc</fieldread> <fieldtemplatename oid="1">dddd</fieldtemplatename> <fieldwrite oid="1">cccc</fieldwrite> <fieldread oid="1">cccc</fieldread> <fieldtemplatename oid="2">ff</fieldtemplatename> <fieldwrite oid="2">ccccw</fieldwrite> <fieldread oid="2">cccc</fieldread> <timeunit1/> <timeunit2>ns</timeunit2> <timeprecision1/> <timeprecision2>ns</timeprecision2> <maxnesting/> <nameformat/> <mout/> </matlab> <csv> <commands> <isscmd oid="0">write</isscmd> <cmd oid="0">WRITE</cmd> <isscmd oid="1">write_1_set</isscmd> <cmd oid="1">WRITE_SET</cmd> <isscmd oid="2">write_1_clr</isscmd> <cmd oid="2">WRITE_CLR</cmd> <isscmd oid="3">call</isscmd> <cmd oid="3">CALL</cmd> <isscmd oid="4">switch</isscmd> <cmd oid="4">SWITCH</cmd> <isscmd oid="5">wait</isscmd> <cmd oid="5">WAIT</cmd> </commands> <headers> <issheader oid="0">command</issheader> <header oid="0">command</header> <issheader oid="1">step</issheader> <header oid="1">step</header> <issheader oid="2">value</issheader> <header oid="2">value</header> <issheader oid="3">address</issheader> <header oid="3">address</header> <issheader oid="4">description</issheader> <header oid="4">description</header> </headers> <timemultiplier>100</timemultiplier> <maxnesting>11</maxnesting> <nameformat>%s</nameformat> </csv> </output> </seqconfig></sequences></block>
+ Document doc =<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="blk1"><reg name="Reg0"><config><regwidth>32</regwidth></config><field name="pol_f" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="pol_diag" offset="1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="pol_c" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_out_inv" offset="3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_in_inv" offset="4"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_e" offset="5"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_bin_e" offset="6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lin_scalar" offset="7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="hptest_lvl" offset="11:8"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="hall_isel" offset="16:12"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bw_sel" offset="19:17"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bg_adc_ref_err_max" offset="20"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="asil_ftt" offset="21"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_zero_config" offset="22"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_hpdrv_chop" offset="24:23"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_gain" offset="26:25"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_adcchp" offset="28:27"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="adc_zero" offset="29"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="fire" offset="30"><default>0</default><sw>rw</sw><hw>rw</hw><doc>water1 changed to fire</doc></field><field name="water1111" offset="31"><default>0</default><sw>rw</sw><hw>rw</hw><doc>new addition</doc></field></reg><reg name="Reg1"><config><regwidth>32</regwidth></config><field name="afe_hpsig_phase" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_bg" offset="10:1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint00" offset="23:11"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_bin_hyst" offset="31:24"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg2"><config><regwidth>32</regwidth></config><field name="hall_ref_err_max" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="d_reg_ldo_boost" offset="2:1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bw_sel_min" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint02" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint01" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg3"><config><regwidth>32</regwidth></config><field name="spdiag_en" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="regref_err_max" offset="1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_en" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="filt_ada_gain" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint04" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint03" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg4"><config><regwidth>32</regwidth></config><field name="spdiag_rate" offset="1:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="spdiag_in_e" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sensm_c" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint06" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint05" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg5"><config><regwidth>32</regwidth></config><field name="toff" offset="4:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint08" offset="17:5"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint07" offset="30:18"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg6"><config><regwidth>32</regwidth></config><field name="tsen_chop_cfg" offset="1:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint10" offset="14:2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint09" offset="27:15"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg7"><config><regwidth>32</regwidth></config><field name="lint12" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint11" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg8"><config><regwidth>32</regwidth></config><field name="lint14" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint13" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg9"><config><regwidth>32</regwidth></config><field name="lint16" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint15" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg10"><config><regwidth>32</regwidth></config><field name="tslp" offset="6:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="plin_sens" offset="18:7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="plin_qvo" offset="30:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg11"><config><regwidth>32</regwidth></config><field name="qotc_cld_c" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="qo_c" offset="29:12"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg12"><config><regwidth>32</regwidth></config><field name="tzero" offset="6:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="clamp_h" offset="18:7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="qotc_hot_c" offset="30:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg13"><config><regwidth>32</regwidth></config><field name="senstc2_cld_c" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_hall" offset="19:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="clamp_l" offset="31:20"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg14"><config><regwidth>32</regwidth></config><field name="senstc2_cld_f" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_diag" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_c" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg15"><config><regwidth>32</regwidth></config><field name="senstc2_hot_c" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_c" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_f" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg16"><config><regwidth>32</regwidth></config><field name="senstc2_hot_f" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_f" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg17"><config><regwidth>32</regwidth></config><field name="senstc1_hot_diag" offset="10:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_hot_c" offset="21:11"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg18"><config><regwidth>32</regwidth></config><field name="spdiag_in" offset="17:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_hot_f" offset="28:18"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg19"><config><regwidth>32</regwidth></config><field name="vostc_cld_f" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="vos_f" offset="25:12"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg20"><config><regwidth>32</regwidth></config><field name="vostc_hot_f" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg21"><config><regwidth>32</regwidth></config><field name="byp_bw_sel" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_adc_iir" offset="1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="mag_in_e" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="mag_in" offset="20:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hptest_half_scale" offset="21"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_dis" offset="22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero_cm" offset="23"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero" offset="24"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hptest_chop" offset="26:25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hallph_ext" offset="29:27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="water" offset="31:30"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg22"><config><regwidth>32</regwidth></config><field name="temp_in_e" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="temp_in" offset="12:1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_single" offset="13"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sdm_order2" offset="14"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_sel" offset="17:15"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_eval_start" offset="18"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tsen_trim" offset="19"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_f" offset="20"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_diag" offset="21"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_c" offset="22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_f" offset="23"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_diag" offset="24"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_c" offset="25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_plin" offset="26"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_lin" offset="27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_diag_filt" offset="28"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_clamp" offset="29"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg23"><config><regwidth>32</regwidth></config><field name="lint_out_inv" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_in_inv" offset="1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_e" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_bin_hyst" offset="10:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_bin_e" offset="11"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lin_scalar" offset="12"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hptest_lvl" offset="16:13"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_isel" offset="21:17"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bw_sel" offset="24:22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bg_adc_ref_err_max" offset="25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="asil_ftt" offset="26"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero_config" offset="27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hpdrv_chop" offset="29:28"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_gain" offset="31:30"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg24"><config><regwidth>32</regwidth></config><field name="d_reg_ldo_boost" offset="1:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hpsig_phase" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_f" offset="3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_diag" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_c" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint01" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint00" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg25"><config><regwidth>32</regwidth></config><field name="filt_ada_gain" offset="2:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bw_sel_min" offset="5:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint03" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint02" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg26"><config><regwidth>32</regwidth></config><field name="sensm_c" offset="2:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="regref_err_max" offset="3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_en" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_ref_err_max" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint05" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint04" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg27"><config><regwidth>32</regwidth></config><field name="tsen_chop_cfg" offset="1:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_rate" offset="3:2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_in_e" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_en" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint07" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint06" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg28"><config><regwidth>32</regwidth></config><field name="toff" offset="4:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint09" offset="17:5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint08" offset="30:18"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg29"><config><regwidth>32</regwidth></config><field name="lint11" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint10" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg30"><config><regwidth>32</regwidth></config><field name="lint13" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint12" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg31"><config><regwidth>32</regwidth></config><field name="lint15" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint14" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg32"><config><regwidth>32</regwidth></config><field name="tslp" offset="6:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="plin_qvo" offset="18:7"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint16" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg33"><config><regwidth>32</regwidth></config><field name="qo_c" offset="17:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="plin_sens" offset="29:18"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg34"><config><regwidth>32</regwidth></config><field name="tzero" offset="6:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="qotc_hot_c" offset="18:7"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="qotc_cld_c" offset="30:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg35"><config><regwidth>32</regwidth></config><field name="refsigmon_hall" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="clamp_h" offset="21:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_bg" offset="31:22"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg36"><config><regwidth>32</regwidth></config><field name="sens_c" offset="10:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="clamp_l" offset="22:11"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg37"><config><regwidth>32</regwidth></config><field name="senstc2_cld_c" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sens_f" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sens_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg38"><config><regwidth>32</regwidth></config><field name="senstc2_cld_f" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_diag" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_c" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg39"><config><regwidth>32</regwidth></config><field name="senstc2_hot_c" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_c" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_f" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg40"><config><regwidth>32</regwidth></config><field name="senstc2_hot_f" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_f" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg41"><config><regwidth>32</regwidth></config><field name="vos_f" offset="13:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_in" offset="31:14"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg42"><config><regwidth>32</regwidth></config><field name="vostc_hot_f" offset="11:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="vostc_cld_f" offset="23:12"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><config><regwidth>32</regwidth><addressunit>8</addressunit></config><sequences><sequence name="seq_name" sid="1:0" eid="tabed00.9110050544937044" orig_path="sss.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\sss.idsng"><doc></doc><arguments/><constants/><variables/><seqsteps/></sequence><seqconfig> <output> <seq_outputs/> <uvm> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <regmodel oid="0">default</regmodel> <write oid="0">write(status, %d, .parent(this))</write> <read oid="0">read(status, %lhs, .parent(this))</read> <timemultiplier>100</timemultiplier> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>uvm_%s_seq</nameformat> <mout/> </uvm> <sv> <datatype> <inlinefunction>int</inlinefunction> <arguments>integer</arguments> <constant>integer</constant> <variable>integer</variable> </datatype> <bus oid="0">default</bus> <write oid="0">write_mirror(%a,%d,0,0)</write> <read oid="0">read_mirror(%a)</read> <timeunit1>1</timeunit1> <timeunit2>s</timeunit2> <timeprecision1>1</timeprecision1> <timeprecision2>s</timeprecision2> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>%s</nameformat> <mout/> </sv> <firmware> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <templatename oid="0">default</templatename> <write oid="0">REG_WRITE(%a,%d)</write> <read oid="0">REG_READ(%a)</read> <fieldtemplatename oid="0">default</fieldtemplatename> <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite> <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread> <timemultiplier>100</timemultiplier> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>%s</nameformat> <mout/> </firmware> <matlab> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <templatename oid="0">sss</templatename> <write oid="0">aaxx</write> <read oid="0">ddd</read> <templatename oid="1">swww</templatename> <write oid="1">aa</write> <read oid="1">ddd</read> <fieldtemplatename oid="0">aaaaa</fieldtemplatename> <fieldwrite oid="0">cccc</fieldwrite> <fieldread oid="0">cccc</fieldread> <fieldtemplatename oid="1">dddd</fieldtemplatename> <fieldwrite oid="1">cccc</fieldwrite> <fieldread oid="1">cccc</fieldread> <fieldtemplatename oid="2">ff</fieldtemplatename> <fieldwrite oid="2">ccccw</fieldwrite> <fieldread oid="2">cccc</fieldread> <timeunit1/> <timeunit2>ns</timeunit2> <timeprecision1/> <timeprecision2>ns</timeprecision2> <maxnesting/> <nameformat/> <mout/> </matlab> <csv> <commands> <isscmd oid="0">write</isscmd> <cmd oid="0">WRITE</cmd> <isscmd oid="1">write_1_set</isscmd> <cmd oid="1">WRITE_SET</cmd> <isscmd oid="2">write_1_clr</isscmd> <cmd oid="2">WRITE_CLR</cmd> <isscmd oid="3">call</isscmd> <cmd oid="3">CALL</cmd> <isscmd oid="4">switch</isscmd> <cmd oid="4">SWITCH</cmd> <isscmd oid="5">wait</isscmd> <cmd oid="5">WAIT</cmd> </commands> <headers> <issheader oid="0">command</issheader> <header oid="0">command</header> <issheader oid="1">step</issheader> <header oid="1">step</header> <issheader oid="2">value</issheader> <header oid="2">value</header> <issheader oid="3">address</issheader> <header oid="3">address</header> <issheader oid="4">description</issheader> <header oid="4">description</header> </headers> <timemultiplier>100</timemultiplier> <maxnesting>11</maxnesting> <nameformat>%s</nameformat> </csv> </output> </seqconfig></sequences></block>
+Updating intermediate xrsl with configuration..
+update doc w/ conf doc = 
+Extract conf from input xml using path = /block/config
+Conf elem found in input xml = org.dom4j.tree.DefaultElement@24743b20 [Element: <config attributes: []/>]
+Using user specified block size 4096(regAddrBit = 12)
+Debug : config already exists in the final given xml. Will update if required.
+Validating xml   = <?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="blk1"><reg name="Reg0"><config><regwidth>32</regwidth></config><field name="pol_f" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="pol_diag" offset="1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="pol_c" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_out_inv" offset="3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_in_inv" offset="4"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_e" offset="5"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_bin_e" offset="6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lin_scalar" offset="7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="hptest_lvl" offset="11:8"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="hall_isel" offset="16:12"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bw_sel" offset="19:17"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bg_adc_ref_err_max" offset="20"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="asil_ftt" offset="21"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_zero_config" offset="22"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_hpdrv_chop" offset="24:23"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_gain" offset="26:25"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="afe_adcchp" offset="28:27"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="adc_zero" offset="29"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="fire" offset="30"><default>0</default><sw>rw</sw><hw>rw</hw><doc>water1 changed to fire</doc></field><field name="water1111" offset="31"><default>0</default><sw>rw</sw><hw>rw</hw><doc>new addition</doc></field></reg><reg name="Reg1"><config><regwidth>32</regwidth></config><field name="afe_hpsig_phase" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_bg" offset="10:1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint00" offset="23:11"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint_bin_hyst" offset="31:24"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg2"><config><regwidth>32</regwidth></config><field name="hall_ref_err_max" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="d_reg_ldo_boost" offset="2:1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="bw_sel_min" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint02" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint01" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg3"><config><regwidth>32</regwidth></config><field name="spdiag_en" offset="0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="regref_err_max" offset="1"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_en" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="filt_ada_gain" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint04" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint03" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg4"><config><regwidth>32</regwidth></config><field name="spdiag_rate" offset="1:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="spdiag_in_e" offset="2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sensm_c" offset="5:3"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint06" offset="18:6"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint05" offset="31:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg5"><config><regwidth>32</regwidth></config><field name="toff" offset="4:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint08" offset="17:5"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint07" offset="30:18"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg6"><config><regwidth>32</regwidth></config><field name="tsen_chop_cfg" offset="1:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint10" offset="14:2"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint09" offset="27:15"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg7"><config><regwidth>32</regwidth></config><field name="lint12" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint11" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg8"><config><regwidth>32</regwidth></config><field name="lint14" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint13" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg9"><config><regwidth>32</regwidth></config><field name="lint16" offset="12:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="lint15" offset="25:13"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg10"><config><regwidth>32</regwidth></config><field name="tslp" offset="6:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="plin_sens" offset="18:7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="plin_qvo" offset="30:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg11"><config><regwidth>32</regwidth></config><field name="qotc_cld_c" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="qo_c" offset="29:12"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg12"><config><regwidth>32</regwidth></config><field name="tzero" offset="6:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="clamp_h" offset="18:7"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="qotc_hot_c" offset="30:19"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg13"><config><regwidth>32</regwidth></config><field name="senstc2_cld_c" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="refsigmon_hall" offset="19:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="clamp_l" offset="31:20"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg14"><config><regwidth>32</regwidth></config><field name="senstc2_cld_f" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_diag" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_c" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg15"><config><regwidth>32</regwidth></config><field name="senstc2_hot_c" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_c" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="sens_f" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg16"><config><regwidth>32</regwidth></config><field name="senstc2_hot_f" offset="9:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_f" offset="20:10"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_cld_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg17"><config><regwidth>32</regwidth></config><field name="senstc1_hot_diag" offset="10:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_hot_c" offset="21:11"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg18"><config><regwidth>32</regwidth></config><field name="spdiag_in" offset="17:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="senstc1_hot_f" offset="28:18"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg19"><config><regwidth>32</regwidth></config><field name="vostc_cld_f" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field><field name="vos_f" offset="25:12"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg20"><config><regwidth>32</regwidth></config><field name="vostc_hot_f" offset="11:0"><default>0</default><sw>rw</sw><hw>rw</hw></field></reg><reg name="Reg21"><config><regwidth>32</regwidth></config><field name="byp_bw_sel" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_adc_iir" offset="1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="mag_in_e" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="mag_in" offset="20:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hptest_half_scale" offset="21"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_dis" offset="22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero_cm" offset="23"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero" offset="24"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hptest_chop" offset="26:25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hallph_ext" offset="29:27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="water" offset="31:30"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg22"><config><regwidth>32</regwidth></config><field name="temp_in_e" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="temp_in" offset="12:1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_single" offset="13"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sdm_order2" offset="14"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_sel" offset="17:15"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_eval_start" offset="18"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tsen_trim" offset="19"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_f" offset="20"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_diag" offset="21"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_trim_c" offset="22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_f" offset="23"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_diag" offset="24"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_tc_c" offset="25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_plin" offset="26"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_lin" offset="27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_diag_filt" offset="28"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="byp_clamp" offset="29"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg23"><config><regwidth>32</regwidth></config><field name="lint_out_inv" offset="0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_in_inv" offset="1"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_e" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_bin_hyst" offset="10:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint_bin_e" offset="11"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lin_scalar" offset="12"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hptest_lvl" offset="16:13"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_isel" offset="21:17"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bw_sel" offset="24:22"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bg_adc_ref_err_max" offset="25"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="asil_ftt" offset="26"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_zero_config" offset="27"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hpdrv_chop" offset="29:28"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_gain" offset="31:30"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg24"><config><regwidth>32</regwidth></config><field name="d_reg_ldo_boost" offset="1:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="afe_hpsig_phase" offset="2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_f" offset="3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_diag" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="pol_c" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint01" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint00" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg25"><config><regwidth>32</regwidth></config><field name="filt_ada_gain" offset="2:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="bw_sel_min" offset="5:3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint03" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint02" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg26"><config><regwidth>32</regwidth></config><field name="sensm_c" offset="2:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="regref_err_max" offset="3"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_en" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="hall_ref_err_max" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint05" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint04" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg27"><config><regwidth>32</regwidth></config><field name="tsen_chop_cfg" offset="1:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_rate" offset="3:2"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_in_e" offset="4"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_en" offset="5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint07" offset="18:6"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint06" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg28"><config><regwidth>32</regwidth></config><field name="toff" offset="4:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint09" offset="17:5"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint08" offset="30:18"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg29"><config><regwidth>32</regwidth></config><field name="lint11" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint10" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg30"><config><regwidth>32</regwidth></config><field name="lint13" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint12" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg31"><config><regwidth>32</regwidth></config><field name="lint15" offset="12:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint14" offset="25:13"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg32"><config><regwidth>32</regwidth></config><field name="tslp" offset="6:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="plin_qvo" offset="18:7"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="lint16" offset="31:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg33"><config><regwidth>32</regwidth></config><field name="qo_c" offset="17:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="plin_sens" offset="29:18"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg34"><config><regwidth>32</regwidth></config><field name="tzero" offset="6:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="qotc_hot_c" offset="18:7"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="qotc_cld_c" offset="30:19"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg35"><config><regwidth>32</regwidth></config><field name="refsigmon_hall" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="clamp_h" offset="21:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="refsigmon_bg" offset="31:22"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg36"><config><regwidth>32</regwidth></config><field name="sens_c" offset="10:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="clamp_l" offset="22:11"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg37"><config><regwidth>32</regwidth></config><field name="senstc2_cld_c" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sens_f" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="sens_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg38"><config><regwidth>32</regwidth></config><field name="senstc2_cld_f" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_diag" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_c" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg39"><config><regwidth>32</regwidth></config><field name="senstc2_hot_c" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_c" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_cld_f" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg40"><config><regwidth>32</regwidth></config><field name="senstc2_hot_f" offset="9:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_f" offset="20:10"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="senstc1_hot_diag" offset="31:21"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg41"><config><regwidth>32</regwidth></config><field name="vos_f" offset="13:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="spdiag_in" offset="31:14"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><reg name="Reg42"><config><regwidth>32</regwidth></config><field name="vostc_hot_f" offset="11:0"><default>0</default><sw>rw</sw><hw>ro</hw></field><field name="vostc_cld_f" offset="23:12"><default>0</default><sw>rw</sw><hw>ro</hw></field></reg><config><variants><variant name="none" isselected="true"><doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc></variant></variants><regwidth>32</regwidth><buswidth>32</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config><sequences><sequence name="seq_name" sid="1:0" eid="tabed00.9110050544937044" orig_path="sss.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\sss.idsng"><doc></doc><arguments/><constants/><variables/><seqsteps/></sequence><seqconfig> <output> <seq_outputs/> <uvm> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <regmodel oid="0">default</regmodel> <write oid="0">write(status, %d, .parent(this))</write> <read oid="0">read(status, %lhs, .parent(this))</read> <timemultiplier>100</timemultiplier> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>uvm_%s_seq</nameformat> <mout/> </uvm> <sv> <datatype> <inlinefunction>int</inlinefunction> <arguments>integer</arguments> <constant>integer</constant> <variable>integer</variable> </datatype> <bus oid="0">default</bus> <write oid="0">write_mirror(%a,%d,0,0)</write> <read oid="0">read_mirror(%a)</read> <timeunit1>1</timeunit1> <timeunit2>s</timeunit2> <timeprecision1>1</timeprecision1> <timeprecision2>s</timeprecision2> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>%s</nameformat> <mout/> </sv> <firmware> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <templatename oid="0">default</templatename> <write oid="0">REG_WRITE(%a,%d)</write> <read oid="0">REG_READ(%a)</read> <fieldtemplatename oid="0">default</fieldtemplatename> <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite> <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread> <timemultiplier>100</timemultiplier> <maxnesting>1</maxnesting> <consolidated>true</consolidated> <nameformat>%s</nameformat> <mout/> </firmware> <matlab> <datatype> <inlinefunction>int</inlinefunction> <arguments>int</arguments> <constant>int</constant> <variable>int</variable> </datatype> <templatename oid="0">sss</templatename> <write oid="0">aaxx</write> <read oid="0">ddd</read> <templatename oid="1">swww</templatename> <write oid="1">aa</write> <read oid="1">ddd</read> <fieldtemplatename oid="0">aaaaa</fieldtemplatename> <fieldwrite oid="0">cccc</fieldwrite> <fieldread oid="0">cccc</fieldread> <fieldtemplatename oid="1">dddd</fieldtemplatename> <fieldwrite oid="1">cccc</fieldwrite> <fieldread oid="1">cccc</fieldread> <fieldtemplatename oid="2">ff</fieldtemplatename> <fieldwrite oid="2">ccccw</fieldwrite> <fieldread oid="2">cccc</fieldread> <timeunit1/> <timeunit2>ns</timeunit2> <timeprecision1/> <timeprecision2>ns</timeprecision2> <maxnesting/> <nameformat/> <mout/> </matlab> <csv> <commands> <isscmd oid="0">write</isscmd> <cmd oid="0">WRITE</cmd> <isscmd oid="1">write_1_set</isscmd> <cmd oid="1">WRITE_SET</cmd> <isscmd oid="2">write_1_clr</isscmd> <cmd oid="2">WRITE_CLR</cmd> <isscmd oid="3">call</isscmd> <cmd oid="3">CALL</cmd> <isscmd oid="4">switch</isscmd> <cmd oid="4">SWITCH</cmd> <isscmd oid="5">wait</isscmd> <cmd oid="5">WAIT</cmd> </commands> <headers> <issheader oid="0">command</issheader> <header oid="0">command</header> <issheader oid="1">step</issheader> <header oid="1">step</header> <issheader oid="2">value</issheader> <header oid="2">value</header> <issheader oid="3">address</issheader> <header oid="3">address</header> <issheader oid="4">description</issheader> <header oid="4">description</header> </headers> <timemultiplier>100</timemultiplier> <maxnesting>11</maxnesting> <nameformat>%s</nameformat> </csv> </output> </seqconfig></sequences></block>
+Validating intermediate xrsl file..
+Annotating intermediate xrsl file..
+BatchURIResolver: Using file : img/xrsl/matrix4annotation.xsl
+BatchURIResolver: Using file : img/xrsl/matrix4properties.xsl
+BatchURIResolver: Using file : img/xrsl/xrsl-util.xsl
+BatchURIResolver: Using file : img/xrsl/addressAndSizeCalc_utils.xsl
+BatchURIResolver: Using file : img/xrsl/exslt/math/functions/power/math.power.xsl
+BatchURIResolver: Using file : img/xrsl/exslt/math/functions/power/math.power.template.xsl
+BatchURIResolver: Using file : img/xrsl/input_params.xsl
+BatchURIResolver: Using file : img/xrsl/math_utils.xsl
+BatchURIResolver: Using file : img/xrsl/util.xsl
+INFO-B : Run check successfully!

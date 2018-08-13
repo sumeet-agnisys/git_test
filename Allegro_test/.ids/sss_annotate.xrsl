@@ -1,0 +1,2119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" name="blk" uid="2018-07-01T16:17:24.44+05:30d14e1" keypath="blk" offset="0" caddress="0" hwmapaddr="1" max_reg_size="32" csize="4096" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <blocksize>4096</blocksize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed00.23753472130093156" orig_path="sss.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\sss.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs/>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>uvm_%s_seq</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a,%d,0,0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>s</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">sss</templatename>
+               <write oid="0">aaxx</write>
+               <read oid="0">ddd</read>
+               <templatename oid="1">swww</templatename>
+               <write oid="1">aa</write>
+               <read oid="1">ddd</read>
+               <fieldtemplatename oid="0">aaaaa</fieldtemplatename>
+               <fieldwrite oid="0">cccc</fieldwrite>
+               <fieldread oid="0">cccc</fieldread>
+               <fieldtemplatename oid="1">dddd</fieldtemplatename>
+               <fieldwrite oid="1">cccc</fieldwrite>
+               <fieldread oid="1">cccc</fieldread>
+               <fieldtemplatename oid="2">ff</fieldtemplatename>
+               <fieldwrite oid="2">ccccw</fieldwrite>
+               <fieldread oid="2">cccc</fieldread>
+               <timeunit1/>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">write</isscmd>
+                  <cmd oid="0">WRITE</cmd>
+                  <isscmd oid="1">write_1_set</isscmd>
+                  <cmd oid="1">WRITE_SET</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">call</isscmd>
+                  <cmd oid="3">CALL</cmd>
+                  <isscmd oid="4">switch</isscmd>
+                  <cmd oid="4">SWITCH</cmd>
+                  <isscmd oid="5">wait</isscmd>
+                  <cmd oid="5">WAIT</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">command</issheader>
+                  <header oid="0">command</header>
+                  <issheader oid="1">step</issheader>
+                  <header oid="1">step</header>
+                  <issheader oid="2">value</issheader>
+                  <header oid="2">value</header>
+                  <issheader oid="3">address</issheader>
+                  <header oid="3">address</header>
+                  <issheader oid="4">description</issheader>
+                  <header oid="4">description</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>11</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <reg heading="1.1" child_no="1" name="Reg0" uid="2018-07-01T16:17:24.44+05:30d14e15" keypath="blk.Reg0,Reg0" hdl_path="Reg0" abs_hdl_path="blk_ids.Reg0" hwmapaddr="2" csize="4" offset="0" caddress="0" address="0x0000" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x3" size="4"/>
+         </busdomains>
+      </config>
+      <field name="mag_in" offset="18:1" uid="2018-07-01T16:17:24.44+05:30d14e26" keypath="blk.Reg0.mag_in,Reg0.mag_in,mag_in" hdl_path="_magin_q" abs_hdl_path="blk_ids.Reg0_magin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_hptest_chop" offset="24:23" uid="2018-07-01T16:17:24.44+05:30d14e61" keypath="blk.Reg0.afe_hptest_chop,Reg0.afe_hptest_chop,afe_hptest_chop" hdl_path="_afehptestchop_q" abs_hdl_path="blk_ids.Reg0_afehptestchop_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_hallph_ext" offset="27:25" uid="2018-07-01T16:17:24.44+05:30d14e68" keypath="blk.Reg0.afe_hallph_ext,Reg0.afe_hallph_ext,afe_hallph_ext" hdl_path="_afehallphext_q" abs_hdl_path="blk_ids.Reg0_afehallphext_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="water" offset="29:28" uid="2018-07-01T16:17:24.44+05:30d14e75" keypath="blk.Reg0.water,Reg0.water,water" hdl_path="_water_q" abs_hdl_path="blk_ids.Reg0_water_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="mag_in_e" offset="0" uid="2018-07-01T16:17:24.44+05:30d14e19" keypath="blk.Reg0.mag_in_e,Reg0.mag_in_e,mag_in_e" hdl_path="_magine_q" abs_hdl_path="blk_ids.Reg0_magine_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="hptest_half_scale" offset="19" uid="2018-07-01T16:17:24.44+05:30d14e33" keypath="blk.Reg0.hptest_half_scale,Reg0.hptest_half_scale,hptest_half_scale" hdl_path="_hptesthalfscale_q" abs_hdl_path="blk_ids.Reg0_hptesthalfscale_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="hall_dis" offset="20" uid="2018-07-01T16:17:24.44+05:30d14e40" keypath="blk.Reg0.hall_dis,Reg0.hall_dis,hall_dis" hdl_path="_halldis_q" abs_hdl_path="blk_ids.Reg0_halldis_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_zero_cm" offset="21" uid="2018-07-01T16:17:24.44+05:30d14e47" keypath="blk.Reg0.afe_zero_cm,Reg0.afe_zero_cm,afe_zero_cm" hdl_path="_afezerocm_q" abs_hdl_path="blk_ids.Reg0_afezerocm_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_zero" offset="22" uid="2018-07-01T16:17:24.44+05:30d14e54" keypath="blk.Reg0.afe_zero,Reg0.afe_zero,afe_zero" hdl_path="_afezero_q" abs_hdl_path="blk_ids.Reg0_afezero_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="fire" offset="30" uid="2018-07-01T16:17:24.44+05:30d14e82" keypath="blk.Reg0.fire,Reg0.fire,fire" hdl_path="_fire_q" abs_hdl_path="blk_ids.Reg0_fire_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>water1 changed to fire</doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="water1111" offset="31" uid="2018-07-01T16:17:24.44+05:30d14e92" keypath="blk.Reg0.water1111,Reg0.water1111,water1111" hdl_path="_water1111_q" abs_hdl_path="blk_ids.Reg0_water1111_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>new addition</doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.2" child_no="2" name="Reg1" uid="2018-07-01T16:17:24.44+05:30d14e101" keypath="blk.Reg1,Reg1" hdl_path="Reg1" abs_hdl_path="blk_ids.Reg1" hwmapaddr="3" csize="4" offset="4" caddress="4" address="0x0004" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x0004" endaddress="0x7" size="4"/>
+         </busdomains>
+      </config>
+      <field name="temp_in" offset="12:1" uid="2018-07-01T16:17:24.44+05:30d14e112" keypath="blk.Reg1.temp_in,Reg1.temp_in,temp_in" hdl_path="_tempin_q" abs_hdl_path="blk_ids.Reg1_tempin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="refsigmon_sel" offset="17:15" uid="2018-07-01T16:17:24.44+05:30d14e133" keypath="blk.Reg1.refsigmon_sel,Reg1.refsigmon_sel,refsigmon_sel" hdl_path="_refsigmonsel_q" abs_hdl_path="blk_ids.Reg1_refsigmonsel_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="temp_in_e" offset="0" uid="2018-07-01T16:17:24.44+05:30d14e105" keypath="blk.Reg1.temp_in_e,Reg1.temp_in_e,temp_in_e" hdl_path="_tempine_q" abs_hdl_path="blk_ids.Reg1_tempine_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="spdiag_single" offset="13" uid="2018-07-01T16:17:24.44+05:30d14e119" keypath="blk.Reg1.spdiag_single,Reg1.spdiag_single,spdiag_single" hdl_path="_spdiagsingle_q" abs_hdl_path="blk_ids.Reg1_spdiagsingle_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="sdm_order2" offset="14" uid="2018-07-01T16:17:24.44+05:30d14e126" keypath="blk.Reg1.sdm_order2,Reg1.sdm_order2,sdm_order2" hdl_path="_sdmorder2_q" abs_hdl_path="blk_ids.Reg1_sdmorder2_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="refsigmon_eval_start" offset="18" uid="2018-07-01T16:17:24.44+05:30d14e140" keypath="blk.Reg1.refsigmon_eval_start,Reg1.refsigmon_eval_start,refsigmon_eval_start" hdl_path="_refsigmonevalstart_q" abs_hdl_path="blk_ids.Reg1_refsigmonevalstart_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_tsen_trim" offset="19" uid="2018-07-01T16:17:24.44+05:30d14e147" keypath="blk.Reg1.byp_tsen_trim,Reg1.byp_tsen_trim,byp_tsen_trim" hdl_path="_byptsentrim_q" abs_hdl_path="blk_ids.Reg1_byptsentrim_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_trim_f" offset="20" uid="2018-07-01T16:17:24.44+05:30d14e154" keypath="blk.Reg1.byp_trim_f,Reg1.byp_trim_f,byp_trim_f" hdl_path="_byptrimf_q" abs_hdl_path="blk_ids.Reg1_byptrimf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_trim_diag" offset="21" uid="2018-07-01T16:17:24.44+05:30d14e161" keypath="blk.Reg1.byp_trim_diag,Reg1.byp_trim_diag,byp_trim_diag" hdl_path="_byptrimdiag_q" abs_hdl_path="blk_ids.Reg1_byptrimdiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_trim_c" offset="22" uid="2018-07-01T16:17:24.44+05:30d14e168" keypath="blk.Reg1.byp_trim_c,Reg1.byp_trim_c,byp_trim_c" hdl_path="_byptrimc_q" abs_hdl_path="blk_ids.Reg1_byptrimc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_tc_f" offset="23" uid="2018-07-01T16:17:24.44+05:30d14e176" keypath="blk.Reg1.byp_tc_f,Reg1.byp_tc_f,byp_tc_f" hdl_path="_byptcf_q" abs_hdl_path="blk_ids.Reg1_byptcf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_tc_diag" offset="24" uid="2018-07-01T16:17:24.44+05:30d14e183" keypath="blk.Reg1.byp_tc_diag,Reg1.byp_tc_diag,byp_tc_diag" hdl_path="_byptcdiag_q" abs_hdl_path="blk_ids.Reg1_byptcdiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_tc_c" offset="25" uid="2018-07-01T16:17:24.44+05:30d14e190" keypath="blk.Reg1.byp_tc_c,Reg1.byp_tc_c,byp_tc_c" hdl_path="_byptcc_q" abs_hdl_path="blk_ids.Reg1_byptcc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_plin" offset="26" uid="2018-07-01T16:17:24.44+05:30d14e197" keypath="blk.Reg1.byp_plin,Reg1.byp_plin,byp_plin" hdl_path="_bypplin_q" abs_hdl_path="blk_ids.Reg1_bypplin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_lin" offset="27" uid="2018-07-01T16:17:24.44+05:30d14e204" keypath="blk.Reg1.byp_lin,Reg1.byp_lin,byp_lin" hdl_path="_byplin_q" abs_hdl_path="blk_ids.Reg1_byplin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_diag_filt" offset="28" uid="2018-07-01T16:17:24.44+05:30d14e211" keypath="blk.Reg1.byp_diag_filt,Reg1.byp_diag_filt,byp_diag_filt" hdl_path="_bypdiagfilt_q" abs_hdl_path="blk_ids.Reg1_bypdiagfilt_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_clamp" offset="29" uid="2018-07-01T16:17:24.44+05:30d14e218" keypath="blk.Reg1.byp_clamp,Reg1.byp_clamp,byp_clamp" hdl_path="_bypclamp_q" abs_hdl_path="blk_ids.Reg1_bypclamp_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_bw_sel" offset="30" uid="2018-07-01T16:17:24.44+05:30d14e225" keypath="blk.Reg1.byp_bw_sel,Reg1.byp_bw_sel,byp_bw_sel" hdl_path="_bypbwsel_q" abs_hdl_path="blk_ids.Reg1_bypbwsel_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="byp_adc_iir" offset="31" uid="2018-07-01T16:17:24.44+05:30d14e232" keypath="blk.Reg1.byp_adc_iir,Reg1.byp_adc_iir,byp_adc_iir" hdl_path="_bypadciir_q" abs_hdl_path="blk_ids.Reg1_bypadciir_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.3" child_no="3" name="Reg2" uid="2018-07-01T16:17:24.44+05:30d14e239" keypath="blk.Reg2,Reg2" hdl_path="Reg2" abs_hdl_path="blk_ids.Reg2" hwmapaddr="4" csize="4" offset="8" caddress="8" address="0x0008" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x0008" endaddress="0xB" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint_bin_hyst" offset="7:0" uid="2018-07-01T16:17:24.44+05:30d14e243" keypath="blk.Reg2.lint_bin_hyst,Reg2.lint_bin_hyst,lint_bin_hyst" hdl_path="_lintbinhyst_q" abs_hdl_path="blk_ids.Reg2_lintbinhyst_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="hptest_lvl" offset="13:10" uid="2018-07-01T16:17:24.44+05:30d14e264" keypath="blk.Reg2.hptest_lvl,Reg2.hptest_lvl,hptest_lvl" hdl_path="_hptestlvl_q" abs_hdl_path="blk_ids.Reg2_hptestlvl_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="hall_isel" offset="18:14" uid="2018-07-01T16:17:24.44+05:30d14e271" keypath="blk.Reg2.hall_isel,Reg2.hall_isel,hall_isel" hdl_path="_hallisel_q" abs_hdl_path="blk_ids.Reg2_hallisel_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="bw_sel" offset="21:19" uid="2018-07-01T16:17:24.44+05:30d14e278" keypath="blk.Reg2.bw_sel,Reg2.bw_sel,bw_sel" hdl_path="_bwsel_q" abs_hdl_path="blk_ids.Reg2_bwsel_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="afe_hpdrv_chop" offset="26:25" uid="2018-07-01T16:17:24.44+05:30d14e306" keypath="blk.Reg2.afe_hpdrv_chop,Reg2.afe_hpdrv_chop,afe_hpdrv_chop" hdl_path="_afehpdrvchop_q" abs_hdl_path="blk_ids.Reg2_afehpdrvchop_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="afe_gain" offset="28:27" uid="2018-07-01T16:17:24.44+05:30d14e314" keypath="blk.Reg2.afe_gain,Reg2.afe_gain,afe_gain" hdl_path="_afegain_q" abs_hdl_path="blk_ids.Reg2_afegain_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="afe_adcchp" offset="30:29" uid="2018-07-01T16:17:24.44+05:30d14e321" keypath="blk.Reg2.afe_adcchp,Reg2.afe_adcchp,afe_adcchp" hdl_path="_afeadcchp_q" abs_hdl_path="blk_ids.Reg2_afeadcchp_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint_bin_e" offset="8" uid="2018-07-01T16:17:24.44+05:30d14e250" keypath="blk.Reg2.lint_bin_e,Reg2.lint_bin_e,lint_bin_e" hdl_path="_lintbine_q" abs_hdl_path="blk_ids.Reg2_lintbine_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lin_scalar" offset="9" uid="2018-07-01T16:17:24.44+05:30d14e257" keypath="blk.Reg2.lin_scalar,Reg2.lin_scalar,lin_scalar" hdl_path="_linscalar_q" abs_hdl_path="blk_ids.Reg2_linscalar_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="bg_adc_ref_err_max" offset="22" uid="2018-07-01T16:17:24.44+05:30d14e285" keypath="blk.Reg2.bg_adc_ref_err_max,Reg2.bg_adc_ref_err_max,bg_adc_ref_err_max" hdl_path="_bgadcreferrmax_q" abs_hdl_path="blk_ids.Reg2_bgadcreferrmax_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="asil_ftt" offset="23" uid="2018-07-01T16:17:24.44+05:30d14e292" keypath="blk.Reg2.asil_ftt,Reg2.asil_ftt,asil_ftt" hdl_path="_asilftt_q" abs_hdl_path="blk_ids.Reg2_asilftt_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="afe_zero_config" offset="24" uid="2018-07-01T16:17:24.44+05:30d14e299" keypath="blk.Reg2.afe_zero_config,Reg2.afe_zero_config,afe_zero_config" hdl_path="_afezeroconfig_q" abs_hdl_path="blk_ids.Reg2_afezeroconfig_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="adc_zero" offset="31" uid="2018-07-01T16:17:24.44+05:30d14e328" keypath="blk.Reg2.adc_zero,Reg2.adc_zero,adc_zero" hdl_path="_adczero_q" abs_hdl_path="blk_ids.Reg2_adczero_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.4" child_no="4" name="Reg3" uid="2018-07-01T16:17:24.44+05:30d14e335" keypath="blk.Reg3,Reg3" hdl_path="Reg3" abs_hdl_path="blk_ids.Reg3" hwmapaddr="5" csize="4" offset="12" caddress="12" address="0x000C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x000C" endaddress="0xF" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint01" offset="15:3" uid="2018-07-01T16:17:24.44+05:30d14e360" keypath="blk.Reg3.lint01,Reg3.lint01,lint01" hdl_path="_lint01_q" abs_hdl_path="blk_ids.Reg3_lint01_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint00" offset="28:16" uid="2018-07-01T16:17:24.44+05:30d14e367" keypath="blk.Reg3.lint00,Reg3.lint00,lint00" hdl_path="_lint00_q" abs_hdl_path="blk_ids.Reg3_lint00_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="pol_f" offset="0" uid="2018-07-01T16:17:24.44+05:30d14e339" keypath="blk.Reg3.pol_f,Reg3.pol_f,pol_f" hdl_path="_polf_q" abs_hdl_path="blk_ids.Reg3_polf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="pol_diag" offset="1" uid="2018-07-01T16:17:24.44+05:30d14e346" keypath="blk.Reg3.pol_diag,Reg3.pol_diag,pol_diag" hdl_path="_poldiag_q" abs_hdl_path="blk_ids.Reg3_poldiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="pol_c" offset="2" uid="2018-07-01T16:17:24.44+05:30d14e353" keypath="blk.Reg3.pol_c,Reg3.pol_c,pol_c" hdl_path="_polc_q" abs_hdl_path="blk_ids.Reg3_polc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint_out_inv" offset="29" uid="2018-07-01T16:17:24.44+05:30d14e374" keypath="blk.Reg3.lint_out_inv,Reg3.lint_out_inv,lint_out_inv" hdl_path="_lintoutinv_q" abs_hdl_path="blk_ids.Reg3_lintoutinv_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint_in_inv" offset="30" uid="2018-07-01T16:17:24.44+05:30d14e381" keypath="blk.Reg3.lint_in_inv,Reg3.lint_in_inv,lint_in_inv" hdl_path="_lintininv_q" abs_hdl_path="blk_ids.Reg3_lintininv_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint_e" offset="31" uid="2018-07-01T16:17:24.44+05:30d14e388" keypath="blk.Reg3.lint_e,Reg3.lint_e,lint_e" hdl_path="_linte_q" abs_hdl_path="blk_ids.Reg3_linte_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.5" child_no="5" name="Reg4" uid="2018-07-01T16:17:24.44+05:30d14e395" keypath="blk.Reg4,Reg4" hdl_path="Reg4" abs_hdl_path="blk_ids.Reg4" hwmapaddr="6" csize="4" offset="16" caddress="16" address="0x0010" endaddress="0x13" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x0010" endaddress="0x13" size="4"/>
+         </busdomains>
+      </config>
+      <field name="d_reg_ldo_boost" offset="1:0" uid="2018-07-01T16:17:24.44+05:30d14e399" keypath="blk.Reg4.d_reg_ldo_boost,Reg4.d_reg_ldo_boost,d_reg_ldo_boost" hdl_path="_dregldoboost_q" abs_hdl_path="blk_ids.Reg4_dregldoboost_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="bw_sel_min" offset="4:2" uid="2018-07-01T16:17:24.44+05:30d14e406" keypath="blk.Reg4.bw_sel_min,Reg4.bw_sel_min,bw_sel_min" hdl_path="_bwselmin_q" abs_hdl_path="blk_ids.Reg4_bwselmin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint03" offset="18:6" uid="2018-07-01T16:17:24.44+05:30d14e420" keypath="blk.Reg4.lint03,Reg4.lint03,lint03" hdl_path="_lint03_q" abs_hdl_path="blk_ids.Reg4_lint03_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint02" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e427" keypath="blk.Reg4.lint02,Reg4.lint02,lint02" hdl_path="_lint02_q" abs_hdl_path="blk_ids.Reg4_lint02_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="afe_hpsig_phase" offset="5" uid="2018-07-01T16:17:24.44+05:30d14e413" keypath="blk.Reg4.afe_hpsig_phase,Reg4.afe_hpsig_phase,afe_hpsig_phase" hdl_path="_afehpsigphase_q" abs_hdl_path="blk_ids.Reg4_afehpsigphase_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.6" child_no="6" name="Reg5" uid="2018-07-01T16:17:24.44+05:30d14e434" keypath="blk.Reg5,Reg5" hdl_path="Reg5" abs_hdl_path="blk_ids.Reg5" hwmapaddr="7" csize="4" offset="20" caddress="20" address="0x0014" endaddress="0x17" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x0014" endaddress="0x17" size="4"/>
+         </busdomains>
+      </config>
+      <field name="filt_ada_gain" offset="5:3" uid="2018-07-01T16:17:24.44+05:30d14e459" keypath="blk.Reg5.filt_ada_gain,Reg5.filt_ada_gain,filt_ada_gain" hdl_path="_filtadagain_q" abs_hdl_path="blk_ids.Reg5_filtadagain_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint05" offset="18:6" uid="2018-07-01T16:17:24.44+05:30d14e466" keypath="blk.Reg5.lint05,Reg5.lint05,lint05" hdl_path="_lint05_q" abs_hdl_path="blk_ids.Reg5_lint05_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint04" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e473" keypath="blk.Reg5.lint04,Reg5.lint04,lint04" hdl_path="_lint04_q" abs_hdl_path="blk_ids.Reg5_lint04_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="regref_err_max" offset="0" uid="2018-07-01T16:17:24.44+05:30d14e438" keypath="blk.Reg5.regref_err_max,Reg5.regref_err_max,regref_err_max" hdl_path="_regreferrmax_q" abs_hdl_path="blk_ids.Reg5_regreferrmax_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="refsigmon_en" offset="1" uid="2018-07-01T16:17:24.44+05:30d14e445" keypath="blk.Reg5.refsigmon_en,Reg5.refsigmon_en,refsigmon_en" hdl_path="_refsigmonen_q" abs_hdl_path="blk_ids.Reg5_refsigmonen_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="hall_ref_err_max" offset="2" uid="2018-07-01T16:17:24.44+05:30d14e452" keypath="blk.Reg5.hall_ref_err_max,Reg5.hall_ref_err_max,hall_ref_err_max" hdl_path="_hallreferrmax_q" abs_hdl_path="blk_ids.Reg5_hallreferrmax_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.7" child_no="7" name="Reg6" uid="2018-07-01T16:17:24.44+05:30d14e480" keypath="blk.Reg6,Reg6" hdl_path="Reg6" abs_hdl_path="blk_ids.Reg6" hwmapaddr="8" csize="4" offset="24" caddress="24" address="0x0018" endaddress="0x1B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="24" address="0x0018" endaddress="0x1B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="sensm_c" offset="4:2" uid="2018-07-01T16:17:24.44+05:30d14e498" keypath="blk.Reg6.sensm_c,Reg6.sensm_c,sensm_c" hdl_path="_sensmc_q" abs_hdl_path="blk_ids.Reg6_sensmc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint07" offset="17:5" uid="2018-07-01T16:17:24.44+05:30d14e505" keypath="blk.Reg6.lint07,Reg6.lint07,lint07" hdl_path="_lint07_q" abs_hdl_path="blk_ids.Reg6_lint07_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint06" offset="30:18" uid="2018-07-01T16:17:24.44+05:30d14e512" keypath="blk.Reg6.lint06,Reg6.lint06,lint06" hdl_path="_lint06_q" abs_hdl_path="blk_ids.Reg6_lint06_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="spdiag_in_e" offset="0" uid="2018-07-01T16:17:24.44+05:30d14e484" keypath="blk.Reg6.spdiag_in_e,Reg6.spdiag_in_e,spdiag_in_e" hdl_path="_spdiagine_q" abs_hdl_path="blk_ids.Reg6_spdiagine_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="spdiag_en" offset="1" uid="2018-07-01T16:17:24.44+05:30d14e491" keypath="blk.Reg6.spdiag_en,Reg6.spdiag_en,spdiag_en" hdl_path="_spdiagen_q" abs_hdl_path="blk_ids.Reg6_spdiagen_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.8" child_no="8" name="Reg7" uid="2018-07-01T16:17:24.44+05:30d14e519" keypath="blk.Reg7,Reg7" hdl_path="Reg7" abs_hdl_path="blk_ids.Reg7" hwmapaddr="9" csize="4" offset="28" caddress="28" address="0x001C" endaddress="0x1F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x001C" endaddress="0x1F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="tsen_chop_cfg" offset="1:0" uid="2018-07-01T16:17:24.44+05:30d14e523" keypath="blk.Reg7.tsen_chop_cfg,Reg7.tsen_chop_cfg,tsen_chop_cfg" hdl_path="_tsenchopcfg_q" abs_hdl_path="blk_ids.Reg7_tsenchopcfg_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="spdiag_rate" offset="3:2" uid="2018-07-01T16:17:24.44+05:30d14e530" keypath="blk.Reg7.spdiag_rate,Reg7.spdiag_rate,spdiag_rate" hdl_path="_spdiagrate_q" abs_hdl_path="blk_ids.Reg7_spdiagrate_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint09" offset="16:4" uid="2018-07-01T16:17:24.44+05:30d14e537" keypath="blk.Reg7.lint09,Reg7.lint09,lint09" hdl_path="_lint09_q" abs_hdl_path="blk_ids.Reg7_lint09_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint08" offset="29:17" uid="2018-07-01T16:17:24.44+05:30d14e544" keypath="blk.Reg7.lint08,Reg7.lint08,lint08" hdl_path="_lint08_q" abs_hdl_path="blk_ids.Reg7_lint08_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.9" child_no="9" name="Reg8" uid="2018-07-01T16:17:24.44+05:30d14e551" keypath="blk.Reg8,Reg8" hdl_path="Reg8" abs_hdl_path="blk_ids.Reg8" hwmapaddr="10" csize="4" offset="32" caddress="32" address="0x0020" endaddress="0x23" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="32" address="0x0020" endaddress="0x23" size="4"/>
+         </busdomains>
+      </config>
+      <field name="toff" offset="4:0" uid="2018-07-01T16:17:24.44+05:30d14e555" keypath="blk.Reg8.toff,Reg8.toff,toff" hdl_path="_toff_q" abs_hdl_path="blk_ids.Reg8_toff_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint11" offset="17:5" uid="2018-07-01T16:17:24.44+05:30d14e562" keypath="blk.Reg8.lint11,Reg8.lint11,lint11" hdl_path="_lint11_q" abs_hdl_path="blk_ids.Reg8_lint11_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint10" offset="30:18" uid="2018-07-01T16:17:24.44+05:30d14e569" keypath="blk.Reg8.lint10,Reg8.lint10,lint10" hdl_path="_lint10_q" abs_hdl_path="blk_ids.Reg8_lint10_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.10" child_no="10" name="Reg9" uid="2018-07-01T16:17:24.44+05:30d14e576" keypath="blk.Reg9,Reg9" hdl_path="Reg9" abs_hdl_path="blk_ids.Reg9" hwmapaddr="11" csize="4" offset="36" caddress="36" address="0x0024" endaddress="0x27" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="36" address="0x0024" endaddress="0x27" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint13" offset="12:0" uid="2018-07-01T16:17:24.44+05:30d14e580" keypath="blk.Reg9.lint13,Reg9.lint13,lint13" hdl_path="_lint13_q" abs_hdl_path="blk_ids.Reg9_lint13_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint12" offset="25:13" uid="2018-07-01T16:17:24.44+05:30d14e587" keypath="blk.Reg9.lint12,Reg9.lint12,lint12" hdl_path="_lint12_q" abs_hdl_path="blk_ids.Reg9_lint12_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.11" child_no="11" name="Reg10" uid="2018-07-01T16:17:24.44+05:30d14e595" keypath="blk.Reg10,Reg10" hdl_path="Reg10" abs_hdl_path="blk_ids.Reg10" hwmapaddr="12" csize="4" offset="40" caddress="40" address="0x0028" endaddress="0x2B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="40" address="0x0028" endaddress="0x2B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint15" offset="12:0" uid="2018-07-01T16:17:24.44+05:30d14e599" keypath="blk.Reg10.lint15,Reg10.lint15,lint15" hdl_path="_lint15_q" abs_hdl_path="blk_ids.Reg10_lint15_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint14" offset="25:13" uid="2018-07-01T16:17:24.44+05:30d14e606" keypath="blk.Reg10.lint14,Reg10.lint14,lint14" hdl_path="_lint14_q" abs_hdl_path="blk_ids.Reg10_lint14_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.12" child_no="12" name="Reg11" uid="2018-07-01T16:17:24.44+05:30d14e613" keypath="blk.Reg11,Reg11" hdl_path="Reg11" abs_hdl_path="blk_ids.Reg11" hwmapaddr="13" csize="4" offset="44" caddress="44" address="0x002C" endaddress="0x2F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="44" address="0x002C" endaddress="0x2F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="tslp" offset="6:0" uid="2018-07-01T16:17:24.44+05:30d14e617" keypath="blk.Reg11.tslp,Reg11.tslp,tslp" hdl_path="_tslp_q" abs_hdl_path="blk_ids.Reg11_tslp_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="plin_qvo" offset="18:7" uid="2018-07-01T16:17:24.44+05:30d14e624" keypath="blk.Reg11.plin_qvo,Reg11.plin_qvo,plin_qvo" hdl_path="_plinqvo_q" abs_hdl_path="blk_ids.Reg11_plinqvo_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="lint16" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e631" keypath="blk.Reg11.lint16,Reg11.lint16,lint16" hdl_path="_lint16_q" abs_hdl_path="blk_ids.Reg11_lint16_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.13" child_no="13" name="Reg12" uid="2018-07-01T16:17:24.44+05:30d14e638" keypath="blk.Reg12,Reg12" hdl_path="Reg12" abs_hdl_path="blk_ids.Reg12" hwmapaddr="14" csize="4" offset="48" caddress="48" address="0x0030" endaddress="0x33" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="48" address="0x0030" endaddress="0x33" size="4"/>
+         </busdomains>
+      </config>
+      <field name="qo_c" offset="17:0" uid="2018-07-01T16:17:24.44+05:30d14e642" keypath="blk.Reg12.qo_c,Reg12.qo_c,qo_c" hdl_path="_qoc_q" abs_hdl_path="blk_ids.Reg12_qoc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="plin_sens" offset="29:18" uid="2018-07-01T16:17:24.44+05:30d14e649" keypath="blk.Reg12.plin_sens,Reg12.plin_sens,plin_sens" hdl_path="_plinsens_q" abs_hdl_path="blk_ids.Reg12_plinsens_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.14" child_no="14" name="Reg13" uid="2018-07-01T16:17:24.44+05:30d14e656" keypath="blk.Reg13,Reg13" hdl_path="Reg13" abs_hdl_path="blk_ids.Reg13" hwmapaddr="15" csize="4" offset="52" caddress="52" address="0x0034" endaddress="0x37" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="52" address="0x0034" endaddress="0x37" size="4"/>
+         </busdomains>
+      </config>
+      <field name="tzero" offset="6:0" uid="2018-07-01T16:17:24.44+05:30d14e660" keypath="blk.Reg13.tzero,Reg13.tzero,tzero" hdl_path="_tzero_q" abs_hdl_path="blk_ids.Reg13_tzero_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="qotc_hot_c" offset="18:7" uid="2018-07-01T16:17:24.44+05:30d14e667" keypath="blk.Reg13.qotc_hot_c,Reg13.qotc_hot_c,qotc_hot_c" hdl_path="_qotchotc_q" abs_hdl_path="blk_ids.Reg13_qotchotc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="qotc_cld_c" offset="30:19" uid="2018-07-01T16:17:24.44+05:30d14e674" keypath="blk.Reg13.qotc_cld_c,Reg13.qotc_cld_c,qotc_cld_c" hdl_path="_qotccldc_q" abs_hdl_path="blk_ids.Reg13_qotccldc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.15" child_no="15" name="Reg14" uid="2018-07-01T16:17:24.44+05:30d14e681" keypath="blk.Reg14,Reg14" hdl_path="Reg14" abs_hdl_path="blk_ids.Reg14" hwmapaddr="16" csize="4" offset="56" caddress="56" address="0x0038" endaddress="0x3B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="56" address="0x0038" endaddress="0x3B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="refsigmon_hall" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e685" keypath="blk.Reg14.refsigmon_hall,Reg14.refsigmon_hall,refsigmon_hall" hdl_path="_refsigmonhall_q" abs_hdl_path="blk_ids.Reg14_refsigmonhall_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="clamp_h" offset="21:10" uid="2018-07-01T16:17:24.44+05:30d14e692" keypath="blk.Reg14.clamp_h,Reg14.clamp_h,clamp_h" hdl_path="_clamph_q" abs_hdl_path="blk_ids.Reg14_clamph_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="refsigmon_bg" offset="31:22" uid="2018-07-01T16:17:24.44+05:30d14e699" keypath="blk.Reg14.refsigmon_bg,Reg14.refsigmon_bg,refsigmon_bg" hdl_path="_refsigmonbg_q" abs_hdl_path="blk_ids.Reg14_refsigmonbg_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.16" child_no="16" name="Reg15" uid="2018-07-01T16:17:24.44+05:30d14e706" keypath="blk.Reg15,Reg15" hdl_path="Reg15" abs_hdl_path="blk_ids.Reg15" hwmapaddr="17" csize="4" offset="60" caddress="60" address="0x003C" endaddress="0x3F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="60" address="0x003C" endaddress="0x3F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="sens_c" offset="10:0" uid="2018-07-01T16:17:24.44+05:30d14e710" keypath="blk.Reg15.sens_c,Reg15.sens_c,sens_c" hdl_path="_sensc_q" abs_hdl_path="blk_ids.Reg15_sensc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="clamp_l" offset="22:11" uid="2018-07-01T16:17:24.44+05:30d14e717" keypath="blk.Reg15.clamp_l,Reg15.clamp_l,clamp_l" hdl_path="_clampl_q" abs_hdl_path="blk_ids.Reg15_clampl_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.17" child_no="17" name="Reg16" uid="2018-07-01T16:17:24.44+05:30d14e724" keypath="blk.Reg16,Reg16" hdl_path="Reg16" abs_hdl_path="blk_ids.Reg16" hwmapaddr="18" csize="4" offset="64" caddress="64" address="0x0040" endaddress="0x43" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="64" address="0x0040" endaddress="0x43" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_cld_c" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e728" keypath="blk.Reg16.senstc2_cld_c,Reg16.senstc2_cld_c,senstc2_cld_c" hdl_path="_senstc2cldc_q" abs_hdl_path="blk_ids.Reg16_senstc2cldc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="sens_f" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e735" keypath="blk.Reg16.sens_f,Reg16.sens_f,sens_f" hdl_path="_sensf_q" abs_hdl_path="blk_ids.Reg16_sensf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="sens_diag" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e742" keypath="blk.Reg16.sens_diag,Reg16.sens_diag,sens_diag" hdl_path="_sensdiag_q" abs_hdl_path="blk_ids.Reg16_sensdiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.18" child_no="18" name="Reg17" uid="2018-07-01T16:17:24.44+05:30d14e749" keypath="blk.Reg17,Reg17" hdl_path="Reg17" abs_hdl_path="blk_ids.Reg17" hwmapaddr="19" csize="4" offset="68" caddress="68" address="0x0044" endaddress="0x47" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="68" address="0x0044" endaddress="0x47" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_cld_f" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e753" keypath="blk.Reg17.senstc2_cld_f,Reg17.senstc2_cld_f,senstc2_cld_f" hdl_path="_senstc2cldf_q" abs_hdl_path="blk_ids.Reg17_senstc2cldf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="senstc1_cld_diag" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e760" keypath="blk.Reg17.senstc1_cld_diag,Reg17.senstc1_cld_diag,senstc1_cld_diag" hdl_path="_senstc1clddiag_q" abs_hdl_path="blk_ids.Reg17_senstc1clddiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="senstc1_cld_c" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e767" keypath="blk.Reg17.senstc1_cld_c,Reg17.senstc1_cld_c,senstc1_cld_c" hdl_path="_senstc1cldc_q" abs_hdl_path="blk_ids.Reg17_senstc1cldc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.19" child_no="19" name="Reg18" uid="2018-07-01T16:17:24.44+05:30d14e774" keypath="blk.Reg18,Reg18" hdl_path="Reg18" abs_hdl_path="blk_ids.Reg18" hwmapaddr="20" csize="4" offset="72" caddress="72" address="0x0048" endaddress="0x4B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="72" address="0x0048" endaddress="0x4B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_hot_c" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e778" keypath="blk.Reg18.senstc2_hot_c,Reg18.senstc2_hot_c,senstc2_hot_c" hdl_path="_senstc2hotc_q" abs_hdl_path="blk_ids.Reg18_senstc2hotc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="senstc1_hot_c" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e785" keypath="blk.Reg18.senstc1_hot_c,Reg18.senstc1_hot_c,senstc1_hot_c" hdl_path="_senstc1hotc_q" abs_hdl_path="blk_ids.Reg18_senstc1hotc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="senstc1_cld_f" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e792" keypath="blk.Reg18.senstc1_cld_f,Reg18.senstc1_cld_f,senstc1_cld_f" hdl_path="_senstc1cldf_q" abs_hdl_path="blk_ids.Reg18_senstc1cldf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.20" child_no="20" name="Reg19" uid="2018-07-01T16:17:24.44+05:30d14e799" keypath="blk.Reg19,Reg19" hdl_path="Reg19" abs_hdl_path="blk_ids.Reg19" hwmapaddr="21" csize="4" offset="76" caddress="76" address="0x004C" endaddress="0x4F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="76" address="0x004C" endaddress="0x4F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_hot_f" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e803" keypath="blk.Reg19.senstc2_hot_f,Reg19.senstc2_hot_f,senstc2_hot_f" hdl_path="_senstc2hotf_q" abs_hdl_path="blk_ids.Reg19_senstc2hotf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="senstc1_hot_f" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e810" keypath="blk.Reg19.senstc1_hot_f,Reg19.senstc1_hot_f,senstc1_hot_f" hdl_path="_senstc1hotf_q" abs_hdl_path="blk_ids.Reg19_senstc1hotf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="senstc1_hot_diag" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e817" keypath="blk.Reg19.senstc1_hot_diag,Reg19.senstc1_hot_diag,senstc1_hot_diag" hdl_path="_senstc1hotdiag_q" abs_hdl_path="blk_ids.Reg19_senstc1hotdiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.21" child_no="21" name="Reg20" uid="2018-07-01T16:17:24.44+05:30d14e824" keypath="blk.Reg20,Reg20" hdl_path="Reg20" abs_hdl_path="blk_ids.Reg20" hwmapaddr="22" csize="4" offset="80" caddress="80" address="0x0050" endaddress="0x53" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="80" address="0x0050" endaddress="0x53" size="4"/>
+         </busdomains>
+      </config>
+      <field name="vos_f" offset="13:0" uid="2018-07-01T16:17:24.44+05:30d14e828" keypath="blk.Reg20.vos_f,Reg20.vos_f,vos_f" hdl_path="_vosf_q" abs_hdl_path="blk_ids.Reg20_vosf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="spdiag_in" offset="31:14" uid="2018-07-01T16:17:24.44+05:30d14e835" keypath="blk.Reg20.spdiag_in,Reg20.spdiag_in,spdiag_in" hdl_path="_spdiagin_q" abs_hdl_path="blk_ids.Reg20_spdiagin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.22" child_no="22" name="Reg21" uid="2018-07-01T16:17:24.44+05:30d14e843" keypath="blk.Reg21,Reg21" hdl_path="Reg21" abs_hdl_path="blk_ids.Reg21" hwmapaddr="23" csize="4" offset="84" caddress="84" address="0x0054" endaddress="0x57" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="84" address="0x0054" endaddress="0x57" size="4"/>
+         </busdomains>
+      </config>
+      <field name="vostc_hot_f" offset="11:0" uid="2018-07-01T16:17:24.44+05:30d14e847" keypath="blk.Reg21.vostc_hot_f,Reg21.vostc_hot_f,vostc_hot_f" hdl_path="_vostchotf_q" abs_hdl_path="blk_ids.Reg21_vostchotf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+      <field name="vostc_cld_f" offset="23:12" uid="2018-07-01T16:17:24.44+05:30d14e854" keypath="blk.Reg21.vostc_cld_f,Reg21.vostc_cld_f,vostc_cld_f" hdl_path="_vostccldf_q" abs_hdl_path="blk_ids.Reg21_vostccldf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>rw</hw>
+      </field>
+   </reg>
+   <reg heading="1.23" child_no="23" name="Reg22" uid="2018-07-01T16:17:24.44+05:30d14e861" keypath="blk.Reg22,Reg22" hdl_path="Reg22" abs_hdl_path="blk_ids.Reg22" hwmapaddr="24" csize="4" offset="88" caddress="88" address="0x0058" endaddress="0x5B" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="88" address="0x0058" endaddress="0x5B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint_bin_hyst" offset="10:3" uid="2018-07-01T16:17:24.44+05:30d14e886" keypath="blk.Reg22.lint_bin_hyst,Reg22.lint_bin_hyst,lint_bin_hyst" hdl_path="_lintbinhyst_q" abs_hdl_path="blk_ids.Reg22_lintbinhyst_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="hptest_lvl" offset="16:13" uid="2018-07-01T16:17:24.44+05:30d14e907" keypath="blk.Reg22.hptest_lvl,Reg22.hptest_lvl,hptest_lvl" hdl_path="_hptestlvl_q" abs_hdl_path="blk_ids.Reg22_hptestlvl_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="hall_isel" offset="21:17" uid="2018-07-01T16:17:24.44+05:30d14e914" keypath="blk.Reg22.hall_isel,Reg22.hall_isel,hall_isel" hdl_path="_hallisel_q" abs_hdl_path="blk_ids.Reg22_hallisel_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="bw_sel" offset="24:22" uid="2018-07-01T16:17:24.44+05:30d14e921" keypath="blk.Reg22.bw_sel,Reg22.bw_sel,bw_sel" hdl_path="_bwsel_q" abs_hdl_path="blk_ids.Reg22_bwsel_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_hpdrv_chop" offset="29:28" uid="2018-07-01T16:17:24.44+05:30d14e950" keypath="blk.Reg22.afe_hpdrv_chop,Reg22.afe_hpdrv_chop,afe_hpdrv_chop" hdl_path="_afehpdrvchop_q" abs_hdl_path="blk_ids.Reg22_afehpdrvchop_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_gain" offset="31:30" uid="2018-07-01T16:17:24.44+05:30d14e957" keypath="blk.Reg22.afe_gain,Reg22.afe_gain,afe_gain" hdl_path="_afegain_q" abs_hdl_path="blk_ids.Reg22_afegain_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint_out_inv" offset="0" uid="2018-07-01T16:17:24.44+05:30d14e865" keypath="blk.Reg22.lint_out_inv,Reg22.lint_out_inv,lint_out_inv" hdl_path="_lintoutinv_q" abs_hdl_path="blk_ids.Reg22_lintoutinv_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint_in_inv" offset="1" uid="2018-07-01T16:17:24.44+05:30d14e872" keypath="blk.Reg22.lint_in_inv,Reg22.lint_in_inv,lint_in_inv" hdl_path="_lintininv_q" abs_hdl_path="blk_ids.Reg22_lintininv_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint_e" offset="2" uid="2018-07-01T16:17:24.44+05:30d14e879" keypath="blk.Reg22.lint_e,Reg22.lint_e,lint_e" hdl_path="_linte_q" abs_hdl_path="blk_ids.Reg22_linte_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint_bin_e" offset="11" uid="2018-07-01T16:17:24.44+05:30d14e893" keypath="blk.Reg22.lint_bin_e,Reg22.lint_bin_e,lint_bin_e" hdl_path="_lintbine_q" abs_hdl_path="blk_ids.Reg22_lintbine_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lin_scalar" offset="12" uid="2018-07-01T16:17:24.44+05:30d14e900" keypath="blk.Reg22.lin_scalar,Reg22.lin_scalar,lin_scalar" hdl_path="_linscalar_q" abs_hdl_path="blk_ids.Reg22_linscalar_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="bg_adc_ref_err_max" offset="25" uid="2018-07-01T16:17:24.44+05:30d14e928" keypath="blk.Reg22.bg_adc_ref_err_max,Reg22.bg_adc_ref_err_max,bg_adc_ref_err_max" hdl_path="_bgadcreferrmax_q" abs_hdl_path="blk_ids.Reg22_bgadcreferrmax_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="asil_ftt" offset="26" uid="2018-07-01T16:17:24.44+05:30d14e936" keypath="blk.Reg22.asil_ftt,Reg22.asil_ftt,asil_ftt" hdl_path="_asilftt_q" abs_hdl_path="blk_ids.Reg22_asilftt_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_zero_config" offset="27" uid="2018-07-01T16:17:24.44+05:30d14e943" keypath="blk.Reg22.afe_zero_config,Reg22.afe_zero_config,afe_zero_config" hdl_path="_afezeroconfig_q" abs_hdl_path="blk_ids.Reg22_afezeroconfig_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.24" child_no="24" name="Reg23" uid="2018-07-01T16:17:24.44+05:30d14e964" keypath="blk.Reg23,Reg23" hdl_path="Reg23" abs_hdl_path="blk_ids.Reg23" hwmapaddr="25" csize="4" offset="92" caddress="92" address="0x005C" endaddress="0x5F" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="92" address="0x005C" endaddress="0x5F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="d_reg_ldo_boost" offset="1:0" uid="2018-07-01T16:17:24.44+05:30d14e968" keypath="blk.Reg23.d_reg_ldo_boost,Reg23.d_reg_ldo_boost,d_reg_ldo_boost" hdl_path="_dregldoboost_q" abs_hdl_path="blk_ids.Reg23_dregldoboost_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint01" offset="18:6" uid="2018-07-01T16:17:24.44+05:30d14e1003" keypath="blk.Reg23.lint01,Reg23.lint01,lint01" hdl_path="_lint01_q" abs_hdl_path="blk_ids.Reg23_lint01_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint00" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e1010" keypath="blk.Reg23.lint00,Reg23.lint00,lint00" hdl_path="_lint00_q" abs_hdl_path="blk_ids.Reg23_lint00_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="afe_hpsig_phase" offset="2" uid="2018-07-01T16:17:24.44+05:30d14e975" keypath="blk.Reg23.afe_hpsig_phase,Reg23.afe_hpsig_phase,afe_hpsig_phase" hdl_path="_afehpsigphase_q" abs_hdl_path="blk_ids.Reg23_afehpsigphase_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="pol_f" offset="3" uid="2018-07-01T16:17:24.44+05:30d14e982" keypath="blk.Reg23.pol_f,Reg23.pol_f,pol_f" hdl_path="_polf_q" abs_hdl_path="blk_ids.Reg23_polf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="pol_diag" offset="4" uid="2018-07-01T16:17:24.44+05:30d14e989" keypath="blk.Reg23.pol_diag,Reg23.pol_diag,pol_diag" hdl_path="_poldiag_q" abs_hdl_path="blk_ids.Reg23_poldiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="pol_c" offset="5" uid="2018-07-01T16:17:24.44+05:30d14e996" keypath="blk.Reg23.pol_c,Reg23.pol_c,pol_c" hdl_path="_polc_q" abs_hdl_path="blk_ids.Reg23_polc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.25" child_no="25" name="Reg24" uid="2018-07-01T16:17:24.44+05:30d14e1017" keypath="blk.Reg24,Reg24" hdl_path="Reg24" abs_hdl_path="blk_ids.Reg24" hwmapaddr="26" csize="4" offset="96" caddress="96" address="0x0060" endaddress="0x63" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="96" address="0x0060" endaddress="0x63" size="4"/>
+         </busdomains>
+      </config>
+      <field name="filt_ada_gain" offset="2:0" uid="2018-07-01T16:17:24.44+05:30d14e1021" keypath="blk.Reg24.filt_ada_gain,Reg24.filt_ada_gain,filt_ada_gain" hdl_path="_filtadagain_q" abs_hdl_path="blk_ids.Reg24_filtadagain_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="bw_sel_min" offset="5:3" uid="2018-07-01T16:17:24.44+05:30d14e1028" keypath="blk.Reg24.bw_sel_min,Reg24.bw_sel_min,bw_sel_min" hdl_path="_bwselmin_q" abs_hdl_path="blk_ids.Reg24_bwselmin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint03" offset="18:6" uid="2018-07-01T16:17:24.44+05:30d14e1035" keypath="blk.Reg24.lint03,Reg24.lint03,lint03" hdl_path="_lint03_q" abs_hdl_path="blk_ids.Reg24_lint03_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint02" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e1042" keypath="blk.Reg24.lint02,Reg24.lint02,lint02" hdl_path="_lint02_q" abs_hdl_path="blk_ids.Reg24_lint02_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.26" child_no="26" name="Reg25" uid="2018-07-01T16:17:24.44+05:30d14e1049" keypath="blk.Reg25,Reg25" hdl_path="Reg25" abs_hdl_path="blk_ids.Reg25" hwmapaddr="27" csize="4" offset="100" caddress="100" address="0x0064" endaddress="0x67" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="100" address="0x0064" endaddress="0x67" size="4"/>
+         </busdomains>
+      </config>
+      <field name="sensm_c" offset="2:0" uid="2018-07-01T16:17:24.44+05:30d14e1053" keypath="blk.Reg25.sensm_c,Reg25.sensm_c,sensm_c" hdl_path="_sensmc_q" abs_hdl_path="blk_ids.Reg25_sensmc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint05" offset="18:6" uid="2018-07-01T16:17:24.44+05:30d14e1081" keypath="blk.Reg25.lint05,Reg25.lint05,lint05" hdl_path="_lint05_q" abs_hdl_path="blk_ids.Reg25_lint05_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint04" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e1088" keypath="blk.Reg25.lint04,Reg25.lint04,lint04" hdl_path="_lint04_q" abs_hdl_path="blk_ids.Reg25_lint04_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="regref_err_max" offset="3" uid="2018-07-01T16:17:24.44+05:30d14e1060" keypath="blk.Reg25.regref_err_max,Reg25.regref_err_max,regref_err_max" hdl_path="_regreferrmax_q" abs_hdl_path="blk_ids.Reg25_regreferrmax_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="refsigmon_en" offset="4" uid="2018-07-01T16:17:24.44+05:30d14e1067" keypath="blk.Reg25.refsigmon_en,Reg25.refsigmon_en,refsigmon_en" hdl_path="_refsigmonen_q" abs_hdl_path="blk_ids.Reg25_refsigmonen_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="hall_ref_err_max" offset="5" uid="2018-07-01T16:17:24.44+05:30d14e1074" keypath="blk.Reg25.hall_ref_err_max,Reg25.hall_ref_err_max,hall_ref_err_max" hdl_path="_hallreferrmax_q" abs_hdl_path="blk_ids.Reg25_hallreferrmax_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.27" child_no="27" name="Reg26" uid="2018-07-01T16:17:24.44+05:30d14e1095" keypath="blk.Reg26,Reg26" hdl_path="Reg26" abs_hdl_path="blk_ids.Reg26" hwmapaddr="28" csize="4" offset="104" caddress="104" address="0x0068" endaddress="0x6B" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="104" address="0x0068" endaddress="0x6B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="tsen_chop_cfg" offset="1:0" uid="2018-07-01T16:17:24.44+05:30d14e1099" keypath="blk.Reg26.tsen_chop_cfg,Reg26.tsen_chop_cfg,tsen_chop_cfg" hdl_path="_tsenchopcfg_q" abs_hdl_path="blk_ids.Reg26_tsenchopcfg_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="spdiag_rate" offset="3:2" uid="2018-07-01T16:17:24.44+05:30d14e1106" keypath="blk.Reg26.spdiag_rate,Reg26.spdiag_rate,spdiag_rate" hdl_path="_spdiagrate_q" abs_hdl_path="blk_ids.Reg26_spdiagrate_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint07" offset="18:6" uid="2018-07-01T16:17:24.44+05:30d14e1127" keypath="blk.Reg26.lint07,Reg26.lint07,lint07" hdl_path="_lint07_q" abs_hdl_path="blk_ids.Reg26_lint07_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint06" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e1134" keypath="blk.Reg26.lint06,Reg26.lint06,lint06" hdl_path="_lint06_q" abs_hdl_path="blk_ids.Reg26_lint06_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="spdiag_in_e" offset="4" uid="2018-07-01T16:17:24.44+05:30d14e1113" keypath="blk.Reg26.spdiag_in_e,Reg26.spdiag_in_e,spdiag_in_e" hdl_path="_spdiagine_q" abs_hdl_path="blk_ids.Reg26_spdiagine_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="spdiag_en" offset="5" uid="2018-07-01T16:17:24.44+05:30d14e1120" keypath="blk.Reg26.spdiag_en,Reg26.spdiag_en,spdiag_en" hdl_path="_spdiagen_q" abs_hdl_path="blk_ids.Reg26_spdiagen_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.28" child_no="28" name="Reg27" uid="2018-07-01T16:17:24.44+05:30d14e1141" keypath="blk.Reg27,Reg27" hdl_path="Reg27" abs_hdl_path="blk_ids.Reg27" hwmapaddr="29" csize="4" offset="108" caddress="108" address="0x006C" endaddress="0x6F" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="108" address="0x006C" endaddress="0x6F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="toff" offset="4:0" uid="2018-07-01T16:17:24.44+05:30d14e1145" keypath="blk.Reg27.toff,Reg27.toff,toff" hdl_path="_toff_q" abs_hdl_path="blk_ids.Reg27_toff_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint09" offset="17:5" uid="2018-07-01T16:17:24.44+05:30d14e1152" keypath="blk.Reg27.lint09,Reg27.lint09,lint09" hdl_path="_lint09_q" abs_hdl_path="blk_ids.Reg27_lint09_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint08" offset="30:18" uid="2018-07-01T16:17:24.44+05:30d14e1159" keypath="blk.Reg27.lint08,Reg27.lint08,lint08" hdl_path="_lint08_q" abs_hdl_path="blk_ids.Reg27_lint08_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.29" child_no="29" name="Reg28" uid="2018-07-01T16:17:24.44+05:30d14e1166" keypath="blk.Reg28,Reg28" hdl_path="Reg28" abs_hdl_path="blk_ids.Reg28" hwmapaddr="30" csize="4" offset="112" caddress="112" address="0x0070" endaddress="0x73" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="112" address="0x0070" endaddress="0x73" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint11" offset="12:0" uid="2018-07-01T16:17:24.44+05:30d14e1170" keypath="blk.Reg28.lint11,Reg28.lint11,lint11" hdl_path="_lint11_q" abs_hdl_path="blk_ids.Reg28_lint11_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint10" offset="25:13" uid="2018-07-01T16:17:24.44+05:30d14e1177" keypath="blk.Reg28.lint10,Reg28.lint10,lint10" hdl_path="_lint10_q" abs_hdl_path="blk_ids.Reg28_lint10_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.30" child_no="30" name="Reg29" uid="2018-07-01T16:17:24.44+05:30d14e1184" keypath="blk.Reg29,Reg29" hdl_path="Reg29" abs_hdl_path="blk_ids.Reg29" hwmapaddr="31" csize="4" offset="116" caddress="116" address="0x0074" endaddress="0x77" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="116" address="0x0074" endaddress="0x77" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint13" offset="12:0" uid="2018-07-01T16:17:24.44+05:30d14e1188" keypath="blk.Reg29.lint13,Reg29.lint13,lint13" hdl_path="_lint13_q" abs_hdl_path="blk_ids.Reg29_lint13_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint12" offset="25:13" uid="2018-07-01T16:17:24.44+05:30d14e1195" keypath="blk.Reg29.lint12,Reg29.lint12,lint12" hdl_path="_lint12_q" abs_hdl_path="blk_ids.Reg29_lint12_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.31" child_no="31" name="Reg30" uid="2018-07-01T16:17:24.44+05:30d14e1202" keypath="blk.Reg30,Reg30" hdl_path="Reg30" abs_hdl_path="blk_ids.Reg30" hwmapaddr="32" csize="4" offset="120" caddress="120" address="0x0078" endaddress="0x7B" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="120" address="0x0078" endaddress="0x7B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="lint15" offset="12:0" uid="2018-07-01T16:17:24.44+05:30d14e1206" keypath="blk.Reg30.lint15,Reg30.lint15,lint15" hdl_path="_lint15_q" abs_hdl_path="blk_ids.Reg30_lint15_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint14" offset="25:13" uid="2018-07-01T16:17:24.44+05:30d14e1213" keypath="blk.Reg30.lint14,Reg30.lint14,lint14" hdl_path="_lint14_q" abs_hdl_path="blk_ids.Reg30_lint14_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.32" child_no="32" name="Reg31" uid="2018-07-01T16:17:24.44+05:30d14e1220" keypath="blk.Reg31,Reg31" hdl_path="Reg31" abs_hdl_path="blk_ids.Reg31" hwmapaddr="33" csize="4" offset="124" caddress="124" address="0x007C" endaddress="0x7F" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="124" address="0x007C" endaddress="0x7F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="tslp" offset="6:0" uid="2018-07-01T16:17:24.44+05:30d14e1224" keypath="blk.Reg31.tslp,Reg31.tslp,tslp" hdl_path="_tslp_q" abs_hdl_path="blk_ids.Reg31_tslp_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="plin_qvo" offset="18:7" uid="2018-07-01T16:17:24.44+05:30d14e1231" keypath="blk.Reg31.plin_qvo,Reg31.plin_qvo,plin_qvo" hdl_path="_plinqvo_q" abs_hdl_path="blk_ids.Reg31_plinqvo_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="lint16" offset="31:19" uid="2018-07-01T16:17:24.44+05:30d14e1238" keypath="blk.Reg31.lint16,Reg31.lint16,lint16" hdl_path="_lint16_q" abs_hdl_path="blk_ids.Reg31_lint16_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.33" child_no="33" name="Reg32" uid="2018-07-01T16:17:24.44+05:30d14e1246" keypath="blk.Reg32,Reg32" hdl_path="Reg32" abs_hdl_path="blk_ids.Reg32" hwmapaddr="34" csize="4" offset="128" caddress="128" address="0x0080" endaddress="0x83" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="128" address="0x0080" endaddress="0x83" size="4"/>
+         </busdomains>
+      </config>
+      <field name="qo_c" offset="17:0" uid="2018-07-01T16:17:24.44+05:30d14e1250" keypath="blk.Reg32.qo_c,Reg32.qo_c,qo_c" hdl_path="_qoc_q" abs_hdl_path="blk_ids.Reg32_qoc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="plin_sens" offset="29:18" uid="2018-07-01T16:17:24.44+05:30d14e1257" keypath="blk.Reg32.plin_sens,Reg32.plin_sens,plin_sens" hdl_path="_plinsens_q" abs_hdl_path="blk_ids.Reg32_plinsens_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.34" child_no="34" name="Reg33" uid="2018-07-01T16:17:24.44+05:30d14e1264" keypath="blk.Reg33,Reg33" hdl_path="Reg33" abs_hdl_path="blk_ids.Reg33" hwmapaddr="35" csize="4" offset="132" caddress="132" address="0x0084" endaddress="0x87" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="132" address="0x0084" endaddress="0x87" size="4"/>
+         </busdomains>
+      </config>
+      <field name="tzero" offset="6:0" uid="2018-07-01T16:17:24.44+05:30d14e1268" keypath="blk.Reg33.tzero,Reg33.tzero,tzero" hdl_path="_tzero_q" abs_hdl_path="blk_ids.Reg33_tzero_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="qotc_hot_c" offset="18:7" uid="2018-07-01T16:17:24.44+05:30d14e1275" keypath="blk.Reg33.qotc_hot_c,Reg33.qotc_hot_c,qotc_hot_c" hdl_path="_qotchotc_q" abs_hdl_path="blk_ids.Reg33_qotchotc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="qotc_cld_c" offset="30:19" uid="2018-07-01T16:17:24.44+05:30d14e1282" keypath="blk.Reg33.qotc_cld_c,Reg33.qotc_cld_c,qotc_cld_c" hdl_path="_qotccldc_q" abs_hdl_path="blk_ids.Reg33_qotccldc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.35" child_no="35" name="Reg34" uid="2018-07-01T16:17:24.44+05:30d14e1289" keypath="blk.Reg34,Reg34" hdl_path="Reg34" abs_hdl_path="blk_ids.Reg34" hwmapaddr="36" csize="4" offset="136" caddress="136" address="0x0088" endaddress="0x8B" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="136" address="0x0088" endaddress="0x8B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="refsigmon_hall" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e1293" keypath="blk.Reg34.refsigmon_hall,Reg34.refsigmon_hall,refsigmon_hall" hdl_path="_refsigmonhall_q" abs_hdl_path="blk_ids.Reg34_refsigmonhall_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="clamp_h" offset="21:10" uid="2018-07-01T16:17:24.44+05:30d14e1300" keypath="blk.Reg34.clamp_h,Reg34.clamp_h,clamp_h" hdl_path="_clamph_q" abs_hdl_path="blk_ids.Reg34_clamph_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="refsigmon_bg" offset="31:22" uid="2018-07-01T16:17:24.44+05:30d14e1307" keypath="blk.Reg34.refsigmon_bg,Reg34.refsigmon_bg,refsigmon_bg" hdl_path="_refsigmonbg_q" abs_hdl_path="blk_ids.Reg34_refsigmonbg_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.36" child_no="36" name="Reg35" uid="2018-07-01T16:17:24.44+05:30d14e1314" keypath="blk.Reg35,Reg35" hdl_path="Reg35" abs_hdl_path="blk_ids.Reg35" hwmapaddr="37" csize="4" offset="140" caddress="140" address="0x008C" endaddress="0x8F" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="140" address="0x008C" endaddress="0x8F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="sens_c" offset="10:0" uid="2018-07-01T16:17:24.44+05:30d14e1318" keypath="blk.Reg35.sens_c,Reg35.sens_c,sens_c" hdl_path="_sensc_q" abs_hdl_path="blk_ids.Reg35_sensc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="clamp_l" offset="22:11" uid="2018-07-01T16:17:24.44+05:30d14e1325" keypath="blk.Reg35.clamp_l,Reg35.clamp_l,clamp_l" hdl_path="_clampl_q" abs_hdl_path="blk_ids.Reg35_clampl_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.37" child_no="37" name="Reg36" uid="2018-07-01T16:17:24.44+05:30d14e1332" keypath="blk.Reg36,Reg36" hdl_path="Reg36" abs_hdl_path="blk_ids.Reg36" hwmapaddr="38" csize="4" offset="144" caddress="144" address="0x0090" endaddress="0x93" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="144" address="0x0090" endaddress="0x93" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_cld_c" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e1336" keypath="blk.Reg36.senstc2_cld_c,Reg36.senstc2_cld_c,senstc2_cld_c" hdl_path="_senstc2cldc_q" abs_hdl_path="blk_ids.Reg36_senstc2cldc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="sens_f" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e1343" keypath="blk.Reg36.sens_f,Reg36.sens_f,sens_f" hdl_path="_sensf_q" abs_hdl_path="blk_ids.Reg36_sensf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="sens_diag" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e1350" keypath="blk.Reg36.sens_diag,Reg36.sens_diag,sens_diag" hdl_path="_sensdiag_q" abs_hdl_path="blk_ids.Reg36_sensdiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.38" child_no="38" name="Reg37" uid="2018-07-01T16:17:24.44+05:30d14e1357" keypath="blk.Reg37,Reg37" hdl_path="Reg37" abs_hdl_path="blk_ids.Reg37" hwmapaddr="39" csize="4" offset="148" caddress="148" address="0x0094" endaddress="0x97" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="148" address="0x0094" endaddress="0x97" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_cld_f" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e1361" keypath="blk.Reg37.senstc2_cld_f,Reg37.senstc2_cld_f,senstc2_cld_f" hdl_path="_senstc2cldf_q" abs_hdl_path="blk_ids.Reg37_senstc2cldf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="senstc1_cld_diag" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e1368" keypath="blk.Reg37.senstc1_cld_diag,Reg37.senstc1_cld_diag,senstc1_cld_diag" hdl_path="_senstc1clddiag_q" abs_hdl_path="blk_ids.Reg37_senstc1clddiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="senstc1_cld_c" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e1375" keypath="blk.Reg37.senstc1_cld_c,Reg37.senstc1_cld_c,senstc1_cld_c" hdl_path="_senstc1cldc_q" abs_hdl_path="blk_ids.Reg37_senstc1cldc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.39" child_no="39" name="Reg38" uid="2018-07-01T16:17:24.44+05:30d14e1382" keypath="blk.Reg38,Reg38" hdl_path="Reg38" abs_hdl_path="blk_ids.Reg38" hwmapaddr="40" csize="4" offset="152" caddress="152" address="0x0098" endaddress="0x9B" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="152" address="0x0098" endaddress="0x9B" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_hot_c" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e1386" keypath="blk.Reg38.senstc2_hot_c,Reg38.senstc2_hot_c,senstc2_hot_c" hdl_path="_senstc2hotc_q" abs_hdl_path="blk_ids.Reg38_senstc2hotc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="senstc1_hot_c" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e1393" keypath="blk.Reg38.senstc1_hot_c,Reg38.senstc1_hot_c,senstc1_hot_c" hdl_path="_senstc1hotc_q" abs_hdl_path="blk_ids.Reg38_senstc1hotc_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="senstc1_cld_f" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e1400" keypath="blk.Reg38.senstc1_cld_f,Reg38.senstc1_cld_f,senstc1_cld_f" hdl_path="_senstc1cldf_q" abs_hdl_path="blk_ids.Reg38_senstc1cldf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.40" child_no="40" name="Reg39" uid="2018-07-01T16:17:24.44+05:30d14e1407" keypath="blk.Reg39,Reg39" hdl_path="Reg39" abs_hdl_path="blk_ids.Reg39" hwmapaddr="41" csize="4" offset="156" caddress="156" address="0x009C" endaddress="0x9F" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="156" address="0x009C" endaddress="0x9F" size="4"/>
+         </busdomains>
+      </config>
+      <field name="senstc2_hot_f" offset="9:0" uid="2018-07-01T16:17:24.44+05:30d14e1411" keypath="blk.Reg39.senstc2_hot_f,Reg39.senstc2_hot_f,senstc2_hot_f" hdl_path="_senstc2hotf_q" abs_hdl_path="blk_ids.Reg39_senstc2hotf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">0000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="senstc1_hot_f" offset="20:10" uid="2018-07-01T16:17:24.44+05:30d14e1418" keypath="blk.Reg39.senstc1_hot_f,Reg39.senstc1_hot_f,senstc1_hot_f" hdl_path="_senstc1hotf_q" abs_hdl_path="blk_ids.Reg39_senstc1hotf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="senstc1_hot_diag" offset="31:21" uid="2018-07-01T16:17:24.44+05:30d14e1425" keypath="blk.Reg39.senstc1_hot_diag,Reg39.senstc1_hot_diag,senstc1_hot_diag" hdl_path="_senstc1hotdiag_q" abs_hdl_path="blk_ids.Reg39_senstc1hotdiag_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.41" child_no="41" name="Reg40" uid="2018-07-01T16:17:24.44+05:30d14e1432" keypath="blk.Reg40,Reg40" hdl_path="Reg40" abs_hdl_path="blk_ids.Reg40" hwmapaddr="42" csize="4" offset="160" caddress="160" address="0x00A0" endaddress="0xA3" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="160" address="0x00A0" endaddress="0xA3" size="4"/>
+         </busdomains>
+      </config>
+      <field name="vos_f" offset="13:0" uid="2018-07-01T16:17:24.44+05:30d14e1436" keypath="blk.Reg40.vos_f,Reg40.vos_f,vos_f" hdl_path="_vosf_q" abs_hdl_path="blk_ids.Reg40_vosf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">00000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="spdiag_in" offset="31:14" uid="2018-07-01T16:17:24.44+05:30d14e1443" keypath="blk.Reg40.spdiag_in,Reg40.spdiag_in,spdiag_in" hdl_path="_spdiagin_q" abs_hdl_path="blk_ids.Reg40_spdiagin_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+   <reg heading="1.42" child_no="42" name="Reg41" uid="2018-07-01T16:17:24.44+05:30d14e1450" keypath="blk.Reg41,Reg41" hdl_path="Reg41" abs_hdl_path="blk_ids.Reg41" hwmapaddr="43" csize="4" offset="164" caddress="164" address="0x00A4" endaddress="0xA7" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="164" address="0x00A4" endaddress="0xA7" size="4"/>
+         </busdomains>
+      </config>
+      <field name="vostc_hot_f" offset="11:0" uid="2018-07-01T16:17:24.44+05:30d14e1454" keypath="blk.Reg41.vostc_hot_f,Reg41.vostc_hot_f,vostc_hot_f" hdl_path="_vostchotf_q" abs_hdl_path="blk_ids.Reg41_vostchotf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+      <field name="vostc_cld_f" offset="23:12" uid="2018-07-01T16:17:24.44+05:30d14e1461" keypath="blk.Reg41.vostc_cld_f,Reg41.vostc_cld_f,vostc_cld_f" hdl_path="_vostccldf_q" abs_hdl_path="blk_ids.Reg41_vostccldf_q">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <default unresolvedDef="0">000000000000</default>
+         <sw>rw</sw>
+         <hw>ro</hw>
+      </field>
+   </reg>
+</block>

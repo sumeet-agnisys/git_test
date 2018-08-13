@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block id="tab0.03214767627241211" name="block_name"><reg id="tab0.6521513490074854" name="reg_name"><config><regwidth>8</regwidth></config><field id="field_0" offset="7:0" name="F"><sw>rw</sw><hw>ro</hw><default>1</default><doc> Hello</doc></field></reg><config><variants><variant name="none" isselected="true"><doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc></variant></variants><regwidth>32</regwidth><buswidth>32</buswidth><addressunit>8</addressunit></config></block>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" name="chip1" uid="2018-06-20T11:49:08.709+05:30d14e1" keypath="chip1" coverage="on" offset="0" caddress="0" hwmapaddr="17" csize="4096" diff_regwidth="true" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <chipsize>4096</chipsize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed90.7605499103447808" orig_path="aaaa2.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Excel_Test3\aaaa2.idsng" level="1" uid="2018-06-20T11:49:09.646+05:30d21e18">
+         <doc/>
+         <arguments>
+            <value doc="" sid="4:0" eid="tabed100.2830185886958285" uid="2018-06-20T11:49:08.709+05:30d14e101" svDataType="integer" cDataType="int" UvmDataType="int" name="argument">1</value>
+         </arguments>
+         <constants>
+            <value doc="" sid="7:0" eid="tabed110.9624856088515342" uid="2018-06-20T11:49:08.709+05:30d14e104" svDataType="integer" cDataType="int" UvmDataType="int" name="const">10</value>
+         </constants>
+         <variables>
+            <value doc="" sid="10:0" eid="tabed120.6806071842451199" uid="2018-06-20T11:49:08.709+05:30d14e107" svDataType="integer" cDataType="int" UvmDataType="int" name="var1">
+               <EXPRESSION>
+                  <EXPRESSION type="number">5</EXPRESSION>
+               </EXPRESSION>
+               <oldValue>5</oldValue>
+            </value>
+         </variables>
+         <seqsteps>
+            <row busName="default" uid="2018-06-20T11:49:09.646+05:30d21e34" sid="15:0">
+               <ASSIGNMENT command="write" eid="tabed130.20537740450886455">
+                  <LHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2018-06-20T11:49:08.709+05:30d14e24" fieldDefault="0000000000000000" regSize="64" regDefault="0x0000000000000000" fieldSize="16" field_offset="25:10" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x0000">block1.reg1.f1</EXPRESSION>
+                     </EXPRESSION>
+                  </LHS>
+                  <doc/>
+                  <RHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="number" writeValue="2">0x0000000000000800</EXPRESSION>
+                     </EXPRESSION>
+                  </RHS>
+               </ASSIGNMENT>
+            </row>
+         </seqsteps>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <csv>true <multioutput>false</multioutput>
+               </csv>
+               <html>true <multioutput>false</multioutput>
+               </html>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>uvm_%s_seq</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a,%d,0,0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>s</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">sss</templatename>
+               <write oid="0">aaxx</write>
+               <read oid="0">ddd</read>
+               <templatename oid="1">swww</templatename>
+               <write oid="1">aa</write>
+               <read oid="1">ddd</read>
+               <fieldtemplatename oid="0">aaaaa</fieldtemplatename>
+               <fieldwrite oid="0">cccc</fieldwrite>
+               <fieldread oid="0">cccc</fieldread>
+               <fieldtemplatename oid="1">dddd</fieldtemplatename>
+               <fieldwrite oid="1">cccc</fieldwrite>
+               <fieldread oid="1">cccc</fieldread>
+               <fieldtemplatename oid="2">ff</fieldtemplatename>
+               <fieldwrite oid="2">ccccw</fieldwrite>
+               <fieldread oid="2">cccc</fieldread>
+               <timeunit1/>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">write</isscmd>
+                  <cmd oid="0">WRITE</cmd>
+                  <isscmd oid="1">write_1_set</isscmd>
+                  <cmd oid="1">WRITE_SET</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">call</isscmd>
+                  <cmd oid="3">CALL</cmd>
+                  <isscmd oid="4">switch</isscmd>
+                  <cmd oid="4">SWITCH</cmd>
+                  <isscmd oid="5">wait</isscmd>
+                  <cmd oid="5">WAIT</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">command</issheader>
+                  <header oid="0">command</header>
+                  <issheader oid="1">step</issheader>
+                  <header oid="1">step</header>
+                  <issheader oid="2">value</issheader>
+                  <header oid="2">value</header>
+                  <issheader oid="3">address</issheader>
+                  <header oid="3">address</header>
+                  <issheader oid="4">description</issheader>
+                  <header oid="4">description</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>11</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <block heading="1.1" child_no="1" name="block1" uid="2018-06-20T11:49:08.709+05:30d14e15" keypath="chip1.block1,block1" coverage="on" hwmapaddr="18" max_reg_size="64" csize="20" offset="0" caddress="0" address="0x0000" endaddress="0x13" size="20">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x13" size="20"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" name="reg1" external="true" size="8" uid="2018-06-20T11:49:08.709+05:30d14e17" keypath="chip1.block1.reg1,block1.reg1,reg1" coverage="on" count="2" hwmapaddr="19" csize="16" offset="0" caddress="0" address="0x0000" endaddress="0xF" address2="0x0008" default="0x0000000000000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>64</regwidth>
+            <repeats>
+               <repeat count="2" name="reg1"/>
+            </repeats>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xF" size="8" address2="0x0008"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field name="f1" offset="25:10" uid="2018-06-20T11:49:08.709+05:30d14e24" keypath="chip1.block1.reg1.f1,block1.reg1.f1,reg1.f1,f1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">0000000000000000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+         <field name="f2" offset="31:26" uid="2018-06-20T11:49:08.709+05:30d14e31" keypath="chip1.block1.reg1.f2,block1.reg1.f2,reg1.f2,f2">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">000000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" name="reg2" uid="2018-06-20T11:49:08.709+05:30d14e38" keypath="chip1.block1.reg2,block1.reg2,reg2" coverage="on" hwmapaddr="20" csize="4" offset="16" caddress="16" address="0x0010" endaddress="0x13" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x0010" endaddress="0x13" size="4"/>
+            </busdomains>
+         </config>
+         <field name="f1" offset="15:0" uid="2018-06-20T11:49:08.709+05:30d14e40" keypath="chip1.block1.reg2.f1,block1.reg2.f1,reg2.f1,f1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">0000000000000000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+      </reg>
+   </block>
+   <block heading="1.2" child_no="2" name="block2" uid="2018-06-20T11:49:08.709+05:30d14e47" keypath="chip1.block2,block2" coverage="on" hwmapaddr="21" max_reg_size="32" csize="12" offset="20" caddress="20" address="0x0014" endaddress="0x1F" size="12">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x0014" endaddress="0x1F" size="12"/>
+         </busdomains>
+      </config>
+      <reg heading="1.2.1" child_no="1" name="reg1" uid="2018-06-20T11:49:08.709+05:30d14e49" keypath="chip1.block2.reg1,block2.reg1,reg1" coverage="on" hwmapaddr="22" csize="4" offset="0" caddress="0" address="0x0014" endaddress="0x17" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0014" endaddress="0x17" size="4"/>
+            </busdomains>
+         </config>
+         <field name="f1" offset="29:25" uid="2018-06-20T11:49:08.709+05:30d14e51" keypath="chip1.block2.reg1.f1,block2.reg1.f1,reg1.f1,f1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">00000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+      </reg>
+      <reg heading="1.2.2" child_no="2" name="reg2" uid="2018-06-20T11:49:08.709+05:30d14e58" keypath="chip1.block2.reg2,block2.reg2,reg2" coverage="on" hwmapaddr="23" csize="4" offset="4" caddress="4" address="0x0018" endaddress="0x1B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x0018" endaddress="0x1B" size="4"/>
+            </busdomains>
+         </config>
+         <field name="f1" offset="16:5" uid="2018-06-20T11:49:08.709+05:30d14e60" keypath="chip1.block2.reg2.f1,block2.reg2.f1,reg2.f1,f1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">000000000000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+         <field name="f2" offset="25:17" uid="2018-06-20T11:49:08.709+05:30d14e67" keypath="chip1.block2.reg2.f2,block2.reg2.f2,reg2.f2,f2">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">000000000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+         <field name="f3" offset="31:26" uid="2018-06-20T11:49:08.709+05:30d14e74" keypath="chip1.block2.reg2.f3,block2.reg2.f3,reg2.f3,f3">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">000000</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+      </reg>
+      <reg heading="1.2.3" child_no="3" name="reg3" uid="2018-06-20T11:49:08.709+05:30d14e81" keypath="chip1.block2.reg3,block2.reg3,reg3" coverage="on" hwmapaddr="24" csize="4" offset="8" caddress="8" address="0x001C" endaddress="0x1F" size="4" default="0x00000000" sw="ro" hw="ro wo">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x001C" endaddress="0x1F" size="4"/>
+            </busdomains>
+         </config>
+         <field name="t1" offset="23:4" uid="2018-06-20T11:49:08.709+05:30d14e83" keypath="chip1.block2.reg3.t1,block2.reg3.t1,reg3.t1,t1">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.f.rd">bins vals[] = {'h0}; illegal_bins err = default;</uvm>
+            </doc>
+            <default unresolvedDef="0">00000000000000000000</default>
+            <sw>ro</sw>
+            <hw>ro</hw>
+         </field>
+         <field name="t2" offset="31:26" uid="2018-06-20T11:49:08.709+05:30d14e90" keypath="chip1.block2.reg3.t2,block2.reg3.t2,reg3.t2,t2">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <default unresolvedDef="0">000000</default>
+            <sw>ro</sw>
+            <hw>wo</hw>
+         </field>
+      </reg>
+   </block>
+</chip>

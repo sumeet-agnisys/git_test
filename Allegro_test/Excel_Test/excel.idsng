@@ -12,6 +12,8 @@
   <script id="ids_prop" src="..\.idsng\prop.js"></script>
   <script id="ids_js" src="..\.idsng\ids_template.js"></script>
   <script id="ids_js" src="..\.idsng\ids_template.json"></script>
+  <script id="jquery12" src="..\.idsng\jquery-1.12.4.js"></script>
+  <script id="jqueryui" src="..\.idsng\jquery-ui.js"></script>
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv"> 

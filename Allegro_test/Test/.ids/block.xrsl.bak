@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="block_name" id="2:2"><config><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants><regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config><reg name="reg_name" id="3:2">
+   <config>
+      <regwidth>8</regwidth>
+   </config>
+   <field offset="7:0" name="F" id="3:9" field_temp_hw="">
+      <doc>
+         <HDIV>
+            <SPAN STYLE="font-size: 9; font-family: Calibri; ">Hello</SPAN>
+            <SPAN>\n</SPAN>
+            <SPAN STYLE="font-size: 9; font-family: Calibri; ">New line</SPAN>
+         </HDIV>
+      </doc>
+      <sw>rw</sw>
+      <hw/>
+      <default>1</default>
+   </field>
+</reg></block>

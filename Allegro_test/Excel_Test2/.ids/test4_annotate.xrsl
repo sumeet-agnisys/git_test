@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" name="dummychip" msg="Register IP does not exist in sequenceseq_name, Please specify the register IP;" uid="2018-06-15T11:30:38.755+05:30d14e1" keypath="dummychip" coverage="on" offset="0" caddress="0" hwmapaddr="1" csize="4096" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <chipsize>4096</chipsize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed00.8848829561569437" orig_path="test4.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Excel_Test2\test4.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+   </sequences>
+</chip>

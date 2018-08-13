@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="sep_row2" name="blk" uid="2018-08-13T15:39:41.576+05:30d14e1" keypath="blk" offset="0" caddress="0" hwmapaddr="37" max_reg_size="16" csize="5" diff_regwidth="true" address="0x0" endaddress="0x4" size="5">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x4" size="5"/>
+      </busdomains>
+   </config>
+   <reg heading="1.1" child_no="1" id="sep_row3" name="rg1" uid="2018-08-13T15:39:41.576+05:30d14e13" keypath="blk.rg1,rg1" hwmapaddr="38" csize="2" offset="0" caddress="0" address="0x0" endaddress="0x1" size="2" default="0x0000" sw="rw" hw="rw">
+      <config>
+         <regwidth>16</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x1" size="2"/>
+         </busdomains>
+      </config>
+      <field id="sep_row4" offset="0:7" name="f1" uid="2018-08-13T15:39:41.576+05:30d14e17" keypath="blk.rg1.f1,rg1.f1,f1">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+   </reg>
+   <section heading="1.2" child_no="2" id="sep_row5" name="reg_grp1" uid="2018-08-13T15:39:41.576+05:30d14e24" keypath="blk.reg_grp1,reg_grp1" keypathdown="reg_grp1.rg11,rg11" hwmapaddr="39" max_reg_size="8" csize="1" offset="2" caddress="2" address="0x2" endaddress="0x2" size="1">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0x2" endaddress="0x2" size="1"/>
+         </busdomains>
+      </config>
+      <reg heading="1.2.1" child_no="1" id="sep_row6" name="rg11" uid="2018-08-13T15:39:41.576+05:30d14e26" keypath="blk.reg_grp1.rg11,reg_grp1.rg11,rg11" hwmapaddr="40" csize="1" offset="0" caddress="0" address="0x2" endaddress="0x2" size="1" default="0x" sw="rw" hw="rw">
+         <config>
+            <regwidth>8</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x2" endaddress="0x2" size="1"/>
+            </busdomains>
+         </config>
+         <field id="sep_row7" offset="0:5" name="f11" uid="2018-08-13T15:39:41.576+05:30d14e30" keypath="blk.reg_grp1.rg11.f11,reg_grp1.rg11.f11,rg11.f11,f11">
+            <sw>rw</sw>
+            <hw>rw</hw>
+         </field>
+      </reg>
+   </section>
+   <reg heading="1.3" child_no="3" id="field0.16471819005915955" name="ref_name" link="rg1" uid="2018-08-13T15:39:41.576+05:30d14e35" keypath="blk.ref_name,ref_name" hwmapaddr="41" csize="2" offset="3" caddress="3" address="0x3" endaddress="0x4" size="2" default="0x0000" sw="rw" hw="rw">
+      <config>
+         <regwidth>16</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="3" address="0x3" endaddress="0x4" size="2"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <field id="sep_row4" offset="0:7" name="f1" uid="2018-08-13T15:39:41.576+05:30d14e40" keypath="blk.ref_name.f1,ref_name.f1,f1">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+   </reg>
+   <signals name="signals">
+      <signal direction="in" uid="2018-08-13T15:39:41.576+05:30d14e48" export="true" width="1" oldSignalName="s1" name="s1" msg="Name s1 already used ; "/>
+      <signal direction="out" uid="2018-08-13T15:39:41.576+05:30d14e49" export="true" width="1" oldSignalName="s2" name="s2" msg="Name s2 already used ; "/>
+      <signal direction="in" uid="2018-08-13T15:39:41.576+05:30d14e50" export="true" width="1" oldSignalName="s1" name="s1"/>
+      <signal direction="out" uid="2018-08-13T15:39:41.576+05:30d14e51" export="true" width="1" oldSignalName="s2" name="s2"/>
+   </signals>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.5728524792799272" orig_path="test38.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Test\test38.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs/>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</block>

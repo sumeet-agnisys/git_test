@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab10.1855156446779297" name="Excel_Test3" uid="2018-06-19T13:43:18.708+05:30d14e1" keypath="Excel_Test3" coverage="on" offset="0" caddress="0" hwmapaddr="38" csize="4096" diff_regwidth="true" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>16</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <blocksize>4096</blocksize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed50.15652590067742433" orig_path="Excel_Test3.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Excel_Test3\Excel_Test3.idsng" level="1" uid="2018-06-19T13:43:19.572+05:30d21e18">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>uvm_%s_seq</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a,%d,0,0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>s</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">sss</templatename>
+               <write oid="0">aaxx</write>
+               <read oid="0">ddd</read>
+               <templatename oid="1">swww</templatename>
+               <write oid="1">aa</write>
+               <read oid="1">ddd</read>
+               <fieldtemplatename oid="0">aaaaa</fieldtemplatename>
+               <fieldwrite oid="0">cccc</fieldwrite>
+               <fieldread oid="0">cccc</fieldread>
+               <fieldtemplatename oid="1">dddd</fieldtemplatename>
+               <fieldwrite oid="1">cccc</fieldwrite>
+               <fieldread oid="1">cccc</fieldread>
+               <fieldtemplatename oid="2">ff</fieldtemplatename>
+               <fieldwrite oid="2">ccccw</fieldwrite>
+               <fieldread oid="2">cccc</fieldread>
+               <timeunit1/>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">write</isscmd>
+                  <cmd oid="0">WRITE</cmd>
+                  <isscmd oid="1">write_1_set</isscmd>
+                  <cmd oid="1">WRITE_SET</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">call</isscmd>
+                  <cmd oid="3">CALL</cmd>
+                  <isscmd oid="4">switch</isscmd>
+                  <cmd oid="4">SWITCH</cmd>
+                  <isscmd oid="5">wait</isscmd>
+                  <cmd oid="5">WAIT</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">command</issheader>
+                  <header oid="0">command</header>
+                  <issheader oid="1">step</issheader>
+                  <header oid="1">step</header>
+                  <issheader oid="2">value</issheader>
+                  <header oid="2">value</header>
+                  <issheader oid="3">address</issheader>
+                  <header oid="3">address</header>
+                  <issheader oid="4">description</issheader>
+                  <header oid="4">description</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>11</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <reg heading="1.1" child_no="1" id="tab20.715544697865078" name="reg_name" uid="2018-06-19T13:43:18.708+05:30d14e15" keypath="Excel_Test3.reg_name,reg_name" coverage="on" hwmapaddr="39" csize="2" offset="0" caddress="0" address="0x0000" endaddress="0x1" size="2" default="0x0000" sw="rw ro" hw="ro">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x1" size="2"/>
+         </busdomains>
+      </config>
+      <field id="tabed20.06800684365447629" offset="6:4" name="f4" uid="2018-06-19T13:43:18.708+05:30d14e31" keypath="Excel_Test3.reg_name.f4,reg_name.f4,f4">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tabed00.5820138026784479" offset="0" name="f1" uid="2018-06-19T13:43:18.708+05:30d14e17" keypath="Excel_Test3.reg_name.f1,reg_name.f1,f1">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tabed10.03899411905160466" offset="3" name="f3" uid="2018-06-19T13:43:18.708+05:30d14e24" keypath="Excel_Test3.reg_name.f3,reg_name.f3,f3">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.f.rd">bins vals[] = {'h0}; illegal_bins err = default;</uvm>
+         </doc>
+         <sw>ro</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+   </reg>
+   <reg heading="1.2" child_no="2" id="tab40.10547837711923391" name="reg_name1" uid="2018-06-19T13:43:18.708+05:30d14e38" keypath="Excel_Test3.reg_name1,reg_name1" coverage="on" hwmapaddr="40" csize="1" offset="2" caddress="2" address="0x0002" endaddress="0x2" size="1" default="0x00" sw="rw" hw="ro">
+      <config>
+         <regwidth>8</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0x0002" endaddress="0x2" size="1"/>
+         </busdomains>
+      </config>
+      <field id="tabed30.9088627662301625" offset="2:0" name="f2" uid="2018-06-19T13:43:18.708+05:30d14e42" keypath="Excel_Test3.reg_name1.f2,reg_name1.f2,f2">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tabed40.5906660904489699" offset="3" name="f3" uid="2018-06-19T13:43:18.708+05:30d14e49" keypath="Excel_Test3.reg_name1.f3,reg_name1.f3,f3">
+         <doc>
+            <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+            <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+         </doc>
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+   </reg>
+</block>

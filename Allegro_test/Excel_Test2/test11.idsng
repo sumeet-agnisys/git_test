@@ -1,0 +1,467 @@
+<html><head> 
+  <title>
+		Agnisys Register Spec
+	</title>        
+  <link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng\ids_template.css">
+  <script id="jqueryLib" src="..\.idsng\jquery-3.2.1.min.js"></script>
+  <script id="ids_prop" src="..\.idsng\prop.js"></script>
+  <script id="ids_js" src="..\.idsng\ids_template.js"></script>
+  <script id="ids_js" src="..\.idsng\ids_template.json"></script>
+  <script id="jquery12" src="..\.idsng\jquery-1.12.4.js"></script>
+  <script id="jqueryui" src="..\.idsng\jquery-ui.js"></script>
+ </head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+  <div class="maindiv" style="background-color: white;"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:none" class="disable"> 
+    <table contenteditable="false" id="toc" class="tocTable idsTemp" border="2"> 
+     <tbody> 
+      <tr> 
+       <th colspan="4" title="add toc" class="tocheader" contenteditable="true" align="center" id="busname">Table of Content</th> 
+      </tr> 
+      <tr id="headings"> 
+       <th>heading </th> 
+       <th>component </th> 
+       <th>default </th> 
+       <th> address </th> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1</td> 
+       <td id="component"><a href="#1chip1">chip1</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x0 - 0xfff</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1</td> 
+       <td id="component">&nbsp;&nbsp;<a href="#1.1block1">block1</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x0 - 0x1</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1.1reg1">reg1</a></td> 
+       <td id="default">0x0000</td> 
+       <td id="address"> 0x0</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" class="chip idsTemp" onclick="tabClick(this)" id="tab00.23357844866748245"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="chip name" class="name">chip1</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Chip" alt="Chip" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIySURBVHjazFM7axVBFP7OPHZ2b26Uq43RFPbiE8Ei6B+wsVCLFL4Qo1UKQSsRjBBNpXY2goWgKZSQKlUqsdBGwTRqE4IxCrnG+9zHzPHs3mgvaRx29uw8zvd9881ZMDP+9LFTN/hfYtkVttioRLl0+wkvLi3DgxECYAoPFdfhiz6UtgieYeMauu0NKGIYG+HwyDBePZokKuWomsOVqxdRUEDiIqhASLtNUJKA8hR9sjAIcHEioBkMBzx+No8fn5YHCiZmnvPeIycAFkZZDDnBOIYPKTRppFwgiix6nR5qAmK0wZuF15idPkdm7PR17sQNDO0axTYXkKUZiByUNYAcAaVNxqOdB8TWYWO9CaU0Vr6v4ujJSa4UnL/3ksPO3bDoVgo4WOSZh7WxpBMKlcscy5eMxKNyvvnlI2bvXyA6Nn6L13wD+w8dFKL+wFlh6DOEkcRYA5W1EEii1ihhSAA+v3sPvbHpweWZef7aFudDLstiBRGsS9DttgTNIFK+As2LMiqIGDjZN3f3DNGBs9PcCgZ7RhrCYGCMgveiM3hoGf8tNO8rBWJQ+eDbShtZK9usg6kX/GH1lzBbSRYWls2FqDEORu6dtUTxslwrikJugeS6PRYfTBAdH5/itb6CGa4jFWFemOuxhVMGWZaJeQGSgiLIW6id1QJUgH6uw6duoODanae88HYJqO0Q0+QInSbc0HbovAcvSYGial5zXhWU1Cv2jSaYe3iT8H/8TFtpvwUYANw+W2VPE6rlAAAAAElFTkSuQmCC"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab10.8553641161667146"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="block name" class="name">block1</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab20.8604360075755407" data-width="16"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg1</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab30.7470361821807721"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tabed00.6083979353078016" class="field edited"> 
+           <td title="bits" class="bits">0:7</td> 
+           <td title="field name" class="fieldname">f1</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tabed10.8237000555030618" class="field edited"> 
+           <td title="bits" class="bits">8:12</td> 
+           <td title="field name" class="fieldname">f2</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+   </div> 
+   <div id="param_main" style="display:none"> 
+    <div id="divyml"> 
+     <label></label> 
+     <label id="lblyml"></label> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false"></div> 
+   </div> 
+   <div id="seqdivcontainer" style="display:none"> 
+    <h2>Sequences</h2> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+   </div> 
+   <div id="idsexcelcontainer" style="display:block"> 
+    <div id="divtoolbar"> 
+     <button onclick="showTemplate()">Open IDS Template</button> 
+    </div> 
+    <br> 
+    <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);"> 
+     <table class="exeltable ui-selectable" contenteditable="false" id="selectable"> 
+      <tbody class="ui-selectee ui-selected" style=""> 
+       <tr class="rowheader ui-selectee" id="tab00.08409367070381635" style=""> 
+        <td class="ui-selectee"></td> 
+        <td class="ui-selectee">A</td> 
+        <td class="ui-selectee">B</td> 
+        <td class="ui-selectee">D</td> 
+        <td class="ui-selectee">E</td> 
+        <td class="ui-selectee">F</td> 
+        <td class="ui-selectee">G</td> 
+        <td class="ui-selectee">H</td> 
+        <td class="ui-selectee">I</td> 
+        <td class="ui-selectee">J</td> 
+        <td class="ui-selectee">K</td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed20.7910789884013202" style=""> 
+        <td class="leftheader ui-selectee">1</td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed30.4545465571806955" style=""> 
+        <td class="leftheader ui-selectee">2</td> 
+        <td tabindex="0" class="ui-selectee">chip1</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed40.07073137582331823" style=""> 
+        <td class="leftheader ui-selectee">3</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">block1</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed50.7882722419679725" style=""> 
+        <td class="leftheader ui-selectee">4</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg1</td> 
+        <td tabindex="0" class="ui-selectee">16</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed60.9965787992318155" style=""> 
+        <td class="leftheader ui-selectee">5</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">f1</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">0:7</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed70.3825477685385179" style=""> 
+        <td class="leftheader ui-selectee">6</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">f2</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">8:12</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed80.556124469786269" style=""> 
+        <td class="leftheader ui-selectee">7</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed90.8623987303000836" style=""> 
+        <td class="leftheader ui-selectee">8</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed100.09058679207842502" style=""> 
+        <td class="leftheader ui-selectee">9</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed110.023604315122200514" style=""> 
+        <td class="leftheader ui-selectee">10</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed120.2685880521294206" style=""> 
+        <td class="leftheader ui-selectee">11</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed130.40779492365839864" style=""> 
+        <td class="leftheader ui-selectee">12</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed140.05540018529372914" style=""> 
+        <td class="leftheader ui-selectee">13</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr class="edited ui-selectee" id="tabed150.8991093798396464" style=""> 
+        <td class="leftheader ui-selectee">14</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <div id="backhidder" style="z-index: -1;"></div> 
+    <div id="exceltemplate" style="display: none;"> 
+     <a onclick="hidetemplate()" id="ahidetemp">X</a> 
+     <table> 
+      <tbody> 
+       <tr> 
+        <th></th> 
+        <th>User Header</th> 
+        <th>IDS Identifier</th> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>chip</td> 
+        <td>$chip_name</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>block</td> 
+        <td>$block_name</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>register</td> 
+        <td>$reg_name</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>field</td> 
+        <td>$field_name</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>sw access</td> 
+        <td>$field_sw_access</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>hw access</td> 
+        <td>$field_hw_access</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>field default</td> 
+        <td>$field_default</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>bits</td> 
+        <td>$field_offset</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>description</td> 
+        <td>$desc</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>section</td> 
+        <td>$section_name</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>offset</td> 
+        <td>$offset</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>size</td> 
+        <td>$size</td> 
+       </tr> 
+       <tr> 
+        <td><a href="#" onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a></td> 
+        <td>width</td> 
+        <td>$reg_width</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <div id="excelmenu" style="display: none; left: 251px; top: 167px;"> 
+     <a href="#" onclick="insertrowbelow(this);">Insert Row Below</a> 
+     <a href="#" onclick="insertcolright(this);">Insert Column Right</a> 
+     <a href="#" id="menucopy" class="context-menu">Copy </a> 
+     <div class="submenu" id="submenucopy" style="display: none;"> 
+      <a title="for multiple rows copy, select row from checkbox" tabindex="-1" href="#" onclick="copyrow(this);">Copy Row/s</a> 
+      <a href="#" onclick="copycolumn(this);">Copy Column</a> 
+     </div> 
+     <a href="#" onclick="pasterow(this);">Paste</a> 
+     <a href="#" class="context-menu" id="menudelete" onclick="deleterow(this);">Delete</a> 
+     <div class="submenu" id="submenudelete" style="display: none;"> 
+      <a href="#" title="for multiple rows deletion, select row from checkbox" onclick="deleterow(this);">Delete Row/s</a> 
+      <a href="#" onclick="deletecolumn(this);">Delete Column</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="config" style="display:none">
+     &lt;settings&gt; &lt;company&gt;Agnisys, Inc.&lt;/company&gt; &lt;copyright&gt;***** Copyright 2018 All Rights Reserved. *****&lt;/copyright&gt; &lt;log&gt;true&lt;/log&gt; &lt;outdir&gt;output&lt;/outdir&gt; &lt;outputs&gt; &lt;verilog&gt;true&lt;/verilog&gt; &lt;verilog2001&gt;false&lt;/verilog2001&gt; &lt;html&gt;true&lt;/html&gt; &lt;htmlalt2&gt;false&lt;/htmlalt2&gt; &lt;ivs&gt;false&lt;/ivs&gt; &lt;arv&gt;false&lt;/arv&gt; &lt;special_reg/&gt; &lt;cmsis&gt;false&lt;/cmsis&gt; &lt;uvm&gt;false&lt;/uvm&gt; &lt;perl&gt;false&lt;/perl&gt; &lt;python&gt;false&lt;/python&gt; &lt;cpp&gt;false&lt;/cpp&gt; &lt;vheader&gt;false&lt;/vheader&gt; &lt;vhdheader&gt;false&lt;/vhdheader&gt; &lt;formal&gt;false&lt;/formal&gt; &lt;pdf&gt;false&lt;/pdf&gt; &lt;ovm&gt;false&lt;/ovm&gt; &lt;vmm&gt;false&lt;/vmm&gt; &lt;iss_firmware&gt;false&lt;/iss_firmware&gt; &lt;iss_csv&gt;false&lt;/iss_csv&gt; &lt;iss_html&gt;false&lt;/iss_html&gt; &lt;iss_sv&gt;false&lt;/iss_sv&gt; &lt;iss_uvm&gt;false&lt;/iss_uvm&gt; &lt;iss_matlab&gt;false&lt;/iss_matlab&gt; &lt;header&gt;false&lt;/header&gt; &lt;html&gt;true&lt;/html&gt; &lt;xrsl&gt;false&lt;/xrsl&gt; &lt;rdl&gt;false&lt;/rdl&gt; &lt;erm&gt;false&lt;/erm&gt; &lt;ivsxml&gt;false&lt;/ivsxml&gt; &lt;svheader&gt;false&lt;/svheader&gt; &lt;svg&gt;false&lt;/svg&gt; &lt;datasheet&gt;false&lt;/datasheet&gt; &lt;customcsv&gt;false&lt;/customcsv&gt; &lt;customxml&gt;false&lt;/customxml&gt; &lt;csharp&gt;false&lt;/csharp&gt; &lt;sv&gt;false&lt;/sv&gt; &lt;/outputs&gt; &lt;rtl_wire&gt;false&lt;/rtl_wire&gt; &lt;limit_toc/&gt; &lt;lowpower&gt;false&lt;/lowpower&gt; &lt;auto_sequence/&gt; &lt;interrupt/&gt; &lt;mbd/&gt; &lt;arv_assertion/&gt; &lt;memtechmapping&gt;false&lt;/memtechmapping&gt; &lt;sv_w_intf/&gt; &lt;sv_wo_intf/&gt; &lt;uvm_env/&gt; &lt;hdlpath&gt;false&lt;/hdlpath&gt; &lt;arv_coverage&gt;true&lt;/arv_coverage&gt; &lt;coverage&gt;true&lt;/coverage&gt; &lt;illegalbins&gt;false&lt;/illegalbins&gt; &lt;arv_constraint&gt;false&lt;/arv_constraint&gt; &lt;bus&gt;proprietary&lt;/bus&gt; &lt;reg_width&gt;32&lt;/reg_width&gt; &lt;bus_width&gt;32&lt;/bus_width&gt; &lt;unit&gt;8&lt;/unit&gt; &lt;block_size&gt;4096&lt;/block_size&gt; &lt;chip_size/&gt; &lt;board_size/&gt; &lt;c_type/&gt; &lt;big_endian&gt;false&lt;/big_endian&gt; &lt;little_endian&gt;false&lt;/little_endian&gt; &lt;check_only&gt;false&lt;/check_only&gt; &lt;preserve_names&gt;false&lt;/preserve_names&gt; &lt;addr_sort&gt;true&lt;/addr_sort&gt; &lt;seqconfig&gt; &lt;output&gt; &lt;seq_outputs/&gt; &lt;uvm&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;regmodel oid="0"&gt;default&lt;/regmodel&gt; &lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt; &lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;true&lt;/consolidated&gt; &lt;nameformat&gt;uvm_%s_seq&lt;/nameformat&gt; &lt;mout/&gt; &lt;/uvm&gt; &lt;sv&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;bus oid="0"&gt;default&lt;/bus&gt; &lt;write oid="0"&gt;write_mirror(%a,%d,0,0)&lt;/write&gt; &lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;s&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;s&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;true&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/sv&gt; &lt;firmware&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;true&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/firmware&gt; &lt;matlab&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;sss&lt;/templatename&gt; &lt;write oid="0"&gt;aaxx&lt;/write&gt; &lt;read oid="0"&gt;ddd&lt;/read&gt; &lt;templatename oid="1"&gt;swww&lt;/templatename&gt; &lt;write oid="1"&gt;aa&lt;/write&gt; &lt;read oid="1"&gt;ddd&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;aaaaa&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;cccc&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;cccc&lt;/fieldread&gt; &lt;fieldtemplatename oid="1"&gt;dddd&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="1"&gt;cccc&lt;/fieldwrite&gt; &lt;fieldread oid="1"&gt;cccc&lt;/fieldread&gt; &lt;fieldtemplatename oid="2"&gt;ff&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="2"&gt;ccccw&lt;/fieldwrite&gt; &lt;fieldread oid="2"&gt;cccc&lt;/fieldread&gt; &lt;timeunit1/&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1/&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting/&gt; &lt;nameformat/&gt; &lt;mout/&gt; &lt;/matlab&gt; &lt;csv&gt; &lt;commands&gt; &lt;isscmd oid="0"&gt;write&lt;/isscmd&gt; &lt;cmd oid="0"&gt;WRITE&lt;/cmd&gt; &lt;isscmd oid="1"&gt;write_1_set&lt;/isscmd&gt; &lt;cmd oid="1"&gt;WRITE_SET&lt;/cmd&gt; &lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt; &lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt; &lt;isscmd oid="3"&gt;call&lt;/isscmd&gt; &lt;cmd oid="3"&gt;CALL&lt;/cmd&gt; &lt;isscmd oid="4"&gt;switch&lt;/isscmd&gt; &lt;cmd oid="4"&gt;SWITCH&lt;/cmd&gt; &lt;isscmd oid="5"&gt;wait&lt;/isscmd&gt; &lt;cmd oid="5"&gt;WAIT&lt;/cmd&gt; &lt;/commands&gt; &lt;headers&gt; &lt;issheader oid="0"&gt;command&lt;/issheader&gt; &lt;header oid="0"&gt;command&lt;/header&gt; &lt;issheader oid="1"&gt;step&lt;/issheader&gt; &lt;header oid="1"&gt;step&lt;/header&gt; &lt;issheader oid="2"&gt;value&lt;/issheader&gt; &lt;header oid="2"&gt;value&lt;/header&gt; &lt;issheader oid="3"&gt;address&lt;/issheader&gt; &lt;header oid="3"&gt;address&lt;/header&gt; &lt;issheader oid="4"&gt;description&lt;/issheader&gt; &lt;header oid="4"&gt;description&lt;/header&gt; &lt;/headers&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;11&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;/csv&gt; &lt;/output&gt; &lt;/seqconfig&gt; &lt;/settings&gt; 
+   </div> 
+  </div> 
+ 
+</body></html>

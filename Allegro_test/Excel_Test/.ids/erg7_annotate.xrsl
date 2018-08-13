@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab00.9728504729812052" name="block_name" uid="2018-06-26T15:17:59.84+05:30d14e1" keypath="block_name" offset="0" caddress="0" hwmapaddr="5" csize="4096" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <blocksize>4096</blocksize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="tabed200.48516465712475143" orig_path="erg7.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Excel_Test\erg7.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs/>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>uvm_%s_seq</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a,%d,0,0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>s</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_READ(%a,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>true</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">sss</templatename>
+               <write oid="0">aaxx</write>
+               <read oid="0">ddd</read>
+               <templatename oid="1">swww</templatename>
+               <write oid="1">aa</write>
+               <read oid="1">ddd</read>
+               <fieldtemplatename oid="0">aaaaa</fieldtemplatename>
+               <fieldwrite oid="0">cccc</fieldwrite>
+               <fieldread oid="0">cccc</fieldread>
+               <fieldtemplatename oid="1">dddd</fieldtemplatename>
+               <fieldwrite oid="1">cccc</fieldwrite>
+               <fieldread oid="1">cccc</fieldread>
+               <fieldtemplatename oid="2">ff</fieldtemplatename>
+               <fieldwrite oid="2">ccccw</fieldwrite>
+               <fieldread oid="2">cccc</fieldread>
+               <timeunit1/>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">write</isscmd>
+                  <cmd oid="0">WRITE</cmd>
+                  <isscmd oid="1">write_1_set</isscmd>
+                  <cmd oid="1">WRITE_SET</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">call</isscmd>
+                  <cmd oid="3">CALL</cmd>
+                  <isscmd oid="4">switch</isscmd>
+                  <cmd oid="4">SWITCH</cmd>
+                  <isscmd oid="5">wait</isscmd>
+                  <cmd oid="5">WAIT</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">command</issheader>
+                  <header oid="0">command</header>
+                  <issheader oid="1">step</issheader>
+                  <header oid="1">step</header>
+                  <issheader oid="2">value</issheader>
+                  <header oid="2">value</header>
+                  <issheader oid="3">address</issheader>
+                  <header oid="3">address</header>
+                  <issheader oid="4">description</issheader>
+                  <header oid="4">description</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>11</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <section heading="1.1" child_no="1" id="tab10.892734992843788" name="shadow" uid="2018-06-26T15:17:59.84+05:30d14e15" keypath="block_name.shadow,shadow" keypathdown="shadow.Reg0,Reg0" hwmapaddr="6" max_reg_size="32" csize="4" offset="0" caddress="0" address="0x0000" endaddress="0x3" size="4">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x3" size="4"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="tab20.5138628447546197" name="Reg0" uid="2018-06-26T15:17:59.84+05:30d14e17" keypath="block_name.shadow.Reg0,shadow.Reg0,Reg0" hdl_path="shadow_Reg0" abs_hdl_path="blockname_ids.shadow_Reg0" hwmapaddr="7" csize="4" offset="0" caddress="0" address="0x0000" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tabed80.20557733005062417" offset="11:8" name="hptest_lvl" uid="2018-06-26T15:17:59.84+05:30d14e77" keypath="block_name.shadow.Reg0.hptest_lvl,shadow.Reg0.hptest_lvl,Reg0.hptest_lvl,hptest_lvl" hdl_path="_hptestlvl_q" abs_hdl_path="blockname_ids.shadow_Reg0_hptestlvl_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000</default>
+         </field>
+         <field id="tabed90.29269972415209433" offset="16:12" name="hall_isel" uid="2018-06-26T15:17:59.84+05:30d14e84" keypath="block_name.shadow.Reg0.hall_isel,shadow.Reg0.hall_isel,Reg0.hall_isel,hall_isel" hdl_path="_hallisel_q" abs_hdl_path="blockname_ids.shadow_Reg0_hallisel_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000</default>
+         </field>
+         <field id="tabed100.20547436418973852" offset="19:17" name="bw_sel" uid="2018-06-26T15:17:59.84+05:30d14e92" keypath="block_name.shadow.Reg0.bw_sel,shadow.Reg0.bw_sel,Reg0.bw_sel,bw_sel" hdl_path="_bwsel_q" abs_hdl_path="blockname_ids.shadow_Reg0_bwsel_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="tabed140.06952289020868496" offset="24:23" name="afe_hpdrv_chop" uid="2018-06-26T15:17:59.84+05:30d14e120" keypath="block_name.shadow.Reg0.afe_hpdrv_chop,shadow.Reg0.afe_hpdrv_chop,Reg0.afe_hpdrv_chop,afe_hpdrv_chop" hdl_path="_afehpdrvchop_q" abs_hdl_path="blockname_ids.shadow_Reg0_afehpdrvchop_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="tabed150.2453217805513448" offset="26:25" name="afe_gain" uid="2018-06-26T15:17:59.84+05:30d14e127" keypath="block_name.shadow.Reg0.afe_gain,shadow.Reg0.afe_gain,Reg0.afe_gain,afe_gain" hdl_path="_afegain_q" abs_hdl_path="blockname_ids.shadow_Reg0_afegain_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="tabed160.452060853329311" offset="28:27" name="afe_adcchp" uid="2018-06-26T15:17:59.84+05:30d14e134" keypath="block_name.shadow.Reg0.afe_adcchp,shadow.Reg0.afe_adcchp,Reg0.afe_adcchp,afe_adcchp" hdl_path="_afeadcchp_q" abs_hdl_path="blockname_ids.shadow_Reg0_afeadcchp_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="tabed00.2549749500783869" offset="0" name="pol_f" uid="2018-06-26T15:17:59.84+05:30d14e21" keypath="block_name.shadow.Reg0.pol_f,shadow.Reg0.pol_f,Reg0.pol_f,pol_f" hdl_path="_polf_q" abs_hdl_path="blockname_ids.shadow_Reg0_polf_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed10.5898000400480791" offset="1" name="pol_diag" uid="2018-06-26T15:17:59.84+05:30d14e28" keypath="block_name.shadow.Reg0.pol_diag,shadow.Reg0.pol_diag,Reg0.pol_diag,pol_diag" hdl_path="_poldiag_q" abs_hdl_path="blockname_ids.shadow_Reg0_poldiag_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed20.18353628233665087" offset="2" name="pol_c" uid="2018-06-26T15:17:59.84+05:30d14e35" keypath="block_name.shadow.Reg0.pol_c,shadow.Reg0.pol_c,Reg0.pol_c,pol_c" hdl_path="_polc_q" abs_hdl_path="blockname_ids.shadow_Reg0_polc_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed30.8301920952902938" offset="3" name="lint_out_inv" uid="2018-06-26T15:17:59.84+05:30d14e42" keypath="block_name.shadow.Reg0.lint_out_inv,shadow.Reg0.lint_out_inv,Reg0.lint_out_inv,lint_out_inv" hdl_path="_lintoutinv_q" abs_hdl_path="blockname_ids.shadow_Reg0_lintoutinv_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed40.7187130214061577" offset="4" name="lint_in_inv" uid="2018-06-26T15:17:59.84+05:30d14e49" keypath="block_name.shadow.Reg0.lint_in_inv,shadow.Reg0.lint_in_inv,Reg0.lint_in_inv,lint_in_inv" hdl_path="_lintininv_q" abs_hdl_path="blockname_ids.shadow_Reg0_lintininv_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed50.8364026739961709" offset="5" name="lint_e" uid="2018-06-26T15:17:59.84+05:30d14e56" keypath="block_name.shadow.Reg0.lint_e,shadow.Reg0.lint_e,Reg0.lint_e,lint_e" hdl_path="_linte_q" abs_hdl_path="blockname_ids.shadow_Reg0_linte_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed60.06861069212976012" offset="6" name="lint_bin_e" uid="2018-06-26T15:17:59.84+05:30d14e63" keypath="block_name.shadow.Reg0.lint_bin_e,shadow.Reg0.lint_bin_e,Reg0.lint_bin_e,lint_bin_e" hdl_path="_lintbine_q" abs_hdl_path="blockname_ids.shadow_Reg0_lintbine_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed70.8597103137468286" offset="7" name="lin_scalar" uid="2018-06-26T15:17:59.84+05:30d14e70" keypath="block_name.shadow.Reg0.lin_scalar,shadow.Reg0.lin_scalar,Reg0.lin_scalar,lin_scalar" hdl_path="_linscalar_q" abs_hdl_path="blockname_ids.shadow_Reg0_linscalar_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed110.2495001414041631" offset="20" name="bg_adc_ref_err_max" uid="2018-06-26T15:17:59.84+05:30d14e99" keypath="block_name.shadow.Reg0.bg_adc_ref_err_max,shadow.Reg0.bg_adc_ref_err_max,Reg0.bg_adc_ref_err_max,bg_adc_ref_err_max" hdl_path="_bgadcreferrmax_q" abs_hdl_path="blockname_ids.shadow_Reg0_bgadcreferrmax_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed120.6394774055344072" offset="21" name="asil_ftt" uid="2018-06-26T15:17:59.84+05:30d14e106" keypath="block_name.shadow.Reg0.asil_ftt,shadow.Reg0.asil_ftt,Reg0.asil_ftt,asil_ftt" hdl_path="_asilftt_q" abs_hdl_path="blockname_ids.shadow_Reg0_asilftt_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed130.43457030976282895" offset="22" name="afe_zero_config" uid="2018-06-26T15:17:59.84+05:30d14e113" keypath="block_name.shadow.Reg0.afe_zero_config,shadow.Reg0.afe_zero_config,Reg0.afe_zero_config,afe_zero_config" hdl_path="_afezeroconfig_q" abs_hdl_path="blockname_ids.shadow_Reg0_afezeroconfig_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed170.9545857162775878" offset="29" name="adc_zero" uid="2018-06-26T15:17:59.84+05:30d14e141" keypath="block_name.shadow.Reg0.adc_zero,shadow.Reg0.adc_zero,Reg0.adc_zero,adc_zero" hdl_path="_adczero_q" abs_hdl_path="blockname_ids.shadow_Reg0_adczero_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>
+            </doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed180.06305117441505048" offset="30" name="fire" uid="2018-06-26T15:17:59.84+05:30d14e148" keypath="block_name.shadow.Reg0.fire,shadow.Reg0.fire,Reg0.fire,fire" hdl_path="_fire_q" abs_hdl_path="blockname_ids.shadow_Reg0_fire_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>water1 changed to fire</doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="tabed190.10575624848208476" offset="31" name="water1111" uid="2018-06-26T15:17:59.84+05:30d14e157" keypath="block_name.shadow.Reg0.water1111,shadow.Reg0.water1111,Reg0.water1111,water1111" hdl_path="_water1111_q" abs_hdl_path="blockname_ids.shadow_Reg0_water1111_q">
+            <doc>
+               <uvm loc="coverpoint.b.wr">illegal_bins b_x = {1,2};</uvm>
+               <uvm loc="coverpoint.b.rd">illegal_bins b_x = {1,2};</uvm>new addition</doc>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+      </reg>
+   </section>
+</block>
