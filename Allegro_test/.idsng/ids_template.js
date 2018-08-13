@@ -57,100 +57,117 @@ function writeparam(str) {
 	document.getElementById("paramcontainer").innerHTML = str;
 	document.getElementById("paramcontainer").style.display = "block";
 	addIntoHistory();
-} /* Events fired on the drag target */
-document.addEventListener("dragstart", function(event) { /* The dataTransfer.setData() method sets the data type and the value of the dragged data*/
-	event.dataTransfer.setData("Text", event.target.id); /* Output some text when starting to drag the p element					document.getElementById("demo").innerHTML = "Started to drag the p element.";*/ /* Change the opacity of the draggable element*/
-	event.target.style.opacity = "0.4"; /*event.target.style.backgroundColor="transparent";*/ /*console.log("drag target="+event.target.id);*/
-}); /* While dragging the p element, change the color of the output text				this event fire when drag starts.				event.target have source element object*/
+} 
 var regsource;
-document.addEventListener("drag", function(event) { /*document.getElementById("demo").style.color = "red";*/
-	event.target.parentElement.style.backgroundColor = "white";
-	regsource = event; /*console.log("source index="+regsource.target.parentElement.cellIndex);*/
-}); /* Output some text when finished dragging the p element and reset the opacity*/
-document.addEventListener("dragend", function(event) { /*document.getElementById("demo").innerHTML = "Finished dragging the p element.";*/
-	event.target.style.opacity = "1";
-}); /* Events fired on the drop target */ /* When the draggable p element enters the droptarget, change the DIVS's border style*/
-document.addEventListener("dragenter", function(event) {
-	if (event.target.className == "droptarget") {
-		event.target.style.border = "2px solid red";
-	}
-}); /* By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element*/
-document.addEventListener("dragover", function(event) {
-	event.preventDefault();
-}); /* When the draggable p element leaves the droptarget, reset the DIVS's border style*/
-document.addEventListener("dragleave", function(event) {
-	if (event.target.className == "droptarget") {
-		event.target.style.border = "";
-	}
-}); /* On drop - Prevent the browser default handling of the data (default is open as link on drop)   Reset the color of the output text and DIV's border color   Get the dragged data with the dataTransfer.getData() method   The dragged data is the id of the dragged element ("drag1")   Append the dragged element into the drop element*/
-document.addEventListener("drop", function(event) {
-	event.preventDefault();
-	if (event.target.className == "droptarget") {
-		try {
-			var vali = validateCell(event);
-			if (vali) {
-				console.log("Warning : Space is full");
-				event.target.style.border = "";
-				regsource.target.style.backgroundColor = "#d4e0e2";
-			} else { /*document.getElementById("demo").style.color = "";*/
-				event.target.style.border = ""; /*var data = event.dataTransfer.getData("Text");*/
-				var data = event.dataTransfer.getData("Text");
-				event.target.appendChild(document.getElementById(data));
-				event.target.style.backgroundColor = "#d4e0e2";
-				var cellindex = event.target.cellIndex;
-				var data2 = parseInt(regsource.target.getAttribute("data-size"));
-				var range = data2 + cellindex;
-				event.target.closest("tr").cells[cellindex].colSpan = data2;
-				var temp;
-				var reversecell = 0;
-				for (i = cellindex + 1; i < range; i++) {
-					temp = event.target.closest("tr").cells[cellindex + 1];
-					if ((typeof(temp) === "undefined" || temp === null)) {
-						reversecell++;
-						temp = event.target.closest("tr").cells[cellindex - reversecell].innerHTML.trim();
-						if (temp == '') {
-							event.target.closest("tr").cells[cellindex - reversecell].remove();
-						}
-					} else {
-						temp = temp.innerHTML.trim();
-						if (temp === "") {
-							event.target.closest("tr").cells[cellindex + 1].remove();
-						} else {
+
+function initilizeParamEvents(){
+
+	/* Events fired on the drag target */
+	document.getElementById("paramcontainer").addEventListener("dragstart", function(event) { /* The dataTransfer.setData() method sets the data type and the value of the dragged data*/		
+		event.dataTransfer.setData("Text", event.target.id); /* Output some text when starting to drag the p element					document.getElementById("demo").innerHTML = "Started to drag the p element.";*/ /* Change the opacity of the draggable element*/
+		event.target.style.opacity = "0.4"; /*event.target.style.backgroundColor="transparent";*/ /*console.log("drag target="+event.target.id);*/
+		try{
+			document.getElementById("scroller").style="display:block";		
+		}
+		catch(e){}
+	}); /* While dragging the p element, change the color of the output text				this event fire when drag starts.				event.target have source element object*/
+	document.getElementById("paramcontainer").addEventListener("drag", function(event) { /*document.getElementById("demo").style.color = "red";*/
+		event.target.parentElement.style.backgroundColor = "white";
+		regsource = event; /*console.log("source index="+regsource.target.parentElement.cellIndex);*/
+	}); /* Output some text when finished dragging the p element and reset the opacity*/
+	document.getElementById("paramcontainer").addEventListener("dragend", function(event) { /*document.getElementById("demo").innerHTML = "Finished dragging the p element.";*/
+		event.target.style.opacity = "1";
+	}); /* Events fired on the drop target */ /* When the draggable p element enters the droptarget, change the DIVS's border style*/
+	document.getElementById("paramcontainer").addEventListener("dragenter", function(event) {
+		if (event.target.className == "droptarget") {
+			event.target.style.border = "2px solid red";
+		}
+	}); /* By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element*/
+	document.getElementById("param_main").addEventListener("dragover", function(event) {
+		event.preventDefault();
+		if(event.target.id=="scr_down"){
+			window.scrollBy(0,20);
+		}
+		else if(event.target.id=="scr_up"){
+			window.scrollBy(0,-20);
+		}
+	}); /* When the draggable p element leaves the droptarget, reset the DIVS's border style*/
+	document.getElementById("paramcontainer").addEventListener("dragleave", function(event) {
+		if (event.target.className == "droptarget") {
+			event.target.style.border = "";
+		}
+	}); /* On drop - Prevent the browser default handling of the data (default is open as link on drop)   Reset the color of the output text and DIV's border color   Get the dragged data with the dataTransfer.getData() method   The dragged data is the id of the dragged element ("drag1")   Append the dragged element into the drop element*/
+	document.getElementById("paramcontainer").addEventListener("drop", function(event) {
+		event.preventDefault();	
+		try{
+			document.getElementById("scroller").style="display:none";
+		}
+		catch(e){}
+		if (event.target.className == "droptarget") {
+			try {
+				var vali = validateCell(event);
+				if (vali) {
+					console.log("Warning : Space is full");
+					event.target.style.border = "";
+					regsource.target.style.backgroundColor = "#d4e0e2";
+				} else { /*document.getElementById("demo").style.color = "";*/
+					event.target.style.border = ""; /*var data = event.dataTransfer.getData("Text");*/
+					var data = event.dataTransfer.getData("Text");
+					event.target.appendChild(document.getElementById(data));
+					event.target.style.backgroundColor = "#d4e0e2";
+					var cellindex = event.target.cellIndex;
+					var data2 = parseInt(regsource.target.getAttribute("data-size"));
+					var range = data2 + cellindex;
+					event.target.closest("tr").cells[cellindex].colSpan = data2;
+					var temp;
+					var reversecell = 0;
+					for (i = cellindex + 1; i < range; i++) {
+						temp = event.target.closest("tr").cells[cellindex + 1];
+						if ((typeof(temp) === "undefined" || temp === null)) {
 							reversecell++;
-							temp = event.target.closest("tr").cells[cellindex - reversecell + 1].getElementsByTagName("p")[0];
-							if ((typeof(temp) !== "undefined" || temp !== null)) {
-								var iiid = temp.id;
-								if (iiid === regsource.target.id) {
-									var j;
-									var delindex = cellindex - reversecell ;
-									var counter = 0;
-									for (j = i; j < range; j++) {
-										event.target.closest("tr").cells[delindex - counter].remove();
-										counter++;
-									}
-									break;
-								}
-							} /*										temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();										console.log("--reverseTtemp="+temp+"--index="+(cellindex-reversecell));										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell+1].innerHTML.trim());										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell-2].innerHTML.trim());*/
+							temp = event.target.closest("tr").cells[cellindex - reversecell].innerHTML.trim();
 							if (temp == '') {
 								event.target.closest("tr").cells[cellindex - reversecell].remove();
 							}
-						}
-					} /*								if((typeof(temp) === "undefined" || temp === null)||((typeof(temp) === "undefined" || temp === null)&&																					 temp==='')){									event.target.closest("tr").cells[cellindex+1].remove();cell index remain same after deletion, hence it is fixed index deletion								}								else if(temp!==''){									reversecell++;									temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();									if(temp==''){										event.target.closest("tr").cells[cellindex-reversecell].remove();									}								}								*/
+						} else {
+							temp = temp.innerHTML.trim();
+							if (temp === "") {
+								event.target.closest("tr").cells[cellindex + 1].remove();
+							} else {
+								reversecell++;
+								temp = event.target.closest("tr").cells[cellindex - reversecell + 1].getElementsByTagName("p")[0];
+								if ((typeof(temp) !== "undefined" || temp !== null)) {
+									var iiid = temp.id;
+									if (iiid === regsource.target.id) {
+										var j;
+										var delindex = cellindex - reversecell ;
+										var counter = 0;
+										for (j = i; j < range; j++) {
+											event.target.closest("tr").cells[delindex - counter].remove();
+											counter++;
+										}
+										break;
+									}
+								} /*										temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();										console.log("--reverseTtemp="+temp+"--index="+(cellindex-reversecell));										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell+1].innerHTML.trim());										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell-2].innerHTML.trim());*/
+								if (temp == '') {
+									event.target.closest("tr").cells[cellindex - reversecell].remove();
+								}
+							}
+						} /*								if((typeof(temp) === "undefined" || temp === null)||((typeof(temp) === "undefined" || temp === null)&&																					 temp==='')){									event.target.closest("tr").cells[cellindex+1].remove();cell index remain same after deletion, hence it is fixed index deletion								}								else if(temp!==''){									reversecell++;									temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();									if(temp==''){										event.target.closest("tr").cells[cellindex-reversecell].remove();									}								}								*/
+					}
 				}
+			} catch (ex) {
+				console.log("Error dop event : " + ex.message);
 			}
-		} catch (ex) {
-			console.log("Error dop event : " + ex.message);
+			addIntoHistory();
+		} else {
+			regsource.target.style.backgroundColor = "#d4e0e2";
 		}
-		addIntoHistory();
-	} else {
-		regsource.target.style.backgroundColor = "#d4e0e2";
-	}
-});
-
+	});
+}
 function validateCell(src) {
 	var cellindex = src.target.cellIndex;
 	var d = regsource.target.getAttribute("data-size");
-	console.log("--d=" + d);
 	var data = parseInt(d);
 	var range = data + cellindex;
 	console.log("--cellindex=" + cellindex);
@@ -207,6 +224,11 @@ function validateCell(src) {
 				iscellavail = false;
 				break;
 			} else {
+				console.log("--class exist="+ currcell.classList.contains("droptarget"));
+				if(!currcell.classList.contains("droptarget")){
+					iscellavail = false;
+					break;
+				}
 				if (currcell.innerHTML.trim() != "") {
 					descId = currcell.getElementsByTagName("p")[0];
 					if ((typeof(descId) !== "undefined" || descId !== null)) {
@@ -280,6 +302,10 @@ var curr_row_obj=null;
 var isFileSaved=true;
 var DESC_CLS_OBJ_LIST=[];
 var ids_json;
+var clickedEl = null;
+var selected_rows=[];
+var alphabets='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 
 $(document).ready(function(){
 	bindJSONObj();
@@ -365,7 +391,115 @@ $(document).ready(function(){
 	$('.propInput').keyup(function(){		
 		auto_grow(this);	
 	});
+
+	document.getElementById("idsexcelcontainer").addEventListener("click",function(event){
+		$('#excelmenu').css({'display':'none'});
+	});
+
+
+	document.getElementById("spreadsheetcontainer").addEventListener("mousedown", function(event){
+		//right click
+		if(event.button == 2) { 
+			clickedEl = event.target;
+		}
+	}, true);
+
+
+	$("#menucopy").hover(function(){
+		var x=event.pageX;
+		var spreadwidth=$( "#spreadsheetcontainer" ).width();
+		if((spreadwidth-x)<100){
+			$("#submenucopy").css("left", "-100%");	
+		}
+		else{
+			$("#submenucopy").css("left", "100%");	
+		}
+
+		$("#submenucopy").css("display", "block");
+	}, function(){
+		$("#submenucopy").css("display", "none");
+	});
+
+	$("#menudelete").hover(function(event){
+		var x=event.pageX;
+		var spreadwidth=$( "#spreadsheetcontainer" ).width();
+		if((spreadwidth-x)<100){
+			$("#submenudelete").css("left", "-100%");	
+		}
+		else{
+			$("#submenudelete").css("left", "100%");
+		}
+		$("#submenudelete").css("display", "block");
+	}, function(){
+		$("#submenudelete").css("display", "none");
+	});
+
+	$(".submenu").hover(function(){
+		$(this).css("display", "block");
+	}, function(){
+		$(this).css("display", "none");
+	});
+
+	document.getElementById("backhidder").addEventListener("click",function(e){ hidetemplate()});
+	document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].addEventListener("keydown",function(e){ spreadsheetKeyEventHandler()});
+
+
+	$( "#selectable" ).selectable({
+		selected: function() {
+			//var result = $( "#result" ).empty();
+			selected_rows=[];
+
+			$( ".ui-selected", this ).each(function() {
+
+				var index = $( "#selectable tr" ).index( this );
+				if(index>-1){
+					selected_rows.push(index);
+				}
+				//result.append( ( index + 1 ) );
+				//result.append( " ," );
+			});
+		}
+	});
+
+	$("#selectable").on('click','td',function(source) { 
+		var source = event.target || event.srcElement;
+		try{
+			placeCaretAtEnd(source);
+		}catch(e){alert("Err "+e.message);}
+		$('#excelmenu').css({'display':'none'});
+	});
+
+	initilizeParamEvents();
+
+	document.getElementById("scr_up").addEventListener("click",function(e){ 
+		window.scrollBy(0,-20);
+	});
+
+	document.getElementById("scr_down").addEventListener("click",function(e){ 
+		window.scrollBy(0,20);
+	});
+
 });
+
+
+
+function placeCaretAtEnd(el) {
+	el.focus();
+	if (typeof window.getSelection != "undefined"
+		&& typeof document.createRange != "undefined") {
+		var range = document.createRange();
+		range.selectNodeContents(el);
+		range.collapse(false);
+		var sel = window.getSelection();
+		sel.removeAllRanges();
+		sel.addRange(range);
+	} else if (typeof document.body.createTextRange != "undefined") {
+		var textRange = document.body.createTextRange();
+		textRange.moveToElementText(el);
+		textRange.collapse(false);
+		textRange.select();
+	}
+}
 
 $(document).bind("click", function(event) {
 	/*document.getElementById("rmenu").className = "hide";*/
@@ -767,12 +901,32 @@ function setTabID(){
 		/*idsTables[i].setAttribute('id','tab'+i);*/
 		idsTables[i].setAttribute('id','tab'+i+random_Num);
 	}
-	 var field = document.getElementsByClassName("field");
+	var field = document.getElementsByClassName("field");
 	for(var i = 0; i < field.length; i++)
 	{
 		random_Num=Math.random();
 		field[i].setAttribute('id','tabf'+i+random_Num);
 	}
+	var edited = document.getElementsByClassName("edited");
+	for(var i = 0; i < edited.length; i++)
+	{
+		random_Num=Math.random();
+		edited[i].setAttribute('id','tabed'+i+random_Num);
+	}
+}
+
+/*JAVAFX*/
+function setSpreadsheetID(){
+	try{
+		var  idsTables=document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
+		for(var i = 0; i < idsTables.length; i++)
+		{
+			random_Num=Math.random();
+			/*idsTables[i].setAttribute('id','tab'+i);*/
+			idsTables[i].setAttribute('id','tab'+i+random_Num);
+		}
+	}
+	catch(e){}
 }
 
 
@@ -960,8 +1114,10 @@ function insertMemory(imgPath){
 function insertEnum(){
 	addIntoHistory();
 	random_Num=Math.random();
-	var element=htmlToElements(ids_json.enum);
+	var element=htmlToElements(ids_json.enum1);
 	element.id='tab_enum'+random_Num;
+	var enum_row=element.getElementsByClassName("edited")[0];
+	enum_row.id='enum'+random_Num;
 	/*query="<table class='enum idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_enum"+random_Num+"'> <tbody><tr><td class='header readOnly'></td><td title='enum name' class='name'>enum_name</td><td class='address addCell readOnly'><label class='label'>address |</label><label></label></td></tr><tr><td class='label'>mnemonic name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='m_name'></td><td class='value'></td><td title='add description here' class='desc enumdesc' onkeydown='insertEnumRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -971,6 +1127,8 @@ function insertDefine(){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.define);
 	element.id='tab_define'+random_Num;
+	var define_row=element.getElementsByClassName("edited")[0];
+	define_row.id='def'+random_Num;
 	/*query="<table class='param idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_def"+random_Num+"'><tbody><tr><td class='label'>define name</td><td class='label'>value</td><td class='label'>description</td><td class='label'>private</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='value'></td><td title='add description here' class='desc'></td><td class='private' onkeydown='insertDefineRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -980,6 +1138,8 @@ function insertVariant(){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.variant);
 	element.id='tab_variant'+random_Num;
+	var var_row=element.getElementsByClassName("edited")[0];
+	var_row.id='var'+random_Num;
 	/*query="<table class='variant idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_var"+random_Num+"'> <tbody><tr><td class='label'>variant name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='value'></td><td title='add description here' class='desc' onkeydown='insertVariantRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -989,6 +1149,8 @@ function insertBusDomain(){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.busdomain);
 	element.id='tab_busdomain'+random_Num;
+	var bus_row=element.getElementsByClassName("edited")[0];
+	bus_row.id='bus'+random_Num;
 	/*query="<table class='busdomain idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_bus"+random_Num+"'><tbody><tr><td class='label'>bus domain name</td><td class='label'>address unit</td><td class='label'>description</td><td class='label'>bus</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='unit'></td><td title='add description here' class='desc'></td><td class='bus' onkeydown='insertBusRow(event,this);'></td></td></tr></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -998,6 +1160,8 @@ function insertSignals(imgPath){
 	random_Num=Math.random();
 	var element=htmlToElements(ids_json.signal);
 	element.id='tab_signal'+random_Num;
+	var singal_row=element.getElementsByClassName("edited")[0];
+	singal_row.id='sig'+random_Num;
 	/*query="<table class='signals idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_bus"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='signal name' class='name'>signal_name</td><td class='specImage'><img title='signals' alt='signals' src="+imgPath+"></td><td class='addCell readOnly'></td></tr><tr><td colspan='4' class='border'></td></tr><tr ><td class='label'>name</td><td class='label'>port type</td><td colspan='2' class='label'>description</td></tr><tr onclick='setCurrRow(this);' onkeydown='setCurrRow(this);' class='edited'><td class='name'></td><td class='direction'></td><td colspan='2' title='add description here' class='desc signaldesc' onkeydown='insertNewRowSignals(event,this);'></td></td></tbody> </table><br>";*/
 	pasteHtmlAtCaret(addstrToCaret(element));
 }
@@ -1009,6 +1173,8 @@ function insertSeq(){
 	element.id='tab_sequence'+random_Num;
 
 	element.getElementsByClassName("seqip")[0].getElementsByClassName("edited")[0].id="seq_ip_"+random_Num;
+	element.getElementsByClassName("seqip")[0].getElementsByClassName("ip")[0].innerHTML=getCurrentDocumentPath();
+
 
 	var arg=element.getElementsByClassName("arg")[0];
 	arg.id="arg"+random_Num;
@@ -1027,12 +1193,7 @@ function insertSeq(){
 	cmd.getElementsByClassName("edited")[0].id="seq_cmd"+random_Num;
 
 	pasteHtmlAtCaret(addstrToCaret(element));
-	/*query="<br><table class='seq idsTemp' id='seq"+random_Num+"'><tbody><tr><td><table id='seqip"+random_Num+"' class='seqip idsTemp'><tbody><tr class='header readOnly'><td>sequence name</td><td>ip</td><td>description</td></tr><tr class='edited'><td class='seqname'></td><td class='ip' onfocusout='load_ips(this);'></td><td class='seqdesc'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='arg"+random_Num+"' class='idsTemp arg'><tbody><tr class='header readOnly'><td>arguments</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='argname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqArgRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='const"+random_Num+"' class='idsTemp const'><tbody><tr class='header readOnly'><td>constants</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='constname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqConstRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='var"+random_Num+"' class='idsTemp var'><tbody><tr class='header readOnly'><td>variables</td><td>value</td><td>description</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='varname'></td><td class='value'></td><td class='seqdesc' onkeydown='insertSeqVarnameRow(event,this);'></td></tr></tbody></table></td></tr><tr><td></td></tr><tr><td><table id='cmd"+random_Num+"' class='command idsTemp'><tbody><tr class='header readOnly'><td class='seqcmd'>command</td><td >step</td><td class='seqcmdval'>value</td><td class='seqcmddesc'>description</td><td class='seqcmdrefpath'>refpath</td></tr><tr onkeydown='setCurrRow(this)' onclick='setCurrRow(this)' class='edited'><td class='cmdname'></td><td class='step'></td><td class='seqvalue'></td><td class='seqdesc'></td><td class='refpath' onkeydown='insertSeqCmdRow(event,this);'></td></tr></tbody></table></td></tr></tbody></table><br>";*/
-	/*
-	var str=document.getElementById("seqdivcontainer").innerHTML;
-	str=str+query;
-	document.getElementById("seqdivcontainer").innerHTML=str;
-	*/
+	load_ips(element);
 }
 
 function reloadPage(){
@@ -1082,11 +1243,11 @@ function insertBusRow(evt, obj){
 
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');
-
+		row.setAttribute('class','edited bus_row');
+		row.setAttribute('id','bus'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1122,10 +1283,11 @@ function insertVariantRow(evt, obj){
 
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');
+		row.setAttribute('class','edited var_row');
+		row.setAttribute('id','var'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1156,10 +1318,11 @@ function insertDefineRow(evt, obj){
 
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');
+		row.setAttribute('class','edited def_row');
+		row.setAttribute('id','def'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1189,10 +1352,11 @@ function insertEnumRow(evt,obj){
 		}
 
 		var table = document.getElementById(obj.id);
-		var row = table.insertRow(parseInt(table.getElementsByTagName("tr").length));
+		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeyup','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class','edited');	
+		row.setAttribute('class','edited enum_row');	
+		row.setAttribute('id','enum'+Math.random());
 		var cell;
 
 		cell=row.insertCell(0);
@@ -1223,7 +1387,8 @@ function insertNewRowSignals(evt,obj){
 		var row = table.insertRow(parseInt(curr_row)+1);
 		row.setAttribute('onkeydown','setCurrRow(this)');
 		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class',"edited");
+		row.setAttribute('class',"edited sig_row");
+		row.setAttribute('id','sig'+Math.random());
 
 		var input;
 		var cell;
@@ -1778,11 +1943,18 @@ function KeyPress(e) {
 	var evtobj = window.event? event : e;
 
 	/*undo*/
-	if (evtobj.keyCode === 90 && evtobj.ctrlKey) {				
+	if (evtobj.keyCode === 90 && evtobj.ctrlKey) {		
+		var disp=document.getElementById("idsexcelcontainer").style.display;
+
 		if(typeof(bodyArr[index-1])!=='undefined'&&bodyArr[index-1]!==null){
 			index--;
 			document.body.innerHTML=bodyArr[index];
-		}		
+		}
+
+		if(disp=="block"){
+			/*alert("Please save file ( ctrl+s ) and refresh (by right click outside from spreadsheet)");*/
+		}
+
 		return false;
 	}
 	/*redo*/
@@ -1821,8 +1993,14 @@ function KeyPress(e) {
 				idsclass[i].setAttribute("onclick","tabClick(this)");
 				random_Num=Math.random();
 				idsclass[i].setAttribute('id','tab'+i+random_Num);
+				$(idsclass[i]).removeAttr('style');
+				$(idsclass[i]).find("[style]").removeAttr('style');	/*reset style attribute becouse whenever copy paste done, browser set default width location
+				and it ruin the style*/		
+
 			}
 		}
+
+
 
 
 		idsclass=document.getElementsByClassName("edited");
@@ -1849,7 +2027,7 @@ function KeyPress(e) {
 				fields[i].setAttribute('id','tab'+i+random_Num);
 			}
 		}
-		
+
 		var field= document.getElementsByClassName("field");
 		if(typeof(field!=='undefined'&&field!==null)){
 			for(var i = 0; i < field.length; i++){
@@ -1920,6 +2098,16 @@ function textNode(txt) {
 	return document.createTextNode(txt);
 }
 
+function openfile(obj){	
+	try{
+		var file=$(obj).text();
+		clickController.openFile(file);
+	}
+	catch(e){
+		alert('err openfile : '+e.message);
+	}	
+}
+
 function openFindWindow(event){
 	try{
 		location.reload();
@@ -1945,7 +2133,7 @@ function unSetsaved(){
 		clickController.setSaveSymbol();
 	}
 	catch(e){
-		alert('err unSetUnsaved : '+e.message);
+		alert('err unSetSaved : '+e.message);
 	}
 }
 
@@ -1997,10 +2185,12 @@ function runGUICheck(){
 	var errorconter=0;
 	resetAllChecks();
 
+	checkTop();
 	checkRegTemplate();
 	checkCommon();
 	checkMem();
 	checkSeqTemplate();
+
 
 
 
@@ -2113,6 +2303,8 @@ function runGUICheck(){
 
 		$(".idscheck").removeAttr();
 		$(".idscheck").remove();
+
+		$(".idsTemp td.name").removeAttr("style");
 		errorconter=0;
 		errorlist="";
 	}
@@ -2132,6 +2324,31 @@ function runGUICheck(){
 			}
 		});	
 
+	}
+
+	function checkTop(){
+		try{
+
+			$(".idsTemp").each(function(i){
+				var cls=$(this).attr("class").split(" ");
+				for(var i=0;i<cls.length;i++){
+					if(cls[i]==="block"||cls[i]==="chip"||cls[i]==="system"||cls[i]==="board"||cls[i]==="section"||cls[i]==="reg"||cls[i]==="ref"||
+					   cls[i]==="mem"||cls[i]==="enum"||cls[i]==="param"||cls[i]==="variant"||cls[i]==="busdomain"||cls[i]==="signals"){
+
+						if(cls[i]==="reg"||cls[i]==="section"){
+							addErrJson("Error-G  Top is missing!",this.getElementsByClassName("name")[0]);
+						}
+						return false;
+					}
+				}
+			});
+
+
+
+
+		}catch(e){
+			alert("Err checkTop : "+e.message);
+		}
 	}
 
 	return false;
@@ -2252,7 +2469,6 @@ function autocomplete(inp, arr) {
 	inp.addEventListener("input", function(e) {
 
 
-		console.log("call input");
 		var a, b, i, val = inp.innerText;
 		/*close any already open lists of autocompleted values*/
 		closeAllLists();
@@ -2284,7 +2500,7 @@ function autocomplete(inp, arr) {
 		else if(nodetype=="fields"){
 			var cur_node=e.target.getAttribute("class").split(" ")[0];
 			if(cur_node=="sw"){
-				a.setAttribute("style", "left:35%");	
+				a.setAttribute("style", "left:35%;");
 			}
 			else if(cur_node=="hw"){
 				a.setAttribute("style", "left:44%");	
@@ -2306,12 +2522,17 @@ function autocomplete(inp, arr) {
 			/*a.setAttribute("style", "left: 29%;");*/
 		}
 
-
 		/*append the DIV element as a child of the autocomplete container:*/
 		e.target.parentNode.after(a);
 
+
+		var hintoffsetHeight=$(a).offset().top;
+		var offsetHeight = document.getElementById('regdivcontainer').offsetHeight;//$(document).height();
+		hintoffsetHeight=offsetHeight-(hintoffsetHeight);
+		var attr=a.getAttribute("style")+";max-height:"+hintoffsetHeight+"px;overflow:auto";
+		a.setAttribute("style",attr);
+
 		var checkvalid=checkvalidprop(inp);
-		console.log("--checkvalid="+checkvalid);
 		/*console.log("--nodetype="+nodetype);*/
 
 		if(checkvalid==""){
@@ -2388,6 +2609,8 @@ function autocomplete(inp, arr) {
 			/*and and make the current item more visible:*/
 			addActive(x);
 			var carpost=getCaretPosition(inp);
+			document.getElementById("autocomplete-list").scrollTop=document.getElementById("autocomplete-list").scrollTop+20;
+			//			console.log("--scroll pos="+document.getElementById("autocomplete-list").scrollTop);
 
 		} else if (e.keyCode == 38) { 
 			/*If the arrow UP key is pressed,
@@ -2397,6 +2620,7 @@ function autocomplete(inp, arr) {
 			currentFocus--;
 			/*and and make the current item more visible:*/
 			addActive(x);
+			document.getElementById("autocomplete-list").scrollTop=document.getElementById("autocomplete-list").scrollTop-20;
 		}
 		else if (e.keyCode == 13) {
 			/*If the ENTER key is pressed, prevent the form from being submitted,*/
@@ -2502,70 +2726,70 @@ function autocomplete(inp, arr) {
 
 /*IDS property list*/
 var idsprop_old = {"clock_edge":"Specifies the clock edge used for implementing registers","repeat":"Repeat a template N number of times",
-			   "counter":"This specifies whether the counter will be incrementing or decrementing","size":"Specifies the size of the template",
-			   "offset":"The value specifies the offset with respect to the container",
-			   "external":"to implement the template outside the generated RTL.",
-			   "variant":"Specifies the name of the Variant that the template is in.",
-			   "ref":"To reference the signals present in other blocks",
-			   "Refvariant":"Specifies the name of the Variant that is referred from the referred file",
-			   "override":"used to override the defines/parameters of the included document with the values of the respective parameters/defines in the current document",
-			   "reg_hw":"Specify the hw access for register","reg_sw":"Specify the sw access for register","reg_default":"Specify the default value for register",
-			   "doc":"Used to add description","addr_sort":"Property to sort the unordered registers",
-			   "display_name":"Property to expand array element with name indexing",
-			   "is_rsv":"Reserves the space in the memory","output_file_name":"Creates the output file in the name assigned to this property",
-			   "vhdl.arch(vhdl.arch)":"Used to change the architecture name of the block/chip",
-			   "vhdl.entity":"Changes the name of the entity in the VHDL output","vhdl.package":"Changes the name of the generated VHDL package",
-			   "module_name":"Changes the name of the module in the verilog output",
-			   "rtl.clock_name(default_clock_name)":"To customize clock name",
-			   "registered":"Indicates whether to register the signal coming into the generated module is from the hardware side. Hardware access must be set to writeable.",
-			   "rb_valid_stages":"Additional register stages to be added to the valid signal (rd_data_valid) on the read back path from the generated block",
-			   "rb_data_stages":"Additional register stages to be added to the data signal (rd_data) on the read back path from the generated block",
-			   "rtl.byte_enable":"To exclude/include bytenable signal in case of Proprietary bus",
-			   "rtl.name_format":"Required for formating of signal.","addr_decode_stages":"Additional register stages to be added to the decode signal",
-			   "wr_stb_stages":"To add the stages in write strobe","rd_stb_stages":"To add the stages in read strobe",
-			   "next":"It describes next input value of field.","buffer_trig":"used to specify a field of any register as a trigger",
-			   "external_intf_stages":"To remove the flops from the external output signal in vhdl",
-			   "cdc.clock":"Add Clock Domain Crossing synchronizers to the field signals",
-			   "we":"To change write enable of specific field.","reg_wprot":"To protect the register from the SW ( AXI bus) side",
-			   "reg_rprot":"To protect the register to read its value from the SW (AXI bus) side",
-			   "reg_prot":"To protect the register  from the SW (APB bus) side",
-			   "sharedextbus":"To configure all external registers to share a common bus",
-			   "rtl.hw_enb":"Create an input enable signal on the hardware interface when the field is HW writable '<reg>_<field>_in_enb'",
-			   "rtl.reg_enb":"Create an output signal '<reg>_enb' on the hardware interface if SW access of the register is writable irrespective of the HW access",
-			   "rtl.precedence":"To prioritize HW/SW for write operation","virtual":"To specify an indirect address map",
-			   "rtl.axi4_prot":"For '0' assignment to protection signals in IDS generated RTL",
-			   "out_enb_stages":"To add the stages in out enb port",
-			   "sw_bit_enable":"Refers the ability to enable write operation to a register/field bits via register/field bits given in the value of property",
-			   "rtl.bit_enable":"Bit enabled addressing refers to ability to read and write to an individual bit field in a register via software bus interface. A 'bitenable' signal is introduced which is a vector of length equal to regwidth",
-			   "byte_addressing":"No description found","avalon_noburst":"To remove bursting from avalon bus.",
-			   "wr_rd_valids":"New property that create write and read valids on register inside external reggroup",
-			   "addressing":"To alignment of address for registers with different register width.",
-			   "counter.incr.val":"This specifies the value by which the counter is incremented",
-			   "counter.decr.val":"This specifies the value by which the counter is decremented",
-			   "counter.incr.sat":"This specifies the value after which the incrementing counter will not  increment",
-			   "counter.decr.sat":"This specifies the value after which the decrementing counter will stop decrementing",
-			   "counter.incr.thld":"Threshold counters are inferred to contain an output which designates whether the counter's value exceeds the threshold.",
-			   "counter.decr.thld":"Threshold counters are inferred to contain an output which designates whether the counter’s value is lower the threshold.",
-			   "counter.sat":"This specifies that the counter is saturated and the saturation by default is 2^(number of bits) if the counter.decr.sat or counter.incr.sat is not specified",
-			   "counter.signal":"This is used to control the increment and decrement events of a counter. It is an Active-High event.",
-			   "counter.sw.wr":"This specifies that the counter is incrementing/decrementing for write operation from SW interface.",
-			   "counter.sw.rd":"This specifies that the counter is incrementing/decrementing for read operation from SW interface.",
-			   "counter.precedence":"This property is used to change the sequence of precedence for all three type of counters.",
-			   "counter.hw.enb":"To specify enable signal for HW write","counter.sw.wr.enb":"To specify enable signal for SW write",
-			   "counter.sw.rd.enb":"To specify enable for SW read",
-			   "intr.in":"intr.in is used to specify name of one or multi bit interrupt input signal that needs to be simply ORed ,not registered in flip flops ",
-			   "intr.out":"intr.out specifies the name of the output interrupt signal,to translate it into RTL",
-			   "intr.status":"Identifies the status register for the interrupt logic","intr.enable":"Identifies the enable register for the interrupt logic",
-			   "intr.irq_bit":"The ORed value of all the interrupt channel after enable control logic can be registered and is stored in a field.Output interrupt signal specified in property intr.out is registered in this field",
-			   "intr.detect":"intr.detect is used to specify the detection circuitry for input interupt signal registered in any of register/field identified as status or pending",
-			   "intr.post":"int.post is used to register software driven interrupts",
-			   "intr.mask":"intr.mask is used to specify the mask register for the interrupt logic",
-			   "halt.enable":"enables the halt signal to propagate to CPU",
-			   "halt.mask":"Halt mask bit corresponding to Status register bit decides that those halt signals will not be allowed to propagate to main halt signal",
-			   "intr.nonsticky":"intr.nonsticky property defines a nonsticky interrupt. The associated interrupt field shall not be locked",
-			   "intr.irq_per_channel":"To generate per channel Interrupt output"
+				   "counter":"This specifies whether the counter will be incrementing or decrementing","size":"Specifies the size of the template",
+				   "offset":"The value specifies the offset with respect to the container",
+				   "external":"to implement the template outside the generated RTL.",
+				   "variant":"Specifies the name of the Variant that the template is in.",
+				   "ref":"To reference the signals present in other blocks",
+				   "Refvariant":"Specifies the name of the Variant that is referred from the referred file",
+				   "override":"used to override the defines/parameters of the included document with the values of the respective parameters/defines in the current document",
+				   "reg_hw":"Specify the hw access for register","reg_sw":"Specify the sw access for register","reg_default":"Specify the default value for register",
+				   "doc":"Used to add description","addr_sort":"Property to sort the unordered registers",
+				   "display_name":"Property to expand array element with name indexing",
+				   "is_rsv":"Reserves the space in the memory","output_file_name":"Creates the output file in the name assigned to this property",
+				   "vhdl.arch(vhdl.arch)":"Used to change the architecture name of the block/chip",
+				   "vhdl.entity":"Changes the name of the entity in the VHDL output","vhdl.package":"Changes the name of the generated VHDL package",
+				   "module_name":"Changes the name of the module in the verilog output",
+				   "rtl.clock_name(default_clock_name)":"To customize clock name",
+				   "registered":"Indicates whether to register the signal coming into the generated module is from the hardware side. Hardware access must be set to writeable.",
+				   "rb_valid_stages":"Additional register stages to be added to the valid signal (rd_data_valid) on the read back path from the generated block",
+				   "rb_data_stages":"Additional register stages to be added to the data signal (rd_data) on the read back path from the generated block",
+				   "rtl.byte_enable":"To exclude/include bytenable signal in case of Proprietary bus",
+				   "rtl.name_format":"Required for formating of signal.","addr_decode_stages":"Additional register stages to be added to the decode signal",
+				   "wr_stb_stages":"To add the stages in write strobe","rd_stb_stages":"To add the stages in read strobe",
+				   "next":"It describes next input value of field.","buffer_trig":"used to specify a field of any register as a trigger",
+				   "external_intf_stages":"To remove the flops from the external output signal in vhdl",
+				   "cdc.clock":"Add Clock Domain Crossing synchronizers to the field signals",
+				   "we":"To change write enable of specific field.","reg_wprot":"To protect the register from the SW ( AXI bus) side",
+				   "reg_rprot":"To protect the register to read its value from the SW (AXI bus) side",
+				   "reg_prot":"To protect the register  from the SW (APB bus) side",
+				   "sharedextbus":"To configure all external registers to share a common bus",
+				   "rtl.hw_enb":"Create an input enable signal on the hardware interface when the field is HW writable '<reg>_<field>_in_enb'",
+				   "rtl.reg_enb":"Create an output signal '<reg>_enb' on the hardware interface if SW access of the register is writable irrespective of the HW access",
+				   "rtl.precedence":"To prioritize HW/SW for write operation","virtual":"To specify an indirect address map",
+				   "rtl.axi4_prot":"For '0' assignment to protection signals in IDS generated RTL",
+				   "out_enb_stages":"To add the stages in out enb port",
+				   "sw_bit_enable":"Refers the ability to enable write operation to a register/field bits via register/field bits given in the value of property",
+				   "rtl.bit_enable":"Bit enabled addressing refers to ability to read and write to an individual bit field in a register via software bus interface. A 'bitenable' signal is introduced which is a vector of length equal to regwidth",
+				   "byte_addressing":"No description found","avalon_noburst":"To remove bursting from avalon bus.",
+				   "wr_rd_valids":"New property that create write and read valids on register inside external reggroup",
+				   "addressing":"To alignment of address for registers with different register width.",
+				   "counter.incr.val":"This specifies the value by which the counter is incremented",
+				   "counter.decr.val":"This specifies the value by which the counter is decremented",
+				   "counter.incr.sat":"This specifies the value after which the incrementing counter will not  increment",
+				   "counter.decr.sat":"This specifies the value after which the decrementing counter will stop decrementing",
+				   "counter.incr.thld":"Threshold counters are inferred to contain an output which designates whether the counter's value exceeds the threshold.",
+				   "counter.decr.thld":"Threshold counters are inferred to contain an output which designates whether the counter’s value is lower the threshold.",
+				   "counter.sat":"This specifies that the counter is saturated and the saturation by default is 2^(number of bits) if the counter.decr.sat or counter.incr.sat is not specified",
+				   "counter.signal":"This is used to control the increment and decrement events of a counter. It is an Active-High event.",
+				   "counter.sw.wr":"This specifies that the counter is incrementing/decrementing for write operation from SW interface.",
+				   "counter.sw.rd":"This specifies that the counter is incrementing/decrementing for read operation from SW interface.",
+				   "counter.precedence":"This property is used to change the sequence of precedence for all three type of counters.",
+				   "counter.hw.enb":"To specify enable signal for HW write","counter.sw.wr.enb":"To specify enable signal for SW write",
+				   "counter.sw.rd.enb":"To specify enable for SW read",
+				   "intr.in":"intr.in is used to specify name of one or multi bit interrupt input signal that needs to be simply ORed ,not registered in flip flops ",
+				   "intr.out":"intr.out specifies the name of the output interrupt signal,to translate it into RTL",
+				   "intr.status":"Identifies the status register for the interrupt logic","intr.enable":"Identifies the enable register for the interrupt logic",
+				   "intr.irq_bit":"The ORed value of all the interrupt channel after enable control logic can be registered and is stored in a field.Output interrupt signal specified in property intr.out is registered in this field",
+				   "intr.detect":"intr.detect is used to specify the detection circuitry for input interupt signal registered in any of register/field identified as status or pending",
+				   "intr.post":"int.post is used to register software driven interrupts",
+				   "intr.mask":"intr.mask is used to specify the mask register for the interrupt logic",
+				   "halt.enable":"enables the halt signal to propagate to CPU",
+				   "halt.mask":"Halt mask bit corresponding to Status register bit decides that those halt signals will not be allowed to propagate to main halt signal",
+				   "intr.nonsticky":"intr.nonsticky property defines a nonsticky interrupt. The associated interrupt field shall not be locked",
+				   "intr.irq_per_channel":"To generate per channel Interrupt output"
 
-			  };
+				  };
 
 var ids_sw_access={"a0":"","a1":"","ro":"readonly","wo":"writeonly","w0t":"write 0 to toggle","w0c":"write 0 to clear","ws":"sw write to set","wc":"sw write to clear",
 				   "wcrs":"sw write to clear, sw read to set","wrs":"sw writable, sw read to set","wrc":"sw writable, sw read to clear",
@@ -2583,11 +2807,15 @@ function bindJSONObj(){
 	try{
 		var doc=document.getElementsByClassName("ip")[0];
 		if(doc){
-			var ip_name=doc.innerText.trim();
-			var document_name=getDocumentName().split(".")[0];
+			var ip_name=doc.innerText.trim().split(".")[0];
+			var document_name=getDocumentName().replace(".~$","").split(".")[0];
 			var regdiv;
 			if(document_name==ip_name||getDocumentName()==ip_name){
 				regdiv=document.getElementById("regdivcontainer");
+				var refdiv=document.getElementById("refdiv");
+				if(refdiv){
+					refdiv.innerHTML="";
+				}
 			}
 			else{
 				regdiv=document.getElementById("refdiv");
@@ -2613,6 +2841,10 @@ function bindJSONObj(){
 	catch(e){}
 }
 
+function getCurrentDocumentPath(){
+	var p=getDocumentName().replace(".~$","").split(".")[0];
+	return p+".idsng";
+}
 function create_reg_arr(regdiv){
 	var ids_temps=regdiv.getElementsByClassName("idsTemp");
 	var str={};
@@ -2642,7 +2874,6 @@ function get_section_reglist(section,refele){
 		}
 		if(start_reg){
 			clss=tab_list[i].getAttribute("class").split(" ")[0];
-			console.log("--clss==="+clss);
 			if(clss=="endreggroup"){
 				break;
 			}
@@ -2747,3 +2978,522 @@ function load_ips(obj){
 }
 /*****************************************Auto property hints work end*******************************************************/
 var regdivcontainer;
+
+
+/*****************************************Excel work starts from here*******************************************************/
+
+function dotheneedful(sibling,start) {
+	if (sibling != null) {
+		start.focus();		
+		sibling.focus();
+		start = sibling;
+	}
+}
+
+
+function spreadsheetKeyEventHandler(e) {
+	e = e || window.event;
+	var start= event.target || event.srcElement;
+	if (e.keyCode == '38') {
+		// up arrow
+		var idx = start.cellIndex;
+		var nextrow = start.parentElement.previousElementSibling;
+		if (nextrow != null) {
+			var sibling = nextrow.cells[idx];
+			dotheneedful(sibling,start);
+		}
+	} else if (e.keyCode == '40') {
+		// down arrow
+		var idx = start.cellIndex;
+		var nextrow = start.parentElement.nextElementSibling;
+		if (nextrow != null) {
+			var sibling = nextrow.cells[idx];
+			dotheneedful(sibling,start);
+		}
+	} 
+}
+
+
+$(function() {
+
+
+});
+
+function getAlphabetsForColumn(index){
+	var alphas=alphabets.split('');
+
+	var num=index;
+	var finalAlpa="";
+	while(num>-1){
+		if(num>24){
+			finalAlpa=finalAlpa+alphas[0];
+			num=num-25;
+		}else{
+			finalAlpa=finalAlpa+alphas[num];
+			num=-1;
+		}
+	}
+	return finalAlpa;
+}
+
+function insertcolright(obj){
+	addIntoHistory();
+	while(clickedEl.tagName.toUpperCase() !== "TD") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var col_num=clickedEl.cellIndex;
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+
+	var rows=table.getElementsByTagName("tr");
+
+	for(var i=0;i<rows.length;i++){
+		var newEl = document.createElement('td');
+
+		if(i==0){
+			newEl.innerHTML = '<div class="col"></div>';
+		}
+		else{
+			newEl.setAttribute("tabindex","0");
+		}
+		table.rows[i].cells[col_num].after(newEl);
+	}
+	reArrangeColNum(table);
+	addIntoHistory();
+}
+
+function insertrowbelow(obj){
+	addIntoHistory();
+	while(clickedEl.tagName.toUpperCase() !== "TR") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var tabrow=clickedEl;
+
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+	var row_num=tabrow.rowIndex;
+
+	var row = table.insertRow(row_num+1);
+	row.setAttribute('class','edited');
+	row.setAttribute('id',"tab"+Math.random());
+	var col_count=table.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
+	var cell;
+	for(var i=0;i<col_count;i++){
+		cell=row.insertCell(i);
+		if(i==0){
+			cell.setAttribute("class","leftheader");			 
+		}
+		else{
+			cell.setAttribute("tabindex","0");			
+		}
+	}
+	reArrangeRowNum(table);
+	addIntoHistory();
+}
+
+function reArrangeRowNum(table){
+	var row=table.getElementsByClassName("leftheader");
+	for(var i=0;i<row.length;i++){
+		row[i].innerHTML=i+1;
+	}
+}
+
+function reArrangeColNum(table){
+	console.log("call rearrg col");
+	var col=table.rows[0].getElementsByTagName("td");
+	for(var i=1;i<col.length;i++){
+		col[i].innerHTML=getAlphabetsForColumn(i-1);
+	}
+}
+
+var excellastselect=document.createElement("div");
+
+
+function insertAfter(newNode, referenceNode) {
+	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+var iscopy=true;
+var row_copy_req=true;
+var copycolele=null;
+function cutrow(obj){
+	iscopy=false;
+}
+
+function copyrow(obj){
+	row_copy_req=true;
+	/*copyrow=true;
+	while(clickedEl.tagName.toUpperCase() !== "TR") {
+		clickedEl = clickedEl.parentNode;
+	}
+	excellastselect=clickedEl.outerHTML;
+	*/
+	excellastselect.innerHTML="";
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+
+	var tempTable=document.createElement("table");
+	for(var i=0;i<selected_rows.length;i++){
+		var tempRow=tempTable.insertRow(i);
+		tempRow.innerHTML=table.rows[selected_rows[i]].outerHTML;
+	}
+	excellastselect.appendChild(tempTable);
+}
+
+function copycolumn(obj){
+	row_copy_req=false;
+	while(clickedEl.tagName.toUpperCase() !== "TD") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var cellindex=clickedEl.cellIndex;
+
+
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+	var rows=table.rows;
+
+	var temprow=document.createElement("tr");
+
+	for(var i=0;i<rows.length;i++){
+		var tempcol=temprow.insertCell(i);
+		tempcol.innerHTML=rows[i].cells[cellindex].innerHTML;
+
+		if(i>0){
+			tempcol.setAttribute("tabindex","0");
+		}
+	}
+	copycolele=temprow;
+	console.log("--tempcol="+temprow.outerHTML);
+}
+
+function copyexcelrow(){
+	try 
+	{
+		iscopy=true;
+		//var table = document.getElementById(tableID);
+		var isrowdelete=false;
+		var rowCount = table.rows.length;
+		for(var i=0; i<rowCount; i++) 
+		{
+			var row    = table.rows[i];
+			var chkbox = row.cells[0].getElementsByTagName("input")[0];
+			if(null != chkbox && true == chkbox.checked) 
+			{
+				var count =excelcount;
+				var c = parseInt(count)-parseInt(1); 
+				if(rowCount <= 1) 
+				{
+					alert("Cannot delete all the rows.");
+					break;
+				}
+				table.deleteRow(i);
+				rowCount--;
+				i--;
+				excelcount=c;
+				isrowdelete=true;
+				/*$('#count').val(c);*/
+			}
+		}
+		return isrowdelete;
+	}
+	catch(e)
+	{
+		alert(e);
+	}
+	return isrowdelete;
+}
+
+function pasterow(obj){
+	addIntoHistory();
+	if(row_copy_req){
+		if(excellastselect){
+			/*
+			while(clickedEl.tagName.toUpperCase() !== "TR") {
+				clickedEl = clickedEl.parentNode;
+			}
+			var tabrow=clickedEl;
+			var rowindex=clickedEl.rowIndex;
+
+			while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+				clickedEl = clickedEl.parentNode;
+			}
+			var table=clickedEl;
+
+
+			var ismutiple=pasteMultipleRows(table,rowindex);
+			if(!ismutiple)		{
+				var row = table.insertRow(parseInt(rowindex+1));
+				row.innerHTML=excellastselect;
+			}
+			else{
+				console.log("not deleted");
+			}
+			*/
+			while(clickedEl.tagName.toUpperCase() !== "TR") {
+				clickedEl = clickedEl.parentNode;
+			}
+			var rowindex=clickedEl.rowIndex;
+			while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+				clickedEl = clickedEl.parentNode;
+			}
+			var table=clickedEl;
+
+			var rowCount = table.rows.length;
+			var deleteCount=0;
+			var index=0;
+			var copiedRows=excellastselect.getElementsByTagName("table")[0].rows;
+
+			for(var i=copiedRows.length-1;i>=0;i--){
+				var curRow=table.insertRow(rowindex+1);
+				curRow.innerHTML=copiedRows[i].innerHTML;
+				curRow.setAttribute("id","row"+Math.random());
+			}
+
+			reArrangeRowNum(table);
+			excellastselect.innerHTML="";
+		}
+	}
+	else {
+		while(clickedEl.tagName.toUpperCase() !== "TD") {
+			clickedEl = clickedEl.parentNode;
+		}
+		var col_num=clickedEl.cellIndex;
+		while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+			clickedEl = clickedEl.parentNode;
+		}
+		var table=clickedEl;
+
+		var rows=table.getElementsByTagName("tr");
+		if(copycolele){
+			for(var i=0;i<rows.length;i++){
+				var newEl = document.createElement('td');
+
+				if(i==0){
+					//newEl.innerHTML = '<div class="col"><input tabindex="-1" class="cellrb" name="col" type="radio"></div>';
+				}
+				else{
+					newEl.setAttribute("tabindex","0");
+				}
+				newEl.innerHTML=copycolele.cells[i].innerHTML;
+				table.rows[i].cells[col_num].after(newEl);
+
+			}
+		}
+	}
+	addIntoHistory();
+}
+
+function pasteMultipleRows(table,curr_index){
+	try 
+	{
+		addIntoHistory();
+		var isrowdelete=false;
+		var rowCount = table.rows.length;
+		for(var i=rowCount-1; i>=0; i--) 
+		{
+			try{
+				var row    = table.rows[i];
+
+				var chkbox = row.cells[0].getElementsByTagName("input")[0];
+				if(null != chkbox && true == chkbox.checked) 
+				{
+
+					var row2=table.insertRow(curr_index+1);
+					row2.innerHTML=row.innerHTML;
+					isrowdelete=true;
+				}
+			}catch(ee){}
+		}
+		return isrowdelete;
+	}
+	catch(e)
+	{
+		console.log(e);
+	}
+	addIntoHistory();
+	return isrowdelete;
+}
+
+function deleterow(obj){
+	/*
+	while(clickedEl.tagName.toUpperCase() !== "TR") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var tabrow=clickedEl;
+
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+
+	if(!deleteExcelRow(table)){
+		table.deleteRow(tabrow.rowIndex);
+	}
+
+	reArrangeRowNum(table);
+	*/
+	addIntoHistory();
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+
+	var rowCount = table.rows.length;
+	var deleteCount=0;
+	var index=0;
+	for(var i=0;i<selected_rows.length;i++){
+		index=selected_rows[i]-deleteCount;
+		table.deleteRow(index);
+		deleteCount++;
+	}
+	reArrangeRowNum(table);
+	addIntoHistory();
+}
+
+
+function deletecolumn(obj){
+	addIntoHistory();
+	while(clickedEl.tagName.toUpperCase() !== "TD") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var tabcell=clickedEl;
+
+
+	while(clickedEl.tagName.toUpperCase() !== "TABLE") {
+		clickedEl = clickedEl.parentNode;
+	}
+	var table=clickedEl;
+	var exelrows=table.rows;
+	var rows=table.rows;
+	var cellindex=tabcell.cellIndex;
+	for(var i=0;i<rows.length;i++){
+		rows[i].deleteCell(cellindex);
+	}
+	reArrangeColNum(table);
+	addIntoHistory();
+}
+
+
+function openexcelmenu(event){
+	event.preventDefault();
+	var x=event.pageX;
+	var y=event.pageY;
+	$('#excelmenu').css({'display':'block','left':x,'top':y});
+
+}
+
+function hidetemplate(){
+	document.getElementById("exceltemplate").style.display="none";
+	$("#backhidder").css("z-index","-1")
+}
+
+function showTemplate(){
+	document.getElementById("exceltemplate").style.display="block";
+	$("#backhidder").css("z-index","0");
+}
+
+function deletetemprow(row){
+	var rowindex=row.parentNode.parentNode.rowIndex;
+	while(row.tagName.toUpperCase() !== "TABLE") {
+		row = row.parentNode;
+	}
+	row.deleteRow(rowindex);
+}
+
+function addtemprow(row){
+	var rowindex=row.parentNode.parentNode.rowIndex;
+	while(row.tagName.toUpperCase() !== "TABLE") {
+		row = row.parentNode;
+	}
+
+	var table=row;
+
+	var newrow = table.insertRow(parseInt(rowindex+1));
+	var cell=newrow.insertCell(0);
+	cell.innerHTML="<a href='#' onclick='addtemprow(this);' title='add row' >+</a><span> </span><a title='delete row' href='#' onclick='deletetemprow(this);' >x</a>";
+
+	newrow.insertCell(1);
+	newrow.insertCell(2);	
+}
+
+
+
+
+function resizeexcel(){
+	var exceltab=document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable");
+	for(var i=0;i<exceltab.length;i++){
+		var td=exceltab[i].getElementsByTagName("td");
+		for(var j=0;j<td.length;j++){
+			var div=td[j].getElementsByTagName("div")[0];
+			if(div){
+				div.style.removeProperty("width");
+				div.style.removeProperty("height");
+			}
+		}
+	}
+}
+
+var excelcount=1;
+function deleteExcelRow(table) 
+{
+	try 
+	{
+		//var table = document.getElementById(tableID);
+		var isrowdelete=false;
+		var rowCount = table.rows.length;
+		for(var i=0; i<rowCount; i++) 
+		{
+			var row    = table.rows[i];
+			var chkbox = row.cells[0].getElementsByTagName("input")[0];
+			if(null != chkbox && true == chkbox.checked) 
+			{
+				var count =excelcount;
+				var c = parseInt(count)-parseInt(1); 
+				if(rowCount <= 1) 
+				{
+					alert("Cannot delete all the rows.");
+					break;
+				}
+				table.deleteRow(i);
+				rowCount--;
+				i--;
+				excelcount=c;
+				isrowdelete=true;
+				/*$('#count').val(c);*/
+			}
+		}
+		return isrowdelete;
+	}
+	catch(e)
+	{
+		alert(e);
+	}
+	return isrowdelete;
+}
+
+function deleteExcelCol(table){
+	var cellrb=table.getElementsByClassName("cellrb");
+	for(var i=0;i<cellrb.length;i++){
+		if(null!=cellrb[i]&&cellrb[i].checked==true){
+			var cellInex=cellrb[i].parentNode.parentNode.cellIndex;
+			var rows=table.rows;
+			for(var i=0;i<rows.length;i++){
+				rows[i].deleteCell(cellInex);
+			}
+			break;
+		}
+	}
+}
+
+
+
+/*****************************************Excel work end here*******************************************************/
+
