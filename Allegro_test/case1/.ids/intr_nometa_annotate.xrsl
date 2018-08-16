@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab00.2976704691027916" name="B1" intr.in="a1,a2" uid="2018-08-16T15:09:04.096+05:30d14e1" keypath="B1" offset="0" caddress="0" hwmapaddr="67" csize="8" diff_regwidth="true" address="0x0" endaddress="0x7" size="8">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x7" size="8"/>
+      </busdomains>
+   </config>
+   <doc/>
+   <section heading="1.1" child_no="1" id="tab10.7868530311270556" name="reg_group_name1" uid="2018-08-16T15:09:04.096+05:30d14e14" keypath="B1.reg_group_name1,reg_group_name1" keypathdown="reg_group_name1.R1.R2,R1,R2" hwmapaddr="68" max_reg_size="16" csize="4" offset="0" caddress="0" address="0x0" endaddress="0x3" size="4">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="tab20.364293682728689" name="R1" intr.detect="negedge" intr.status="a" uid="2018-08-16T15:09:04.096+05:30d14e16" keypath="B1.reg_group_name1.R1,reg_group_name1.R1,R1" hwmapaddr="69" csize="2" offset="0" caddress="0" address="0x0" endaddress="0x1" size="2" default="0x0000" sw="rc r/w1c" hw="rw wo">
+         <config>
+            <regwidth>16</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x1" size="2"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed00.2855636554080492" offset="15:7" name="F11" uid="2018-08-16T15:09:04.096+05:30d14e21" keypath="B1.reg_group_name1.R1.F11,reg_group_name1.R1.F11,R1.F11,F11">
+            <sw>rc</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000</default>
+         </field>
+         <field id="tabed10.8626202958159387" offset="6:0" name="F12" uid="2018-08-16T15:09:04.096+05:30d14e28" keypath="B1.reg_group_name1.R1.F12,reg_group_name1.R1.F12,R1.F12,F12">
+            <sw>r/w1c</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0">0000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" id="tab40.21274486351269428" name="R2" intr.enable="a" uid="2018-08-16T15:09:04.096+05:30d14e35" keypath="B1.reg_group_name1.R2,reg_group_name1.R2,R2" hwmapaddr="70" csize="2" offset="2" caddress="2" address="0x2" endaddress="0x3" size="2" default="0x0000" sw="rw" hw="rw">
+         <config>
+            <regwidth>16</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0x2" endaddress="0x3" size="2"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tabed20.022854126194439273" offset="15:7" name="F21" uid="2018-08-16T15:09:04.096+05:30d14e40" keypath="B1.reg_group_name1.R2.F21,reg_group_name1.R2.F21,R2.F21,F21">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000</default>
+         </field>
+         <field id="tabed30.5469408853405953" offset="6:0" name="F22" uid="2018-08-16T15:09:04.096+05:30d14e47" keypath="B1.reg_group_name1.R2.F22,reg_group_name1.R2.F22,R2.F22,F22">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000</default>
+         </field>
+      </reg>
+   </section>
+   <reg heading="1.2" child_no="2" id="tab70.6621904653117704" name="R3" intr.detect="negedge" intr.detect_nometa="true" intr.status="b" uid="2018-08-16T15:09:04.096+05:30d14e54" keypath="B1.R3,R3" hwmapaddr="71" csize="2" offset="4" caddress="4" address="0x4" endaddress="0x5" size="2" default="0x0000" sw="rc r/w1c" hw="rw wo">
+      <config>
+         <regwidth>16</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x4" endaddress="0x5" size="2"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <field id="tabed40.8280416472141288" offset="15:7" name="F11" uid="2018-08-16T15:09:04.096+05:30d14e59" keypath="B1.R3.F11,R3.F11,F11">
+         <sw>rc</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000</default>
+      </field>
+      <field id="tabed50.3287765701350439" offset="6:0" name="F12" uid="2018-08-16T15:09:04.096+05:30d14e66" keypath="B1.R3.F12,R3.F12,F12">
+         <sw>r/w1c</sw>
+         <hw>wo</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+   </reg>
+   <reg heading="1.3" child_no="3" id="tab90.35420282170549156" name="R4" intr.enable="b" uid="2018-08-16T15:09:04.096+05:30d14e73" keypath="B1.R4,R4" hwmapaddr="72" csize="2" offset="6" caddress="6" address="0x6" endaddress="0x7" size="2" default="0x0000" sw="rw" hw="rw">
+      <config>
+         <regwidth>16</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="6" address="0x6" endaddress="0x7" size="2"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <field id="tabed60.6436416424151953" offset="15:7" name="F21" uid="2018-08-16T15:09:04.096+05:30d14e78" keypath="B1.R4.F21,R4.F21,F21">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000</default>
+      </field>
+      <field id="tabed70.054713105480804214" offset="6:0" name="F22" uid="2018-08-16T15:09:04.096+05:30d14e85" keypath="B1.R4.F22,R4.F22,F22">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+   </reg>
+</block>

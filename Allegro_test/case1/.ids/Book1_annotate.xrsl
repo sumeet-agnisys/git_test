@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" name="chip1" id="8:1" uid="2018-08-16T16:13:31.27+05:30d14e1" keypath="chip1" offset="0" caddress="0" hwmapaddr="105" csize="408" address="0x000" endaddress="0x197" size="408">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x197" size="408"/>
+      </busdomains>
+   </config>
+   <signals name="signal name">
+      <signal port="in" id="2:1" uid="2018-08-16T16:13:31.27+05:30d14e14" export="true" width="1" oldSignalName="s1" name="s1"/>
+      <signal port="out" id="3:1" uid="2018-08-16T16:13:31.27+05:30d14e15" export="true" width="1" oldSignalName="s2" name="s2"/>
+   </signals>
+   <block heading="1.1" child_no="1" name="block4" id="9:2" uid="2018-08-16T16:13:31.27+05:30d14e16" keypath="chip1.block4,block4" count="10" hwmapaddr="106" csize="400" offset="0" caddress="0" address="0x000" endaddress="0x18F" size="40" address2="0x028">
+      <config>
+         <repeats>
+            <repeat count="10" name="block4"/>
+         </repeats>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x18F" size="40" address2="0x028"/>
+         </busdomains>
+      </config>
+      <doc>, </doc>
+      <section heading="1.1.1" child_no="1" name="reggroup1" external="true" type="mem" id="10:11" uid="2018-08-16T16:13:31.27+05:30d14e22" keypath="chip1.block4.reggroup1,block4.reggroup1,reggroup1" keypathdown="reggroup1.reggroup1,reggroup1" count="10" hwmapaddr="107" max_reg_size="32" csize="40" offset="0" caddress="0" address="0x000" endaddress="0x27" size="4" address2="0x004">
+         <config>
+            <repeats>
+               <repeat count="10" name="reggroup1"/>
+            </repeats>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x27" size="4" address2="0x004"/>
+            </busdomains>
+         </config>
+         <doc>, </doc>
+         <reg heading="1.1.1.1" child_no="1" name="reggroup1" id="11:3" uid="2018-08-16T16:13:31.27+05:30d14e28" keypath="chip1.block4.reggroup1.reggroup1,block4.reggroup1.reggroup1,reggroup1.reggroup1,reggroup1" type="mem" hwmapaddr="108" csize="4" offset="0" caddress="0" address="0x000" endaddress="0x3" size="4" address2="0x004" default="0x00000000" sw="ro" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x3" size="4" address2="0x004"/>
+               </busdomains>
+            </config>
+            <field name="reggroup1" offset="0:31" id="12:5" uid="2018-08-16T16:13:31.27+05:30d14e32" keypath="chip1.block4.reggroup1.reggroup1.reggroup1,block4.reggroup1.reggroup1.reggroup1,reggroup1.reggroup1.reggroup1,reggroup1.reggroup1,reggroup1">
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+               <sw>ro</sw>
+               <hw>rw</hw>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <block heading="1.2" child_no="2" name="block1" id="17:2" uid="2018-08-16T16:13:31.27+05:30d14e39" keypath="chip1.block1,block1" hwmapaddr="109" csize="4" offset="400" caddress="400" address="0x190" endaddress="0x193" size="4">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="400" address="0x190" endaddress="0x193" size="4"/>
+         </busdomains>
+      </config>
+      <section heading="1.2.1" child_no="1" name="reggroup1" id="18:11" uid="2018-08-16T16:13:31.27+05:30d14e41" keypath="chip1.block1.reggroup1,block1.reggroup1,reggroup1" keypathdown="reggroup1.reg2,reg2" hwmapaddr="110" max_reg_size="32" csize="4" offset="0" caddress="0" address="0x190" endaddress="0x193" size="4">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x190" endaddress="0x193" size="4"/>
+            </busdomains>
+         </config>
+         <reg heading="1.2.1.1" child_no="1" name="reg2" id="22:3" uid="2018-08-16T16:13:31.27+05:30d14e43" keypath="chip1.block1.reggroup1.reg2,block1.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="111" csize="4" offset="0" caddress="0" address="0x190" endaddress="0x193" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x190" endaddress="0x193" size="4"/>
+               </busdomains>
+            </config>
+            <field name="f1" offset="15:0" id="23:5" uid="2018-08-16T16:13:31.27+05:30d14e47" keypath="chip1.block1.reggroup1.reg2.f1,block1.reggroup1.reg2.f1,reggroup1.reg2.f1,reg2.f1,f1">
+               <default unresolvedDef="0">0000000000000000</default>
+               <sw>rw</sw>
+               <hw>rw</hw>
+            </field>
+            <field name="f2" offset="31:16" field_temp_default="0x0" id="24:5" uid="2018-08-16T16:13:31.27+05:30d14e54" keypath="chip1.block1.reggroup1.reg2.f2,block1.reggroup1.reg2.f2,reggroup1.reg2.f2,reg2.f2,f2">
+               <default unresolvedDef="0">0000000000000000</default>
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <doc/>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <block heading="1.3" child_no="3" name="block3" id="30:2" uid="2018-08-16T16:13:31.27+05:30d14e62" keypath="chip1.block3,block3" hwmapaddr="112" csize="4" offset="404" caddress="404" address="0x194" endaddress="0x197" size="4">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="404" address="0x194" endaddress="0x197" size="4"/>
+         </busdomains>
+      </config>
+      <section heading="1.3.1" child_no="1" name="reggroup1" id="31:11" uid="2018-08-16T16:13:31.27+05:30d14e64" keypath="chip1.block3.reggroup1,block3.reggroup1,reggroup1" keypathdown="reggroup1.reg2,reg2" hwmapaddr="113" max_reg_size="32" csize="4" offset="0" caddress="0" address="0x194" endaddress="0x197" size="4">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x194" endaddress="0x197" size="4"/>
+            </busdomains>
+         </config>
+         <reg heading="1.3.1.1" child_no="1" name="reg2" id="35:3" uid="2018-08-16T16:13:31.27+05:30d14e66" keypath="chip1.block3.reggroup1.reg2,block3.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="114" csize="4" offset="0" caddress="0" address="0x194" endaddress="0x197" size="4" default="0x00000000" sw="ro" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x194" endaddress="0x197" size="4"/>
+               </busdomains>
+            </config>
+            <field name="f1" offset="15:0" field_temp_default="0x0" id="36:5" uid="2018-08-16T16:13:31.27+05:30d14e70" keypath="chip1.block3.reggroup1.reg2.f1,block3.reggroup1.reg2.f1,reggroup1.reg2.f1,reg2.f1,f1">
+               <default unresolvedDef="0">0000000000000000</default>
+               <sw>ro</sw>
+               <hw>rw</hw>
+               <doc/>
+            </field>
+            <field name="f2" offset="31:16" field_temp_default="0x0" id="37:5" uid="2018-08-16T16:13:31.27+05:30d14e78" keypath="chip1.block3.reggroup1.reg2.f2,block3.reggroup1.reg2.f2,reggroup1.reg2.f2,reg2.f2,f2">
+               <default unresolvedDef="0">0000000000000000</default>
+               <sw>ro</sw>
+               <hw>rw</hw>
+               <doc/>
+            </field>
+         </reg>
+      </section>
+   </block>
+</chip>

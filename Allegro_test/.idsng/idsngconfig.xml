@@ -6,10 +6,7 @@
   <log>false</log>
   <outdir></outdir>
   <outputs>
-    <header>false</header>
-    <headeralt2>true</headeralt2>
-    <misrac>false</misrac>
-    <ivs>false</ivs>
+    <ivs>true</ivs>
     <arv>false</arv>
     <special_reg></special_reg>
     <cmsis>false</cmsis>
@@ -29,13 +26,13 @@
     <iss_sv>false</iss_sv>
     <iss_uvm>false</iss_uvm>
     <iss_matlab>false</iss_matlab>
-    <header>true</header>
+    <header>false</header>
     <html>false</html>
     <xrsl>false</xrsl>
     <word>false</word>
     <rdl>false</rdl>
     <erm>false</erm>
-    <ivs>false</ivs>
+    <ivs>true</ivs>
     <svheader>false</svheader>
     <svg>false</svg>
     <datasheet>false</datasheet>
