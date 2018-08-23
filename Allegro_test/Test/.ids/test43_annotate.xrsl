@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<block heading="1" child_no="1" id="tab0.2200123731354695" name="test42" uid="2018-08-20T18:36:57.371+05:30d14e1" keypath="test42" offset="0" caddress="0" hwmapaddr="1" max_reg_size="32" csize="4" address="0x0" endaddress="0x3" size="4">
+<block heading="1" child_no="1" id="tab0.9840028803360251" name="test43" uid="2018-08-21T15:47:57.023+05:30d14e1" keypath="test43" offset="0" caddress="0" hwmapaddr="7" csize="4" address="0x0" endaddress="0x3" size="4">
    <config>
       <variants>
          <variant name="none" isselected="true">
@@ -14,34 +14,60 @@
          <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
       </busdomains>
    </config>
-   <reg heading="1.1" child_no="1" id="tab0.1534533301977853" name="reg_name" uid="2018-08-20T18:36:57.371+05:30d14e13" keypath="test42.reg_name,reg_name" hwmapaddr="2" csize="4" offset="0" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="ro">
+   <reg heading="1.1" child_no="1" id="tab0.9834775145412045" name="reg_name" uid="2018-08-21T15:47:57.023+05:30d14e13" keypath="test43.reg_name,reg_name" hwmapaddr="8" csize="4" offset="0" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="ro">
       <config>
-         <regwidth>32</regwidth>
          <busdomains>
             <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
          </busdomains>
       </config>
-      <field id="field0.9901182135428966" offset="0" name="f" uid="2018-08-20T18:36:57.371+05:30d14e17" keypath="test42.reg_name.f,reg_name.f,f">
+      <field id="field0.006430910833757242" offset="0" name="f1" uid="2018-08-21T15:47:57.023+05:30d14e15" keypath="test43.reg_name.f1,reg_name.f1,f1">
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0</default>
+         <doc>dadfadsa</doc>
+      </field>
+      <field id="field0.969003352143193" offset="1" name="f2" uid="2018-08-21T15:47:57.023+05:30d14e24" keypath="test43.reg_name.f2,reg_name.f2,f2">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="0">0</default>
       </field>
+      <field id="field0.006430910833757242" offset="2" name="f3" uid="2018-08-21T15:47:57.023+05:30d14e31" keypath="test43.reg_name.f3,reg_name.f3,f3">
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0</default>
+         <doc>dadfadsa</doc>
+      </field>
    </reg>
-   <signals name="signals">
-      <signal direction="out" uid="2018-08-20T18:36:57.371+05:30d14e25" export="true" width="1" oldSignalName="s3" name="s3" msg="Name s3 already used ; ">
-         <doc>pp</doc>
-      </signal>
-      <signal direction="out" uid="2018-08-20T18:36:57.371+05:30d14e28" export="true" width="1" oldSignalName="s3" name="s3">
-         <doc>pp</doc>
-      </signal>
-   </signals>
    <sequences>
-      <sequence name="seq_name" sid="1:0" eid="seq0.4920775781303661" orig_path="test42.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Test\test42.idsng">
+      <sequence name="seq_name" sid="1:0" eid="seq0.15581532347150984" orig_path="test43.idsng" refpath="D:\AgnisysProjects\git_test\Allegro_test\Test\test43.idsng">
          <doc/>
          <arguments/>
          <constants/>
          <variables/>
-         <seqsteps/>
+         <seqsteps>
+            <row sid="14:0">
+               <command>ee</command>
+               <step>rr</step>
+               <value uid="2018-08-21T15:47:57.023+05:30d14e52">fadsas</value>
+               <doc>dddd{eid=seq0.07712546968156919}</doc>
+            </row>
+            <row>
+               <value uid="2018-08-21T15:47:57.023+05:30d14e57">fadsas</value>
+               <doc>dddd</doc>
+            </row>
+            <row sid="16:0">
+               <command>aa</command>
+               <step>sss</step>
+               <value uid="2018-08-21T15:47:57.023+05:30d14e66">qqq</value>
+               <doc>{eid=seq0.0867879074088641}</doc>
+            </row>
+            <row sid="17:0">
+               <command>ee</command>
+               <step>rr</step>
+               <value uid="2018-08-21T15:47:57.023+05:30d14e75">fadsas</value>
+               <doc>dddd{eid=seq0.07712546968156919}</doc>
+            </row>
+         </seqsteps>
       </sequence>
       <seqconfig>
          <output>

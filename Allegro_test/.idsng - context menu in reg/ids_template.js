@@ -396,13 +396,6 @@ $(document).ready(function(){
 		$('#excelmenu').css({'display':'none'});
 	});
 
-	document.getElementById("regdivcontainer").addEventListener("click",function(event){
-		$('#regmenu').css({'display':'none'});
-	});
-
-	document.getElementById("seqdivcontainer").addEventListener("click",function(event){
-		$('#seqmenu').css({'display':'none'});
-	});
 
 	document.getElementById("spreadsheetcontainer").addEventListener("mousedown", function(event){
 		//right click
@@ -1313,7 +1306,7 @@ function insertVariantRow(evt, obj){
 
 		cell=row.insertCell(2);
 		cell.setAttribute('class', "desc"); 
-		cell.setAttribute('onkeydown',"insertVariantRow(event,this);");
+		cell.setAttribute('onkeydown',"insertEnumRow(event,this);");
 
 
 	}
@@ -1524,48 +1517,6 @@ function insertSeqCmdRow(evt, obj) {
 
 }
 
-function insertSeqCmdRow_menu() {
-	addIntoHistory();
-
-
-	var table = curr_row_obj;
-
-	while(table.tagName.toUpperCase() !== "TABLE") {
-		table = table.parentNode;
-	}
-
-
-	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-	row.setAttribute('onkeydown','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited');	
-	row.setAttribute('id','seq'+Math.random());
-
-	var input;
-	var cell;
-
-	cell=row.insertCell(0);		
-	cell.setAttribute('class', 'cmdname');     
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', 'step');  
-	var str=create_reg_arr(document.getElementById("regdivcontainer"));
-	autocomplete(cell,str);
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class', 'seqvalue');  
-	autocomplete(cell,str);
-
-	cell=row.insertCell(3);
-	cell.setAttribute('class', 'seqdesc');  
-
-
-	cell=row.insertCell(4);
-	cell.setAttribute('class','refpath');
-	cell.setAttribute('onkeydown',"insertSeqCmdRow(event,this);");	
-
-}
-
 function insertSeqConstRow(evt, obj) {
 	addIntoHistory();
 	if(evt.keyCode===9){
@@ -1596,38 +1547,6 @@ function insertSeqConstRow(evt, obj) {
 		cell.setAttribute('class','seqdesc');
 		cell.setAttribute('onkeydown',"insertSeqConstRow(event,this);");				
 	}
-
-}
-
-function insertSeqConstRow_menu() {
-	addIntoHistory();
-	var table = curr_row_obj;
-
-	while(table.tagName.toUpperCase() !== "TABLE") {
-		table = table.parentNode;
-	}
-
-
-	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-
-	row.setAttribute('onkeydown','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited');	
-	row.setAttribute('id','seq'+Math.random());
-
-	var input;
-	var cell;
-
-	cell=row.insertCell(0);		
-	cell.setAttribute('class', 'constname');     
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', 'value');  
-
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class','seqdesc');
-	cell.setAttribute('onkeydown',"insertSeqConstRow(event,this);");				
 
 }
 
@@ -1664,38 +1583,6 @@ function insertSeqArgRow(evt, obj) {
 
 }
 
-function insertSeqArgRow_menu() {
-	addIntoHistory();
-	var table = curr_row_obj;
-
-	while(table.tagName.toUpperCase() !== "TABLE") {
-		table = table.parentNode;
-	}
-
-
-	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-
-	row.setAttribute('onkeydown','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited');	
-	row.setAttribute('id','seq'+Math.random());
-
-	var input;
-	var cell;
-
-	cell=row.insertCell(0);		
-	cell.setAttribute('class', 'argname');     
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', 'value');  
-
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class','seqdesc');
-	cell.setAttribute('onkeydown',"insertSeqArgRow(event,this);");				
-
-}
-
 function insertSeqVarnameRow(evt, obj) {
 	addIntoHistory();
 	if(evt.keyCode===9){
@@ -1729,37 +1616,7 @@ function insertSeqVarnameRow(evt, obj) {
 
 }
 
-function insertSeqVarnameRow_menu() {
-	addIntoHistory();
-	var table = curr_row_obj;
-
-	while(table.tagName.toUpperCase() !== "TABLE") {
-		table = table.parentNode;
-	}
-	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-
-	row.setAttribute('onkeydown','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited');	
-	row.setAttribute('id','seq'+Math.random());
-
-	var input;
-	var cell;
-
-	cell=row.insertCell(0);		
-	cell.setAttribute('class', 'varname');     
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', 'value');  
-
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class','seqdesc');
-	cell.setAttribute('onkeydown',"insertSeqVarnameRow(event,this);");				
-
-}
-
-function insertSeqRow_deletethis(evt, obj) {
+function insertSeqRow(evt, obj) {
 	addIntoHistory();
 	if(evt.keyCode===9){
 
@@ -1792,220 +1649,6 @@ function insertSeqRow_deletethis(evt, obj) {
 
 }
 
-
-function insertseqrow(){
-	var obj=curr_row_obj;
-	while(obj.tagName.toUpperCase()!="TABLE"){
-		obj=obj.parentNode;
-	}
-
-
-	var clslist=obj.classList;
-
-	if(clslist.contains("command")){
-		insertSeqCmdRow_menu();
-	}
-	else if(clslist.contains("var")){
-		insertSeqVarnameRow_menu();
-	}
-	if(clslist.contains("const")){
-		insertSeqConstRow_menu();
-	}
-	if(clslist.contains("arg")){
-		insertSeqArgRow_menu();
-	}
-
-}
-
-/*  insert new row for reg field */
-function insertcommonreg(){
-	addIntoHistory();
-	var rowtab=curr_row_obj;
-	while(rowtab.tagName.toUpperCase() !== "TABLE") {
-		rowtab = rowtab.parentNode;
-	}
-
-	if(rowtab.classList.contains("fields")){
-		insertfieldRow(rowtab);
-	}
-	else if(rowtab.classList.contains("enum")){
-		insertenumrow(rowtab);
-	}
-	else if(rowtab.classList.contains("param")){
-		insertparamrow(rowtab);
-	}
-	else if(rowtab.classList.contains("busdomain")){
-		insertbusdomainrow(rowtab);
-	}
-	else if(rowtab.classList.contains("signals")){
-		insertsignalrow(rowtab);
-	}
-}
-
-function insertsignalrow(rowtab){
-	var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-		row.setAttribute('onkeydown','setCurrRow(this)');
-		row.setAttribute('onclick',"setCurrRow(this)");
-		row.setAttribute('class',"edited sig_row");
-		row.setAttribute('id','sig'+Math.random());
-
-		var input;
-		var cell;
-
-		cell=row.insertCell(0);
-		cell.setAttribute('class', "name"); 
-		/*input=document.createElement("input");      
-
-		cell.appendChild(input);
-		*/
-
-		cell=row.insertCell(1);
-		cell.setAttribute('class', "direction");
-		/*input=document.createElement("input");
-		cell.appendChild(input);
-		*/
-
-
-		cell=row.insertCell(2);
-		cell.setAttribute('onkeydown',"insertNewRowSignals(event,this);");
-		cell.setAttribute('colspan','2');
-		cell.setAttribute('class', "desc signaldesc"); 
-}
-
-function insertbusdomainrow(rowtab){
-	var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-	row.setAttribute('onkeyup','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited bus_row');
-	row.setAttribute('id','bus'+Math.random());
-	var cell;
-
-	cell=row.insertCell(0);
-	cell.setAttribute('class', "name");  
-
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', "unit"); 
-
-
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class', "desc"); 
-
-
-	cell=row.insertCell(3);
-	cell.setAttribute('class', "bus"); 
-	cell.setAttribute('onkeydown',"insertBusRow(event,this);");
-}
-
-function insertparamrow(rowtab){
-	var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-	row.setAttribute('onkeyup','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited def_row');
-	row.setAttribute('id','def'+Math.random());
-	var cell;
-
-	cell=row.insertCell(0);
-	cell.setAttribute('class', "name");
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', "value"); 
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class', "desc"); 
-
-
-	cell=row.insertCell(3);
-	cell.setAttribute('class', "private"); 
-	cell.setAttribute('onkeydown',"insertDefineRow(event,this);");
-}
-
-function insertenumrow(rowtab){
-	var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-	row.setAttribute('onkeyup','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','edited enum_row');	
-	row.setAttribute('id','enum'+Math.random());
-	var cell;
-
-	cell=row.insertCell(0);
-	cell.setAttribute('class', "m_name");  
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', "value"); 
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class', "desc enumdesc"); 
-	cell.setAttribute('onkeydown',"insertEnumRow(event,this);");
-}
-
-function insertfieldRow(rowtab) {	
-	var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
-	row.setAttribute('onkeydown','setCurrRow(this)');
-	row.setAttribute('onclick',"setCurrRow(this)");
-	row.setAttribute('class','field edited');	
-	row.setAttribute('id','field'+Math.random());
-
-	var input;
-	var cell;
-
-	cell=row.insertCell(0);		
-	cell.setAttribute('class', 'bits'); 
-	cell.setAttribute('title', 'bits'); 
-
-	cell=row.insertCell(1);
-	cell.setAttribute('class', 'fieldname');  
-	cell.setAttribute('title', 'field name'); 
-
-
-	cell=row.insertCell(2);
-	cell.setAttribute('class','sw thirdCell');
-	cell.setAttribute('title', 'software access'); 
-
-	cell=row.insertCell(3);
-	cell.setAttribute('class','hw thirdCell');
-	cell.setAttribute('title', 'hardware access'); 
-
-	cell=row.insertCell(4);
-	cell.setAttribute('title', 'default'); 
-	cell.setAttribute('class','default');
-
-	cell=row.insertCell(5);
-	cell.setAttribute('onkeydown',"insertNewRow(event,this);");
-	cell.setAttribute('class','desc fielddesc');
-	cell.setAttribute('title', 'description'); 
-
-	hookEvents(cell,idsprop);
-
-}
-
-function deletefieldrow(){
-	curr_row_obj.remove();
-}
-
-var fieldrow;
-var iscut=false;
-function copyfieldrow(){
-	fieldrow=curr_row_obj;
-	iscut=false;
-}
-function cutfieldrow(){
-	fieldrow=curr_row_obj;
-	iscut=true;
-}
-
-function pastefieldrow(){
-	addIntoHistory();
-	if(fieldrow){
-		var newrow=fieldrow.cloneNode(true);
-		fieldrow.parentNode.insertBefore(newrow,curr_row_obj.nextSibling);
-		if(iscut){
-			fieldrow.remove();
-			fieldrow=null;
-		}
-	}
-}
 
 /*  insert new row for reg field */
 function insertNewRow(evt, obj) {
@@ -2852,6 +2495,7 @@ function autocomplete(inp, arr) {
 		}
 		catch(e){}
 
+		console.log("--nodetype="+nodetype);
 
 		/*set hint location here*/
 		if(nodetype=="reg"||nodetype=="block"){
@@ -3757,40 +3401,7 @@ function openregmenu(event){
 	var x=event.pageX;
 	var y=event.pageY;
 	$('#regmenu').css({'display':'block','left':x,'top':y});
-	curr_row_obj=event.target.parentNode;
-}
 
-function openseqmenu(event){
-	var seqcls;
-
-	var obj=event.target;
-	while(obj.tagName.toUpperCase()!="TABLE"){
-		obj=obj.parentNode;
-	}
-
-
-	var clslist=obj.classList;
-
-	if(clslist.contains("command")){
-		seqcls="command";
-	}
-	else if(clslist.contains("var")){
-		seqcls="var";
-	}
-	if(clslist.contains("const")){
-		seqcls="const";
-	}
-	if(clslist.contains("arg")){
-		seqcls="arg";
-	}
-
-	if(seqcls){
-		event.preventDefault();
-		var x=event.pageX;
-		var y=event.pageY;
-		$('#seqmenu').css({'display':'block','left':x,'top':y});
-		curr_row_obj=event.target.parentNode;
-	}
 }
 
 function hidetemplate(){
