@@ -32,9 +32,27 @@
     </div> 
     <br> 
     <h3>IDS Register Specification</h3> 
+    this is sumeet<br> 
     <br> 
-    <br> 
-     
+    <div id="autocomplete-list" class="autocomplete-items" style="left: 38%; max-height: 181.5625px; overflow: auto; display: none;"></div> 
+    <table contenteditable="false" class="chip idsTemp" onclick="tabClick(this)" id="tab0.2861164717492225"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="chip name" class="name">cip1</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Chip" alt="Chip" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIySURBVHjazFM7axVBFP7OPHZ2b26Uq43RFPbiE8Ei6B+wsVCLFL4Qo1UKQSsRjBBNpXY2goWgKZSQKlUqsdBGwTRqE4IxCrnG+9zHzPHs3mgvaRx29uw8zvd9881ZMDP+9LFTN/hfYtkVttioRLl0+wkvLi3DgxECYAoPFdfhiz6UtgieYeMauu0NKGIYG+HwyDBePZokKuWomsOVqxdRUEDiIqhASLtNUJKA8hR9sjAIcHEioBkMBzx+No8fn5YHCiZmnvPeIycAFkZZDDnBOIYPKTRppFwgiix6nR5qAmK0wZuF15idPkdm7PR17sQNDO0axTYXkKUZiByUNYAcAaVNxqOdB8TWYWO9CaU0Vr6v4ujJSa4UnL/3ksPO3bDoVgo4WOSZh7WxpBMKlcscy5eMxKNyvvnlI2bvXyA6Nn6L13wD+w8dFKL+wFlh6DOEkcRYA5W1EEii1ihhSAA+v3sPvbHpweWZef7aFudDLstiBRGsS9DttgTNIFK+As2LMiqIGDjZN3f3DNGBs9PcCgZ7RhrCYGCMgveiM3hoGf8tNO8rBWJQ+eDbShtZK9usg6kX/GH1lzBbSRYWls2FqDEORu6dtUTxslwrikJugeS6PRYfTBAdH5/itb6CGa4jFWFemOuxhVMGWZaJeQGSgiLIW6id1QJUgH6uw6duoODanae88HYJqO0Q0+QInSbc0HbovAcvSYGial5zXhWU1Cv2jSaYe3iT8H/8TFtpvwUYANw+W2VPE6rlAAAAAElFTkSuQmCC"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table>
+    <br>
     <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab0.029684688735902243"> 
      <tbody> 
       <tr> 
@@ -45,11 +63,42 @@
        <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add properties" class="propclass">rtl.bmax=0,</td> 
+       <td colspan="5" title="add properties" class="propclass">repeat=2,</td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">this is text{repeat=2}</td> 
-      </tr><div id="autocomplete-list" class="autocomplete-items" style="left:38%;;max-height:181.5625px;overflow:auto"></div> 
+       <td colspan="5" title="add description here" class="desc descclass">this is text,,</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table class="signals idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab_signal0.5587180013381822"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="signal name" class="name">s1</td> 
+       <td class="specImage"><img title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4T6WSvUsCYRzHv2W+kJE0KBkE1lCEa7T2LwQuuQjREEIIjZVt4eLeYGA4GBW0ObgVQqBmDYIv6SChFRroXVpXnfjrnqfr5XBo6AM/7p7vfe/7/J6XAVKASvNZxr3whtnxYeh1g6r6Nyyi2+1Cr9dDE7ifuMPp9SN2l6Yx7xjlmtvtRjab5WaGLMuQJAmpVApWqxWtVgvpdBq5XA4+n+8nUJC6WD0owDA0iIWpUczNTGLDtYjiVYIH/aZaraLT6cBsNiMWiyEcDsPhcCAajfJ2qf70xh50ftOk/H2bv29u77CJNGWxWKhYLJKyPFK65L5CoUDxeJzK5TIfo9l5p2D8lvbOalxgnBwf9YWxSiaTqoNIFEUKBAKkdKcqnwytH5bw8t5TljqACesY8hcxbK0tK/9rsdvtaDQaCIVC0Ol0UDpCJpOB0+nkus1m+zReVkRaOchTWyYSXolMwyN9nQWDQT57vV7nJQgC+f1+8ng8VCqV+Lcv0Ov1KPcgUVts9QWx8nq9qlVLpVKhWu1nm774PuVIJAKj0QiTycSGHHY9XC4XDAaDqvyN5h7+H+AD3W9Zy3A0RZQAAAAASUVORK5CYII="></td> 
+       <td class="addCell readOnly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td class="label">name</td> 
+       <td class="label">port type</td> 
+       <td colspan="2" class="label">description</td> 
+      </tr> 
+      <tr onclick="setCurrRow(this);" id="sig0.5587180013381822" onkeydown="setCurrRow(this);" class="edited sig_row">
+       <td class="name">s1</td>
+       <td class="direction">in</td>
+       <td colspan="2" title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event,this);"></td>
+      </tr> 
      </tbody> 
     </table> 
     <br> 
@@ -92,7 +141,7 @@
            <td class="lbldefault">default</td> 
            <td class="lbldesc">description</td> 
           </tr> 
-          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field0.17591438621444477" class="field edited">
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field0.49227011771831775" class="field edited">
            <td title="bits" class="bits">7:0</td>
            <td title="field name" class="fieldname">f</td>
            <td title="software access" class="sw">rw</td>
@@ -274,8 +323,47 @@
         <td class="ui-selectee">I</td> 
         <td class="ui-selectee">J</td> 
        </tr> 
-       <tr id="row0.778088459859013" class="edited ui-selectee" style=""> 
+       <tr id="row0.3995473822701502" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">1</td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">signal name</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">port type</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">signal desc</b></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sig0.5587180013381822" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">2</td> 
+        <td tabindex="0" class="ui-selectee">s1</td> 
+        <td tabindex="0" class="ui-selectee">in</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="row0.3995473822701502" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">3</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="row0.3995473822701502" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">4</td> 
         <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
         <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
         <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
@@ -287,8 +375,21 @@
         <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
         <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
        </tr> 
+       <tr class="edited ui-selectee" id="tab0.2861164717492225" style="">
+        <td class="leftheader ui-selectee">5</td>
+        <td tabindex="0" class="ui-selectee">cip1</td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+        <td tabindex="0" class="ui-selectee"></td>
+       </tr>
        <tr id="tab0.029684688735902243" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">2</td> 
+        <td class="leftheader ui-selectee">6</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee">test44</td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -298,10 +399,10 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee">this is text,{rtl.bmax=0,}</td> 
+        <td tabindex="0" class="ui-selectee">this is text,,{repeat=2,}</td> 
        </tr> 
        <tr id="tab_reg80.7053139898063384" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">3</td> 
+        <td class="leftheader ui-selectee">7</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee">reg_name</td> 
@@ -313,8 +414,8 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.17591438621444477" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">4</td> 
+       <tr id="field0.49227011771831775" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">8</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -326,59 +427,7 @@
         <td tabindex="0" class="ui-selectee">7:0</td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.35480983122738907" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">5</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="field0.6745399556590981" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">6</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="field0.8294661113200162" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">7</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="field0.44171838577911837" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">8</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="field0.47738265085638365" class="edited ui-selectee" style=""> 
+       <tr id="field0.8064132669735042" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">9</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -391,7 +440,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.5633376132933741" class="edited ui-selectee" style=""> 
+       <tr id="field0.9237281216600833" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">10</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -404,7 +453,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.6777192638746093" class="edited ui-selectee" style=""> 
+       <tr id="field0.43364373787508803" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">11</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -417,7 +466,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.7400987911939385" class="edited ui-selectee" style=""> 
+       <tr id="field0.4656374780251852" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">12</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -430,7 +479,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.27949567930283803" class="edited ui-selectee" style=""> 
+       <tr id="field0.6201725411346347" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">13</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -443,7 +492,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.11992230641269142" class="edited ui-selectee" style=""> 
+       <tr id="field0.917446940740748" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">14</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -456,8 +505,60 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.21554932215882683" class="edited ui-selectee" style=""> 
+       <tr id="field0.37268944051102393" class="edited ui-selectee" style=""> 
         <td class="leftheader ui-selectee">15</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.11321930375902356" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">16</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.5593541991386497" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">17</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.1451714421584117" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">18</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.8473237018094595" class="edited ui-selectee" style=""> 
+        <td class="leftheader ui-selectee">19</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -635,7 +736,7 @@
       </tbody> 
      </table> 
     </div> 
-    <div id="excelmenu" style="display: none; left: 251px; top: 167px;"> 
+    <div id="excelmenu" style="display: none; left: 201px; top: 200px;"> 
      <a href="#" onclick="insertrowbelow(this);">Insert Row Below</a> 
      <a href="#" onclick="insertcolright(this);">Insert Column Right</a> 
      <a href="#" id="menucopy" class="context-menu">Copy </a> 
