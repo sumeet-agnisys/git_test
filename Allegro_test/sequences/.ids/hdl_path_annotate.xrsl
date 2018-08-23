@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab0.6668142169511667" name="Block1" temp="w1" uid="2018-08-23T11:46:47.361+05:30d14e1" keypath="Block1" offset="0" caddress="0" hwmapaddr="124" csize="804" diff_regwidth="true" address="0x000" endaddress="0x323" size="804">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x000" endaddress="0x323" size="804"/>
+      </busdomains>
+   </config>
+   <doc>
+      <list type="param" uid="2018-08-23T11:46:47.361+05:30d14e14">
+         <value name="$w1" private="0" uid="2018-08-23T11:46:47.361+05:30d14e15">12</value>
+      </list>
+      <list type="enum" name="enum_name" uid="2018-08-23T11:46:47.361+05:30d14e17">
+         <value name="E1" uid="2018-08-23T11:46:47.361+05:30d14e18">1</value>
+      </list>
+   </doc>
+   <signals name="signals">
+      <signal direction="in" uid="2018-08-23T11:46:47.361+05:30d14e21" export="true" width="1" oldSignalName="S1" name="S1"/>
+      <signal direction="out" uid="2018-08-23T11:46:47.361+05:30d14e22" export="true" width="1" oldSignalName="S2" name="S2"/>
+   </signals>
+   <section heading="1.1" child_no="1" type="mem" external="true" name="memory_name" memwidth="64" id="tab0.3172488905395693" uid="2018-08-23T11:46:47.361+05:30d14e23" keypath="Block1.memory_name,memory_name" keypathdown="memory_name.memory_name,memory_name" count="100" hwmapaddr="125" max_reg_size="64" csize="800" offset="0" caddress="0" address="0x000" endaddress="0x31F" size="8" address2="0x008">
+      <config>
+         <repeats>
+            <repeat count="100" name="memory_name"/>
+         </repeats>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x000" endaddress="0x31F" size="8" address2="0x008"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <reg heading="1.1.1" child_no="1" name="memory_name" uid="2018-08-23T11:46:47.361+05:30d14e28" keypath="Block1.memory_name.memory_name,memory_name.memory_name,memory_name" type="mem" hwmapaddr="126" csize="8" offset="0" caddress="0" address="0x000" endaddress="0x7" size="8" address2="0x008" default="0x0000000000000000" sw="ro" hw="rw">
+         <config>
+            <regwidth>64</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x000" endaddress="0x7" size="8" address2="0x008"/>
+            </busdomains>
+         </config>
+         <field name="memory_name" offset="63:0" uid="2018-08-23T11:46:47.361+05:30d14e32" keypath="Block1.memory_name.memory_name.memory_name,memory_name.memory_name.memory_name,memory_name.memory_name,memory_name">
+            <sw>ro</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000000000000000000000000000000000000000000000000000000</default>
+         </field>
+      </reg>
+   </section>
+   <reg heading="1.2" child_no="2" id="tab0.5746610677920105" name="Reg1" reg_hw="rw" reg_sw="rw" reg_default="0" uid="2018-08-23T11:46:47.361+05:30d14e39" keypath="Block1.Reg1,Reg1" hwmapaddr="127" csize="4" offset="800" caddress="800" address="0x320" endaddress="0x323" size="4" default="0x00000000" sw="rw" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="800" address="0x320" endaddress="0x323" size="4"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <field id="field_4" offset="31:0" name="Fld" uid="2018-08-23T11:46:47.361+05:30d14e44" keypath="Block1.Reg1.Fld,Reg1.Fld,Fld">
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">00000000000000000000000000000000</default>
+      </field>
+   </reg>
+</block>

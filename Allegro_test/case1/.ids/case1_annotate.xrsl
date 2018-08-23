@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" name="chip_name" id="7:1" uid="2018-08-23T16:02:20.717+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="455" csize="20" address="0x00" endaddress="0x13" size="20">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x00" endaddress="0x13" size="20"/>
+      </busdomains>
+   </config>
+   <signals name="signal name">
+      <signal port="in" ref="s1.signals.s3" id="2:1" uid="2018-08-23T16:02:20.717+05:30d14e14" export="true" width="1" oldSignalName="s1" name="s1">
+         <doc/>
+      </signal>
+      <signal port="out" id="3:1" uid="2018-08-23T16:02:20.717+05:30d14e16" export="true" width="1" oldSignalName="s2" name="s2"/>
+      <signal port="in" id="4:1" uid="2018-08-23T16:02:20.717+05:30d14e17" export="true" width="1" oldSignalName="s3" name="s3"/>
+   </signals>
+   <block heading="1.1" child_no="1" name="block1_azhar" id="8:2" uid="2018-08-23T16:02:20.717+05:30d14e18" keypath="chip_name.block1_azhar,block1_azhar" hwmapaddr="456" max_reg_size="32" csize="12" offset="0" caddress="0" address="0x00" endaddress="0xB" size="12">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x00" endaddress="0xB" size="12"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" name="reg1" id="9:3" uid="2018-08-23T16:02:20.717+05:30d14e20" keypath="chip_name.block1_azhar.reg1,block1_azhar.reg1,reg1" hwmapaddr="457" csize="4" offset="0" caddress="0" address="0x00" endaddress="0x3" size="4" default="0x00000001" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x00" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <field name="fld" offset="31:0" next="s3" id="10:5" uid="2018-08-23T16:02:20.717+05:30d14e24" keypath="chip_name.block1_azhar.reg1.fld,block1_azhar.reg1.fld,reg1.fld,fld">
+            <default unresolvedDef="1">00000000000000000000000000000001</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <doc/>
+         </field>
+      </reg>
+      <section heading="1.1.2" child_no="2" name="reggroup1" id="11:11" uid="2018-08-23T16:02:20.717+05:30d14e32" keypath="chip_name.block1_azhar.reggroup1,block1_azhar.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="458" max_reg_size="32" csize="8" offset="4" caddress="4" address="0x04" endaddress="0xB" size="8">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x04" endaddress="0xB" size="8"/>
+            </busdomains>
+         </config>
+         <reg heading="1.1.2.1" child_no="1" name="reg1" id="12:3" uid="2018-08-23T16:02:20.717+05:30d14e34" keypath="chip_name.block1_azhar.reggroup1.reg1,block1_azhar.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="459" csize="4" offset="0" caddress="0" address="0x04" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x04" endaddress="0x7" size="4"/>
+               </busdomains>
+            </config>
+            <field name="fld" offset="31:0" id="13:5" uid="2018-08-23T16:02:20.717+05:30d14e38" keypath="chip_name.block1_azhar.reggroup1.reg1.fld,block1_azhar.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+               <sw>rw</sw>
+               <hw>rw</hw>
+            </field>
+         </reg>
+         <reg heading="1.1.2.2" child_no="2" name="reg2" id="14:3" uid="2018-08-23T16:02:20.717+05:30d14e45" keypath="chip_name.block1_azhar.reggroup1.reg2,block1_azhar.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="460" csize="4" offset="4" caddress="4" address="0x08" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x08" endaddress="0xB" size="4"/>
+               </busdomains>
+            </config>
+            <field name="fld1" offset="31:0" id="15:5" uid="2018-08-23T16:02:20.717+05:30d14e49" keypath="chip_name.block1_azhar.reggroup1.reg2.fld1,block1_azhar.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+               <sw>rw</sw>
+               <hw>rw</hw>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <block heading="1.2" child_no="2" name="block2" id="17:2" uid="2018-08-23T16:02:20.717+05:30d14e56" keypath="chip_name.block2,block2" hwmapaddr="461" csize="8" offset="12" caddress="12" address="0x0C" endaddress="0x13" size="8">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="12" address="0x0C" endaddress="0x13" size="8"/>
+         </busdomains>
+      </config>
+      <section heading="1.2.1" child_no="1" name="reggroup1" id="18:11" uid="2018-08-23T16:02:20.717+05:30d14e58" keypath="chip_name.block2.reggroup1,block2.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="462" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x0C" endaddress="0x13" size="8">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0C" endaddress="0x13" size="8"/>
+            </busdomains>
+         </config>
+         <reg heading="1.2.1.1" child_no="1" name="reg1" id="19:3" uid="2018-08-23T16:02:20.717+05:30d14e60" keypath="chip_name.block2.reggroup1.reg1,block2.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="463" csize="4" offset="0" caddress="0" address="0x0C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0C" endaddress="0xF" size="4"/>
+               </busdomains>
+            </config>
+            <field name="fld" offset="31:0" id="20:5" uid="2018-08-23T16:02:20.717+05:30d14e64" keypath="chip_name.block2.reggroup1.reg1.fld,block2.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+               <sw>rw</sw>
+               <hw>rw</hw>
+            </field>
+         </reg>
+         <reg heading="1.2.1.2" child_no="2" name="reg2" id="21:3" uid="2018-08-23T16:02:20.717+05:30d14e71" keypath="chip_name.block2.reggroup1.reg2,block2.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="464" csize="4" offset="4" caddress="4" address="0x10" endaddress="0x13" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x10" endaddress="0x13" size="4"/>
+               </busdomains>
+            </config>
+            <field name="fld1" offset="31:0" id="22:5" uid="2018-08-23T16:02:20.717+05:30d14e75" keypath="chip_name.block2.reggroup1.reg2.fld1,block2.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <doc>azhar</doc>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.9176842211761362" orig_path="case1.idsng" refpath="C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\case1\case1.idsng" level="1" uid="2018-08-23T16:02:23.493+05:30d24e105">
+         <doc/>
+         <arguments>
+            <value doc="" sid="4:0" eid="seq0.14585121128729028" uid="2018-08-23T16:02:20.717+05:30d14e88" svDataType="integer" cDataType="int" UvmDataType="int" name="arg1">10</value>
+            <value doc="" sid="4:0" eid="seq0.10791126507599835" uid="2018-08-23T16:02:20.717+05:30d14e90" svDataType="integer" cDataType="int" UvmDataType="int" name="arg2">11</value>
+         </arguments>
+         <constants>
+            <value doc="" sid="7:0" eid="seq0.1930705053363032" uid="2018-08-23T16:02:20.717+05:30d14e93" svDataType="integer" cDataType="int" UvmDataType="int" name="const1">12</value>
+            <value doc="" sid="7:0" eid="seq0.9686399171693053" uid="2018-08-23T16:02:20.717+05:30d14e95" svDataType="integer" cDataType="int" UvmDataType="int" name="const2">15</value>
+         </constants>
+         <variables>
+            <value doc="" sid="10:0" eid="seq0.059541372655877556" uid="2018-08-23T16:02:20.717+05:30d14e98" svDataType="integer" cDataType="int" UvmDataType="int" name="var1">
+               <EXPRESSION>
+                  <EXPRESSION type="number">5</EXPRESSION>
+               </EXPRESSION>
+               <oldValue>5</oldValue>
+            </value>
+            <value doc="" sid="11:0" eid="seq0.6290448496592651" uid="2018-08-23T16:02:20.717+05:30d14e100" svDataType="integer" cDataType="int" UvmDataType="int" name="var2">
+               <EXPRESSION>
+                  <EXPRESSION type="number">6</EXPRESSION>
+               </EXPRESSION>
+               <oldValue>6</oldValue>
+            </value>
+         </variables>
+         <seqsteps>
+            <row busName="default" uid="2018-08-23T16:02:23.493+05:30d24e131" sid="16:0">
+               <ASSIGNMENT command="write" eid="seq0.1776192215646516">
+                  <LHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2018-08-23T16:02:20.717+05:30d14e24" fieldDefault="00000000000000000000000000000001" regSize="32" regDefault="0x00000001" fieldSize="32" field_offset="31:0" field_sw="rw" field_hw="rw" field_default="00000000000000000000000000000001" reg_address="0x00">block1_azhar.reg1.fld</EXPRESSION>
+                     </EXPRESSION>
+                  </LHS>
+                  <doc/>
+                  <RHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="const" orig.const="12" writeValue="const1">0x0000000C</EXPRESSION>
+                     </EXPRESSION>
+                  </RHS>
+               </ASSIGNMENT>
+            </row>
+            <row busName="default" uid="2018-08-23T16:02:23.493+05:30d24e145">
+               <LOOP type="for">
+                  <INIT>
+                     <VAR type="int"/>
+                     <ASSIGNMENT>
+                        <LHS>
+                           <EXPRESSION>
+                              <EXPRESSION type="id">i</EXPRESSION>
+                           </EXPRESSION>
+                        </LHS>
+                        <RHS>
+                           <EXPRESSION>
+                              <EXPRESSION type="number">0</EXPRESSION>
+                           </EXPRESSION>
+                        </RHS>
+                     </ASSIGNMENT>
+                  </INIT>
+                  <CONDITION>i &lt; const2</CONDITION>
+                  <LOOPSTEP value="i++">
+                     <INCREMENT>
+                        <EXPRESSION>
+                           <EXPRESSION type="id">i</EXPRESSION>
+                        </EXPRESSION>
+                     </INCREMENT>
+                  </LOOPSTEP>
+                  <STATEMENTS>
+                     <row busName="default" uid="2018-08-23T16:02:23.493+05:30d24e174" sid="18:0">
+                        <ASSIGNMENT command="write" eid="seq0.638731821690427">
+                           <LHS>
+                              <EXPRESSION>
+                                 <EXPRESSION type="id" uniqueId="2018-08-23T16:02:20.717+05:30d14e64" fieldDefault="00000000000000000000000000000000" regSize="32" regDefault="0x00000000" fieldSize="32" field_offset="31:0" field_sw="rw" field_hw="rw" field_default="00000000000000000000000000000000" reg_address="0x0C">block2.reggroup1.reg1.fld</EXPRESSION>
+                              </EXPRESSION>
+                           </LHS>
+                           <doc/>
+                           <RHS>
+                              <EXPRESSION>
+                                 <EXPRESSION type="const" orig.const="15" writeValue="const2">0x0000000F</EXPRESSION>
+                              </EXPRESSION>
+                           </RHS>
+                        </ASSIGNMENT>
+                     </row>
+                  </STATEMENTS>
+               </LOOP>
+            </row>
+            <row busName="default" uid="2018-08-23T16:02:23.493+05:30d24e188" sid="20:0">
+               <WAIT value="25" eid="seq0.2815427816403232">
+                  <doc/>
+               </WAIT>
+            </row>
+            <row busName="default" uid="2018-08-23T16:02:23.493+05:30d24e194" sid="21:0">
+               <ASSIGNMENT command="write" eid="seq0.6924041644265134">
+                  <LHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2018-08-23T16:02:20.717+05:30d14e38" fieldDefault="00000000000000000000000000000000" regSize="32" regDefault="0x00000000" fieldSize="32" field_offset="31:0" field_sw="rw" field_hw="rw" field_default="00000000000000000000000000000000" reg_address="0x04">block1_azhar.reggroup1.reg1.fld</EXPRESSION>
+                     </EXPRESSION>
+                  </LHS>
+                  <doc/>
+                  <RHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="number" writeValue="22">0x00000016</EXPRESSION>
+                     </EXPRESSION>
+                  </RHS>
+               </ASSIGNMENT>
+            </row>
+         </seqsteps>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</chip>

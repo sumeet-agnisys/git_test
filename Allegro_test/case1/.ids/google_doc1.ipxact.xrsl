@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="Block1" offset="0">
+   <doc>
+      <busdomains>
+         <busdomain name="default_map">
+            <addressunit>8</addressunit>
+            <bus>AMBA</bus>
+         </busdomain>
+      </busdomains>
+   </doc>
+   <reg name="Register1" offset="0">
+      <field offset="15:0" name="REGISTER1_Fld1">
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default>0</default>
+      </field>
+      <field offset="31:16" name="REGISTER1_Fld2">
+         <sw>ro</sw>
+         <hw>ro</hw>
+         <default>1</default>
+      </field>
+      <config>
+         <regwidth>32</regwidth>
+      </config>
+   </reg>
+   <reg name="Register2" offset="4">
+      <field offset="15:0" name="REGISTER2_Fld1">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default>0</default>
+      </field>
+      <field offset="31:16" name="REGISTER2_Fld2">
+         <sw>ro</sw>
+         <hw>ro</hw>
+         <default>0</default>
+      </field>
+      <config>
+         <regwidth>32</regwidth>
+      </config>
+   </reg>
+   <config>
+      
+      <chipbits>0</chipbits>
+      <blockbits>1</blockbits>
+      <regbits>12</regbits>
+      
+      
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+         </variant>
+      </variants>
+   <regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config>
+</block>

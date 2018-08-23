@@ -1,0 +1,33 @@
+chip,block,reg,offset,field,bits,default,sw,hw,doc
+
+chip_name,block1,reg1,0,,32 ,0x00000000,,,", {reg_hw=ro;reg_default=0;}"
+chip_name,block1,reg1,,fld,32 ,0x00000000,rw,ro,,
+
+chip_name,block1,reggroup1_reg1,0,,32 ,0x00000000,,,
+chip_name,block1,reggroup1_reg1,,fld,32 ,0x00000000,rw,ro,{next=s1;},
+
+chip_name,block1,reggroup1_reg2,4,,32 ,0x00000000,,,
+chip_name,block1,reggroup1_reg2,,fld1,32 ,0x00000000,ro,ro,,
+
+
+
+chip_name,block2,reggroup1_reg1,0,,32 ,0x00000000,,,
+chip_name,block2,reggroup1_reg1,,fld,32 ,0x00000000,rw,ro,{next=s2;},
+
+chip_name,block2,reggroup1_reg2,4,,32 ,0x00000000,,,
+chip_name,block2,reggroup1_reg2,,fld1,32 ,0x00000000,ro,ro,,
+
+
+chip_name,block2,ref_name_reg1,0,,32 ,0x00000000,,,", {reg_hw=ro;reg_default=0;}"
+chip_name,block2,ref_name_reg1,,fld,32 ,0x00000000,rw,ro,,
+
+chip_name,block2,reggroup1_reg1,0,,32 ,0x00000000,,,
+chip_name,block2,reggroup1_reg1,,fld,32 ,0x00000000,rw,ro,{next=s1;},
+
+chip_name,block2,reggroup1_reg2,4,,32 ,0x00000000,,,
+chip_name,block2,reggroup1_reg2,,fld1,32 ,0x00000000,ro,ro,,
+
+
+
+
+

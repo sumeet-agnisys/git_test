@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" id="tab10.09303090902905031" name="chip_name" uid="2018-08-23T12:41:05.597+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="208" csize="84" address="0x00" endaddress="0x53" size="84">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x00" endaddress="0x53" size="84"/>
+      </busdomains>
+   </config>
+   <block heading="1.1" child_no="1" id="tab20.06584346753784631" name="block_name" offset="0" uid="2018-08-23T12:41:05.597+05:30d14e13" keypath="chip_name.block_name,block_name" hwmapaddr="209" max_reg_size="32" csize="84" caddress="0" address="0x00" endaddress="0x53" size="84">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x00" endaddress="0x53" size="84"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="tab30.7623599930232057" name="REG_SYS_LGC_GENERAL_0" uid="2018-08-23T12:41:05.597+05:30d14e15" keypath="chip_name.block_name.REG_SYS_LGC_GENERAL_0,block_name.REG_SYS_LGC_GENERAL_0,REG_SYS_LGC_GENERAL_0" hwmapaddr="210" csize="4" offset="0" caddress="0" address="0x00" endaddress="0x3" size="4" default="0x00000001" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x00" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab00.9249628142119769" offset="31:0" name="REG_SYS_LGC_GENERAL_0_F" uid="2018-08-23T12:41:05.597+05:30d14e19" keypath="chip_name.block_name.REG_SYS_LGC_GENERAL_0.REG_SYS_LGC_GENERAL_0_F,block_name.REG_SYS_LGC_GENERAL_0.REG_SYS_LGC_GENERAL_0_F,REG_SYS_LGC_GENERAL_0.REG_SYS_LGC_GENERAL_0_F,REG_SYS_LGC_GENERAL_0_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="1">00000000000000000000000000000001</default>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" id="tab50.46744506533018204" name="REG_SYS_LGC_LDOS_SYSMOD_0" uid="2018-08-23T12:41:05.597+05:30d14e26" keypath="chip_name.block_name.REG_SYS_LGC_LDOS_SYSMOD_0,block_name.REG_SYS_LGC_LDOS_SYSMOD_0,REG_SYS_LGC_LDOS_SYSMOD_0" hwmapaddr="211" csize="4" offset="4" caddress="4" address="0x04" endaddress="0x7" size="4" default="0x00000006" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x04" endaddress="0x7" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab10.48226338560001414" offset="31:0" name="REG_SYS_LGC_LDOS_SYSMOD_0_F" uid="2018-08-23T12:41:05.597+05:30d14e30" keypath="chip_name.block_name.REG_SYS_LGC_LDOS_SYSMOD_0.REG_SYS_LGC_LDOS_SYSMOD_0_F,block_name.REG_SYS_LGC_LDOS_SYSMOD_0.REG_SYS_LGC_LDOS_SYSMOD_0_F,REG_SYS_LGC_LDOS_SYSMOD_0.REG_SYS_LGC_LDOS_SYSMOD_0_F,REG_SYS_LGC_LDOS_SYSMOD_0_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="6">00000000000000000000000000000110</default>
+         </field>
+      </reg>
+      <reg heading="1.1.3" child_no="3" id="tab70.6572278257748867" name="REG_DPLL_SYSTEM_CON" uid="2018-08-23T12:41:05.597+05:30d14e37" keypath="chip_name.block_name.REG_DPLL_SYSTEM_CON,block_name.REG_DPLL_SYSTEM_CON,REG_DPLL_SYSTEM_CON" hwmapaddr="212" csize="4" offset="8" caddress="8" address="0x08" endaddress="0xB" size="4" default="0x00000004" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="8" address="0x08" endaddress="0xB" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab20.13923006986198716" offset="31:0" name="REG_DPLL_SYSTEM_CON_F" uid="2018-08-23T12:41:05.597+05:30d14e41" keypath="chip_name.block_name.REG_DPLL_SYSTEM_CON.REG_DPLL_SYSTEM_CON_F,block_name.REG_DPLL_SYSTEM_CON.REG_DPLL_SYSTEM_CON_F,REG_DPLL_SYSTEM_CON.REG_DPLL_SYSTEM_CON_F,REG_DPLL_SYSTEM_CON_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="4">00000000000000000000000000000100</default>
+         </field>
+      </reg>
+      <reg heading="1.1.4" child_no="4" id="tab90.026889270027044443" name="REG_DPLL_SYSTEM_CFG" uid="2018-08-23T12:41:05.597+05:30d14e48" keypath="chip_name.block_name.REG_DPLL_SYSTEM_CFG,block_name.REG_DPLL_SYSTEM_CFG,REG_DPLL_SYSTEM_CFG" hwmapaddr="213" csize="4" offset="12" caddress="12" address="0x0C" endaddress="0xF" size="4" default="0x04BB3A1E" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="12" address="0x0C" endaddress="0xF" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab30.14294488131029437" offset="31:0" name="REG_DPLL_SYSTEM_CFG_F" uid="2018-08-23T12:41:05.597+05:30d14e52" keypath="chip_name.block_name.REG_DPLL_SYSTEM_CFG.REG_DPLL_SYSTEM_CFG_F,block_name.REG_DPLL_SYSTEM_CFG.REG_DPLL_SYSTEM_CFG_F,REG_DPLL_SYSTEM_CFG.REG_DPLL_SYSTEM_CFG_F,REG_DPLL_SYSTEM_CFG_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="79378974">00000100101110110011101000011110</default>
+         </field>
+      </reg>
+      <reg heading="1.1.5" child_no="5" id="tab110.5109322363615054" name="REG_DPLL_SYSTEM_CFG2" uid="2018-08-23T12:41:05.597+05:30d14e59" keypath="chip_name.block_name.REG_DPLL_SYSTEM_CFG2,block_name.REG_DPLL_SYSTEM_CFG2,REG_DPLL_SYSTEM_CFG2" hwmapaddr="214" csize="4" offset="16" caddress="16" address="0x10" endaddress="0x13" size="4" default="0x04BB3A1E" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="16" address="0x10" endaddress="0x13" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab40.5250844084534694" offset="31:0" name="REG_DPLL_SYSTEM_CFG2_F" uid="2018-08-23T12:41:05.597+05:30d14e63" keypath="chip_name.block_name.REG_DPLL_SYSTEM_CFG2.REG_DPLL_SYSTEM_CFG2_F,block_name.REG_DPLL_SYSTEM_CFG2.REG_DPLL_SYSTEM_CFG2_F,REG_DPLL_SYSTEM_CFG2.REG_DPLL_SYSTEM_CFG2_F,REG_DPLL_SYSTEM_CFG2_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="79378974">00000100101110110011101000011110</default>
+         </field>
+      </reg>
+      <reg heading="1.1.6" child_no="6" id="tab130.14172868101318348" name="CHA_REG_ADC_MAN_PARA10" uid="2018-08-23T12:41:05.597+05:30d14e70" keypath="chip_name.block_name.CHA_REG_ADC_MAN_PARA10,block_name.CHA_REG_ADC_MAN_PARA10,CHA_REG_ADC_MAN_PARA10" hwmapaddr="215" csize="4" offset="20" caddress="20" address="0x14" endaddress="0x17" size="4" default="0x00007800" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="20" address="0x14" endaddress="0x17" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab50.8570448836977581" offset="31:0" name="CHA_REG_ADC_MAN_PARA10_F" uid="2018-08-23T12:41:05.597+05:30d14e74" keypath="chip_name.block_name.CHA_REG_ADC_MAN_PARA10.CHA_REG_ADC_MAN_PARA10_F,block_name.CHA_REG_ADC_MAN_PARA10.CHA_REG_ADC_MAN_PARA10_F,CHA_REG_ADC_MAN_PARA10.CHA_REG_ADC_MAN_PARA10_F,CHA_REG_ADC_MAN_PARA10_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="30720">00000000000000000111100000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.7" child_no="7" id="tab150.13072656318389086" name="CHA_REG_TX_LB_MX_CFG" uid="2018-08-23T12:41:05.597+05:30d14e81" keypath="chip_name.block_name.CHA_REG_TX_LB_MX_CFG,block_name.CHA_REG_TX_LB_MX_CFG,CHA_REG_TX_LB_MX_CFG" hwmapaddr="216" csize="4" offset="24" caddress="24" address="0x18" endaddress="0x1B" size="4" default="0x00000FC0" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="24" address="0x18" endaddress="0x1B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab60.5860512033712636" offset="31:0" name="CHA_REG_TX_LB_MX_CFG_F" uid="2018-08-23T12:41:05.597+05:30d14e85" keypath="chip_name.block_name.CHA_REG_TX_LB_MX_CFG.CHA_REG_TX_LB_MX_CFG_F,block_name.CHA_REG_TX_LB_MX_CFG.CHA_REG_TX_LB_MX_CFG_F,CHA_REG_TX_LB_MX_CFG.CHA_REG_TX_LB_MX_CFG_F,CHA_REG_TX_LB_MX_CFG_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="4032">00000000000000000000111111000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.8" child_no="8" id="tab170.5271783917527724" name="CHA_REG_ADC_MAN_PARA102" uid="2018-08-23T12:41:05.597+05:30d14e92" keypath="chip_name.block_name.CHA_REG_ADC_MAN_PARA102,block_name.CHA_REG_ADC_MAN_PARA102,CHA_REG_ADC_MAN_PARA102" hwmapaddr="217" csize="4" offset="28" caddress="28" address="0x1C" endaddress="0x1F" size="4" default="0x00007800" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="28" address="0x1C" endaddress="0x1F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab70.2963275973760564" offset="31:0" name="CHA_REG_ADC_MAN_PARA102_F" uid="2018-08-23T12:41:05.597+05:30d14e96" keypath="chip_name.block_name.CHA_REG_ADC_MAN_PARA102.CHA_REG_ADC_MAN_PARA102_F,block_name.CHA_REG_ADC_MAN_PARA102.CHA_REG_ADC_MAN_PARA102_F,CHA_REG_ADC_MAN_PARA102.CHA_REG_ADC_MAN_PARA102_F,CHA_REG_ADC_MAN_PARA102_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="30720">00000000000000000111100000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.9" child_no="9" id="tab190.010226472368339068" name="REG_SYS_LGC_CM_0" uid="2018-08-23T12:41:05.597+05:30d14e103" keypath="chip_name.block_name.REG_SYS_LGC_CM_0,block_name.REG_SYS_LGC_CM_0,REG_SYS_LGC_CM_0" hwmapaddr="218" csize="4" offset="32" caddress="32" address="0x20" endaddress="0x23" size="4" default="0x00000008" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="32" address="0x20" endaddress="0x23" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab80.5204367631263924" offset="31:0" name="REG_SYS_LGC_CM_0_F" uid="2018-08-23T12:41:05.597+05:30d14e107" keypath="chip_name.block_name.REG_SYS_LGC_CM_0.REG_SYS_LGC_CM_0_F,block_name.REG_SYS_LGC_CM_0.REG_SYS_LGC_CM_0_F,REG_SYS_LGC_CM_0.REG_SYS_LGC_CM_0_F,REG_SYS_LGC_CM_0_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="8">00000000000000000000000000001000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.10" child_no="10" id="tab210.12834900750821587" name="REG_SYS_MANUAL_DFT_0" uid="2018-08-23T12:41:05.597+05:30d14e114" keypath="chip_name.block_name.REG_SYS_MANUAL_DFT_0,block_name.REG_SYS_MANUAL_DFT_0,REG_SYS_MANUAL_DFT_0" hwmapaddr="219" csize="4" offset="36" caddress="36" address="0x24" endaddress="0x27" size="4" default="0x000000C0" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="36" address="0x24" endaddress="0x27" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab90.28506232536782283" offset="31:0" name="REG_SYS_MANUAL_DFT_0_F" uid="2018-08-23T12:41:05.597+05:30d14e118" keypath="chip_name.block_name.REG_SYS_MANUAL_DFT_0.REG_SYS_MANUAL_DFT_0_F,block_name.REG_SYS_MANUAL_DFT_0.REG_SYS_MANUAL_DFT_0_F,REG_SYS_MANUAL_DFT_0.REG_SYS_MANUAL_DFT_0_F,REG_SYS_MANUAL_DFT_0_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="192">00000000000000000000000011000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.11" child_no="11" id="tab230.3102906418460827" name="REG_SYS_LGC_COEX_0" uid="2018-08-23T12:41:05.597+05:30d14e126" keypath="chip_name.block_name.REG_SYS_LGC_COEX_0,block_name.REG_SYS_LGC_COEX_0,REG_SYS_LGC_COEX_0" hwmapaddr="220" csize="4" offset="40" caddress="40" address="0x28" endaddress="0x2B" size="4" default="0x00000004" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="40" address="0x28" endaddress="0x2B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab100.7732447913825329" offset="31:0" name="REG_SYS_LGC_COEX_0_F" uid="2018-08-23T12:41:05.597+05:30d14e130" keypath="chip_name.block_name.REG_SYS_LGC_COEX_0.REG_SYS_LGC_COEX_0_F,block_name.REG_SYS_LGC_COEX_0.REG_SYS_LGC_COEX_0_F,REG_SYS_LGC_COEX_0.REG_SYS_LGC_COEX_0_F,REG_SYS_LGC_COEX_0_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="4">00000000000000000000000000000100</default>
+         </field>
+      </reg>
+      <reg heading="1.1.12" child_no="12" id="tab250.9149175844555913" name="REG_SYS_LGC_COEX_7" uid="2018-08-23T12:41:05.597+05:30d14e137" keypath="chip_name.block_name.REG_SYS_LGC_COEX_7,block_name.REG_SYS_LGC_COEX_7,REG_SYS_LGC_COEX_7" hwmapaddr="221" csize="4" offset="44" caddress="44" address="0x2C" endaddress="0x2F" size="4" default="0x80000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="44" address="0x2C" endaddress="0x2F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab110.8419866650209518" offset="31:0" name="REG_SYS_LGC_COEX_7_F" uid="2018-08-23T12:41:05.597+05:30d14e141" keypath="chip_name.block_name.REG_SYS_LGC_COEX_7.REG_SYS_LGC_COEX_7_F,block_name.REG_SYS_LGC_COEX_7.REG_SYS_LGC_COEX_7_F,REG_SYS_LGC_COEX_7.REG_SYS_LGC_COEX_7_F,REG_SYS_LGC_COEX_7_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="2147483648">10000000000000000000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.13" child_no="13" id="tab270.9795993238254962" name="REG_SYS_LGC_COEX_5" uid="2018-08-23T12:41:05.597+05:30d14e148" keypath="chip_name.block_name.REG_SYS_LGC_COEX_5,block_name.REG_SYS_LGC_COEX_5,REG_SYS_LGC_COEX_5" hwmapaddr="222" csize="4" offset="48" caddress="48" address="0x30" endaddress="0x33" size="4" default="0x00000001" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="48" address="0x30" endaddress="0x33" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab120.5568828281571293" offset="31:0" name="REG_SYS_LGC_COEX_5_F" uid="2018-08-23T12:41:05.597+05:30d14e152" keypath="chip_name.block_name.REG_SYS_LGC_COEX_5.REG_SYS_LGC_COEX_5_F,block_name.REG_SYS_LGC_COEX_5.REG_SYS_LGC_COEX_5_F,REG_SYS_LGC_COEX_5.REG_SYS_LGC_COEX_5_F,REG_SYS_LGC_COEX_5_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="1">00000000000000000000000000000001</default>
+         </field>
+      </reg>
+      <reg heading="1.1.14" child_no="14" id="tab290.6592508014184664" name="REG_SYS_LGC_COEX_6" uid="2018-08-23T12:41:05.597+05:30d14e159" keypath="chip_name.block_name.REG_SYS_LGC_COEX_6,block_name.REG_SYS_LGC_COEX_6,REG_SYS_LGC_COEX_6" hwmapaddr="223" csize="4" offset="52" caddress="52" address="0x34" endaddress="0x37" size="4" default="0x00000001" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="52" address="0x34" endaddress="0x37" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab130.6376881977238498" offset="31:0" name="REG_SYS_LGC_COEX_6_F" uid="2018-08-23T12:41:05.597+05:30d14e163" keypath="chip_name.block_name.REG_SYS_LGC_COEX_6.REG_SYS_LGC_COEX_6_F,block_name.REG_SYS_LGC_COEX_6.REG_SYS_LGC_COEX_6_F,REG_SYS_LGC_COEX_6.REG_SYS_LGC_COEX_6_F,REG_SYS_LGC_COEX_6_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="1">00000000000000000000000000000001</default>
+         </field>
+      </reg>
+      <reg heading="1.1.15" child_no="15" id="tab310.5631048383322409" name="CHA_REG_DAC_ANA_DIV" uid="2018-08-23T12:41:05.597+05:30d14e170" keypath="chip_name.block_name.CHA_REG_DAC_ANA_DIV,block_name.CHA_REG_DAC_ANA_DIV,CHA_REG_DAC_ANA_DIV" hwmapaddr="224" csize="4" offset="56" caddress="56" address="0x38" endaddress="0x3B" size="4" default="0x00000080" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="56" address="0x38" endaddress="0x3B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab140.8304812497882088" offset="31:0" name="CHA_REG_DAC_ANA_DIV_F" uid="2018-08-23T12:41:05.597+05:30d14e174" keypath="chip_name.block_name.CHA_REG_DAC_ANA_DIV.CHA_REG_DAC_ANA_DIV_F,block_name.CHA_REG_DAC_ANA_DIV.CHA_REG_DAC_ANA_DIV_F,CHA_REG_DAC_ANA_DIV.CHA_REG_DAC_ANA_DIV_F,CHA_REG_DAC_ANA_DIV_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="128">00000000000000000000000010000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.16" child_no="16" id="tab330.32572350058182076" name="REG_DPLL_ABS" uid="2018-08-23T12:41:05.597+05:30d14e181" keypath="chip_name.block_name.REG_DPLL_ABS,block_name.REG_DPLL_ABS,REG_DPLL_ABS" hwmapaddr="225" csize="4" offset="60" caddress="60" address="0x3C" endaddress="0x3F" size="4" default="0x000012C4" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="60" address="0x3C" endaddress="0x3F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab150.002256914921570319" offset="31:0" name="REG_DPLL_ABS_F" uid="2018-08-23T12:41:05.597+05:30d14e185" keypath="chip_name.block_name.REG_DPLL_ABS.REG_DPLL_ABS_F,block_name.REG_DPLL_ABS.REG_DPLL_ABS_F,REG_DPLL_ABS.REG_DPLL_ABS_F,REG_DPLL_ABS_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="4804">00000000000000000001001011000100</default>
+         </field>
+      </reg>
+      <reg heading="1.1.17" child_no="17" id="tab350.14720655911217784" name="REG_DPLL_ANALOG8" uid="2018-08-23T12:41:05.597+05:30d14e192" keypath="chip_name.block_name.REG_DPLL_ANALOG8,block_name.REG_DPLL_ANALOG8,REG_DPLL_ANALOG8" hwmapaddr="226" csize="4" offset="64" caddress="64" address="0x40" endaddress="0x43" size="4" default="0x00000037" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="64" address="0x40" endaddress="0x43" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab160.5146281129253881" offset="31:0" name="REG_DPLL_ANALOG8_F" uid="2018-08-23T12:41:05.597+05:30d14e196" keypath="chip_name.block_name.REG_DPLL_ANALOG8.REG_DPLL_ANALOG8_F,block_name.REG_DPLL_ANALOG8.REG_DPLL_ANALOG8_F,REG_DPLL_ANALOG8.REG_DPLL_ANALOG8_F,REG_DPLL_ANALOG8_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="55">00000000000000000000000000110111</default>
+         </field>
+      </reg>
+      <reg heading="1.1.18" child_no="18" id="tab370.3043425956641008" name="REG_DPLL_DLF1" uid="2018-08-23T12:41:05.597+05:30d14e203" keypath="chip_name.block_name.REG_DPLL_DLF1,block_name.REG_DPLL_DLF1,REG_DPLL_DLF1" hwmapaddr="227" csize="4" offset="68" caddress="68" address="0x44" endaddress="0x47" size="4" default="0x00000143" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="68" address="0x44" endaddress="0x47" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab170.1462077655446984" offset="31:0" name="REG_DPLL_DLF1_F" uid="2018-08-23T12:41:05.597+05:30d14e207" keypath="chip_name.block_name.REG_DPLL_DLF1.REG_DPLL_DLF1_F,block_name.REG_DPLL_DLF1.REG_DPLL_DLF1_F,REG_DPLL_DLF1.REG_DPLL_DLF1_F,REG_DPLL_DLF1_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="323">00000000000000000000000101000011</default>
+         </field>
+      </reg>
+      <reg heading="1.1.19" child_no="19" id="tab390.018573619449776757" name="REG_DPLL_DLF2" uid="2018-08-23T12:41:05.597+05:30d14e214" keypath="chip_name.block_name.REG_DPLL_DLF2,block_name.REG_DPLL_DLF2,REG_DPLL_DLF2" hwmapaddr="228" csize="4" offset="72" caddress="72" address="0x48" endaddress="0x4B" size="4" default="0x000068C3" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="72" address="0x48" endaddress="0x4B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab180.12319337019647614" offset="31:0" name="REG_DPLL_DLF2_F" uid="2018-08-23T12:41:05.597+05:30d14e218" keypath="chip_name.block_name.REG_DPLL_DLF2.REG_DPLL_DLF2_F,block_name.REG_DPLL_DLF2.REG_DPLL_DLF2_F,REG_DPLL_DLF2.REG_DPLL_DLF2_F,REG_DPLL_DLF2_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="26819">00000000000000000110100011000011</default>
+         </field>
+      </reg>
+      <reg heading="1.1.20" child_no="20" id="tab410.23702085396474548" name="REG_DPLL_SFTDC" uid="2018-08-23T12:41:05.597+05:30d14e225" keypath="chip_name.block_name.REG_DPLL_SFTDC,block_name.REG_DPLL_SFTDC,REG_DPLL_SFTDC" hwmapaddr="229" csize="4" offset="76" caddress="76" address="0x4C" endaddress="0x4F" size="4" default="0x32099FAC" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="76" address="0x4C" endaddress="0x4F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab190.6031475531644152" offset="31:0" name="REG_DPLL_SFTDC_F" uid="2018-08-23T12:41:05.597+05:30d14e229" keypath="chip_name.block_name.REG_DPLL_SFTDC.REG_DPLL_SFTDC_F,block_name.REG_DPLL_SFTDC.REG_DPLL_SFTDC_F,REG_DPLL_SFTDC.REG_DPLL_SFTDC_F,REG_DPLL_SFTDC_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="839491500">00110010000010011001111110101100</default>
+         </field>
+      </reg>
+      <reg heading="1.1.21" child_no="21" id="tab430.33613662818407464" name="REG_DPLL_DLF3" uid="2018-08-23T12:41:05.597+05:30d14e236" keypath="chip_name.block_name.REG_DPLL_DLF3,block_name.REG_DPLL_DLF3,REG_DPLL_DLF3" hwmapaddr="230" csize="4" offset="80" caddress="80" address="0x50" endaddress="0x53" size="4" default="0x06000087" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="80" address="0x50" endaddress="0x53" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab200.3704520913855409" offset="31:0" name="REG_DPLL_DLF3_F" uid="2018-08-23T12:41:05.597+05:30d14e240" keypath="chip_name.block_name.REG_DPLL_DLF3.REG_DPLL_DLF3_F,block_name.REG_DPLL_DLF3.REG_DPLL_DLF3_F,REG_DPLL_DLF3.REG_DPLL_DLF3_F,REG_DPLL_DLF3_F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="100663431">00000110000000000000000010000111</default>
+         </field>
+      </reg>
+   </block>
+   <sequences>
+      <sequence name="nesteadif" sid="1:0" eid="seq_ip_0.684583560576942" orig_path="chip.idsng" refpath="C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\chip.idsng" level="1" uid="2018-08-23T12:41:08.564+05:30d24e294" msg=" line : 23 extraneous input '}' Please fix above compilation errors in your ISS Spec before continue. 
+  For more details contact to 'support@agnisys.com' ">
+         <doc/>
+         <arguments>
+            <value doc="" sid="4:0" eid="seq_arg0.684583560576942" uid="2018-08-23T12:41:05.597+05:30d14e251" svDataType="integer" cDataType="int" UvmDataType="int" name="op_freq">5825</value>
+            <value doc="" sid="4:0" eid="seq0.6037682481664921" uid="2018-08-23T12:41:05.597+05:30d14e253" svDataType="integer" cDataType="int" UvmDataType="int" name="rx_div">5</value>
+            <value doc="" sid="4:0" eid="seq0.9434821868676456" uid="2018-08-23T12:41:05.597+05:30d14e255" svDataType="integer" cDataType="int" UvmDataType="int" name="tx_div">7</value>
+         </arguments>
+         <constants>
+            <value doc="multiplier" sid="7:0" eid="seq_const0.684583560576942" uid="2018-08-23T12:41:05.597+05:30d14e258" svDataType="integer" cDataType="int" UvmDataType="int" name="MUL">104</value>
+            <value doc="divider" sid="7:0" eid="seq0.25290743431633633" uid="2018-08-23T12:41:05.597+05:30d14e260" svDataType="float" cDataType="float" UvmDataType="float" dataType="float" name="DIV">76.8</value>
+            <value doc="" sid="7:0" eid="seq0.5782409560795513" uid="2018-08-23T12:41:05.597+05:30d14e262" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL1">0x1A320006</value>
+            <value doc="" sid="7:0" eid="seq0.8826781926752436" uid="2018-08-23T12:41:05.597+05:30d14e264" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL2">0x1AEC0006</value>
+            <value doc="" sid="7:0" eid="seq0.644775205351678" uid="2018-08-23T12:41:05.597+05:30d14e266" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL3">10320006</value>
+            <value doc="" sid="7:0" eid="seq0.1581651944292215" uid="2018-08-23T12:41:05.597+05:30d14e268" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL4">0x10EC0006</value>
+            <value doc="" sid="7:0" eid="seq0.8294515066895533" uid="2018-08-23T12:41:05.597+05:30d14e270" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL5">0x0000D196</value>
+            <value doc="" sid="7:0" eid="seq0.9961919364657575" uid="2018-08-23T12:41:05.597+05:30d14e272" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL6">0x0000D766</value>
+            <value doc="" sid="7:0" eid="seq0.5901922352945512" uid="2018-08-23T12:41:05.597+05:30d14e274" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL7">8196</value>
+            <value doc="" sid="7:0" eid="seq0.7490723082818874" uid="2018-08-23T12:41:05.597+05:30d14e276" svDataType="integer" cDataType="int" UvmDataType="int" name="VAL8">8766</value>
+         </constants>
+         <variables>
+            <value doc="" sid="10:0" eid="seq_var0.684583560576942" uid="2018-08-23T12:41:05.597+05:30d14e279" svDataType="integer" cDataType="int" UvmDataType="int" name="dpll_freq">
+               <EXPRESSION>
+                  <EXPRESSION type="number">2200</EXPRESSION>
+               </EXPRESSION>
+               <oldValue>2200</oldValue>
+            </value>
+            <value doc="" sid="11:0" eid="seq0.5475128901565239" uid="2018-08-23T12:41:05.597+05:30d14e281" svDataType="integer" cDataType="int" UvmDataType="int" name="val_r">
+               <TEMPCAL tempVarName="dpll_freq">
+                  <EXPRESSION>
+                     <EXPRESSION type="number">2200</EXPRESSION>
+                  </EXPRESSION>
+                  <oldValue>2200</oldValue>
+               </TEMPCAL>
+               <EXPRESSION type="EXP">MUL * floor(dpll_freq / DIV)</EXPRESSION>
+               <oldValue>MUL*floor(dpll_freq/DIV)</oldValue>
+            </value>
+            <value doc="" sid="12:0" eid="seq0.4567440470235469" uid="2018-08-23T12:41:05.597+05:30d14e283" svDataType="integer" cDataType="int" UvmDataType="int" name="val">
+               <TEMPCAL tempVarName="dpll_freq">
+                  <EXPRESSION>
+                     <EXPRESSION type="number">2200</EXPRESSION>
+                  </EXPRESSION>
+                  <oldValue>2200</oldValue>
+               </TEMPCAL>
+               <TEMPCAL tempVarName="val_r">
+                  <EXPRESSION type="EXP">MUL * floor(dpll_freq / DIV)</EXPRESSION>
+                  <oldValue>MUL*floor(dpll_freq/DIV)</oldValue>
+               </TEMPCAL>
+               <EXPRESSION>
+                  <SUBROUTINE name="round">
+                     <ARGS>
+                        <ARG>
+                           <EXPRESSION type="EXP">MUL * val_r + dpll_freq / DIV  - val_r</EXPRESSION>
+                        </ARG>
+                     </ARGS>
+                  </SUBROUTINE>
+               </EXPRESSION>
+               <oldValue>round(MUL*val_r+dpll_freq/DIV-val_r)</oldValue>
+            </value>
+         </variables>
+         <seqsteps msg=" line : 23 extraneous input '}' Please fix above compilation errors in your ISS Spec before continue. 
+  For more details contact to 'support@agnisys.com' "/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</chip>

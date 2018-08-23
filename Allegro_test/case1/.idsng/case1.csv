@@ -1,0 +1,57 @@
+chip,block,reg,offset,field,bits,default,sw,hw,doc
+
+chip_name,block1,reg1,0,,32 ,0x00000000,,,{hdl_path=reg1;abs_hdl_path=chip_name_ids.block1_idsinst.reg1;coverage=on;}
+chip_name,block1,reg1,,fld,32 ,0x00000000,rw,rw,
+               
+               
+            {hdl_path=_fld_q;abs_hdl_path=chip_name_ids.block1_idsinst.reg1_fld_q;},
+
+chip_name,block1,reggroup1_reg1,0,,32 ,0x00000000,,,{hdl_path=reggroup1_reg1;abs_hdl_path=chip_name_ids.block1_idsinst.reggroup1_reg1;coverage=on;}
+chip_name,block1,reggroup1_reg1,,fld,32 ,0x00000000,rw,rw,
+                  
+                  
+               {hdl_path=_fld_q;abs_hdl_path=chip_name_ids.block1_idsinst.reggroup1_reg1_fld_q;},
+
+chip_name,block1,reggroup1_reg2,4,,32 ,0x00000000,,,{hdl_path=reggroup1_reg2;abs_hdl_path=chip_name_ids.block1_idsinst.reggroup1_reg2;coverage=on;}
+chip_name,block1,reggroup1_reg2,,fld1,32 ,0x00000000,rw,rw,
+                  
+                  
+               {hdl_path=_fld1_q;abs_hdl_path=chip_name_ids.block1_idsinst.reggroup1_reg2_fld1_q;},
+
+
+
+chip_name,block2,reggroup1_reg1,0,,32 ,0x00000000,,,{hdl_path=reggroup1_reg1;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg1;coverage=on;}
+chip_name,block2,reggroup1_reg1,,fld,32 ,0x00000000,rw,rw,
+                  
+                  
+               {hdl_path=_fld_q;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg1_fld_q;},
+
+chip_name,block2,reggroup1_reg2,4,,32 ,0x00000000,,,{hdl_path=reggroup1_reg2;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg2;coverage=on;}
+chip_name,block2,reggroup1_reg2,,fld1,32 ,0x00000000,rw,rw,
+                  
+                  
+               {hdl_path=_fld1_q;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg2_fld1_q;},
+
+
+chip_name,block2,ref_name_reg1,0,,32 ,0x00000000,,,{hdl_path=ref_name_reg1;abs_hdl_path=chip_name_ids.block2_idsinst.ref_name_reg1;coverage=on;}
+chip_name,block2,ref_name_reg1,,fld,32 ,0x00000000,rw,rw,
+                  
+                  
+               {hdl_path=_fld_q;abs_hdl_path=chip_name_ids.block2_idsinst.ref_name_reg1_fld_q;},
+
+chip_name,block2,reggroup1_reg1,0,,32 ,0x00000000,,,{hdl_path=reggroup1_reg1;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg1;coverage=on;}
+chip_name,block2,reggroup1_reg1,,fld,32 ,0x00000000,rw,rw,
+                     
+                     
+                  {hdl_path=_fld_q;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg1_fld_q;},
+
+chip_name,block2,reggroup1_reg2,4,,32 ,0x00000000,,,{hdl_path=reggroup1_reg2;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg2;coverage=on;}
+chip_name,block2,reggroup1_reg2,,fld1,32 ,0x00000000,rw,rw,
+                     
+                     
+                  {hdl_path=_fld1_q;abs_hdl_path=chip_name_ids.block2_idsinst.reggroup1_reg2_fld1_q;},
+
+
+
+
+

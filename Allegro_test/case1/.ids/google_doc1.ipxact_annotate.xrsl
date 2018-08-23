@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab0.8795508642152586" name="Block1" offset="0" uid="2018-08-16T15:06:10.363+05:30d14e1" keypath="Block1" caddress="0" hwmapaddr="64" csize="8" address="0x0" endaddress="0x7" size="8">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x7" size="8"/>
+      </busdomains>
+   </config>
+   <reg heading="1.1" child_no="1" id="tab0.6753545048094729" name="Register1" offset="0" uid="2018-08-16T15:06:10.363+05:30d14e13" keypath="Block1.Register1,Register1" hwmapaddr="65" csize="4" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x00010000" sw="rw ro" hw="ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="field_3" offset="15:0" name="REGISTER1_Fld1" uid="2018-08-16T15:06:10.363+05:30d14e17" keypath="Block1.Register1.REGISTER1_Fld1,Register1.REGISTER1_Fld1,REGISTER1_Fld1">
+         <sw>rw</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="field_2" offset="31:16" name="REGISTER1_Fld2" uid="2018-08-16T15:06:10.363+05:30d14e24" keypath="Block1.Register1.REGISTER1_Fld2,Register1.REGISTER1_Fld2,REGISTER1_Fld2">
+         <sw>ro</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="1">0000000000000001</default>
+      </field>
+   </reg>
+   <reg heading="1.2" child_no="2" id="tab0.22127520449308724" name="Register2" offset="4" uid="2018-08-16T15:06:10.363+05:30d14e31" keypath="Block1.Register2,Register2" hwmapaddr="66" csize="4" caddress="4" address="0x4" endaddress="0x7" size="4" default="0x00000000" sw="rw ro" hw="rw ro">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x4" endaddress="0x7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="field_5" offset="15:0" name="REGISTER2_Fld1" uid="2018-08-16T15:06:10.363+05:30d14e35" keypath="Block1.Register2.REGISTER2_Fld1,Register2.REGISTER2_Fld1,REGISTER2_Fld1">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="field_4" offset="31:16" name="REGISTER2_Fld2" uid="2018-08-16T15:06:10.363+05:30d14e42" keypath="Block1.Register2.REGISTER2_Fld2,Register2.REGISTER2_Fld2,REGISTER2_Fld2">
+         <sw>ro</sw>
+         <hw>ro</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+   </reg>
+</block>

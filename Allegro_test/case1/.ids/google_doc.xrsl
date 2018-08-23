@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip name="Chip1" id="2:2"><config><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants><regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><chipsize>4096</chipsize></config><block name="Block1" id="3:2"><reg name="Reg1" id="4:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="15:0" name="REG1_Fld1" id="4:7">
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:16" name="REG1_Fld2" id="4:8">
+      <sw>ro</sw>
+      <hw>ro</hw>
+      <default>1</default>
+   </field>
+</reg><reg name="Reg2" id="5:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="15:0" name="REG2_Fld1" id="5:7">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:16" name="REG2_Fld2" id="5:8">
+      <sw>ro</sw>
+      <hw>ro</hw>
+      <default>0</default>
+   </field>
+</reg></block><block name="block_name" id="6:2"><reg name="reg_name" id="7:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="3" name="Q" id="7:7">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+</reg><ref instname="instance_name" link="Block1" id="8:2" type="content" refednode="block"/></block></chip>

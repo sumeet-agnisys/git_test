@@ -1,0 +1,184 @@
+<svg zoomAndPan="enable" width="300%" height="1000%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+CHIP
+<title>chip_name</title>
+BLOCK
+<rect x="110" y="20" width="120" height="350" stroke="black" stroke-width="1.5" fill="white">
+							<title>block1</title>
+							</rect>
+<text x="170" y="195" fill="black" style="text-anchor: middle;">block1<title>block1</title></text>
+<text x="170" y="215" fill="black" style="text-anchor: middle;">(12)</text>
+<text x="10" y="40" fill="black">0x00</text>
+<text x="10" y="360" fill="black">0x0B</text>
+<rect x="380" y="30" width="512" height="90" fill="lavender" stroke="black" stroke-width="1.5"/>
+REGISTER
+<text x="300" y="40" fill="black" text-anchor="middle" font-size="10pt">reg1<title>reg1</title></text>
+<text x="300" y="55" fill="black" text-anchor="start" font-size="10pt">0x00<title>reg1</title></text>
+<rect x="380" y="30" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="380" y="30" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="380" y="45" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="636" y="42" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="636" y="57" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld</text>
+<rect x="380" y="30" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld</title>
+		</rect>
+<rect x="380" y="30" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+REG GROUP
+<rect x="380" y="60" width="512" height="200" fill="white" stroke="black" stroke-width="1.5"><title>reggroup1</title></rect>
+<text x="636" y="160" fill="black" stroke="none" style="text-anchor: middle;">reggroup1<title>reggroup1</title></text>
+<text x="300" y="70" fill="black" stroke="none" font-size="10pt">0x04</text>
+<text x="300" y="255" fill="black" stroke="none" font-size="10pt">0x0B</text>
+<rect x="1030" y="15" width="512" height="60" fill="lavender" stroke="black" stroke-width="1.5"/>
+REGISTER
+<text x="950" y="25" fill="black" text-anchor="middle" font-size="10pt">reg1<title>reg1</title></text>
+<text x="950" y="40" fill="black" text-anchor="start" font-size="10pt">0x04<title>reg1</title></text>
+<rect x="1030" y="15" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1030" y="15" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1030" y="30" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1286" y="27" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1286" y="42" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld</text>
+<rect x="1030" y="15" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld</title>
+		</rect>
+<rect x="1030" y="15" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+REGISTER
+<text x="950" y="55" fill="black" text-anchor="middle" font-size="10pt">reg2<title>reg2</title></text>
+<text x="950" y="70" fill="black" text-anchor="start" font-size="10pt">0x08<title>reg2</title></text>
+<rect x="1030" y="45" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1030" y="45" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1030" y="60" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1286" y="57" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1286" y="72" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld1</text>
+<rect x="1030" y="45" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld1</title>
+		</rect>
+<rect x="1030" y="45" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+<rect x="1050" y="6" width="100" height="10" fill="white" stroke="none"><title>reggroup1</title></rect>
+<text x="1100" y="12" fill="black" text-anchor="middle" font-size="10pt">reggroup1<title>reggroup1</title></text>
+REG GROUP END
+<rect x="400" y="16" width="100" height="15" fill="white" stroke="none"><title>block1</title></rect>
+<text x="410" y="27" fill="black" stroke="none" font-size="10pt">block1<title>block1</title></text>
+BLOCK END
+BLOCK
+<rect x="110" y="370" width="120" height="500" stroke="black" stroke-width="1.5" fill="white">
+							<title>block2</title>
+							</rect>
+<text x="170" y="620" fill="black" style="text-anchor: middle;">block2<title>block2</title></text>
+<text x="170" y="640" fill="black" style="text-anchor: middle;">(20)</text>
+<text x="10" y="390" fill="black">0x0C</text>
+<text x="10" y="860" fill="black">0x1F</text>
+<rect x="380" y="140" width="512" height="440" fill="lavender" stroke="black" stroke-width="1.5"/>
+REG GROUP
+<rect x="380" y="140" width="512" height="200" fill="white" stroke="black" stroke-width="1.5"><title>reggroup1</title></rect>
+<text x="636" y="240" fill="black" stroke="none" style="text-anchor: middle;">reggroup1<title>reggroup1</title></text>
+<text x="300" y="150" fill="black" stroke="none" font-size="10pt">0x0C</text>
+<text x="300" y="335" fill="black" stroke="none" font-size="10pt">0x13</text>
+<rect x="1030" y="95" width="512" height="60" fill="lavender" stroke="black" stroke-width="1.5"/>
+REGISTER
+<text x="950" y="105" fill="black" text-anchor="middle" font-size="10pt">reg1<title>reg1</title></text>
+<text x="950" y="120" fill="black" text-anchor="start" font-size="10pt">0x0C<title>reg1</title></text>
+<rect x="1030" y="95" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1030" y="95" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1030" y="110" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1286" y="107" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1286" y="122" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld</text>
+<rect x="1030" y="95" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld</title>
+		</rect>
+<rect x="1030" y="95" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+REGISTER
+<text x="950" y="135" fill="black" text-anchor="middle" font-size="10pt">reg2<title>reg2</title></text>
+<text x="950" y="150" fill="black" text-anchor="start" font-size="10pt">0x10<title>reg2</title></text>
+<rect x="1030" y="125" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1030" y="125" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1030" y="140" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1286" y="137" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1286" y="152" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld1</text>
+<rect x="1030" y="125" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld1</title>
+		</rect>
+<rect x="1030" y="125" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+<rect x="1050" y="86" width="100" height="10" fill="white" stroke="none"><title>reggroup1</title></rect>
+<text x="1100" y="92" fill="black" text-anchor="middle" font-size="10pt">reggroup1<title>reggroup1</title></text>
+REG GROUP END
+REG GROUP
+<rect x="380" y="340" width="512" height="200" fill="white" stroke="black" stroke-width="1.5"><title>ref_name</title></rect>
+<text x="636" y="440" fill="black" stroke="none" style="text-anchor: middle;">ref_name<title>ref_name</title></text>
+<text x="300" y="350" fill="black" stroke="none" font-size="10pt">0x14</text>
+<text x="300" y="535" fill="black" stroke="none" font-size="10pt">0x1F</text>
+<rect x="1030" y="175" width="512" height="85" fill="lavender" stroke="black" stroke-width="1.5"/>
+REGISTER
+<text x="950" y="185" fill="black" text-anchor="middle" font-size="10pt">reg1<title>reg1</title></text>
+<text x="950" y="200" fill="black" text-anchor="start" font-size="10pt">0x14<title>reg1</title></text>
+<rect x="1030" y="175" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1030" y="175" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1030" y="190" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1286" y="187" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1286" y="202" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld</text>
+<rect x="1030" y="175" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld</title>
+		</rect>
+<rect x="1030" y="175" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+REG GROUP
+<rect x="1030" y="205" width="512" height="55" fill="white" stroke="black" stroke-width="1.5"><title>reggroup1</title></rect>
+<text x="1286" y="232" fill="black" stroke="none" style="text-anchor: middle;">reggroup1<title>reggroup1</title></text>
+<text x="950" y="215" fill="black" stroke="none" font-size="10pt">0x18</text>
+<text x="950" y="255" fill="black" stroke="none" font-size="10pt">0x1F</text>
+<rect x="1680" y="10" width="512" height="60" fill="lavender" stroke="black" stroke-width="1.5"/>
+REGISTER
+<text x="1600" y="20" fill="black" text-anchor="middle" font-size="10pt">reg1<title>reg1</title></text>
+<text x="1600" y="35" fill="black" text-anchor="start" font-size="10pt">0x18<title>reg1</title></text>
+<rect x="1680" y="10" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1680" y="10" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1680" y="25" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1936" y="22" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1936" y="37" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld</text>
+<rect x="1680" y="10" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld</title>
+		</rect>
+<rect x="1680" y="10" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+REGISTER
+<text x="1600" y="50" fill="black" text-anchor="middle" font-size="10pt">reg2<title>reg2</title></text>
+<text x="1600" y="65" fill="black" text-anchor="start" font-size="10pt">0x1C<title>reg2</title></text>
+<rect x="1680" y="40" width="512" height="30" fill="none" stroke="black" stroke-width="1.5"/>
+FIELD
+<rect x="1680" y="40" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<rect x="1680" y="55" width="512" height="15" stroke="black" fill="white" stroke-width="0.5"/>
+<text x="1936" y="52" fill="black" stroke="none" text-anchor="middle" font-size="10pt">31:0</text>
+<text x="1936" y="67" fill="black" stroke="none" text-anchor="middle" font-size="10pt">fld1</text>
+<rect x="1680" y="40" width="512" height="30" stroke="black" fill="white" stroke-width="0.5" fill-opacity="0.5">
+		<title>fld1</title>
+		</rect>
+<rect x="1680" y="40" width="512" height="30" stroke="black" fill="none" stroke-width="1.5"/>
+FIELD END
+REG END
+<rect x="1700" y="1" width="100" height="10" fill="white" stroke="none"><title>reggroup1</title></rect>
+<text x="1750" y="7" fill="black" text-anchor="middle" font-size="10pt">reggroup1<title>reggroup1</title></text>
+REG GROUP END
+<rect x="1050" y="166" width="100" height="10" fill="white" stroke="none"><title>ref_name</title></rect>
+<text x="1100" y="172" fill="black" text-anchor="middle" font-size="10pt">ref_name<title>ref_name</title></text>
+REG GROUP END
+<rect x="400" y="126" width="100" height="15" fill="white" stroke="none"><title>block2</title></rect>
+<text x="410" y="137" fill="black" stroke="none" font-size="10pt">block2<title>block2</title></text>
+BLOCK END
+</svg>

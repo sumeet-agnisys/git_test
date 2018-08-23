@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" id="tab10.4112408302709165" name="chip_name" temp="r1,r2,r1,r1,r2,r1,r2,r1,r1,r1,r2,r2,r1,r2,r1" uid="2018-08-17T20:33:30.726+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="177" csize="896" address="0x000" endaddress="0x37F" size="896">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x000" endaddress="0x37F" size="896"/>
+      </busdomains>
+   </config>
+   <doc>
+      <list type="param" uid="2018-08-17T20:33:30.726+05:30d14e14">
+         <value name="$r1" private="" uid="2018-08-17T20:33:30.726+05:30d14e15">10</value>
+         <value name="$r2" private="" uid="2018-08-17T20:33:30.726+05:30d14e17">11</value>
+      </list>
+   </doc>
+   <block heading="1.1" child_no="1" id="tab30.40887519603806965" name="block1" temp="r1,r1,r2" uid="2018-08-17T20:33:30.726+05:30d14e19" keypath="chip_name.block1,block1" count="10" param.count="r1" hwmapaddr="178" max_reg_size="32" csize="120" offset="0" caddress="0" address="0x000" endaddress="0x77" size="12" address2="0x00C" msg="Name block1 already used ; ">
+      <config>
+         <repeats>
+            <repeat param.count="r1" count="10" name="block1"/>
+         </repeats>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x000" endaddress="0x77" size="12" address2="0x00C"/>
+         </busdomains>
+      </config>
+      <doc>
+         <list type="define" uid="2018-08-17T20:33:30.726+05:30d14e24"/>
+         <list type="param" duplicate="true" uid="2018-08-17T20:33:30.726+05:30d14e25">
+            <value name="$r1" private="" uid="2018-08-17T20:33:30.726+05:30d14e26">10</value>
+            <value name="$r2" private="" uid="2018-08-17T20:33:30.726+05:30d14e28">11</value>
+         </list>
+      </doc>
+      <reg heading="1.1.1" child_no="1" id="tab50.413312125885565" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e30" keypath="chip_name.block1.reg1,block1.reg1,reg1" hwmapaddr="179" csize="4" offset="0" caddress="0" address="0x000" endaddress="0x3" size="4" address2="0x00C" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x000" endaddress="0x3" size="4" address2="0x00C"/>
+            </busdomains>
+         </config>
+         <field id="tab00.7744983208765764" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e34" keypath="chip_name.block1.reg1.fld,block1.reg1.fld,reg1.fld,fld">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000000000000000000000000</default>
+         </field>
+      </reg>
+      <section heading="1.1.2" child_no="2" id="tab70.8445637235655805" name="reggroup1" uid="2018-08-17T20:33:30.726+05:30d14e41" keypath="chip_name.block1.reggroup1,block1.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="180" max_reg_size="32" csize="8" offset="4" caddress="4" address="0x004" endaddress="0xB" size="8" address2="0x010">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x004" endaddress="0xB" size="8" address2="0x010"/>
+            </busdomains>
+         </config>
+         <reg heading="1.1.2.1" child_no="1" id="tab80.8372205440163581" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e43" keypath="chip_name.block1.reggroup1.reg1,block1.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="181" csize="4" offset="0" caddress="0" address="0x004" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x004" endaddress="0x7" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab10.3739948030085698" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e47" keypath="chip_name.block1.reggroup1.reg1.fld,block1.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+         <reg heading="1.1.2.2" child_no="2" id="tab100.2012142227624153" name="reg2" uid="2018-08-17T20:33:30.726+05:30d14e54" keypath="chip_name.block1.reggroup1.reg2,block1.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="182" csize="4" offset="4" caddress="4" address="0x008" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x008" endaddress="0xB" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab20.5332878813976148" offset="31:0" name="fld1" uid="2018-08-17T20:33:30.726+05:30d14e58" keypath="chip_name.block1.reggroup1.reg2.fld1,block1.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <block heading="1.2" child_no="2" id="tab130.657042915296499" name="block2" temp="r1,r2,r1" uid="2018-08-17T20:33:30.726+05:30d14e65" keypath="chip_name.block2,block2" hwmapaddr="183" csize="128" offset="120" caddress="120" address="0x078" endaddress="0xF7" size="128" msg="Name block2 already used ; ">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="120" address="0x078" endaddress="0xF7" size="128"/>
+         </busdomains>
+      </config>
+      <doc>
+         <list type="define" uid="2018-08-17T20:33:30.726+05:30d14e68"/>
+         <list type="param" uid="2018-08-17T20:33:30.726+05:30d14e69">
+            <value name="$r1" private="" uid="2018-08-17T20:33:30.726+05:30d14e70">10</value>
+            <value name="$r2" private="" uid="2018-08-17T20:33:30.726+05:30d14e72">11</value>
+         </list>
+      </doc>
+      <section heading="1.2.1" child_no="1" id="tab140.4459063426838985" name="reggroup1" uid="2018-08-17T20:33:30.726+05:30d14e74" keypath="chip_name.block2.reggroup1,block2.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="184" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x078" endaddress="0x7F" size="8">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x078" endaddress="0x7F" size="8"/>
+            </busdomains>
+         </config>
+         <reg heading="1.2.1.1" child_no="1" id="tab150.1881968346992794" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e76" keypath="chip_name.block2.reggroup1.reg1,block2.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="185" csize="4" offset="0" caddress="0" address="0x078" endaddress="0x7B" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x078" endaddress="0x7B" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab30.36818643290836717" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e80" keypath="chip_name.block2.reggroup1.reg1.fld,block2.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+         <reg heading="1.2.1.2" child_no="2" id="tab170.5703917511743084" name="reg2" uid="2018-08-17T20:33:30.726+05:30d14e87" keypath="chip_name.block2.reggroup1.reg2,block2.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="186" csize="4" offset="4" caddress="4" address="0x07C" endaddress="0x7F" size="4" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x07C" endaddress="0x7F" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab40.8112230414307966" offset="31:0" name="fld1" uid="2018-08-17T20:33:30.726+05:30d14e91" keypath="chip_name.block2.reggroup1.reg2.fld1,block2.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+      </section>
+      <section heading="1.2.2" child_no="2" id="tab200.827039094690976" name="ref_name" link="block1" type="subblock" refnodetype="section" temp="r1" uid="2018-08-17T20:33:30.726+05:30d14e98" keypath="chip_name.block2.ref_name,block2.ref_name,ref_name" keypathdown="ref_name.reg1.reggroup1.reg1.reg2,reg1,reggroup1.reg1.reg2,reg1,reg2" count="10" param.count="r1" hwmapaddr="187" max_reg_size="32" csize="120" offset="8" caddress="8" address="0x080" endaddress="0xF7" size="12" address2="0x08C">
+         <config>
+            <repeats>
+               <repeat param.count="r1" count="10" name="ref_name"/>
+            </repeats>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="8" address="0x080" endaddress="0xF7" size="12" address2="0x08C"/>
+            </busdomains>
+         </config>
+         <doc>, </doc>
+         <reg heading="1.2.2.1" child_no="1" id="tab50.413312125885565" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e104" keypath="chip_name.block2.ref_name.reg1,block2.ref_name.reg1,ref_name.reg1,reg1" hwmapaddr="188" csize="4" offset="0" caddress="0" address="0x080" endaddress="0x83" size="4" address2="0x08C" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x080" endaddress="0x83" size="4" address2="0x08C"/>
+               </busdomains>
+            </config>
+            <field id="tab00.7744983208765764" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e108" keypath="chip_name.block2.ref_name.reg1.fld,block2.ref_name.reg1.fld,ref_name.reg1.fld,reg1.fld,fld">
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+         <section heading="1.2.2.2" child_no="2" id="tab70.8445637235655805" name="reggroup1" uid="2018-08-17T20:33:30.726+05:30d14e115" keypath="chip_name.block2.ref_name.reggroup1,block2.ref_name.reggroup1,ref_name.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="189" max_reg_size="32" csize="8" offset="4" caddress="4" address="0x084" endaddress="0x8B" size="8" address2="0x090" context="ref_name">
+            <config>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x084" endaddress="0x8B" size="8" address2="0x090"/>
+               </busdomains>
+            </config>
+            <reg heading="1.2.2.2.1" child_no="1" id="tab80.8372205440163581" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e117" keypath="chip_name.block2.ref_name.reggroup1.reg1,block2.ref_name.reggroup1.reg1,ref_name.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="190" csize="4" offset="0" caddress="0" address="0x084" endaddress="0x87" size="4" default="0x00000000" sw="rw" hw="rw">
+               <config>
+                  <regwidth>32</regwidth>
+                  <busdomains>
+                     <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x084" endaddress="0x87" size="4"/>
+                  </busdomains>
+               </config>
+               <field id="tab10.3739948030085698" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e121" keypath="chip_name.block2.ref_name.reggroup1.reg1.fld,block2.ref_name.reggroup1.reg1.fld,ref_name.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+                  <sw>rw</sw>
+                  <hw>rw</hw>
+                  <default unresolvedDef="0">00000000000000000000000000000000</default>
+               </field>
+            </reg>
+            <reg heading="1.2.2.2.2" child_no="2" id="tab100.2012142227624153" name="reg2" uid="2018-08-17T20:33:30.726+05:30d14e128" keypath="chip_name.block2.ref_name.reggroup1.reg2,block2.ref_name.reggroup1.reg2,ref_name.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="191" csize="4" offset="4" caddress="4" address="0x088" endaddress="0x8B" size="4" default="0x00000000" sw="rw" hw="rw">
+               <config>
+                  <regwidth>32</regwidth>
+                  <busdomains>
+                     <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x088" endaddress="0x8B" size="4"/>
+                  </busdomains>
+               </config>
+               <field id="tab20.5332878813976148" offset="31:0" name="fld1" uid="2018-08-17T20:33:30.726+05:30d14e132" keypath="chip_name.block2.ref_name.reggroup1.reg2.fld1,block2.ref_name.reggroup1.reg2.fld1,ref_name.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+                  <sw>rw</sw>
+                  <hw>rw</hw>
+                  <default unresolvedDef="0">00000000000000000000000000000000</default>
+               </field>
+            </reg>
+         </section>
+      </section>
+   </block>
+   <block heading="1.3" child_no="3" id="tab30.48748309839521264" name="block1" temp="r1,r1,r2,r2" uid="2018-08-17T20:33:30.726+05:30d14e139" keypath="chip_name.block1,block1" count="10" param.count="r1" hwmapaddr="192" max_reg_size="32" csize="520" offset="248" caddress="248" address="0x0F8" endaddress="0x2FF" size="52" address2="0x12C">
+      <config>
+         <repeats>
+            <repeat param.count="r1" count="10" name="block1"/>
+         </repeats>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="248" address="0x0F8" endaddress="0x2FF" size="52" address2="0x12C"/>
+         </busdomains>
+      </config>
+      <doc>
+         <list type="define" uid="2018-08-17T20:33:30.726+05:30d14e144"/>
+         <list type="param" duplicate="true" uid="2018-08-17T20:33:30.726+05:30d14e145">
+            <value name="$r1" private="" uid="2018-08-17T20:33:30.726+05:30d14e146">10</value>
+            <value name="$r2" private="" uid="2018-08-17T20:33:30.726+05:30d14e148">11</value>
+         </list>
+      </doc>
+      <reg heading="1.3.1" child_no="1" id="tab40.5886688168676147" name="reg1" temp="r2" uid="2018-08-17T20:33:30.726+05:30d14e150" keypath="chip_name.block1.reg1,block1.reg1,reg1" count="11" param.count="r2" hwmapaddr="193" csize="44" offset="0" caddress="0" address="0x0F8" endaddress="0x123" size="4" address2="0x0FC" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <repeats>
+               <repeat param.count="r2" count="11" name="reg1"/>
+            </repeats>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0F8" endaddress="0x123" size="4" address2="0x0FC"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tab00.8085224734182075" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e157" keypath="chip_name.block1.reg1.fld,block1.reg1.fld,reg1.fld,fld">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000000000000000000000000</default>
+         </field>
+      </reg>
+      <section heading="1.3.2" child_no="2" id="tab60.6976918893727786" name="reggroup1" uid="2018-08-17T20:33:30.726+05:30d14e164" keypath="chip_name.block1.reggroup1,block1.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="194" max_reg_size="32" csize="8" offset="44" caddress="44" address="0x124" endaddress="0x12B" size="8" address2="0x158">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="44" address="0x124" endaddress="0x12B" size="8" address2="0x158"/>
+            </busdomains>
+         </config>
+         <reg heading="1.3.2.1" child_no="1" id="tab70.49389126526784266" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e166" keypath="chip_name.block1.reggroup1.reg1,block1.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="195" csize="4" offset="0" caddress="0" address="0x124" endaddress="0x127" size="4" default="0x00000000" sw="rw" hw="ro">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x124" endaddress="0x127" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab10.1709625689222407" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e170" keypath="chip_name.block1.reggroup1.reg1.fld,block1.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+         <reg heading="1.3.2.2" child_no="2" id="tab90.355690562767758" name="reg2" uid="2018-08-17T20:33:30.726+05:30d14e177" keypath="chip_name.block1.reggroup1.reg2,block1.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="196" csize="4" offset="4" caddress="4" address="0x128" endaddress="0x12B" size="4" default="0x00000000" sw="ro" hw="ro">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x128" endaddress="0x12B" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab20.3365251951690167" offset="31:0" name="fld1" uid="2018-08-17T20:33:30.726+05:30d14e181" keypath="chip_name.block1.reggroup1.reg2.fld1,block1.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+               <sw>ro</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <block heading="1.4" child_no="4" id="tab120.7035768084447329" name="block2" temp="r1,r2,r1" uid="2018-08-17T20:33:30.726+05:30d14e188" keypath="chip_name.block2,block2" hwmapaddr="197" csize="128" offset="768" caddress="768" address="0x300" endaddress="0x37F" size="128">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="768" address="0x300" endaddress="0x37F" size="128"/>
+         </busdomains>
+      </config>
+      <doc>
+         <list type="define" uid="2018-08-17T20:33:30.726+05:30d14e191"/>
+         <list type="param" uid="2018-08-17T20:33:30.726+05:30d14e192">
+            <value name="$r1" private="" uid="2018-08-17T20:33:30.726+05:30d14e193">10</value>
+            <value name="$r2" private="" uid="2018-08-17T20:33:30.726+05:30d14e195">11</value>
+         </list>
+      </doc>
+      <section heading="1.4.1" child_no="1" id="tab130.5731754781291125" name="reggroup1" uid="2018-08-17T20:33:30.726+05:30d14e197" keypath="chip_name.block2.reggroup1,block2.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="198" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x300" endaddress="0x307" size="8">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x300" endaddress="0x307" size="8"/>
+            </busdomains>
+         </config>
+         <reg heading="1.4.1.1" child_no="1" id="tab140.7939359715232086" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e199" keypath="chip_name.block2.reggroup1.reg1,block2.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="199" csize="4" offset="0" caddress="0" address="0x300" endaddress="0x303" size="4" default="0x00000000" sw="rw" hw="ro">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x300" endaddress="0x303" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab30.14536262428528557" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e203" keypath="chip_name.block2.reggroup1.reg1.fld,block2.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+         <reg heading="1.4.1.2" child_no="2" id="tab160.37010328620635813" name="reg2" uid="2018-08-17T20:33:30.726+05:30d14e210" keypath="chip_name.block2.reggroup1.reg2,block2.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="200" csize="4" offset="4" caddress="4" address="0x304" endaddress="0x307" size="4" default="0x00000000" sw="ro" hw="ro">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x304" endaddress="0x307" size="4"/>
+               </busdomains>
+            </config>
+            <field id="tab40.11861965942349084" offset="31:0" name="fld1" uid="2018-08-17T20:33:30.726+05:30d14e214" keypath="chip_name.block2.reggroup1.reg2.fld1,block2.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+               <sw>ro</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+      </section>
+      <section heading="1.4.2" child_no="2" id="tab190.21229637102155985" name="ref_name" type="subblock" link="block1" refnodetype="section" temp="r1" uid="2018-08-17T20:33:30.726+05:30d14e221" keypath="chip_name.block2.ref_name,block2.ref_name,ref_name" keypathdown="ref_name.reg1.reggroup1.reg1.reg2,reg1,reggroup1.reg1.reg2,reg1,reg2" count="10" param.count="r1" hwmapaddr="201" max_reg_size="32" csize="120" offset="8" caddress="8" address="0x308" endaddress="0x37F" size="12" address2="0x314">
+         <config>
+            <repeats>
+               <repeat param.count="r1" count="10" name="ref_name"/>
+            </repeats>
+            <busdomains>
+               <busdomain name="default_map" bus="AXI" addressUnit="8" offset="8" address="0x308" endaddress="0x37F" size="12" address2="0x314"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <reg heading="1.4.2.1" child_no="1" id="tab50.413312125885565" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e226" keypath="chip_name.block2.ref_name.reg1,block2.ref_name.reg1,ref_name.reg1,reg1" hwmapaddr="202" csize="4" offset="0" caddress="0" address="0x308" endaddress="0x30B" size="4" address2="0x314" default="0x00000000" sw="rw" hw="rw">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x308" endaddress="0x30B" size="4" address2="0x314"/>
+               </busdomains>
+            </config>
+            <field id="tab00.7744983208765764" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e230" keypath="chip_name.block2.ref_name.reg1.fld,block2.ref_name.reg1.fld,ref_name.reg1.fld,reg1.fld,fld">
+               <sw>rw</sw>
+               <hw>rw</hw>
+               <default unresolvedDef="0">00000000000000000000000000000000</default>
+            </field>
+         </reg>
+         <section heading="1.4.2.2" child_no="2" id="tab70.8445637235655805" name="reggroup1" uid="2018-08-17T20:33:30.726+05:30d14e237" keypath="chip_name.block2.ref_name.reggroup1,block2.ref_name.reggroup1,ref_name.reggroup1,reggroup1" keypathdown="reggroup1.reg1.reg2,reg1,reg2" hwmapaddr="203" max_reg_size="32" csize="8" offset="4" caddress="4" address="0x30C" endaddress="0x313" size="8" address2="0x318" context="ref_name">
+            <config>
+               <busdomains>
+                  <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x30C" endaddress="0x313" size="8" address2="0x318"/>
+               </busdomains>
+            </config>
+            <reg heading="1.4.2.2.1" child_no="1" id="tab80.8372205440163581" name="reg1" uid="2018-08-17T20:33:30.726+05:30d14e239" keypath="chip_name.block2.ref_name.reggroup1.reg1,block2.ref_name.reggroup1.reg1,ref_name.reggroup1.reg1,reggroup1.reg1,reg1" hwmapaddr="204" csize="4" offset="0" caddress="0" address="0x30C" endaddress="0x30F" size="4" default="0x00000000" sw="rw" hw="rw">
+               <config>
+                  <regwidth>32</regwidth>
+                  <busdomains>
+                     <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x30C" endaddress="0x30F" size="4"/>
+                  </busdomains>
+               </config>
+               <field id="tab10.3739948030085698" offset="31:0" name="fld" uid="2018-08-17T20:33:30.726+05:30d14e243" keypath="chip_name.block2.ref_name.reggroup1.reg1.fld,block2.ref_name.reggroup1.reg1.fld,ref_name.reggroup1.reg1.fld,reggroup1.reg1.fld,reg1.fld,fld">
+                  <sw>rw</sw>
+                  <hw>rw</hw>
+                  <default unresolvedDef="0">00000000000000000000000000000000</default>
+               </field>
+            </reg>
+            <reg heading="1.4.2.2.2" child_no="2" id="tab100.2012142227624153" name="reg2" uid="2018-08-17T20:33:30.726+05:30d14e250" keypath="chip_name.block2.ref_name.reggroup1.reg2,block2.ref_name.reggroup1.reg2,ref_name.reggroup1.reg2,reggroup1.reg2,reg2" hwmapaddr="205" csize="4" offset="4" caddress="4" address="0x310" endaddress="0x313" size="4" default="0x00000000" sw="rw" hw="rw">
+               <config>
+                  <regwidth>32</regwidth>
+                  <busdomains>
+                     <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x310" endaddress="0x313" size="4"/>
+                  </busdomains>
+               </config>
+               <field id="tab20.5332878813976148" offset="31:0" name="fld1" uid="2018-08-17T20:33:30.726+05:30d14e254" keypath="chip_name.block2.ref_name.reggroup1.reg2.fld1,block2.ref_name.reggroup1.reg2.fld1,ref_name.reggroup1.reg2.fld1,reggroup1.reg2.fld1,reg2.fld1,fld1">
+                  <sw>rw</sw>
+                  <hw>rw</hw>
+                  <default unresolvedDef="0">00000000000000000000000000000000</default>
+               </field>
+            </reg>
+         </section>
+      </section>
+   </block>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.9176842211761362" orig_path="case1.idsng" refpath="C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\case1\case1.idsng" ip="C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\case1\.ids\case1.idsng.xrsl">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs/>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</chip>

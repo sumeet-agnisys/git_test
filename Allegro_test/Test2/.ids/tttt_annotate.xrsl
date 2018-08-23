@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab0.3656306122492624" name="block1" uid="2018-08-23T16:21:30.472+05:30d14e1" keypath="block1" offset="0" caddress="0" hwmapaddr="482" csize="8" address="0x0" endaddress="0x7" size="8">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0" endaddress="0x7" size="8"/>
+      </busdomains>
+   </config>
+   <reg heading="1.1" child_no="1" id="tab_reg0.5732370973618793" name="reg1" uid="2018-08-23T16:21:30.472+05:30d14e13" keypath="block1.reg1,reg1" hwmapaddr="483" csize="4" offset="0" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab_field0.5732370973618793" offset="31:0" name="fld" next="s1" uid="2018-08-23T16:21:30.472+05:30d14e17" keypath="block1.reg1.fld,reg1.fld,fld">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000000000000000000000</default>
+         <doc/>
+      </field>
+   </reg>
+   <reg heading="1.2" child_no="2" id="tab_reg0.7876823595155804" name="reg2" uid="2018-08-23T16:21:30.472+05:30d14e25" keypath="block1.reg2,reg2" hwmapaddr="484" csize="4" offset="4" caddress="4" address="0x4" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <regwidth>32</regwidth>
+         <busdomains>
+            <busdomain name="default_map" bus="AXI" addressUnit="8" offset="4" address="0x4" endaddress="0x7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="field0.34817764057762823" offset="31:0" name="fld" uid="2018-08-23T16:21:30.472+05:30d14e29" keypath="block1.reg2.fld,reg2.fld,fld">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000000000000000000000</default>
+      </field>
+   </reg>
+   <signals name="signals">
+      <signal direction="in" uid="2018-08-23T16:21:30.472+05:30d14e37" export="true" width="1" oldSignalName="s1" name="s1" msg="Name s1 already used ; "/>
+      <signal direction="in" uid="2018-08-23T16:21:30.472+05:30d14e38" export="true" width="1" oldSignalName="s1" name="s1"/>
+   </signals>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.49493788161044083" orig_path="tttt.idsng" refpath="C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\Test2\tttt.idsng" level="1" uid="2018-08-23T16:21:32.826+05:30d24e46">
+         <doc/>
+         <arguments>
+            <value doc="" sid="4:0" eid="seq0.780428605803103" uid="2018-08-23T16:21:30.472+05:30d14e43" svDataType="integer" cDataType="int" UvmDataType="int" name="arg1">11</value>
+         </arguments>
+         <constants/>
+         <variables>
+            <value doc="" sid="10:0" eid="seq0.6499292342063905" uid="2018-08-23T16:21:30.472+05:30d14e47" svDataType="integer" cDataType="int" UvmDataType="int" name="var1">
+               <EXPRESSION>
+                  <EXPRESSION type="number">10</EXPRESSION>
+               </EXPRESSION>
+               <oldValue>10</oldValue>
+            </value>
+         </variables>
+         <seqsteps>
+            <row busName="default" uid="2018-08-23T16:21:32.826+05:30d24e60">
+               <TEMPCAL tempVarName="var1">
+                  <EXPRESSION>
+                     <EXPRESSION type="number">10</EXPRESSION>
+                  </EXPRESSION>
+                  <oldValue>10</oldValue>
+               </TEMPCAL>
+               <LOOP type="for">
+                  <INIT>
+                     <VAR type="int"/>
+                     <ASSIGNMENT>
+                        <LHS>
+                           <EXPRESSION>
+                              <EXPRESSION type="id">i</EXPRESSION>
+                           </EXPRESSION>
+                        </LHS>
+                        <RHS>
+                           <EXPRESSION>
+                              <EXPRESSION type="number">0</EXPRESSION>
+                           </EXPRESSION>
+                        </RHS>
+                     </ASSIGNMENT>
+                  </INIT>
+                  <CONDITION>i &lt; var1</CONDITION>
+                  <LOOPSTEP value="i++">
+                     <INCREMENT>
+                        <EXPRESSION>
+                           <EXPRESSION type="id">i</EXPRESSION>
+                        </EXPRESSION>
+                     </INCREMENT>
+                  </LOOPSTEP>
+                  <STATEMENTS>
+                     <row busName="default" uid="2018-08-23T16:21:32.826+05:30d24e89" sid="16:0">
+                        <ASSIGNMENT command="write" eid="seq0.7335436593691308">
+                           <LHS>
+                              <EXPRESSION>
+                                 <EXPRESSION type="id" uniqueId="2018-08-23T16:21:30.472+05:30d14e13" regDefault="0x00000000" reg_sw="rw" reg_hw="rw" reg_default="0x00000000" reg_address="0x0">reg1</EXPRESSION>
+                              </EXPRESSION>
+                           </LHS>
+                           <doc/>
+                           <RHS>
+                              <EXPRESSION>
+                                 <EXPRESSION type="number">10</EXPRESSION>
+                              </EXPRESSION>
+                           </RHS>
+                        </ASSIGNMENT>
+                     </row>
+                     <row busName="default" uid="2018-08-23T16:21:32.826+05:30d24e103">
+                        <IF>
+                           <CONDITION>arg1 &lt;= 12</CONDITION>
+                           <row busName="default" uid="2018-08-23T16:21:32.826+05:30d24e115" sid="18:0">
+                              <ASSIGNMENT command="write" eid="seq0.3687979873727787">
+                                 <LHS>
+                                    <EXPRESSION>
+                                       <EXPRESSION type="id" uniqueId="2018-08-23T16:21:30.472+05:30d14e25" regDefault="0x00000000" reg_sw="rw" reg_hw="rw" reg_default="0x00000000" reg_address="0x4">reg2</EXPRESSION>
+                                    </EXPRESSION>
+                                 </LHS>
+                                 <doc/>
+                                 <RHS>
+                                    <EXPRESSION>
+                                       <EXPRESSION type="number">11</EXPRESSION>
+                                    </EXPRESSION>
+                                 </RHS>
+                              </ASSIGNMENT>
+                           </row>
+                        </IF>
+                     </row>
+                  </STATEMENTS>
+               </LOOP>
+            </row>
+         </seqsteps>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</block>

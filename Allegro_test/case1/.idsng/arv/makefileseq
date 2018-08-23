@@ -1,0 +1,56 @@
+help : 
+	@echo "make -f Makefile.vcs run [UVM_REG_TEST=1] [UVM_MEM_TEST=1] [ARV_TEST=0]"
+	@echo "  by default tests created by ARV are run"
+	@echo "  UVM_REG_TEST=1 : Standard UVM Register Sequences are run : uvm_reg_hw_reset_seq uvm_reg_mem_hdl_paths_seq uvm_reg_access_seq uvm_reg_bit_bash_seq"
+	@echo "  UVM_MEM_TEST=1 : Standard UVM Memory Sequences are run : uvm_reg_hw_reset_seq uvm_reg_mem_hdl_paths_seq uvm_reg_access_seq uvm_reg_bit_bash_seq"
+	@echo "  Both option can be specify"
+
+VAR_UVM_REG_TEST = uvm_reg_hw_reset_seq uvm_reg_mem_hdl_paths_seq uvm_reg_access_seq uvm_reg_bit_bash_seq 
+VAR_UVM_MEM_TEST = uvm_reg_mem_hdl_paths_seq uvm_mem_access_seq uvm_mem_walk_seq
+VAR_AGNI_TEST = Agni_Reg_Seq
+
+RUN_SEQ =
+	RUN_AGNI_TEST=1
+	DEFINE_FLAGS=
+
+ifeq ($(UVM_REG_TEST),1)
+	RUN_SEQ += $(VAR_UVM_REG_TEST)
+	RUN_AGNI_TEST=0
+endif
+
+ifeq ($(UVM_MEM_TEST),1)
+	RUN_SEQ += $(VAR_UVM_MEM_TEST)
+	RUN_AGNI_TEST=0
+endif
+
+ifneq ($(ARV_TEST),0)
+	RUN_SEQ += $(VAR_AGNI_TEST)
+	DEFINE_FLAGS=
+endif
+
+COMMON = ./common
+WIDGETS = ./widgets/axi4lite_widget.v
+DESIGN = $(WIDGETS) ../case1.v  
+REGMODEL = ../case1_pkg.regmem.sv
+TB = .
+SEQUENCES=./sequences
+PLAN = ../case1.ivs.xml
+PLAN_CADENCE = ../case1_cadence.xml
+
+FILES = \
+	$(COMMON)/ambaaxi4lite_if.sv\
+	$(COMMON)/hw_if.sv\
+	$(REGMODEL)\
+	config_pkg.sv\
+	hw_pkg.sv\
+	ambaaxi4lite_pkg.sv\
+	$(SEQUENCES)/arv_seq_pkg.sv\
+	seq_pkg.sv\
+	test_pkg.sv\
+	top.sv
+INCDIRS = \
+	+incdir+../\
+	+incdir+$(UVM_SRC)\
+	+incdir+$(TB)\
+	+incdir+$(SEQUENCES)
+Agni_Reg_Seq: uvm_arv_main_seq NEG_uvm_arv_main_seq

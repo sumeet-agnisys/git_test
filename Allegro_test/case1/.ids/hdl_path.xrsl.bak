@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="block_name" id="4:2"><doc>
+   <list type="enum" name="enum_name">
+      <value name="E1">1</value>
+   </list>
+</doc><doc>
+   <list type="param">
+      <value name="$w1" private="0">12</value>
+   </list>
+</doc><config><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants><regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config><signals name="signals" id="5:2">
+   <signal name="S1" direction="in" id="5:6"/>
+   <signal name="S2" direction="out" id="5:7"/>
+</signals><section name="memory_name" depth="100" id="6:2" external="true" type="mem">
+   <reg name="memory_name" id="6:2" type="mem">
+      <config>
+         <regwidth>64</regwidth>
+      </config>
+      <field name="memory_name" offset="63:0">
+         <sw>ro</sw>
+         <hw>rw</hw>
+         <default>0</default>
+      </field>
+   </reg>
+</section></block>
