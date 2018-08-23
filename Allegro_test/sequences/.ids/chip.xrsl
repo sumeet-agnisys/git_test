@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip name="chip_name" id="2:2"><config>
+      <chipsize>128</chipsize>
+   <regbits>12</regbits><blockbits>0</blockbits><chipbits>0</chipbits><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants><regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit></config>
+   
+<block name="block_name" offset="0" id="3:2">
+   <config>
+      <blocksize>128</blocksize>
+   </config>
+<reg name="REG_SYS_LGC_GENERAL_0" id="4:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_GENERAL_0_F" id="4:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+</reg><reg name="REG_SYS_LGC_LDOS_SYSMOD_0" id="5:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_LDOS_SYSMOD_0_F" id="5:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>6</default>
+   </field>
+</reg><reg name="REG_DPLL_SYSTEM_CON" id="6:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_SYSTEM_CON_F" id="6:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>4</default>
+   </field>
+</reg><reg name="REG_DPLL_SYSTEM_CFG" id="7:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_SYSTEM_CFG_F" id="7:7">
+      <sw>ro</sw>
+      <hw>rw</hw>
+      <default>79378974</default>
+   </field>
+</reg><reg name="REG_DPLL_SYSTEM_CFG2" id="8:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_SYSTEM_CFG2_F" id="8:7">
+      <sw>wo</sw>
+      <hw>rw</hw>
+      <default>79378974</default>
+   </field>
+</reg><reg name="CHA_REG_ADC_MAN_PARA10" id="9:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="CHA_REG_ADC_MAN_PARA10_F" id="9:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>30720</default>
+   </field>
+</reg><reg name="CHA_REG_TX_LB_MX_CFG" id="10:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="CHA_REG_TX_LB_MX_CFG_F" id="10:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>4032</default>
+   </field>
+</reg><reg name="CHA_REG_ADC_MAN_PARA102" id="11:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="CHA_REG_ADC_MAN_PARA102_F" id="11:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>30720</default>
+   </field>
+</reg><reg name="REG_SYS_LGC_CM_0" id="12:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_CM_0_F" id="12:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>8</default>
+   </field>
+</reg><reg name="REG_SYS_MANUAL_DFT_0" id="13:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_MANUAL_DFT_0_F" id="13:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>192</default>
+   </field>
+</reg><reg name="REG_SYS_LGC_COEX_0" id="14:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_COEX_0_F" id="14:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>4</default>
+   </field>
+</reg><reg name="REG_SYS_LGC_COEX_7" id="15:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_COEX_7_F" id="15:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>2147483648</default>
+   </field>
+</reg><reg name="REG_SYS_LGC_COEX_5" id="16:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_COEX_5_F" id="16:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+</reg><reg name="REG_SYS_LGC_COEX_6" id="17:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_SYS_LGC_COEX_6_F" id="17:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+</reg><reg name="CHA_REG_DAC_ANA_DIV" id="18:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="CHA_REG_DAC_ANA_DIV_F" id="18:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>128</default>
+   </field>
+</reg><reg name="REG_DPLL_ABS" id="19:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_ABS_F" id="19:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>4804</default>
+   </field>
+</reg><reg name="REG_DPLL_ANALOG8" id="20:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_ANALOG8_F" id="20:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>55</default>
+   </field>
+</reg><reg name="REG_DPLL_DLF1" id="21:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_DLF1_F" id="21:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>323</default>
+   </field>
+</reg><reg name="REG_DPLL_DLF2" id="22:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_DLF2_F" id="22:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>26819</default>
+   </field>
+</reg><reg name="REG_DPLL_SFTDC" id="23:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_SFTDC_F" id="23:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>839491500</default>
+   </field>
+</reg><reg name="REG_DPLL_DLF3" id="24:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="REG_DPLL_DLF3_F" id="24:7">
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>100663431</default>
+   </field>
+</reg></block></chip>

@@ -3,10 +3,12 @@
 <settings>
   <company>Agnisys, Inc.</company>
   <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>
-  <log>false</log>
+  <log>true</log>
   <outdir></outdir>
   <outputs>
-    <ivs>true</ivs>
+    <verilog>true</verilog>
+    <verilog2001>false</verilog2001>
+    <ivs>false</ivs>
     <arv>false</arv>
     <special_reg></special_reg>
     <cmsis>false</cmsis>
@@ -32,7 +34,7 @@
     <word>false</word>
     <rdl>false</rdl>
     <erm>false</erm>
-    <ivs>true</ivs>
+    <ivs>false</ivs>
     <svheader>false</svheader>
     <svg>false</svg>
     <datasheet>false</datasheet>
@@ -57,7 +59,7 @@
   <arv_coverage>false</arv_coverage>
   <illegalbins>false</illegalbins>
   <arv_constraint>false</arv_constraint>
-  <bus>proprietary</bus>
+  <bus>axi4lite</bus>
   <reg_width>32</reg_width>
   <bus_width>32</bus_width>
   <unit>8</unit>
@@ -67,7 +69,7 @@
   <c_type></c_type>
   <big_endian>false</big_endian>
   <little_endian>false</little_endian>
-  <template_dir>D:\AgnisysProjects\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>
+  <template_dir>C:\Program Files (x86)\Agnisys\iDSNG\ids_templates\datasheet</template_dir>
   <check_only>false</check_only>
   <preserve_names>true</preserve_names>
   <addr_sort>false</addr_sort>

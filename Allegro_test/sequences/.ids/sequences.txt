@@ -1,0 +1,279 @@
+<CMD> idsbatch -reset C:\Users\Admin\Desktop\idsng_testcases\import\ipxact\case5.ipxact.xml -dir C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\.ids -debug -config_file C:\Users\Admin\AppData\Local\Temp\idsng\configFile.xml    CHECK IDS_TEMPLATES AMBA AVALON OCP PROPRIETARY AMBA_AXI AMBA3AHBLITE AMBA_APB WB XRSL IPXACT SYSTEMRDL CMSIS VERILOG SV VHDL UVM OVM VMM ERM IVSEXCELOUT PERL_DS PYTHON_DS SVHEADER CHEADER MISRAC HTML SVG PDF PDFALT2 WORD2007 WORD2010 ROWO MBD ALIAS LOCK COUNTER SCS PARAM ADVD PREPROCESSOR DATASHEET SIGNALS SYSTEMC VHDLALT2 CSHARP SHAREPOINT IDS_TURBO PROPERTY_HINT RTL_SYSC UVM_SYSC VP_SYSC CUSTOM_XML INTERRUPT CONSTRAINT CUSTOM_CIRCUIT SHADOW INDIRECT CPP CUSTOMCSV FIFO STRUCT SOC_ENTERPRISE SOC_HTML SOC_VERILOG SOC_VHDL SOC_DATASHEET SOC_ASSERTION SOC_IPXACT SEQUENCE_FIRMWARE SEQUENCE_UVM SEQUENCE SEQUENCE_CSV SEQUENCE_VERILOG SEQUENCE_HTML ARV FORMAL OUT_THIRD_PARTY_D SEQUENCE_MATLAB 
+Input file type set to 'null'.
+File w/ extension xml found.
+Infered Input file type is 'ipxact.
+INFO: Output(s) will be generated in 'C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\.ids'.
+Backdoor License is avaialble :true
+Setting IDSBatch install path = 'null'.
+Reading from config file C:\Users\Admin\AppData\Local\Temp\idsng\configFile.xml
+Parse setting from string = <?xml version="1.0" encoding="UTF-8"?>
+<settings>   <company>Agnisys, Inc.</company>    <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>    <log>true</log>    <outdir>output</outdir>    <outputs>     <xrsl>true</xrsl>    </outputs><sheet_name></sheet_name><top_element></top_element><ids_template></ids_template>  <ipxact_comp>board</ipxact_comp>  <rtl_wire>false</rtl_wire>    <lowpower>false</lowpower>    <memtechmapping>false</memtechmapping>    <bus>proprietary</bus>    <reg_width>8</reg_width>    <bus_width>8</bus_width>    <unit>8</unit>    <block_size>4096</block_size>    <chip_size/>    <board_size/>    <c_type/>    <big_endian>false</big_endian>    <little_endian>false</little_endian>    <check_only>false</check_only>    <preserve_name>false</preserve_name>    <addr_sort>false</addr_sort>    <import>true</import>  <no_formating>true</no_formating></settings>
+Debug: Default Settings extracted from external conf. : <?xml version="1.0" encoding="UTF-8"?>
+<settings>   <company>Agnisys, Inc.</company>    <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>    <log>true</log>    <outdir>output</outdir>    <outputs>     <xrsl>true</xrsl>    </outputs><sheet_name/><top_element/><ids_template/>  <ipxact_comp>board</ipxact_comp>  <rtl_wire>false</rtl_wire>    <lowpower>false</lowpower>    <memtechmapping>false</memtechmapping>    <bus>proprietary</bus>    <reg_width>8</reg_width>    <bus_width>8</bus_width>    <unit>8</unit>    <block_size>4096</block_size>    <chip_size/>    <board_size/>    <c_type/>    <big_endian>false</big_endian>    <little_endian>false</little_endian>    <check_only>false</check_only>    <preserve_name>false</preserve_name>    <addr_sort>false</addr_sort>    <import>true</import>  <no_formating>true</no_formating></settings>
+Requested setting : outputs
+Returning valuexrsl 
+Requested setting : tcloutputs
+Returning valuenull
+Requested setting : c_type
+Returning valuenull
+Requested setting : bus
+Returning valueproprietary
+Requested setting : company
+Returning valueAgnisys, Inc.
+Requested setting : copyright
+Returning value***** Copyright 2018 All Rights Reserved. *****
+Requested setting : little_endian
+Returning valuefalse
+Requested setting : big_endian
+Returning valuefalse
+Requested setting : board_size
+Returning valuenull
+Requested setting : chip_size
+Returning valuenull
+Requested setting : block_size
+Returning value4096
+Requested setting : reg_width
+Returning value8
+Requested setting : bus_width
+Returning value8
+Requested setting : unit
+Returning value8
+Requested setting : debug
+Returning valuenull
+Requested setting : verbose
+Returning valuenull
+Requested setting : ddnr
+Returning valuenull
+Requested setting : distributed_decode_n_readback
+Returning valuenull
+Requested setting : preserve_names
+Returning valuenull
+Requested setting : preserve
+Returning valuenull
+Requested setting : hdlpath
+Returning valuenull
+Requested setting : import
+Returning valuetrue
+Requested setting : illegalbins
+Returning valuenull
+Requested setting : lowpower
+Returning valuefalse
+Requested setting : coverage
+Returning valuenull
+Requested setting : arv_coverage
+Returning valuenull
+Requested setting : arv_constraint
+Returning valuenull
+Requested setting : arv_assertion
+Returning valuenull
+Requested setting : rtl_wire
+Returning valuefalse
+Requested setting : no_lint_warn
+Returning valuenull
+Requested setting : noheirarchy
+Returning valuenull
+Requested setting : svinterface
+Returning valuenull
+Requested setting : memtechmapping
+Returning valuefalse
+Requested setting : if
+Returning valuenull
+Requested setting : if_header
+Returning valuenull
+Requested setting : if_verilog
+Returning valuenull
+Requested setting : if_uvm
+Returning valuenull
+Requested setting : if_pdf
+Returning valuenull
+Requested setting : if_svheader
+Returning valuenull
+Requested setting : ltoc
+Returning valuenull
+Requested setting : addr_sort
+Returning valuefalse
+Requested setting : no_formatting
+Returning valuenull
+Requested setting : c_api
+Returning valuenull
+Requested setting : c_tests
+Returning valuenull
+Requested setting : check_only
+Returning valuefalse
+Requested setting : template_dir
+Returning valuenull
+Requested setting : template_file
+Returning valuenull
+Requested setting : top_element
+Returning valuenull
+Requested setting : sheet_name
+Returning valuenull
+Requested setting : ipxact_comp
+Returning valueboard
+*********************************************************************************************
+                    Generated By : IDSBATCH VER - 4.16.26.2
+*********************************************************************************************
+Debug: Start processing...
+Reading input ipxact file 'C:\Users\Admin\Desktop\idsng_testcases\import\ipxact\case5.ipxact.xml'..
+Transforming ipxact to IDS xml format..
+BatchURIResolver: Using file : img/xrsl/xrsl-util.xsl
+BatchURIResolver: Using file : img/xrsl/addressAndSizeCalc_utils.xsl
+BatchURIResolver: Using file : img/xrsl/exslt/math/functions/power/math.power.xsl
+BatchURIResolver: Using file : img/xrsl/exslt/math/functions/power/math.power.template.xsl
+BatchURIResolver: Using file : img/xrsl/input_params.xsl
+BatchURIResolver: Using file : img/xrsl/math_utils.xsl
+BatchURIResolver: Using file : img/xrsl/util.xsl
+update doc w/ conf doc = 
+Extract conf from input xml using path = /chip/config
+Conf elem found in input xml = org.dom4j.tree.DefaultElement@166a38a [Element: <config attributes: []/>]
+Using user specified block size 4096(regAddrBit = 12)
+Debug : config already exists in the final given xml. Will update if required.
+Annotating intermediate xrsl file..
+INFO : The Annotated intermediate xrsl ..
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip name="chip_name">
+   <doc>
+      <busdomains>
+         <busdomain name="default_map">
+            <addressunit>8</addressunit>
+            <bus>AXI</bus>
+         </busdomain>
+      </busdomains>
+   </doc>
+   <block name="block1" max_reg_size="32" offset="0">
+      <doc/>
+      <reg name="reg1" reg_hw="ro" reg_default="0" offset="0">
+         <field offset="31:0" name="fld">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default>0</default>
+         </field>
+         <config>
+            <regwidth>32</regwidth>
+         </config>
+      </reg>
+      <section max_reg_size="32" name="reggroup1" offset="4">
+         <config>
+            <sectionsize>8</sectionsize>
+         </config>
+         <doc/>
+         <reg name="reg1" offset="0">
+            <field offset="31:0" name="fld">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default>0</default>
+            </field>
+            <config>
+               <regwidth>32</regwidth>
+            </config>
+         </reg>
+         <reg name="reg2" offset="4">
+            <field offset="31:0" name="fld1">
+               <sw>ro</sw>
+               <hw>ro</hw>
+               <default>0</default>
+            </field>
+            <config>
+               <regwidth>32</regwidth>
+            </config>
+         </reg>
+      </section>
+      <config>
+         <blocksize>4096</blocksize>
+      </config>
+   </block>
+   <block name="block2" offset="12">
+      <doc/>
+      <section max_reg_size="32" name="reggroup1" offset="0">
+         <config>
+            <sectionsize>8</sectionsize>
+         </config>
+         <doc/>
+         <reg name="reg1" offset="0">
+            <field offset="31:0" name="fld">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default>0</default>
+            </field>
+            <config>
+               <regwidth>32</regwidth>
+            </config>
+         </reg>
+         <reg name="reg2" offset="4">
+            <field offset="31:0" name="fld1">
+               <sw>ro</sw>
+               <hw>ro</hw>
+               <default>0</default>
+            </field>
+            <config>
+               <regwidth>32</regwidth>
+            </config>
+         </reg>
+      </section>
+      <section type="subblock" max_reg_size="32" name="ref_name" offset="8">
+         <config>
+            <sectionsize>12</sectionsize>
+         </config>
+         <doc/>
+         <reg name="reg1" reg_hw="ro" reg_default="0" offset="0">
+            <field offset="31:0" name="fld">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default>0</default>
+            </field>
+            <config>
+               <regwidth>32</regwidth>
+            </config>
+         </reg>
+         <section max_reg_size="32" context="ref_name" name="ref_name_reggroup1" offset="4">
+            <config>
+               <sectionsize>8</sectionsize>
+            </config>
+            <doc/>
+            <reg name="reg1" offset="0">
+               <field offset="31:0" name="fld">
+                  <sw>rw</sw>
+                  <hw>ro</hw>
+                  <default>0</default>
+               </field>
+               <config>
+                  <regwidth>32</regwidth>
+               </config>
+            </reg>
+            <reg name="reg2" offset="4">
+               <field offset="31:0" name="fld1">
+                  <sw>ro</sw>
+                  <hw>ro</hw>
+                  <default>0</default>
+               </field>
+               <config>
+                  <regwidth>32</regwidth>
+               </config>
+            </reg>
+         </section>
+      </section>
+      <config>
+         <blocksize>4096</blocksize>
+      </config>
+   </block>
+   <config>
+      <chipsize>32</chipsize>
+      <chipbits>0</chipbits>
+      <blockbits>1</blockbits>
+      <regbits>12</regbits>
+      
+      
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+   <regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit></config>
+</chip>
+Stage 1 finished. Initial pre-prossing complete.
+Outputs selected to be generated = [xrsl]
+Generating output 'xrsl' ..
+Debug: Creating outfile C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\.ids\case5.ipxact.xrsl
+Finished generating output for 'xrsl'.
+IDSBatch exiting now

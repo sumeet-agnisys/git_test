@@ -23,10 +23,16 @@
      <button onclick="click_btnprop()" id="btnprop">Hide Prop</button> 
      <button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
     </div> 
-    <h3>IDS Register Specification</h3> 
-    <div class="tocClass" readonly="true"></div>  
+    <h3></h3> 
+    <div> 
+    </div> 
+    <div> 
+    </div> 
     <br> 
-    <br>  
+    <br> 
+    <br> 
+    <br> 
+    <br> 
     <br> 
     <table contenteditable="false" id="toc" class="tocTable idsTemp" border="2"> 
      <tbody> 
@@ -41,26 +47,104 @@
       </tr> 
       <tr id="replace"> 
        <td id="index">1</td> 
-       <td id="component"><a href="#1case1">case1</a></td> 
+       <td id="component"><a href="#1chip_name">chip_name</a></td> 
        <td id="default"></td> 
-       <td id="address"> 0x0 - 0x3</td> 
+       <td id="address"> 0x0 - 0x1f</td> 
       </tr> 
       <tr id="replace"> 
        <td id="index">1.1</td> 
-       <td id="component">&nbsp;&nbsp;<a href="#1.1reg1">reg1</a></td> 
-       <td id="default">0x</td> 
+       <td id="component">&nbsp;&nbsp;<a href="#1.1block1_azhar">block1_azhar</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x0 - 0xb</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1.1reg1">reg1</a></td> 
+       <td id="default">0x00000001</td> 
        <td id="address"> 0x0</td> 
       </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1.2</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1.2reggroup1">reggroup1</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x4 - 0xb</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1.2.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1.2.1reg1">reg1</a></td> 
+       <td id="default">0x00000000</td> 
+       <td id="address"> 0x4</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1.2.2</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1.2.2reg2">reg2</a></td> 
+       <td id="default">0x00000000</td> 
+       <td id="address"> 0x8</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2</td> 
+       <td id="component">&nbsp;&nbsp;<a href="#1.2block2">block2</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0xc - 0x1f</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.1reggroup1">reggroup1</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0xc - 0x13</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.1.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.1.1reg1">reg1</a></td> 
+       <td id="default">0x00000000</td> 
+       <td id="address"> 0xc</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.1.2</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.1.2reg2">reg2</a></td> 
+       <td id="default">0x00000000</td> 
+       <td id="address"> 0x10</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.2</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.2ref_name">ref_name</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x14 - 0x1f</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.2.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.2.1reg1">reg1</a></td> 
+       <td id="default">0x00000001</td> 
+       <td id="address"> 0x14</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.2.2</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.2.2reggroup1">reggroup1</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x18 - 0x1f</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.2.2.1</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.2.2.1reg1">reg1</a></td> 
+       <td id="default">0x00000000</td> 
+       <td id="address"> 0x18</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2.2.2.2</td> 
+       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.2.2.2.2reg2">reg2</a></td> 
+       <td id="default">0x00000000</td> 
+       <td id="address"> 0x1c</td> 
+      </tr> 
      </tbody> 
-    </table>
-    <br>
-    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab0.9176541087441205"> 
+    </table> 
+    <br> 
+    <table contenteditable="false" class="chip idsTemp" onclick="tabClick(this)" id="tab10.3007926259974526"> 
      <tbody> 
       <tr> 
-       <td class="header readOnly"><a name="1case1"></a><font size="3" color="blue">1</font></td> 
-       <td title="block name" class="name">case1</td> 
+       <td class="header readOnly"><a name="1chip_name"></a><font size="3" color="blue">1</font></td> 
+       <td title="chip name" class="name">chip_name</td> 
        <td title="offset" class="offset"></td> 
-       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="specImage"><img title="Chip" alt="Chip" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIySURBVHjazFM7axVBFP7OPHZ2b26Uq43RFPbiE8Ei6B+wsVCLFL4Qo1UKQSsRjBBNpXY2goWgKZSQKlUqsdBGwTRqE4IxCrnG+9zHzPHs3mgvaRx29uw8zvd9881ZMDP+9LFTN/hfYtkVttioRLl0+wkvLi3DgxECYAoPFdfhiz6UtgieYeMauu0NKGIYG+HwyDBePZokKuWomsOVqxdRUEDiIqhASLtNUJKA8hR9sjAIcHEioBkMBzx+No8fn5YHCiZmnvPeIycAFkZZDDnBOIYPKTRppFwgiix6nR5qAmK0wZuF15idPkdm7PR17sQNDO0axTYXkKUZiByUNYAcAaVNxqOdB8TWYWO9CaU0Vr6v4ujJSa4UnL/3ksPO3bDoVgo4WOSZh7WxpBMKlcscy5eMxKNyvvnlI2bvXyA6Nn6L13wD+w8dFKL+wFlh6DOEkcRYA5W1EEii1ihhSAA+v3sPvbHpweWZef7aFudDLstiBRGsS9DttgTNIFK+As2LMiqIGDjZN3f3DNGBs9PcCgZ7RhrCYGCMgveiM3hoGf8tNO8rBWJQ+eDbShtZK9usg6kX/GH1lzBbSRYWls2FqDEORu6dtUTxslwrikJugeS6PRYfTBAdH5/itb6CGa4jFWFemOuxhVMGWZaJeQGSgiLIW6id1QJUgH6uw6duoODanae88HYJqO0Q0+QInSbc0HbovAcvSYGial5zXhWU1Cv2jSaYe3iT8H/8TFtpvwUYANw+W2VPE6rlAAAAAElFTkSuQmCC"></td> 
        <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0x0</label></td> 
       </tr> 
       <tr> 
@@ -72,25 +156,111 @@
      </tbody> 
     </table> 
     <br> 
-    <table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab0.8171236686425826"> 
+    <br> 
+    <table class="signals idsTemp" id="tab20.9310122364797205" onclick="tabClick(this)"> 
      <tbody> 
       <tr> 
-       <td class="header readOnly"><a name="1.1reg1"></a><font size="3" color="blue">1.1</font></td> 
+       <td class="header readOnly"></td> 
+       <td title="signal name" class="name">s3</td> 
+       <td class="specImage"><img title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4T6WSvUsCYRzHv2W+kJE0KBkE1lCEa7T2LwQuuQjREEIIjZVt4eLeYGA4GBW0ObgVQqBmDYIv6SChFRroXVpXnfjrnqfr5XBo6AM/7p7vfe/7/J6XAVKASvNZxr3whtnxYeh1g6r6Nyyi2+1Cr9dDE7ifuMPp9SN2l6Yx7xjlmtvtRjab5WaGLMuQJAmpVApWqxWtVgvpdBq5XA4+n+8nUJC6WD0owDA0iIWpUczNTGLDtYjiVYIH/aZaraLT6cBsNiMWiyEcDsPhcCAajfJ2qf70xh50ftOk/H2bv29u77CJNGWxWKhYLJKyPFK65L5CoUDxeJzK5TIfo9l5p2D8lvbOalxgnBwf9YWxSiaTqoNIFEUKBAKkdKcqnwytH5bw8t5TljqACesY8hcxbK0tK/9rsdvtaDQaCIVC0Ol0UDpCJpOB0+nkus1m+zReVkRaOchTWyYSXolMwyN9nQWDQT57vV7nJQgC+f1+8ng8VCqV+Lcv0Ov1KPcgUVts9QWx8nq9qlVLpVKhWu1nm774PuVIJAKj0QiTycSGHHY9XC4XDAaDqvyN5h7+H+AD3W9Zy3A0RZQAAAAASUVORK5CYII="></td> 
+       <td class="addCell readOnly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td class="label">name</td> 
+       <td class="label">port type</td> 
+       <td colspan="2" class="label">description</td> 
+      </tr> 
+      <tr id="tab0.276449085272235" class="edited sig_row" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)"> 
+       <td class="name">s1</td> 
+       <td class="direction">in</td> 
+       <td colspan="2" title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event,this)">{ref=s1.signals.s3}</td> 
+      </tr> 
+      <tr id="tab0.854611569039277" class="edited sig_row" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)"> 
+       <td class="name">s2</td> 
+       <td class="direction">out</td> 
+       <td colspan="2" title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event,this)"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab30.09167688281922426"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.1block1_azhar"></a><font size="3" color="blue">1.1</font></td> 
+       <td title="block name" class="name">block1_azhar</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0x0</label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"><br></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table class="signals idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab_signal0.6767253035995302"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="signal name" class="name">signal_name</td> 
+       <td class="specImage"><img title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4T6WSvUsCYRzHv2W+kJE0KBkE1lCEa7T2LwQuuQjREEIIjZVt4eLeYGA4GBW0ObgVQqBmDYIv6SChFRroXVpXnfjrnqfr5XBo6AM/7p7vfe/7/J6XAVKASvNZxr3whtnxYeh1g6r6Nyyi2+1Cr9dDE7ifuMPp9SN2l6Yx7xjlmtvtRjab5WaGLMuQJAmpVApWqxWtVgvpdBq5XA4+n+8nUJC6WD0owDA0iIWpUczNTGLDtYjiVYIH/aZaraLT6cBsNiMWiyEcDsPhcCAajfJ2qf70xh50ftOk/H2bv29u77CJNGWxWKhYLJKyPFK65L5CoUDxeJzK5TIfo9l5p2D8lvbOalxgnBwf9YWxSiaTqoNIFEUKBAKkdKcqnwytH5bw8t5TljqACesY8hcxbK0tK/9rsdvtaDQaCIVC0Ol0UDpCJpOB0+nkus1m+zReVkRaOchTWyYSXolMwyN9nQWDQT57vV7nJQgC+f1+8ng8VCqV+Lcv0Ov1KPcgUVts9QWx8nq9qlVLpVKhWu1nm774PuVIJAKj0QiTycSGHHY9XC4XDAaDqvyN5h7+H+AD3W9Zy3A0RZQAAAAASUVORK5CYII="></td> 
+       <td class="addCell readOnly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td class="label">name</td> 
+       <td class="label">port type</td> 
+       <td colspan="2" class="label">description</td> 
+      </tr> 
+      <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited sig_row" id="sig0.6767253035995302"> 
+       <td class="name">s3</td> 
+       <td class="direction">in</td> 
+       <td colspan="2" title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event,this);"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table data-width="32" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab50.19272994748710148"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.2.1reg1"></a><font size="3" color="blue">1.2.2.1</font></td> 
        <td title="reg name" class="name">reg1</td> 
        <td title="offset" class="offset" colspan="2"></td> 
-       <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" src="data:image/png;base64,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"></td> 
        <td class="address addCell readOnly"> 
         <div class="splitVer setBorder" title="address"> 
          <label class="label">address|</label> 
-         <label class="addrvalue">0x0</label> 
+         <label class="addrvalue">0x14</label> 
         </div> 
         <div class="splitVer" title="Default"> 
          <label class="label">default |</label> 
-         <label class="defvalue">0x</label> 
+         <label class="defvalue">0x00000001</label> 
         </div> </td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add properties" class="propclass" contenteditable="true">{reg_hw=ro;reg_default=0}</td> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
       </tr> 
       <tr> 
        <td colspan="6" title="add description here" class="desc descclass"></td> 
@@ -100,13 +270,7 @@
       </tr> 
       <tr> 
        <td colspan="6" class="fieldtd"> 
-        <div id="autocomplete-list" class="autocomplete-items" style="left: 35%; max-height: 99.5625px; overflow: auto; display: none;"> 
-         <div title="read writable"> 
-          <strong>rw</strong> 
-          <input type="hidden" value="rw"> 
-         </div> 
-        </div> 
-        <table class="fields idsTemp" id="tab0.9830694642871243"> 
+        <table class="fields idsTemp" id="tab00.5992718110929796" oncontextmenu="openregmenu(event);" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="label"> 
            <td class="ddregbits">bits</td> 
@@ -116,19 +280,411 @@
            <td class="lbldefault">default</td> 
            <td class="lbldesc">description</td> 
           </tr> 
-          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab00.3382125744327482" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
            <td title="field name" class="fieldname">fld</td> 
            <td title="software access" class="sw">rw</td> 
-           <td title="hardware access" class="hw"></td> 
-           <td title="default" class="default"><br></td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">1</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)">{next=s3}</td> 
           </tr> 
          </tbody> 
         </table></td> 
       </tr> 
      </tbody> 
     </table> 
+    <br> 
+    <table contenteditable="false" class="section idsTemp" onclick="tabClick(this)" id="tab70.7979541643445494"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.2.2reggroup1"></a><font size="3" color="blue">1.2.2.2</font></td> 
+       <td class="name" title="reg group name">reggroup1</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="RegGroup" alt="RegGrou[]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABkSURBVHjaYvz//z8DJYBFOqSVIhNYQMTkugwUwdymGShiyHx0NhMDhYBRKriFci+snFjO8PX7T4akiglYnYrPa2AvsLCwMLAwMw+gF3CF+BCKBUKhjc87FHth4MOAkdLsDBBgAAAIP+g8PM01AAAAAElFTkSuQmCC"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0x18</label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table data-width="32" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab80.6243183231050767"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.2.2.1reg1"></a><font size="3" color="blue">1.2.2.2.1</font></td> 
+       <td title="reg name" class="name">reg1</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" src="data:image/png;base64,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"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x18</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab10.42327816546266395" oncontextmenu="openregmenu(event);" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab10.3210887248694253" class="field edited"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">fld</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table data-width="32" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab100.6930125570625433"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.2.2.2reg2"></a><font size="3" color="blue">1.2.2.2.2</font></td> 
+       <td title="reg name" class="name">reg2</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" src="data:image/png;base64,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"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x1c</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab20.13107445868443435" oncontextmenu="openregmenu(event);" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab20.5690370267927891" class="field edited"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">fld1</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table class="endreggroup idsTemp" id="tab120.29424733987246454" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr class="label"> 
+       <td>End RegGroup</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab130.2731814467014364"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2block2"></a><font size="3" color="blue">1.2</font></td> 
+       <td title="block name" class="name">block2</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0xc</label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"><br></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" class="section idsTemp" onclick="tabClick(this)" id="tab140.47055492608677163"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.1reggroup1"></a><font size="3" color="blue">1.2.1</font></td> 
+       <td class="name" title="reg group name">reggroup1</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="RegGroup" alt="RegGrou[]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAABkSURBVHjaYvz//z8DJYBFOqSVIhNYQMTkugwUwdymGShiyHx0NhMDhYBRKriFci+snFjO8PX7T4akiglYnYrPa2AvsLCwMLAwMw+gF3CF+BCKBUKhjc87FHth4MOAkdLsDBBgAAAIP+g8PM01AAAAAElFTkSuQmCC"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0xc</label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table data-width="32" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab150.2528661703890501"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.1.1reg1"></a><font size="3" color="blue">1.2.1.1</font></td> 
+       <td title="reg name" class="name">reg1</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" src="data:image/png;base64,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"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0xc</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab30.3159872623510245" oncontextmenu="openregmenu(event);" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab30.1550852913233126" class="field edited"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">fld</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table data-width="32" contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab170.03760028012796124"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2.1.2reg2"></a><font size="3" color="blue">1.2.1.2</font></td> 
+       <td title="reg name" class="name">reg2</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" src="data:image/png;base64,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"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x10</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab40.9331251490479676" oncontextmenu="openregmenu(event);" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab40.03017644833960087" class="field edited"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">fld1</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)">azhar</td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table class="endreggroup idsTemp" id="tab190.9756217352711553" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr class="label"> 
+       <td>End RegGroup</td> 
+      </tr> 
+     </tbody> 
+    </table>
+    <br>
+    <table class="ref idsTemp" contenteditable="false" onclick="tabClick(this)" id="field0.4184993907238702"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="ref name" class="name" colspan="2">ref_name</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="instance" alt="instance" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAADAFBMVEX///8mk7clkrcrouIqoeHk8/vM6PjQ5+/N5u+czt/W7fkhneCl0uGq1eOp1OPY6/BUqcUqouLQ6vguo+Lq9v5YteUvpOJbteUnlLjg8ftMpsOJzPFeueqk0uE8qeY+n8BAq+bX6u84nL0ooOJAoMBDrOan0+L4/P+n2PP9/v/R6fDp9fwPkdDl9PvP6vgvo+I8quU6qeU9quQMlN7S6/mfz99ku+rM6fnP5+6x3fRgueqgz+Dl9Pw8qeSv2/RGosKEyfAcjrXm9PzL6Pg7qeTO6vhGruZFreYOld4hkLZku+k/q+bZ7vqgz99fuenq9vzh8vwOkdCezt7S6O/n9Pzd8PpHpMPJ5e7///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABSmRIoAAAAWXRSTlP/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AE+FAQ8AAADFSURBVHjaYoxgYGC48/vJRwaG//oAAcQEZDMw39HmY2JS/QgQQMw6QI6gJLPytb/f3gIEEPMjjjfsu94w3fzC4HAfIIBYjO/95lL4cuW37j92BoAAYn70XZz99bPfIR8kP/wACCAmBqkvP81/O118+uHSb4AAYmIQN+X6ycWp8+OzhSxAADExyG/4/83uIqurvqgWQAAxM/57/eiT0KWnNzQYGAACiMn9MweH/Xl2EZDlAAHE/O/R37/Xf/5lE5NkYAAIMAAgfkB2tPG31wAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="refpathtd"> 
+        <table class="refpathtab idsTemp" id="tab0.7241993499096308"> 
+         <tbody> 
+          <tr> 
+           <td class="label lblrefname">name</td> 
+           <td class="refname">block1_azhar</td> 
+           <td class="label path lblrefname" width="50">path</td> 
+           <td class="refpath"></td> 
+           <td class="label lbltype">type</td> 
+           <td class="reftype addCell"></td> 
+          </tr> 
+         </tbody> 
+        </table> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="descclass desc">,{{type=subblock}</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br>  
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
     <br> 
     <br> 
     <br> 
@@ -137,7 +693,7 @@
     <br> 
     <br> 
    </div> 
-   <div id="param_main" style="display:none;"> 
+   <div id="param_main" style="display:none"> 
     <table id="scroller"> 
      <tbody> 
       <tr> 
@@ -152,24 +708,192 @@
      <label id="lblymlname"></label> 
      <a href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
-    <div id="paramcontainer" contenteditable="false"></div> 
+    <div id="paramcontainer" contenteditable="false"> 
+     <br> 
+     <table class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname">Address</td> 
+        <td class="paramname">Register<br>Name</td> 
+        <td>bit<br>31</td> 
+        <td>bit<br>30</td> 
+        <td>bit<br>29</td> 
+        <td>bit<br>28</td> 
+        <td>bit<br>27</td> 
+        <td>bit<br>26</td> 
+        <td>bit<br>25</td> 
+        <td>bit<br>24</td> 
+        <td>bit<br>23</td> 
+        <td>bit<br>22</td> 
+        <td>bit<br>21</td> 
+        <td>bit<br>20</td> 
+        <td>bit<br>19</td> 
+        <td>bit<br>18</td> 
+        <td>bit<br>17</td> 
+        <td>bit<br>16</td> 
+        <td>bit<br>15</td> 
+        <td>bit<br>14</td> 
+        <td>bit<br>13</td> 
+        <td>bit<br>12</td> 
+        <td>bit<br>11</td> 
+        <td>bit<br>10</td> 
+        <td>bit<br>9</td> 
+        <td>bit<br>8</td> 
+        <td>bit<br>7</td> 
+        <td>bit<br>6</td> 
+        <td>bit<br>5</td> 
+        <td>bit<br>4</td> 
+        <td>bit<br>3</td> 
+        <td>bit<br>2</td> 
+        <td>bit<br>1</td> 
+        <td>bit<br>0</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab30.5111689509652481" data-header="1.2.2.1" data-name="reg1" data-offset="" data-addr="0x14" data-def="0x00000000" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname" rowspan="2">0x14</td> 
+        <td class="regname paramname" rowspan="2">reg1</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="" class="regtab"> 
+          <tbody> 
+           <tr> 
+            <td class="droptarget" colspan="32" style="background-color: #d4e0e2"><p id="dragtar5" data-id="tab00.8623125598700062" data-size="32" data-name="fld" data-sw="rw" data-hw="ro" data-default="e1" data-desc="" draggable="true" class="dragtarget" title="fld : 32">fld</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab50.6514780784754133" data-header="1.2.2.2" data-name="reggroup1" data-offset="" data-addr="0x18" data-desc="" data-prop="" class="reggroup"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname">0x18</td> 
+        <td class="paramname">reggroup1</td> 
+        <td></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab60.2691824973461924" data-header="1.2.2.2.1" data-name="reg1" data-offset="" data-addr="0x18" data-def="0x00000001" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname" rowspan="2">0x18</td> 
+        <td class="regname paramname" rowspan="2">reg1</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="tab50.6514780784754133" class="regtab"> 
+          <tbody> 
+           <tr> 
+            <td class="droptarget" colspan="32" style="background-color: #d4e0e2"><p id="dragtar6" data-id="tab10.533161067874756" data-size="32" data-name="fld" data-sw="rw" data-hw="ro" data-default="e2" data-desc="" draggable="true" class="dragtarget" title="fld : 32">fld</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab80.9442661318177489" data-header="1.2.2.2.2" data-name="reg2" data-offset="" data-addr="0x1c" data-def="0x00000000" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname" rowspan="2">0x1c</td> 
+        <td class="regname paramname" rowspan="2">reg2</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="tab50.6514780784754133" class="regtab"> 
+          <tbody> 
+           <tr> 
+            <td class="droptarget" colspan="32" style="background-color: #d4e0e2"><p id="dragtar7" data-id="tab20.7046624738119148" data-size="32" data-name="fld1" data-sw="ro" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="fld1 : 32">fld1</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table class="endreggroupparam"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname"></td> 
+        <td class="paramname">end section</td> 
+        <td></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab120.22554486308424215" data-header="1.2.1" data-name="reggroup1" data-offset="" data-addr="0xc" data-desc="" data-prop="" class="reggroup"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname">0xc</td> 
+        <td class="paramname">reggroup1</td> 
+        <td></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab130.8258419837444756" data-header="1.2.1.1" data-name="reg1" data-offset="" data-addr="0xc" data-def="0x00000000" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname" rowspan="2">0xc</td> 
+        <td class="regname paramname" rowspan="2">reg1</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="tab120.22554486308424215" class="regtab"> 
+          <tbody> 
+           <tr> 
+            <td class="droptarget" colspan="32" style="background-color: #d4e0e2"><p id="dragtar8" data-id="tab30.8514557138096971" data-size="32" data-name="fld" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="fld : 32">fld</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table id="tab150.5128844663752741" data-header="1.2.1.2" data-name="reg2" data-offset="" data-addr="0x10" data-def="0x00000000" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname" rowspan="2">0x10</td> 
+        <td class="regname paramname" rowspan="2">reg2</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="tab120.22554486308424215" class="regtab"> 
+          <tbody> 
+           <tr> 
+            <td class="droptarget" colspan="32" style="background-color: #d4e0e2"><p id="dragtar9" data-id="tab40.4068347251308906" data-size="32" data-name="fld1" data-sw="ro" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="fld1 : 32">fld1</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <table class="endreggroupparam"> 
+      <tbody> 
+       <tr> 
+        <td class="paramname"></td> 
+        <td class="paramname">end section</td> 
+        <td></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
    </div> 
-   <div id="seqdivcontainer" style="display:none;"> 
+   <div id="seqdivcontainer" style="display:none"> 
     <h2>Sequences</h2> 
     <br> 
     <br> 
-    <table class="seq idsTemp" id="0.6936283899616844"> 
+    <table class="seq idsTemp" id="tab220.8434898729028238" onclick="tabClick(this)"> 
      <tbody> 
       <tr> 
        <td> 
-        <table id="0.45447124559847407" class="seqip idsTemp"> 
+        <table id="tab230.26673389604808895" class="seqip idsTemp" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="header readOnly"> 
            <td>sequence name</td> 
            <td>ip</td> 
            <td>description</td> 
           </tr> 
-          <tr class="edited" id="seq0.9176842211761362"> 
+          <tr class="edited" id="seq0.9176842211761362" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)"> 
            <td class="seqname">seq_name</td> 
            <td title="to refresh external ref, please Click on the cell and press Tab" class="ip" onfocusout="load_ips(this);">case1.idsng</td> 
            <td class="seqdesc"></td> 
@@ -182,16 +906,21 @@
       </tr> 
       <tr> 
        <td> 
-        <table id="0.19100267132718374" class="idsTemp arg"> 
+        <table id="tab240.3236808316298957" class="idsTemp arg" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="header readOnly"> 
            <td>arguments</td> 
            <td>value</td> 
            <td>description</td> 
           </tr> 
-          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.14585121128729028"> 
-           <td class="argname"></td> 
-           <td class="value"></td> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.14585121128729028" onkeyup="setCurrRow(this)"> 
+           <td class="argname">arg1</td> 
+           <td class="value">10</td> 
+           <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.10791126507599835" onkeyup="setCurrRow(this)"> 
+           <td class="argname">arg2</td> 
+           <td class="value">11</td> 
            <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
           </tr> 
          </tbody> 
@@ -202,16 +931,21 @@
       </tr> 
       <tr> 
        <td> 
-        <table id="0.7235923835600899" class="idsTemp const"> 
+        <table id="tab250.6615135183873025" class="idsTemp const" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="header readOnly"> 
            <td>constants</td> 
            <td>value</td> 
            <td>description</td> 
           </tr> 
-          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.1930705053363032"> 
-           <td class="constname"></td> 
-           <td class="value"></td> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.1930705053363032" onkeyup="setCurrRow(this)"> 
+           <td class="constname">const1</td> 
+           <td class="value">12</td> 
+           <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9686399171693053" onkeyup="setCurrRow(this)"> 
+           <td class="constname">const2</td> 
+           <td class="value">15</td> 
            <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
           </tr> 
          </tbody> 
@@ -222,16 +956,21 @@
       </tr> 
       <tr> 
        <td> 
-        <table id="0.76348220418766" class="idsTemp var"> 
+        <table id="tab260.916526857877" class="idsTemp var" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="header readOnly"> 
            <td>variables</td> 
            <td>value</td> 
            <td>description</td> 
           </tr> 
-          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.059541372655877556"> 
-           <td class="varname"></td> 
-           <td class="value"></td> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.059541372655877556" onkeyup="setCurrRow(this)"> 
+           <td class="varname">var1</td> 
+           <td class="value">5</td> 
+           <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.6290448496592651" onkeyup="setCurrRow(this)"> 
+           <td class="varname">var2</td> 
+           <td class="value">6</td> 
            <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
           </tr> 
          </tbody> 
@@ -242,7 +981,7 @@
       </tr> 
       <tr> 
        <td> 
-        <table id="0.05422378446779463" class="command idsTemp"> 
+        <table id="tab270.35004807461494325" class="command idsTemp" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="header readOnly"> 
            <td class="seqcmd">command</td> 
@@ -251,10 +990,45 @@
            <td class="seqcmddesc">description</td> 
            <td class="seqcmdrefpath">refpath</td> 
           </tr> 
-          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.1776192215646516"> 
-           <td class="cmdname"></td> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.1776192215646516" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname">write</td> 
+           <td class="step">block1_azhar.reg1.fld</td> 
+           <td class="seqvalue">const1</td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.7254890844445534" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname">for(int i=0;i&lt;const2;i++){</td> 
+           <td class="step"><br></td> 
+           <td class="seqvalue"></td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.638731821690427" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname">write</td> 
+           <td class="step">block2.reggroup1.reg1.fld</td> 
+           <td class="seqvalue">const2</td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.20170144921374944" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname">}</td> 
            <td class="step"></td> 
            <td class="seqvalue"></td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.2815427816403232" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname">wait</td> 
+           <td class="step">25</td> 
+           <td class="seqvalue"></td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.6924041644265134" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname">write</td> 
+           <td class="step">block1_azhar.reggroup1.reg1.fld</td> 
+           <td class="seqvalue">22</td> 
            <td class="seqdesc"></td> 
            <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
           </tr> 
@@ -279,11 +1053,12 @@
     <br> 
     <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);"> 
      <table class="exeltable ui-selectable" contenteditable="false" id="selectable"> 
-      <tbody class="ui-selectee ui-selected" style=""> 
-       <tr class="rowheader ui-selectee" style=""> 
+      <tbody class="ui-selectee ui-selected"> 
+       <tr class="rowheader ui-selectee"> 
         <td class="ui-selectee"></td> 
         <td class="ui-selectee">A</td> 
         <td class="ui-selectee">B</td> 
+        <td class="ui-selectee">C</td> 
         <td class="ui-selectee">D</td> 
         <td class="ui-selectee">E</td> 
         <td class="ui-selectee">F</td> 
@@ -292,23 +1067,28 @@
         <td class="ui-selectee">I</td> 
         <td class="ui-selectee">J</td> 
         <td class="ui-selectee">K</td> 
+        <td class="ui-selectee">L</td> 
        </tr> 
-       <tr id="sep_row1" class="edited ui-selectee" style=""> 
+       <tr id="row0.6008291595229426" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">1</td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">signal name</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">port type</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">signal desc</b></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row2" class="edited ui-selectee" style=""> 
+       <tr id="tab0.276449085272235" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">2</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">s1</td> 
+        <td tabindex="0" class="ui-selectee">in</td> 
+        <td tabindex="0" class="ui-selectee">{ref=s1.signals.s3}</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -319,8 +1099,10 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row3" class="edited ui-selectee" style=""> 
+       <tr id="tab0.854611569039277" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">3</td> 
+        <td tabindex="0" class="ui-selectee">s2</td> 
+        <td tabindex="0" class="ui-selectee">out</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -332,8 +1114,10 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row4" class="edited ui-selectee" style=""> 
+       <tr id="sig0.6767253035995302" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">4</td> 
+        <td tabindex="0" class="ui-selectee">s3</td> 
+        <td tabindex="0" class="ui-selectee">in</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -345,7 +1129,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row5" class="edited ui-selectee" style=""> 
+       <tr id="row0.6008291595229426" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">5</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -357,22 +1141,28 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row6" class="edited ui-selectee" style=""> 
+       <tr id="row0.6008291595229426" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">6</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">section</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">ref</b></td> 
        </tr> 
-       <tr id="sep_row7" class="edited ui-selectee" style=""> 
+       <tr id="tab10.3007926259974526" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">7</td> 
+        <td tabindex="0" class="ui-selectee">chip_name</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -384,9 +1174,11 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row8" class="edited ui-selectee" style=""> 
+       <tr id="tab30.09167688281922426" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">8</td> 
         <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">block1_azhar</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -397,10 +1189,12 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row9" class="edited ui-selectee" style=""> 
+       <tr id="tab50.19272994748710148" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">9</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg1</td> 
+        <td tabindex="0" class="ui-selectee">32</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -410,20 +1204,22 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row10" class="edited ui-selectee" style=""> 
+       <tr id="tab00.3382125744327482" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">10</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">fld</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">1</td> 
+        <td tabindex="0" class="ui-selectee">31:0</td> 
+        <td tabindex="0" class="ui-selectee">{next=s3}</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row11" class="edited ui-selectee" style=""> 
+       <tr id="tab70.7979541643445494" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">11</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -435,11 +1231,15 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reggroup1</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row12" class="edited ui-selectee" style=""> 
+       <tr id="tab80.6243183231050767" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">12</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg1</td> 
+        <td tabindex="0" class="ui-selectee">32</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -449,12 +1249,29 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row13" class="edited ui-selectee" style=""> 
+       <tr id="tab10.3210887248694253" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">13</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">fld</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">31:0</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab100.6930125570625433" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">14</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg2</td> 
+        <td tabindex="0" class="ui-selectee">32</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -462,8 +1279,310 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="sep_row14" class="edited ui-selectee" style=""> 
-        <td class="leftheader ui-selectee">14</td> 
+       <tr id="tab20.5690370267927891" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">15</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">fld1</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">31:0</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab120.29424733987246454" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">16</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">end section</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab130.2731814467014364" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">17</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">block2</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab140.47055492608677163" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">18</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reggroup1</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab150.2528661703890501" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">19</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg1</td> 
+        <td tabindex="0" class="ui-selectee">32</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab30.1550852913233126" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">20</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">fld</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">31:0</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab170.03760028012796124" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">21</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg2</td> 
+        <td tabindex="0" class="ui-selectee">32</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab40.03017644833960087" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">22</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">fld1</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">31:0</td> 
+        <td tabindex="0" class="ui-selectee">azhar</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab190.9756217352711553" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">23</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">end section</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.4184993907238702" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">24</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">,{{type=subblock}</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">block1_azhar</td> 
+       </tr> 
+       <tr id="field0.45816721300366214" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">25</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.047488759125184576" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">26</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.3573705711688703" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">27</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.892542112184793" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">28</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.07998415343811616" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">29</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.8571131232164547" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">30</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.10181237349969541" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">31</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.4336657705771585" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">32</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.2359262618472061" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">33</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.14833091723731362" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">34</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.41826956137256066" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">35</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -641,17 +1760,17 @@
       </tbody> 
      </table> 
     </div> 
-    <div id="excelmenu" style="display: none; left: 251px; top: 167px;"> 
+    <div id="excelmenu" style="display: none; left: 205px; top: 190px;"> 
      <a href="#" onclick="insertrowbelow(this);">Insert Row Below</a> 
      <a href="#" onclick="insertcolright(this);">Insert Column Right</a> 
      <a href="#" id="menucopy" class="context-menu">Copy </a> 
-     <div class="submenu" id="submenucopy" style="display: none;"> 
+     <div class="submenu" id="submenucopy" style="display: none; left: 100%;"> 
       <a title="for multiple rows copy, select row from checkbox" tabindex="-1" href="#" onclick="copyrow(this);">Copy Row/s</a> 
       <a href="#" onclick="copycolumn(this);">Copy Column</a> 
      </div> 
      <a href="#" onclick="pasterow(this);">Paste</a> 
      <a href="#" class="context-menu" id="menudelete" onclick="deleterow(this);">Delete</a> 
-     <div class="submenu" id="submenudelete" style="display: none;"> 
+     <div class="submenu" id="submenudelete" style="display: none; left: 100%;"> 
       <a href="#" title="for multiple rows deletion, select row from checkbox" onclick="deleterow(this);">Delete Row/s</a> 
       <a href="#" onclick="deletecolumn(this);">Delete Column</a> 
      </div> 
@@ -659,8 +1778,8 @@
     </div> 
    </div> 
    <div id="config" style="display:none">
-     &lt;settings&gt; &lt;company&gt;Agnisys, Inc.&lt;/company&gt; &lt;copyright&gt;***** Copyright 2018 All Rights Reserved. *****&lt;/copyright&gt; &lt;log&gt;false&lt;/log&gt; &lt;outdir/&gt; &lt;outputs&gt; &lt;ivs&gt;true&lt;/ivs&gt; &lt;arv&gt;false&lt;/arv&gt; &lt;special_reg/&gt; &lt;cmsis&gt;false&lt;/cmsis&gt; &lt;uvm&gt;false&lt;/uvm&gt; &lt;perl&gt;false&lt;/perl&gt; &lt;python&gt;false&lt;/python&gt; &lt;cpp&gt;false&lt;/cpp&gt; &lt;vheader&gt;false&lt;/vheader&gt; &lt;vhdheader&gt;false&lt;/vhdheader&gt; &lt;formal&gt;false&lt;/formal&gt; &lt;pdf&gt;false&lt;/pdf&gt; &lt;ovm&gt;false&lt;/ovm&gt; &lt;vmm&gt;false&lt;/vmm&gt; &lt;iss_firmware&gt;false&lt;/iss_firmware&gt; &lt;iss_csv&gt;false&lt;/iss_csv&gt; &lt;iss_html&gt;false&lt;/iss_html&gt; &lt;iss_sv&gt;false&lt;/iss_sv&gt; &lt;iss_uvm&gt;false&lt;/iss_uvm&gt; &lt;iss_matlab&gt;false&lt;/iss_matlab&gt; &lt;header&gt;false&lt;/header&gt; &lt;html&gt;false&lt;/html&gt; &lt;xrsl&gt;false&lt;/xrsl&gt; &lt;word&gt;false&lt;/word&gt; &lt;rdl&gt;false&lt;/rdl&gt; &lt;erm&gt;false&lt;/erm&gt; &lt;ivs&gt;true&lt;/ivs&gt; &lt;svheader&gt;false&lt;/svheader&gt; &lt;svg&gt;false&lt;/svg&gt; &lt;datasheet&gt;false&lt;/datasheet&gt; &lt;customcsv&gt;false&lt;/customcsv&gt; &lt;customxml&gt;false&lt;/customxml&gt; &lt;csharp&gt;false&lt;/csharp&gt; &lt;sv&gt;false&lt;/sv&gt; &lt;/outputs&gt; &lt;rtl_wire&gt;false&lt;/rtl_wire&gt; &lt;limit_toc/&gt; &lt;lowpower&gt;false&lt;/lowpower&gt; &lt;auto_sequence/&gt; &lt;interrupt/&gt; &lt;mbd/&gt; &lt;arv_assertion/&gt; &lt;memtechmapping&gt;false&lt;/memtechmapping&gt; &lt;sv_w_intf/&gt; &lt;sv_wo_intf/&gt; &lt;uvm_env/&gt; &lt;hdlpath&gt;false&lt;/hdlpath&gt; &lt;coverage&gt;false&lt;/coverage&gt; &lt;arv_coverage&gt;false&lt;/arv_coverage&gt; &lt;illegalbins&gt;false&lt;/illegalbins&gt; &lt;arv_constraint&gt;false&lt;/arv_constraint&gt; &lt;bus&gt;proprietary&lt;/bus&gt; &lt;reg_width&gt;32&lt;/reg_width&gt; &lt;bus_width&gt;32&lt;/bus_width&gt; &lt;unit&gt;8&lt;/unit&gt; &lt;block_size/&gt; &lt;chip_size/&gt; &lt;board_size/&gt; &lt;c_type/&gt; &lt;big_endian&gt;false&lt;/big_endian&gt; &lt;little_endian&gt;false&lt;/little_endian&gt; &lt;template_dir&gt;D:\AgnisysProjects\IDS-NextGen\IDSNextGen\ids_templates\datasheet&lt;/template_dir&gt; &lt;check_only&gt;false&lt;/check_only&gt; &lt;preserve_names&gt;true&lt;/preserve_names&gt; &lt;addr_sort&gt;false&lt;/addr_sort&gt; &lt;seqconfig&gt; &lt;output&gt; &lt;seq_outputs/&gt; &lt;uvm&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;regmodel oid="0"&gt;default&lt;/regmodel&gt; &lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt; &lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/uvm&gt; &lt;sv&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;bus oid="0"&gt;default&lt;/bus&gt; &lt;write oid="0"&gt;write_mirror(%a, %d, 0, 0)&lt;/write&gt; &lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/sv&gt; &lt;firmware&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_WRITE(%a,%d,%m,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/firmware&gt; &lt;matlab&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(memory_name,%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(memory_name,%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(memory_name,%a,%msb,%lsb)&lt;/fieldread&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/matlab&gt; &lt;csv&gt; &lt;commands&gt; &lt;isscmd oid="0"&gt;call&lt;/isscmd&gt; &lt;cmd oid="0"&gt;CALL&lt;/cmd&gt; &lt;isscmd oid="1"&gt;wait&lt;/isscmd&gt; &lt;cmd oid="1"&gt;WAIT&lt;/cmd&gt; &lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt; &lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt; &lt;isscmd oid="3"&gt;write_1_set&lt;/isscmd&gt; &lt;cmd oid="3"&gt;WRITE_SET&lt;/cmd&gt; &lt;isscmd oid="4"&gt;write&lt;/isscmd&gt; &lt;cmd oid="4"&gt;WRITE&lt;/cmd&gt; &lt;isscmd oid="5"&gt;switch&lt;/isscmd&gt; &lt;cmd oid="5"&gt;SWITCH&lt;/cmd&gt; &lt;/commands&gt; &lt;headers&gt; &lt;issheader oid="0"&gt;address&lt;/issheader&gt; &lt;header oid="0"&gt;address&lt;/header&gt; &lt;issheader oid="1"&gt;description&lt;/issheader&gt; &lt;header oid="1"&gt;description&lt;/header&gt; &lt;issheader oid="2"&gt;step&lt;/issheader&gt; &lt;header oid="2"&gt;step&lt;/header&gt; &lt;issheader oid="3"&gt;value&lt;/issheader&gt; &lt;header oid="3"&gt;value&lt;/header&gt; &lt;issheader oid="4"&gt;command&lt;/issheader&gt; &lt;header oid="4"&gt;command&lt;/header&gt; &lt;/headers&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;/csv&gt; &lt;/output&gt; &lt;/seqconfig&gt; &lt;/settings&gt; 
+     &lt;settings&gt; &lt;company&gt;Agnisys, Inc.&lt;/company&gt; &lt;copyright&gt;***** Copyright 2018 All Rights Reserved. *****&lt;/copyright&gt; &lt;log&gt;true&lt;/log&gt; &lt;outdir/&gt; &lt;outputs&gt; &lt;verilog&gt;true&lt;/verilog&gt; &lt;verilog2001&gt;false&lt;/verilog2001&gt; &lt;ivs&gt;false&lt;/ivs&gt; &lt;arv&gt;false&lt;/arv&gt; &lt;special_reg/&gt; &lt;cmsis&gt;false&lt;/cmsis&gt; &lt;uvm&gt;false&lt;/uvm&gt; &lt;perl&gt;false&lt;/perl&gt; &lt;python&gt;false&lt;/python&gt; &lt;cpp&gt;false&lt;/cpp&gt; &lt;vheader&gt;false&lt;/vheader&gt; &lt;vhdheader&gt;false&lt;/vhdheader&gt; &lt;formal&gt;false&lt;/formal&gt; &lt;pdf&gt;false&lt;/pdf&gt; &lt;ovm&gt;false&lt;/ovm&gt; &lt;vmm&gt;false&lt;/vmm&gt; &lt;iss_firmware&gt;false&lt;/iss_firmware&gt; &lt;iss_csv&gt;false&lt;/iss_csv&gt; &lt;iss_html&gt;false&lt;/iss_html&gt; &lt;iss_sv&gt;false&lt;/iss_sv&gt; &lt;iss_uvm&gt;true&lt;/iss_uvm&gt; &lt;iss_matlab&gt;false&lt;/iss_matlab&gt; &lt;header&gt;false&lt;/header&gt; &lt;html&gt;false&lt;/html&gt; &lt;xrsl&gt;false&lt;/xrsl&gt; &lt;word&gt;false&lt;/word&gt; &lt;rdl&gt;false&lt;/rdl&gt; &lt;erm&gt;false&lt;/erm&gt; &lt;ivs&gt;false&lt;/ivs&gt; &lt;svheader&gt;false&lt;/svheader&gt; &lt;svg&gt;false&lt;/svg&gt; &lt;datasheet&gt;false&lt;/datasheet&gt; &lt;customcsv&gt;false&lt;/customcsv&gt; &lt;customxml&gt;false&lt;/customxml&gt; &lt;csharp&gt;false&lt;/csharp&gt; &lt;sv&gt;false&lt;/sv&gt; &lt;/outputs&gt; &lt;rtl_wire&gt;false&lt;/rtl_wire&gt; &lt;limit_toc/&gt; &lt;lowpower&gt;false&lt;/lowpower&gt; &lt;auto_sequence/&gt; &lt;interrupt/&gt; &lt;mbd/&gt; &lt;arv_assertion/&gt; &lt;memtechmapping&gt;false&lt;/memtechmapping&gt; &lt;sv_w_intf/&gt; &lt;sv_wo_intf/&gt; &lt;uvm_env/&gt; &lt;hdlpath&gt;false&lt;/hdlpath&gt; &lt;coverage&gt;false&lt;/coverage&gt; &lt;arv_coverage&gt;false&lt;/arv_coverage&gt; &lt;illegalbins&gt;false&lt;/illegalbins&gt; &lt;arv_constraint&gt;false&lt;/arv_constraint&gt; &lt;bus&gt;axi4lite&lt;/bus&gt; &lt;reg_width&gt;32&lt;/reg_width&gt; &lt;bus_width&gt;32&lt;/bus_width&gt; &lt;unit&gt;8&lt;/unit&gt; &lt;block_size/&gt; &lt;chip_size/&gt; &lt;board_size/&gt; &lt;c_type/&gt; &lt;big_endian&gt;false&lt;/big_endian&gt; &lt;little_endian&gt;false&lt;/little_endian&gt; &lt;template_dir&gt;C:\Program Files (x86)\Agnisys\iDSNG\ids_templates\datasheet&lt;/template_dir&gt; &lt;check_only&gt;false&lt;/check_only&gt; &lt;preserve_names&gt;true&lt;/preserve_names&gt; &lt;addr_sort&gt;false&lt;/addr_sort&gt; &lt;seqconfig&gt; &lt;output&gt; &lt;seq_outputs&gt; &lt;uvm&gt;true &lt;multioutput&gt;false&lt;/multioutput&gt; &lt;/uvm&gt; &lt;/seq_outputs&gt; &lt;uvm&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;regmodel oid="0"&gt;default&lt;/regmodel&gt; &lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt; &lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/uvm&gt; &lt;sv&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;bus oid="0"&gt;default&lt;/bus&gt; &lt;write oid="0"&gt;write_mirror(%a, %d, 0, 0)&lt;/write&gt; &lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/sv&gt; &lt;firmware&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_WRITE(%a,%d,%m,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/firmware&gt; &lt;matlab&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(memory_name,%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(memory_name,%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(memory_name,%a,%msb,%lsb)&lt;/fieldread&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/matlab&gt; &lt;csv&gt; &lt;commands&gt; &lt;isscmd oid="0"&gt;call&lt;/isscmd&gt; &lt;cmd oid="0"&gt;CALL&lt;/cmd&gt; &lt;isscmd oid="1"&gt;wait&lt;/isscmd&gt; &lt;cmd oid="1"&gt;WAIT&lt;/cmd&gt; &lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt; &lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt; &lt;isscmd oid="3"&gt;write_1_set&lt;/isscmd&gt; &lt;cmd oid="3"&gt;WRITE_SET&lt;/cmd&gt; &lt;isscmd oid="4"&gt;write&lt;/isscmd&gt; &lt;cmd oid="4"&gt;WRITE&lt;/cmd&gt; &lt;isscmd oid="5"&gt;switch&lt;/isscmd&gt; &lt;cmd oid="5"&gt;SWITCH&lt;/cmd&gt; &lt;/commands&gt; &lt;headers&gt; &lt;issheader oid="0"&gt;address&lt;/issheader&gt; &lt;header oid="0"&gt;address&lt;/header&gt; &lt;issheader oid="1"&gt;description&lt;/issheader&gt; &lt;header oid="1"&gt;description&lt;/header&gt; &lt;issheader oid="2"&gt;step&lt;/issheader&gt; &lt;header oid="2"&gt;step&lt;/header&gt; &lt;issheader oid="3"&gt;value&lt;/issheader&gt; &lt;header oid="3"&gt;value&lt;/header&gt; &lt;issheader oid="4"&gt;command&lt;/issheader&gt; &lt;header oid="4"&gt;command&lt;/header&gt; &lt;/headers&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;/csv&gt; &lt;/output&gt; &lt;/seqconfig&gt; &lt;/settings&gt; 
    </div> 
-  </div>  
+  </div> 
  </body>
 </html>

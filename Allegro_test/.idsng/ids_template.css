@@ -38,7 +38,7 @@ div#idsexcelcontainer table.exeltable td {
 }
 
 
-.excelmenu{
+.idsmenu{
 	position: absolute;
 }
 
@@ -78,8 +78,8 @@ div#idsexcelcontainer tr.rowheader td{
 #submenucopy{
 	top:29%;
 }
-#excelmenu a:hover {background-color: #ddd}
-#excelmenu a, .submenu a {
+.idsmenu a:hover {background-color: #ddd}
+.idsmenu a, .submenu a {
 	color: black;
 	padding: 6px 16px;
 	text-decoration: none;
@@ -103,7 +103,7 @@ div#idsexcelcontainer tr.rowheader td{
 	left: 100%;
 	width: 100%
 }
-#excelmenu{
+.idsmenu{
 	display: none;
 	position: absolute;
 	background-color: #f1f1f1;

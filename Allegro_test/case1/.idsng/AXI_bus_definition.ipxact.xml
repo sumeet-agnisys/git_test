@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<spirit:busDefinition xmlns:ids="http://www.agnisys.com/"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:snps="http://www.synopsys.com/"
+                      xmlns:xrsl="http://www.agnisys.com/"
+                      xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+   <spirit:vendor>AGNISYS</spirit:vendor>
+   <spirit:library>AGNISYS</spirit:library>
+   <spirit:name>AXI</spirit:name>
+   <spirit:version>v1.0</spirit:version>
+   <spirit:directConnection>true</spirit:directConnection>
+   <spirit:isAddressable>true</spirit:isAddressable>
+</spirit:busDefinition>

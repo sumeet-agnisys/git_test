@@ -2,7 +2,11 @@
 
 <idsng> 
   <files>
-    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\Test2\Test2.idsng</file>
-    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\Test2\test5.idsng</file>
+    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\case1\case1.idsng</file>
+    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\sequences.idsng</file>
+    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\chip.idsng</file>
+    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\hdl_path.idsng</file>
+    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\sequences\gg.idsng</file>
+    <file>C:\Users\Admin\Documents\GitHub\git_test\Allegro_test\Test2\tttt.idsng</file>
   </files>
 </idsng>

@@ -396,6 +396,13 @@ $(document).ready(function(){
 		$('#excelmenu').css({'display':'none'});
 	});
 
+	document.getElementById("regdivcontainer").addEventListener("click",function(event){
+		$('#regmenu').css({'display':'none'});
+	});
+
+	document.getElementById("seqdivcontainer").addEventListener("click",function(event){
+		$('#seqmenu').css({'display':'none'});
+	});
 
 	document.getElementById("spreadsheetcontainer").addEventListener("mousedown", function(event){
 		//right click
@@ -1517,6 +1524,48 @@ function insertSeqCmdRow(evt, obj) {
 
 }
 
+function insertSeqCmdRow_menu() {
+	addIntoHistory();
+
+
+	var table = curr_row_obj;
+
+	while(table.tagName.toUpperCase() !== "TABLE") {
+		table = table.parentNode;
+	}
+
+
+	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+	row.setAttribute('onkeydown','setCurrRow(this)');
+	row.setAttribute('onclick',"setCurrRow(this)");
+	row.setAttribute('class','edited');	
+	row.setAttribute('id','seq'+Math.random());
+
+	var input;
+	var cell;
+
+	cell=row.insertCell(0);		
+	cell.setAttribute('class', 'cmdname');     
+
+	cell=row.insertCell(1);
+	cell.setAttribute('class', 'step');  
+	var str=create_reg_arr(document.getElementById("regdivcontainer"));
+	autocomplete(cell,str);
+
+	cell=row.insertCell(2);
+	cell.setAttribute('class', 'seqvalue');  
+	autocomplete(cell,str);
+
+	cell=row.insertCell(3);
+	cell.setAttribute('class', 'seqdesc');  
+
+
+	cell=row.insertCell(4);
+	cell.setAttribute('class','refpath');
+	cell.setAttribute('onkeydown',"insertSeqCmdRow(event,this);");	
+
+}
+
 function insertSeqConstRow(evt, obj) {
 	addIntoHistory();
 	if(evt.keyCode===9){
@@ -1547,6 +1596,38 @@ function insertSeqConstRow(evt, obj) {
 		cell.setAttribute('class','seqdesc');
 		cell.setAttribute('onkeydown',"insertSeqConstRow(event,this);");				
 	}
+
+}
+
+function insertSeqConstRow_menu() {
+	addIntoHistory();
+	var table = curr_row_obj;
+
+	while(table.tagName.toUpperCase() !== "TABLE") {
+		table = table.parentNode;
+	}
+
+
+	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+
+	row.setAttribute('onkeydown','setCurrRow(this)');
+	row.setAttribute('onclick',"setCurrRow(this)");
+	row.setAttribute('class','edited');	
+	row.setAttribute('id','seq'+Math.random());
+
+	var input;
+	var cell;
+
+	cell=row.insertCell(0);		
+	cell.setAttribute('class', 'constname');     
+
+	cell=row.insertCell(1);
+	cell.setAttribute('class', 'value');  
+
+
+	cell=row.insertCell(2);
+	cell.setAttribute('class','seqdesc');
+	cell.setAttribute('onkeydown',"insertSeqConstRow(event,this);");				
 
 }
 
@@ -1583,6 +1664,38 @@ function insertSeqArgRow(evt, obj) {
 
 }
 
+function insertSeqArgRow_menu() {
+	addIntoHistory();
+	var table = curr_row_obj;
+
+	while(table.tagName.toUpperCase() !== "TABLE") {
+		table = table.parentNode;
+	}
+
+
+	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+
+	row.setAttribute('onkeydown','setCurrRow(this)');
+	row.setAttribute('onclick',"setCurrRow(this)");
+	row.setAttribute('class','edited');	
+	row.setAttribute('id','seq'+Math.random());
+
+	var input;
+	var cell;
+
+	cell=row.insertCell(0);		
+	cell.setAttribute('class', 'argname');     
+
+	cell=row.insertCell(1);
+	cell.setAttribute('class', 'value');  
+
+
+	cell=row.insertCell(2);
+	cell.setAttribute('class','seqdesc');
+	cell.setAttribute('onkeydown',"insertSeqArgRow(event,this);");				
+
+}
+
 function insertSeqVarnameRow(evt, obj) {
 	addIntoHistory();
 	if(evt.keyCode===9){
@@ -1616,7 +1729,37 @@ function insertSeqVarnameRow(evt, obj) {
 
 }
 
-function insertSeqRow(evt, obj) {
+function insertSeqVarnameRow_menu() {
+	addIntoHistory();
+	var table = curr_row_obj;
+
+	while(table.tagName.toUpperCase() !== "TABLE") {
+		table = table.parentNode;
+	}
+	var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+	
+	row.setAttribute('onkeydown','setCurrRow(this)');
+	row.setAttribute('onclick',"setCurrRow(this)");
+	row.setAttribute('class','edited');	
+	row.setAttribute('id','seq'+Math.random());
+
+	var input;
+	var cell;
+
+	cell=row.insertCell(0);		
+	cell.setAttribute('class', 'varname');     
+
+	cell=row.insertCell(1);
+	cell.setAttribute('class', 'value');  
+
+
+	cell=row.insertCell(2);
+	cell.setAttribute('class','seqdesc');
+	cell.setAttribute('onkeydown',"insertSeqVarnameRow(event,this);");				
+
+}
+
+function insertSeqRow_deletethis(evt, obj) {
 	addIntoHistory();
 	if(evt.keyCode===9){
 
@@ -1649,6 +1792,95 @@ function insertSeqRow(evt, obj) {
 
 }
 
+
+function insertseqrow(){
+	var obj=curr_row_obj;
+	while(obj.tagName.toUpperCase()!="TABLE"){
+		obj=obj.parentNode;
+	}
+
+
+	var clslist=obj.classList;
+
+	if(clslist.contains("command")){
+		insertSeqCmdRow_menu();
+	}
+	else if(clslist.contains("var")){
+		insertSeqVarnameRow_menu();
+	}
+	if(clslist.contains("const")){
+		insertSeqConstRow_menu();
+	}
+	if(clslist.contains("arg")){
+		insertSeqArgRow_menu();
+	}
+
+}
+
+/*  insert new row for reg field */
+function insertfieldRow() {
+	addIntoHistory();
+	var rowtab=curr_row_obj;
+	while(rowtab.tagName.toUpperCase() !== "TABLE") {
+		rowtab = rowtab.parentNode;
+	}	
+	var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+	row.setAttribute('onkeydown','setCurrRow(this)');
+	row.setAttribute('onclick',"setCurrRow(this)");
+	row.setAttribute('class','field edited');	
+	row.setAttribute('id','field'+Math.random());
+
+	var input;
+	var cell;
+
+	cell=row.insertCell(0);		
+	cell.setAttribute('class', 'bits'); 
+	cell.setAttribute('title', 'bits'); 
+
+	cell=row.insertCell(1);
+	cell.setAttribute('class', 'fieldname');  
+	cell.setAttribute('title', 'field name'); 
+
+
+	cell=row.insertCell(2);
+	cell.setAttribute('class','sw thirdCell');
+	cell.setAttribute('title', 'software access'); 
+
+	cell=row.insertCell(3);
+	cell.setAttribute('class','hw thirdCell');
+	cell.setAttribute('title', 'hardware access'); 
+
+	cell=row.insertCell(4);
+	cell.setAttribute('title', 'default'); 
+	cell.setAttribute('class','default');
+
+	cell=row.insertCell(5);
+	cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+	cell.setAttribute('class','desc fielddesc');
+	cell.setAttribute('title', 'description'); 
+
+	hookEvents(cell,idsprop);
+
+}
+
+function deletefieldrow(){
+	curr_row_obj.remove();
+}
+
+var fieldrow;
+
+function copyfieldrow(){
+	fieldrow=curr_row_obj;
+}
+
+function pastefieldrow(){
+	addIntoHistory();
+	if(fieldrow){
+		var newrow=fieldrow.cloneNode(true);
+
+		fieldrow.parentNode.insertBefore(newrow,curr_row_obj.nextSibling);
+	}
+}
 
 /*  insert new row for reg field */
 function insertNewRow(evt, obj) {
@@ -2495,7 +2727,6 @@ function autocomplete(inp, arr) {
 		}
 		catch(e){}
 
-		console.log("--nodetype="+nodetype);
 
 		/*set hint location here*/
 		if(nodetype=="reg"||nodetype=="block"){
@@ -3110,7 +3341,6 @@ function reArrangeRowNum(table){
 }
 
 function reArrangeColNum(table){
-	console.log("call rearrg col");
 	var col=table.rows[0].getElementsByTagName("td");
 	for(var i=1;i<col.length;i++){
 		col[i].innerHTML=getAlphabetsForColumn(i-1);
@@ -3395,6 +3625,47 @@ function openexcelmenu(event){
 	var y=event.pageY;
 	$('#excelmenu').css({'display':'block','left':x,'top':y});
 
+}
+
+function openregmenu(event){
+	event.preventDefault();
+	var x=event.pageX;
+	var y=event.pageY;
+	$('#regmenu').css({'display':'block','left':x,'top':y});
+	curr_row_obj=event.target.parentNode;
+}
+
+function openseqmenu(event){
+	var seqcls;
+
+	var obj=event.target;
+	while(obj.tagName.toUpperCase()!="TABLE"){
+		obj=obj.parentNode;
+	}
+
+
+	var clslist=obj.classList;
+
+	if(clslist.contains("command")){
+		seqcls="command";
+	}
+	else if(clslist.contains("var")){
+		seqcls="var";
+	}
+	if(clslist.contains("const")){
+		seqcls="const";
+	}
+	if(clslist.contains("arg")){
+		seqcls="arg";
+	}
+
+	if(seqcls){
+		event.preventDefault();
+		var x=event.pageX;
+		var y=event.pageY;
+		$('#seqmenu').css({'display':'block','left':x,'top':y});
+		curr_row_obj=event.target.parentNode;
+	}
 }
 
 function hidetemplate(){

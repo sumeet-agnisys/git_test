@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="block_name" id="2:2"><config><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants><regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config><signals name="signals" id="3:2">
+   <signal name="S1" direction="in" id="3:6"/>
+   <signal name="S2" direction="out" id="3:7"/>
+</signals><reg name="reg_name" id="4:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="F1" id="4:7">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x13</default>
+   </field>
+</reg></block>

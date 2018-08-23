@@ -1,0 +1,17 @@
+chip,block,reg,offset,field,bits,default,sw,hw,doc
+
+chip1,block1,reggroup1_reg1,0,,32 ,0x00000000,,,
+chip1,block1,reggroup1_reg1,,f1,32 ,0x00000000,rw,rw,,
+
+
+
+chip1,block2,reg2,0,,32 ,0x00000000,,,
+chip1,block2,reg2,,f1,32 ,0x00000000,rw,rw,,
+
+chip1,block2,reggroup1_reg1,0,,32 ,0x00000000,,,
+chip1,block2,reggroup1_reg1,,f1,32 ,0x00000000,rw,rw,,
+
+
+
+
+
