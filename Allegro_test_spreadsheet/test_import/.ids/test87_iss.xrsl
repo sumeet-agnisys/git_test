@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" name="chip_name" id="2:1" uid="2018-10-10T19:03:05.415+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="18" csize="11" diff_regwidth="true" address="0x0" endaddress="0xA" size="11">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>16</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0xA" size="11"/>
+      </busdomains>
+   </config>
+   <block heading="1.1" child_no="1" name="test87" id="3:2" uid="2018-10-10T19:03:05.415+05:30d14e13" keypath="chip_name.test87,test87" hwmapaddr="19" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x0" endaddress="0x7" size="8">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x7" size="8"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" name="reg_name" id="4:3" uid="2018-10-10T19:03:05.415+05:30d14e15" keypath="chip_name.test87.reg_name,test87.reg_name,reg_name" hwmapaddr="20" csize="4" offset="0" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="rw ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <field name="f" offset="1" id="5:5" uid="2018-10-10T19:03:05.415+05:30d14e19" keypath="chip_name.test87.reg_name.f,test87.reg_name.f,reg_name.f,f">
+            <default unresolvedDef="0">0</default>
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <doc>hello how are you ..</doc>
+         </field>
+         <field name="f2" offset="2" id="6:5" uid="2018-10-10T19:03:05.415+05:30d14e28" keypath="chip_name.test87.reg_name.f2,test87.reg_name.f2,reg_name.f2,f2">
+            <default unresolvedDef="0">0</default>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <doc>hello</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" name="reg_name12" id="7:3" uid="2018-10-10T19:03:05.415+05:30d14e37" keypath="chip_name.test87.reg_name12,test87.reg_name12,reg_name12" hwmapaddr="21" csize="4" offset="4" caddress="4" address="0x4" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x4" endaddress="0x7" size="4"/>
+            </busdomains>
+         </config>
+         <field name="f2" offset="1:30" id="8:5" uid="2018-10-10T19:03:05.415+05:30d14e41" keypath="chip_name.test87.reg_name12.f2,test87.reg_name12.f2,reg_name12.f2,f2">
+            <default unresolvedDef="0">000000000000000000000000000000</default>
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <doc>thefile</doc>
+         </field>
+      </reg>
+   </block>
+   <block heading="1.2" child_no="2" id="9:2" name="ref_name" refnodetype="block" orig_path="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test_import\test88.idsng" link="b1" path="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test_import\.ids\test88.idsng.xrsl" absolutepath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test_import\.ids\test88.idsng.xrsl" xrsl_path="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test_import\.ids\test88.idsng.xrsl" generate="false" uid="2018-10-10T19:03:05.415+05:30d14e50" keypath="chip_name.ref_name,ref_name" hwmapaddr="22" max_reg_size="16" csize="3" offset="8" caddress="8" address="0x8" endaddress="0xA" size="3">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x8" endaddress="0xA" size="3"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <reg heading="1.2.1" child_no="1" id="tab0.48166040116233566" name="rg1" offset="0" uid="2018-10-10T19:03:05.415+05:30d14e53" keypath="chip_name.ref_name.rg1,ref_name.rg1,rg1" hwmapaddr="23" csize="2" caddress="0" address="0x8" endaddress="0x9" size="2" default="0x0000" sw="rw" hw="rw">
+         <config>
+            <regwidth>16</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x8" endaddress="0x9" size="2"/>
+            </busdomains>
+         </config>
+         <field id="field_0" offset="1:0" name="f1" uid="2018-10-10T19:03:05.415+05:30d14e57" keypath="chip_name.ref_name.rg1.f1,ref_name.rg1.f1,rg1.f1,f1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+            <doc>thee</doc>
+         </field>
+      </reg>
+      <section heading="1.2.2" child_no="2" id="tab_reggroup0.9655088771487195" name="reggroup_name1" uid="2018-10-10T19:03:05.415+05:30d14e66" keypath="chip_name.ref_name.reggroup_name1,ref_name.reggroup_name1,reggroup_name1" keypathdown="reggroup_name1.reg_name2,reg_name2" hwmapaddr="24" max_reg_size="8" csize="1" offset="2" caddress="2" address="0xA" endaddress="0xA" size="1">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0xA" endaddress="0xA" size="1"/>
+            </busdomains>
+         </config>
+         <reg heading="1.2.2.1" child_no="1" id="tab_reg80.3185156132295063" name="reg_name2" uid="2018-10-10T19:03:05.415+05:30d14e68" keypath="chip_name.ref_name.reggroup_name1.reg_name2,ref_name.reggroup_name1.reg_name2,reggroup_name1.reg_name2,reg_name2" hwmapaddr="25" csize="1" offset="0" caddress="0" address="0xA" endaddress="0xA" size="1" default="0x00" sw="rw" hw="ro">
+            <config>
+               <regwidth>8</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0xA" endaddress="0xA" size="1"/>
+               </busdomains>
+            </config>
+            <field id="tab_field0.3185156132295063" offset="7:0" name="f" uid="2018-10-10T19:03:05.415+05:30d14e72" keypath="chip_name.ref_name.reggroup_name1.reg_name2.f,ref_name.reggroup_name1.reg_name2.f,reggroup_name1.reg_name2.f,reg_name2.f,f">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">00000000</default>
+            </field>
+         </reg>
+      </section>
+   </block>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.7201442597294683" orig_path="test87.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test_import\test87.idsng" level="1" uid="2018-10-10T19:03:06.257+05:30d24e96">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <firmware>true <multioutput>false</multioutput>
+               </firmware>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</chip>

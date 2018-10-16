@@ -1,0 +1,3114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab00.7834067651801022" name="test" uid="2018-10-16T16:37:45.791+05:30d14e1" keypath="test" offset="0" caddress="0" hwmapaddr="1096" csize="608" address="0x000" endaddress="0x25F" size="608">
+   <config>
+      <regwidth>32</regwidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x25F" size="608"/>
+      </busdomains>
+   </config>
+   <reg heading="1.1" child_no="1" id="tab10.6260499557761962" name="EEPROM_1" uid="2018-10-16T16:37:45.791+05:30d14e7" keypath="test.EEPROM_1,EEPROM_1" hwmapaddr="1097" csize="4" offset="0" caddress="0" address="0x000" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab00.5038449720453259" offset="5:0" name="eeprom_rev" uid="2018-10-16T16:37:45.791+05:30d14e9" keypath="test.EEPROM_1.eeprom_rev,EEPROM_1.eeprom_rev,eeprom_rev">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+      <field id="tab10.5222813219192426" offset="13:6" name="x_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e16" keypath="test.EEPROM_1.x_die_loc,EEPROM_1.x_die_loc,x_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab20.0689907587955878" offset="21:14" name="y_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e23" keypath="test.EEPROM_1.y_die_loc,EEPROM_1.y_die_loc,y_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab30.3114035560189343" offset="25:22" name="itest" uid="2018-10-16T16:37:45.791+05:30d14e30" keypath="test.EEPROM_1.itest,EEPROM_1.itest,itest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab40.44312353689745" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e37" keypath="test.EEPROM_1.ECC,EEPROM_1.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.2" child_no="2" id="tab30.6205200986881457" name="EEPROM_2" uid="2018-10-16T16:37:45.791+05:30d14e44" keypath="test.EEPROM_2,EEPROM_2" hwmapaddr="1098" csize="4" offset="4" caddress="4" address="0x004" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x004" endaddress="0x7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab50.0218503689312165" offset="5:0" name="factory_wafer" uid="2018-10-16T16:37:45.791+05:30d14e46" keypath="test.EEPROM_2.factory_wafer,EEPROM_2.factory_wafer,factory_wafer">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+      <field id="tab60.8685616233419841" offset="21:6" name="factory_lot" uid="2018-10-16T16:37:45.791+05:30d14e53" keypath="test.EEPROM_2.factory_lot,EEPROM_2.factory_lot,factory_lot">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab70.15885092600002726" offset="25:22" name="ptest" uid="2018-10-16T16:37:45.791+05:30d14e60" keypath="test.EEPROM_2.ptest,EEPROM_2.ptest,ptest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab80.24587600463793757" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e67" keypath="test.EEPROM_2.ECC,EEPROM_2.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.3" child_no="3" id="tab50.9995447804361132" name="EEPROM_3" uid="2018-10-16T16:37:45.791+05:30d14e74" keypath="test.EEPROM_3,EEPROM_3" hwmapaddr="1099" csize="4" offset="8" caddress="8" address="0x008" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x008" endaddress="0xB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab90.44126889704500616" offset="6:0" name="ee_spare_0_dpe" uid="2018-10-16T16:37:45.791+05:30d14e76" keypath="test.EEPROM_3.ee_spare_0_dpe,EEPROM_3.ee_spare_0_dpe,ee_spare_0_dpe">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab100.8999328278046833" offset="9:7" name="eeprom_post_bake_p_f" uid="2018-10-16T16:37:45.791+05:30d14e83" keypath="test.EEPROM_3.eeprom_post_bake_p_f,EEPROM_3.eeprom_post_bake_p_f,eeprom_post_bake_p_f">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab110.12356253731568967" offset="25:10" name="cas_id" uid="2018-10-16T16:37:45.791+05:30d14e90" keypath="test.EEPROM_3.cas_id,EEPROM_3.cas_id,cas_id">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab120.7566846730741053" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e97" keypath="test.EEPROM_3.ECC,EEPROM_3.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.4" child_no="4" id="tab70.8180929220559986" name="EEPROM_4" uid="2018-10-16T16:37:45.791+05:30d14e104" keypath="test.EEPROM_4,EEPROM_4" hwmapaddr="1100" csize="4" offset="12" caddress="12" address="0x00C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x00C" endaddress="0xF" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab130.3228603694404022" offset="25:0" name="PE reserved" uid="2018-10-16T16:37:45.791+05:30d14e106" keypath="test.EEPROM_4.PEreserved,EEPROM_4.PEreserved,PEreserved">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000000000000000</default>
+      </field>
+      <field id="tab140.6699671033282127" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e113" keypath="test.EEPROM_4.ECC,EEPROM_4.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.5" child_no="5" id="tab90.06485449847193847" name="EEPROM_5" uid="2018-10-16T16:37:45.791+05:30d14e120" keypath="test.EEPROM_5,EEPROM_5" hwmapaddr="1101" csize="4" offset="16" caddress="16" address="0x010" endaddress="0x13" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x010" endaddress="0x13" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab150.35788149617439036" offset="3:0" name="ihall_trim_vh" uid="2018-10-16T16:37:45.791+05:30d14e122" keypath="test.EEPROM_5.ihall_trim_vh,EEPROM_5.ihall_trim_vh,ihall_trim_vh">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab160.011942067056523231" offset="7:4" name="ihall_trim_ph" uid="2018-10-16T16:37:45.791+05:30d14e129" keypath="test.EEPROM_5.ihall_trim_ph,EEPROM_5.ihall_trim_ph,ihall_trim_ph">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab170.23153339626053382" offset="9:8" name="ihall_scale" uid="2018-10-16T16:37:45.791+05:30d14e136" keypath="test.EEPROM_5.ihall_scale,EEPROM_5.ihall_scale,ihall_scale">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab180.35829734861865115" offset="10" name="be_chop_clk_freq_sel" uid="2018-10-16T16:37:45.791+05:30d14e143" keypath="test.EEPROM_5.be_chop_clk_freq_sel,EEPROM_5.be_chop_clk_freq_sel,be_chop_clk_freq_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab190.4678639711078748" offset="11" name="PE reserved" uid="2018-10-16T16:37:45.791+05:30d14e150" keypath="test.EEPROM_5.PEreserved,EEPROM_5.PEreserved,PEreserved">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab200.10521476935937768" offset="12" name="manch_shared_out_sel" uid="2018-10-16T16:37:45.791+05:30d14e157" keypath="test.EEPROM_5.manch_shared_out_sel,EEPROM_5.manch_shared_out_sel,manch_shared_out_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab210.08365565228679828" offset="13" name="block_pwm_mode" uid="2018-10-16T16:37:45.791+05:30d14e164" keypath="test.EEPROM_5.block_pwm_mode,EEPROM_5.block_pwm_mode,block_pwm_mode">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab220.44388720851876795" offset="17:14" name="diag_clk_trim" uid="2018-10-16T16:37:45.791+05:30d14e171" keypath="test.EEPROM_5.diag_clk_trim,EEPROM_5.diag_clk_trim,diag_clk_trim">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab230.8353290884791308" offset="21:18" name="ibias_trim" uid="2018-10-16T16:37:45.791+05:30d14e178" keypath="test.EEPROM_5.ibias_trim,EEPROM_5.ibias_trim,ibias_trim">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab240.7809821916978731" offset="25:22" name="clk_trim" uid="2018-10-16T16:37:45.791+05:30d14e185" keypath="test.EEPROM_5.clk_trim,EEPROM_5.clk_trim,clk_trim">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab250.9713141044645307" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e193" keypath="test.EEPROM_5.ECC,EEPROM_5.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.6" child_no="6" id="tab110.6661700622873101" name="EEPROM_6" uid="2018-10-16T16:37:45.791+05:30d14e200" keypath="test.EEPROM_6,EEPROM_6" hwmapaddr="1102" csize="4" offset="20" caddress="20" address="0x014" endaddress="0x17" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x014" endaddress="0x17" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab260.6501002112148377" offset="1:0" name="be_miller_en" uid="2018-10-16T16:37:45.791+05:30d14e202" keypath="test.EEPROM_6.be_miller_en,EEPROM_6.be_miller_en,be_miller_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab270.9200703818524932" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e209" keypath="test.EEPROM_6.ECC,EEPROM_6.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.7" child_no="7" id="tab130.6878650100218492" name="EEPROM_7" uid="2018-10-16T16:37:45.791+05:30d14e216" keypath="test.EEPROM_7,EEPROM_7" hwmapaddr="1103" csize="4" offset="24" caddress="24" address="0x018" endaddress="0x1B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="24" address="0x018" endaddress="0x1B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab280.33866995171175696" offset="8:0" name="be_dac_gain" uid="2018-10-16T16:37:45.791+05:30d14e218" keypath="test.EEPROM_7.be_dac_gain,EEPROM_7.be_dac_gain,be_dac_gain">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000</default>
+      </field>
+      <field id="tab290.6498109941867236" offset="16:9" name="be_dac_gaintc" uid="2018-10-16T16:37:45.791+05:30d14e225" keypath="test.EEPROM_7.be_dac_gaintc,EEPROM_7.be_dac_gaintc,be_dac_gaintc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab300.659658669081485" offset="25:17" name="be_dac_offs" uid="2018-10-16T16:37:45.791+05:30d14e232" keypath="test.EEPROM_7.be_dac_offs,EEPROM_7.be_dac_offs,be_dac_offs">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000</default>
+      </field>
+      <field id="tab310.619532552239467" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e239" keypath="test.EEPROM_7.ECC,EEPROM_7.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.8" child_no="8" id="tab150.4985186960048661" name="EEPROM_8" uid="2018-10-16T16:37:45.791+05:30d14e246" keypath="test.EEPROM_8,EEPROM_8" hwmapaddr="1104" csize="4" offset="28" caddress="28" address="0x01C" endaddress="0x1F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x01C" endaddress="0x1F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab320.9490062697048292" offset="7:0" name="be_dac_offstc" uid="2018-10-16T16:37:45.791+05:30d14e248" keypath="test.EEPROM_8.be_dac_offstc,EEPROM_8.be_dac_offstc,be_dac_offstc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab330.6124658266403107" offset="9:8" name="uvd_ovd_delay" uid="2018-10-16T16:37:45.791+05:30d14e255" keypath="test.EEPROM_8.uvd_ovd_delay,EEPROM_8.uvd_ovd_delay,uvd_ovd_delay">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab340.12392621686118988" offset="14:10" name="cp_dac_max_val" uid="2018-10-16T16:37:45.791+05:30d14e262" keypath="test.EEPROM_8.cp_dac_max_val,EEPROM_8.cp_dac_max_val,cp_dac_max_val">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab350.03576704800673469" offset="16:15" name="cp_rdn_sel" uid="2018-10-16T16:37:45.791+05:30d14e269" keypath="test.EEPROM_8.cp_rdn_sel,EEPROM_8.cp_rdn_sel,cp_rdn_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab360.8306254361629984" offset="18:17" name="cp_hv_sel" uid="2018-10-16T16:37:45.791+05:30d14e276" keypath="test.EEPROM_8.cp_hv_sel,EEPROM_8.cp_hv_sel,cp_hv_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab370.5387151080963999" offset="20:19" name="cp_rup_sel" uid="2018-10-16T16:37:45.791+05:30d14e283" keypath="test.EEPROM_8.cp_rup_sel,EEPROM_8.cp_rup_sel,cp_rup_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab380.393327602934614" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e290" keypath="test.EEPROM_8.ECC,EEPROM_8.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.9" child_no="9" id="tab170.34755561938142887" name="EEPROM_9" uid="2018-10-16T16:37:45.791+05:30d14e297" keypath="test.EEPROM_9,EEPROM_9" hwmapaddr="1105" csize="4" offset="32" caddress="32" address="0x020" endaddress="0x23" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="32" address="0x020" endaddress="0x23" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab390.17627864764409928" offset="7:0" name="sigmon_ref_hall_a" uid="2018-10-16T16:37:45.791+05:30d14e299" keypath="test.EEPROM_9.sigmon_ref_hall_a,EEPROM_9.sigmon_ref_hall_a,sigmon_ref_hall_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab400.8450539273080308" offset="15:8" name="sigmon_ref_hall_b" uid="2018-10-16T16:37:45.791+05:30d14e306" keypath="test.EEPROM_9.sigmon_ref_hall_b,EEPROM_9.sigmon_ref_hall_b,sigmon_ref_hall_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab410.009678488861811552" offset="23:16" name="sigmon_ref_bg" uid="2018-10-16T16:37:45.791+05:30d14e313" keypath="test.EEPROM_9.sigmon_ref_bg,EEPROM_9.sigmon_ref_bg,sigmon_ref_bg">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab420.022774063788573495" offset="24" name="intref_err_mult" uid="2018-10-16T16:37:45.791+05:30d14e320" keypath="test.EEPROM_9.intref_err_mult,EEPROM_9.intref_err_mult,intref_err_mult">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab430.9335542825208277" offset="25" name="en_bypass" uid="2018-10-16T16:37:45.791+05:30d14e327" keypath="test.EEPROM_9.en_bypass,EEPROM_9.en_bypass,en_bypass">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab440.5983844287538367" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e334" keypath="test.EEPROM_9.ECC,EEPROM_9.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.10" child_no="10" id="tab190.4596144120933313" name="EEPROM_10" uid="2018-10-16T16:37:45.791+05:30d14e341" keypath="test.EEPROM_10,EEPROM_10" hwmapaddr="1106" csize="4" offset="36" caddress="36" address="0x024" endaddress="0x27" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="36" address="0x024" endaddress="0x27" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab450.7174407726373978" offset="6:0" name="toff_f" uid="2018-10-16T16:37:45.791+05:30d14e343" keypath="test.EEPROM_10.toff_f,EEPROM_10.toff_f,toff_f">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab460.641366634731719" offset="13:7" name="tslope" uid="2018-10-16T16:37:45.791+05:30d14e350" keypath="test.EEPROM_10.tslope,EEPROM_10.tslope,tslope">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab470.3234170555264346" offset="21:14" name="y_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e357" keypath="test.EEPROM_10.y_die_loc,EEPROM_10.y_die_loc,y_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab480.08917691145898687" offset="25:22" name="itest" uid="2018-10-16T16:37:45.791+05:30d14e364" keypath="test.EEPROM_10.itest,EEPROM_10.itest,itest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab490.6215293613201724" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e371" keypath="test.EEPROM_10.ECC,EEPROM_10.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.11" child_no="11" id="tab210.8581037484211572" name="EEPROM_11" uid="2018-10-16T16:37:45.791+05:30d14e379" keypath="test.EEPROM_11,EEPROM_11" hwmapaddr="1107" csize="4" offset="40" caddress="40" address="0x028" endaddress="0x2B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="40" address="0x028" endaddress="0x2B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab500.6392961837357845" offset="0" name="chan_dis_a" uid="2018-10-16T16:37:45.791+05:30d14e381" keypath="test.EEPROM_11.chan_dis_a,EEPROM_11.chan_dis_a,chan_dis_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab510.31358562787946176" offset="1" name="chan_a_hp_sel" uid="2018-10-16T16:37:45.791+05:30d14e388" keypath="test.EEPROM_11.chan_a_hp_sel,EEPROM_11.chan_a_hp_sel,chan_a_hp_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab520.5745123255853659" offset="5:2" name="qvo_trim_mag_a" uid="2018-10-16T16:37:45.791+05:30d14e395" keypath="test.EEPROM_11.qvo_trim_mag_a,EEPROM_11.qvo_trim_mag_a,qvo_trim_mag_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab530.4349130437065831" offset="6" name="qvo_trim_si_a" uid="2018-10-16T16:37:45.791+05:30d14e402" keypath="test.EEPROM_11.qvo_trim_si_a,EEPROM_11.qvo_trim_si_a,qvo_trim_si_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab540.5380196295504976" offset="8:7" name="fe_snsc_a" uid="2018-10-16T16:37:45.791+05:30d14e409" keypath="test.EEPROM_11.fe_snsc_a,EEPROM_11.fe_snsc_a,fe_snsc_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab550.17099459361252445" offset="9" name="gm_2x_en_a" uid="2018-10-16T16:37:45.791+05:30d14e416" keypath="test.EEPROM_11.gm_2x_en_a,EEPROM_11.gm_2x_en_a,gm_2x_en_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab560.8954505280144802" offset="10" name="chan_dis_b" uid="2018-10-16T16:37:45.791+05:30d14e423" keypath="test.EEPROM_11.chan_dis_b,EEPROM_11.chan_dis_b,chan_dis_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab570.3728420380790237" offset="11" name="chan_b_hp_sel" uid="2018-10-16T16:37:45.791+05:30d14e430" keypath="test.EEPROM_11.chan_b_hp_sel,EEPROM_11.chan_b_hp_sel,chan_b_hp_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab580.0015338944281582112" offset="15:12" name="qvo_trim_mag_b" uid="2018-10-16T16:37:45.791+05:30d14e437" keypath="test.EEPROM_11.qvo_trim_mag_b,EEPROM_11.qvo_trim_mag_b,qvo_trim_mag_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab590.9234648694987818" offset="16" name="qvo_trim_si_b" uid="2018-10-16T16:37:45.791+05:30d14e444" keypath="test.EEPROM_11.qvo_trim_si_b,EEPROM_11.qvo_trim_si_b,qvo_trim_si_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab600.7205672949505026" offset="18:17" name="fe_snsc_b" uid="2018-10-16T16:37:45.791+05:30d14e452" keypath="test.EEPROM_11.fe_snsc_b,EEPROM_11.fe_snsc_b,fe_snsc_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab610.5690633092424096" offset="19" name="gm_2x_en_b" uid="2018-10-16T16:37:45.791+05:30d14e459" keypath="test.EEPROM_11.gm_2x_en_b,EEPROM_11.gm_2x_en_b,gm_2x_en_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab620.39952284114478753" offset="20" name="afe_chop_rate" uid="2018-10-16T16:37:45.791+05:30d14e466" keypath="test.EEPROM_11.afe_chop_rate,EEPROM_11.afe_chop_rate,afe_chop_rate">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab630.8636171499168597" offset="25:21" name="ee_fact_spares_0" uid="2018-10-16T16:37:45.791+05:30d14e473" keypath="test.EEPROM_11.ee_fact_spares_0,EEPROM_11.ee_fact_spares_0,ee_fact_spares_0">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab640.9677931727651422" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e480" keypath="test.EEPROM_11.ECC,EEPROM_11.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.12" child_no="12" id="tab230.3768817887423187" name="EEPROM_12" uid="2018-10-16T16:37:45.791+05:30d14e487" keypath="test.EEPROM_12,EEPROM_12" hwmapaddr="1108" csize="4" offset="44" caddress="44" address="0x02C" endaddress="0x2F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="44" address="0x02C" endaddress="0x2F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab650.30599780572891655" offset="13:0" name="offs_f_a" uid="2018-10-16T16:37:45.791+05:30d14e489" keypath="test.EEPROM_12.offs_f_a,EEPROM_12.offs_f_a,offs_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000</default>
+      </field>
+      <field id="tab660.9072619082046434" offset="14" name="pol_f_a" uid="2018-10-16T16:37:45.791+05:30d14e496" keypath="test.EEPROM_12.pol_f_a,EEPROM_12.pol_f_a,pol_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab670.013297120526882589" offset="15" name="byp_trim_f_a" uid="2018-10-16T16:37:45.791+05:30d14e503" keypath="test.EEPROM_12.byp_trim_f_a,EEPROM_12.byp_trim_f_a,byp_trim_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab680.608678603636042" offset="16" name="byp_tc_f_a" uid="2018-10-16T16:37:45.791+05:30d14e510" keypath="test.EEPROM_12.byp_tc_f_a,EEPROM_12.byp_tc_f_a,byp_tc_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab690.17526823309887563" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e517" keypath="test.EEPROM_12.ECC,EEPROM_12.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.13" child_no="13" id="tab250.7339856034889342" name="EEPROM_13" uid="2018-10-16T16:37:45.791+05:30d14e524" keypath="test.EEPROM_13,EEPROM_13" hwmapaddr="1109" csize="4" offset="48" caddress="48" address="0x030" endaddress="0x33" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="48" address="0x030" endaddress="0x33" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab700.3908486792981828" offset="11:0" name="offstc1_cld_f_a" uid="2018-10-16T16:37:45.791+05:30d14e526" keypath="test.EEPROM_13.offstc1_cld_f_a,EEPROM_13.offstc1_cld_f_a,offstc1_cld_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab710.7333999457478393" offset="23:12" name="offstc1_hot_f_a" uid="2018-10-16T16:37:45.791+05:30d14e533" keypath="test.EEPROM_13.offstc1_hot_f_a,EEPROM_13.offstc1_hot_f_a,offstc1_hot_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab720.5728594643156598" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e540" keypath="test.EEPROM_13.ECC,EEPROM_13.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.14" child_no="14" id="tab270.7452621799806706" name="EEPROM_14" uid="2018-10-16T16:37:45.791+05:30d14e547" keypath="test.EEPROM_14,EEPROM_14" hwmapaddr="1110" csize="4" offset="52" caddress="52" address="0x034" endaddress="0x37" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="52" address="0x034" endaddress="0x37" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab730.4889156627978687" offset="14:0" name="sens_f_a" uid="2018-10-16T16:37:45.791+05:30d14e549" keypath="test.EEPROM_14.sens_f_a,EEPROM_14.sens_f_a,sens_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000</default>
+      </field>
+      <field id="tab740.3992186338093958" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e556" keypath="test.EEPROM_14.ECC,EEPROM_14.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.15" child_no="15" id="tab290.8628279941736636" name="EEPROM_15" uid="2018-10-16T16:37:45.791+05:30d14e563" keypath="test.EEPROM_15,EEPROM_15" hwmapaddr="1111" csize="4" offset="56" caddress="56" address="0x038" endaddress="0x3B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="56" address="0x038" endaddress="0x3B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab750.8130547063924172" offset="10:0" name="senstc1_cld_f_a" uid="2018-10-16T16:37:45.791+05:30d14e565" keypath="test.EEPROM_15.senstc1_cld_f_a,EEPROM_15.senstc1_cld_f_a,senstc1_cld_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab760.2896808933399072" offset="21:11" name="senstc1_hot_f_a" uid="2018-10-16T16:37:45.791+05:30d14e572" keypath="test.EEPROM_15.senstc1_hot_f_a,EEPROM_15.senstc1_hot_f_a,senstc1_hot_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab770.8796496728664042" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e579" keypath="test.EEPROM_15.ECC,EEPROM_15.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.16" child_no="16" id="tab310.2027926186159299" name="EEPROM_16" uid="2018-10-16T16:37:45.791+05:30d14e586" keypath="test.EEPROM_16,EEPROM_16" hwmapaddr="1112" csize="4" offset="60" caddress="60" address="0x03C" endaddress="0x3F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="60" address="0x03C" endaddress="0x3F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab780.06242113929370874" offset="9:0" name="senstc2_cld_f_a" uid="2018-10-16T16:37:45.791+05:30d14e588" keypath="test.EEPROM_16.senstc2_cld_f_a,EEPROM_16.senstc2_cld_f_a,senstc2_cld_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000</default>
+      </field>
+      <field id="tab790.8849657214724915" offset="19:10" name="senstc2_hot_f_a" uid="2018-10-16T16:37:45.791+05:30d14e595" keypath="test.EEPROM_16.senstc2_hot_f_a,EEPROM_16.senstc2_hot_f_a,senstc2_hot_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000</default>
+      </field>
+      <field id="tab800.349065086429292" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e602" keypath="test.EEPROM_16.ECC,EEPROM_16.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.17" child_no="17" id="tab330.20479935109857528" name="EEPROM_17" uid="2018-10-16T16:37:45.791+05:30d14e609" keypath="test.EEPROM_17,EEPROM_17" hwmapaddr="1113" csize="4" offset="64" caddress="64" address="0x040" endaddress="0x43" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="64" address="0x040" endaddress="0x43" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab810.004806019003348205" offset="13:0" name="offs_f_b" uid="2018-10-16T16:37:45.791+05:30d14e611" keypath="test.EEPROM_17.offs_f_b,EEPROM_17.offs_f_b,offs_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000</default>
+      </field>
+      <field id="tab820.4688408185370979" offset="14" name="pol_f_b" uid="2018-10-16T16:37:45.791+05:30d14e618" keypath="test.EEPROM_17.pol_f_b,EEPROM_17.pol_f_b,pol_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab830.7713489820865762" offset="15" name="byp_trim_f_b" uid="2018-10-16T16:37:45.791+05:30d14e625" keypath="test.EEPROM_17.byp_trim_f_b,EEPROM_17.byp_trim_f_b,byp_trim_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab840.021672240563325285" offset="16" name="byp_tc_f_b" uid="2018-10-16T16:37:45.791+05:30d14e632" keypath="test.EEPROM_17.byp_tc_f_b,EEPROM_17.byp_tc_f_b,byp_tc_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab850.9931406124332435" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e639" keypath="test.EEPROM_17.ECC,EEPROM_17.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.18" child_no="18" id="tab350.8032059591556577" name="EEPROM_18" uid="2018-10-16T16:37:45.791+05:30d14e646" keypath="test.EEPROM_18,EEPROM_18" hwmapaddr="1114" csize="4" offset="68" caddress="68" address="0x044" endaddress="0x47" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="68" address="0x044" endaddress="0x47" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab860.0312679627474578" offset="11:0" name="offstc1_cld_f_b" uid="2018-10-16T16:37:45.791+05:30d14e648" keypath="test.EEPROM_18.offstc1_cld_f_b,EEPROM_18.offstc1_cld_f_b,offstc1_cld_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab870.8112636101666717" offset="23:12" name="offstc1_hot_f_b" uid="2018-10-16T16:37:45.791+05:30d14e655" keypath="test.EEPROM_18.offstc1_hot_f_b,EEPROM_18.offstc1_hot_f_b,offstc1_hot_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab880.5998679668146845" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e662" keypath="test.EEPROM_18.ECC,EEPROM_18.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.19" child_no="19" id="tab370.9048248174852146" name="EEPROM_19" uid="2018-10-16T16:37:45.791+05:30d14e669" keypath="test.EEPROM_19,EEPROM_19" hwmapaddr="1115" csize="4" offset="72" caddress="72" address="0x048" endaddress="0x4B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="72" address="0x048" endaddress="0x4B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab890.13186169858761654" offset="14:0" name="sens_f_b" uid="2018-10-16T16:37:45.791+05:30d14e671" keypath="test.EEPROM_19.sens_f_b,EEPROM_19.sens_f_b,sens_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000</default>
+      </field>
+      <field id="tab900.9991421385330361" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e678" keypath="test.EEPROM_19.ECC,EEPROM_19.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.20" child_no="20" id="tab390.8431432967486905" name="EEPROM_20" uid="2018-10-16T16:37:45.791+05:30d14e685" keypath="test.EEPROM_20,EEPROM_20" hwmapaddr="1116" csize="4" offset="76" caddress="76" address="0x04C" endaddress="0x4F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="76" address="0x04C" endaddress="0x4F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab910.7695424282365294" offset="10:0" name="senstc1_cld_f_b" uid="2018-10-16T16:37:45.791+05:30d14e687" keypath="test.EEPROM_20.senstc1_cld_f_b,EEPROM_20.senstc1_cld_f_b,senstc1_cld_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab920.5051373229966919" offset="21:11" name="senstc1_hot_f_b" uid="2018-10-16T16:37:45.791+05:30d14e694" keypath="test.EEPROM_20.senstc1_hot_f_b,EEPROM_20.senstc1_hot_f_b,senstc1_hot_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab930.9681508779659526" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e701" keypath="test.EEPROM_20.ECC,EEPROM_20.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.21" child_no="21" id="tab410.5928532745349657" name="EEPROM_21" uid="2018-10-16T16:37:45.791+05:30d14e708" keypath="test.EEPROM_21,EEPROM_21" hwmapaddr="1117" csize="4" offset="80" caddress="80" address="0x050" endaddress="0x53" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="80" address="0x050" endaddress="0x53" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab940.4752447909701575" offset="10:0" name="senstc2_cld_f_b" uid="2018-10-16T16:37:45.791+05:30d14e710" keypath="test.EEPROM_21.senstc2_cld_f_b,EEPROM_21.senstc2_cld_f_b,senstc2_cld_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab950.7211638843010523" offset="21:11" name="senstc2_hot_f_b" uid="2018-10-16T16:37:45.791+05:30d14e717" keypath="test.EEPROM_21.senstc2_hot_f_b,EEPROM_21.senstc2_hot_f_b,senstc2_hot_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab960.035338765102286396" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e724" keypath="test.EEPROM_21.ECC,EEPROM_21.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.22" child_no="22" id="tab430.47446133003013313" name="EEPROM_22" uid="2018-10-16T16:37:45.791+05:30d14e732" keypath="test.EEPROM_22,EEPROM_22" hwmapaddr="1118" csize="4" offset="84" caddress="84" address="0x054" endaddress="0x57" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="84" address="0x054" endaddress="0x57" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab970.2254905911624564" offset="0" name="pre_sat_en" uid="2018-10-16T16:37:45.791+05:30d14e734" keypath="test.EEPROM_22.pre_sat_en,EEPROM_22.pre_sat_en,pre_sat_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab980.23583645723476676" offset="8:1" name="pre_sat_lo" uid="2018-10-16T16:37:45.791+05:30d14e741" keypath="test.EEPROM_22.pre_sat_lo,EEPROM_22.pre_sat_lo,pre_sat_lo">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab990.829677792793633" offset="16:9" name="pre_sat_hi" uid="2018-10-16T16:37:45.791+05:30d14e748" keypath="test.EEPROM_22.pre_sat_hi,EEPROM_22.pre_sat_hi,pre_sat_hi">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab1000.05645667196143134" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e755" keypath="test.EEPROM_22.ECC,EEPROM_22.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.23" child_no="23" id="tab450.5572829433191037" name="EEPROM_23" uid="2018-10-16T16:37:45.791+05:30d14e762" keypath="test.EEPROM_23,EEPROM_23" hwmapaddr="1119" csize="4" offset="88" caddress="88" address="0x058" endaddress="0x5B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="88" address="0x058" endaddress="0x5B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1010.9499609868945004" offset="15:0" name="offs_c_a" uid="2018-10-16T16:37:45.791+05:30d14e764" keypath="test.EEPROM_23.offs_c_a,EEPROM_23.offs_c_a,offs_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab1020.024385616094329432" offset="16" name="pol_c_a" uid="2018-10-16T16:37:45.791+05:30d14e771" keypath="test.EEPROM_23.pol_c_a,EEPROM_23.pol_c_a,pol_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1030.7908932816754455" offset="17" name="byp_trim_c_a" uid="2018-10-16T16:37:45.791+05:30d14e778" keypath="test.EEPROM_23.byp_trim_c_a,EEPROM_23.byp_trim_c_a,byp_trim_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1040.38919758153759265" offset="18" name="byp_tc_c_a" uid="2018-10-16T16:37:45.791+05:30d14e785" keypath="test.EEPROM_23.byp_tc_c_a,EEPROM_23.byp_tc_c_a,byp_tc_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1050.41849658288142344" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e792" keypath="test.EEPROM_23.ECC,EEPROM_23.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.24" child_no="24" id="tab470.47447360016511153" name="EEPROM_24" uid="2018-10-16T16:37:45.791+05:30d14e799" keypath="test.EEPROM_24,EEPROM_24" hwmapaddr="1120" csize="4" offset="92" caddress="92" address="0x05C" endaddress="0x5F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="92" address="0x05C" endaddress="0x5F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1060.9713993404038961" offset="11:0" name="offstc1_cld_c_a" uid="2018-10-16T16:37:45.791+05:30d14e801" keypath="test.EEPROM_24.offstc1_cld_c_a,EEPROM_24.offstc1_cld_c_a,offstc1_cld_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab1070.7135685726200409" offset="23:12" name="offstc1_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e808" keypath="test.EEPROM_24.offstc1_hot_c_a,EEPROM_24.offstc1_hot_c_a,offstc1_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab1080.4000183241892733" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e815" keypath="test.EEPROM_24.ECC,EEPROM_24.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.25" child_no="25" id="tab490.5065546748289532" name="EEPROM_25" uid="2018-10-16T16:37:45.791+05:30d14e822" keypath="test.EEPROM_25,EEPROM_25" hwmapaddr="1121" csize="4" offset="96" caddress="96" address="0x060" endaddress="0x63" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="96" address="0x060" endaddress="0x63" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1090.7228129296237557" offset="16:0" name="sens_c_a" uid="2018-10-16T16:37:45.791+05:30d14e824" keypath="test.EEPROM_25.sens_c_a,EEPROM_25.sens_c_a,sens_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000000</default>
+      </field>
+   </reg>
+   <reg heading="1.26" child_no="26" id="tab510.1540829421281118" name="EEPROM_26" uid="2018-10-16T16:37:45.791+05:30d14e831" keypath="test.EEPROM_26,EEPROM_26" hwmapaddr="1122" csize="4" offset="100" caddress="100" address="0x064" endaddress="0x67" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="100" address="0x064" endaddress="0x67" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1100.35891624149896806" offset="10:0" name="senstc1_cld_c_a" uid="2018-10-16T16:37:45.791+05:30d14e833" keypath="test.EEPROM_26.senstc1_cld_c_a,EEPROM_26.senstc1_cld_c_a,senstc1_cld_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1110.47060441621955496" offset="21:11" name="senstc1_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e840" keypath="test.EEPROM_26.senstc1_hot_c_a,EEPROM_26.senstc1_hot_c_a,senstc1_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1120.3945004128216505" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e847" keypath="test.EEPROM_26.ECC,EEPROM_26.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.27" child_no="27" id="tab530.8716900219091452" name="EEPROM_27" uid="2018-10-16T16:37:45.791+05:30d14e854" keypath="test.EEPROM_27,EEPROM_27" hwmapaddr="1123" csize="4" offset="104" caddress="104" address="0x068" endaddress="0x6B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="104" address="0x068" endaddress="0x6B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1130.8878572859789592" offset="10:0" name="senstc2_cld_c_a" uid="2018-10-16T16:37:45.791+05:30d14e856" keypath="test.EEPROM_27.senstc2_cld_c_a,EEPROM_27.senstc2_cld_c_a,senstc2_cld_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1140.06513127184452472" offset="21:11" name="senstc2_hot_c_a _change" uid="2018-10-16T16:37:45.791+05:30d14e863" keypath="test.EEPROM_27.senstc2_hot_c_a_change,EEPROM_27.senstc2_hot_c_a_change,senstc2_hot_c_a_change">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1170.6311688318284389" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e870" keypath="test.EEPROM_27.ECC,EEPROM_27.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.28" child_no="28" id="tab550.8233287320746332" name="EEPROM_28" uid="2018-10-16T16:37:45.791+05:30d14e877" keypath="test.EEPROM_28,EEPROM_28" hwmapaddr="1124" csize="4" offset="108" caddress="108" address="0x06C" endaddress="0x6F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="108" address="0x06C" endaddress="0x6F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1180.6529601993167484" offset="15:0" name="senstc2_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e879" keypath="test.EEPROM_28.senstc2_hot_c_a,EEPROM_28.senstc2_hot_c_a,senstc2_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab1190.9010742199961893" offset="16" name="byp_tc_c_b" uid="2018-10-16T16:37:45.791+05:30d14e886" keypath="test.EEPROM_28.byp_tc_c_b,EEPROM_28.byp_tc_c_b,byp_tc_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1200.8936965151917595" offset="17" name="byp_trim_c_b" uid="2018-10-16T16:37:45.791+05:30d14e893" keypath="test.EEPROM_28.byp_trim_c_b,EEPROM_28.byp_trim_c_b,byp_trim_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1210.39887628800529484" offset="18" name="pol_c_b" uid="2018-10-16T16:37:45.791+05:30d14e900" keypath="test.EEPROM_28.pol_c_b,EEPROM_28.pol_c_b,pol_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1220.6998017536351885" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e907" keypath="test.EEPROM_28.ECC,EEPROM_28.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.29" child_no="29" id="tab570.3734105812217765" name="EEPROM_29" uid="2018-10-16T16:37:45.791+05:30d14e914" keypath="test.EEPROM_29,EEPROM_29" hwmapaddr="1125" csize="4" offset="112" caddress="112" address="0x070" endaddress="0x73" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="112" address="0x070" endaddress="0x73" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1230.9738750694141663" offset="11:0" name="offstc1_cld_c_b" uid="2018-10-16T16:37:45.791+05:30d14e916" keypath="test.EEPROM_29.offstc1_cld_c_b,EEPROM_29.offstc1_cld_c_b,offstc1_cld_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab1240.6707543211194379" offset="23:12" name="offstc1_hot_c_b" uid="2018-10-16T16:37:45.791+05:30d14e923" keypath="test.EEPROM_29.offstc1_hot_c_b,EEPROM_29.offstc1_hot_c_b,offstc1_hot_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab1250.627768045963044" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e930" keypath="test.EEPROM_29.ECC,EEPROM_29.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.30" child_no="30" id="tab590.17904960204048226" name="EEPROM_30" uid="2018-10-16T16:37:45.791+05:30d14e937" keypath="test.EEPROM_30,EEPROM_30" hwmapaddr="1126" csize="4" offset="116" caddress="116" address="0x074" endaddress="0x77" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="116" address="0x074" endaddress="0x77" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1260.8949157605119181" offset="5:0" name="eeprom_rev" uid="2018-10-16T16:37:45.791+05:30d14e939" keypath="test.EEPROM_30.eeprom_rev,EEPROM_30.eeprom_rev,eeprom_rev">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+      <field id="tab1270.2111495080032899" offset="13:6" name="x_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e946" keypath="test.EEPROM_30.x_die_loc,EEPROM_30.x_die_loc,x_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab1280.8227546055037661" offset="21:14" name="y_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e953" keypath="test.EEPROM_30.y_die_loc,EEPROM_30.y_die_loc,y_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab1290.08000542126880483" offset="25:22" name="itest" uid="2018-10-16T16:37:45.791+05:30d14e960" keypath="test.EEPROM_30.itest,EEPROM_30.itest,itest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab1300.6738094517201593" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e967" keypath="test.EEPROM_30.ECC,EEPROM_30.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.31" child_no="31" id="tab610.5634182865388154" name="EEPROM_31" uid="2018-10-16T16:37:45.791+05:30d14e974" keypath="test.EEPROM_31,EEPROM_31" hwmapaddr="1127" csize="4" offset="120" caddress="120" address="0x078" endaddress="0x7B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="120" address="0x078" endaddress="0x7B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1310.7022822443249582" offset="10:0" name="senstc1_cld_c_b" uid="2018-10-16T16:37:45.791+05:30d14e976" keypath="test.EEPROM_31.senstc1_cld_c_b,EEPROM_31.senstc1_cld_c_b,senstc1_cld_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1320.9624662675806804" offset="21:11" name="senstc1_hot_c_b" uid="2018-10-16T16:37:45.791+05:30d14e983" keypath="test.EEPROM_31.senstc1_hot_c_b,EEPROM_31.senstc1_hot_c_b,senstc1_hot_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1330.7003230098086064" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e990" keypath="test.EEPROM_31.ECC,EEPROM_31.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.32" child_no="32" id="tab630.18870118885698528" name="EEPROM_32" uid="2018-10-16T16:37:45.791+05:30d14e997" keypath="test.EEPROM_32,EEPROM_32" hwmapaddr="1128" csize="4" offset="124" caddress="124" address="0x07C" endaddress="0x7F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="124" address="0x07C" endaddress="0x7F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1340.9165321785388724" offset="10:0" name="senstc2_cld_c_b" uid="2018-10-16T16:37:45.791+05:30d14e999" keypath="test.EEPROM_32.senstc2_cld_c_b,EEPROM_32.senstc2_cld_c_b,senstc2_cld_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1350.42548312453502224" offset="21:11" name="senstc2_hot_c_b" uid="2018-10-16T16:37:45.791+05:30d14e1006" keypath="test.EEPROM_32.senstc2_hot_c_b,EEPROM_32.senstc2_hot_c_b,senstc2_hot_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1360.6520655909712487" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1013" keypath="test.EEPROM_32.ECC,EEPROM_32.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.33" child_no="33" id="tab650.6990113342071781" name="EEPROM_33" uid="2018-10-16T16:37:45.791+05:30d14e1021" keypath="test.EEPROM_33,EEPROM_33" hwmapaddr="1129" csize="4" offset="128" caddress="128" address="0x080" endaddress="0x83" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="128" address="0x080" endaddress="0x83" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1370.3996160108017843" offset="10:0" name="phase_c" uid="2018-10-16T16:37:45.791+05:30d14e1023" keypath="test.EEPROM_33.phase_c,EEPROM_33.phase_c,phase_c">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab1380.4213996269132857" offset="15:11" name="toff_c" uid="2018-10-16T16:37:45.791+05:30d14e1030" keypath="test.EEPROM_33.toff_c,EEPROM_33.toff_c,toff_c">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab1390.0876521942426366" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1037" keypath="test.EEPROM_33.ECC,EEPROM_33.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.34" child_no="34" id="tab670.5531959835295372" name="EEPROM_34" uid="2018-10-16T16:37:45.791+05:30d14e1044" keypath="test.EEPROM_34,EEPROM_34" hwmapaddr="1130" csize="4" offset="132" caddress="132" address="0x084" endaddress="0x87" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="132" address="0x084" endaddress="0x87" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1400.5723203117073463" offset="0" name="lin_enable" uid="2018-10-16T16:37:45.791+05:30d14e1046" keypath="test.EEPROM_34.lin_enable,EEPROM_34.lin_enable,lin_enable">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1410.8810738671558818" offset="2:1" name="lin_mode" uid="2018-10-16T16:37:45.791+05:30d14e1053" keypath="test.EEPROM_34.lin_mode,EEPROM_34.lin_mode,lin_mode">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab1420.049656419473444235" offset="4:3" name="lin_coeff_scalar" uid="2018-10-16T16:37:45.791+05:30d14e1060" keypath="test.EEPROM_34.lin_coeff_scalar,EEPROM_34.lin_coeff_scalar,lin_coeff_scalar">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab1430.8478111699157003" offset="9:5" name="lin_coeff_active" uid="2018-10-16T16:37:45.791+05:30d14e1067" keypath="test.EEPROM_34.lin_coeff_active,EEPROM_34.lin_coeff_active,lin_coeff_active">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab1440.06660760714092595" offset="25:13" name="Linearization Error Segment 0" uid="2018-10-16T16:37:45.791+05:30d14e1074" keypath="test.EEPROM_34.LinearizationErrorSegment0,EEPROM_34.LinearizationErrorSegment0,LinearizationErrorSegment0">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000</default>
+      </field>
+      <field id="tab1450.7730776694322985" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1081" keypath="test.EEPROM_34.ECC,EEPROM_34.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <emptyspace heading="1.35" child_no="35" address="0x88" endaddress="0x147">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" address="0x88" endaddress="0x147"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <reg heading="1.35" child_no="36" id="tab690.4479517519112023" name="EEPROM_35" offset="328" uid="2018-10-16T16:37:45.791+05:30d14e1088" keypath="test.EEPROM_35,EEPROM_35" hwmapaddr="1131" csize="4" caddress="328" address="0x148" endaddress="0x14B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="328" address="0x148" endaddress="0x14B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1460.7963023086396782" offset="12:0" name="Linearization Error Segment 31" uid="2018-10-16T16:37:45.791+05:30d14e1090" keypath="test.EEPROM_35.LinearizationErrorSegment31,EEPROM_35.LinearizationErrorSegment31,LinearizationErrorSegment31">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000</default>
+      </field>
+      <field id="tab1470.537524945631664" offset="25:13" name="Linearization Error Segment 32" uid="2018-10-16T16:37:45.791+05:30d14e1097" keypath="test.EEPROM_35.LinearizationErrorSegment32,EEPROM_35.LinearizationErrorSegment32,LinearizationErrorSegment32">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000</default>
+      </field>
+      <field id="tab1480.762714027680241" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1104" keypath="test.EEPROM_35.ECC,EEPROM_35.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.36" child_no="37" id="tab710.6057139222416763" name="EEPROM_36" uid="2018-10-16T16:37:45.791+05:30d14e1111" keypath="test.EEPROM_36,EEPROM_36" hwmapaddr="1132" csize="4" offset="332" caddress="332" address="0x14C" endaddress="0x14F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="332" address="0x14C" endaddress="0x14F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1490.16912348651686904" offset="0" name="chan_pol_a" uid="2018-10-16T16:37:45.791+05:30d14e1113" keypath="test.EEPROM_36.chan_pol_a,EEPROM_36.chan_pol_a,chan_pol_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1500.40521322198774146" offset="1" name="chan_pol_b" uid="2018-10-16T16:37:45.791+05:30d14e1120" keypath="test.EEPROM_36.chan_pol_b,EEPROM_36.chan_pol_b,chan_pol_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1510.35015104973969036" offset="2" name="cordic_pol" uid="2018-10-16T16:37:45.791+05:30d14e1127" keypath="test.EEPROM_36.cordic_pol,EEPROM_36.cordic_pol,cordic_pol">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1520.8154336089713116" offset="5:3" name="cordic_sel" uid="2018-10-16T16:37:45.791+05:30d14e1134" keypath="test.EEPROM_36.cordic_sel,EEPROM_36.cordic_sel,cordic_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab1530.3767190766644446" offset="25:11" name="pre_gain_offset" uid="2018-10-16T16:37:45.791+05:30d14e1141" keypath="test.EEPROM_36.pre_gain_offset,EEPROM_36.pre_gain_offset,pre_gain_offset">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000</default>
+      </field>
+      <field id="tab1540.3998987324407113" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1148" keypath="test.EEPROM_36.ECC,EEPROM_36.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.37" child_no="38" id="tab730.5780415108127079" name="EEPROM_37" uid="2018-10-16T16:37:45.791+05:30d14e1155" keypath="test.EEPROM_37,EEPROM_37" hwmapaddr="1133" csize="4" offset="336" caddress="336" address="0x150" endaddress="0x153" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="336" address="0x150" endaddress="0x153" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1550.0568970448388062" offset="15:0" name="angle_gain" uid="2018-10-16T16:37:45.791+05:30d14e1157" keypath="test.EEPROM_37.angle_gain,EEPROM_37.angle_gain,angle_gain">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab1560.32026589379926684" offset="16" name="angle_proc_dis" uid="2018-10-16T16:37:45.791+05:30d14e1164" keypath="test.EEPROM_37.angle_proc_dis,EEPROM_37.angle_proc_dis,angle_proc_dis">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1570.2825269960751713" offset="25:19" name="bin_hyst" uid="2018-10-16T16:37:45.791+05:30d14e1171" keypath="test.EEPROM_37.bin_hyst,EEPROM_37.bin_hyst,bin_hyst">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab1580.7179413409442402" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1178" keypath="test.EEPROM_37.ECC,EEPROM_37.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.38" child_no="39" id="tab750.005323694014112257" name="EEPROM_38" uid="2018-10-16T16:37:45.791+05:30d14e1185" keypath="test.EEPROM_38,EEPROM_38" hwmapaddr="1134" csize="4" offset="340" caddress="340" address="0x154" endaddress="0x157" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="340" address="0x154" endaddress="0x157" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1590.6545885947406731" offset="0" name="post_gain_offset_sat" uid="2018-10-16T16:37:45.791+05:30d14e1187" keypath="test.EEPROM_38.post_gain_offset_sat,EEPROM_38.post_gain_offset_sat,post_gain_offset_sat">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1600.40121730693099655" offset="16:1" name="post_gain_offset" uid="2018-10-16T16:37:45.791+05:30d14e1194" keypath="test.EEPROM_38.post_gain_offset,EEPROM_38.post_gain_offset,post_gain_offset">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab1610.6212069426376295" offset="17" name="post_gain_sat" uid="2018-10-16T16:37:45.791+05:30d14e1201" keypath="test.EEPROM_38.post_gain_sat,EEPROM_38.post_gain_sat,post_gain_sat">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1620.7481237578038561" offset="25:18" name="post_gain_sat_val" uid="2018-10-16T16:37:45.791+05:30d14e1208" keypath="test.EEPROM_38.post_gain_sat_val,EEPROM_38.post_gain_sat_val,post_gain_sat_val">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab1630.591680045723207" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1215" keypath="test.EEPROM_38.ECC,EEPROM_38.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.39" child_no="40" id="tab770.46078413694196596" name="EEPROM_39" uid="2018-10-16T16:37:45.791+05:30d14e1222" keypath="test.EEPROM_39,EEPROM_39" hwmapaddr="1135" csize="4" offset="344" caddress="344" address="0x158" endaddress="0x15B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="344" address="0x158" endaddress="0x15B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1640.9037459890539276" offset="0" name="mag_thresh_min_en" uid="2018-10-16T16:37:45.791+05:30d14e1224" keypath="test.EEPROM_39.mag_thresh_min_en,EEPROM_39.mag_thresh_min_en,mag_thresh_min_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1650.2716356684556438" offset="12:1" name="mag_thresh_min" uid="2018-10-16T16:37:45.791+05:30d14e1231" keypath="test.EEPROM_39.mag_thresh_min,EEPROM_39.mag_thresh_min,mag_thresh_min">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab1660.46596559182141684" offset="13" name="mag_thresh_max_en" uid="2018-10-16T16:37:45.791+05:30d14e1238" keypath="test.EEPROM_39.mag_thresh_max_en,EEPROM_39.mag_thresh_max_en,mag_thresh_max_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1670.0440539477992451" offset="25:14" name="mag_thresh_max" uid="2018-10-16T16:37:45.791+05:30d14e1245" keypath="test.EEPROM_39.mag_thresh_max,EEPROM_39.mag_thresh_max,mag_thresh_max">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab1680.7577181828655455" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1252" keypath="test.EEPROM_39.ECC,EEPROM_39.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.40" child_no="41" id="tab790.8830477156348685" name="EEPROM_40" uid="2018-10-16T16:37:45.791+05:30d14e1259" keypath="test.EEPROM_40,EEPROM_40" hwmapaddr="1136" csize="4" offset="348" caddress="348" address="0x15C" endaddress="0x15F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="348" address="0x15C" endaddress="0x15F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1690.8953888619783893" offset="15:0" name="lower_clamp" uid="2018-10-16T16:37:45.791+05:30d14e1261" keypath="test.EEPROM_40.lower_clamp,EEPROM_40.lower_clamp,lower_clamp">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab1700.31498141474205665" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1268" keypath="test.EEPROM_40.ECC,EEPROM_40.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.41" child_no="42" id="tab810.7188783529688118" name="EEPROM_41" uid="2018-10-16T16:37:45.791+05:30d14e1275" keypath="test.EEPROM_41,EEPROM_41" hwmapaddr="1137" csize="4" offset="352" caddress="352" address="0x160" endaddress="0x163" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="352" address="0x160" endaddress="0x163" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1710.12157141637674851" offset="15:0" name="upper_clamp" uid="2018-10-16T16:37:45.791+05:30d14e1277" keypath="test.EEPROM_41.upper_clamp,EEPROM_41.upper_clamp,upper_clamp">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab1720.45609202872352395" offset="23:20" name="bw_sel" uid="2018-10-16T16:37:45.791+05:30d14e1284" keypath="test.EEPROM_41.bw_sel,EEPROM_41.bw_sel,bw_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab1730.2794787828689205" offset="25:24" name="bw_sel_filter" uid="2018-10-16T16:37:45.791+05:30d14e1291" keypath="test.EEPROM_41.bw_sel_filter,EEPROM_41.bw_sel_filter,bw_sel_filter">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab1740.1565551033424708" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1298" keypath="test.EEPROM_41.ECC,EEPROM_41.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.42" child_no="43" id="tab830.8875880810334608" name="EEPROM_42" uid="2018-10-16T16:37:45.791+05:30d14e1305" keypath="test.EEPROM_42,EEPROM_42" hwmapaddr="1138" csize="4" offset="356" caddress="356" address="0x164" endaddress="0x167" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="356" address="0x164" endaddress="0x167" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1750.9330500072981041" offset="1:0" name="digital_output_mode" uid="2018-10-16T16:37:45.791+05:30d14e1307" keypath="test.EEPROM_42.digital_output_mode,EEPROM_42.digital_output_mode,digital_output_mode">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab1760.16872591109066692" offset="2" name="device_id" uid="2018-10-16T16:37:45.791+05:30d14e1314" keypath="test.EEPROM_42.device_id,EEPROM_42.device_id,device_id">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1770.49057745838479716" offset="7:3" name="sent_data_cfg" uid="2018-10-16T16:37:45.791+05:30d14e1321" keypath="test.EEPROM_42.sent_data_cfg,EEPROM_42.sent_data_cfg,sent_data_cfg">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab1780.742170627577671" offset="12:8" name="sent_ticks_clk_num_pwm_period" uid="2018-10-16T16:37:45.791+05:30d14e1328" keypath="test.EEPROM_42.sent_ticks_clk_num_pwm_period,EEPROM_42.sent_ticks_clk_num_pwm_period,sent_ticks_clk_num_pwm_period">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab1790.26086165387713256" offset="15:13" name="sent_drive" uid="2018-10-16T16:37:45.791+05:30d14e1335" keypath="test.EEPROM_42.sent_drive,EEPROM_42.sent_drive,sent_drive">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab1800.557920597395988" offset="16" name="sent_ftc_e_n" uid="2018-10-16T16:37:45.791+05:30d14e1342" keypath="test.EEPROM_42.sent_ftc_e_n,EEPROM_42.sent_ftc_e_n,sent_ftc_e_n">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1810.40390016308715604" offset="17" name="sent_no_msg" uid="2018-10-16T16:37:45.791+05:30d14e1349" keypath="test.EEPROM_42.sent_no_msg,EEPROM_42.sent_no_msg,sent_no_msg">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1820.5405556488684895" offset="18" name="scn_crc_en" uid="2018-10-16T16:37:45.791+05:30d14e1356" keypath="test.EEPROM_42.scn_crc_en,EEPROM_42.scn_crc_en,scn_crc_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1830.7457268769981816" offset="19" name="sent_data_analog_map" uid="2018-10-16T16:37:45.791+05:30d14e1363" keypath="test.EEPROM_42.sent_data_analog_map,EEPROM_42.sent_data_analog_map,sent_data_analog_map">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1840.7758952332762729" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1370" keypath="test.EEPROM_42.ECC,EEPROM_42.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.43" child_no="44" id="tab850.5338541573242117" name="EEPROM_43" uid="2018-10-16T16:37:45.791+05:30d14e1377" keypath="test.EEPROM_43,EEPROM_43" hwmapaddr="1139" csize="4" offset="360" caddress="360" address="0x168" endaddress="0x16B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="360" address="0x168" endaddress="0x16B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1850.5918750118362006" offset="20:0" name="sent_emsg_enable" uid="2018-10-16T16:37:45.791+05:30d14e1379" keypath="test.EEPROM_43.sent_emsg_enable,EEPROM_43.sent_emsg_enable,sent_emsg_enable">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000000000</default>
+      </field>
+      <field id="tab1860.7255443275687945" offset="21" name="sent_emsg_1_repeat" uid="2018-10-16T16:37:45.791+05:30d14e1386" keypath="test.EEPROM_43.sent_emsg_1_repeat,EEPROM_43.sent_emsg_1_repeat,sent_emsg_1_repeat">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1870.7118808523893304" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1393" keypath="test.EEPROM_43.ECC,EEPROM_43.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.44" child_no="45" id="tab870.9837897837086237" name="EEPROM_44" uid="2018-10-16T16:37:45.791+05:30d14e1401" keypath="test.EEPROM_44,EEPROM_44" hwmapaddr="1140" csize="4" offset="364" caddress="364" address="0x16C" endaddress="0x16F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="364" address="0x16C" endaddress="0x16F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab1880.03594974001571416" offset="0" name="master_diag_dis" uid="2018-10-16T16:37:45.791+05:30d14e1403" keypath="test.EEPROM_44.master_diag_dis,EEPROM_44.master_diag_dis,master_diag_dis">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1890.7101730806426679" offset="1" name="vcf_mask" uid="2018-10-16T16:37:45.791+05:30d14e1410" keypath="test.EEPROM_44.vcf_mask,EEPROM_44.vcf_mask,vcf_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1900.8269768683031948" offset="2" name="aoc_mask" uid="2018-10-16T16:37:45.791+05:30d14e1417" keypath="test.EEPROM_44.aoc_mask,EEPROM_44.aoc_mask,aoc_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1910.7108265680944429" offset="3" name="tse_mask" uid="2018-10-16T16:37:45.791+05:30d14e1424" keypath="test.EEPROM_44.tse_mask,EEPROM_44.tse_mask,tse_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1920.54316324854165" offset="4" name="sat_mask" uid="2018-10-16T16:37:45.791+05:30d14e1431" keypath="test.EEPROM_44.sat_mask,EEPROM_44.sat_mask,sat_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1930.26290247333112793" offset="5" name="ofe_mask" uid="2018-10-16T16:37:45.791+05:30d14e1438" keypath="test.EEPROM_44.ofe_mask,EEPROM_44.ofe_mask,ofe_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1940.6610097776586505" offset="6" name="slf_mask" uid="2018-10-16T16:37:45.791+05:30d14e1445" keypath="test.EEPROM_44.slf_mask,EEPROM_44.slf_mask,slf_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1950.3146511958058622" offset="7" name="srr_mask" uid="2018-10-16T16:37:45.791+05:30d14e1452" keypath="test.EEPROM_44.srr_mask,EEPROM_44.srr_mask,srr_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1960.6221661646216913" offset="8" name="por_mask" uid="2018-10-16T16:37:45.791+05:30d14e1459" keypath="test.EEPROM_44.por_mask,EEPROM_44.por_mask,por_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1970.016686309846699388" offset="9" name="ese_mask" uid="2018-10-16T16:37:45.791+05:30d14e1466" keypath="test.EEPROM_44.ese_mask,EEPROM_44.ese_mask,ese_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1980.3288967158700845" offset="10" name="spe_mask" uid="2018-10-16T16:37:45.791+05:30d14e1474" keypath="test.EEPROM_44.spe_mask,EEPROM_44.spe_mask,spe_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab1990.24419496732235513" offset="11" name="uvcc_mask" uid="2018-10-16T16:37:45.791+05:30d14e1481" keypath="test.EEPROM_44.uvcc_mask,EEPROM_44.uvcc_mask,uvcc_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2000.7906784928167093" offset="12" name="ovcc_mask" uid="2018-10-16T16:37:45.791+05:30d14e1488" keypath="test.EEPROM_44.ovcc_mask,EEPROM_44.ovcc_mask,ovcc_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2010.37775911138496543" offset="15:13" name="fault_filt" uid="2018-10-16T16:37:45.791+05:30d14e1495" keypath="test.EEPROM_44.fault_filt,EEPROM_44.fault_filt,fault_filt">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab2020.40636624504227337" offset="16" name="sl_sat_mask" uid="2018-10-16T16:37:45.791+05:30d14e1502" keypath="test.EEPROM_44.sl_sat_mask,EEPROM_44.sl_sat_mask,sl_sat_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2030.1720210906536127" offset="17" name="ov_flag_off" uid="2018-10-16T16:37:45.791+05:30d14e1509" keypath="test.EEPROM_44.ov_flag_off,EEPROM_44.ov_flag_off,ov_flag_off">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2040.9037269399556404" offset="18" name="ov_flag_pre" uid="2018-10-16T16:37:45.791+05:30d14e1516" keypath="test.EEPROM_44.ov_flag_pre,EEPROM_44.ov_flag_pre,ov_flag_pre">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2050.23653903150131872" offset="19" name="ov_flag_gain" uid="2018-10-16T16:37:45.791+05:30d14e1523" keypath="test.EEPROM_44.ov_flag_gain,EEPROM_44.ov_flag_gain,ov_flag_gain">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2060.8140474220883424" offset="25" name="make_factory_writable_c" uid="2018-10-16T16:37:45.791+05:30d14e1530" keypath="test.EEPROM_44.make_factory_writable_c,EEPROM_44.make_factory_writable_c,make_factory_writable_c">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2070.8600504450486691" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1537" keypath="test.EEPROM_44.ECC,EEPROM_44.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.45" child_no="46" id="tab890.44660525582395494" name="EEPROM_45" uid="2018-10-16T16:37:45.791+05:30d14e1544" keypath="test.EEPROM_45,EEPROM_45" hwmapaddr="1141" csize="4" offset="368" caddress="368" address="0x170" endaddress="0x173" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="368" address="0x170" endaddress="0x173" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2080.772980981167564" offset="0" name="sdata_i_lo_thr" uid="2018-10-16T16:37:45.791+05:30d14e1546" keypath="test.EEPROM_45.sdata_i_lo_thr,EEPROM_45.sdata_i_lo_thr,sdata_i_lo_thr">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2090.38886248024349024" offset="1" name="sdata_i_hi_thr" uid="2018-10-16T16:37:45.791+05:30d14e1553" keypath="test.EEPROM_45.sdata_i_hi_thr,EEPROM_45.sdata_i_hi_thr,sdata_i_hi_thr">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2100.18329815186535647" offset="2" name="analog_lock" uid="2018-10-16T16:37:45.791+05:30d14e1560" keypath="test.EEPROM_45.analog_lock,EEPROM_45.analog_lock,analog_lock">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2110.14278053860613027" offset="4:3" name="ana_out_err_resp_conf" uid="2018-10-16T16:37:45.791+05:30d14e1567" keypath="test.EEPROM_45.ana_out_err_resp_conf,EEPROM_45.ana_out_err_resp_conf,ana_out_err_resp_conf">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2120.7999756217203318" offset="5" name="be_bw_sel" uid="2018-10-16T16:37:45.791+05:30d14e1574" keypath="test.EEPROM_45.be_bw_sel,EEPROM_45.be_bw_sel,be_bw_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2130.820004773293297" offset="11:9" name="be_diag_highz_min" uid="2018-10-16T16:37:45.791+05:30d14e1581" keypath="test.EEPROM_45.be_diag_highz_min,EEPROM_45.be_diag_highz_min,be_diag_highz_min">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab2140.12115373721783673" offset="14:12" name="be_scale" uid="2018-10-16T16:37:45.791+05:30d14e1588" keypath="test.EEPROM_45.be_scale,EEPROM_45.be_scale,be_scale">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab2150.4099124237461842" offset="15" name="dig_opendr_e" uid="2018-10-16T16:37:45.791+05:30d14e1595" keypath="test.EEPROM_45.dig_opendr_e,EEPROM_45.dig_opendr_e,dig_opendr_e">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2160.012639285467144545" offset="16" name="vcc_uv_thresh" uid="2018-10-16T16:37:45.791+05:30d14e1602" keypath="test.EEPROM_45.vcc_uv_thresh,EEPROM_45.vcc_uv_thresh,vcc_uv_thresh">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2170.25636685983614904" offset="17" name="vcc_ov_tresh" uid="2018-10-16T16:37:45.791+05:30d14e1609" keypath="test.EEPROM_45.vcc_ov_tresh,EEPROM_45.vcc_ov_tresh,vcc_ov_tresh">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2180.24755542935608021" offset="18" name="block_volatile_output" uid="2018-10-16T16:37:45.791+05:30d14e1617" keypath="test.EEPROM_45.block_volatile_output,EEPROM_45.block_volatile_output,block_volatile_output">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2190.5704509097902102" offset="20:19" name="manch_trigger_dis" uid="2018-10-16T16:37:45.791+05:30d14e1624" keypath="test.EEPROM_45.manch_trigger_dis,EEPROM_45.manch_trigger_dis,manch_trigger_dis">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2200.8788382416443195" offset="24:21" name="mem_lock" uid="2018-10-16T16:37:45.791+05:30d14e1631" keypath="test.EEPROM_45.mem_lock,EEPROM_45.mem_lock,mem_lock">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2210.5112346891759966" offset="25" name="unlock_code" uid="2018-10-16T16:37:45.791+05:30d14e1638" keypath="test.EEPROM_45.unlock_code,EEPROM_45.unlock_code,unlock_code">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2220.1315642176438614" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1645" keypath="test.EEPROM_45.ECC,EEPROM_45.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.46" child_no="47" id="tab910.005540127032341635" name="SHADOW_1" uid="2018-10-16T16:37:45.791+05:30d14e1652" keypath="test.SHADOW_1,SHADOW_1" hwmapaddr="1142" csize="4" offset="372" caddress="372" address="0x174" endaddress="0x177" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="372" address="0x174" endaddress="0x177" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2230.9653980293399771" offset="5:0" name="eeprom_rev" uid="2018-10-16T16:37:45.791+05:30d14e1654" keypath="test.SHADOW_1.eeprom_rev,SHADOW_1.eeprom_rev,eeprom_rev">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+      <field id="tab2240.2421295503314539" offset="13:6" name="x_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e1661" keypath="test.SHADOW_1.x_die_loc,SHADOW_1.x_die_loc,x_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2250.1359607207937681" offset="21:14" name="y_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e1668" keypath="test.SHADOW_1.y_die_loc,SHADOW_1.y_die_loc,y_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2260.7209104653977318" offset="25:22" name="itest" uid="2018-10-16T16:37:45.791+05:30d14e1675" keypath="test.SHADOW_1.itest,SHADOW_1.itest,itest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2270.8118735296796121" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1682" keypath="test.SHADOW_1.ECC,SHADOW_1.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.47" child_no="48" id="tab930.4286291400839629" name="SHADOW_2" uid="2018-10-16T16:37:45.791+05:30d14e1689" keypath="test.SHADOW_2,SHADOW_2" hwmapaddr="1143" csize="4" offset="376" caddress="376" address="0x178" endaddress="0x17B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="376" address="0x178" endaddress="0x17B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2280.9215982677014095" offset="5:0" name="factory_wafer" uid="2018-10-16T16:37:45.791+05:30d14e1691" keypath="test.SHADOW_2.factory_wafer,SHADOW_2.factory_wafer,factory_wafer">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+      <field id="tab2290.3864998139775989" offset="21:6" name="factory_lot" uid="2018-10-16T16:37:45.791+05:30d14e1698" keypath="test.SHADOW_2.factory_lot,SHADOW_2.factory_lot,factory_lot">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab2300.8876111974007396" offset="25:22" name="ptest" uid="2018-10-16T16:37:45.791+05:30d14e1705" keypath="test.SHADOW_2.ptest,SHADOW_2.ptest,ptest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2310.8125938263987832" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1712" keypath="test.SHADOW_2.ECC,SHADOW_2.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.48" child_no="49" id="tab950.6957813150201733" name="SHADOW_3" uid="2018-10-16T16:37:45.791+05:30d14e1719" keypath="test.SHADOW_3,SHADOW_3" hwmapaddr="1144" csize="4" offset="380" caddress="380" address="0x17C" endaddress="0x17F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="380" address="0x17C" endaddress="0x17F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2320.40465465204424766" offset="6:0" name="ee_spare_0_dpe" uid="2018-10-16T16:37:45.791+05:30d14e1721" keypath="test.SHADOW_3.ee_spare_0_dpe,SHADOW_3.ee_spare_0_dpe,ee_spare_0_dpe">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab2330.6997224978870863" offset="9:7" name="eeprom_post_bake_p_f" uid="2018-10-16T16:37:45.791+05:30d14e1728" keypath="test.SHADOW_3.eeprom_post_bake_p_f,SHADOW_3.eeprom_post_bake_p_f,eeprom_post_bake_p_f">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab2340.035665760168924976" offset="25:10" name="cas_id" uid="2018-10-16T16:37:45.791+05:30d14e1735" keypath="test.SHADOW_3.cas_id,SHADOW_3.cas_id,cas_id">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab2350.8284206596961387" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1742" keypath="test.SHADOW_3.ECC,SHADOW_3.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.49" child_no="50" id="tab970.7277826120380121" name="SHADOW_4" uid="2018-10-16T16:37:45.791+05:30d14e1749" keypath="test.SHADOW_4,SHADOW_4" hwmapaddr="1145" csize="4" offset="384" caddress="384" address="0x180" endaddress="0x183" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="384" address="0x180" endaddress="0x183" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2360.8683654763953141" offset="25:0" name="PE reserved" uid="2018-10-16T16:37:45.791+05:30d14e1751" keypath="test.SHADOW_4.PEreserved,SHADOW_4.PEreserved,PEreserved">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000000000000000</default>
+      </field>
+      <field id="tab2370.9511219702031233" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1758" keypath="test.SHADOW_4.ECC,SHADOW_4.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.50" child_no="51" id="tab990.23475344898264527" name="SHADOW_5" uid="2018-10-16T16:37:45.791+05:30d14e1765" keypath="test.SHADOW_5,SHADOW_5" hwmapaddr="1146" csize="4" offset="388" caddress="388" address="0x184" endaddress="0x187" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="388" address="0x184" endaddress="0x187" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2380.6698044493648266" offset="3:0" name="ihall_trim_vh" uid="2018-10-16T16:37:45.791+05:30d14e1767" keypath="test.SHADOW_5.ihall_trim_vh,SHADOW_5.ihall_trim_vh,ihall_trim_vh">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2390.0867538451736064" offset="7:4" name="ihall_trim_ph" uid="2018-10-16T16:37:45.791+05:30d14e1774" keypath="test.SHADOW_5.ihall_trim_ph,SHADOW_5.ihall_trim_ph,ihall_trim_ph">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2400.6211010828933063" offset="9:8" name="ihall_scale" uid="2018-10-16T16:37:45.791+05:30d14e1781" keypath="test.SHADOW_5.ihall_scale,SHADOW_5.ihall_scale,ihall_scale">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2410.5285445621559497" offset="10" name="be_chop_clk_freq_sel" uid="2018-10-16T16:37:45.791+05:30d14e1788" keypath="test.SHADOW_5.be_chop_clk_freq_sel,SHADOW_5.be_chop_clk_freq_sel,be_chop_clk_freq_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2420.4689011795476158" offset="11" name="PE reserved" uid="2018-10-16T16:37:45.791+05:30d14e1795" keypath="test.SHADOW_5.PEreserved,SHADOW_5.PEreserved,PEreserved">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2430.863076153352338" offset="12" name="manch_shared_out_sel" uid="2018-10-16T16:37:45.791+05:30d14e1802" keypath="test.SHADOW_5.manch_shared_out_sel,SHADOW_5.manch_shared_out_sel,manch_shared_out_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2440.0717401101241788" offset="13" name="block_pwm_mode" uid="2018-10-16T16:37:45.791+05:30d14e1809" keypath="test.SHADOW_5.block_pwm_mode,SHADOW_5.block_pwm_mode,block_pwm_mode">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2450.8089790830191055" offset="17:14" name="diag_clk_trim" uid="2018-10-16T16:37:45.791+05:30d14e1816" keypath="test.SHADOW_5.diag_clk_trim,SHADOW_5.diag_clk_trim,diag_clk_trim">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2460.9293336191868024" offset="21:18" name="ibias_trim" uid="2018-10-16T16:37:45.791+05:30d14e1823" keypath="test.SHADOW_5.ibias_trim,SHADOW_5.ibias_trim,ibias_trim">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2470.7066864532826327" offset="25:22" name="clk_trim" uid="2018-10-16T16:37:45.791+05:30d14e1830" keypath="test.SHADOW_5.clk_trim,SHADOW_5.clk_trim,clk_trim">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2480.9113013197693758" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1838" keypath="test.SHADOW_5.ECC,SHADOW_5.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.51" child_no="52" id="tab1010.9848680534481445" name="SHADOW_6" uid="2018-10-16T16:37:45.791+05:30d14e1845" keypath="test.SHADOW_6,SHADOW_6" hwmapaddr="1147" csize="4" offset="392" caddress="392" address="0x188" endaddress="0x18B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="392" address="0x188" endaddress="0x18B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2490.8293202236715439" offset="1:0" name="be_miller_en" uid="2018-10-16T16:37:45.791+05:30d14e1847" keypath="test.SHADOW_6.be_miller_en,SHADOW_6.be_miller_en,be_miller_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2500.43985868811228246" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1854" keypath="test.SHADOW_6.ECC,SHADOW_6.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.52" child_no="53" id="tab1030.3325407358472142" name="SHADOW_7" uid="2018-10-16T16:37:45.791+05:30d14e1861" keypath="test.SHADOW_7,SHADOW_7" hwmapaddr="1148" csize="4" offset="396" caddress="396" address="0x18C" endaddress="0x18F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="396" address="0x18C" endaddress="0x18F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2510.8366293311329972" offset="8:0" name="be_dac_gain" uid="2018-10-16T16:37:45.791+05:30d14e1863" keypath="test.SHADOW_7.be_dac_gain,SHADOW_7.be_dac_gain,be_dac_gain">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000</default>
+      </field>
+      <field id="tab2520.6044987372376659" offset="16:9" name="be_dac_gaintc" uid="2018-10-16T16:37:45.791+05:30d14e1870" keypath="test.SHADOW_7.be_dac_gaintc,SHADOW_7.be_dac_gaintc,be_dac_gaintc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2530.26320542949644576" offset="25:17" name="be_dac_offs" uid="2018-10-16T16:37:45.791+05:30d14e1877" keypath="test.SHADOW_7.be_dac_offs,SHADOW_7.be_dac_offs,be_dac_offs">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000</default>
+      </field>
+      <field id="tab2540.6034585535430314" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1884" keypath="test.SHADOW_7.ECC,SHADOW_7.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.53" child_no="54" id="tab1050.07333009817180725" name="SHADOW_8" uid="2018-10-16T16:37:45.791+05:30d14e1891" keypath="test.SHADOW_8,SHADOW_8" hwmapaddr="1149" csize="4" offset="400" caddress="400" address="0x190" endaddress="0x193" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="400" address="0x190" endaddress="0x193" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2550.6394473607251799" offset="7:0" name="be_dac_offstc" uid="2018-10-16T16:37:45.791+05:30d14e1893" keypath="test.SHADOW_8.be_dac_offstc,SHADOW_8.be_dac_offstc,be_dac_offstc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2560.2851468556516388" offset="9:8" name="uvd_ovd_delay" uid="2018-10-16T16:37:45.791+05:30d14e1900" keypath="test.SHADOW_8.uvd_ovd_delay,SHADOW_8.uvd_ovd_delay,uvd_ovd_delay">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2570.8968399870272583" offset="14:10" name="cp_dac_max_val" uid="2018-10-16T16:37:45.791+05:30d14e1907" keypath="test.SHADOW_8.cp_dac_max_val,SHADOW_8.cp_dac_max_val,cp_dac_max_val">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab2580.8829094256968434" offset="16:15" name="cp_rdn_sel" uid="2018-10-16T16:37:45.791+05:30d14e1914" keypath="test.SHADOW_8.cp_rdn_sel,SHADOW_8.cp_rdn_sel,cp_rdn_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2590.1432294760075271" offset="18:17" name="cp_hv_sel" uid="2018-10-16T16:37:45.791+05:30d14e1921" keypath="test.SHADOW_8.cp_hv_sel,SHADOW_8.cp_hv_sel,cp_hv_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2600.3236188838831311" offset="20:19" name="cp_rup_sel" uid="2018-10-16T16:37:45.791+05:30d14e1928" keypath="test.SHADOW_8.cp_rup_sel,SHADOW_8.cp_rup_sel,cp_rup_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2610.23353159446768434" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1935" keypath="test.SHADOW_8.ECC,SHADOW_8.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.54" child_no="55" id="tab1070.8183832668224303" name="SHADOW_9" uid="2018-10-16T16:37:45.791+05:30d14e1942" keypath="test.SHADOW_9,SHADOW_9" hwmapaddr="1150" csize="4" offset="404" caddress="404" address="0x194" endaddress="0x197" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="404" address="0x194" endaddress="0x197" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2620.9262391874247393" offset="7:0" name="sigmon_ref_hall_a" uid="2018-10-16T16:37:45.791+05:30d14e1944" keypath="test.SHADOW_9.sigmon_ref_hall_a,SHADOW_9.sigmon_ref_hall_a,sigmon_ref_hall_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2630.6809870799161566" offset="15:8" name="sigmon_ref_hall_b" uid="2018-10-16T16:37:45.791+05:30d14e1951" keypath="test.SHADOW_9.sigmon_ref_hall_b,SHADOW_9.sigmon_ref_hall_b,sigmon_ref_hall_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2640.18258053262554763" offset="23:16" name="sigmon_ref_bg" uid="2018-10-16T16:37:45.791+05:30d14e1958" keypath="test.SHADOW_9.sigmon_ref_bg,SHADOW_9.sigmon_ref_bg,sigmon_ref_bg">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2650.10049704084804179" offset="24" name="intref_err_mult" uid="2018-10-16T16:37:45.791+05:30d14e1965" keypath="test.SHADOW_9.intref_err_mult,SHADOW_9.intref_err_mult,intref_err_mult">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2660.45705652407144315" offset="25" name="en_bypass" uid="2018-10-16T16:37:45.791+05:30d14e1972" keypath="test.SHADOW_9.en_bypass,SHADOW_9.en_bypass,en_bypass">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2670.08161061502677824" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e1979" keypath="test.SHADOW_9.ECC,SHADOW_9.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.55" child_no="56" id="tab1090.2695499352724714" name="SHADOW_10" uid="2018-10-16T16:37:45.791+05:30d14e1987" keypath="test.SHADOW_10,SHADOW_10" hwmapaddr="1151" csize="4" offset="408" caddress="408" address="0x198" endaddress="0x19B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="408" address="0x198" endaddress="0x19B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2680.6489166298668723" offset="6:0" name="toff_f" uid="2018-10-16T16:37:45.791+05:30d14e1989" keypath="test.SHADOW_10.toff_f,SHADOW_10.toff_f,toff_f">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab2690.3887594293097981" offset="13:7" name="tslope" uid="2018-10-16T16:37:45.791+05:30d14e1996" keypath="test.SHADOW_10.tslope,SHADOW_10.tslope,tslope">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab2700.776494945726379" offset="21:14" name="y_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e2003" keypath="test.SHADOW_10.y_die_loc,SHADOW_10.y_die_loc,y_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab2710.8802768081804089" offset="25:22" name="itest" uid="2018-10-16T16:37:45.791+05:30d14e2010" keypath="test.SHADOW_10.itest,SHADOW_10.itest,itest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2720.6375485627397596" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2017" keypath="test.SHADOW_10.ECC,SHADOW_10.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.56" child_no="57" id="tab1110.12001791436890885" name="SHADOW_11" uid="2018-10-16T16:37:45.791+05:30d14e2024" keypath="test.SHADOW_11,SHADOW_11" hwmapaddr="1152" csize="4" offset="412" caddress="412" address="0x19C" endaddress="0x19F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="412" address="0x19C" endaddress="0x19F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2730.6816948613829641" offset="0" name="chan_dis_a" uid="2018-10-16T16:37:45.791+05:30d14e2026" keypath="test.SHADOW_11.chan_dis_a,SHADOW_11.chan_dis_a,chan_dis_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2740.08486819050477734" offset="1" name="chan_a_hp_sel" uid="2018-10-16T16:37:45.791+05:30d14e2033" keypath="test.SHADOW_11.chan_a_hp_sel,SHADOW_11.chan_a_hp_sel,chan_a_hp_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2750.3830336864258864" offset="5:2" name="qvo_trim_mag_a" uid="2018-10-16T16:37:45.791+05:30d14e2040" keypath="test.SHADOW_11.qvo_trim_mag_a,SHADOW_11.qvo_trim_mag_a,qvo_trim_mag_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2760.31605455729697796" offset="6" name="qvo_trim_si_a" uid="2018-10-16T16:37:45.791+05:30d14e2047" keypath="test.SHADOW_11.qvo_trim_si_a,SHADOW_11.qvo_trim_si_a,qvo_trim_si_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2770.3782151451068073" offset="8:7" name="fe_snsc_a" uid="2018-10-16T16:37:45.791+05:30d14e2054" keypath="test.SHADOW_11.fe_snsc_a,SHADOW_11.fe_snsc_a,fe_snsc_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2780.7889025235351701" offset="9" name="gm_2x_en_a" uid="2018-10-16T16:37:45.791+05:30d14e2061" keypath="test.SHADOW_11.gm_2x_en_a,SHADOW_11.gm_2x_en_a,gm_2x_en_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2790.9972160380838152" offset="10" name="chan_dis_b" uid="2018-10-16T16:37:45.791+05:30d14e2068" keypath="test.SHADOW_11.chan_dis_b,SHADOW_11.chan_dis_b,chan_dis_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2800.1905964494622402" offset="11" name="chan_b_hp_sel" uid="2018-10-16T16:37:45.791+05:30d14e2075" keypath="test.SHADOW_11.chan_b_hp_sel,SHADOW_11.chan_b_hp_sel,chan_b_hp_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2810.6189115647256371" offset="15:12" name="qvo_trim_mag_b" uid="2018-10-16T16:37:45.791+05:30d14e2082" keypath="test.SHADOW_11.qvo_trim_mag_b,SHADOW_11.qvo_trim_mag_b,qvo_trim_mag_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab2820.5379183405190003" offset="16" name="qvo_trim_si_b" uid="2018-10-16T16:37:45.791+05:30d14e2089" keypath="test.SHADOW_11.qvo_trim_si_b,SHADOW_11.qvo_trim_si_b,qvo_trim_si_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2830.40974576867439494" offset="18:17" name="fe_snsc_b" uid="2018-10-16T16:37:45.791+05:30d14e2097" keypath="test.SHADOW_11.fe_snsc_b,SHADOW_11.fe_snsc_b,fe_snsc_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab2840.8442332323969707" offset="19" name="gm_2x_en_b" uid="2018-10-16T16:37:45.791+05:30d14e2104" keypath="test.SHADOW_11.gm_2x_en_b,SHADOW_11.gm_2x_en_b,gm_2x_en_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2850.06544474298657321" offset="20" name="afe_chop_rate" uid="2018-10-16T16:37:45.791+05:30d14e2111" keypath="test.SHADOW_11.afe_chop_rate,SHADOW_11.afe_chop_rate,afe_chop_rate">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2860.831465902265881" offset="25:21" name="ee_fact_spares_0" uid="2018-10-16T16:37:45.791+05:30d14e2118" keypath="test.SHADOW_11.ee_fact_spares_0,SHADOW_11.ee_fact_spares_0,ee_fact_spares_0">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab2870.07131243453176161" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2125" keypath="test.SHADOW_11.ECC,SHADOW_11.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.57" child_no="58" id="tab1130.7109233144031707" name="SHADOW_12" uid="2018-10-16T16:37:45.791+05:30d14e2132" keypath="test.SHADOW_12,SHADOW_12" hwmapaddr="1153" csize="4" offset="416" caddress="416" address="0x1A0" endaddress="0x1A3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="416" address="0x1A0" endaddress="0x1A3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2880.7215507878685056" offset="13:0" name="offs_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2134" keypath="test.SHADOW_12.offs_f_a,SHADOW_12.offs_f_a,offs_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000</default>
+      </field>
+      <field id="tab2890.6647390597404306" offset="14" name="pol_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2141" keypath="test.SHADOW_12.pol_f_a,SHADOW_12.pol_f_a,pol_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2900.6503050614143518" offset="15" name="byp_trim_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2148" keypath="test.SHADOW_12.byp_trim_f_a,SHADOW_12.byp_trim_f_a,byp_trim_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2910.344309493995834" offset="16" name="byp_tc_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2155" keypath="test.SHADOW_12.byp_tc_f_a,SHADOW_12.byp_tc_f_a,byp_tc_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab2920.3953908232394412" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2162" keypath="test.SHADOW_12.ECC,SHADOW_12.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.58" child_no="59" id="tab1150.8563605781413461" name="SHADOW_13" uid="2018-10-16T16:37:45.791+05:30d14e2169" keypath="test.SHADOW_13,SHADOW_13" hwmapaddr="1154" csize="4" offset="420" caddress="420" address="0x1A4" endaddress="0x1A7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="420" address="0x1A4" endaddress="0x1A7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2930.6685945045163526" offset="11:0" name="offstc1_cld_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2171" keypath="test.SHADOW_13.offstc1_cld_f_a,SHADOW_13.offstc1_cld_f_a,offstc1_cld_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab2940.6505351474424432" offset="23:12" name="offstc1_hot_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2178" keypath="test.SHADOW_13.offstc1_hot_f_a,SHADOW_13.offstc1_hot_f_a,offstc1_hot_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab2950.037786638539874406" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2185" keypath="test.SHADOW_13.ECC,SHADOW_13.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.59" child_no="60" id="tab1170.06849211325192184" name="SHADOW_14" uid="2018-10-16T16:37:45.791+05:30d14e2192" keypath="test.SHADOW_14,SHADOW_14" hwmapaddr="1155" csize="4" offset="424" caddress="424" address="0x1A8" endaddress="0x1AB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="424" address="0x1A8" endaddress="0x1AB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2960.09308428026516125" offset="14:0" name="sens_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2194" keypath="test.SHADOW_14.sens_f_a,SHADOW_14.sens_f_a,sens_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000</default>
+      </field>
+      <field id="tab2970.8721964266414048" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2201" keypath="test.SHADOW_14.ECC,SHADOW_14.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.60" child_no="61" id="tab1190.7947325754054276" name="SHADOW_15" uid="2018-10-16T16:37:45.791+05:30d14e2208" keypath="test.SHADOW_15,SHADOW_15" hwmapaddr="1156" csize="4" offset="428" caddress="428" address="0x1AC" endaddress="0x1AF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="428" address="0x1AC" endaddress="0x1AF" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab2980.24483515024804947" offset="10:0" name="senstc1_cld_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2210" keypath="test.SHADOW_15.senstc1_cld_f_a,SHADOW_15.senstc1_cld_f_a,senstc1_cld_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab2990.4825523940946397" offset="21:11" name="senstc1_hot_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2217" keypath="test.SHADOW_15.senstc1_hot_f_a,SHADOW_15.senstc1_hot_f_a,senstc1_hot_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3000.08958907016988171" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2224" keypath="test.SHADOW_15.ECC,SHADOW_15.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.61" child_no="62" id="tab1210.831842997368953" name="SHADOW_16" uid="2018-10-16T16:37:45.791+05:30d14e2231" keypath="test.SHADOW_16,SHADOW_16" hwmapaddr="1157" csize="4" offset="432" caddress="432" address="0x1B0" endaddress="0x1B3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="432" address="0x1B0" endaddress="0x1B3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3010.4890268642988481" offset="9:0" name="senstc2_cld_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2233" keypath="test.SHADOW_16.senstc2_cld_f_a,SHADOW_16.senstc2_cld_f_a,senstc2_cld_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000</default>
+      </field>
+      <field id="tab3020.8776215343396608" offset="19:10" name="senstc2_hot_f_a" uid="2018-10-16T16:37:45.791+05:30d14e2240" keypath="test.SHADOW_16.senstc2_hot_f_a,SHADOW_16.senstc2_hot_f_a,senstc2_hot_f_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000</default>
+      </field>
+      <field id="tab3030.9811027009892063" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2247" keypath="test.SHADOW_16.ECC,SHADOW_16.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.62" child_no="63" id="tab1230.5944852078586363" name="SHADOW_17" uid="2018-10-16T16:37:45.791+05:30d14e2254" keypath="test.SHADOW_17,SHADOW_17" hwmapaddr="1158" csize="4" offset="436" caddress="436" address="0x1B4" endaddress="0x1B7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="436" address="0x1B4" endaddress="0x1B7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3040.11303515593596247" offset="13:0" name="offs_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2256" keypath="test.SHADOW_17.offs_f_b,SHADOW_17.offs_f_b,offs_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000</default>
+      </field>
+      <field id="tab3050.1666583723211722" offset="14" name="pol_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2263" keypath="test.SHADOW_17.pol_f_b,SHADOW_17.pol_f_b,pol_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3060.6798935947339827" offset="15" name="byp_trim_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2270" keypath="test.SHADOW_17.byp_trim_f_b,SHADOW_17.byp_trim_f_b,byp_trim_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3070.7767619134605279" offset="16" name="byp_tc_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2277" keypath="test.SHADOW_17.byp_tc_f_b,SHADOW_17.byp_tc_f_b,byp_tc_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3080.26085545767843044" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2284" keypath="test.SHADOW_17.ECC,SHADOW_17.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.63" child_no="64" id="tab1250.26775669142350667" name="SHADOW_18" uid="2018-10-16T16:37:45.791+05:30d14e2291" keypath="test.SHADOW_18,SHADOW_18" hwmapaddr="1159" csize="4" offset="440" caddress="440" address="0x1B8" endaddress="0x1BB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="440" address="0x1B8" endaddress="0x1BB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3090.7994710886951849" offset="11:0" name="offstc1_cld_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2293" keypath="test.SHADOW_18.offstc1_cld_f_b,SHADOW_18.offstc1_cld_f_b,offstc1_cld_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3100.6586218233267388" offset="23:12" name="offstc1_hot_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2300" keypath="test.SHADOW_18.offstc1_hot_f_b,SHADOW_18.offstc1_hot_f_b,offstc1_hot_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3110.6794332692847103" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2307" keypath="test.SHADOW_18.ECC,SHADOW_18.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.64" child_no="65" id="tab1270.6335851755501491" name="SHADOW_19" uid="2018-10-16T16:37:45.791+05:30d14e2314" keypath="test.SHADOW_19,SHADOW_19" hwmapaddr="1160" csize="4" offset="444" caddress="444" address="0x1BC" endaddress="0x1BF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="444" address="0x1BC" endaddress="0x1BF" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3120.5431441145056196" offset="14:0" name="sens_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2316" keypath="test.SHADOW_19.sens_f_b,SHADOW_19.sens_f_b,sens_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000</default>
+      </field>
+      <field id="tab3130.21677061910176643" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2323" keypath="test.SHADOW_19.ECC,SHADOW_19.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.65" child_no="66" id="tab1290.581638680724358" name="SHADOW_20" uid="2018-10-16T16:37:45.791+05:30d14e2330" keypath="test.SHADOW_20,SHADOW_20" hwmapaddr="1161" csize="4" offset="448" caddress="448" address="0x1C0" endaddress="0x1C3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="448" address="0x1C0" endaddress="0x1C3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3140.6155880660127473" offset="10:0" name="senstc1_cld_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2332" keypath="test.SHADOW_20.senstc1_cld_f_b,SHADOW_20.senstc1_cld_f_b,senstc1_cld_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3150.14922754614256395" offset="21:11" name="senstc1_hot_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2339" keypath="test.SHADOW_20.senstc1_hot_f_b,SHADOW_20.senstc1_hot_f_b,senstc1_hot_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3160.5115579902823689" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2346" keypath="test.SHADOW_20.ECC,SHADOW_20.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.66" child_no="67" id="tab1310.4342044440795312" name="SHADOW_21" uid="2018-10-16T16:37:45.791+05:30d14e2354" keypath="test.SHADOW_21,SHADOW_21" hwmapaddr="1162" csize="4" offset="452" caddress="452" address="0x1C4" endaddress="0x1C7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="452" address="0x1C4" endaddress="0x1C7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3170.9782266292467011" offset="10:0" name="senstc2_cld_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2356" keypath="test.SHADOW_21.senstc2_cld_f_b,SHADOW_21.senstc2_cld_f_b,senstc2_cld_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3180.016157054487715206" offset="21:11" name="senstc2_hot_f_b" uid="2018-10-16T16:37:45.791+05:30d14e2363" keypath="test.SHADOW_21.senstc2_hot_f_b,SHADOW_21.senstc2_hot_f_b,senstc2_hot_f_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3190.2696097387740001" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2370" keypath="test.SHADOW_21.ECC,SHADOW_21.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.67" child_no="68" id="tab1330.15614118656600318" name="SHADOW_22" uid="2018-10-16T16:37:45.791+05:30d14e2377" keypath="test.SHADOW_22,SHADOW_22" hwmapaddr="1163" csize="4" offset="456" caddress="456" address="0x1C8" endaddress="0x1CB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="456" address="0x1C8" endaddress="0x1CB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3200.20044085475315587" offset="0" name="pre_sat_en" uid="2018-10-16T16:37:45.791+05:30d14e2379" keypath="test.SHADOW_22.pre_sat_en,SHADOW_22.pre_sat_en,pre_sat_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3210.2665282479394274" offset="8:1" name="pre_sat_lo" uid="2018-10-16T16:37:45.791+05:30d14e2386" keypath="test.SHADOW_22.pre_sat_lo,SHADOW_22.pre_sat_lo,pre_sat_lo">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab3220.8265956402568805" offset="16:9" name="pre_sat_hi" uid="2018-10-16T16:37:45.791+05:30d14e2393" keypath="test.SHADOW_22.pre_sat_hi,SHADOW_22.pre_sat_hi,pre_sat_hi">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab3230.6169943323553774" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2400" keypath="test.SHADOW_22.ECC,SHADOW_22.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.68" child_no="69" id="tab1350.9431467894258448" name="SHADOW_23" uid="2018-10-16T16:37:45.791+05:30d14e2407" keypath="test.SHADOW_23,SHADOW_23" hwmapaddr="1164" csize="4" offset="460" caddress="460" address="0x1CC" endaddress="0x1CF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="460" address="0x1CC" endaddress="0x1CF" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3240.08128644413065167" offset="15:0" name="offs_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2409" keypath="test.SHADOW_23.offs_c_a,SHADOW_23.offs_c_a,offs_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab3250.12265970105824187" offset="16" name="pol_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2416" keypath="test.SHADOW_23.pol_c_a,SHADOW_23.pol_c_a,pol_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3260.18334384151804406" offset="17" name="byp_trim_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2423" keypath="test.SHADOW_23.byp_trim_c_a,SHADOW_23.byp_trim_c_a,byp_trim_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3270.17098433439385907" offset="18" name="byp_tc_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2430" keypath="test.SHADOW_23.byp_tc_c_a,SHADOW_23.byp_tc_c_a,byp_tc_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3280.5953742266285948" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2437" keypath="test.SHADOW_23.ECC,SHADOW_23.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.69" child_no="70" id="tab1370.21663264668475146" name="SHADOW_24" uid="2018-10-16T16:37:45.791+05:30d14e2444" keypath="test.SHADOW_24,SHADOW_24" hwmapaddr="1165" csize="4" offset="464" caddress="464" address="0x1D0" endaddress="0x1D3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="464" address="0x1D0" endaddress="0x1D3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3290.13348442535527172" offset="11:0" name="offstc1_cld_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2446" keypath="test.SHADOW_24.offstc1_cld_c_a,SHADOW_24.offstc1_cld_c_a,offstc1_cld_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3300.5399176263844961" offset="23:12" name="offstc1_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2453" keypath="test.SHADOW_24.offstc1_hot_c_a,SHADOW_24.offstc1_hot_c_a,offstc1_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3310.8966768747857408" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2460" keypath="test.SHADOW_24.ECC,SHADOW_24.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.70" child_no="71" id="tab1390.44778573956409695" name="SHADOW_25" uid="2018-10-16T16:37:45.791+05:30d14e2467" keypath="test.SHADOW_25,SHADOW_25" hwmapaddr="1166" csize="4" offset="468" caddress="468" address="0x1D4" endaddress="0x1D7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="468" address="0x1D4" endaddress="0x1D7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3320.29646177095469417" offset="16:0" name="sens_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2469" keypath="test.SHADOW_25.sens_c_a,SHADOW_25.sens_c_a,sens_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000000000</default>
+      </field>
+   </reg>
+   <reg heading="1.71" child_no="72" id="tab1410.9582765812334765" name="SHADOW_26" uid="2018-10-16T16:37:45.791+05:30d14e2476" keypath="test.SHADOW_26,SHADOW_26" hwmapaddr="1167" csize="4" offset="472" caddress="472" address="0x1D8" endaddress="0x1DB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="472" address="0x1D8" endaddress="0x1DB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3330.9478445950842487" offset="10:0" name="senstc1_cld_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2478" keypath="test.SHADOW_26.senstc1_cld_c_a,SHADOW_26.senstc1_cld_c_a,senstc1_cld_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3340.11436843092208737" offset="21:11" name="senstc1_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2485" keypath="test.SHADOW_26.senstc1_hot_c_a,SHADOW_26.senstc1_hot_c_a,senstc1_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3350.9108762285655649" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2492" keypath="test.SHADOW_26.ECC,SHADOW_26.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.72" child_no="73" id="tab1430.35506580245250063" name="SHADOW_27" uid="2018-10-16T16:37:45.791+05:30d14e2499" keypath="test.SHADOW_27,SHADOW_27" hwmapaddr="1168" csize="4" offset="476" caddress="476" address="0x1DC" endaddress="0x1DF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="476" address="0x1DC" endaddress="0x1DF" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3360.5677146023787223" offset="10:0" name="senstc2_cld_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2501" keypath="test.SHADOW_27.senstc2_cld_c_a,SHADOW_27.senstc2_cld_c_a,senstc2_cld_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3370.3027530639094824" offset="21:11" name="senstc2_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2508" keypath="test.SHADOW_27.senstc2_hot_c_a,SHADOW_27.senstc2_hot_c_a,senstc2_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3400.5416796512965094" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2515" keypath="test.SHADOW_27.ECC,SHADOW_27.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.73" child_no="74" id="tab1450.8819078381452007" name="SHADOW_28" uid="2018-10-16T16:37:45.791+05:30d14e2522" keypath="test.SHADOW_28,SHADOW_28" hwmapaddr="1169" csize="4" offset="480" caddress="480" address="0x1E0" endaddress="0x1E3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="480" address="0x1E0" endaddress="0x1E3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3410.8595773177655218" offset="15:0" name="senstc2_hot_c_a" uid="2018-10-16T16:37:45.791+05:30d14e2524" keypath="test.SHADOW_28.senstc2_hot_c_a,SHADOW_28.senstc2_hot_c_a,senstc2_hot_c_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab3420.017600515546096207" offset="16" name="byp_tc_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2531" keypath="test.SHADOW_28.byp_tc_c_b,SHADOW_28.byp_tc_c_b,byp_tc_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3430.326853330323311" offset="17" name="byp_trim_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2538" keypath="test.SHADOW_28.byp_trim_c_b,SHADOW_28.byp_trim_c_b,byp_trim_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3440.15007815230678812" offset="18" name="pol_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2545" keypath="test.SHADOW_28.pol_c_b,SHADOW_28.pol_c_b,pol_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3450.2789016570942121" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2552" keypath="test.SHADOW_28.ECC,SHADOW_28.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.74" child_no="75" id="tab1470.2805114654421692" name="SHADOW_29" uid="2018-10-16T16:37:45.791+05:30d14e2559" keypath="test.SHADOW_29,SHADOW_29" hwmapaddr="1170" csize="4" offset="484" caddress="484" address="0x1E4" endaddress="0x1E7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="484" address="0x1E4" endaddress="0x1E7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3460.907739866743272" offset="11:0" name="offstc1_cld_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2561" keypath="test.SHADOW_29.offstc1_cld_c_b,SHADOW_29.offstc1_cld_c_b,offstc1_cld_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3470.28030553681671877" offset="23:12" name="offstc1_hot_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2568" keypath="test.SHADOW_29.offstc1_hot_c_b,SHADOW_29.offstc1_hot_c_b,offstc1_hot_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3480.5327122992268603" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2575" keypath="test.SHADOW_29.ECC,SHADOW_29.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.75" child_no="76" id="tab1490.1900982265116018" name="SHADOW_30" uid="2018-10-16T16:37:45.791+05:30d14e2582" keypath="test.SHADOW_30,SHADOW_30" hwmapaddr="1171" csize="4" offset="488" caddress="488" address="0x1E8" endaddress="0x1EB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="488" address="0x1E8" endaddress="0x1EB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3490.041159732701556595" offset="5:0" name="eeprom_rev" uid="2018-10-16T16:37:45.791+05:30d14e2584" keypath="test.SHADOW_30.eeprom_rev,SHADOW_30.eeprom_rev,eeprom_rev">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+      <field id="tab3500.9142972791928953" offset="13:6" name="x_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e2591" keypath="test.SHADOW_30.x_die_loc,SHADOW_30.x_die_loc,x_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab3510.23365467577348542" offset="21:14" name="y_die_loc" uid="2018-10-16T16:37:45.791+05:30d14e2598" keypath="test.SHADOW_30.y_die_loc,SHADOW_30.y_die_loc,y_die_loc">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab3520.7848604861868509" offset="25:22" name="itest" uid="2018-10-16T16:37:45.791+05:30d14e2605" keypath="test.SHADOW_30.itest,SHADOW_30.itest,itest">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab3530.05903592488999754" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2612" keypath="test.SHADOW_30.ECC,SHADOW_30.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.76" child_no="77" id="tab1510.39537877484074446" name="SHADOW_31" uid="2018-10-16T16:37:45.791+05:30d14e2619" keypath="test.SHADOW_31,SHADOW_31" hwmapaddr="1172" csize="4" offset="492" caddress="492" address="0x1EC" endaddress="0x1EF" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="492" address="0x1EC" endaddress="0x1EF" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3540.1977398195962513" offset="10:0" name="senstc1_cld_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2621" keypath="test.SHADOW_31.senstc1_cld_c_b,SHADOW_31.senstc1_cld_c_b,senstc1_cld_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3550.37349133809587054" offset="21:11" name="senstc1_hot_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2628" keypath="test.SHADOW_31.senstc1_hot_c_b,SHADOW_31.senstc1_hot_c_b,senstc1_hot_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3560.5886064745599212" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2635" keypath="test.SHADOW_31.ECC,SHADOW_31.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.77" child_no="78" id="tab1530.5116901033681727" name="SHADOW_32" uid="2018-10-16T16:37:45.791+05:30d14e2643" keypath="test.SHADOW_32,SHADOW_32" hwmapaddr="1173" csize="4" offset="496" caddress="496" address="0x1F0" endaddress="0x1F3" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="496" address="0x1F0" endaddress="0x1F3" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3570.670196695626862" offset="10:0" name="senstc2_cld_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2645" keypath="test.SHADOW_32.senstc2_cld_c_b,SHADOW_32.senstc2_cld_c_b,senstc2_cld_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3580.065400033454455" offset="21:11" name="senstc2_hot_c_b" uid="2018-10-16T16:37:45.791+05:30d14e2652" keypath="test.SHADOW_32.senstc2_hot_c_b,SHADOW_32.senstc2_hot_c_b,senstc2_hot_c_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3590.27362458962427694" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2659" keypath="test.SHADOW_32.ECC,SHADOW_32.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.78" child_no="79" id="tab1550.9021805167661286" name="SHADOW_33" uid="2018-10-16T16:37:45.791+05:30d14e2666" keypath="test.SHADOW_33,SHADOW_33" hwmapaddr="1174" csize="4" offset="500" caddress="500" address="0x1F4" endaddress="0x1F7" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="500" address="0x1F4" endaddress="0x1F7" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3600.4832971835677793" offset="10:0" name="phase_c" uid="2018-10-16T16:37:45.791+05:30d14e2668" keypath="test.SHADOW_33.phase_c,SHADOW_33.phase_c,phase_c">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000000</default>
+      </field>
+      <field id="tab3610.7526427172265331" offset="15:11" name="toff_c" uid="2018-10-16T16:37:45.791+05:30d14e2675" keypath="test.SHADOW_33.toff_c,SHADOW_33.toff_c,toff_c">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab3620.13879311683571383" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2682" keypath="test.SHADOW_33.ECC,SHADOW_33.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.79" child_no="80" id="tab1570.04291742334982185" name="SHADOW_34" uid="2018-10-16T16:37:45.791+05:30d14e2689" keypath="test.SHADOW_34,SHADOW_34" hwmapaddr="1175" csize="4" offset="504" caddress="504" address="0x1F8" endaddress="0x1FB" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="504" address="0x1F8" endaddress="0x1FB" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3630.6118279288504062" offset="0" name="lin_enable" uid="2018-10-16T16:37:45.791+05:30d14e2691" keypath="test.SHADOW_34.lin_enable,SHADOW_34.lin_enable,lin_enable">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3640.3864337423317056" offset="2:1" name="lin_mode" uid="2018-10-16T16:37:45.791+05:30d14e2698" keypath="test.SHADOW_34.lin_mode,SHADOW_34.lin_mode,lin_mode">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab3650.18887817901676596" offset="4:3" name="lin_coeff_scalar" uid="2018-10-16T16:37:45.791+05:30d14e2705" keypath="test.SHADOW_34.lin_coeff_scalar,SHADOW_34.lin_coeff_scalar,lin_coeff_scalar">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab3660.9906484153977181" offset="9:5" name="lin_coeff_active" uid="2018-10-16T16:37:45.791+05:30d14e2712" keypath="test.SHADOW_34.lin_coeff_active,SHADOW_34.lin_coeff_active,lin_coeff_active">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab3670.7970723740268243" offset="25:13" name="Linearization Error Segment 0" uid="2018-10-16T16:37:45.791+05:30d14e2719" keypath="test.SHADOW_34.LinearizationErrorSegment0,SHADOW_34.LinearizationErrorSegment0,LinearizationErrorSegment0">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000</default>
+      </field>
+      <field id="tab3680.16077361713706184" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2726" keypath="test.SHADOW_34.ECC,SHADOW_34.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <emptyspace heading="1.81" child_no="81" address="0x1FC" endaddress="0x233">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" address="0x1FC" endaddress="0x233"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <reg heading="1.80" child_no="82" id="tab1590.2539538668213446" name="SHADOW_35" offset="564" uid="2018-10-16T16:37:45.791+05:30d14e2733" keypath="test.SHADOW_35,SHADOW_35" hwmapaddr="1176" csize="4" caddress="564" address="0x234" endaddress="0x237" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="564" address="0x234" endaddress="0x237" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3690.4783644176913957" offset="12:0" name="Linearization Error Segment 31" uid="2018-10-16T16:37:45.791+05:30d14e2735" keypath="test.SHADOW_35.LinearizationErrorSegment31,SHADOW_35.LinearizationErrorSegment31,LinearizationErrorSegment31">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000</default>
+      </field>
+      <field id="tab3700.46063062305165237" offset="25:13" name="Linearization Error Segment 32" uid="2018-10-16T16:37:45.791+05:30d14e2742" keypath="test.SHADOW_35.LinearizationErrorSegment32,SHADOW_35.LinearizationErrorSegment32,LinearizationErrorSegment32">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000</default>
+      </field>
+      <field id="tab3710.3811917945530464" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2749" keypath="test.SHADOW_35.ECC,SHADOW_35.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.81" child_no="83" id="tab1610.061736814597879386" name="SHADOW_36" uid="2018-10-16T16:37:45.791+05:30d14e2756" keypath="test.SHADOW_36,SHADOW_36" hwmapaddr="1177" csize="4" offset="568" caddress="568" address="0x238" endaddress="0x23B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="568" address="0x238" endaddress="0x23B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3720.7138492972803882" offset="0" name="chan_pol_a" uid="2018-10-16T16:37:45.791+05:30d14e2758" keypath="test.SHADOW_36.chan_pol_a,SHADOW_36.chan_pol_a,chan_pol_a">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3730.8604246483585966" offset="1" name="chan_pol_b" uid="2018-10-16T16:37:45.791+05:30d14e2765" keypath="test.SHADOW_36.chan_pol_b,SHADOW_36.chan_pol_b,chan_pol_b">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3740.20333908081725172" offset="2" name="cordic_pol" uid="2018-10-16T16:37:45.791+05:30d14e2772" keypath="test.SHADOW_36.cordic_pol,SHADOW_36.cordic_pol,cordic_pol">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3750.8031306897821662" offset="5:3" name="cordic_sel" uid="2018-10-16T16:37:45.791+05:30d14e2779" keypath="test.SHADOW_36.cordic_sel,SHADOW_36.cordic_sel,cordic_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab3760.6087628955143178" offset="25:11" name="pre_gain_offset" uid="2018-10-16T16:37:45.791+05:30d14e2786" keypath="test.SHADOW_36.pre_gain_offset,SHADOW_36.pre_gain_offset,pre_gain_offset">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000</default>
+      </field>
+      <field id="tab3770.28412782363986566" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2793" keypath="test.SHADOW_36.ECC,SHADOW_36.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.82" child_no="84" id="tab1630.6902552141814596" name="SHADOW_37" uid="2018-10-16T16:37:45.791+05:30d14e2800" keypath="test.SHADOW_37,SHADOW_37" hwmapaddr="1178" csize="4" offset="572" caddress="572" address="0x23C" endaddress="0x23F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="572" address="0x23C" endaddress="0x23F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3780.9492561996583837" offset="15:0" name="angle_gain" uid="2018-10-16T16:37:45.791+05:30d14e2802" keypath="test.SHADOW_37.angle_gain,SHADOW_37.angle_gain,angle_gain">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab3790.7472618039540943" offset="16" name="angle_proc_dis" uid="2018-10-16T16:37:45.791+05:30d14e2809" keypath="test.SHADOW_37.angle_proc_dis,SHADOW_37.angle_proc_dis,angle_proc_dis">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3800.20065463894650093" offset="25:19" name="bin_hyst" uid="2018-10-16T16:37:45.791+05:30d14e2816" keypath="test.SHADOW_37.bin_hyst,SHADOW_37.bin_hyst,bin_hyst">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000</default>
+      </field>
+      <field id="tab3810.859639067143833" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2823" keypath="test.SHADOW_37.ECC,SHADOW_37.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.83" child_no="85" id="tab1650.8150701563678613" name="SHADOW_38" uid="2018-10-16T16:37:45.791+05:30d14e2830" keypath="test.SHADOW_38,SHADOW_38" hwmapaddr="1179" csize="4" offset="576" caddress="576" address="0x240" endaddress="0x243" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="576" address="0x240" endaddress="0x243" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3820.027097250007462104" offset="0" name="post_gain_offset_sat" uid="2018-10-16T16:37:45.791+05:30d14e2832" keypath="test.SHADOW_38.post_gain_offset_sat,SHADOW_38.post_gain_offset_sat,post_gain_offset_sat">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3830.08030393482821152" offset="16:1" name="post_gain_offset" uid="2018-10-16T16:37:45.791+05:30d14e2839" keypath="test.SHADOW_38.post_gain_offset,SHADOW_38.post_gain_offset,post_gain_offset">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab3840.7525492599220521" offset="17" name="post_gain_sat" uid="2018-10-16T16:37:45.791+05:30d14e2846" keypath="test.SHADOW_38.post_gain_sat,SHADOW_38.post_gain_sat,post_gain_sat">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3850.961631503550038" offset="25:18" name="post_gain_sat_val" uid="2018-10-16T16:37:45.791+05:30d14e2853" keypath="test.SHADOW_38.post_gain_sat_val,SHADOW_38.post_gain_sat_val,post_gain_sat_val">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000000</default>
+      </field>
+      <field id="tab3860.4495458569125166" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2860" keypath="test.SHADOW_38.ECC,SHADOW_38.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.84" child_no="86" id="tab1670.3200335118363521" name="SHADOW_39" uid="2018-10-16T16:37:45.791+05:30d14e2867" keypath="test.SHADOW_39,SHADOW_39" hwmapaddr="1180" csize="4" offset="580" caddress="580" address="0x244" endaddress="0x247" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="580" address="0x244" endaddress="0x247" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3870.6463676431912493" offset="0" name="mag_thresh_min_en" uid="2018-10-16T16:37:45.791+05:30d14e2869" keypath="test.SHADOW_39.mag_thresh_min_en,SHADOW_39.mag_thresh_min_en,mag_thresh_min_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3880.16895652850998766" offset="12:1" name="mag_thresh_min" uid="2018-10-16T16:37:45.791+05:30d14e2876" keypath="test.SHADOW_39.mag_thresh_min,SHADOW_39.mag_thresh_min,mag_thresh_min">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3890.24726171579357237" offset="13" name="mag_thresh_max_en" uid="2018-10-16T16:37:45.791+05:30d14e2883" keypath="test.SHADOW_39.mag_thresh_max_en,SHADOW_39.mag_thresh_max_en,mag_thresh_max_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab3900.0019893650071787228" offset="25:14" name="mag_thresh_max" uid="2018-10-16T16:37:45.791+05:30d14e2890" keypath="test.SHADOW_39.mag_thresh_max,SHADOW_39.mag_thresh_max,mag_thresh_max">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000</default>
+      </field>
+      <field id="tab3910.15954490790028508" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2897" keypath="test.SHADOW_39.ECC,SHADOW_39.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.85" child_no="87" id="tab1690.45518583104623" name="SHADOW_40" uid="2018-10-16T16:37:45.791+05:30d14e2904" keypath="test.SHADOW_40,SHADOW_40" hwmapaddr="1181" csize="4" offset="584" caddress="584" address="0x248" endaddress="0x24B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="584" address="0x248" endaddress="0x24B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3920.14902550177398266" offset="15:0" name="lower_clamp" uid="2018-10-16T16:37:45.791+05:30d14e2906" keypath="test.SHADOW_40.lower_clamp,SHADOW_40.lower_clamp,lower_clamp">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab3930.8115124491615905" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2913" keypath="test.SHADOW_40.ECC,SHADOW_40.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.86" child_no="88" id="tab1710.6190004624161669" name="SHADOW_41" uid="2018-10-16T16:37:45.791+05:30d14e2920" keypath="test.SHADOW_41,SHADOW_41" hwmapaddr="1182" csize="4" offset="588" caddress="588" address="0x24C" endaddress="0x24F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="588" address="0x24C" endaddress="0x24F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3940.016842926583498175" offset="15:0" name="upper_clamp" uid="2018-10-16T16:37:45.791+05:30d14e2922" keypath="test.SHADOW_41.upper_clamp,SHADOW_41.upper_clamp,upper_clamp">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000000000000000</default>
+      </field>
+      <field id="tab3950.34089024452046357" offset="23:20" name="bw_sel" uid="2018-10-16T16:37:45.791+05:30d14e2929" keypath="test.SHADOW_41.bw_sel,SHADOW_41.bw_sel,bw_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab3960.5678940202772831" offset="25:24" name="bw_sel_filter" uid="2018-10-16T16:37:45.791+05:30d14e2936" keypath="test.SHADOW_41.bw_sel_filter,SHADOW_41.bw_sel_filter,bw_sel_filter">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab3970.8505823911620817" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e2943" keypath="test.SHADOW_41.ECC,SHADOW_41.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.87" child_no="89" id="tab1730.2772945903527153" name="SHADOW_42" uid="2018-10-16T16:37:45.791+05:30d14e2950" keypath="test.SHADOW_42,SHADOW_42" hwmapaddr="1183" csize="4" offset="592" caddress="592" address="0x250" endaddress="0x253" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="592" address="0x250" endaddress="0x253" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab3980.9679966018582984" offset="1:0" name="digital_output_mode" uid="2018-10-16T16:37:45.791+05:30d14e2952" keypath="test.SHADOW_42.digital_output_mode,SHADOW_42.digital_output_mode,digital_output_mode">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab3990.8759993573230683" offset="2" name="device_id" uid="2018-10-16T16:37:45.791+05:30d14e2959" keypath="test.SHADOW_42.device_id,SHADOW_42.device_id,device_id">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4000.8600984804629275" offset="7:3" name="sent_data_cfg" uid="2018-10-16T16:37:45.791+05:30d14e2966" keypath="test.SHADOW_42.sent_data_cfg,SHADOW_42.sent_data_cfg,sent_data_cfg">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab4010.0030815793686026494" offset="12:8" name="sent_ticks_clk_num_pwm_period" uid="2018-10-16T16:37:45.791+05:30d14e2973" keypath="test.SHADOW_42.sent_ticks_clk_num_pwm_period,SHADOW_42.sent_ticks_clk_num_pwm_period,sent_ticks_clk_num_pwm_period">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00000</default>
+      </field>
+      <field id="tab4020.14178337455405077" offset="15:13" name="sent_drive" uid="2018-10-16T16:37:45.791+05:30d14e2980" keypath="test.SHADOW_42.sent_drive,SHADOW_42.sent_drive,sent_drive">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab4030.27182906599160417" offset="16" name="sent_ftc_e_n" uid="2018-10-16T16:37:45.791+05:30d14e2987" keypath="test.SHADOW_42.sent_ftc_e_n,SHADOW_42.sent_ftc_e_n,sent_ftc_e_n">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4040.7777173522020827" offset="17" name="sent_no_msg" uid="2018-10-16T16:37:45.791+05:30d14e2994" keypath="test.SHADOW_42.sent_no_msg,SHADOW_42.sent_no_msg,sent_no_msg">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4050.016303740055372495" offset="18" name="scn_crc_en" uid="2018-10-16T16:37:45.791+05:30d14e3001" keypath="test.SHADOW_42.scn_crc_en,SHADOW_42.scn_crc_en,scn_crc_en">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4060.23703776604289906" offset="19" name="sent_data_analog_map" uid="2018-10-16T16:37:45.791+05:30d14e3008" keypath="test.SHADOW_42.sent_data_analog_map,SHADOW_42.sent_data_analog_map,sent_data_analog_map">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4070.39041726229601603" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e3015" keypath="test.SHADOW_42.ECC,SHADOW_42.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.88" child_no="90" id="tab1750.08688466279751839" name="SHADOW_43" uid="2018-10-16T16:37:45.791+05:30d14e3023" keypath="test.SHADOW_43,SHADOW_43" hwmapaddr="1184" csize="4" offset="596" caddress="596" address="0x254" endaddress="0x257" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="596" address="0x254" endaddress="0x257" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab4080.04711368258282311" offset="20:0" name="sent_emsg_enable" uid="2018-10-16T16:37:45.791+05:30d14e3025" keypath="test.SHADOW_43.sent_emsg_enable,SHADOW_43.sent_emsg_enable,sent_emsg_enable">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000000000000000000</default>
+      </field>
+      <field id="tab4090.5218044834626268" offset="21" name="sent_emsg_1_repeat" uid="2018-10-16T16:37:45.791+05:30d14e3032" keypath="test.SHADOW_43.sent_emsg_1_repeat,SHADOW_43.sent_emsg_1_repeat,sent_emsg_1_repeat">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4100.2949420589307281" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e3039" keypath="test.SHADOW_43.ECC,SHADOW_43.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.89" child_no="91" id="tab1770.8123109572060548" name="SHADOW_44" uid="2018-10-16T16:37:45.791+05:30d14e3046" keypath="test.SHADOW_44,SHADOW_44" hwmapaddr="1185" csize="4" offset="600" caddress="600" address="0x258" endaddress="0x25B" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="600" address="0x258" endaddress="0x25B" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab4110.04230799863714296" offset="0" name="master_diag_dis" uid="2018-10-16T16:37:45.791+05:30d14e3048" keypath="test.SHADOW_44.master_diag_dis,SHADOW_44.master_diag_dis,master_diag_dis">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4120.4575361329014531" offset="1" name="vcf_mask" uid="2018-10-16T16:37:45.791+05:30d14e3055" keypath="test.SHADOW_44.vcf_mask,SHADOW_44.vcf_mask,vcf_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4130.18835656127728395" offset="2" name="aoc_mask" uid="2018-10-16T16:37:45.791+05:30d14e3062" keypath="test.SHADOW_44.aoc_mask,SHADOW_44.aoc_mask,aoc_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4140.09776240416131932" offset="3" name="tse_mask" uid="2018-10-16T16:37:45.791+05:30d14e3069" keypath="test.SHADOW_44.tse_mask,SHADOW_44.tse_mask,tse_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4150.5544505150133772" offset="4" name="sat_mask" uid="2018-10-16T16:37:45.791+05:30d14e3076" keypath="test.SHADOW_44.sat_mask,SHADOW_44.sat_mask,sat_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4160.9438952290803184" offset="5" name="ofe_mask" uid="2018-10-16T16:37:45.791+05:30d14e3083" keypath="test.SHADOW_44.ofe_mask,SHADOW_44.ofe_mask,ofe_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4170.49574291011351934" offset="6" name="slf_mask" uid="2018-10-16T16:37:45.791+05:30d14e3090" keypath="test.SHADOW_44.slf_mask,SHADOW_44.slf_mask,slf_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4180.5116523724688155" offset="7" name="srr_mask" uid="2018-10-16T16:37:45.791+05:30d14e3097" keypath="test.SHADOW_44.srr_mask,SHADOW_44.srr_mask,srr_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4190.08445094591906066" offset="8" name="por_mask" uid="2018-10-16T16:37:45.791+05:30d14e3104" keypath="test.SHADOW_44.por_mask,SHADOW_44.por_mask,por_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4200.25086875041443435" offset="9" name="ese_mask" uid="2018-10-16T16:37:45.791+05:30d14e3111" keypath="test.SHADOW_44.ese_mask,SHADOW_44.ese_mask,ese_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4210.28993883185487035" offset="10" name="spe_mask" uid="2018-10-16T16:37:45.791+05:30d14e3119" keypath="test.SHADOW_44.spe_mask,SHADOW_44.spe_mask,spe_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4220.9575481056941986" offset="11" name="uvcc_mask" uid="2018-10-16T16:37:45.791+05:30d14e3126" keypath="test.SHADOW_44.uvcc_mask,SHADOW_44.uvcc_mask,uvcc_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4230.8307234018922892" offset="12" name="ovcc_mask" uid="2018-10-16T16:37:45.791+05:30d14e3133" keypath="test.SHADOW_44.ovcc_mask,SHADOW_44.ovcc_mask,ovcc_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4240.7934215757138514" offset="15:13" name="fault_filt" uid="2018-10-16T16:37:45.791+05:30d14e3140" keypath="test.SHADOW_44.fault_filt,SHADOW_44.fault_filt,fault_filt">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab4250.9988227281198573" offset="16" name="sl_sat_mask" uid="2018-10-16T16:37:45.791+05:30d14e3147" keypath="test.SHADOW_44.sl_sat_mask,SHADOW_44.sl_sat_mask,sl_sat_mask">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4260.6267367323827322" offset="17" name="ov_flag_off" uid="2018-10-16T16:37:45.791+05:30d14e3154" keypath="test.SHADOW_44.ov_flag_off,SHADOW_44.ov_flag_off,ov_flag_off">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4270.048295910798614394" offset="18" name="ov_flag_pre" uid="2018-10-16T16:37:45.791+05:30d14e3161" keypath="test.SHADOW_44.ov_flag_pre,SHADOW_44.ov_flag_pre,ov_flag_pre">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4280.6848726016977806" offset="19" name="ov_flag_gain" uid="2018-10-16T16:37:45.791+05:30d14e3168" keypath="test.SHADOW_44.ov_flag_gain,SHADOW_44.ov_flag_gain,ov_flag_gain">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4290.0682320833506016" offset="25" name="make_factory_writable_c" uid="2018-10-16T16:37:45.791+05:30d14e3175" keypath="test.SHADOW_44.make_factory_writable_c,SHADOW_44.make_factory_writable_c,make_factory_writable_c">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4300.7202528641618663" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e3182" keypath="test.SHADOW_44.ECC,SHADOW_44.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <reg heading="1.90" child_no="92" id="tab1790.5568237169006981" name="SHADOW_45" uid="2018-10-16T16:37:45.791+05:30d14e3189" keypath="test.SHADOW_45,SHADOW_45" hwmapaddr="1186" csize="4" offset="604" caddress="604" address="0x25C" endaddress="0x25F" size="4" default="0x00000000" sw="rw" hw="rw">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="604" address="0x25C" endaddress="0x25F" size="4"/>
+         </busdomains>
+      </config>
+      <field id="tab4310.8830877171666871" offset="0" name="sdata_i_lo_thr" uid="2018-10-16T16:37:45.791+05:30d14e3191" keypath="test.SHADOW_45.sdata_i_lo_thr,SHADOW_45.sdata_i_lo_thr,sdata_i_lo_thr">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4320.23435382452339726" offset="1" name="sdata_i_hi_thr" uid="2018-10-16T16:37:45.791+05:30d14e3198" keypath="test.SHADOW_45.sdata_i_hi_thr,SHADOW_45.sdata_i_hi_thr,sdata_i_hi_thr">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4330.1600359009561919" offset="2" name="analog_lock" uid="2018-10-16T16:37:45.791+05:30d14e3205" keypath="test.SHADOW_45.analog_lock,SHADOW_45.analog_lock,analog_lock">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4340.313658616078501" offset="4:3" name="ana_out_err_resp_conf" uid="2018-10-16T16:37:45.791+05:30d14e3212" keypath="test.SHADOW_45.ana_out_err_resp_conf,SHADOW_45.ana_out_err_resp_conf,ana_out_err_resp_conf">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab4350.8473234792514389" offset="5" name="be_bw_sel" uid="2018-10-16T16:37:45.791+05:30d14e3219" keypath="test.SHADOW_45.be_bw_sel,SHADOW_45.be_bw_sel,be_bw_sel">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4360.9704220501077441" offset="11:9" name="be_diag_highz_min" uid="2018-10-16T16:37:45.791+05:30d14e3226" keypath="test.SHADOW_45.be_diag_highz_min,SHADOW_45.be_diag_highz_min,be_diag_highz_min">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab4370.6793484566271937" offset="14:12" name="be_scale" uid="2018-10-16T16:37:45.791+05:30d14e3233" keypath="test.SHADOW_45.be_scale,SHADOW_45.be_scale,be_scale">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000</default>
+      </field>
+      <field id="tab4380.4993197859989855" offset="15" name="dig_opendr_e" uid="2018-10-16T16:37:45.791+05:30d14e3240" keypath="test.SHADOW_45.dig_opendr_e,SHADOW_45.dig_opendr_e,dig_opendr_e">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4390.9184440145637465" offset="16" name="vcc_uv_thresh" uid="2018-10-16T16:37:45.791+05:30d14e3247" keypath="test.SHADOW_45.vcc_uv_thresh,SHADOW_45.vcc_uv_thresh,vcc_uv_thresh">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4400.37710840112312116" offset="17" name="vcc_ov_tresh" uid="2018-10-16T16:37:45.791+05:30d14e3254" keypath="test.SHADOW_45.vcc_ov_tresh,SHADOW_45.vcc_ov_tresh,vcc_ov_tresh">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4410.38671200983692133" offset="18" name="block_volatile_output" uid="2018-10-16T16:37:45.791+05:30d14e3262" keypath="test.SHADOW_45.block_volatile_output,SHADOW_45.block_volatile_output,block_volatile_output">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4420.20396037649297938" offset="20:19" name="manch_trigger_dis" uid="2018-10-16T16:37:45.791+05:30d14e3269" keypath="test.SHADOW_45.manch_trigger_dis,SHADOW_45.manch_trigger_dis,manch_trigger_dis">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">00</default>
+      </field>
+      <field id="tab4430.2214523518623086" offset="24:21" name="mem_lock" uid="2018-10-16T16:37:45.791+05:30d14e3276" keypath="test.SHADOW_45.mem_lock,SHADOW_45.mem_lock,mem_lock">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0000</default>
+      </field>
+      <field id="tab4440.4223580167456251" offset="25" name="unlock_code" uid="2018-10-16T16:37:45.791+05:30d14e3283" keypath="test.SHADOW_45.unlock_code,SHADOW_45.unlock_code,unlock_code">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">0</default>
+      </field>
+      <field id="tab4450.3828856062632603" offset="31:26" name="ECC" uid="2018-10-16T16:37:45.791+05:30d14e3290" keypath="test.SHADOW_45.ECC,SHADOW_45.ECC,ECC">
+         <sw>rw</sw>
+         <hw>rw</hw>
+         <default unresolvedDef="0">000000</default>
+      </field>
+   </reg>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.029781396901129686" orig_path="test.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\debug\test.idsng" level="1" uid="2018-10-16T16:37:46.774+05:30d24e3488">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <firmware>true <multioutput>false</multioutput>
+               </firmware>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.029781396901129686" orig_path="test.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\debug\test.idsng" ip="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\debug\.ids\test.idsng.xrsl" level="1" uid="2018-10-16T16:37:46.774+05:30d24e3685">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps/>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <firmware>true <multioutput>false</multioutput>
+               </firmware>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</block>

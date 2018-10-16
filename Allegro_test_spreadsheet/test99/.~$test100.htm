@@ -1,0 +1,647 @@
+<!doctype html>
+<html>
+ <head> 
+  <title>
+		Agnisys Register Spec
+	</title>        
+  <link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng\ids_template.css">
+  <script id="jqueryLib" src="..\.idsng\jquery-3.2.1.min.js"></script>
+  <script id="ids_prop" src="..\.idsng\prop.js"></script>
+  <script id="ids_js" src="..\.idsng\ids_template.js"></script>
+  <script id="ids_js" src="..\.idsng\ids_template.json"></script>
+  <script id="jquery12" src="..\.idsng\jquery-1.12.4.js"></script>
+  <script id="jqueryui" src="..\.idsng\jquery-ui.js"></script>
+ </head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+  <div class="maindiv"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="regmenu" class="idsmenu"> 
+     <a onclick="insertcommonreg();">Insert Row Below</a> 
+     <a onclick="copyfieldrow()">Copy Row</a> 
+     <a onclick="cutfieldrow()">Cut Row</a> 
+     <a onclick="pastefieldrow();">Paste</a> 
+     <a onclick="deletefieldrow();">Delete Row</a> 
+     <a id="menudelete" onclick="reloadPage();">Refresh</a> 
+    </div> 
+    <div id="mlHintContainer" style="display:none"> 
+     <a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
+     <h4>Machine Learning hints :</h4> 
+     <p id="mlHintPara"></p> 
+    </div> 
+    <div class="spectoolbar"> 
+     <button onclick="click_btnprop()" id="btnprop" title="hide/ show property and description rows">Compact View On</button> 
+    </div> 
+    <h3 style="color: grey">IDS Register Specification</h3> 
+    <br> 
+    <div class="tocClass" readonly="true"></div> 
+    <br> 
+    <br> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab0.06579822503250421"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="block name" class="name">test100</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab0.12980270545787653"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg_name</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab0.7373636657731806" oncontextmenu="openregmenu(event);"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
+           <td title="bits" class="bits"></td> 
+           <td title="field name" class="fieldname"><br></td> 
+           <td title="software access" class="sw"><br></td> 
+           <td title="hardware access" class="hw"></td> 
+           <td title="default" class="default"><br></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+   </div> 
+   <div id="param_main" style="display:none;"> 
+    <table id="scroller"> 
+     <tbody> 
+      <tr> 
+       <td id="scr_up"><img draggable="false" id="scr_up" style="transform: rotate(180deg)" title="scroll up" alt="scroll up" src="data:image/png;base64,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"></td> 
+      </tr> 
+      <tr> 
+       <td id="scr_down"><img draggable="false" id="scr_down" title="scroll down" alt="scroll down" src="data:image/png;base64,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"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <div id="divyml"> 
+     <label id="lblymlname"></label> 
+     <a href="#" onclick="openfile(this);" id="lblyml"></a> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false"></div> 
+   </div> 
+   <div id="seqdivcontainer" style="display:none;"> 
+    <div id="seqmenu" class="idsmenu"> 
+     <a onclick="insertseqrow();">Insert Row Below</a> 
+     <a onclick="copyfieldrow()">Copy Row</a> 
+     <a onclick="cutfieldrow()">Cut Row</a> 
+     <a onclick="pastefieldrow();">Paste</a> 
+     <a onclick="deletefieldrow();">Delete Row</a> 
+     <a id="menudelete" onclick="reloadPage();">Refresh</a> 
+    </div> 
+    <h2 style="color: grey">Sequences</h2> 
+    <br> 
+    <table class="seq idsTemp" id="0.11353937236015099" oncontextmenu="openseqmenu(event);"> 
+     <tbody> 
+      <tr> 
+       <td> 
+        <table id="0.07024375082583845" class="seqip idsTemp"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>sequence name</td> 
+           <td>ip</td> 
+           <td>description</td> 
+          </tr> 
+          <tr class="edited" id="seq0.244688227945142"> 
+           <td class="seqname">seq_name</td> 
+           <td title="to refresh external ref, please Click on the cell and press Tab" class="ip" onfocusout="load_ips(this);">test100.idsng</td> 
+           <td class="seqdesc"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.6279757432610398" class="idsTemp arg"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>arguments</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9900289809616567"> 
+           <td class="argname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.7176483347367888" class="idsTemp const"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>constants</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.06330886960525928"> 
+           <td class="constname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.08291431152369078" class="idsTemp var"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>variables</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.6031977203094462"> 
+           <td class="varname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.5960168626055483" class="command idsTemp"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td class="seqcmd">command</td> 
+           <td>step</td> 
+           <td class="seqcmdval">value</td> 
+           <td class="seqcmddesc">description</td> 
+           <td class="seqcmdrefpath">refpath</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.8373831647078699"> 
+           <td class="cmdname"></td> 
+           <td class="step"></td> 
+           <td class="seqvalue"></td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+   </div> 
+   <div id="idsexcelcontainer" style="display:none" class="disable"> 
+    <div id="divtoolbar"> 
+     <button onclick="showTemplate()">Open IDS Template</button> 
+    </div> 
+    <h3 style="color: grey">IDS Register Specification</h3> 
+    <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);"> 
+     <table class="exeltable ui-selectable" contenteditable="false" id="selectable"> 
+      <tbody class="ui-selectee ui-selected"> 
+       <tr class="rowheader ui-selectee"> 
+        <td class="ui-selectee"></td> 
+        <td class="ui-selectee">A</td> 
+        <td class="ui-selectee">B</td> 
+        <td class="ui-selectee">D</td> 
+        <td class="ui-selectee">E</td> 
+        <td class="ui-selectee">F</td> 
+        <td class="ui-selectee">G</td> 
+        <td class="ui-selectee">H</td> 
+        <td class="ui-selectee">I</td> 
+        <td class="ui-selectee">J</td> 
+        <td class="ui-selectee">K</td> 
+       </tr> 
+       <tr id="sep_row1" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">1</td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
+       </tr> 
+       <tr id="sep_row2" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">2</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row3" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">3</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row4" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">4</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row5" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">5</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row6" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">6</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row7" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">7</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row8" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">8</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row9" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">9</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row10" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">10</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row11" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">11</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row12" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">12</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row13" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">13</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="sep_row14" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">14</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <div id="backhidder" style="z-index: -1;"></div> 
+    <div id="exceltemplate" style="display: none;"> 
+     <a onclick="hidetemplate()" title="close template window" id="ahidetemp">X</a> 
+     <table contenteditable="false"> 
+      <tbody> 
+       <tr style="background-color: #b9c4cc"> 
+        <th></th> 
+        <th>User Header</th> 
+        <th>IDS Identifier</th> 
+       </tr> 
+       <tr> 
+        <td> 
+         <!--<a onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a>--></td> 
+        <td class="editable">chip</td> 
+        <td>$chip_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">block</td> 
+        <td>$block_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">register</td> 
+        <td>$reg_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">field</td> 
+        <td>$field_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">sw access</td> 
+        <td>$field_sw_access</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">hw access</td> 
+        <td>$field_hw_access</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">field default</td> 
+        <td>$field_default</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bits</td> 
+        <td>$field_offset</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">description</td> 
+        <td>$desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">section</td> 
+        <td>$section_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">offset</td> 
+        <td>$offset</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">size</td> 
+        <td>$size</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">width</td> 
+        <td>$reg_width</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">ref</td> 
+        <td>$ref</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">refpath</td> 
+        <td>$refpath</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define name</td> 
+        <td>$define_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define value</td> 
+        <td>$define_value</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define description</td> 
+        <td>$define_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">private</td> 
+        <td>$private</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum name</td> 
+        <td>$enum_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum value</td> 
+        <td>$enum_value</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">mnemonic name</td> 
+        <td>$mnemonic_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum desc</td> 
+        <td>$enum_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">signal name</td> 
+        <td>$signal_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">port type</td> 
+        <td>$port_type</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">signal desc</td> 
+        <td>$signal_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus domain name</td> 
+        <td>$bus_domain_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">address unit</td> 
+        <td>$address_unit</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus description</td> 
+        <td>$bus_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus</td> 
+        <td>$bus</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+    <div id="excelmenu" class="idsmenu" style="display: none; left: 251px; top: 167px;"> 
+     <a onclick="insertrowbelow(this);">Insert Row Below</a> 
+     <a onclick="insertcolright(this);">Insert Column Right</a> 
+     <a id="menucopy" class="context-menu">Copy </a> 
+     <div class="submenu" id="submenucopy" style="display: none;"> 
+      <a title="for multiple rows copy, select row from checkbox" tabindex="-1" onclick="copyrow(this);">Copy Row/s</a> 
+      <a onclick="copycolumn(this);">Copy Column</a> 
+     </div> 
+     <a onclick="pasterow(this);">Paste</a> 
+     <a class="context-menu" id="menudelete" onclick="deleterow(this);">Delete</a> 
+     <div class="submenu" id="submenudelete" style="display: none;"> 
+      <a title="for multiple rows deletion, select row from checkbox" onclick="deleterow(this);">Delete Row/s</a> 
+      <a onclick="deletecolumn(this);">Delete Column</a> 
+     </div> 
+     <a class="context-menu" id="menudelete" onclick="refreshPage();">Refresh</a> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" name="dummychip" msg="Register IP does not exist in sequenceseq_name, Please specify the register IP;" uid="2018-10-05T18:44:02.916+05:30d14e1" keypath="dummychip" offset="0" caddress="0" hwmapaddr="209" csize="4096" address="0x0000" endaddress="0xFFF" size="4096">
+   <config>
+      <regwidth>8</regwidth>
+      <buswidth>8</buswidth>
+      <addressunit>8</addressunit>
+      <chipsize>4096</chipsize>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0000" endaddress="0xFFF" size="4096"/>
+      </busdomains>
+   </config>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq0.28126634618448443" orig_path="test123.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test123\test123.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps>
+            <row sid="14:0">
+               <command>write</command>
+               <step>a1.yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e23">8</value>
+               <doc>{eid=seq0.5218726282875868}</doc>
+            </row>
+            <row sid="15:0">
+               <command>write</command>
+               <step>reg_name2223.yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e32">0xF</value>
+               <doc>{eid=seq0.18033884458877458}</doc>
+            </row>
+            <row sid="16:0">
+               <command>write</command>
+               <step>reg_name2.yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e41">-1</value>
+               <doc>{eid=seq0.21841550143823185}</doc>
+            </row>
+            <row sid="17:0">
+               <command>write</command>
+               <step>reg_name1[0].yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e50">0</value>
+               <doc>{eid=seq0.08097588357740393}</doc>
+            </row>
+            <row>
+               <command>if ( reg_name2223.yyy &gt; 1) {</command>
+            </row>
+            <row sid="19:0">
+               <command>write</command>
+               <step>reg_name1</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e62">9</value>
+               <doc>{eid=seq0.6203364714008218}</doc>
+            </row>
+            <row>
+               <command>}</command>
+            </row>
+         </seqsteps>
+      </sequence>
+      <sequence name="seq_name1" sid="21:0" eid="seq0.28126634618448443" orig_path="test123.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test123\test123.idsng">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps>
+            <row sid="34:0">
+               <command>write</command>
+               <step>a1.yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e80">8</value>
+               <doc>{eid=seq0.5218726282875868}</doc>
+            </row>
+            <row sid="35:0">
+               <command>write</command>
+               <step>reg_name2223.yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e89">0xF</value>
+               <doc>{eid=seq0.18033884458877458}</doc>
+            </row>
+            <row sid="36:0">
+               <command>write</command>
+               <step>reg_name2.yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e98">-1</value>
+               <doc>{eid=seq0.21841550143823185}</doc>
+            </row>
+            <row sid="37:0">
+               <command>write</command>
+               <step>reg_name1[0].yyy</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e107">0</value>
+               <doc>{eid=seq0.08097588357740393}</doc>
+            </row>
+            <row>
+               <command>if ( reg_name2223.yyy &gt; 1) {</command>
+            </row>
+            <row sid="39:0">
+               <command>write</command>
+               <step>reg_name1</step>
+               <value uid="2018-10-05T18:44:02.916+05:30d14e119">9</value>
+               <doc>{eid=seq0.6203364714008218}</doc>
+            </row>
+            <row>
+               <command>}</command>
+            </row>
+         </seqsteps>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <firmware>true <multioutput>false</multioutput>
+               </firmware>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</chip>

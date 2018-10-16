@@ -1,0 +1,355 @@
+<html>
+    <head>
+        <script src="..\.idsng\jquery-1.12.4.js"></script>
+        <style>
+            td.active{
+                border:1px solid blue;font-weight:bold;color:yellow;background-color:red}
+            td{padding:5px;text-align:center}
+        </style>
+        <script>
+            var active = 0;
+            $('#navigate td').each(function(idx){$(this).html(idx);});
+            rePosition();
+
+            $(document).keydown(function(e){
+                reCalculate(e);
+                rePosition();
+            });
+
+            $('td').click(function(){
+                active = $(this).closest('table').find('td').index(this);
+                rePosition();
+            });
+
+
+            function reCalculate(e){
+                var rows = $('#navigate tr').length;
+                var columns = $('#navigate tr:eq(0) td').length;
+                //alert(columns + 'x' + rows);
+
+                if (e.keyCode == 37) { //move left or wrap
+                    active = (active>0)?active-1:active;
+                    e.preventDefault();
+                }
+                if (e.keyCode == 38) { // move up
+                    active = (active-columns>=0)?active-columns:active;
+                    e.preventDefault();
+                }
+                if (e.keyCode == 39) { // move right or wrap
+                    active = (active<(columns*rows)-1)?active+1:active;
+                }
+                if (e.keyCode == 40) { // move down
+                    active = (active+columns<=(rows*columns)-1)?active+columns:active;
+                    e.preventDefault();
+                }
+                if(e.keyCode==13){
+                    try{
+                        placeCaretAtEnd(document.getElementsByClassName("active")[0]);
+                    }catch(e){
+                        alert("err "+e.message);
+                    }
+                    //alert("hello");
+                    e.preventDefault();
+                }
+            }
+
+            function placeCaretAtEnd(el) {
+                if (typeof window.getSelection != "undefined"&& typeof document.createRange != "undefined") {
+                    var range = document.createRange();
+                    var sel = window.getSelection();
+                    range.setStart(el, 1);
+                    range.collapse(true);
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                } else if (typeof document.body.createTextRange != "undefined") {
+                    console.log("else con");
+                    var textRange = document.body.createTextRange();
+                    textRange.moveToElementText(el);
+                    textRange.collapse(false);
+                    textRange.select();
+                }
+            }
+
+
+            function rePosition(){
+                $('.active').removeClass('active');
+
+                console.log("--active : "+active);
+                console.log("--selectable : "+$('#navigate tr td'));
+
+                $('#navigate tr td').eq(active).addClass('active');
+                scrollInView();
+            }
+
+            function scrollInView(){
+                var target = $('#navigate tr td:eq('+active+')');
+                if (target.length)
+                {
+                    var top = target.offset().top;
+
+                    $('html,body').stop().animate({scrollTop: top-100}, 400);
+                    return false;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <table border="1" id="navigate" contenteditable="true">
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                    <td>$nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
