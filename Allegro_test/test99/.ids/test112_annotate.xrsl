@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<block heading="1" child_no="1" id="tab0.020597026982369315" name="test112" uid="2018-10-16T16:03:54.924+05:30d14e1" keypath="test112" offset="0" caddress="0" hwmapaddr="183" max_reg_size="32" csize="8" diff_regwidth="true" address="0x0" endaddress="0x7" size="8">
+<block heading="1" child_no="1" id="tab0.020597026982369315" name="test112" uid="2018-10-16T17:12:59.415+05:30d14e1" keypath="test112" offset="0" caddress="0" hwmapaddr="1372" csize="8" address="0x0" endaddress="0x7" size="8">
    <config>
       <variants>
          <variant name="none" isselected="true">
@@ -7,58 +7,58 @@
   variant property.</doc>
          </variant>
       </variants>
-      <regwidth>16</regwidth>
-      <buswidth>32</buswidth>
+      <regwidth>8</regwidth>
+      <buswidth>8</buswidth>
       <addressunit>8</addressunit>
       <busdomains>
          <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x7" size="8"/>
       </busdomains>
    </config>
-   <reg heading="1.1" child_no="1" id="tab0.9354963701533227" name="regname" offset="0" uid="2018-10-16T16:03:54.924+05:30d14e13" keypath="test112.regname,regname" hwmapaddr="184" csize="4" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x04000100" sw="rw" hw="ro">
+   <reg heading="1.1" child_no="1" id="tab0.9354963701533227" name="regname" offset="0" uid="2018-10-16T17:12:59.415+05:30d14e13" keypath="test112.regname,regname" hwmapaddr="1373" csize="4" caddress="0" address="0x0" endaddress="0x3" size="4" default="0x04000100" sw="rw" hw="ro">
       <config>
          <regwidth>32</regwidth>
          <busdomains>
             <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x3" size="4"/>
          </busdomains>
       </config>
-      <field id="field_2" offset="8:8" name="f" uid="2018-10-16T16:03:54.924+05:30d14e17" keypath="test112.regname.f,regname.f,f">
+      <field id="field_2" offset="8:8" name="f" uid="2018-10-16T17:12:59.415+05:30d14e17" keypath="test112.regname.f,regname.f,f">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="1">1</default>
          <doc>this is OOOO</doc>
       </field>
-      <field id="field_1" offset="1:1" name="f2" uid="2018-10-16T16:03:54.924+05:30d14e26" keypath="test112.regname.f2,regname.f2,f2">
+      <field id="field_1" offset="1:1" name="f2" uid="2018-10-16T17:12:59.415+05:30d14e26" keypath="test112.regname.f2,regname.f2,f2">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="0">0</default>
          <doc>this is OOOO</doc>
       </field>
-      <field id="field_0" offset="31:26" name="f3" uid="2018-10-16T16:03:54.924+05:30d14e35" keypath="test112.regname.f3,regname.f3,f3">
+      <field id="field_0" offset="31:26" name="f3" uid="2018-10-16T17:12:59.415+05:30d14e35" keypath="test112.regname.f3,regname.f3,f3">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="1">000001</default>
       </field>
    </reg>
-   <reg heading="1.2" child_no="2" id="tab0.6362437696964764" name="regname2" offset="4" uid="2018-10-16T16:03:54.924+05:30d14e42" keypath="test112.regname2,regname2" hwmapaddr="185" csize="4" caddress="4" address="0x4" endaddress="0x7" size="4" default="0x00000005" sw="rw" hw="ro">
+   <reg heading="1.2" child_no="2" id="tab0.6362437696964764" name="regname2" offset="4" uid="2018-10-16T17:12:59.415+05:30d14e42" keypath="test112.regname2,regname2" hwmapaddr="1374" csize="4" caddress="4" address="0x4" endaddress="0x7" size="4" default="0x00000005" sw="rw" hw="ro">
       <config>
          <regwidth>32</regwidth>
          <busdomains>
             <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x4" endaddress="0x7" size="4"/>
          </busdomains>
       </config>
-      <field id="field_5" offset="0:0" name="f" uid="2018-10-16T16:03:54.924+05:30d14e46" keypath="test112.regname2.f,regname2.f,f" msg="Name f already used ; ">
+      <field id="field_5" offset="0:0" name="f" uid="2018-10-16T17:12:59.415+05:30d14e46" keypath="test112.regname2.f,regname2.f,f">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="1">1</default>
          <doc>this is OOOO</doc>
       </field>
-      <field id="field_4" offset="1:1" name="f" uid="2018-10-16T16:03:54.924+05:30d14e55" keypath="test112.regname2.f,regname2.f,f">
+      <field id="field_4" offset="1:1" name="f2" uid="2018-10-16T17:12:59.415+05:30d14e55" keypath="test112.regname2.f2,regname2.f2,f2">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="0">0</default>
          <doc>this is OOnre</doc>
       </field>
-      <field id="field_3" offset="7:2" name="f3" uid="2018-10-16T16:03:54.924+05:30d14e64" keypath="test112.regname2.f3,regname2.f3,f3">
+      <field id="field_3" offset="7:2" name="f3" uid="2018-10-16T17:12:59.415+05:30d14e64" keypath="test112.regname2.f3,regname2.f3,f3">
          <sw>rw</sw>
          <hw>ro</hw>
          <default unresolvedDef="1">000001</default>

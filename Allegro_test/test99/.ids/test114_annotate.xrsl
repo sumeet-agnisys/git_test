@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab_block0.4024380738698946" name="block_name" uid="2018-10-17T18:20:00.208+05:30d14e1" keypath="block_name" offset="0" caddress="0" hwmapaddr="101" csize="168" address="0x00" endaddress="0xA7" size="168">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00" endaddress="0xA7" size="168"/>
+      </busdomains>
+   </config>
+   <section heading="1.1" child_no="1" id="volatile" name="volatile" uid="2018-10-17T18:20:00.208+05:30d14e13" keypath="block_name.volatile,volatile" keypathdown="volatile.Reg0.Reg1,Reg0,Reg1" hwmapaddr="102" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x00" endaddress="0x7" size="8">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00" endaddress="0x7" size="8"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="regdrag1675515071" name="Reg0" uid="2018-10-17T18:20:00.208+05:30d14e15" keypath="block_name.volatile.Reg0,volatile.Reg0,Reg0" hwmapaddr="103" csize="4" offset="0" caddress="0" address="0x00" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-924741359" offset="0" name="mag_in_e" uid="2018-10-17T18:20:00.208+05:30d14e19" keypath="block_name.volatile.Reg0.mag_in_e,volatile.Reg0.mag_in_e,Reg0.mag_in_e,mag_in_e">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-2000559928" offset="18:1" name="mag_in" uid="2018-10-17T18:20:00.208+05:30d14e26" keypath="block_name.volatile.Reg0.mag_in,volatile.Reg0.mag_in,Reg0.mag_in,mag_in">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000000000</default>
+         </field>
+         <field id="dragtar419999000" offset="19" name="hptest_half_scale" uid="2018-10-17T18:20:00.208+05:30d14e33" keypath="block_name.volatile.Reg0.hptest_half_scale,volatile.Reg0.hptest_half_scale,Reg0.hptest_half_scale,hptest_half_scale">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar652109811" offset="20" name="hall_dis" uid="2018-10-17T18:20:00.208+05:30d14e40" keypath="block_name.volatile.Reg0.hall_dis,volatile.Reg0.hall_dis,Reg0.hall_dis,hall_dis">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-98144158" offset="21" name="afe_zero_cm" uid="2018-10-17T18:20:00.208+05:30d14e47" keypath="block_name.volatile.Reg0.afe_zero_cm,volatile.Reg0.afe_zero_cm,Reg0.afe_zero_cm,afe_zero_cm">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-304283811" offset="22" name="afe_zero" uid="2018-10-17T18:20:00.208+05:30d14e54" keypath="block_name.volatile.Reg0.afe_zero,volatile.Reg0.afe_zero,Reg0.afe_zero,afe_zero">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-138718779" offset="24:23" name="afe_hptest_chop" uid="2018-10-17T18:20:00.208+05:30d14e61" keypath="block_name.volatile.Reg0.afe_hptest_chop,volatile.Reg0.afe_hptest_chop,Reg0.afe_hptest_chop,afe_hptest_chop">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar315960863" offset="27:25" name="afe_hallph_ext" uid="2018-10-17T18:20:00.208+05:30d14e68" keypath="block_name.volatile.Reg0.afe_hallph_ext,volatile.Reg0.afe_hallph_ext,Reg0.afe_hallph_ext,afe_hallph_ext">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-1793166822" offset="29:28" name="water" uid="2018-10-17T18:20:00.208+05:30d14e75" keypath="block_name.volatile.Reg0.water,volatile.Reg0.water,Reg0.water,water">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-1450446507" offset="30" name="fire" uid="2018-10-17T18:20:00.208+05:30d14e82" keypath="block_name.volatile.Reg0.fire,volatile.Reg0.fire,Reg0.fire,fire">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+            <doc>water1 changed to fire</doc>
+         </field>
+         <field id="dragtar-1962302684" offset="31" name="water1111" uid="2018-10-17T18:20:00.208+05:30d14e92" keypath="block_name.volatile.Reg0.water1111,volatile.Reg0.water1111,Reg0.water1111,water1111">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+            <doc>new addition</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" id="regdrag-1222512155" name="Reg1" uid="2018-10-17T18:20:00.208+05:30d14e101" keypath="block_name.volatile.Reg1,volatile.Reg1,Reg1" hwmapaddr="104" csize="4" offset="4" caddress="4" address="0x04" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x04" endaddress="0x7" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar1214551833" offset="0" name="temp_in_e" uid="2018-10-17T18:20:00.208+05:30d14e105" keypath="block_name.volatile.Reg1.temp_in_e,volatile.Reg1.temp_in_e,Reg1.temp_in_e,temp_in_e">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-719020325" offset="12:1" name="temp_in" uid="2018-10-17T18:20:00.208+05:30d14e112" keypath="block_name.volatile.Reg1.temp_in,volatile.Reg1.temp_in,Reg1.temp_in,temp_in">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar1069866516" offset="13" name="spdiag_single" uid="2018-10-17T18:20:00.208+05:30d14e119" keypath="block_name.volatile.Reg1.spdiag_single,volatile.Reg1.spdiag_single,Reg1.spdiag_single,spdiag_single">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar106614988" offset="14" name="sdm_order2" uid="2018-10-17T18:20:00.208+05:30d14e126" keypath="block_name.volatile.Reg1.sdm_order2,volatile.Reg1.sdm_order2,Reg1.sdm_order2,sdm_order2">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-57243996" offset="17:15" name="refsigmon_sel" uid="2018-10-17T18:20:00.208+05:30d14e133" keypath="block_name.volatile.Reg1.refsigmon_sel,volatile.Reg1.refsigmon_sel,Reg1.refsigmon_sel,refsigmon_sel">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-1354154923" offset="18" name="refsigmon_eval_start" uid="2018-10-17T18:20:00.208+05:30d14e140" keypath="block_name.volatile.Reg1.refsigmon_eval_start,volatile.Reg1.refsigmon_eval_start,Reg1.refsigmon_eval_start,refsigmon_eval_start">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar456281622" offset="19" name="byp_tsen_trim" uid="2018-10-17T18:20:00.208+05:30d14e147" keypath="block_name.volatile.Reg1.byp_tsen_trim,volatile.Reg1.byp_tsen_trim,Reg1.byp_tsen_trim,byp_tsen_trim">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1238736476" offset="20" name="byp_trim_f" uid="2018-10-17T18:20:00.208+05:30d14e154" keypath="block_name.volatile.Reg1.byp_trim_f,volatile.Reg1.byp_trim_f,Reg1.byp_trim_f,byp_trim_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-629003821" offset="21" name="byp_trim_diag" uid="2018-10-17T18:20:00.208+05:30d14e161" keypath="block_name.volatile.Reg1.byp_trim_diag,volatile.Reg1.byp_trim_diag,Reg1.byp_trim_diag,byp_trim_diag">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1392019259" offset="22" name="byp_trim_c" uid="2018-10-17T18:20:00.208+05:30d14e168" keypath="block_name.volatile.Reg1.byp_trim_c,volatile.Reg1.byp_trim_c,Reg1.byp_trim_c,byp_trim_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1102438997" offset="23" name="byp_tc_f" uid="2018-10-17T18:20:00.208+05:30d14e176" keypath="block_name.volatile.Reg1.byp_tc_f,volatile.Reg1.byp_tc_f,Reg1.byp_tc_f,byp_tc_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-871191832" offset="24" name="byp_tc_diag" uid="2018-10-17T18:20:00.208+05:30d14e183" keypath="block_name.volatile.Reg1.byp_tc_diag,volatile.Reg1.byp_tc_diag,Reg1.byp_tc_diag,byp_tc_diag">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1730178140" offset="25" name="byp_tc_c" uid="2018-10-17T18:20:00.208+05:30d14e190" keypath="block_name.volatile.Reg1.byp_tc_c,volatile.Reg1.byp_tc_c,Reg1.byp_tc_c,byp_tc_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar446647270" offset="26" name="byp_plin" uid="2018-10-17T18:20:00.208+05:30d14e197" keypath="block_name.volatile.Reg1.byp_plin,volatile.Reg1.byp_plin,Reg1.byp_plin,byp_plin">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1739910140" offset="27" name="byp_lin" uid="2018-10-17T18:20:00.208+05:30d14e204" keypath="block_name.volatile.Reg1.byp_lin,volatile.Reg1.byp_lin,Reg1.byp_lin,byp_lin">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1373518549" offset="28" name="byp_diag_filt" uid="2018-10-17T18:20:00.208+05:30d14e211" keypath="block_name.volatile.Reg1.byp_diag_filt,volatile.Reg1.byp_diag_filt,Reg1.byp_diag_filt,byp_diag_filt">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-552740991" offset="29" name="byp_clamp" uid="2018-10-17T18:20:00.208+05:30d14e218" keypath="block_name.volatile.Reg1.byp_clamp,volatile.Reg1.byp_clamp,Reg1.byp_clamp,byp_clamp">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1699538136" offset="30" name="byp_bw_sel" uid="2018-10-17T18:20:00.208+05:30d14e225" keypath="block_name.volatile.Reg1.byp_bw_sel,volatile.Reg1.byp_bw_sel,Reg1.byp_bw_sel,byp_bw_sel">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1399220691" offset="31" name="byp_adc_iir" uid="2018-10-17T18:20:00.208+05:30d14e232" keypath="block_name.volatile.Reg1.byp_adc_iir,volatile.Reg1.byp_adc_iir,Reg1.byp_adc_iir,byp_adc_iir">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+      </reg>
+   </section>
+   <section heading="1.2" child_no="2" id="shadow" name="shadow" uid="2018-10-17T18:20:00.208+05:30d14e239" keypath="block_name.shadow,shadow" keypathdown="shadow.Reg2.Reg3.Reg4.Reg5.Reg6.Reg7.Reg8.Reg9.Reg10.Reg11.Reg12.Reg13.Reg14.Reg15.Reg16.Reg17.Reg18.Reg19.Reg20.Reg21,Reg2,Reg3,Reg4,Reg5,Reg6,Reg7,Reg8,Reg9,Reg10,Reg11,Reg12,Reg13,Reg14,Reg15,Reg16,Reg17,Reg18,Reg19,Reg20,Reg21" hwmapaddr="105" max_reg_size="32" csize="80" offset="8" caddress="8" address="0x08" endaddress="0x57" size="80">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x08" endaddress="0x57" size="80"/>
+         </busdomains>
+      </config>
+      <reg heading="1.2.1" child_no="1" id="regdrag-778025805" name="Reg2" uid="2018-10-17T18:20:00.208+05:30d14e241" keypath="block_name.shadow.Reg2,shadow.Reg2,Reg2" hwmapaddr="106" csize="4" offset="0" caddress="0" address="0x08" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x08" endaddress="0xB" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1132683884" offset="7:0" name="lint_bin_hyst" uid="2018-10-17T18:20:00.208+05:30d14e245" keypath="block_name.shadow.Reg2.lint_bin_hyst,shadow.Reg2.lint_bin_hyst,Reg2.lint_bin_hyst,lint_bin_hyst">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000</default>
+         </field>
+         <field id="dragtar-982348300" offset="8" name="lint_bin_e" uid="2018-10-17T18:20:00.208+05:30d14e252" keypath="block_name.shadow.Reg2.lint_bin_e,shadow.Reg2.lint_bin_e,Reg2.lint_bin_e,lint_bin_e">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1257472454" offset="9" name="lin_scalar" uid="2018-10-17T18:20:00.208+05:30d14e259" keypath="block_name.shadow.Reg2.lin_scalar,shadow.Reg2.lin_scalar,Reg2.lin_scalar,lin_scalar">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar183339271" offset="13:10" name="hptest_lvl" uid="2018-10-17T18:20:00.208+05:30d14e266" keypath="block_name.shadow.Reg2.hptest_lvl,shadow.Reg2.hptest_lvl,Reg2.hptest_lvl,hptest_lvl">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000</default>
+         </field>
+         <field id="dragtar1274289018" offset="18:14" name="hall_isel" uid="2018-10-17T18:20:00.208+05:30d14e273" keypath="block_name.shadow.Reg2.hall_isel,shadow.Reg2.hall_isel,Reg2.hall_isel,hall_isel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000</default>
+         </field>
+         <field id="dragtar-1154658772" offset="21:19" name="bw_sel" uid="2018-10-17T18:20:00.208+05:30d14e280" keypath="block_name.shadow.Reg2.bw_sel,shadow.Reg2.bw_sel,Reg2.bw_sel,bw_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar395577887" offset="22" name="bg_adc_ref_err_max" uid="2018-10-17T18:20:00.208+05:30d14e287" keypath="block_name.shadow.Reg2.bg_adc_ref_err_max,shadow.Reg2.bg_adc_ref_err_max,Reg2.bg_adc_ref_err_max,bg_adc_ref_err_max">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1237009611" offset="23" name="asil_ftt" uid="2018-10-17T18:20:00.208+05:30d14e294" keypath="block_name.shadow.Reg2.asil_ftt,shadow.Reg2.asil_ftt,Reg2.asil_ftt,asil_ftt">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1924477299" offset="24" name="afe_zero_config" uid="2018-10-17T18:20:00.208+05:30d14e301" keypath="block_name.shadow.Reg2.afe_zero_config,shadow.Reg2.afe_zero_config,Reg2.afe_zero_config,afe_zero_config">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1296516087" offset="26:25" name="afe_hpdrv_chop" uid="2018-10-17T18:20:00.208+05:30d14e308" keypath="block_name.shadow.Reg2.afe_hpdrv_chop,shadow.Reg2.afe_hpdrv_chop,Reg2.afe_hpdrv_chop,afe_hpdrv_chop">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-978865632" offset="28:27" name="afe_gain" uid="2018-10-17T18:20:00.208+05:30d14e316" keypath="block_name.shadow.Reg2.afe_gain,shadow.Reg2.afe_gain,Reg2.afe_gain,afe_gain">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-1161875889" offset="30:29" name="afe_adcchp" uid="2018-10-17T18:20:00.208+05:30d14e323" keypath="block_name.shadow.Reg2.afe_adcchp,shadow.Reg2.afe_adcchp,Reg2.afe_adcchp,afe_adcchp">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar240011799" offset="31" name="adc_zero" uid="2018-10-17T18:20:00.208+05:30d14e330" keypath="block_name.shadow.Reg2.adc_zero,shadow.Reg2.adc_zero,Reg2.adc_zero,adc_zero">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.2.2" child_no="2" id="regdrag-832506371" name="Reg3" uid="2018-10-17T18:20:00.208+05:30d14e337" keypath="block_name.shadow.Reg3,shadow.Reg3,Reg3" hwmapaddr="107" csize="4" offset="4" caddress="4" address="0x0C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x0C" endaddress="0xF" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar413294575" offset="0" name="pol_f" uid="2018-10-17T18:20:00.208+05:30d14e341" keypath="block_name.shadow.Reg3.pol_f,shadow.Reg3.pol_f,Reg3.pol_f,pol_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1513385428" offset="1" name="pol_diag" uid="2018-10-17T18:20:00.208+05:30d14e348" keypath="block_name.shadow.Reg3.pol_diag,shadow.Reg3.pol_diag,Reg3.pol_diag,pol_diag">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar158998968" offset="2" name="pol_c" uid="2018-10-17T18:20:00.208+05:30d14e355" keypath="block_name.shadow.Reg3.pol_c,shadow.Reg3.pol_c,Reg3.pol_c,pol_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-276225212" offset="15:3" name="lint01" uid="2018-10-17T18:20:00.208+05:30d14e362" keypath="block_name.shadow.Reg3.lint01,shadow.Reg3.lint01,Reg3.lint01,lint01">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-681436439" offset="28:16" name="lint00" uid="2018-10-17T18:20:00.208+05:30d14e369" keypath="block_name.shadow.Reg3.lint00,shadow.Reg3.lint00,Reg3.lint00,lint00">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-1989837878" offset="29" name="lint_out_inv" uid="2018-10-17T18:20:00.208+05:30d14e376" keypath="block_name.shadow.Reg3.lint_out_inv,shadow.Reg3.lint_out_inv,Reg3.lint_out_inv,lint_out_inv">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-2001306690" offset="30" name="lint_in_inv" uid="2018-10-17T18:20:00.208+05:30d14e383" keypath="block_name.shadow.Reg3.lint_in_inv,shadow.Reg3.lint_in_inv,Reg3.lint_in_inv,lint_in_inv">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1690292373" offset="31" name="lint_e" uid="2018-10-17T18:20:00.208+05:30d14e390" keypath="block_name.shadow.Reg3.lint_e,shadow.Reg3.lint_e,Reg3.lint_e,lint_e">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+      </reg>
+      <reg heading="1.2.3" child_no="3" id="regdrag279933545" name="Reg4" uid="2018-10-17T18:20:00.208+05:30d14e397" keypath="block_name.shadow.Reg4,shadow.Reg4,Reg4" hwmapaddr="108" csize="4" offset="8" caddress="8" address="0x10" endaddress="0x13" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x10" endaddress="0x13" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-320705878" offset="1:0" name="d_reg_ldo_boost" uid="2018-10-17T18:20:00.208+05:30d14e401" keypath="block_name.shadow.Reg4.d_reg_ldo_boost,shadow.Reg4.d_reg_ldo_boost,Reg4.d_reg_ldo_boost,d_reg_ldo_boost">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-288640228" offset="4:2" name="bw_sel_min" uid="2018-10-17T18:20:00.208+05:30d14e408" keypath="block_name.shadow.Reg4.bw_sel_min,shadow.Reg4.bw_sel_min,Reg4.bw_sel_min,bw_sel_min">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-1054423178" offset="5" name="afe_hpsig_phase" uid="2018-10-17T18:20:00.208+05:30d14e415" keypath="block_name.shadow.Reg4.afe_hpsig_phase,shadow.Reg4.afe_hpsig_phase,Reg4.afe_hpsig_phase,afe_hpsig_phase">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-463436895" offset="18:6" name="lint03" uid="2018-10-17T18:20:00.208+05:30d14e422" keypath="block_name.shadow.Reg4.lint03,shadow.Reg4.lint03,Reg4.lint03,lint03">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar1764300612" offset="31:19" name="lint02" uid="2018-10-17T18:20:00.208+05:30d14e429" keypath="block_name.shadow.Reg4.lint02,shadow.Reg4.lint02,Reg4.lint02,lint02">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.4" child_no="4" id="regdrag-1454423879" name="Reg5" uid="2018-10-17T18:20:00.208+05:30d14e436" keypath="block_name.shadow.Reg5,shadow.Reg5,Reg5" hwmapaddr="109" csize="4" offset="12" caddress="12" address="0x14" endaddress="0x17" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x14" endaddress="0x17" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1581194724" offset="0" name="regref_err_max" uid="2018-10-17T18:20:00.208+05:30d14e440" keypath="block_name.shadow.Reg5.regref_err_max,shadow.Reg5.regref_err_max,Reg5.regref_err_max,regref_err_max">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar544552369" offset="1" name="refsigmon_en" uid="2018-10-17T18:20:00.208+05:30d14e447" keypath="block_name.shadow.Reg5.refsigmon_en,shadow.Reg5.refsigmon_en,Reg5.refsigmon_en,refsigmon_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1281731634" offset="2" name="hall_ref_err_max" uid="2018-10-17T18:20:00.208+05:30d14e454" keypath="block_name.shadow.Reg5.hall_ref_err_max,shadow.Reg5.hall_ref_err_max,Reg5.hall_ref_err_max,hall_ref_err_max">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-117561611" offset="5:3" name="filt_ada_gain" uid="2018-10-17T18:20:00.208+05:30d14e461" keypath="block_name.shadow.Reg5.filt_ada_gain,shadow.Reg5.filt_ada_gain,Reg5.filt_ada_gain,filt_ada_gain">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-359259607" offset="18:6" name="lint05" uid="2018-10-17T18:20:00.208+05:30d14e468" keypath="block_name.shadow.Reg5.lint05,shadow.Reg5.lint05,Reg5.lint05,lint05">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-1739232503" offset="31:19" name="lint04" uid="2018-10-17T18:20:00.208+05:30d14e475" keypath="block_name.shadow.Reg5.lint04,shadow.Reg5.lint04,Reg5.lint04,lint04">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.5" child_no="5" id="regdrag1439099046" name="Reg6" uid="2018-10-17T18:20:00.208+05:30d14e482" keypath="block_name.shadow.Reg6,shadow.Reg6,Reg6" hwmapaddr="110" csize="4" offset="16" caddress="16" address="0x18" endaddress="0x1B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x18" endaddress="0x1B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar31701267" offset="0" name="spdiag_in_e" uid="2018-10-17T18:20:00.208+05:30d14e486" keypath="block_name.shadow.Reg6.spdiag_in_e,shadow.Reg6.spdiag_in_e,Reg6.spdiag_in_e,spdiag_in_e">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1564191487" offset="1" name="spdiag_en" uid="2018-10-17T18:20:00.208+05:30d14e493" keypath="block_name.shadow.Reg6.spdiag_en,shadow.Reg6.spdiag_en,Reg6.spdiag_en,spdiag_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1140820815" offset="4:2" name="sensm_c" uid="2018-10-17T18:20:00.208+05:30d14e500" keypath="block_name.shadow.Reg6.sensm_c,shadow.Reg6.sensm_c,Reg6.sensm_c,sensm_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-887065985" offset="17:5" name="lint07" uid="2018-10-17T18:20:00.208+05:30d14e507" keypath="block_name.shadow.Reg6.lint07,shadow.Reg6.lint07,Reg6.lint07,lint07">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-1454439934" offset="30:18" name="lint06" uid="2018-10-17T18:20:00.208+05:30d14e514" keypath="block_name.shadow.Reg6.lint06,shadow.Reg6.lint06,Reg6.lint06,lint06">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.6" child_no="6" id="regdrag318072283" name="Reg7" uid="2018-10-17T18:20:00.208+05:30d14e521" keypath="block_name.shadow.Reg7,shadow.Reg7,Reg7" hwmapaddr="111" csize="4" offset="20" caddress="20" address="0x1C" endaddress="0x1F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x1C" endaddress="0x1F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar775196057" offset="1:0" name="tsen_chop_cfg" uid="2018-10-17T18:20:00.208+05:30d14e525" keypath="block_name.shadow.Reg7.tsen_chop_cfg,shadow.Reg7.tsen_chop_cfg,Reg7.tsen_chop_cfg,tsen_chop_cfg">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar558686294" offset="3:2" name="spdiag_rate" uid="2018-10-17T18:20:00.208+05:30d14e532" keypath="block_name.shadow.Reg7.spdiag_rate,shadow.Reg7.spdiag_rate,Reg7.spdiag_rate,spdiag_rate">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar33285742" offset="16:4" name="lint09" uid="2018-10-17T18:20:00.208+05:30d14e539" keypath="block_name.shadow.Reg7.lint09,shadow.Reg7.lint09,Reg7.lint09,lint09">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar10318268" offset="29:17" name="lint08" uid="2018-10-17T18:20:00.208+05:30d14e546" keypath="block_name.shadow.Reg7.lint08,shadow.Reg7.lint08,Reg7.lint08,lint08">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.7" child_no="7" id="regdrag-2020677481" name="Reg8" uid="2018-10-17T18:20:00.208+05:30d14e553" keypath="block_name.shadow.Reg8,shadow.Reg8,Reg8" hwmapaddr="112" csize="4" offset="24" caddress="24" address="0x20" endaddress="0x23" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="24" address="0x20" endaddress="0x23" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar1085545149" offset="4:0" name="toff" uid="2018-10-17T18:20:00.208+05:30d14e557" keypath="block_name.shadow.Reg8.toff,shadow.Reg8.toff,Reg8.toff,toff">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000</default>
+         </field>
+         <field id="dragtar10312225" offset="17:5" name="lint11" uid="2018-10-17T18:20:00.208+05:30d14e564" keypath="block_name.shadow.Reg8.lint11,shadow.Reg8.lint11,Reg8.lint11,lint11">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-1685548236" offset="30:18" name="lint10" uid="2018-10-17T18:20:00.208+05:30d14e571" keypath="block_name.shadow.Reg8.lint10,shadow.Reg8.lint10,Reg8.lint10,lint10">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.8" child_no="8" id="regdrag-354187101" name="Reg9" uid="2018-10-17T18:20:00.208+05:30d14e578" keypath="block_name.shadow.Reg9,shadow.Reg9,Reg9" hwmapaddr="113" csize="4" offset="28" caddress="28" address="0x24" endaddress="0x27" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x24" endaddress="0x27" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar481941612" offset="12:0" name="lint13" uid="2018-10-17T18:20:00.208+05:30d14e582" keypath="block_name.shadow.Reg9.lint13,shadow.Reg9.lint13,Reg9.lint13,lint13">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-269496831" offset="25:13" name="lint12" uid="2018-10-17T18:20:00.208+05:30d14e589" keypath="block_name.shadow.Reg9.lint12,shadow.Reg9.lint12,Reg9.lint12,lint12">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.9" child_no="9" id="regdrag-970854236" name="Reg10" uid="2018-10-17T18:20:00.208+05:30d14e596" keypath="block_name.shadow.Reg10,shadow.Reg10,Reg10" hwmapaddr="114" csize="4" offset="32" caddress="32" address="0x28" endaddress="0x2B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="32" address="0x28" endaddress="0x2B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar2079002086" offset="12:0" name="lint15" uid="2018-10-17T18:20:00.208+05:30d14e600" keypath="block_name.shadow.Reg10.lint15,shadow.Reg10.lint15,Reg10.lint15,lint15">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar331279286" offset="25:13" name="lint14" uid="2018-10-17T18:20:00.208+05:30d14e607" keypath="block_name.shadow.Reg10.lint14,shadow.Reg10.lint14,Reg10.lint14,lint14">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.10" child_no="10" id="regdrag2050573909" name="Reg11" uid="2018-10-17T18:20:00.208+05:30d14e614" keypath="block_name.shadow.Reg11,shadow.Reg11,Reg11" hwmapaddr="115" csize="4" offset="36" caddress="36" address="0x2C" endaddress="0x2F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="36" address="0x2C" endaddress="0x2F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-207054167" offset="6:0" name="tslp" uid="2018-10-17T18:20:00.208+05:30d14e618" keypath="block_name.shadow.Reg11.tslp,shadow.Reg11.tslp,Reg11.tslp,tslp">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000</default>
+         </field>
+         <field id="dragtar1499634956" offset="18:7" name="plin_qvo" uid="2018-10-17T18:20:00.208+05:30d14e625" keypath="block_name.shadow.Reg11.plin_qvo,shadow.Reg11.plin_qvo,Reg11.plin_qvo,plin_qvo">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar1736829202" offset="31:19" name="lint16" uid="2018-10-17T18:20:00.208+05:30d14e632" keypath="block_name.shadow.Reg11.lint16,shadow.Reg11.lint16,Reg11.lint16,lint16">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.11" child_no="11" id="regdrag-292573257" name="Reg12" uid="2018-10-17T18:20:00.208+05:30d14e640" keypath="block_name.shadow.Reg12,shadow.Reg12,Reg12" hwmapaddr="116" csize="4" offset="40" caddress="40" address="0x30" endaddress="0x33" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="40" address="0x30" endaddress="0x33" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1568748689" offset="17:0" name="qo_c" uid="2018-10-17T18:20:00.208+05:30d14e644" keypath="block_name.shadow.Reg12.qo_c,shadow.Reg12.qo_c,Reg12.qo_c,qo_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000000000</default>
+         </field>
+         <field id="dragtar-1496986169" offset="29:18" name="plin_sens" uid="2018-10-17T18:20:00.208+05:30d14e651" keypath="block_name.shadow.Reg12.plin_sens,shadow.Reg12.plin_sens,Reg12.plin_sens,plin_sens">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.12" child_no="12" id="regdrag1437468851" name="Reg13" uid="2018-10-17T18:20:00.208+05:30d14e658" keypath="block_name.shadow.Reg13,shadow.Reg13,Reg13" hwmapaddr="117" csize="4" offset="44" caddress="44" address="0x34" endaddress="0x37" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="44" address="0x34" endaddress="0x37" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-2085022136" offset="6:0" name="tzero" uid="2018-10-17T18:20:00.208+05:30d14e662" keypath="block_name.shadow.Reg13.tzero,shadow.Reg13.tzero,Reg13.tzero,tzero">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000</default>
+         </field>
+         <field id="dragtar-509708894" offset="18:7" name="qotc_hot_c" uid="2018-10-17T18:20:00.208+05:30d14e669" keypath="block_name.shadow.Reg13.qotc_hot_c,shadow.Reg13.qotc_hot_c,Reg13.qotc_hot_c,qotc_hot_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar-1886635932" offset="30:19" name="qotc_cld_c" uid="2018-10-17T18:20:00.208+05:30d14e676" keypath="block_name.shadow.Reg13.qotc_cld_c,shadow.Reg13.qotc_cld_c,Reg13.qotc_cld_c,qotc_cld_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.13" child_no="13" id="regdrag-1556336275" name="Reg14" uid="2018-10-17T18:20:00.208+05:30d14e683" keypath="block_name.shadow.Reg14,shadow.Reg14,Reg14" hwmapaddr="118" csize="4" offset="48" caddress="48" address="0x38" endaddress="0x3B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="48" address="0x38" endaddress="0x3B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar2090901459" offset="9:0" name="refsigmon_hall" uid="2018-10-17T18:20:00.208+05:30d14e687" keypath="block_name.shadow.Reg14.refsigmon_hall,shadow.Reg14.refsigmon_hall,Reg14.refsigmon_hall,refsigmon_hall">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar655499019" offset="21:10" name="clamp_h" uid="2018-10-17T18:20:00.208+05:30d14e694" keypath="block_name.shadow.Reg14.clamp_h,shadow.Reg14.clamp_h,Reg14.clamp_h,clamp_h">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar-644366239" offset="31:22" name="refsigmon_bg" uid="2018-10-17T18:20:00.208+05:30d14e701" keypath="block_name.shadow.Reg14.refsigmon_bg,shadow.Reg14.refsigmon_bg,Reg14.refsigmon_bg,refsigmon_bg">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.14" child_no="14" id="regdrag1934651111" name="Reg15" uid="2018-10-17T18:20:00.208+05:30d14e708" keypath="block_name.shadow.Reg15,shadow.Reg15,Reg15" hwmapaddr="119" csize="4" offset="52" caddress="52" address="0x3C" endaddress="0x3F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="52" address="0x3C" endaddress="0x3F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar1932679650" offset="10:0" name="sens_c" uid="2018-10-17T18:20:00.208+05:30d14e712" keypath="block_name.shadow.Reg15.sens_c,shadow.Reg15.sens_c,Reg15.sens_c,sens_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar-1839701610" offset="22:11" name="clamp_l" uid="2018-10-17T18:20:00.208+05:30d14e719" keypath="block_name.shadow.Reg15.clamp_l,shadow.Reg15.clamp_l,Reg15.clamp_l,clamp_l">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.15" child_no="15" id="regdrag1288435303" name="Reg16" uid="2018-10-17T18:20:00.208+05:30d14e726" keypath="block_name.shadow.Reg16,shadow.Reg16,Reg16" hwmapaddr="120" csize="4" offset="56" caddress="56" address="0x40" endaddress="0x43" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="56" address="0x40" endaddress="0x43" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar2098242937" offset="9:0" name="senstc2_cld_c" uid="2018-10-17T18:20:00.208+05:30d14e730" keypath="block_name.shadow.Reg16.senstc2_cld_c,shadow.Reg16.senstc2_cld_c,Reg16.senstc2_cld_c,senstc2_cld_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar134706523" offset="20:10" name="sens_f" uid="2018-10-17T18:20:00.208+05:30d14e737" keypath="block_name.shadow.Reg16.sens_f,shadow.Reg16.sens_f,Reg16.sens_f,sens_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar-1872236033" offset="31:21" name="sens_diag" uid="2018-10-17T18:20:00.208+05:30d14e744" keypath="block_name.shadow.Reg16.sens_diag,shadow.Reg16.sens_diag,Reg16.sens_diag,sens_diag">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.16" child_no="16" id="regdrag1985120155" name="Reg17" uid="2018-10-17T18:20:00.208+05:30d14e751" keypath="block_name.shadow.Reg17,shadow.Reg17,Reg17" hwmapaddr="121" csize="4" offset="60" caddress="60" address="0x44" endaddress="0x47" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="60" address="0x44" endaddress="0x47" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar251705978" offset="9:0" name="senstc2_cld_f" uid="2018-10-17T18:20:00.208+05:30d14e755" keypath="block_name.shadow.Reg17.senstc2_cld_f,shadow.Reg17.senstc2_cld_f,Reg17.senstc2_cld_f,senstc2_cld_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar816034122" offset="20:10" name="senstc1_cld_diag" uid="2018-10-17T18:20:00.208+05:30d14e762" keypath="block_name.shadow.Reg17.senstc1_cld_diag,shadow.Reg17.senstc1_cld_diag,Reg17.senstc1_cld_diag,senstc1_cld_diag">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar621029308" offset="31:21" name="senstc1_cld_c" uid="2018-10-17T18:20:00.208+05:30d14e769" keypath="block_name.shadow.Reg17.senstc1_cld_c,shadow.Reg17.senstc1_cld_c,Reg17.senstc1_cld_c,senstc1_cld_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.17" child_no="17" id="regdrag-1087707236" name="Reg18" uid="2018-10-17T18:20:00.208+05:30d14e776" keypath="block_name.shadow.Reg18,shadow.Reg18,Reg18" hwmapaddr="122" csize="4" offset="64" caddress="64" address="0x48" endaddress="0x4B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="64" address="0x48" endaddress="0x4B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar1184412524" offset="9:0" name="senstc2_hot_c" uid="2018-10-17T18:20:00.208+05:30d14e780" keypath="block_name.shadow.Reg18.senstc2_hot_c,shadow.Reg18.senstc2_hot_c,Reg18.senstc2_hot_c,senstc2_hot_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar-736028078" offset="20:10" name="senstc1_hot_c" uid="2018-10-17T18:20:00.208+05:30d14e787" keypath="block_name.shadow.Reg18.senstc1_hot_c,shadow.Reg18.senstc1_hot_c,Reg18.senstc1_hot_c,senstc1_hot_c">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar1031009483" offset="31:21" name="senstc1_cld_f" uid="2018-10-17T18:20:00.208+05:30d14e794" keypath="block_name.shadow.Reg18.senstc1_cld_f,shadow.Reg18.senstc1_cld_f,Reg18.senstc1_cld_f,senstc1_cld_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.18" child_no="18" id="regdrag-1791932121" name="Reg19" uid="2018-10-17T18:20:00.208+05:30d14e801" keypath="block_name.shadow.Reg19,shadow.Reg19,Reg19" hwmapaddr="123" csize="4" offset="68" caddress="68" address="0x4C" endaddress="0x4F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="68" address="0x4C" endaddress="0x4F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1792569703" offset="9:0" name="senstc2_hot_f" uid="2018-10-17T18:20:00.208+05:30d14e805" keypath="block_name.shadow.Reg19.senstc2_hot_f,shadow.Reg19.senstc2_hot_f,Reg19.senstc2_hot_f,senstc2_hot_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar-257230034" offset="20:10" name="senstc1_hot_f" uid="2018-10-17T18:20:00.208+05:30d14e812" keypath="block_name.shadow.Reg19.senstc1_hot_f,shadow.Reg19.senstc1_hot_f,Reg19.senstc1_hot_f,senstc1_hot_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar-1144313600" offset="31:21" name="senstc1_hot_diag" uid="2018-10-17T18:20:00.208+05:30d14e819" keypath="block_name.shadow.Reg19.senstc1_hot_diag,shadow.Reg19.senstc1_hot_diag,Reg19.senstc1_hot_diag,senstc1_hot_diag">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.19" child_no="19" id="regdrag1203718448" name="Reg20" uid="2018-10-17T18:20:00.208+05:30d14e826" keypath="block_name.shadow.Reg20,shadow.Reg20,Reg20" hwmapaddr="124" csize="4" offset="72" caddress="72" address="0x50" endaddress="0x53" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="72" address="0x50" endaddress="0x53" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar1282070845" offset="13:0" name="vos_f" uid="2018-10-17T18:20:00.208+05:30d14e830" keypath="block_name.shadow.Reg20.vos_f,shadow.Reg20.vos_f,Reg20.vos_f,vos_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">00000000000000</default>
+         </field>
+         <field id="dragtar815434013" offset="31:14" name="spdiag_in" uid="2018-10-17T18:20:00.208+05:30d14e837" keypath="block_name.shadow.Reg20.spdiag_in,shadow.Reg20.spdiag_in,Reg20.spdiag_in,spdiag_in">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.2.20" child_no="20" id="regdrag1193244042" name="Reg21" uid="2018-10-17T18:20:00.208+05:30d14e844" keypath="block_name.shadow.Reg21,shadow.Reg21,Reg21" hwmapaddr="125" csize="4" offset="76" caddress="76" address="0x54" endaddress="0x57" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="76" address="0x54" endaddress="0x57" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar394852312" offset="11:0" name="vostc_hot_f" uid="2018-10-17T18:20:00.208+05:30d14e848" keypath="block_name.shadow.Reg21.vostc_hot_f,shadow.Reg21.vostc_hot_f,Reg21.vostc_hot_f,vostc_hot_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar1630521418" offset="23:12" name="vostc_cld_f" uid="2018-10-17T18:20:00.208+05:30d14e855" keypath="block_name.shadow.Reg21.vostc_cld_f,shadow.Reg21.vostc_cld_f,Reg21.vostc_cld_f,vostc_cld_f">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+   </section>
+   <section heading="1.3" child_no="3" id="eeprom" name="eeprom" uid="2018-10-17T18:20:00.208+05:30d14e862" keypath="block_name.eeprom,eeprom" keypathdown="eeprom.Reg22.Reg23.Reg24.Reg25.Reg26.Reg27.Reg28.Reg29.Reg30.Reg31.Reg32.Reg33.Reg34.Reg35.Reg36.Reg37.Reg38.Reg39.Reg40.Reg41,Reg22,Reg23,Reg24,Reg25,Reg26,Reg27,Reg28,Reg29,Reg30,Reg31,Reg32,Reg33,Reg34,Reg35,Reg36,Reg37,Reg38,Reg39,Reg40,Reg41" hwmapaddr="126" max_reg_size="32" csize="80" offset="88" caddress="88" address="0x58" endaddress="0xA7" size="80">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="88" address="0x58" endaddress="0xA7" size="80"/>
+         </busdomains>
+      </config>
+      <reg heading="1.3.1" child_no="1" id="regdrag1485588454" name="Reg22" uid="2018-10-17T18:20:00.208+05:30d14e864" keypath="block_name.eeprom.Reg22,eeprom.Reg22,Reg22" hwmapaddr="127" csize="4" offset="0" caddress="0" address="0x58" endaddress="0x5B" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x58" endaddress="0x5B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar1722158065" offset="0" name="lint_out_inv" uid="2018-10-17T18:20:00.208+05:30d14e868" keypath="block_name.eeprom.Reg22.lint_out_inv,eeprom.Reg22.lint_out_inv,Reg22.lint_out_inv,lint_out_inv">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-924574658" offset="1" name="lint_in_inv" uid="2018-10-17T18:20:00.208+05:30d14e875" keypath="block_name.eeprom.Reg22.lint_in_inv,eeprom.Reg22.lint_in_inv,Reg22.lint_in_inv,lint_in_inv">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar502139248" offset="2" name="lint_e" uid="2018-10-17T18:20:00.208+05:30d14e882" keypath="block_name.eeprom.Reg22.lint_e,eeprom.Reg22.lint_e,Reg22.lint_e,lint_e">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1926298716" offset="10:3" name="lint_bin_hyst" uid="2018-10-17T18:20:00.208+05:30d14e889" keypath="block_name.eeprom.Reg22.lint_bin_hyst,eeprom.Reg22.lint_bin_hyst,Reg22.lint_bin_hyst,lint_bin_hyst">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000</default>
+         </field>
+         <field id="dragtar-977142420" offset="11" name="lint_bin_e" uid="2018-10-17T18:20:00.208+05:30d14e896" keypath="block_name.eeprom.Reg22.lint_bin_e,eeprom.Reg22.lint_bin_e,Reg22.lint_bin_e,lint_bin_e">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-62811531" offset="12" name="lin_scalar" uid="2018-10-17T18:20:00.208+05:30d14e903" keypath="block_name.eeprom.Reg22.lin_scalar,eeprom.Reg22.lin_scalar,Reg22.lin_scalar,lin_scalar">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar323740271" offset="16:13" name="hptest_lvl" uid="2018-10-17T18:20:00.208+05:30d14e910" keypath="block_name.eeprom.Reg22.hptest_lvl,eeprom.Reg22.hptest_lvl,Reg22.hptest_lvl,hptest_lvl">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000</default>
+         </field>
+         <field id="dragtar-649294320" offset="21:17" name="hall_isel" uid="2018-10-17T18:20:00.208+05:30d14e917" keypath="block_name.eeprom.Reg22.hall_isel,eeprom.Reg22.hall_isel,Reg22.hall_isel,hall_isel">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000</default>
+         </field>
+         <field id="dragtar-1295677974" offset="24:22" name="bw_sel" uid="2018-10-17T18:20:00.208+05:30d14e924" keypath="block_name.eeprom.Reg22.bw_sel,eeprom.Reg22.bw_sel,Reg22.bw_sel,bw_sel">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-1916263664" offset="25" name="bg_adc_ref_err_max" uid="2018-10-17T18:20:00.208+05:30d14e931" keypath="block_name.eeprom.Reg22.bg_adc_ref_err_max,eeprom.Reg22.bg_adc_ref_err_max,Reg22.bg_adc_ref_err_max,bg_adc_ref_err_max">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1869990463" offset="26" name="asil_ftt" uid="2018-10-17T18:20:00.208+05:30d14e939" keypath="block_name.eeprom.Reg22.asil_ftt,eeprom.Reg22.asil_ftt,Reg22.asil_ftt,asil_ftt">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar683094947" offset="27" name="afe_zero_config" uid="2018-10-17T18:20:00.208+05:30d14e946" keypath="block_name.eeprom.Reg22.afe_zero_config,eeprom.Reg22.afe_zero_config,Reg22.afe_zero_config,afe_zero_config">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1748660266" offset="29:28" name="afe_hpdrv_chop" uid="2018-10-17T18:20:00.208+05:30d14e953" keypath="block_name.eeprom.Reg22.afe_hpdrv_chop,eeprom.Reg22.afe_hpdrv_chop,Reg22.afe_hpdrv_chop,afe_hpdrv_chop">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-76073921" offset="31:30" name="afe_gain" uid="2018-10-17T18:20:00.208+05:30d14e960" keypath="block_name.eeprom.Reg22.afe_gain,eeprom.Reg22.afe_gain,Reg22.afe_gain,afe_gain">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+      </reg>
+      <reg heading="1.3.2" child_no="2" id="regdrag-1584277567" name="Reg23" uid="2018-10-17T18:20:00.208+05:30d14e967" keypath="block_name.eeprom.Reg23,eeprom.Reg23,Reg23" hwmapaddr="128" csize="4" offset="4" caddress="4" address="0x5C" endaddress="0x5F" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x5C" endaddress="0x5F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1755600085" offset="1:0" name="d_reg_ldo_boost" uid="2018-10-17T18:20:00.208+05:30d14e971" keypath="block_name.eeprom.Reg23.d_reg_ldo_boost,eeprom.Reg23.d_reg_ldo_boost,Reg23.d_reg_ldo_boost,d_reg_ldo_boost">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-1441696027" offset="2" name="afe_hpsig_phase" uid="2018-10-17T18:20:00.208+05:30d14e978" keypath="block_name.eeprom.Reg23.afe_hpsig_phase,eeprom.Reg23.afe_hpsig_phase,Reg23.afe_hpsig_phase,afe_hpsig_phase">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-244678285" offset="3" name="pol_f" uid="2018-10-17T18:20:00.208+05:30d14e985" keypath="block_name.eeprom.Reg23.pol_f,eeprom.Reg23.pol_f,Reg23.pol_f,pol_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-38463756" offset="4" name="pol_diag" uid="2018-10-17T18:20:00.208+05:30d14e992" keypath="block_name.eeprom.Reg23.pol_diag,eeprom.Reg23.pol_diag,Reg23.pol_diag,pol_diag">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1716170943" offset="5" name="pol_c" uid="2018-10-17T18:20:00.208+05:30d14e999" keypath="block_name.eeprom.Reg23.pol_c,eeprom.Reg23.pol_c,Reg23.pol_c,pol_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1604285215" offset="18:6" name="lint01" uid="2018-10-17T18:20:00.208+05:30d14e1006" keypath="block_name.eeprom.Reg23.lint01,eeprom.Reg23.lint01,Reg23.lint01,lint01">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar1681847215" offset="31:19" name="lint00" uid="2018-10-17T18:20:00.208+05:30d14e1013" keypath="block_name.eeprom.Reg23.lint00,eeprom.Reg23.lint00,Reg23.lint00,lint00">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.3" child_no="3" id="regdrag-1606217446" name="Reg24" uid="2018-10-17T18:20:00.208+05:30d14e1020" keypath="block_name.eeprom.Reg24,eeprom.Reg24,Reg24" hwmapaddr="129" csize="4" offset="8" caddress="8" address="0x60" endaddress="0x63" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="8" address="0x60" endaddress="0x63" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-150653072" offset="2:0" name="filt_ada_gain" uid="2018-10-17T18:20:00.208+05:30d14e1024" keypath="block_name.eeprom.Reg24.filt_ada_gain,eeprom.Reg24.filt_ada_gain,Reg24.filt_ada_gain,filt_ada_gain">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-775131359" offset="5:3" name="bw_sel_min" uid="2018-10-17T18:20:00.208+05:30d14e1031" keypath="block_name.eeprom.Reg24.bw_sel_min,eeprom.Reg24.bw_sel_min,Reg24.bw_sel_min,bw_sel_min">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar769134642" offset="18:6" name="lint03" uid="2018-10-17T18:20:00.208+05:30d14e1038" keypath="block_name.eeprom.Reg24.lint03,eeprom.Reg24.lint03,Reg24.lint03,lint03">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-325686084" offset="31:19" name="lint02" uid="2018-10-17T18:20:00.208+05:30d14e1045" keypath="block_name.eeprom.Reg24.lint02,eeprom.Reg24.lint02,Reg24.lint02,lint02">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.4" child_no="4" id="regdrag-322131500" name="Reg25" uid="2018-10-17T18:20:00.208+05:30d14e1052" keypath="block_name.eeprom.Reg25,eeprom.Reg25,Reg25" hwmapaddr="130" csize="4" offset="12" caddress="12" address="0x64" endaddress="0x67" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x64" endaddress="0x67" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-568499046" offset="2:0" name="sensm_c" uid="2018-10-17T18:20:00.208+05:30d14e1056" keypath="block_name.eeprom.Reg25.sensm_c,eeprom.Reg25.sensm_c,Reg25.sensm_c,sensm_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000</default>
+         </field>
+         <field id="dragtar-21877877" offset="3" name="regref_err_max" uid="2018-10-17T18:20:00.208+05:30d14e1063" keypath="block_name.eeprom.Reg25.regref_err_max,eeprom.Reg25.regref_err_max,Reg25.regref_err_max,regref_err_max">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1060075724" offset="4" name="refsigmon_en" uid="2018-10-17T18:20:00.208+05:30d14e1070" keypath="block_name.eeprom.Reg25.refsigmon_en,eeprom.Reg25.refsigmon_en,Reg25.refsigmon_en,refsigmon_en">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1300504255" offset="5" name="hall_ref_err_max" uid="2018-10-17T18:20:00.208+05:30d14e1077" keypath="block_name.eeprom.Reg25.hall_ref_err_max,eeprom.Reg25.hall_ref_err_max,Reg25.hall_ref_err_max,hall_ref_err_max">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-411029236" offset="18:6" name="lint05" uid="2018-10-17T18:20:00.208+05:30d14e1084" keypath="block_name.eeprom.Reg25.lint05,eeprom.Reg25.lint05,Reg25.lint05,lint05">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar1248393147" offset="31:19" name="lint04" uid="2018-10-17T18:20:00.208+05:30d14e1091" keypath="block_name.eeprom.Reg25.lint04,eeprom.Reg25.lint04,Reg25.lint04,lint04">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.5" child_no="5" id="regdrag1542523216" name="Reg26" uid="2018-10-17T18:20:00.208+05:30d14e1098" keypath="block_name.eeprom.Reg26,eeprom.Reg26,Reg26" hwmapaddr="131" csize="4" offset="16" caddress="16" address="0x68" endaddress="0x6B" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="16" address="0x68" endaddress="0x6B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar305835273" offset="1:0" name="tsen_chop_cfg" uid="2018-10-17T18:20:00.208+05:30d14e1102" keypath="block_name.eeprom.Reg26.tsen_chop_cfg,eeprom.Reg26.tsen_chop_cfg,Reg26.tsen_chop_cfg,tsen_chop_cfg">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar1195149224" offset="3:2" name="spdiag_rate" uid="2018-10-17T18:20:00.208+05:30d14e1109" keypath="block_name.eeprom.Reg26.spdiag_rate,eeprom.Reg26.spdiag_rate,Reg26.spdiag_rate,spdiag_rate">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00</default>
+         </field>
+         <field id="dragtar-1899481983" offset="4" name="spdiag_in_e" uid="2018-10-17T18:20:00.208+05:30d14e1116" keypath="block_name.eeprom.Reg26.spdiag_in_e,eeprom.Reg26.spdiag_in_e,Reg26.spdiag_in_e,spdiag_in_e">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar1240128143" offset="5" name="spdiag_en" uid="2018-10-17T18:20:00.208+05:30d14e1123" keypath="block_name.eeprom.Reg26.spdiag_en,eeprom.Reg26.spdiag_en,Reg26.spdiag_en,spdiag_en">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0</default>
+         </field>
+         <field id="dragtar-1822805940" offset="18:6" name="lint07" uid="2018-10-17T18:20:00.208+05:30d14e1130" keypath="block_name.eeprom.Reg26.lint07,eeprom.Reg26.lint07,Reg26.lint07,lint07">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-413997284" offset="31:19" name="lint06" uid="2018-10-17T18:20:00.208+05:30d14e1137" keypath="block_name.eeprom.Reg26.lint06,eeprom.Reg26.lint06,Reg26.lint06,lint06">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.6" child_no="6" id="regdrag562753453" name="Reg27" uid="2018-10-17T18:20:00.208+05:30d14e1144" keypath="block_name.eeprom.Reg27,eeprom.Reg27,Reg27" hwmapaddr="132" csize="4" offset="20" caddress="20" address="0x6C" endaddress="0x6F" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="20" address="0x6C" endaddress="0x6F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1869045915" offset="4:0" name="toff" uid="2018-10-17T18:20:00.208+05:30d14e1148" keypath="block_name.eeprom.Reg27.toff,eeprom.Reg27.toff,Reg27.toff,toff">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000</default>
+         </field>
+         <field id="dragtar-178721182" offset="17:5" name="lint09" uid="2018-10-17T18:20:00.208+05:30d14e1155" keypath="block_name.eeprom.Reg27.lint09,eeprom.Reg27.lint09,Reg27.lint09,lint09">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-644025014" offset="30:18" name="lint08" uid="2018-10-17T18:20:00.208+05:30d14e1162" keypath="block_name.eeprom.Reg27.lint08,eeprom.Reg27.lint08,Reg27.lint08,lint08">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.7" child_no="7" id="regdrag-898346093" name="Reg28" uid="2018-10-17T18:20:00.208+05:30d14e1169" keypath="block_name.eeprom.Reg28,eeprom.Reg28,Reg28" hwmapaddr="133" csize="4" offset="24" caddress="24" address="0x70" endaddress="0x73" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="24" address="0x70" endaddress="0x73" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-638882446" offset="12:0" name="lint11" uid="2018-10-17T18:20:00.208+05:30d14e1173" keypath="block_name.eeprom.Reg28.lint11,eeprom.Reg28.lint11,Reg28.lint11,lint11">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar-1567456404" offset="25:13" name="lint10" uid="2018-10-17T18:20:00.208+05:30d14e1180" keypath="block_name.eeprom.Reg28.lint10,eeprom.Reg28.lint10,Reg28.lint10,lint10">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.8" child_no="8" id="regdrag-1661142928" name="Reg29" uid="2018-10-17T18:20:00.208+05:30d14e1187" keypath="block_name.eeprom.Reg29,eeprom.Reg29,Reg29" hwmapaddr="134" csize="4" offset="28" caddress="28" address="0x74" endaddress="0x77" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x74" endaddress="0x77" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-257848632" offset="12:0" name="lint13" uid="2018-10-17T18:20:00.208+05:30d14e1191" keypath="block_name.eeprom.Reg29.lint13,eeprom.Reg29.lint13,Reg29.lint13,lint13">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar1987620603" offset="25:13" name="lint12" uid="2018-10-17T18:20:00.208+05:30d14e1198" keypath="block_name.eeprom.Reg29.lint12,eeprom.Reg29.lint12,Reg29.lint12,lint12">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.9" child_no="9" id="regdrag-280130009" name="Reg30" uid="2018-10-17T18:20:00.208+05:30d14e1205" keypath="block_name.eeprom.Reg30,eeprom.Reg30,Reg30" hwmapaddr="135" csize="4" offset="32" caddress="32" address="0x78" endaddress="0x7B" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="32" address="0x78" endaddress="0x7B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-855744834" offset="12:0" name="lint15" uid="2018-10-17T18:20:00.208+05:30d14e1209" keypath="block_name.eeprom.Reg30.lint15,eeprom.Reg30.lint15,Reg30.lint15,lint15">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+         <field id="dragtar787418508" offset="25:13" name="lint14" uid="2018-10-17T18:20:00.208+05:30d14e1216" keypath="block_name.eeprom.Reg30.lint14,eeprom.Reg30.lint14,Reg30.lint14,lint14">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.10" child_no="10" id="regdrag1136488788" name="Reg31" uid="2018-10-17T18:20:00.208+05:30d14e1223" keypath="block_name.eeprom.Reg31,eeprom.Reg31,Reg31" hwmapaddr="136" csize="4" offset="36" caddress="36" address="0x7C" endaddress="0x7F" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="36" address="0x7C" endaddress="0x7F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-378270112" offset="6:0" name="tslp" uid="2018-10-17T18:20:00.208+05:30d14e1227" keypath="block_name.eeprom.Reg31.tslp,eeprom.Reg31.tslp,Reg31.tslp,tslp">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000</default>
+         </field>
+         <field id="dragtar423848972" offset="18:7" name="plin_qvo" uid="2018-10-17T18:20:00.208+05:30d14e1234" keypath="block_name.eeprom.Reg31.plin_qvo,eeprom.Reg31.plin_qvo,Reg31.plin_qvo,plin_qvo">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar405836632" offset="31:19" name="lint16" uid="2018-10-17T18:20:00.208+05:30d14e1241" keypath="block_name.eeprom.Reg31.lint16,eeprom.Reg31.lint16,Reg31.lint16,lint16">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.11" child_no="11" id="regdrag-931571312" name="Reg32" uid="2018-10-17T18:20:00.208+05:30d14e1249" keypath="block_name.eeprom.Reg32,eeprom.Reg32,Reg32" hwmapaddr="137" csize="4" offset="40" caddress="40" address="0x80" endaddress="0x83" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="40" address="0x80" endaddress="0x83" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-723024727" offset="17:0" name="qo_c" uid="2018-10-17T18:20:00.208+05:30d14e1253" keypath="block_name.eeprom.Reg32.qo_c,eeprom.Reg32.qo_c,Reg32.qo_c,qo_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000000000</default>
+         </field>
+         <field id="dragtar934131691" offset="29:18" name="plin_sens" uid="2018-10-17T18:20:00.208+05:30d14e1260" keypath="block_name.eeprom.Reg32.plin_sens,eeprom.Reg32.plin_sens,Reg32.plin_sens,plin_sens">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.12" child_no="12" id="regdrag-1859963254" name="Reg33" uid="2018-10-17T18:20:00.208+05:30d14e1267" keypath="block_name.eeprom.Reg33,eeprom.Reg33,Reg33" hwmapaddr="138" csize="4" offset="44" caddress="44" address="0x84" endaddress="0x87" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="44" address="0x84" endaddress="0x87" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar228963639" offset="6:0" name="tzero" uid="2018-10-17T18:20:00.208+05:30d14e1271" keypath="block_name.eeprom.Reg33.tzero,eeprom.Reg33.tzero,Reg33.tzero,tzero">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000</default>
+         </field>
+         <field id="dragtar-205174710" offset="18:7" name="qotc_hot_c" uid="2018-10-17T18:20:00.208+05:30d14e1278" keypath="block_name.eeprom.Reg33.qotc_hot_c,eeprom.Reg33.qotc_hot_c,Reg33.qotc_hot_c,qotc_hot_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar-1970306171" offset="30:19" name="qotc_cld_c" uid="2018-10-17T18:20:00.208+05:30d14e1285" keypath="block_name.eeprom.Reg33.qotc_cld_c,eeprom.Reg33.qotc_cld_c,Reg33.qotc_cld_c,qotc_cld_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.13" child_no="13" id="regdrag1871067960" name="Reg34" uid="2018-10-17T18:20:00.208+05:30d14e1292" keypath="block_name.eeprom.Reg34,eeprom.Reg34,Reg34" hwmapaddr="139" csize="4" offset="48" caddress="48" address="0x88" endaddress="0x8B" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="48" address="0x88" endaddress="0x8B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1387689750" offset="9:0" name="refsigmon_hall" uid="2018-10-17T18:20:00.208+05:30d14e1296" keypath="block_name.eeprom.Reg34.refsigmon_hall,eeprom.Reg34.refsigmon_hall,Reg34.refsigmon_hall,refsigmon_hall">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar292133384" offset="21:10" name="clamp_h" uid="2018-10-17T18:20:00.208+05:30d14e1303" keypath="block_name.eeprom.Reg34.clamp_h,eeprom.Reg34.clamp_h,Reg34.clamp_h,clamp_h">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar1704651081" offset="31:22" name="refsigmon_bg" uid="2018-10-17T18:20:00.208+05:30d14e1310" keypath="block_name.eeprom.Reg34.refsigmon_bg,eeprom.Reg34.refsigmon_bg,Reg34.refsigmon_bg,refsigmon_bg">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.14" child_no="14" id="regdrag-873548992" name="Reg35" uid="2018-10-17T18:20:00.208+05:30d14e1317" keypath="block_name.eeprom.Reg35,eeprom.Reg35,Reg35" hwmapaddr="140" csize="4" offset="52" caddress="52" address="0x8C" endaddress="0x8F" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="52" address="0x8C" endaddress="0x8F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-991073731" offset="10:0" name="sens_c" uid="2018-10-17T18:20:00.208+05:30d14e1321" keypath="block_name.eeprom.Reg35.sens_c,eeprom.Reg35.sens_c,Reg35.sens_c,sens_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar1134491481" offset="22:11" name="clamp_l" uid="2018-10-17T18:20:00.208+05:30d14e1328" keypath="block_name.eeprom.Reg35.clamp_l,eeprom.Reg35.clamp_l,Reg35.clamp_l,clamp_l">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.15" child_no="15" id="regdrag402397441" name="Reg36" uid="2018-10-17T18:20:00.208+05:30d14e1335" keypath="block_name.eeprom.Reg36,eeprom.Reg36,Reg36" hwmapaddr="141" csize="4" offset="56" caddress="56" address="0x90" endaddress="0x93" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="56" address="0x90" endaddress="0x93" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1599796108" offset="9:0" name="senstc2_cld_c" uid="2018-10-17T18:20:00.208+05:30d14e1339" keypath="block_name.eeprom.Reg36.senstc2_cld_c,eeprom.Reg36.senstc2_cld_c,Reg36.senstc2_cld_c,senstc2_cld_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar-912945149" offset="20:10" name="sens_f" uid="2018-10-17T18:20:00.208+05:30d14e1346" keypath="block_name.eeprom.Reg36.sens_f,eeprom.Reg36.sens_f,Reg36.sens_f,sens_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar-670177026" offset="31:21" name="sens_diag" uid="2018-10-17T18:20:00.208+05:30d14e1353" keypath="block_name.eeprom.Reg36.sens_diag,eeprom.Reg36.sens_diag,Reg36.sens_diag,sens_diag">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.16" child_no="16" id="regdrag1066475561" name="Reg37" uid="2018-10-17T18:20:00.208+05:30d14e1360" keypath="block_name.eeprom.Reg37,eeprom.Reg37,Reg37" hwmapaddr="142" csize="4" offset="60" caddress="60" address="0x94" endaddress="0x97" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="60" address="0x94" endaddress="0x97" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar792372409" offset="9:0" name="senstc2_cld_f" uid="2018-10-17T18:20:00.208+05:30d14e1364" keypath="block_name.eeprom.Reg37.senstc2_cld_f,eeprom.Reg37.senstc2_cld_f,Reg37.senstc2_cld_f,senstc2_cld_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar227593161" offset="20:10" name="senstc1_cld_diag" uid="2018-10-17T18:20:00.208+05:30d14e1371" keypath="block_name.eeprom.Reg37.senstc1_cld_diag,eeprom.Reg37.senstc1_cld_diag,Reg37.senstc1_cld_diag,senstc1_cld_diag">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar-229250242" offset="31:21" name="senstc1_cld_c" uid="2018-10-17T18:20:00.208+05:30d14e1378" keypath="block_name.eeprom.Reg37.senstc1_cld_c,eeprom.Reg37.senstc1_cld_c,Reg37.senstc1_cld_c,senstc1_cld_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.17" child_no="17" id="regdrag178721631" name="Reg38" uid="2018-10-17T18:20:00.208+05:30d14e1385" keypath="block_name.eeprom.Reg38,eeprom.Reg38,Reg38" hwmapaddr="143" csize="4" offset="64" caddress="64" address="0x98" endaddress="0x9B" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="64" address="0x98" endaddress="0x9B" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-2033676650" offset="9:0" name="senstc2_hot_c" uid="2018-10-17T18:20:00.208+05:30d14e1389" keypath="block_name.eeprom.Reg38.senstc2_hot_c,eeprom.Reg38.senstc2_hot_c,Reg38.senstc2_hot_c,senstc2_hot_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar-27666649" offset="20:10" name="senstc1_hot_c" uid="2018-10-17T18:20:00.208+05:30d14e1396" keypath="block_name.eeprom.Reg38.senstc1_hot_c,eeprom.Reg38.senstc1_hot_c,Reg38.senstc1_hot_c,senstc1_hot_c">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar1852773345" offset="31:21" name="senstc1_cld_f" uid="2018-10-17T18:20:00.208+05:30d14e1403" keypath="block_name.eeprom.Reg38.senstc1_cld_f,eeprom.Reg38.senstc1_cld_f,Reg38.senstc1_cld_f,senstc1_cld_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.18" child_no="18" id="regdrag1007285695" name="Reg39" uid="2018-10-17T18:20:00.208+05:30d14e1410" keypath="block_name.eeprom.Reg39,eeprom.Reg39,Reg39" hwmapaddr="144" csize="4" offset="68" caddress="68" address="0x9C" endaddress="0x9F" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="68" address="0x9C" endaddress="0x9F" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1473811878" offset="9:0" name="senstc2_hot_f" uid="2018-10-17T18:20:00.208+05:30d14e1414" keypath="block_name.eeprom.Reg39.senstc2_hot_f,eeprom.Reg39.senstc2_hot_f,Reg39.senstc2_hot_f,senstc2_hot_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000</default>
+         </field>
+         <field id="dragtar-1801415610" offset="20:10" name="senstc1_hot_f" uid="2018-10-17T18:20:00.208+05:30d14e1421" keypath="block_name.eeprom.Reg39.senstc1_hot_f,eeprom.Reg39.senstc1_hot_f,Reg39.senstc1_hot_f,senstc1_hot_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+         <field id="dragtar1159711170" offset="31:21" name="senstc1_hot_diag" uid="2018-10-17T18:20:00.208+05:30d14e1428" keypath="block_name.eeprom.Reg39.senstc1_hot_diag,eeprom.Reg39.senstc1_hot_diag,Reg39.senstc1_hot_diag,senstc1_hot_diag">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.19" child_no="19" id="regdrag-2015406147" name="Reg40" uid="2018-10-17T18:20:00.208+05:30d14e1435" keypath="block_name.eeprom.Reg40,eeprom.Reg40,Reg40" hwmapaddr="145" csize="4" offset="72" caddress="72" address="0xA0" endaddress="0xA3" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="72" address="0xA0" endaddress="0xA3" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1908732992" offset="13:0" name="vos_f" uid="2018-10-17T18:20:00.208+05:30d14e1439" keypath="block_name.eeprom.Reg40.vos_f,eeprom.Reg40.vos_f,Reg40.vos_f,vos_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000000</default>
+         </field>
+         <field id="dragtar338094566" offset="31:14" name="spdiag_in" uid="2018-10-17T18:20:00.208+05:30d14e1446" keypath="block_name.eeprom.Reg40.spdiag_in,eeprom.Reg40.spdiag_in,Reg40.spdiag_in,spdiag_in">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.3.20" child_no="20" id="regdrag-797528749" name="Reg41" uid="2018-10-17T18:20:00.208+05:30d14e1453" keypath="block_name.eeprom.Reg41,eeprom.Reg41,Reg41" hwmapaddr="146" csize="4" offset="76" caddress="76" address="0xA4" endaddress="0xA7" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="76" address="0xA4" endaddress="0xA7" size="4"/>
+            </busdomains>
+         </config>
+         <field id="dragtar-1531909152" offset="11:0" name="vostc_hot_f" uid="2018-10-17T18:20:00.208+05:30d14e1457" keypath="block_name.eeprom.Reg41.vostc_hot_f,eeprom.Reg41.vostc_hot_f,Reg41.vostc_hot_f,vostc_hot_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+         <field id="dragtar930238243" offset="23:12" name="vostc_cld_f" uid="2018-10-17T18:20:00.208+05:30d14e1464" keypath="block_name.eeprom.Reg41.vostc_cld_f,eeprom.Reg41.vostc_cld_f,Reg41.vostc_cld_f,vostc_cld_f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">000000000000</default>
+         </field>
+      </reg>
+   </section>
+   <sequences>
+      <sequence name="seq_name" sid="1:0" eid="seq_ip_0.8984156885528829" orig_path="test114.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\test114.idsng" level="1" uid="2018-10-17T18:20:01.725+05:30d24e1564">
+         <doc/>
+         <arguments/>
+         <constants/>
+         <variables/>
+         <seqsteps>
+            <row busName="default" uid="2018-10-17T18:20:01.725+05:30d24e1570" sid="14:0">
+               <ASSIGNMENT command="write" eid="seq_cmd0.8984156885528829">
+                  <LHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2018-10-17T18:20:00.208+05:30d14e868" fieldDefault="0" regSize="32" regDefault="0x00000000" fieldSize="1" field_offset="0" field_sw="rw" field_hw="ro" field_default="0" reg_address="0x58">eeprom.Reg22.lint_out_inv</EXPRESSION>
+                     </EXPRESSION>
+                  </LHS>
+                  <doc/>
+                  <RHS>
+                     <EXPRESSION>
+                        <EXPRESSION type="number" writeValue="0">0x00000000</EXPRESSION>
+                     </EXPRESSION>
+                  </RHS>
+               </ASSIGNMENT>
+            </row>
+         </seqsteps>
+      </sequence>
+      <seqconfig>
+         <output>
+            <seq_outputs>
+               <uvm>true <multioutput>false</multioutput>
+               </uvm>
+            </seq_outputs>
+            <uvm>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <regmodel oid="0">default</regmodel>
+               <write oid="0">write(status, %d, .parent(this))</write>
+               <read oid="0">read(status, %lhs, .parent(this))</read>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </uvm>
+            <sv>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <bus oid="0">default</bus>
+               <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+               <read oid="0">read_mirror(%a)</read>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </sv>
+            <firmware>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>int</arguments>
+                  <constant>int</constant>
+                  <variable>int</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(%a,%d)</write>
+               <read oid="0">REG_READ(%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <consolidated>false</consolidated>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </firmware>
+            <matlab>
+               <datatype>
+                  <inlinefunction>int</inlinefunction>
+                  <arguments>integer</arguments>
+                  <constant>integer</constant>
+                  <variable>integer</variable>
+               </datatype>
+               <templatename oid="0">default</templatename>
+               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+               <read oid="0">REG_READ(memory_name,%a)</read>
+               <fieldtemplatename oid="0">default</fieldtemplatename>
+               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+               <timeunit1>1</timeunit1>
+               <timeunit2>ns</timeunit2>
+               <timeprecision1>1</timeprecision1>
+               <timeprecision2>ns</timeprecision2>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+               <mout/>
+            </matlab>
+            <csv>
+               <commands>
+                  <isscmd oid="0">call</isscmd>
+                  <cmd oid="0">CALL</cmd>
+                  <isscmd oid="1">wait</isscmd>
+                  <cmd oid="1">WAIT</cmd>
+                  <isscmd oid="2">write_1_clr</isscmd>
+                  <cmd oid="2">WRITE_CLR</cmd>
+                  <isscmd oid="3">write_1_set</isscmd>
+                  <cmd oid="3">WRITE_SET</cmd>
+                  <isscmd oid="4">write</isscmd>
+                  <cmd oid="4">WRITE</cmd>
+                  <isscmd oid="5">switch</isscmd>
+                  <cmd oid="5">SWITCH</cmd>
+               </commands>
+               <headers>
+                  <issheader oid="0">address</issheader>
+                  <header oid="0">address</header>
+                  <issheader oid="1">description</issheader>
+                  <header oid="1">description</header>
+                  <issheader oid="2">step</issheader>
+                  <header oid="2">step</header>
+                  <issheader oid="3">value</issheader>
+                  <header oid="3">value</header>
+                  <issheader oid="4">command</issheader>
+                  <header oid="4">command</header>
+               </headers>
+               <timemultiplier>100</timemultiplier>
+               <maxnesting>1</maxnesting>
+               <nameformat>%s</nameformat>
+            </csv>
+         </output>
+      </seqconfig>
+   </sequences>
+</block>

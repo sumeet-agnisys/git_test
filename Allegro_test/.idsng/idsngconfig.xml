@@ -12,7 +12,7 @@
     <arv>false</arv>  
     <special_reg/>  
     <cmsis>false</cmsis>  
-    <uvm>true</uvm>  
+    <uvm>false</uvm>  
     <perl>false</perl>  
     <python>false</python>  
     <cpp>false</cpp>  
@@ -22,7 +22,7 @@
     <pdf>false</pdf>  
     <ovm>false</ovm>  
     <vmm>false</vmm>  
-    <iss_firmware>true</iss_firmware>  
+    <iss_firmware>false</iss_firmware>  
     <iss_csv>false</iss_csv>  
     <iss_html>false</iss_html>  
     <iss_sv>false</iss_sv>  
@@ -30,7 +30,7 @@
     <iss_matlab>false</iss_matlab>  
     <header>false</header>  
     <html>false</html>  
-    <xrsl>false</xrsl>  
+    <xrsl>true</xrsl>  
     <word>false</word>  
     <rdl>false</rdl>  
     <erm>false</erm>  
@@ -60,8 +60,8 @@
   <illegalbins>false</illegalbins>  
   <arv_constraint>false</arv_constraint>  
   <bus>proprietary</bus>  
-  <reg_width>8</reg_width>  
-  <bus_width>8</bus_width>  
+  <reg_width>32</reg_width>  
+  <bus_width>32</bus_width>  
   <unit>8</unit>  
   <block_size/>  
   <chip_size/>  
@@ -76,9 +76,6 @@
   <seqconfig> 
     <output> 
       <seq_outputs> 
-        <firmware>true
-          <multioutput>false</multioutput> 
-        </firmware>  
         <uvm>true
           <multioutput>false</multioutput> 
         </uvm> 
