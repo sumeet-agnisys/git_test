@@ -6,12 +6,13 @@
   <log>false</log>  
   <outdir/>  
   <outputs> 
-    <vhdl>true</vhdl>  
+    <verilog>false</verilog>  
+    <verilog2001>true</verilog2001>  
     <ivs>false</ivs>  
     <arv>false</arv>  
     <special_reg/>  
     <cmsis>false</cmsis>  
-    <uvm>false</uvm>  
+    <uvm>true</uvm>  
     <perl>false</perl>  
     <python>false</python>  
     <cpp>false</cpp>  
@@ -25,7 +26,7 @@
     <iss_csv>false</iss_csv>  
     <iss_html>false</iss_html>  
     <iss_sv>false</iss_sv>  
-    <iss_uvm>true</iss_uvm>  
+    <iss_uvm>false</iss_uvm>  
     <iss_matlab>false</iss_matlab>  
     <header>false</header>  
     <html>false</html>  
@@ -42,7 +43,7 @@
     <csharp>false</csharp>  
     <sv>false</sv> 
   </outputs>  
-  <rtl_wire>false</rtl_wire>  
+  <rtl_wire>true</rtl_wire>  
   <limit_toc/>  
   <lowpower>false</lowpower>  
   <auto_sequence/>  
@@ -68,17 +69,13 @@
   <c_type/>  
   <big_endian>false</big_endian>  
   <little_endian>false</little_endian>  
-  <template_dir>C:\Users\Anupam\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>  
-  <check_only>false</check_only>  
+  <template_dir>C:\Program Files (x86)\Agnisys\iDSNG\ids_templates\datasheet</template_dir>  
+  <check_only>true</check_only>  
   <preserve_names>true</preserve_names>  
   <addr_sort>false</addr_sort>  
   <seqconfig> 
     <output> 
-      <seq_outputs> 
-        <uvm>true
-          <multioutput>false</multioutput> 
-        </uvm> 
-      </seq_outputs>  
+      <seq_outputs/>  
       <uvm> 
         <datatype> 
           <inlinefunction>int</inlinefunction>  
@@ -135,7 +132,7 @@
       </firmware>  
       <matlab> 
         <datatype> 
-          <inlinefunction>int</inlinefunction>  
+          <inlinefunction>integer</inlinefunction>  
           <arguments>integer</arguments>  
           <constant>integer</constant>  
           <variable>integer</variable> 

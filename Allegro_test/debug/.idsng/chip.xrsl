@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1"?><chip name="chip_name" id="2:2"><config><regwidth>32</regwidth><buswidth>32</buswidth><addressunit>8</addressunit><variants><variant name="none" isselected="true">
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip name="chip_name" id="2:2"><config><variants><variant name="none" isselected="true">
          <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
-      </variant></variants></config><block name="block_name" id="3:2"><section name="reg_1" id="4:2" ><reg name="reg_name2" id="5:2">
+      </variant></variants><regwidth>32</regwidth><buswidth>32</buswidth><addressunit>8</addressunit></config><block name="block_name" id="3:2"><section name="reg_1" id="4:2"><reg name="reg_name2" id="5:2">
    <config>
       <regwidth>8</regwidth>
    </config>
