@@ -252,6 +252,7 @@ div#idsexcelcontainer td div {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
+    /*user-select: all;*/
 }
 
 .overflow {

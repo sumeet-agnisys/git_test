@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab0.9282431322645139" name="Register Map Fields" offset="0" coverage="on" reset_type="async" rtl.bit_enable="true" output_file_name="reg_map" module_name="reg_map" u_use_eeprom="true" u_field_names="true" uid="2018-12-07T18:54:18.431+05:30d14e1" keypath="RegisterMapFields" caddress="0" hwmapaddr="1" csize="188" address="0x00" endaddress="0xBB" size="188">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="0" address="0x00" endaddress="0xBB" size="188"/>
+      </busdomains>
+   </config>
+   <doc>-- deletes the addresses from names, "h1b_active_qvo_r" becomes "active_qvo_r"hdl_path= dig_top  Note 0: Do not change Names, Addresses, or Bit positions for fields colored in purple. Please consult if a change is needed.  Note 1: Where "dev_lock" bit is. This bit is used to lock the serial interface. Note 2: Where "clk_trim" and "iddq_trim" bits are. The "ee_addr" bits must rst to the address that these fields are in. Note 3: If In Shadow the HDL path are included and match the register names.Note: The following key word/fields are reserved and used to parameterizy the EEPROM controllers and should be defined in EEPROM, SHADOW, and VOLATILE memory. If eliminated will default to reset values. EEPROM/SHADOW cp_cntrl cp_rup_sel [1:0]  cp_hv_sel [1:0]  cp_rdn_sel [1:0]  VOLATILE cp_dis_abort cp_dac [5:0]  cp_use_dac  cp_force_en cp_err</doc>
+   <section heading="1.1" child_no="1" id="tab0.4412323197667105" name="eeprom" offset="0" coverage="on" u_use_self_test="true" u_use_margin_test="true" no_reg_hw_reset_test="true" uid="2018-12-07T18:54:18.431+05:30d14e15" keypath="RegisterMapFields.eeprom,eeprom" keypathdown="eeprom.loc.wlot.id.dpe.scratch_c.cust0_c.cust1_c.conf0.conf1.tds0134.tdq0134.tdsq2,loc,wlot,id,dpe,scratch_c,cust0_c,cust1_c,conf0,conf1,tds0134,tdq0134,tdsq2" hwmapaddr="2" max_reg_size="32" csize="48" caddress="0" address="0x00" endaddress="0x2F" size="48">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="0" address="0x00" endaddress="0x2F" size="48"/>
+         </busdomains>
+      </config>
+      <doc/>
+      <reg heading="1.1.1" child_no="1" id="tab0.625738851443928" name="loc" hdl_path="u_EEPROM_TOP.eeprom_array.mem[0]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e18" keypath="RegisterMapFields.eeprom.loc,eeprom.loc,loc" hwmapaddr="3" csize="4" offset="0" caddress="0" address="0x00" endaddress="0x3" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="0" address="0x00" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_4" offset="5:0" name="eeprom_rev" uid="2018-12-07T18:54:18.431+05:30d14e23" keypath="RegisterMapFields.eeprom.loc.eeprom_rev,eeprom.loc.eeprom_rev,loc.eeprom_rev,eeprom_rev">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>EEPROM Revision</doc>
+         </field>
+         <field id="field_3" offset="13:6" name="x_die_loc" uid="2018-12-07T18:54:18.431+05:30d14e32" keypath="RegisterMapFields.eeprom.loc.x_die_loc,eeprom.loc.x_die_loc,loc.x_die_loc,x_die_loc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000</default>
+            <doc>8 bits X die location ( accommodates up to 256 dies in X)</doc>
+         </field>
+         <field id="field_2" offset="21:14" name="y_die_loc" uid="2018-12-07T18:54:18.431+05:30d14e41" keypath="RegisterMapFields.eeprom.loc.y_die_loc,eeprom.loc.y_die_loc,loc.y_die_loc,y_die_loc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000</default>
+            <doc>8 bits Y die location ( accommodates up to 256 dies in Y)</doc>
+         </field>
+         <field id="field_1" offset="25:22" name="itest" uid="2018-12-07T18:54:18.431+05:30d14e50" keypath="RegisterMapFields.eeprom.loc.itest,eeprom.loc.itest,loc.itest,itest">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+            <doc>Binary count of test insertions (including retests)</doc>
+         </field>
+         <field id="field_0" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e59" keypath="RegisterMapFields.eeprom.loc.ecc,eeprom.loc.ecc,loc.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" id="tab0.8275385918016778" name="wlot" hdl_path="u_EEPROM_TOP.eeprom_array.mem[1]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e68" keypath="RegisterMapFields.eeprom.wlot,eeprom.wlot,wlot" hwmapaddr="4" csize="4" offset="4" caddress="4" address="0x04" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="4" address="0x04" endaddress="0x7" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_8" offset="5:0" name="factory_wafer" uid="2018-12-07T18:54:18.431+05:30d14e73" keypath="RegisterMapFields.eeprom.wlot.factory_wafer,eeprom.wlot.factory_wafer,wlot.factory_wafer,factory_wafer">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Factory Wafer (stores up to 64 wafers)</doc>
+         </field>
+         <field id="field_7" offset="21:6" name="factory_lot" uid="2018-12-07T18:54:18.431+05:30d14e82" keypath="RegisterMapFields.eeprom.wlot.factory_lot,eeprom.wlot.factory_lot,wlot.factory_lot,factory_lot">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+            <doc>Factory Lot (uses 3rd ? 7th digits of the lot number)</doc>
+         </field>
+         <field id="field_6" offset="25:22" name="ptest" uid="2018-12-07T18:54:18.431+05:30d14e91" keypath="RegisterMapFields.eeprom.wlot.ptest,eeprom.wlot.ptest,wlot.ptest,ptest">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+            <doc>Binary "last" Operation Identifier (Post Bake 1-3, FT R/H, FT R/C, Etc.)</doc>
+         </field>
+         <field id="field_5" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e100" keypath="RegisterMapFields.eeprom.wlot.ecc,eeprom.wlot.ecc,wlot.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.3" child_no="3" id="tab0.2559210581361836" name="id" hdl_path="u_EEPROM_TOP.eeprom_array.mem[2]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e109" keypath="RegisterMapFields.eeprom.id,eeprom.id,id" hwmapaddr="5" csize="4" offset="8" caddress="8" address="0x08" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="8" address="0x08" endaddress="0xB" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_11" offset="9:0" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e114" keypath="RegisterMapFields.eeprom.id.unused,eeprom.id.unused,id.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000000</default>
+            <doc>Spare bits for DPE</doc>
+         </field>
+         <field id="field_10" offset="25:10" name="cas_id" uid="2018-12-07T18:54:18.431+05:30d14e123" keypath="RegisterMapFields.eeprom.id.cas_id,eeprom.id.cas_id,id.cas_id,cas_id">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+            <doc>CAS/ID for Customer Code</doc>
+         </field>
+         <field id="field_9" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e132" keypath="RegisterMapFields.eeprom.id.ecc,eeprom.id.ecc,id.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.4" child_no="4" id="tab0.005243529470079666" name="dpe" hdl_path="u_EEPROM_TOP.eeprom_array.mem[3]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e141" keypath="RegisterMapFields.eeprom.dpe,eeprom.dpe,dpe" hwmapaddr="6" csize="4" offset="12" caddress="12" address="0x0C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="12" address="0x0C" endaddress="0xF" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_13" offset="25:0" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e146" keypath="RegisterMapFields.eeprom.dpe.unused,eeprom.dpe.unused,dpe.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+            <doc>Spare bits for DPE</doc>
+         </field>
+         <field id="field_12" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e155" keypath="RegisterMapFields.eeprom.dpe.ecc,eeprom.dpe.ecc,dpe.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.5" child_no="5" id="tab0.40471678074150863" name="scratch_c" hdl_path="u_EEPROM_TOP.eeprom_array.mem[4]" u_lock="!(factory_access || customer_access)" uid="2018-12-07T18:54:18.431+05:30d14e164" keypath="RegisterMapFields.eeprom.scratch_c,eeprom.scratch_c,scratch_c" hwmapaddr="7" csize="4" offset="16" caddress="16" address="0x10" endaddress="0x13" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="16" address="0x10" endaddress="0x13" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_15" offset="25:0" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e169" keypath="RegisterMapFields.eeprom.scratch_c.unused,eeprom.scratch_c.unused,scratch_c.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+         </field>
+         <field id="field_14" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e176" keypath="RegisterMapFields.eeprom.scratch_c.ecc,eeprom.scratch_c.ecc,scratch_c.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.6" child_no="6" id="tab0.09481445341351857" name="cust0_c" hdl_path="u_EEPROM_TOP.eeprom_array.mem[5]" u_lock="!(factory_access || customer_access)" uid="2018-12-07T18:54:18.431+05:30d14e185" keypath="RegisterMapFields.eeprom.cust0_c,eeprom.cust0_c,cust0_c" hwmapaddr="8" csize="4" offset="20" caddress="20" address="0x14" endaddress="0x17" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="20" address="0x14" endaddress="0x17" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_20" offset="8:0" name="sensf" uid="2018-12-07T18:54:18.431+05:30d14e190" keypath="RegisterMapFields.eeprom.cust0_c.sensf,eeprom.cust0_c.sensf,cust0_c.sensf,sensf">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000000</default>
+            <doc>Sensitivity, fine adjustment</doc>
+         </field>
+         <field id="field_19" offset="17:9" name="qvof" uid="2018-12-07T18:54:18.431+05:30d14e199" keypath="RegisterMapFields.eeprom.cust0_c.qvof,eeprom.cust0_c.qvof,cust0_c.qvof,qvof">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000000</default>
+            <doc>Quiescent Output Voltage (QVO), fine adjustment</doc>
+         </field>
+         <field id="field_18" offset="19:18" name="sensc" uid="2018-12-07T18:54:18.431+05:30d14e208" keypath="RegisterMapFields.eeprom.cust0_c.sensc,eeprom.cust0_c.sensc,cust0_c.sensc,sensc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Coarse Sensitivity</doc>
+         </field>
+         <field id="field_17" offset="25:20" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e217" keypath="RegisterMapFields.eeprom.cust0_c.unused,eeprom.cust0_c.unused,cust0_c.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="field_16" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e224" keypath="RegisterMapFields.eeprom.cust0_c.ecc,eeprom.cust0_c.ecc,cust0_c.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.7" child_no="7" id="tab0.36546221314328264" name="cust1_c" hdl_path="u_EEPROM_TOP.eeprom_array.mem[6]" u_lock="!(factory_access || customer_access)" uid="2018-12-07T18:54:18.431+05:30d14e233" keypath="RegisterMapFields.eeprom.cust1_c,eeprom.cust1_c,cust1_c" hwmapaddr="9" csize="4" offset="24" caddress="24" address="0x18" endaddress="0x1B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="24" address="0x18" endaddress="0x1B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_34" offset="0" name="temp_out_dis" uid="2018-12-07T18:54:18.431+05:30d14e238" keypath="RegisterMapFields.eeprom.cust1_c.temp_out_dis,eeprom.cust1_c.temp_out_dis,cust1_c.temp_out_dis,temp_out_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Disables the temperature output</doc>
+         </field>
+         <field id="field_33" offset="1" name="uvlo_dis" uid="2018-12-07T18:54:18.431+05:30d14e247" keypath="RegisterMapFields.eeprom.cust1_c.uvlo_dis,eeprom.cust1_c.uvlo_dis,cust1_c.uvlo_dis,uvlo_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Disables any function related to UVLO</doc>
+         </field>
+         <field id="field_32" offset="2" name="rat_dis" uid="2018-12-07T18:54:18.431+05:30d14e256" keypath="RegisterMapFields.eeprom.cust1_c.rat_dis,eeprom.cust1_c.rat_dis,cust1_c.rat_dis,rat_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Ratiometry disable</doc>
+         </field>
+         <field id="field_31" offset="3" name="rx_init_wait" uid="2018-12-07T18:54:18.431+05:30d14e265" keypath="RegisterMapFields.eeprom.cust1_c.rx_init_wait,eeprom.cust1_c.rx_init_wait,cust1_c.rx_init_wait,rx_init_wait">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Description: Sets the wait time for the first Manchester. Refer to the serial interface timing diagrams.0: Fast mode1: Slow mode</doc>
+         </field>
+         <field id="field_30" offset="4" name="uni_en" uid="2018-12-07T18:54:18.431+05:30d14e274" keypath="RegisterMapFields.eeprom.cust1_c.uni_en,eeprom.cust1_c.uni_en,cust1_c.uni_en,uni_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Enables Unidirectional Output</doc>
+         </field>
+         <field id="field_29" offset="5" name="clamp_en" uid="2018-12-07T18:54:18.431+05:30d14e283" keypath="RegisterMapFields.eeprom.cust1_c.clamp_en,eeprom.cust1_c.clamp_en,cust1_c.clamp_en,clamp_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Clamp enable</doc>
+         </field>
+         <field id="field_28" offset="6" name="pol" uid="2018-12-07T18:54:18.431+05:30d14e292" keypath="RegisterMapFields.eeprom.cust1_c.pol,eeprom.cust1_c.pol,cust1_c.pol,pol">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Reverses output polarity</doc>
+         </field>
+         <field id="field_27" offset="7" name="dev_lock" uid="2018-12-07T18:54:18.431+05:30d14e301" keypath="RegisterMapFields.eeprom.cust1_c.dev_lock,eeprom.cust1_c.dev_lock,cust1_c.dev_lock,dev_lock">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Bit to lock the serial interface from receiving data</doc>
+         </field>
+         <field id="field_26" offset="8" name="ee_sparec_0" uid="2018-12-07T18:54:18.431+05:30d14e310" keypath="RegisterMapFields.eeprom.cust1_c.ee_sparec_0,eeprom.cust1_c.ee_sparec_0,cust1_c.ee_sparec_0,ee_sparec_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_25" offset="9" name="ee_sparec_1" uid="2018-12-07T18:54:18.431+05:30d14e320" keypath="RegisterMapFields.eeprom.cust1_c.ee_sparec_1,eeprom.cust1_c.ee_sparec_1,cust1_c.ee_sparec_1,ee_sparec_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_24" offset="10" name="ee_sparec_2" uid="2018-12-07T18:54:18.431+05:30d14e329" keypath="RegisterMapFields.eeprom.cust1_c.ee_sparec_2,eeprom.cust1_c.ee_sparec_2,cust1_c.ee_sparec_2,ee_sparec_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_23" offset="11" name="ee_sparec_3" uid="2018-12-07T18:54:18.431+05:30d14e338" keypath="RegisterMapFields.eeprom.cust1_c.ee_sparec_3,eeprom.cust1_c.ee_sparec_3,cust1_c.ee_sparec_3,ee_sparec_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_22" offset="25:12" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e347" keypath="RegisterMapFields.eeprom.cust1_c.unused,eeprom.cust1_c.unused,cust1_c.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000</default>
+         </field>
+         <field id="field_21" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e354" keypath="RegisterMapFields.eeprom.cust1_c.ecc,eeprom.cust1_c.ecc,cust1_c.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.8" child_no="8" id="tab0.5411627594689877" name="conf0" hdl_path="u_EEPROM_TOP.eeprom_array.mem[7]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e363" keypath="RegisterMapFields.eeprom.conf0,eeprom.conf0,conf0" hwmapaddr="10" csize="4" offset="28" caddress="28" address="0x1C" endaddress="0x1F" size="4" default="0x00000008" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="28" address="0x1C" endaddress="0x1F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_42" offset="3:0" name="clk_trim" uid="2018-12-07T18:54:18.431+05:30d14e368" keypath="RegisterMapFields.eeprom.conf0.clk_trim,eeprom.conf0.clk_trim,conf0.clk_trim,clk_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x8">1000</default>
+            <doc>Clock/Oscillator trim bits.</doc>
+         </field>
+         <field id="field_41" offset="7:4" name="ibias_trim" uid="2018-12-07T18:54:18.431+05:30d14e377" keypath="RegisterMapFields.eeprom.conf0.ibias_trim,eeprom.conf0.ibias_trim,conf0.ibias_trim,ibias_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+            <doc>Bias Current trim bits.</doc>
+         </field>
+         <field id="field_40" offset="12:8" name="clh_trim" uid="2018-12-07T18:54:18.431+05:30d14e386" keypath="RegisterMapFields.eeprom.conf0.clh_trim,eeprom.conf0.clh_trim,conf0.clh_trim,clh_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="field_39" offset="17:13" name="cll_trim" uid="2018-12-07T18:54:18.431+05:30d14e393" keypath="RegisterMapFields.eeprom.conf0.cll_trim,eeprom.conf0.cll_trim,conf0.cll_trim,cll_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="field_38" offset="19:18" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e400" keypath="RegisterMapFields.eeprom.conf0.unused,eeprom.conf0.unused,conf0.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+         </field>
+         <field id="field_37" offset="22:20" name="vepi_tcn" uid="2018-12-07T18:54:18.431+05:30d14e407" keypath="RegisterMapFields.eeprom.conf0.vepi_tcn,eeprom.conf0.vepi_tcn,conf0.vepi_tcn,vepi_tcn">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+            <doc>Sensitivity TC Slope - Numerator</doc>
+         </field>
+         <field id="field_36" offset="25:23" name="vepi_tcd" uid="2018-12-07T18:54:18.431+05:30d14e416" keypath="RegisterMapFields.eeprom.conf0.vepi_tcd,eeprom.conf0.vepi_tcd,conf0.vepi_tcd,vepi_tcd">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+            <doc>Sensitivity TC Slope - Denominator</doc>
+         </field>
+         <field id="field_35" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e425" keypath="RegisterMapFields.eeprom.conf0.ecc,eeprom.conf0.ecc,conf0.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.9" child_no="9" id="tab0.44821354595907004" name="conf1" hdl_path="u_EEPROM_TOP.eeprom_array.mem[8]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e434" keypath="RegisterMapFields.eeprom.conf1,eeprom.conf1,conf1" hwmapaddr="11" csize="4" offset="32" caddress="32" address="0x20" endaddress="0x23" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="32" address="0x20" endaddress="0x23" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_54" offset="0" name="tdsenssd_en" uid="2018-12-07T18:54:18.431+05:30d14e439" keypath="RegisterMapFields.eeprom.conf1.tdsenssd_en,eeprom.conf1.tdsenssd_en,conf1.tdsenssd_en,tdsenssd_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Double TDSENS Step (max range 0: +/-6.25% , 1: +/-12.5%)</doc>
+         </field>
+         <field id="field_53" offset="1" name="temp_smth_dis" uid="2018-12-07T18:54:18.431+05:30d14e448" keypath="RegisterMapFields.eeprom.conf1.temp_smth_dis,eeprom.conf1.temp_smth_dis,conf1.temp_smth_dis,temp_smth_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Disable the TEMP ADC smoothing</doc>
+         </field>
+         <field id="field_52" offset="2" name="temp_hyst_dis" uid="2018-12-07T18:54:18.431+05:30d14e457" keypath="RegisterMapFields.eeprom.conf1.temp_hyst_dis,eeprom.conf1.temp_hyst_dis,conf1.temp_hyst_dis,temp_hyst_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Temperature Hysteresis Disable</doc>
+         </field>
+         <field id="field_51" offset="9:3" name="temp_offset" uid="2018-12-07T18:54:18.431+05:30d14e466" keypath="RegisterMapFields.eeprom.conf1.temp_offset,eeprom.conf1.temp_offset,conf1.temp_offset,temp_offset">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+            <doc>Temperature offset</doc>
+         </field>
+         <field id="field_50" offset="15:10" name="temp_slope_trim" uid="2018-12-07T18:54:18.431+05:30d14e475" keypath="RegisterMapFields.eeprom.conf1.temp_slope_trim,eeprom.conf1.temp_slope_trim,conf1.temp_slope_trim,temp_slope_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="field_49" offset="20:16" name="sns_rat_trim" uid="2018-12-07T18:54:18.431+05:30d14e482" keypath="RegisterMapFields.eeprom.conf1.sns_rat_trim,eeprom.conf1.sns_rat_trim,conf1.sns_rat_trim,sns_rat_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="field_48" offset="21" name="qvo_halfstep" uid="2018-12-07T18:54:18.431+05:30d14e489" keypath="RegisterMapFields.eeprom.conf1.qvo_halfstep,eeprom.conf1.qvo_halfstep,conf1.qvo_halfstep,qvo_halfstep">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="field_47" offset="22" name="ee_sparef_0" uid="2018-12-07T18:54:18.431+05:30d14e496" keypath="RegisterMapFields.eeprom.conf1.ee_sparef_0,eeprom.conf1.ee_sparef_0,conf1.ee_sparef_0,ee_sparef_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_46" offset="23" name="ee_sparef_1" uid="2018-12-07T18:54:18.431+05:30d14e505" keypath="RegisterMapFields.eeprom.conf1.ee_sparef_1,eeprom.conf1.ee_sparef_1,conf1.ee_sparef_1,ee_sparef_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_45" offset="24" name="ee_sparef_2" uid="2018-12-07T18:54:18.431+05:30d14e515" keypath="RegisterMapFields.eeprom.conf1.ee_sparef_2,eeprom.conf1.ee_sparef_2,conf1.ee_sparef_2,ee_sparef_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_44" offset="25" name="ee_sparef_3" uid="2018-12-07T18:54:18.431+05:30d14e524" keypath="RegisterMapFields.eeprom.conf1.ee_sparef_3,eeprom.conf1.ee_sparef_3,conf1.ee_sparef_3,ee_sparef_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_43" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e533" keypath="RegisterMapFields.eeprom.conf1.ecc,eeprom.conf1.ecc,conf1.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.10" child_no="10" id="tab0.24917244876719857" name="tds0134" hdl_path="u_EEPROM_TOP.eeprom_array.mem[9]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e543" keypath="RegisterMapFields.eeprom.tds0134,eeprom.tds0134,tds0134" hwmapaddr="12" csize="4" offset="36" caddress="36" address="0x24" endaddress="0x27" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="36" address="0x24" endaddress="0x27" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_60" offset="5:0" name="tdsens_0" uid="2018-12-07T18:54:18.431+05:30d14e548" keypath="RegisterMapFields.eeprom.tds0134.tdsens_0,eeprom.tds0134.tdsens_0,tds0134.tdsens_0,tdsens_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. TDSense for beginning of region 1: -57?C</doc>
+         </field>
+         <field id="field_59" offset="11:6" name="tdsens_1" uid="2018-12-07T18:54:18.431+05:30d14e557" keypath="RegisterMapFields.eeprom.tds0134.tdsens_1,eeprom.tds0134.tdsens_1,tds0134.tdsens_1,tdsens_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. TDSense for end of region1, beginning of region 2: ~2?C</doc>
+         </field>
+         <field id="field_58" offset="17:12" name="tdsens_3" uid="2018-12-07T18:54:18.431+05:30d14e566" keypath="RegisterMapFields.eeprom.tds0134.tdsens_3,eeprom.tds0134.tdsens_3,tds0134.tdsens_3,tdsens_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for end of region 3, beginning of region 4: 120?C</doc>
+         </field>
+         <field id="field_57" offset="23:18" name="tdsens_4" uid="2018-12-07T18:54:18.431+05:30d14e575" keypath="RegisterMapFields.eeprom.tds0134.tdsens_4,eeprom.tds0134.tdsens_4,tds0134.tdsens_4,tdsens_4">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for end of region 4: 179?C</doc>
+         </field>
+         <field id="field_56" offset="25:24" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e584" keypath="RegisterMapFields.eeprom.tds0134.unused,eeprom.tds0134.unused,tds0134.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Unused</doc>
+         </field>
+         <field id="field_55" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e593" keypath="RegisterMapFields.eeprom.tds0134.ecc,eeprom.tds0134.ecc,tds0134.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.11" child_no="11" id="tab0.17972877102890883" name="tdq0134" hdl_path="u_EEPROM_TOP.eeprom_array.mem[10]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e602" keypath="RegisterMapFields.eeprom.tdq0134,eeprom.tdq0134,tdq0134" hwmapaddr="13" csize="4" offset="40" caddress="40" address="0x28" endaddress="0x2B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="40" address="0x28" endaddress="0x2B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_66" offset="5:0" name="tdqvo_0" uid="2018-12-07T18:54:18.431+05:30d14e607" keypath="RegisterMapFields.eeprom.tdq0134.tdqvo_0,eeprom.tdq0134.tdqvo_0,tdq0134.tdqvo_0,tdqvo_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. DQVO for beginning of region 1: -57?C</doc>
+         </field>
+         <field id="field_65" offset="11:6" name="tdqvo_1" uid="2018-12-07T18:54:18.431+05:30d14e616" keypath="RegisterMapFields.eeprom.tdq0134.tdqvo_1,eeprom.tdq0134.tdqvo_1,tdq0134.tdqvo_1,tdqvo_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. DQVO for end of region1, beginning of region 2: ~2?C</doc>
+         </field>
+         <field id="field_64" offset="17:12" name="tdqvo_3" uid="2018-12-07T18:54:18.431+05:30d14e625" keypath="RegisterMapFields.eeprom.tdq0134.tdqvo_3,eeprom.tdq0134.tdqvo_3,tdq0134.tdqvo_3,tdqvo_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. DQVO for end of region 3, beginning of region 4: 120?C</doc>
+         </field>
+         <field id="field_63" offset="23:18" name="tdqvo_4" uid="2018-12-07T18:54:18.431+05:30d14e634" keypath="RegisterMapFields.eeprom.tdq0134.tdqvo_4,eeprom.tdq0134.tdqvo_4,tdq0134.tdqvo_4,tdqvo_4">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. DQVO for end of region 4: 179?C</doc>
+         </field>
+         <field id="field_62" offset="25:24" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e643" keypath="RegisterMapFields.eeprom.tdq0134.unused,eeprom.tdq0134.unused,tdq0134.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Unused</doc>
+         </field>
+         <field id="field_61" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e652" keypath="RegisterMapFields.eeprom.tdq0134.ecc,eeprom.tdq0134.ecc,tdq0134.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+      <reg heading="1.1.12" child_no="12" id="tab0.9731349179008323" name="tdsq2" hdl_path="u_EEPROM_TOP.eeprom_array.mem[11]" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e661" keypath="RegisterMapFields.eeprom.tdsq2,eeprom.tdsq2,tdsq2" hwmapaddr="14" csize="4" offset="44" caddress="44" address="0x2C" endaddress="0x2F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="44" address="0x2C" endaddress="0x2F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_74" offset="5:0" name="tdsens_2" uid="2018-12-07T18:54:18.431+05:30d14e666" keypath="RegisterMapFields.eeprom.tdsq2.tdsens_2,eeprom.tdsq2.tdsens_2,tdsq2.tdsens_2,tdsens_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. TDSense for end of region 2, beginning of region 3: 61?C</doc>
+         </field>
+         <field id="field_73" offset="11:6" name="tdqvo_2" uid="2018-12-07T18:54:18.431+05:30d14e675" keypath="RegisterMapFields.eeprom.tdsq2.tdqvo_2,eeprom.tdsq2.tdqvo_2,tdsq2.tdqvo_2,tdqvo_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>2's. DQVO for end of region 2, beginning of region 3: 61?C</doc>
+         </field>
+         <field id="field_72" offset="13:12" name="prescaler" uid="2018-12-07T18:54:18.431+05:30d14e684" keypath="RegisterMapFields.eeprom.tdsq2.prescaler,eeprom.tdsq2.prescaler,tdsq2.prescaler,prescaler">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Update rate for temperatures moothing functions00=No additional delay01=512 us / 1.95K Hz (4096)10=8.192ms / 122 Hz (65536)11=16.384ms / 61 Hz (131071)</doc>
+         </field>
+         <field id="field_71" offset="15:14" name="cp_rup_sel" uid="2018-12-07T18:54:18.431+05:30d14e693" keypath="RegisterMapFields.eeprom.tdsq2.cp_rup_sel,eeprom.tdsq2.cp_rup_sel,tdsq2.cp_rup_sel,cp_rup_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Selects the ramp up time for the charge pump. Values are TBD.</doc>
+         </field>
+         <field id="field_70" offset="17:16" name="cp_hv_sel" uid="2018-12-07T18:54:18.431+05:30d14e702" keypath="RegisterMapFields.eeprom.tdsq2.cp_hv_sel,eeprom.tdsq2.cp_hv_sel,tdsq2.cp_hv_sel,cp_hv_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Selects the time the cp_dac remains at its max value (0x3F). Values are TBD.</doc>
+         </field>
+         <field id="field_69" offset="19:18" name="cp_rdn_sel" uid="2018-12-07T18:54:18.431+05:30d14e711" keypath="RegisterMapFields.eeprom.tdsq2.cp_rdn_sel,eeprom.tdsq2.cp_rdn_sel,tdsq2.cp_rdn_sel,cp_rdn_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Selects the ramp down time for the charge pump. Values are TBD.</doc>
+         </field>
+         <field id="field_68" offset="25:20" name="unused" uid="2018-12-07T18:54:18.431+05:30d14e720" keypath="RegisterMapFields.eeprom.tdsq2.unused,eeprom.tdsq2.unused,tdsq2.unused,unused">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Unused</doc>
+         </field>
+         <field id="field_67" offset="31:26" name="ecc" uid="2018-12-07T18:54:18.431+05:30d14e729" keypath="RegisterMapFields.eeprom.tdsq2.ecc,eeprom.tdsq2.ecc,tdsq2.ecc,ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Error Code Correction</doc>
+         </field>
+      </reg>
+   </section>
+   <emptyspace heading="1.2" child_no="2" address="0x30" endaddress="0x3F">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AMBA" addressUnit="8" address="0x30" endaddress="0x3F"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <section heading="1.2" child_no="3" id="tab0.029096398673805868" name="shadow" offset="64" uid="2018-12-07T18:54:18.431+05:30d14e738" keypath="RegisterMapFields.shadow,shadow" keypathdown="shadow.s_cust0_c.s_cust1_c.s_conf0.s_conf1.s_tds0134.s_tdq0134.s_tdsq2,s_cust0_c,s_cust1_c,s_conf0,s_conf1,s_tds0134,s_tdq0134,s_tdsq2" hwmapaddr="15" max_reg_size="32" csize="48" caddress="64" address="0x40" endaddress="0x6F" size="48">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="64" address="0x40" endaddress="0x6F" size="48"/>
+         </busdomains>
+      </config>
+      <emptyspace heading="1.3.1" child_no="1" address="0x40" endaddress="0x53">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" address="0x40" endaddress="0x53"/>
+            </busdomains>
+         </config>
+      </emptyspace>
+      <reg heading="1.2.1" child_no="2" id="tab0.5056233881703885" name="s_cust0_c" offset="20" u_shadow_address="5" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.shadow_s_cust0_c_" u_lock="!(factory_access || customer_access)" uid="2018-12-07T18:54:18.431+05:30d14e740" keypath="RegisterMapFields.shadow.s_cust0_c,shadow.s_cust0_c,s_cust0_c" hwmapaddr="16" csize="4" caddress="20" address="0x54" endaddress="0x57" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="20" address="0x54" endaddress="0x57" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_77" offset="8:0" name="sensf" uid="2018-12-07T18:54:18.431+05:30d14e745" keypath="RegisterMapFields.shadow.s_cust0_c.sensf,shadow.s_cust0_c.sensf,s_cust0_c.sensf,sensf">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000000</default>
+            <doc>Sensitivity, fine adjustment</doc>
+         </field>
+         <field id="field_76" offset="17:9" name="qvof" uid="2018-12-07T18:54:18.431+05:30d14e754" keypath="RegisterMapFields.shadow.s_cust0_c.qvof,shadow.s_cust0_c.qvof,s_cust0_c.qvof,qvof">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000000</default>
+            <doc>Quiescent Output Voltage (QVO), fine adjustment</doc>
+         </field>
+         <field id="field_75" offset="19:18" name="sensc" uid="2018-12-07T18:54:18.431+05:30d14e763" keypath="RegisterMapFields.shadow.s_cust0_c.sensc,shadow.s_cust0_c.sensc,s_cust0_c.sensc,sensc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Coarse Sensitivity</doc>
+         </field>
+      </reg>
+      <reg heading="1.2.2" child_no="3" id="tab0.27158346936905975" name="s_cust1_c" u_shadow_address="6" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.shadow_s_cust1_c_" u_lock="!(factory_access || customer_access)" uid="2018-12-07T18:54:18.431+05:30d14e772" keypath="RegisterMapFields.shadow.s_cust1_c,shadow.s_cust1_c,s_cust1_c" hwmapaddr="17" csize="4" offset="24" caddress="24" address="0x58" endaddress="0x5B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="24" address="0x58" endaddress="0x5B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_89" offset="0" name="temp_out_dis" uid="2018-12-07T18:54:18.431+05:30d14e777" keypath="RegisterMapFields.shadow.s_cust1_c.temp_out_dis,shadow.s_cust1_c.temp_out_dis,s_cust1_c.temp_out_dis,temp_out_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Disables the temperature output</doc>
+         </field>
+         <field id="field_88" offset="1" name="uvlo_dis" uid="2018-12-07T18:54:18.431+05:30d14e786" keypath="RegisterMapFields.shadow.s_cust1_c.uvlo_dis,shadow.s_cust1_c.uvlo_dis,s_cust1_c.uvlo_dis,uvlo_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Disables any function related to UVLO</doc>
+         </field>
+         <field id="field_87" offset="2" name="rat_dis" uid="2018-12-07T18:54:18.431+05:30d14e795" keypath="RegisterMapFields.shadow.s_cust1_c.rat_dis,shadow.s_cust1_c.rat_dis,s_cust1_c.rat_dis,rat_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Ratiometry disable</doc>
+         </field>
+         <field id="field_86" offset="3" name="rx_init_wait" uid="2018-12-07T18:54:18.431+05:30d14e804" keypath="RegisterMapFields.shadow.s_cust1_c.rx_init_wait,shadow.s_cust1_c.rx_init_wait,s_cust1_c.rx_init_wait,rx_init_wait">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Description: Sets the wait time for the first Manchester. Refer to the serial interface timing diagrams.0: Fast mode1: Slow mode</doc>
+         </field>
+         <field id="field_85" offset="4" name="uni_en" uid="2018-12-07T18:54:18.431+05:30d14e813" keypath="RegisterMapFields.shadow.s_cust1_c.uni_en,shadow.s_cust1_c.uni_en,s_cust1_c.uni_en,uni_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Enables Unidirectional Output</doc>
+         </field>
+         <field id="field_84" offset="5" name="clamp_en" uid="2018-12-07T18:54:18.431+05:30d14e822" keypath="RegisterMapFields.shadow.s_cust1_c.clamp_en,shadow.s_cust1_c.clamp_en,s_cust1_c.clamp_en,clamp_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Clamp enable</doc>
+         </field>
+         <field id="field_83" offset="6" name="pol" uid="2018-12-07T18:54:18.431+05:30d14e831" keypath="RegisterMapFields.shadow.s_cust1_c.pol,shadow.s_cust1_c.pol,s_cust1_c.pol,pol">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Reverses output polarity</doc>
+         </field>
+         <field id="field_82" offset="7" name="dev_lock" uid="2018-12-07T18:54:18.431+05:30d14e840" keypath="RegisterMapFields.shadow.s_cust1_c.dev_lock,shadow.s_cust1_c.dev_lock,s_cust1_c.dev_lock,dev_lock">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Bit to lock the serial interface from receiving data</doc>
+         </field>
+         <field id="field_81" offset="8" name="ee_sparec_0" uid="2018-12-07T18:54:18.431+05:30d14e849" keypath="RegisterMapFields.shadow.s_cust1_c.ee_sparec_0,shadow.s_cust1_c.ee_sparec_0,s_cust1_c.ee_sparec_0,ee_sparec_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_80" offset="9" name="ee_sparec_1" uid="2018-12-07T18:54:18.431+05:30d14e859" keypath="RegisterMapFields.shadow.s_cust1_c.ee_sparec_1,shadow.s_cust1_c.ee_sparec_1,s_cust1_c.ee_sparec_1,ee_sparec_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_79" offset="10" name="ee_sparec_2" uid="2018-12-07T18:54:18.431+05:30d14e868" keypath="RegisterMapFields.shadow.s_cust1_c.ee_sparec_2,shadow.s_cust1_c.ee_sparec_2,s_cust1_c.ee_sparec_2,ee_sparec_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+         <field id="field_78" offset="11" name="ee_sparec_3" uid="2018-12-07T18:54:18.431+05:30d14e877" keypath="RegisterMapFields.shadow.s_cust1_c.ee_sparec_3,shadow.s_cust1_c.ee_sparec_3,s_cust1_c.ee_sparec_3,ee_sparec_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare brought to digital top</doc>
+         </field>
+      </reg>
+      <reg heading="1.2.3" child_no="4" id="tab0.8490035385021784" name="s_conf0" u_shadow_address="7" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e886" keypath="RegisterMapFields.shadow.s_conf0,shadow.s_conf0,s_conf0" hwmapaddr="18" csize="4" offset="28" caddress="28" address="0x5C" endaddress="0x5F" size="4" default="0x00000008" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="28" address="0x5C" endaddress="0x5F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_95" offset="3:0" name="clk_trim" uid="2018-12-07T18:54:18.431+05:30d14e891" keypath="RegisterMapFields.shadow.s_conf0.clk_trim,shadow.s_conf0.clk_trim,s_conf0.clk_trim,clk_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x8">1000</default>
+            <doc>Oscillator trim bits. Directly drives osc_trim [3:0]  output. Preloaded during POR.</doc>
+         </field>
+         <field id="field_94" offset="7:4" name="ibias_trim" uid="2018-12-07T18:54:18.431+05:30d14e900" keypath="RegisterMapFields.shadow.s_conf0.ibias_trim,shadow.s_conf0.ibias_trim,s_conf0.ibias_trim,ibias_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+            <doc>Trims the master bias current. Preloaded during POR. Directly drives ibias_trim</doc>
+         </field>
+         <field id="field_93" offset="12:8" name="clh_trim" uid="2018-12-07T18:54:18.431+05:30d14e909" keypath="RegisterMapFields.shadow.s_conf0.clh_trim,shadow.s_conf0.clh_trim,s_conf0.clh_trim,clh_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+            <doc>Clamp high trim.</doc>
+         </field>
+         <field id="field_92" offset="17:13" name="cll_trim" uid="2018-12-07T18:54:18.431+05:30d14e918" keypath="RegisterMapFields.shadow.s_conf0.cll_trim,shadow.s_conf0.cll_trim,s_conf0.cll_trim,cll_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+            <doc>Clamp low trim.</doc>
+         </field>
+         <field id="field_91" offset="22:20" name="vepi_tcn" uid="2018-12-07T18:54:18.431+05:30d14e927" keypath="RegisterMapFields.shadow.s_conf0.vepi_tcn,shadow.s_conf0.vepi_tcn,s_conf0.vepi_tcn,vepi_tcn">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+            <doc>Sensitivity TC Slope ? Numerator</doc>
+         </field>
+         <field id="field_90" offset="25:23" name="vepi_tcd" uid="2018-12-07T18:54:18.431+05:30d14e936" keypath="RegisterMapFields.shadow.s_conf0.vepi_tcd,shadow.s_conf0.vepi_tcd,s_conf0.vepi_tcd,vepi_tcd">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+            <doc>Sensitivity TC Slope ? Denominator</doc>
+         </field>
+      </reg>
+      <reg heading="1.2.4" child_no="5" id="tab0.4369864572725285" name="s_conf1" u_shadow_address="8" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.shadow_s_conf1_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e945" keypath="RegisterMapFields.shadow.s_conf1,shadow.s_conf1,s_conf1" hwmapaddr="19" csize="4" offset="32" caddress="32" address="0x60" endaddress="0x63" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="32" address="0x60" endaddress="0x63" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_106" offset="0" name="tdsenssd_en" uid="2018-12-07T18:54:18.431+05:30d14e950" keypath="RegisterMapFields.shadow.s_conf1.tdsenssd_en,shadow.s_conf1.tdsenssd_en,s_conf1.tdsenssd_en,tdsenssd_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Double TDSENS Step (max range 0: +/-6.25% , 1: +/-12.5%)</doc>
+         </field>
+         <field id="field_105" offset="1" name="temp_smth_dis" uid="2018-12-07T18:54:18.431+05:30d14e959" keypath="RegisterMapFields.shadow.s_conf1.temp_smth_dis,shadow.s_conf1.temp_smth_dis,s_conf1.temp_smth_dis,temp_smth_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Disable the TEMP ADC smoothing</doc>
+         </field>
+         <field id="field_104" offset="2" name="temp_hyst_dis" uid="2018-12-07T18:54:18.431+05:30d14e968" keypath="RegisterMapFields.shadow.s_conf1.temp_hyst_dis,shadow.s_conf1.temp_hyst_dis,s_conf1.temp_hyst_dis,temp_hyst_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Temperature Hysteresis Disable</doc>
+         </field>
+         <field id="field_103" offset="9:3" name="temp_offset" uid="2018-12-07T18:54:18.431+05:30d14e977" keypath="RegisterMapFields.shadow.s_conf1.temp_offset,shadow.s_conf1.temp_offset,s_conf1.temp_offset,temp_offset">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+            <doc>Temperature offset</doc>
+         </field>
+         <field id="field_102" offset="15:10" name="temp_slope_trim" uid="2018-12-07T18:54:18.431+05:30d14e986" keypath="RegisterMapFields.shadow.s_conf1.temp_slope_trim,shadow.s_conf1.temp_slope_trim,s_conf1.temp_slope_trim,temp_slope_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+         </field>
+         <field id="field_101" offset="20:16" name="sns_rat_trim" uid="2018-12-07T18:54:18.431+05:30d14e993" keypath="RegisterMapFields.shadow.s_conf1.sns_rat_trim,shadow.s_conf1.sns_rat_trim,s_conf1.sns_rat_trim,sns_rat_trim">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000</default>
+         </field>
+         <field id="field_100" offset="21" name="qvo_halfstep" uid="2018-12-07T18:54:18.431+05:30d14e1000" keypath="RegisterMapFields.shadow.s_conf1.qvo_halfstep,shadow.s_conf1.qvo_halfstep,s_conf1.qvo_halfstep,qvo_halfstep">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+         </field>
+         <field id="field_99" offset="22" name="ee_sparef_0" uid="2018-12-07T18:54:18.431+05:30d14e1007" keypath="RegisterMapFields.shadow.s_conf1.ee_sparef_0,shadow.s_conf1.ee_sparef_0,s_conf1.ee_sparef_0,ee_sparef_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare EEPROM bit available as digital output</doc>
+         </field>
+         <field id="field_98" offset="23" name="ee_sparef_1" uid="2018-12-07T18:54:18.431+05:30d14e1016" keypath="RegisterMapFields.shadow.s_conf1.ee_sparef_1,shadow.s_conf1.ee_sparef_1,s_conf1.ee_sparef_1,ee_sparef_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare EEPROM bit available as digital output</doc>
+         </field>
+         <field id="field_97" offset="24" name="ee_sparef_2" uid="2018-12-07T18:54:18.431+05:30d14e1026" keypath="RegisterMapFields.shadow.s_conf1.ee_sparef_2,shadow.s_conf1.ee_sparef_2,s_conf1.ee_sparef_2,ee_sparef_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare EEPROM bit available as digital output</doc>
+         </field>
+         <field id="field_96" offset="25" name="ee_sparef_3" uid="2018-12-07T18:54:18.431+05:30d14e1035" keypath="RegisterMapFields.shadow.s_conf1.ee_sparef_3,shadow.s_conf1.ee_sparef_3,s_conf1.ee_sparef_3,ee_sparef_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Spare EEPROM bit available as digital output</doc>
+         </field>
+      </reg>
+      <reg heading="1.2.5" child_no="6" id="tab0.8956977010338522" name="s_tds0134" u_shadow_address="9" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.shadow_s_tds0134_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1044" keypath="RegisterMapFields.shadow.s_tds0134,shadow.s_tds0134,s_tds0134" hwmapaddr="20" csize="4" offset="36" caddress="36" address="0x64" endaddress="0x67" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="36" address="0x64" endaddress="0x67" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_110" offset="5:0" name="tdsens_0" uid="2018-12-07T18:54:18.431+05:30d14e1049" keypath="RegisterMapFields.shadow.s_tds0134.tdsens_0,shadow.s_tds0134.tdsens_0,s_tds0134.tdsens_0,tdsens_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for beginning of region 1: -57?C</doc>
+         </field>
+         <field id="field_109" offset="11:6" name="tdsens_1" uid="2018-12-07T18:54:18.431+05:30d14e1058" keypath="RegisterMapFields.shadow.s_tds0134.tdsens_1,shadow.s_tds0134.tdsens_1,s_tds0134.tdsens_1,tdsens_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for end of region1, beginning of region 2: ~2?C</doc>
+         </field>
+         <field id="field_108" offset="17:12" name="tdsens_3" uid="2018-12-07T18:54:18.431+05:30d14e1067" keypath="RegisterMapFields.shadow.s_tds0134.tdsens_3,shadow.s_tds0134.tdsens_3,s_tds0134.tdsens_3,tdsens_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for end of region 3, beginning of region 4: 120?C</doc>
+         </field>
+         <field id="field_107" offset="23:18" name="tdsens_4" uid="2018-12-07T18:54:18.431+05:30d14e1076" keypath="RegisterMapFields.shadow.s_tds0134.tdsens_4,shadow.s_tds0134.tdsens_4,s_tds0134.tdsens_4,tdsens_4">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for end of region 4: 179?C</doc>
+         </field>
+      </reg>
+      <reg heading="1.2.6" child_no="7" id="tab0.7567806762813903" name="s_tdq0134" u_shadow_address="10" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.shadow_s_tdq0134_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1085" keypath="RegisterMapFields.shadow.s_tdq0134,shadow.s_tdq0134,s_tdq0134" hwmapaddr="21" csize="4" offset="40" caddress="40" address="0x68" endaddress="0x6B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="40" address="0x68" endaddress="0x6B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_114" offset="5:0" name="tdqvo_0" uid="2018-12-07T18:54:18.431+05:30d14e1090" keypath="RegisterMapFields.shadow.s_tdq0134.tdqvo_0,shadow.s_tdq0134.tdqvo_0,s_tdq0134.tdqvo_0,tdqvo_0">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>DQVO for beginning of region 1: -57?C</doc>
+         </field>
+         <field id="field_113" offset="11:6" name="tdqvo_1" uid="2018-12-07T18:54:18.431+05:30d14e1099" keypath="RegisterMapFields.shadow.s_tdq0134.tdqvo_1,shadow.s_tdq0134.tdqvo_1,s_tdq0134.tdqvo_1,tdqvo_1">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>DQVO for end of region1, beginning of region 2: ~2?C</doc>
+         </field>
+         <field id="field_112" offset="17:12" name="tdqvo_3" uid="2018-12-07T18:54:18.431+05:30d14e1108" keypath="RegisterMapFields.shadow.s_tdq0134.tdqvo_3,shadow.s_tdq0134.tdqvo_3,s_tdq0134.tdqvo_3,tdqvo_3">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>DQVO for end of region 3, beginning of region 4: 120?C</doc>
+         </field>
+         <field id="field_111" offset="23:18" name="tdqvo_4" uid="2018-12-07T18:54:18.431+05:30d14e1117" keypath="RegisterMapFields.shadow.s_tdq0134.tdqvo_4,shadow.s_tdq0134.tdqvo_4,s_tdq0134.tdqvo_4,tdqvo_4">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>DQVO for end of region 4: 179?C</doc>
+         </field>
+      </reg>
+      <reg heading="1.2.7" child_no="8" id="tab0.4828560524979263" name="s_tdsq2" u_shadow_address="11" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.shadow_s_tdsq2_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1126" keypath="RegisterMapFields.shadow.s_tdsq2,shadow.s_tdsq2,s_tdsq2" hwmapaddr="22" csize="4" offset="44" caddress="44" address="0x6C" endaddress="0x6F" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="44" address="0x6C" endaddress="0x6F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_120" offset="5:0" name="tdsens_2" uid="2018-12-07T18:54:18.431+05:30d14e1131" keypath="RegisterMapFields.shadow.s_tdsq2.tdsens_2,shadow.s_tdsq2.tdsens_2,s_tdsq2.tdsens_2,tdsens_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>TDSense for end of region 2, beginning of region 3: 61?C</doc>
+         </field>
+         <field id="field_119" offset="11:6" name="tdqvo_2" uid="2018-12-07T18:54:18.431+05:30d14e1140" keypath="RegisterMapFields.shadow.s_tdsq2.tdqvo_2,shadow.s_tdsq2.tdqvo_2,s_tdsq2.tdqvo_2,tdqvo_2">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>DQVO for end of region 2, beginning of region 3: 61?C</doc>
+         </field>
+         <field id="field_118" offset="13:12" name="prescaler" uid="2018-12-07T18:54:18.431+05:30d14e1149" keypath="RegisterMapFields.shadow.s_tdsq2.prescaler,shadow.s_tdsq2.prescaler,s_tdsq2.prescaler,prescaler">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Update rate for temperature compensation functions00: No additional delay01: 512 us10: 8.192 ms11: 16.384 ms</doc>
+         </field>
+         <field id="field_117" offset="15:14" name="cp_rup_sel" uid="2018-12-07T18:54:18.431+05:30d14e1158" keypath="RegisterMapFields.shadow.s_tdsq2.cp_rup_sel,shadow.s_tdsq2.cp_rup_sel,s_tdsq2.cp_rup_sel,cp_rup_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Selects the ramp up time for the charge pump. Times shown are based on the fastest trimmed clock rate of 8.937 MHz00: 1 ms01: 500 us10: 100 us11: 2 ms</doc>
+         </field>
+         <field id="field_116" offset="17:16" name="cp_hv_sel" uid="2018-12-07T18:54:18.431+05:30d14e1167" keypath="RegisterMapFields.shadow.s_tdsq2.cp_hv_sel,shadow.s_tdsq2.cp_hv_sel,s_tdsq2.cp_hv_sel,cp_hv_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Selects the time the cp_dac remains at its max value (0x3F). Times shown are based on the fastest trimmed clock rate of 8.937 MHz00: 10 ms01: 2 ms10: 4 ms11: 20 ms</doc>
+         </field>
+         <field id="field_115" offset="19:18" name="cp_rdn_sel" uid="2018-12-07T18:54:18.431+05:30d14e1176" keypath="RegisterMapFields.shadow.s_tdsq2.cp_rdn_sel,shadow.s_tdsq2.cp_rdn_sel,s_tdsq2.cp_rdn_sel,cp_rdn_sel">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Selects the ramp down time for the charge pump. Times shown are based on the fastest trimmed clock rate of 8.937 MHz00: 100 us01: 500 us10: 1 ms11: 2 ms</doc>
+         </field>
+      </reg>
+   </section>
+   <emptyspace heading="1.4" child_no="4" address="0x70" endaddress="0x7F">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AMBA" addressUnit="8" address="0x70" endaddress="0x7F"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+   <section heading="1.3" child_no="5" id="tab0.9583768896670096" name="volatile" offset="128" uid="2018-12-07T18:54:18.431+05:30d14e1185" keypath="RegisterMapFields.volatile,volatile" keypathdown="volatile.r8.r11.r12.c_test.f_test_ext.f_qvosens_raw.f_temp_byp.f_temp_mon.status_c.test_c.marg_test_c.ee_data_c.ee_status_c.lbist0.lbist1,r8,r11,r12,c_test,f_test_ext,f_qvosens_raw,f_temp_byp,f_temp_mon,status_c,test_c,marg_test_c,ee_data_c,ee_status_c,lbist0,lbist1" hwmapaddr="23" max_reg_size="32" csize="60" caddress="128" address="0x80" endaddress="0xBB" size="60">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="128" address="0x80" endaddress="0xBB" size="60"/>
+         </busdomains>
+      </config>
+      <reg heading="1.3.1" child_no="1" id="tab0.9334608427533975" name="r8" coverage="on" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_r8_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1187" keypath="RegisterMapFields.volatile.r8,volatile.r8,r8" hwmapaddr="24" csize="4" offset="0" caddress="0" address="0x80" endaddress="0x83" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="0" address="0x80" endaddress="0x83" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_134" offset="0" name="ee_force_reload" uid="2018-12-07T18:54:18.431+05:30d14e1192" keypath="RegisterMapFields.volatile.r8.ee_force_reload,volatile.r8.ee_force_reload,r8.ee_force_reload,ee_force_reload">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>When set the chip will initiate a Shadow Reload. This bit will clear when complete.</doc>
+         </field>
+         <field id="field_133" offset="3:1" name="ee_vread" uid="2018-12-07T18:54:18.431+05:30d14e1201" keypath="RegisterMapFields.volatile.r8.ee_vread,volatile.r8.ee_vread,r8.ee_vread,ee_vread">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000</default>
+            <doc>EEPROM read voltage for cell margining.000:  Use internal EEPROM threshold. All other values refer to EEPROM V3.0 SPEC.</doc>
+         </field>
+         <field id="field_132" offset="8:7" name="ee_block_mode" uid="2018-12-07T18:54:18.431+05:30d14e1210" keypath="RegisterMapFields.volatile.r8.ee_block_mode,volatile.r8.ee_block_mode,r8.ee_block_mode,ee_block_mode">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>00: Single Word Write Access01: Odd Word Write Access (address ignored)10: Even Word Write Access (address ignored)11: All Word Write Access (address ignored)This field only affects write operations.</doc>
+         </field>
+         <field id="field_131" offset="9" name="ee_no_ecc" uid="2018-12-07T18:54:18.431+05:30d14e1219" keypath="RegisterMapFields.volatile.r8.ee_no_ecc,volatile.r8.ee_no_ecc,r8.ee_no_ecc,ee_no_ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Bits  [31:26]  of EEPROM locations reserved for ECC1: Allow full 32 bit Read/Write access to EEPROM</doc>
+         </field>
+         <field id="field_130" offset="10" name="ee_dis_ecc" uid="2018-12-07T18:54:18.431+05:30d14e1228" keypath="RegisterMapFields.volatile.r8.ee_dis_ecc,volatile.r8.ee_dis_ecc,r8.ee_dis_ecc,ee_dis_ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Correct Single bit errors when they occur1: Do not correct single bit errors</doc>
+         </field>
+         <field id="field_129" offset="11" name="ee_raw_ecc" uid="2018-12-07T18:54:18.431+05:30d14e1237" keypath="RegisterMapFields.volatile.r8.ee_raw_ecc,volatile.r8.ee_raw_ecc,r8.ee_raw_ecc,ee_raw_ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>This bit is valid only when ee_no_ecc is set low.0: Bits  [31:26]  of an EEPROM READ return the following read status information: [28]  Set if single bit error error occurred during read. [29]  Set if dual bit error occurred during read.All others 01: Bits  [31:26]  of an EEPROM READ return bits  [31:26]  of the EEPROM.</doc>
+         </field>
+         <field id="field_128" offset="12" name="ee_force_sbe" uid="2018-12-07T18:54:18.431+05:30d14e1246" keypath="RegisterMapFields.volatile.r8.ee_force_sbe,volatile.r8.ee_force_sbe,r8.ee_force_sbe,ee_force_sbe">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Disabled.1: Force a Single bit error during read (inverts bit 0). Takes precedence over FORCE_DBE.</doc>
+         </field>
+         <field id="field_127" offset="13" name="ee_force_dbe" uid="2018-12-07T18:54:18.431+05:30d14e1255" keypath="RegisterMapFields.volatile.r8.ee_force_dbe,volatile.r8.ee_force_dbe,r8.ee_force_dbe,ee_force_dbe">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Disabled.1: Force a Multi bit error during read (inverts bits 1:0).</doc>
+         </field>
+         <field id="field_126" offset="14" name="ee_abort" uid="2018-12-07T18:54:18.431+05:30d14e1264" keypath="RegisterMapFields.volatile.r8.ee_abort,volatile.r8.ee_abort,r8.ee_abort,ee_abort">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Terminates any EEPROM write transaction immediately. Leaves the EEPROM ready for a new transaction.</doc>
+         </field>
+         <field id="field_125" offset="17:16" name="ee_override" uid="2018-12-07T18:54:18.431+05:30d14e1274" keypath="RegisterMapFields.volatile.r8.ee_override,volatile.r8.ee_override,r8.ee_override,ee_override">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>00: Normal operation01: Force ee_rd output high10: Force ee_er output high11: Force ee_pr output high</doc>
+         </field>
+         <field id="field_124" offset="18" name="ee_en_override" uid="2018-12-07T18:54:18.431+05:30d14e1283" keypath="RegisterMapFields.volatile.r8.ee_en_override,volatile.r8.ee_en_override,r8.ee_en_override,ee_en_override">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Normal operation1: Force ee_en output high</doc>
+         </field>
+         <field id="field_123" offset="19" name="ee_noload" uid="2018-12-07T18:54:18.431+05:30d14e1292" keypath="RegisterMapFields.volatile.r8.ee_noload,volatile.r8.ee_noload,r8.ee_noload,ee_noload">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Normal operation 1: Disables update of the shadow registers. Overrides reload bit.</doc>
+         </field>
+         <field id="field_122" offset="20" name="ee_prog" uid="2018-12-07T18:54:18.431+05:30d14e1301" keypath="RegisterMapFields.volatile.r8.ee_prog,volatile.r8.ee_prog,r8.ee_prog,ee_prog">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Setting this bit will perform a PROGRAM operation only on the EEPROM the next time and EEPROM address is written. If ERASE is set, this bit is ignored. It is self clearing when the PROGRAM operation is complete.</doc>
+         </field>
+         <field id="field_121" offset="21" name="ee_erase" uid="2018-12-07T18:54:18.431+05:30d14e1310" keypath="RegisterMapFields.volatile.r8.ee_erase,volatile.r8.ee_erase,r8.ee_erase,ee_erase">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Setting this bit will perform an ERASE operation only on the EEPROM the next time an EEPROM address is written. It is self clearing when the ERASE operation is complete.</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.2" child_no="2" id="tab0.8741936366656773" name="r11" coverage="on" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_r11_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1319" keypath="RegisterMapFields.volatile.r11,volatile.r11,r11" hwmapaddr="25" csize="4" offset="4" caddress="4" address="0x84" endaddress="0x87" size="4" default="0x00008000" sw="rw ro" hw="rw wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="4" address="0x84" endaddress="0x87" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_142" offset="1:0" name="ee_reference" uid="2018-12-07T18:54:18.431+05:30d14e1324" keypath="RegisterMapFields.volatile.r11.ee_reference,volatile.r11.ee_reference,r11.ee_reference,ee_reference">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Controls maximum voltage used during margining.00: 4V01: External Pad10: Unused11: Unused</doc>
+         </field>
+         <field id="field_141" offset="2" name="pat_test_start" uid="2018-12-07T18:54:18.431+05:30d14e1333" keypath="RegisterMapFields.volatile.r11.pat_test_start,volatile.r11.pat_test_start,r11.pat_test_start,pat_test_start">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Write to 1 to start pattern check testing. If EE_LOOP is low, this bit will self clear when address 0xB is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.</doc>
+         </field>
+         <field id="field_140" offset="4:3" name="pat_test_status" uid="2018-12-07T18:54:18.431+05:30d14e1342" keypath="RegisterMapFields.volatile.r11.pat_test_status,volatile.r11.pat_test_status,r11.pat_test_status,pat_test_status">
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>00: Reset condition (no result from pat testing) 01: Pass, no failure detected during pat testing 10: Fail, failure detected during pat testing 11: Running, pat test is still running</doc>
+         </field>
+         <field id="field_139" offset="6:5" name="pat_test_pattern" uid="2018-12-07T18:54:18.431+05:30d14e1351" keypath="RegisterMapFields.volatile.r11.pat_test_pattern,volatile.r11.pat_test_pattern,r11.pat_test_pattern,pat_test_pattern">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Defines the pattern that will be checked when reading the EEPROM.00: All 0s01: All 1s10: Checker board starting at 0x0 with '010101?'11: Checker board starting at 0x0 with '101010?'</doc>
+         </field>
+         <field id="field_138" offset="12:7" name="cp_dac" uid="2018-12-07T18:54:18.431+05:30d14e1360" keypath="RegisterMapFields.volatile.r11.cp_dac,volatile.r11.cp_dac,r11.cp_dac,cp_dac">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>This value is driven on cp_dac [5:0]  ouput when cp_dac_use is set.</doc>
+         </field>
+         <field id="field_137" offset="13" name="cp_use_dac" uid="2018-12-07T18:54:18.431+05:30d14e1369" keypath="RegisterMapFields.volatile.r11.cp_use_dac,volatile.r11.cp_use_dac,r11.cp_use_dac,cp_use_dac">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Normal Charge Pump DAC operation1: Use "cp_dac" value for Charge Pump DAC value</doc>
+         </field>
+         <field id="field_136" offset="14" name="cp_force_en" uid="2018-12-07T18:54:18.431+05:30d14e1378" keypath="RegisterMapFields.volatile.r11.cp_force_en,volatile.r11.cp_force_en,r11.cp_force_en,cp_force_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: Normal operation1: Force cp_en output high</doc>
+         </field>
+         <field id="field_135" offset="15" name="cp_dis_abort" uid="2018-12-07T18:54:18.431+05:30d14e1387" keypath="RegisterMapFields.volatile.r11.cp_dis_abort,volatile.r11.cp_dis_abort,r11.cp_dis_abort,cp_dis_abort">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x1">1</default>
+            <doc>0: Normal operation1: EEPROM write (or erase, program) will not abort if ee_prog_pulse is not at correct value</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.3" child_no="3" id="tab0.011183794299612138" name="r12" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_r12_" u_lock="!factory_access" no_reg_access_test="true" no_reg_bit_bash_test="true" uid="2018-12-07T18:54:18.431+05:30d14e1396" keypath="RegisterMapFields.volatile.r12,volatile.r12,r12" hwmapaddr="26" csize="4" offset="8" caddress="8" address="0x88" endaddress="0x8B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="8" address="0x88" endaddress="0x8B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_145" offset="0" name="set_scan_mode" uid="2018-12-07T18:54:18.431+05:30d14e1401" keypath="RegisterMapFields.volatile.r12.set_scan_mode,volatile.r12.set_scan_mode,r12.set_scan_mode,set_scan_mode">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Setting this bit places the device in scan mode. NOTE: FF must be excluded from scan chain</doc>
+         </field>
+         <field id="field_144" offset="1" name="set_iddq_mode" uid="2018-12-07T18:54:18.431+05:30d14e1410" keypath="RegisterMapFields.volatile.r12.set_iddq_mode,volatile.r12.set_iddq_mode,r12.set_iddq_mode,set_iddq_mode">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Setting this bit places the device in iddq mode. NOTE: FF must be excluded from scan chain</doc>
+         </field>
+         <field id="field_143" offset="2" name="delay_fault_mode" uid="2018-12-07T18:54:18.431+05:30d14e1419" keypath="RegisterMapFields.volatile.r12.delay_fault_mode,volatile.r12.delay_fault_mode,r12.delay_fault_mode,delay_fault_mode">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Enable Delay Fault testing logic. See section. NOTE: FF must be excluded from scan chain0 = Disabled1 = Enabled</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.4" child_no="4" id="tab0.37460540326225134" name="c_test" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_c_test_" u_lock="!factory_access" no_reg_access_test="true" no_reg_bit_bash_test="true" uid="2018-12-07T18:54:18.431+05:30d14e1428" keypath="RegisterMapFields.volatile.c_test,volatile.c_test,c_test" hwmapaddr="27" csize="4" offset="12" caddress="12" address="0x8C" endaddress="0x8F" size="4" default="0x00000000" sw="ro rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="12" address="0x8C" endaddress="0x8F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_149" offset="1" name="factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1433" keypath="RegisterMapFields.volatile.c_test.factory_access,volatile.c_test.factory_access,c_test.factory_access,factory_access">
+            <sw>ro</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Factory write access enabled</doc>
+         </field>
+         <field id="field_148" offset="2" name="uvlo_latch" uid="2018-12-07T18:54:18.431+05:30d14e1442" keypath="RegisterMapFields.volatile.c_test.uvlo_latch,volatile.c_test.uvlo_latch,c_test.uvlo_latch,uvlo_latch">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Under Voltage Lock Out Latch  ? create register externally</doc>
+         </field>
+         <field id="field_147" offset="3" name="comm_en" uid="2018-12-07T18:54:18.431+05:30d14e1451" keypath="RegisterMapFields.volatile.c_test.comm_en,volatile.c_test.comm_en,c_test.comm_en,comm_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Allows for serial communication without raising VCC0: Default mode. VCC must be raised to allow serial communication1: Serial communication can occur with VCC at nominal operating level.</doc>
+         </field>
+         <field id="field_146" offset="4" name="slow_mode" uid="2018-12-07T18:54:18.431+05:30d14e1460" keypath="RegisterMapFields.volatile.c_test.slow_mode,volatile.c_test.slow_mode,c_test.slow_mode,slow_mode">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Time required before the 1st Manchester command can be sent after raising VCC.0: Fast mode1: Slow mode</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.5" child_no="5" id="tab0.5197469069358311" name="f_test_ext" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_f_test_ext_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1469" keypath="RegisterMapFields.volatile.f_test_ext,volatile.f_test_ext,f_test_ext" hwmapaddr="28" csize="4" offset="16" caddress="16" address="0x90" endaddress="0x93" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="16" address="0x90" endaddress="0x93" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_150" offset="15:0" name="testreg_ext" uid="2018-12-07T18:54:18.431+05:30d14e1474" keypath="RegisterMapFields.volatile.f_test_ext.testreg_ext,volatile.f_test_ext.testreg_ext,f_test_ext.testreg_ext,testreg_ext">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000000000000</default>
+            <doc>See TESTREG_EXT for break down of bits. (ANALOG)</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.6" child_no="6" id="tab0.41863640215793874" name="f_qvosens_raw" u_lock="!factory_access" no_reg_tests="true" uid="2018-12-07T18:54:18.431+05:30d14e1483" keypath="RegisterMapFields.volatile.f_qvosens_raw,volatile.f_qvosens_raw,f_qvosens_raw" hwmapaddr="29" csize="4" offset="20" caddress="20" address="0x94" endaddress="0x97" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="20" address="0x94" endaddress="0x97" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_152" offset="8:0" name="active_qvo_reg" uid="2018-12-07T18:54:18.431+05:30d14e1488" keypath="RegisterMapFields.volatile.f_qvosens_raw.active_qvo_reg,volatile.f_qvosens_raw.active_qvo_reg,f_qvosens_raw.active_qvo_reg,active_qvo_reg">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000000</default>
+            <doc>Factory write access enabled</doc>
+         </field>
+         <field id="field_151" offset="22:12" name="active_sns_reg" uid="2018-12-07T18:54:18.431+05:30d14e1497" keypath="RegisterMapFields.volatile.f_qvosens_raw.active_sns_reg,volatile.f_qvosens_raw.active_sns_reg,f_qvosens_raw.active_sns_reg,active_sns_reg">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000</default>
+            <doc>Factory write access enabled</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.7" child_no="7" id="tab0.17790003560436407" name="f_temp_byp" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_f_temp_byp_" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1506" keypath="RegisterMapFields.volatile.f_temp_byp,volatile.f_temp_byp,f_temp_byp" hwmapaddr="30" csize="4" offset="24" caddress="24" address="0x98" endaddress="0x9B" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="24" address="0x98" endaddress="0x9B" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_158" offset="6:0" name="temp_set" uid="2018-12-07T18:54:18.431+05:30d14e1511" keypath="RegisterMapFields.volatile.f_temp_byp.temp_set,volatile.f_temp_byp.temp_set,f_temp_byp.temp_set,temp_set">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+            <doc>This register is used to force the internal temperature ADC Value.</doc>
+         </field>
+         <field id="field_157" offset="7" name="temp_set_en" uid="2018-12-07T18:54:18.431+05:30d14e1520" keypath="RegisterMapFields.volatile.f_temp_byp.temp_set_en,volatile.f_temp_byp.temp_set_en,f_temp_byp.temp_set_en,temp_set_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>This bit enables the TEMP_SET bits</doc>
+         </field>
+         <field id="field_156" offset="8" name="temp_freeze" uid="2018-12-07T18:54:18.431+05:30d14e1529" keypath="RegisterMapFields.volatile.f_temp_byp.temp_freeze,volatile.f_temp_byp.temp_freeze,f_temp_byp.temp_freeze,temp_freeze">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Setting this bit freezes the temp compensation updates with the last value in the register.</doc>
+         </field>
+         <field id="field_155" offset="9" name="temp_disable" uid="2018-12-07T18:54:18.431+05:30d14e1538" keypath="RegisterMapFields.volatile.f_temp_byp.temp_disable,volatile.f_temp_byp.temp_disable,f_temp_byp.temp_disable,temp_disable">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0= Enables Tiny Temp 1=Disables TinyTemp</doc>
+         </field>
+         <field id="field_154" offset="10" name="temp_chop_dis" uid="2018-12-07T18:54:18.431+05:30d14e1547" keypath="RegisterMapFields.volatile.f_temp_byp.temp_chop_dis,volatile.f_temp_byp.temp_chop_dis,f_temp_byp.temp_chop_dis,temp_chop_dis">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0= Enables TinyTemp Chopper 1=Disables TinyTemp Chopper</doc>
+         </field>
+         <field id="field_153" offset="24" name="tiny_temp_hold" uid="2018-12-07T18:54:18.431+05:30d14e1556" keypath="RegisterMapFields.volatile.f_temp_byp.tiny_temp_hold,volatile.f_temp_byp.tiny_temp_hold,f_temp_byp.tiny_temp_hold,tiny_temp_hold">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Holds the temp code output form tiny temp. 0: Output updates at the tiny temp rate.1: Output is not updated.</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.8" child_no="8" id="tab0.49300948373874287" name="f_temp_mon" no_reg_tests="true" u_lock="!factory_access" uid="2018-12-07T18:54:18.431+05:30d14e1565" keypath="RegisterMapFields.volatile.f_temp_mon,volatile.f_temp_mon,f_temp_mon" hwmapaddr="31" csize="4" offset="28" caddress="28" address="0x9C" endaddress="0x9F" size="4" default="0x00000000" sw="ro rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="28" address="0x9C" endaddress="0x9F" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_160" offset="6:0" name="temp_read" uid="2018-12-07T18:54:18.431+05:30d14e1570" keypath="RegisterMapFields.volatile.f_temp_mon.temp_read,volatile.f_temp_mon.temp_read,f_temp_mon.temp_read,temp_read">
+            <sw>ro</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000</default>
+            <doc>Monitor 7 bit scaled Temperature data. This temperature is monitored after the temp_set and temp_offset.</doc>
+         </field>
+         <field id="field_159" offset="19:8" name="raw_temp_read" uid="2018-12-07T18:54:18.431+05:30d14e1579" keypath="RegisterMapFields.volatile.f_temp_mon.raw_temp_read,volatile.f_temp_mon.raw_temp_read,f_temp_mon.raw_temp_read,raw_temp_read">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000000000</default>
+            <doc>Temp code output from tiny temp. If tiny_temp_hold of f_temp_byp (0x26)is set, then a write to this register will set the temp code output.</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.9" child_no="9" id="tab0.9990747880404492" name="status_c" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_status_c_" u_lock="!(factory_access || customer_access)" no_reg_access_test="true" no_reg_bit_bash_test="true" uid="2018-12-07T18:54:18.431+05:30d14e1588" keypath="RegisterMapFields.volatile.status_c,volatile.status_c,status_c" hwmapaddr="32" csize="4" offset="32" caddress="32" address="0xA0" endaddress="0xA3" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="32" address="0xA0" endaddress="0xA3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_161" offset="0" name="customer_access" uid="2018-12-07T18:54:18.431+05:30d14e1593" keypath="RegisterMapFields.volatile.status_c.customer_access,volatile.status_c.customer_access,status_c.customer_access,customer_access">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Customer write access enabled</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.10" child_no="10" id="tab0.9283389699590969" name="test_c" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_test_c_" u_lock="!(factory_access || customer_access)" no_reg_access_test="true" no_reg_bit_bash_test="true" uid="2018-12-07T18:54:18.431+05:30d14e1602" keypath="RegisterMapFields.volatile.test_c,volatile.test_c,test_c" hwmapaddr="33" csize="4" offset="36" caddress="36" address="0xA4" endaddress="0xA7" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="36" address="0xA4" endaddress="0xA7" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_165" offset="0" name="clk_trim_meas" uid="2018-12-07T18:54:18.431+05:30d14e1607" keypath="RegisterMapFields.volatile.test_c.clk_trim_meas,volatile.test_c.clk_trim_meas,test_c.clk_trim_meas,clk_trim_meas">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Enables clock frequency checking by driving OUT pin with clk/512</doc>
+         </field>
+         <field id="field_164" offset="4:1" name="ee_test_addr" uid="2018-12-07T18:54:18.431+05:30d14e1616" keypath="RegisterMapFields.volatile.test_c.ee_test_addr,volatile.test_c.ee_test_addr,test_c.ee_test_addr,ee_test_addr">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000</default>
+            <doc>If USE_TST_ADDR is set, then margining or check testing will start at this address. If the test fails, this will contain the failing address.</doc>
+         </field>
+         <field id="field_163" offset="5" name="ee_use_test_addr" uid="2018-12-07T18:54:18.431+05:30d14e1625" keypath="RegisterMapFields.volatile.test_c.ee_use_test_addr,volatile.test_c.ee_use_test_addr,test_c.ee_use_test_addr,ee_use_test_addr">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>0: No effect1: Uses EE_TST_ADDR as the start address for margining. If EE_LOOP is set, this bit is ignored and the starting address is always 0x0</doc>
+         </field>
+         <field id="field_162" offset="6" name="ee_loop" uid="2018-12-07T18:54:18.431+05:30d14e1634" keypath="RegisterMapFields.volatile.test_c.ee_loop,volatile.test_c.ee_loop,test_c.ee_loop,ee_loop">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Causes margin or pattern testing to loop until an error is found</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.11" child_no="11" id="tab0.7345303620309801" name="marg_test_c" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_marg_test_c_" u_lock="!(factory_access || customer_access)" no_reg_access_test="true" uid="2018-12-07T18:54:18.431+05:30d14e1644" keypath="RegisterMapFields.volatile.marg_test_c,volatile.marg_test_c,marg_test_c" hwmapaddr="34" csize="4" offset="40" caddress="40" address="0xA8" endaddress="0xAB" size="4" default="0x00000000" sw="rw ro" hw="rw wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="40" address="0xA8" endaddress="0xAB" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_170" offset="0" name="margin_start" uid="2018-12-07T18:54:18.431+05:30d14e1649" keypath="RegisterMapFields.volatile.marg_test_c.margin_start,volatile.marg_test_c.margin_start,marg_test_c.margin_start,margin_start">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Write to 1 to start margin testing. If EE_LOOP is low, this bit will self clear when address 0x7 is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.</doc>
+         </field>
+         <field id="field_169" offset="1" name="margin_no_max" uid="2018-12-07T18:54:18.431+05:30d14e1658" keypath="RegisterMapFields.volatile.marg_test_c.margin_no_max,volatile.marg_test_c.margin_no_max,marg_test_c.margin_no_max,margin_no_max">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Does not perform maximum margin testing0: Margining done a max voltage.1: No margining at max voltage.</doc>
+         </field>
+         <field id="field_168" offset="2" name="margin_no_min" uid="2018-12-07T18:54:18.431+05:30d14e1667" keypath="RegisterMapFields.volatile.marg_test_c.margin_no_min,volatile.marg_test_c.margin_no_min,marg_test_c.margin_no_min,margin_no_min">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Does not perform minimum margin testing 0: Margining done a min voltage.1: No margining at min voltage.</doc>
+         </field>
+         <field id="field_167" offset="4:3" name="margin_status" uid="2018-12-07T18:54:18.431+05:30d14e1676" keypath="RegisterMapFields.volatile.marg_test_c.margin_status,volatile.marg_test_c.margin_status,marg_test_c.margin_status,margin_status">
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>Bits are cleared after a read or reset. 00: Reset condition (no result from margin testing) 01: Pass, no failure detected during margin testing 10: Fail, failure detected during margin testing 11: Running, margin test is still running</doc>
+         </field>
+         <field id="field_166" offset="5" name="margin_min_max_fail" uid="2018-12-07T18:54:18.431+05:30d14e1685" keypath="RegisterMapFields.volatile.marg_test_c.margin_min_max_fail,volatile.marg_test_c.margin_min_max_fail,marg_test_c.margin_min_max_fail,margin_min_max_fail">
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>If margining fails, this bit indicates if the min or max reference failed.0: Min margining failed.1: Max margining failed.</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.12" child_no="12" id="tab0.5942293850796184" name="ee_data_c" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_ee_data_c_" u_lock="!(factory_access || customer_access)" no_reg_access_test="true" uid="2018-12-07T18:54:18.431+05:30d14e1694" keypath="RegisterMapFields.volatile.ee_data_c,volatile.ee_data_c,ee_data_c" hwmapaddr="35" csize="4" offset="44" caddress="44" address="0xAC" endaddress="0xAF" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="44" address="0xAC" endaddress="0xAF" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_171" offset="25:0" name="ee_data" uid="2018-12-07T18:54:18.431+05:30d14e1699" keypath="RegisterMapFields.volatile.ee_data_c.ee_data,volatile.ee_data_c.ee_data,ee_data_c.ee_data,ee_data">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00000000000000000000000000</default>
+            <doc>Contains the data for an eeprom access. On a write this register contains the written data, on a read this register contains the read data. This allows for a manual write to the EEPROM or will contain data read from the EEPROM if margining or self check fails.</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.13" child_no="13" id="tab0.9454054322642541" name="ee_status_c" coverage="on" hdl_path="dut.u_dig_rtl.u_ids_top.u_reg_map.volatile_ee_status_c_" u_lock="!(factory_access || customer_access)" uid="2018-12-07T18:54:18.431+05:30d14e1708" keypath="RegisterMapFields.volatile.ee_status_c,volatile.ee_status_c,ee_status_c" hwmapaddr="36" csize="4" offset="48" caddress="48" address="0xB0" endaddress="0xB3" size="4" default="0x00000700" sw="rw rc ro" hw="rw wo">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="48" address="0xB0" endaddress="0xB3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_178" offset="0" name="ee_dbe_flag" uid="2018-12-07T18:54:18.431+05:30d14e1713" keypath="RegisterMapFields.volatile.ee_status_c.ee_dbe_flag,volatile.ee_status_c.ee_dbe_flag,ee_status_c.ee_dbe_flag,ee_dbe_flag">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Latched and held high when a double bit error has occurred.</doc>
+         </field>
+         <field id="field_177" offset="1" name="ee_sbe_flag" uid="2018-12-07T18:54:18.431+05:30d14e1722" keypath="RegisterMapFields.volatile.ee_status_c.ee_sbe_flag,volatile.ee_status_c.ee_sbe_flag,ee_status_c.ee_sbe_flag,ee_sbe_flag">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Latched and held high when a single bit error has occurred.</doc>
+         </field>
+         <field id="field_176" offset="2" name="ee_err" uid="2018-12-07T18:54:18.431+05:30d14e1731" keypath="RegisterMapFields.volatile.ee_status_c.ee_err,volatile.ee_status_c.ee_err,ee_status_c.ee_err,ee_err">
+            <sw>rc</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Indicates an EEPROM write error occurred. This bit is latch and hold with clear on read.</doc>
+         </field>
+         <field id="field_175" offset="7:3" name="ee_err_status" uid="2018-12-07T18:54:18.431+05:30d14e1740" keypath="RegisterMapFields.volatile.ee_status_c.ee_err_status,volatile.ee_status_c.ee_err_status,ee_status_c.ee_err_status,ee_err_status">
+            <sw>ro</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">00000</default>
+            <doc>Status of the most recent EEPROM write error.Bit [4] =0: error during erase 1: error during programBit [3] =0: error during RampUp 1: error during RampDownBit [2] = Program Pulse valueBit [1] = hlat valueBit [0] = llat value</doc>
+         </field>
+         <field id="field_174" offset="11:8" name="ee_addr" uid="2018-12-07T18:54:18.431+05:30d14e1749" keypath="RegisterMapFields.volatile.ee_status_c.ee_addr,volatile.ee_status_c.ee_addr,ee_status_c.ee_addr,ee_addr">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x7">0111</default>
+            <doc>Reflects the read/write address to the EEPROM. This allows for a manual write to the EEPROM or will contain data read from the EEPROM if magining or self check fails.</doc>
+         </field>
+         <field id="field_173" offset="17:12" name="ee_ecc" uid="2018-12-07T18:54:18.431+05:30d14e1758" keypath="RegisterMapFields.volatile.ee_status_c.ee_ecc,volatile.ee_status_c.ee_ecc,ee_status_c.ee_ecc,ee_ecc">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">000000</default>
+            <doc>Reflects bits  [29:24]  to be written to the eeprom or read from the eeprom. This allows for a manual write to the EEPROM or will contain data read from the EEPROM if margining or self check fails.</doc>
+         </field>
+         <field id="field_172" offset="18" name="cp_err" uid="2018-12-07T18:54:18.431+05:30d14e1767" keypath="RegisterMapFields.volatile.ee_status_c.cp_err,volatile.ee_status_c.cp_err,ee_status_c.cp_err,cp_err">
+            <sw>rc</sw>
+            <hw>wo</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>High to indicate an error occurred during charge pump ramp. ee_err_status stores information about the error. This bit is latch and hold with clear on read.</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.14" child_no="14" id="tab0.47328064205252984" name="lbist0" u_lock="!factory_access" no_reg_tests="true" uid="2018-12-07T18:54:18.431+05:30d14e1776" keypath="RegisterMapFields.volatile.lbist0,volatile.lbist0,lbist0" hwmapaddr="37" csize="4" offset="52" caddress="52" address="0xB4" endaddress="0xB7" size="4" default="0x00000000" sw="rw" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="52" address="0xB4" endaddress="0xB7" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_180" offset="0" name="lbist_en" uid="2018-12-07T18:54:18.431+05:30d14e1781" keypath="RegisterMapFields.volatile.lbist0.lbist_en,volatile.lbist0.lbist_en,lbist0.lbist_en,lbist_en">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0</default>
+            <doc>Enable LBIST.</doc>
+         </field>
+         <field id="field_179" offset="2:1" name="lbist_runtime" uid="2018-12-07T18:54:18.431+05:30d14e1790" keypath="RegisterMapFields.volatile.lbist0.lbist_runtime,volatile.lbist0.lbist_runtime,lbist0.lbist_runtime,lbist_runtime">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">00</default>
+            <doc>LBIST run time.00: 100 ms01: 10 ms10: 50 ms11: 300 ms</doc>
+         </field>
+      </reg>
+      <reg heading="1.3.15" child_no="15" id="tab0.2036764965526785" name="lbist1" u_lock="!factory_access" no_reg_tests="true" uid="2018-12-07T18:54:18.431+05:30d14e1799" keypath="RegisterMapFields.volatile.lbist1,volatile.lbist1,lbist1" hwmapaddr="38" csize="4" offset="56" caddress="56" address="0xB8" endaddress="0xBB" size="4" default="0x00000000" sw="ro" hw="rw">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="AMBA" addressUnit="8" offset="56" address="0xB8" endaddress="0xBB" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="field_181" offset="30:0" name="lbist_sig" uid="2018-12-07T18:54:18.431+05:30d14e1804" keypath="RegisterMapFields.volatile.lbist1.lbist_sig,volatile.lbist1.lbist_sig,lbist1.lbist_sig,lbist_sig">
+            <sw>ro</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0x0">0000000000000000000000000000000</default>
+            <doc>LBIST signature. The value is dependent on the lbist_runtime value.00: 0x706A_DA7301: 0x0C69_8BD910: 0x732E_E19811: 0x7F95_FDB0</doc>
+         </field>
+      </reg>
+   </section>
+</block>

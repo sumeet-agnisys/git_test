@@ -13,8 +13,8 @@
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv"> 
-   <div id="regdivcontainer" contenteditable="true" style="display:none"> 
-    <div id="regmenu" class="idsmenu" style="display: none;"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="regmenu" class="idsmenu" style="display: none; left: 260px; top: 306px;"> 
      <a onclick="insertcommonreg();">Insert Row Below</a> 
      <a onclick="copyfieldrow()">Copy Row</a> 
      <a onclick="cutfieldrow()">Cut Row</a> 
@@ -77,6 +77,146 @@
       </tr> 
      </tbody> 
     </table> 
+    <br>
+    <div id="autocomplete-list" class="autocomplete-items" style="null;max-height:883.5625px;overflow:auto"></div>
+    <table class="param idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab_define0.054110015076516804" oncontextmenu="openregmenu(event);">
+     <tbody>
+      <tr>
+       <td class="label">define name</td>
+       <td class="label">value</td>
+       <td class="label">description</td>
+       <td class="label">private</td>
+      </tr>
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="def0.054110015076516804" class="edited def_row">
+       <td class="name">d1</td>
+       <td class="value">0</td>
+       <td title="add description here" class="desc">fasd</td>
+       <td class="private" onkeydown="insertDefineRow(event,this);"></td>
+      </tr>
+      <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited def_row" id="def0.5489898761316303">
+       <td class="name">d2</td>
+       <td class="value">1</td>
+       <td class="desc">fs<b>dfs</b></td>
+       <td class="private" onkeydown="insertDefineRow(event,this);"></td>
+      </tr>
+     </tbody> 
+    </table>
+    <br>
+    <br> 
+    <br> 
+    <table class="busdomain idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab_busdomain0.2054716781253887" oncontextmenu="openregmenu(event);"> 
+     <tbody> 
+      <tr> 
+       <td class="label">bus domain name</td> 
+       <td class="label">address unit</td> 
+       <td class="label">description</td> 
+       <td class="label">bus</td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited bus_row" id="bus0.2054716781253887"> 
+       <td class="name">b1</td> 
+       <td class="unit">fads</td> 
+       <td title="add description here" class="desc"><b>THIS IS B1</b></td> 
+       <td class="bus" onkeydown="insertBusRow(event,this);"></td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited bus_row" id="bus0.0783281445512165"> 
+       <td class="name">b2</td> 
+       <td class="unit">ff</td> 
+       <td class="desc">fads</td> 
+       <td class="bus" onkeydown="insertBusRow(event,this);"></td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited bus_row" id="bus0.9407513639545074"> 
+       <td class="name">b3</td> 
+       <td class="unit">bbbb3</td> 
+       <td class="desc"></td> 
+       <td class="bus" onkeydown="insertBusRow(event,this);"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table class="signals idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab_signal0.9012164788358737" oncontextmenu="openregmenu(event);"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="signal name" class="name">signal_name</td> 
+       <td class="specImage"><img title="signals" alt="signals" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsklEQVQ4T6WSvUsCYRzHv2W+kJE0KBkE1lCEa7T2LwQuuQjREEIIjZVt4eLeYGA4GBW0ObgVQqBmDYIv6SChFRroXVpXnfjrnqfr5XBo6AM/7p7vfe/7/J6XAVKASvNZxr3whtnxYeh1g6r6Nyyi2+1Cr9dDE7ifuMPp9SN2l6Yx7xjlmtvtRjab5WaGLMuQJAmpVApWqxWtVgvpdBq5XA4+n+8nUJC6WD0owDA0iIWpUczNTGLDtYjiVYIH/aZaraLT6cBsNiMWiyEcDsPhcCAajfJ2qf70xh50ftOk/H2bv29u77CJNGWxWKhYLJKyPFK65L5CoUDxeJzK5TIfo9l5p2D8lvbOalxgnBwf9YWxSiaTqoNIFEUKBAKkdKcqnwytH5bw8t5TljqACesY8hcxbK0tK/9rsdvtaDQaCIVC0Ol0UDpCJpOB0+nkus1m+zReVkRaOchTWyYSXolMwyN9nQWDQT57vV7nJQgC+f1+8ng8VCqV+Lcv0Ov1KPcgUVts9QWx8nq9qlVLpVKhWu1nm774PuVIJAKj0QiTycSGHHY9XC4XDAaDqvyN5h7+H+AD3W9Zy3A0RZQAAAAASUVORK5CYII="></td> 
+       <td class="addCell readOnly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td class="label">name</td> 
+       <td class="label">port type</td> 
+       <td colspan="2" class="label">description</td> 
+      </tr> 
+      <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited sig_row" id="sig0.9012164788358737"> 
+       <td class="name">s1</td> 
+       <td class="direction">in</td> 
+       <td colspan="2" title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event,this);">fa<i><font color="#cc3333">sd helloooll</font></i></td> 
+      </tr> 
+      <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited sig_row" id="sig0.03221267211525314"> 
+       <td class="name">s2</td> 
+       <td class="direction">out</td> 
+       <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc">ooo</td> 
+      </tr> 
+      <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited sig_row" id="sig0.1382564907790481"> 
+       <td class="name">s3</td> 
+       <td class="direction">in</td> 
+       <td onkeydown="insertNewRowSignals(event,this);" colspan="2" class="desc signaldesc">faddd</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <table class="enum idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab_enum0.857071490965129" oncontextmenu="openregmenu(event);"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="enum name" class="name">enum_name</td> 
+       <td class="enumblank readOnly"></td> 
+      </tr> 
+      <tr> 
+       <td class="label">mnemonic name</td> 
+       <td class="label">value</td> 
+       <td class="label">description</td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited enum_row" id="enum0.857071490965129"> 
+       <td class="m_name">enum1</td> 
+       <td class="value">0</td> 
+       <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);"></td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited enum_row" id="enum0.8705024434485383"> 
+       <td class="m_name">enum2</td> 
+       <td class="value">1</td> 
+       <td class="desc enumdesc" onkeydown="insertEnumRow(event,this);"><b>this is enum 2&nbsp;hhh </b>&nbsp; &nbsp; &nbsp; &nbsp;hello &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited enum_row" id="enum0.7489595740036832"> 
+       <td class="m_name">enum3</td> 
+       <td class="value">2</td> 
+       <td class="desc enumdesc" onkeydown="insertEnumRow(event,this);"></td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" class="edited enum_row" id="enum0.0008578565996212317"> 
+       <td class="m_name">enum4</td> 
+       <td class="value">3</td> 
+       <td class="desc enumdesc" onkeydown="insertEnumRow(event,this);"></td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" class="edited enum_row" id="tab0.049429735338879066"> 
+       <td class="m_name">enum5</td> 
+       <td class="value">4</td> 
+       <td title="add description here" class="desc enumdesc" onkeydown="insertEnumRow(event,this);"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
     <br> 
     <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab10.4339483055542275"> 
      <tbody> 
@@ -150,7 +290,6 @@
     </table> 
     <br> 
     <br> 
-    <div id="autocomplete-list" class="autocomplete-items" style="max-height: 44.5625px; overflow: auto; display: none;"></div> 
     <table class="ref idsTemp" contenteditable="false" onclick="tabClick(this)" id="tab40.5723296570855138"> 
      <tbody> 
       <tr> 
@@ -331,7 +470,7 @@
     <br> 
     <br> 
    </div> 
-   <div id="idsexcelcontainer" style="display:block" class="disable"> 
+   <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar"> 
      <button onclick="showTemplate()">Open IDS Template</button> 
     </div> 
@@ -355,72 +494,76 @@
         <td class="ui-selectee">L</td> 
         <td class="ui-selectee">M</td> 
        </tr> 
-       <tr id="row0.04511811881970906" class="edited ui-selectee"> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">1</td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
-        <td tabindex="0" class="ui-selectee"><b>ref</b></td> 
-        <td tabindex="0" class="ui-selectee"><b>section</b></td> 
-        <td tabindex="0" class="ui-selectee"><b>refpath</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>enum name</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>enum value</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>enum desc</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>mnemonic name</b></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="tab10.4339483055542275" class="edited ui-selectee"> 
+       <tr id="enum0.857071490965129" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">2</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee">top</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="tab20.5801804924922608" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">3</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee">reg_name</td> 
-        <td tabindex="0" class="ui-selectee">32</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="tab00.9704145550513139" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">4</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee">f</td> 
-        <td tabindex="0" class="ui-selectee">rw</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">enum_name</td> 
         <td tabindex="0" class="ui-selectee">0</td> 
-        <td tabindex="0" class="ui-selectee">0:31</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">enum1</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="tab40.5723296570855138" class="edited ui-selectee"> 
+       <tr id="enum0.8705024434485383" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">3</td> 
+        <td tabindex="0" class="ui-selectee">enum_name</td> 
+        <td tabindex="0" class="ui-selectee">1</td> 
+        <td tabindex="0" class="ui-selectee"><b>this is enum 2&nbsp;hhh </b>&nbsp; &nbsp; &nbsp; &nbsp;hello &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td> 
+        <td tabindex="0" class="ui-selectee">enum2</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="enum0.7489595740036832" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">4</td> 
+        <td tabindex="0" class="ui-selectee">enum_name</td> 
+        <td tabindex="0" class="ui-selectee">2</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">enum3</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="enum0.0008578565996212317" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">5</td> 
+        <td tabindex="0" class="ui-selectee">enum_name</td> 
+        <td tabindex="0" class="ui-selectee">3</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">enum4</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -430,17 +573,13 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee">reg_1</td> 
-        <td tabindex="0" class="ui-selectee">ref_name</td> 
-        <td tabindex="0" class="ui-selectee">C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\debug2\chip.docx</td> 
        </tr> 
-       <tr id="field0.013563342006221113" class="edited ui-selectee"> 
+       <tr id="tab0.049429735338879066" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">6</td> 
+        <td tabindex="0" class="ui-selectee">enum_name</td> 
+        <td tabindex="0" class="ui-selectee">4</td> 
         <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">enum5</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -451,7 +590,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.34638006263895593" class="edited ui-selectee"> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">7</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -467,11 +606,11 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.8613537325645744" class="edited ui-selectee"> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">8</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"><b>signal name</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>port type</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>signal desc</b></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -483,11 +622,11 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.22019231868512423" class="edited ui-selectee"> 
+       <tr id="sig0.9012164788358737" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">9</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">s1</td> 
+        <td tabindex="0" class="ui-selectee">in</td> 
+        <td tabindex="0" class="ui-selectee active">fa<i><font color="#cc3333">sd helloooll</font></i></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -499,11 +638,11 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.9578178805224816" class="edited ui-selectee"> 
+       <tr id="sig0.03221267211525314" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">10</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">s2</td> 
+        <td tabindex="0" class="ui-selectee">out</td> 
+        <td tabindex="0" class="ui-selectee">ooo</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -515,11 +654,11 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.3732266860785226" class="edited ui-selectee"> 
+       <tr id="sig0.1382564907790481" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">11</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">s3</td> 
+        <td tabindex="0" class="ui-selectee">in</td> 
+        <td tabindex="0" class="ui-selectee">faddd</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -531,7 +670,7 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.4142257725359231" class="edited ui-selectee"> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">12</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -547,12 +686,12 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.9178119430480312" class="edited ui-selectee"> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">13</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"><b>bus domain name</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>address unit</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>bus description</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>bus</b></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -563,11 +702,11 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.2936806698118033" class="edited ui-selectee"> 
+       <tr id="bus0.2054716781253887" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">14</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">b1</td> 
+        <td tabindex="0" class="ui-selectee">fads</td> 
+        <td tabindex="0" class="ui-selectee"><b>THIS IS B1</b></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -579,8 +718,40 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.7540882387758174" class="edited ui-selectee"> 
+       <tr id="bus0.0783281445512165" class="edited ui-selectee"> 
         <td class="leftheader ui-selectee">15</td> 
+        <td tabindex="0" class="ui-selectee">b2</td> 
+        <td tabindex="0" class="ui-selectee">ff</td> 
+        <td tabindex="0" class="ui-selectee">fads</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="bus0.9407513639545074" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">16</td> 
+        <td tabindex="0" class="ui-selectee">b3</td> 
+        <td tabindex="0" class="ui-selectee">bbbb3</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">17</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -595,8 +766,248 @@
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
        </tr> 
-       <tr id="field0.8473642926025848" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">16</td> 
+       <tr id="row0.8282227751626583" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">18</td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
+        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>ref</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>section</b></td> 
+        <td tabindex="0" class="ui-selectee"><b>refpath</b></td> 
+       </tr> 
+       <tr id="tab10.4339483055542275" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">19</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">top</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab20.5801804924922608" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">20</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg_name</td> 
+        <td tabindex="0" class="ui-selectee">32</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab00.9704145550513139" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">21</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">f</td> 
+        <td tabindex="0" class="ui-selectee">rw</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">0</td> 
+        <td tabindex="0" class="ui-selectee">0:31</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="tab40.5723296570855138" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">22</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee">reg_1</td> 
+        <td tabindex="0" class="ui-selectee">ref_name</td> 
+        <td tabindex="0" class="ui-selectee">C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\debug2\chip.docx</td> 
+       </tr> 
+       <tr id="field0.6025732240110137" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">23</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.5662827448250701" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">24</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.027312135500810353" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">25</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.7417790389932963" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">26</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.9388722999301917" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">27</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.5258750325587285" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">28</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.5636576582988743" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">29</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.7748011236927946" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">30</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.9086924291436425" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">31</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.9730503906645803" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">32</td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+        <td tabindex="0" class="ui-selectee"></td> 
+       </tr> 
+       <tr id="field0.8917085675866446" class="edited ui-selectee"> 
+        <td class="leftheader ui-selectee">33</td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
         <td tabindex="0" class="ui-selectee"></td> 
@@ -778,11 +1189,11 @@
       </tbody> 
      </table> 
     </div> 
-    <div id="excelmenu" class="idsmenu" style="display: none; left: 251px; top: 167px;"> 
+    <div id="excelmenu" class="idsmenu" style="display: none; left: 359px; top: 266px;"> 
      <a onclick="insertrowbelow(this);">Insert Row Below</a> 
      <a onclick="insertcolright(this);">Insert Column Right</a> 
      <a id="menucopy" class="context-menu">Copy </a> 
-     <div class="submenu" id="submenucopy" style="display: none;"> 
+     <div class="submenu" id="submenucopy" style="display: none; left: 100%;"> 
       <a title="for multiple rows copy, select row from checkbox" tabindex="-1" onclick="copyrow(this);">Copy Row/s</a> 
       <a onclick="copycolumn(this);">Copy Column</a> 
      </div> 
@@ -798,6 +1209,6 @@
    <div id="config" style="display:none">
      &lt;settings&gt; &lt;company&gt;Agnisys, Inc.&lt;/company&gt; &lt;copyright&gt;***** Copyright 2018 All Rights Reserved. *****&lt;/copyright&gt; &lt;log&gt;false&lt;/log&gt; &lt;outdir/&gt; &lt;outputs&gt; &lt;verilog&gt;true&lt;/verilog&gt; &lt;verilog2001&gt;false&lt;/verilog2001&gt; &lt;ivs&gt;false&lt;/ivs&gt; &lt;arv&gt;false&lt;/arv&gt; &lt;special_reg/&gt; &lt;cmsis&gt;false&lt;/cmsis&gt; &lt;uvm&gt;false&lt;/uvm&gt; &lt;perl&gt;false&lt;/perl&gt; &lt;python&gt;false&lt;/python&gt; &lt;cpp&gt;false&lt;/cpp&gt; &lt;vheader&gt;false&lt;/vheader&gt; &lt;vhdheader&gt;false&lt;/vhdheader&gt; &lt;formal&gt;false&lt;/formal&gt; &lt;pdf&gt;false&lt;/pdf&gt; &lt;ovm&gt;false&lt;/ovm&gt; &lt;vmm&gt;false&lt;/vmm&gt; &lt;iss_firmware&gt;false&lt;/iss_firmware&gt; &lt;iss_csv&gt;false&lt;/iss_csv&gt; &lt;iss_html&gt;false&lt;/iss_html&gt; &lt;iss_sv&gt;false&lt;/iss_sv&gt; &lt;iss_uvm&gt;true&lt;/iss_uvm&gt; &lt;iss_matlab&gt;false&lt;/iss_matlab&gt; &lt;header&gt;false&lt;/header&gt; &lt;html&gt;false&lt;/html&gt; &lt;xrsl&gt;true&lt;/xrsl&gt; &lt;word&gt;false&lt;/word&gt; &lt;rdl&gt;false&lt;/rdl&gt; &lt;erm&gt;false&lt;/erm&gt; &lt;ivs&gt;false&lt;/ivs&gt; &lt;svheader&gt;false&lt;/svheader&gt; &lt;svg&gt;false&lt;/svg&gt; &lt;datasheet&gt;false&lt;/datasheet&gt; &lt;customcsv&gt;false&lt;/customcsv&gt; &lt;customxml&gt;false&lt;/customxml&gt; &lt;csharp&gt;false&lt;/csharp&gt; &lt;sv&gt;false&lt;/sv&gt; &lt;/outputs&gt; &lt;rtl_wire&gt;false&lt;/rtl_wire&gt; &lt;limit_toc/&gt; &lt;lowpower&gt;false&lt;/lowpower&gt; &lt;auto_sequence/&gt; &lt;interrupt/&gt; &lt;mbd/&gt; &lt;arv_assertion/&gt; &lt;memtechmapping&gt;false&lt;/memtechmapping&gt; &lt;sv_w_intf/&gt; &lt;sv_wo_intf/&gt; &lt;uvm_env/&gt; &lt;hdlpath&gt;false&lt;/hdlpath&gt; &lt;coverage&gt;false&lt;/coverage&gt; &lt;arv_coverage&gt;false&lt;/arv_coverage&gt; &lt;illegalbins&gt;false&lt;/illegalbins&gt; &lt;arv_constraint&gt;false&lt;/arv_constraint&gt; &lt;bus&gt;proprietary&lt;/bus&gt; &lt;reg_width&gt;32&lt;/reg_width&gt; &lt;bus_width&gt;32&lt;/bus_width&gt; &lt;unit&gt;8&lt;/unit&gt; &lt;block_size/&gt; &lt;chip_size/&gt; &lt;board_size/&gt; &lt;c_type/&gt; &lt;big_endian&gt;false&lt;/big_endian&gt; &lt;little_endian&gt;false&lt;/little_endian&gt; &lt;template_dir&gt;C:\Users\Anupam\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet&lt;/template_dir&gt; &lt;check_only&gt;true&lt;/check_only&gt; &lt;preserve_names&gt;true&lt;/preserve_names&gt; &lt;addr_sort&gt;false&lt;/addr_sort&gt; &lt;seqconfig&gt; &lt;output&gt; &lt;seq_outputs&gt; &lt;uvm&gt;true &lt;multioutput&gt;false&lt;/multioutput&gt; &lt;/uvm&gt; &lt;/seq_outputs&gt; &lt;uvm&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;regmodel oid="0"&gt;default&lt;/regmodel&gt; &lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt; &lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/uvm&gt; &lt;sv&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;bus oid="0"&gt;default&lt;/bus&gt; &lt;write oid="0"&gt;write_mirror(%a, %d, 0, 0)&lt;/write&gt; &lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/sv&gt; &lt;firmware&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;int&lt;/arguments&gt; &lt;constant&gt;int&lt;/constant&gt; &lt;variable&gt;int&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_WRITE(%a,%d,%m,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;consolidated&gt;false&lt;/consolidated&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/firmware&gt; &lt;matlab&gt; &lt;datatype&gt; &lt;inlinefunction&gt;int&lt;/inlinefunction&gt; &lt;arguments&gt;integer&lt;/arguments&gt; &lt;constant&gt;integer&lt;/constant&gt; &lt;variable&gt;integer&lt;/variable&gt; &lt;/datatype&gt; &lt;templatename oid="0"&gt;default&lt;/templatename&gt; &lt;write oid="0"&gt;REG_WRITE(memory_name,%a,%d)&lt;/write&gt; &lt;read oid="0"&gt;REG_READ(memory_name,%a)&lt;/read&gt; &lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt; &lt;fieldwrite oid="0"&gt;FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)&lt;/fieldwrite&gt; &lt;fieldread oid="0"&gt;FIELD_READ(memory_name,%a,%msb,%lsb)&lt;/fieldread&gt; &lt;timeunit1&gt;1&lt;/timeunit1&gt; &lt;timeunit2&gt;ns&lt;/timeunit2&gt; &lt;timeprecision1&gt;1&lt;/timeprecision1&gt; &lt;timeprecision2&gt;ns&lt;/timeprecision2&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;mout/&gt; &lt;/matlab&gt; &lt;csv&gt; &lt;commands&gt; &lt;isscmd oid="0"&gt;call&lt;/isscmd&gt; &lt;cmd oid="0"&gt;CALL&lt;/cmd&gt; &lt;isscmd oid="1"&gt;wait&lt;/isscmd&gt; &lt;cmd oid="1"&gt;WAIT&lt;/cmd&gt; &lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt; &lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt; &lt;isscmd oid="3"&gt;write_1_set&lt;/isscmd&gt; &lt;cmd oid="3"&gt;WRITE_SET&lt;/cmd&gt; &lt;isscmd oid="4"&gt;write&lt;/isscmd&gt; &lt;cmd oid="4"&gt;WRITE&lt;/cmd&gt; &lt;isscmd oid="5"&gt;switch&lt;/isscmd&gt; &lt;cmd oid="5"&gt;SWITCH&lt;/cmd&gt; &lt;/commands&gt; &lt;headers&gt; &lt;issheader oid="0"&gt;address&lt;/issheader&gt; &lt;header oid="0"&gt;address&lt;/header&gt; &lt;issheader oid="1"&gt;description&lt;/issheader&gt; &lt;header oid="1"&gt;description&lt;/header&gt; &lt;issheader oid="2"&gt;step&lt;/issheader&gt; &lt;header oid="2"&gt;step&lt;/header&gt; &lt;issheader oid="3"&gt;value&lt;/issheader&gt; &lt;header oid="3"&gt;value&lt;/header&gt; &lt;issheader oid="4"&gt;command&lt;/issheader&gt; &lt;header oid="4"&gt;command&lt;/header&gt; &lt;/headers&gt; &lt;timemultiplier&gt;100&lt;/timemultiplier&gt; &lt;maxnesting&gt;1&lt;/maxnesting&gt; &lt;nameformat&gt;%s&lt;/nameformat&gt; &lt;/csv&gt; &lt;/output&gt; &lt;/seqconfig&gt; &lt;/settings&gt; 
    </div> 
-  </div>  
+  </div> 
  </body>
 </html>
