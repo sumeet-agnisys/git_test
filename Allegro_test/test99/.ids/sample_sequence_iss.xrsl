@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<chip heading="1" child_no="1" id="tab10.9204286373815403" name="TopC" uid="2018-10-11T11:09:09.049+05:30d14e1" keypath="TopC" offset="0" caddress="0" hwmapaddr="43" csize="456" diff_regwidth="true" address="0x000" endaddress="0x1C7" size="456">
+<chip heading="1" child_no="1" id="tab10.9204286373815403" name="TopC" uid="2019-01-04T17:24:51.678+05:30d14e1" keypath="TopC" offset="0" caddress="0" hwmapaddr="129" csize="456" diff_regwidth="true" address="0x000" endaddress="0x1C7" size="456">
    <config>
       <variants>
          <variant name="none" isselected="true">
@@ -7,135 +7,135 @@
   variant property.</doc>
          </variant>
       </variants>
-      <regwidth>16</regwidth>
+      <regwidth>32</regwidth>
       <buswidth>32</buswidth>
-      <addressunit>8</addressunit>
+      <addressunit>16</addressunit>
       <busdomains>
-         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x1C7" size="456"/>
+         <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x000" endaddress="0x1C7" size="456"/>
       </busdomains>
    </config>
-   <block heading="1.1" child_no="1" id="tab20.3774888037391506" name="PCIe_LINK0" uid="2018-10-11T11:09:09.049+05:30d14e13" keypath="TopC.PCIe_LINK0,PCIe_LINK0" hwmapaddr="44" csize="404" offset="0" caddress="0" address="0x000" endaddress="0x193" size="404">
+   <block heading="1.1" child_no="1" id="tab20.3774888037391506" name="PCIe_LINK0" uid="2019-01-04T17:24:51.678+05:30d14e13" keypath="TopC.PCIe_LINK0,PCIe_LINK0" hwmapaddr="130" csize="404" offset="0" caddress="0" address="0x000" endaddress="0x193" size="404">
       <config>
          <busdomains>
-            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x193" size="404"/>
+            <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x000" endaddress="0x193" size="404"/>
          </busdomains>
       </config>
-      <section heading="1.1.1" child_no="1" type="mem" external="true" name="SSHD" memwidth="64" id="tab30.6105146909118842" uid="2018-10-11T11:09:09.049+05:30d14e15" keypath="TopC.PCIe_LINK0.SSHD,PCIe_LINK0.SSHD,SSHD" keypathdown="SSHD.SSHD,SSHD" count="50" hwmapaddr="45" max_reg_size="64" csize="400" offset="0" caddress="0" address="0x000" endaddress="0x18F" size="8" address2="0x008">
+      <section heading="1.1.1" child_no="1" type="mem" external="true" name="SSHD" memwidth="64" id="tab30.6105146909118842" uid="2019-01-04T17:24:51.678+05:30d14e15" keypath="TopC.PCIe_LINK0.SSHD,PCIe_LINK0.SSHD,SSHD" keypathdown="SSHD.SSHD,SSHD" count="50" hwmapaddr="131" max_reg_size="64" csize="400" offset="0" caddress="0" address="0x000" endaddress="0x18F" size="8" address2="0x008">
          <config>
             <repeats>
                <repeat count="50" name="SSHD"/>
             </repeats>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x18F" size="8" address2="0x008"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x000" endaddress="0x18F" size="8" address2="0x008"/>
             </busdomains>
          </config>
-         <reg heading="1.1.1.1" child_no="1" name="SSHD" uid="2018-10-11T11:09:09.049+05:30d14e19" keypath="TopC.PCIe_LINK0.SSHD.SSHD,PCIe_LINK0.SSHD.SSHD,SSHD.SSHD,SSHD" type="mem" hwmapaddr="46" csize="8" offset="0" caddress="0" address="0x000" endaddress="0x7" size="8" default="0x0000000000000000" sw="ro" hw="rw">
+         <reg heading="1.1.1.1" child_no="1" name="SSHD" uid="2019-01-04T17:24:51.678+05:30d14e19" keypath="TopC.PCIe_LINK0.SSHD.SSHD,PCIe_LINK0.SSHD.SSHD,SSHD.SSHD,SSHD" type="mem" hwmapaddr="132" csize="8" offset="0" caddress="0" address="0x000" endaddress="0x7" size="8" default="0x0000000000000000" sw="ro" hw="rw">
             <config>
                <regwidth>64</regwidth>
                <busdomains>
-                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x7" size="8"/>
+                  <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x000" endaddress="0x7" size="8"/>
                </busdomains>
             </config>
-            <field name="SSHD" offset="63:0" uid="2018-10-11T11:09:09.049+05:30d14e23" keypath="TopC.PCIe_LINK0.SSHD.SSHD.SSHD,PCIe_LINK0.SSHD.SSHD.SSHD,SSHD.SSHD.SSHD,SSHD.SSHD,SSHD">
+            <field name="SSHD" offset="63:0" uid="2019-01-04T17:24:51.678+05:30d14e23" keypath="TopC.PCIe_LINK0.SSHD.SSHD.SSHD,PCIe_LINK0.SSHD.SSHD.SSHD,SSHD.SSHD.SSHD,SSHD.SSHD,SSHD">
                <sw>ro</sw>
                <hw>rw</hw>
                <default unresolvedDef="0">0000000000000000000000000000000000000000000000000000000000000000</default>
             </field>
          </reg>
       </section>
-      <reg heading="1.1.2" child_no="2" id="tab40.2415357963243272" name="boot_rom" uid="2018-10-11T11:09:09.049+05:30d14e30" keypath="TopC.PCIe_LINK0.boot_rom,PCIe_LINK0.boot_rom,boot_rom" hwmapaddr="47" csize="4" offset="400" caddress="400" address="0x190" endaddress="0x193" size="4" default="0x00000001" sw="rw" hw="rw">
+      <reg heading="1.1.2" child_no="2" id="tab40.2415357963243272" name="boot_rom" uid="2019-01-04T17:24:51.678+05:30d14e30" keypath="TopC.PCIe_LINK0.boot_rom,PCIe_LINK0.boot_rom,boot_rom" hwmapaddr="133" csize="4" offset="400" caddress="400" address="0x190" endaddress="0x193" size="4" default="0x00000001" sw="rw" hw="rw">
          <config>
             <regwidth>32</regwidth>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="400" address="0x190" endaddress="0x193" size="4"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="400" address="0x190" endaddress="0x193" size="4"/>
             </busdomains>
          </config>
-         <field id="tab00.29580338949885776" offset="15:0" name="boot_rom_mem0" uid="2018-10-11T11:09:09.049+05:30d14e34" keypath="TopC.PCIe_LINK0.boot_rom.boot_rom_mem0,PCIe_LINK0.boot_rom.boot_rom_mem0,boot_rom.boot_rom_mem0,boot_rom_mem0">
+         <field id="tab00.29580338949885776" offset="15:0" name="boot_rom_mem0" uid="2019-01-04T17:24:51.678+05:30d14e34" keypath="TopC.PCIe_LINK0.boot_rom.boot_rom_mem0,PCIe_LINK0.boot_rom.boot_rom_mem0,boot_rom.boot_rom_mem0,boot_rom_mem0">
             <sw>rw</sw>
             <hw>rw</hw>
             <default unresolvedDef="1">0000000000000001</default>
          </field>
-         <field id="tab10.7435216489122819" offset="23:16" name="boot_rom_mem1" uid="2018-10-11T11:09:09.049+05:30d14e41" keypath="TopC.PCIe_LINK0.boot_rom.boot_rom_mem1,PCIe_LINK0.boot_rom.boot_rom_mem1,boot_rom.boot_rom_mem1,boot_rom_mem1">
+         <field id="tab10.7435216489122819" offset="23:16" name="boot_rom_mem1" uid="2019-01-04T17:24:51.678+05:30d14e41" keypath="TopC.PCIe_LINK0.boot_rom.boot_rom_mem1,PCIe_LINK0.boot_rom.boot_rom_mem1,boot_rom.boot_rom_mem1,boot_rom_mem1">
             <sw>rw</sw>
             <hw>rw</hw>
             <default unresolvedDef="0">00000000</default>
          </field>
-         <field id="tab20.11197047405486449" offset="31:24" name="boot_rom_mem2" uid="2018-10-11T11:09:09.049+05:30d14e48" keypath="TopC.PCIe_LINK0.boot_rom.boot_rom_mem2,PCIe_LINK0.boot_rom.boot_rom_mem2,boot_rom.boot_rom_mem2,boot_rom_mem2">
+         <field id="tab20.11197047405486449" offset="31:24" name="boot_rom_mem2" uid="2019-01-04T17:24:51.678+05:30d14e48" keypath="TopC.PCIe_LINK0.boot_rom.boot_rom_mem2,PCIe_LINK0.boot_rom.boot_rom_mem2,boot_rom.boot_rom_mem2,boot_rom_mem2">
             <sw>rw</sw>
             <hw>rw</hw>
             <default unresolvedDef="0">00000000</default>
          </field>
       </reg>
    </block>
-   <block heading="1.2" child_no="2" id="tab60.6688305729524785" name="PCIe_LINK0_CORE" uid="2018-10-11T11:09:09.049+05:30d14e55" keypath="TopC.PCIe_LINK0_CORE,PCIe_LINK0_CORE" hwmapaddr="48" max_reg_size="32" csize="44" offset="404" caddress="404" address="0x194" endaddress="0x1BF" size="44">
+   <block heading="1.2" child_no="2" id="tab60.6688305729524785" name="PCIe_LINK0_CORE" uid="2019-01-04T17:24:51.678+05:30d14e55" keypath="TopC.PCIe_LINK0_CORE,PCIe_LINK0_CORE" hwmapaddr="134" max_reg_size="32" csize="44" offset="404" caddress="404" address="0x194" endaddress="0x1BF" size="44">
       <config>
          <busdomains>
-            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="404" address="0x194" endaddress="0x1BF" size="44"/>
+            <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="404" address="0x194" endaddress="0x1BF" size="44"/>
          </busdomains>
       </config>
-      <reg heading="1.2.1" child_no="1" id="tab70.2796477442361486" name="flash_mem" uid="2018-10-11T11:09:09.049+05:30d14e57" keypath="TopC.PCIe_LINK0_CORE.flash_mem,PCIe_LINK0_CORE.flash_mem,flash_mem" count="7" hwmapaddr="49" csize="28" offset="0" caddress="0" address="0x194" endaddress="0x1AF" size="4" address2="0x198" default="0x00000000" sw="rw" hw="rw">
+      <reg heading="1.2.1" child_no="1" id="tab70.2796477442361486" name="flash_mem" uid="2019-01-04T17:24:51.678+05:30d14e57" keypath="TopC.PCIe_LINK0_CORE.flash_mem,PCIe_LINK0_CORE.flash_mem,flash_mem" count="7" hwmapaddr="135" csize="28" offset="0" caddress="0" address="0x194" endaddress="0x1AF" size="4" address2="0x198" default="0x00000000" sw="rw" hw="rw">
          <config>
             <regwidth>32</regwidth>
             <repeats>
                <repeat count="7" name="flash_mem"/>
             </repeats>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x194" endaddress="0x1AF" size="4" address2="0x198"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x194" endaddress="0x1AF" size="4" address2="0x198"/>
             </busdomains>
          </config>
          <doc/>
-         <field id="tab30.7747026687791932" offset="15:0" name="flash_mem0" uid="2018-10-11T11:09:09.049+05:30d14e64" keypath="TopC.PCIe_LINK0_CORE.flash_mem.flash_mem0,PCIe_LINK0_CORE.flash_mem.flash_mem0,flash_mem.flash_mem0,flash_mem0">
+         <field id="tab30.7747026687791932" offset="15:0" name="flash_mem0" uid="2019-01-04T17:24:51.678+05:30d14e64" keypath="TopC.PCIe_LINK0_CORE.flash_mem.flash_mem0,PCIe_LINK0_CORE.flash_mem.flash_mem0,flash_mem.flash_mem0,flash_mem0">
             <sw>rw</sw>
             <hw>rw</hw>
             <default unresolvedDef="0">0000000000000000</default>
          </field>
-         <field id="tab40.5183156882381003" offset="31:16" name="flash_mem1" uid="2018-10-11T11:09:09.049+05:30d14e71" keypath="TopC.PCIe_LINK0_CORE.flash_mem.flash_mem1,PCIe_LINK0_CORE.flash_mem.flash_mem1,flash_mem.flash_mem1,flash_mem1">
+         <field id="tab40.5183156882381003" offset="31:16" name="flash_mem1" uid="2019-01-04T17:24:51.678+05:30d14e71" keypath="TopC.PCIe_LINK0_CORE.flash_mem.flash_mem1,PCIe_LINK0_CORE.flash_mem.flash_mem1,flash_mem.flash_mem1,flash_mem1">
             <sw>rw</sw>
             <hw>rw</hw>
             <default unresolvedDef="0">0000000000000000</default>
          </field>
       </reg>
-      <section heading="1.2.2" child_no="2" id="tab90.2279667911147808" name="rx_mem" uid="2018-10-11T11:09:09.049+05:30d14e78" keypath="TopC.PCIe_LINK0_CORE.rx_mem,PCIe_LINK0_CORE.rx_mem,rx_mem" keypathdown="rx_mem.rx_buffer0.rx_buffer1,rx_buffer0,rx_buffer1" count="2" hwmapaddr="50" max_reg_size="32" csize="16" offset="28" caddress="28" address="0x1B0" endaddress="0x1BF" size="8" address2="0x1B8">
+      <section heading="1.2.2" child_no="2" id="tab90.2279667911147808" name="rx_mem" uid="2019-01-04T17:24:51.678+05:30d14e78" keypath="TopC.PCIe_LINK0_CORE.rx_mem,PCIe_LINK0_CORE.rx_mem,rx_mem" keypathdown="rx_mem.rx_buffer0.rx_buffer1,rx_buffer0,rx_buffer1" count="2" hwmapaddr="136" max_reg_size="32" csize="16" offset="28" caddress="28" address="0x1B0" endaddress="0x1BF" size="8" address2="0x1B8">
          <config>
             <repeats>
                <repeat count="2" name="rx_mem"/>
             </repeats>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="28" address="0x1B0" endaddress="0x1BF" size="8" address2="0x1B8"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="28" address="0x1B0" endaddress="0x1BF" size="8" address2="0x1B8"/>
             </busdomains>
          </config>
          <doc/>
-         <reg heading="1.2.2.1" child_no="1" id="tab100.0639064025924021" name="rx_buffer0" uid="2018-10-11T11:09:09.049+05:30d14e83" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer0,PCIe_LINK0_CORE.rx_mem.rx_buffer0,rx_mem.rx_buffer0,rx_buffer0" hwmapaddr="51" csize="4" offset="0" caddress="0" address="0x1B0" endaddress="0x1B3" size="4" default="0x00000001" sw="rw" hw="rw">
+         <reg heading="1.2.2.1" child_no="1" id="tab100.0639064025924021" name="rx_buffer0" uid="2019-01-04T17:24:51.678+05:30d14e83" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer0,PCIe_LINK0_CORE.rx_mem.rx_buffer0,rx_mem.rx_buffer0,rx_buffer0" hwmapaddr="137" csize="4" offset="0" caddress="0" address="0x1B0" endaddress="0x1B3" size="4" default="0x00000001" sw="rw" hw="rw">
             <config>
                <regwidth>32</regwidth>
                <busdomains>
-                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x1B0" endaddress="0x1B3" size="4"/>
+                  <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x1B0" endaddress="0x1B3" size="4"/>
                </busdomains>
             </config>
-            <field id="tab50.1932974735557601" offset="15:0" name="es_rx_buffer0" uid="2018-10-11T11:09:09.049+05:30d14e87" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer0,PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer0,rx_mem.rx_buffer0.es_rx_buffer0,rx_buffer0.es_rx_buffer0,es_rx_buffer0">
+            <field id="tab50.1932974735557601" offset="15:0" name="es_rx_buffer0" uid="2019-01-04T17:24:51.678+05:30d14e87" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer0,PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer0,rx_mem.rx_buffer0.es_rx_buffer0,rx_buffer0.es_rx_buffer0,es_rx_buffer0">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="1">0000000000000001</default>
             </field>
-            <field id="tab60.1609766908010669" offset="31:16" name="es_rx_buffer1" uid="2018-10-11T11:09:09.049+05:30d14e94" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer1,PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer1,rx_mem.rx_buffer0.es_rx_buffer1,rx_buffer0.es_rx_buffer1,es_rx_buffer1">
+            <field id="tab60.1609766908010669" offset="31:16" name="es_rx_buffer1" uid="2019-01-04T17:24:51.678+05:30d14e94" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer1,PCIe_LINK0_CORE.rx_mem.rx_buffer0.es_rx_buffer1,rx_mem.rx_buffer0.es_rx_buffer1,rx_buffer0.es_rx_buffer1,es_rx_buffer1">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="0">0000000000000000</default>
             </field>
          </reg>
-         <reg heading="1.2.2.2" child_no="2" id="tab120.39398805865605335" name="rx_buffer1" uid="2018-10-11T11:09:09.049+05:30d14e101" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer1,PCIe_LINK0_CORE.rx_mem.rx_buffer1,rx_mem.rx_buffer1,rx_buffer1" hwmapaddr="52" csize="4" offset="4" caddress="4" address="0x1B4" endaddress="0x1B7" size="4" default="0x00000000" sw="rw" hw="rw">
+         <reg heading="1.2.2.2" child_no="2" id="tab120.39398805865605335" name="rx_buffer1" uid="2019-01-04T17:24:51.678+05:30d14e101" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer1,PCIe_LINK0_CORE.rx_mem.rx_buffer1,rx_mem.rx_buffer1,rx_buffer1" hwmapaddr="138" csize="4" offset="4" caddress="4" address="0x1B4" endaddress="0x1B7" size="4" default="0x00000000" sw="rw" hw="rw">
             <config>
                <regwidth>32</regwidth>
                <busdomains>
-                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x1B4" endaddress="0x1B7" size="4"/>
+                  <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="4" address="0x1B4" endaddress="0x1B7" size="4"/>
                </busdomains>
             </config>
-            <field id="tab70.966802283989046" offset="15:0" name="es_rx_buffer0" uid="2018-10-11T11:09:09.049+05:30d14e105" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer0,PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer0,rx_mem.rx_buffer1.es_rx_buffer0,rx_buffer1.es_rx_buffer0,es_rx_buffer0">
+            <field id="tab70.966802283989046" offset="15:0" name="es_rx_buffer0" uid="2019-01-04T17:24:51.678+05:30d14e105" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer0,PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer0,rx_mem.rx_buffer1.es_rx_buffer0,rx_buffer1.es_rx_buffer0,es_rx_buffer0">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="0">0000000000000000</default>
             </field>
-            <field id="tab80.6427375559839165" offset="31:16" name="es_rx_buffer1" uid="2018-10-11T11:09:09.049+05:30d14e112" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer1,PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer1,rx_mem.rx_buffer1.es_rx_buffer1,rx_buffer1.es_rx_buffer1,es_rx_buffer1">
+            <field id="tab80.6427375559839165" offset="31:16" name="es_rx_buffer1" uid="2019-01-04T17:24:51.678+05:30d14e112" keypath="TopC.PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer1,PCIe_LINK0_CORE.rx_mem.rx_buffer1.es_rx_buffer1,rx_mem.rx_buffer1.es_rx_buffer1,rx_buffer1.es_rx_buffer1,es_rx_buffer1">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="0">0000000000000000</default>
@@ -143,69 +143,69 @@
          </reg>
       </section>
    </block>
-   <block heading="1.3" child_no="3" id="tab150.2548274167468504" name="PCIe_LINK1_CORE" uid="2018-10-11T11:09:09.049+05:30d14e119" keypath="TopC.PCIe_LINK1_CORE,PCIe_LINK1_CORE" hwmapaddr="53" csize="8" offset="448" caddress="448" address="0x1C0" endaddress="0x1C7" size="8">
+   <block heading="1.3" child_no="3" id="tab150.2548274167468504" name="PCIe_LINK1_CORE" uid="2019-01-04T17:24:51.678+05:30d14e119" keypath="TopC.PCIe_LINK1_CORE,PCIe_LINK1_CORE" hwmapaddr="139" csize="8" offset="448" caddress="448" address="0x1C0" endaddress="0x1C7" size="8">
       <config>
          <busdomains>
-            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="448" address="0x1C0" endaddress="0x1C7" size="8"/>
+            <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="448" address="0x1C0" endaddress="0x1C7" size="8"/>
          </busdomains>
       </config>
-      <section heading="1.3.1" child_no="1" id="tab160.5030228732433447" name="flash_memory" uid="2018-10-11T11:09:09.049+05:30d14e121" keypath="TopC.PCIe_LINK1_CORE.flash_memory,PCIe_LINK1_CORE.flash_memory,flash_memory" keypathdown="flash_memory.boot_flash0.boot_flash1,boot_flash0,boot_flash1" hwmapaddr="54" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x1C0" endaddress="0x1C7" size="8">
+      <section heading="1.3.1" child_no="1" id="tab160.5030228732433447" name="flash_memory" uid="2019-01-04T17:24:51.678+05:30d14e121" keypath="TopC.PCIe_LINK1_CORE.flash_memory,PCIe_LINK1_CORE.flash_memory,flash_memory" keypathdown="flash_memory.boot_flash0.boot_flash1,boot_flash0,boot_flash1" hwmapaddr="140" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x1C0" endaddress="0x1C7" size="8">
          <config>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x1C0" endaddress="0x1C7" size="8"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x1C0" endaddress="0x1C7" size="8"/>
             </busdomains>
          </config>
-         <reg heading="1.3.1.1" child_no="1" id="tab170.8384024873576115" name="boot_flash0" uid="2018-10-11T11:09:09.049+05:30d14e123" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0,PCIe_LINK1_CORE.flash_memory.boot_flash0,flash_memory.boot_flash0,boot_flash0" hwmapaddr="55" csize="4" offset="0" caddress="0" address="0x1C0" endaddress="0x1C3" size="4" default="0x200A0100" sw="rw ro wo" hw="rw ro">
+         <reg heading="1.3.1.1" child_no="1" id="tab170.8384024873576115" name="boot_flash0" uid="2019-01-04T17:24:51.678+05:30d14e123" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0,PCIe_LINK1_CORE.flash_memory.boot_flash0,flash_memory.boot_flash0,boot_flash0" hwmapaddr="141" csize="4" offset="0" caddress="0" address="0x1C0" endaddress="0x1C3" size="4" default="0x200A0100" sw="rw ro wo" hw="rw ro">
             <config>
                <regwidth>32</regwidth>
                <busdomains>
-                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x1C0" endaddress="0x1C3" size="4"/>
+                  <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x1C0" endaddress="0x1C3" size="4"/>
                </busdomains>
             </config>
-            <field id="tab90.16461099219760167" offset="7:0" name="flash0" uid="2018-10-11T11:09:09.049+05:30d14e127" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash0,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash0,flash_memory.boot_flash0.flash0,boot_flash0.flash0,flash0">
+            <field id="tab90.16461099219760167" offset="7:0" name="flash0" uid="2019-01-04T17:24:51.678+05:30d14e127" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash0,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash0,flash_memory.boot_flash0.flash0,boot_flash0.flash0,flash0">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="0">00000000</default>
             </field>
-            <field id="tab100.9938665298297211" offset="15:8" name="flash1" uid="2018-10-11T11:09:09.049+05:30d14e134" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash1,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash1,flash_memory.boot_flash0.flash1,boot_flash0.flash1,flash1">
+            <field id="tab100.9938665298297211" offset="15:8" name="flash1" uid="2019-01-04T17:24:51.678+05:30d14e134" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash1,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash1,flash_memory.boot_flash0.flash1,boot_flash0.flash1,flash1">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="1">00000001</default>
             </field>
-            <field id="tab110.8789839156770753" offset="23:16" name="flash_forward0" uid="2018-10-11T11:09:09.049+05:30d14e141" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_forward0,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_forward0,flash_memory.boot_flash0.flash_forward0,boot_flash0.flash_forward0,flash_forward0">
+            <field id="tab110.8789839156770753" offset="23:16" name="flash_forward0" uid="2019-01-04T17:24:51.678+05:30d14e141" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_forward0,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_forward0,flash_memory.boot_flash0.flash_forward0,boot_flash0.flash_forward0,flash_forward0">
                <sw>ro</sw>
                <hw>ro</hw>
                <default unresolvedDef="10">00001010</default>
             </field>
-            <field id="tab120.23108348476414142" offset="31:28" name="flash_recycle" uid="2018-10-11T11:09:09.049+05:30d14e148" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_recycle,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_recycle,flash_memory.boot_flash0.flash_recycle,boot_flash0.flash_recycle,flash_recycle">
+            <field id="tab120.23108348476414142" offset="31:28" name="flash_recycle" uid="2019-01-04T17:24:51.678+05:30d14e148" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_recycle,PCIe_LINK1_CORE.flash_memory.boot_flash0.flash_recycle,flash_memory.boot_flash0.flash_recycle,boot_flash0.flash_recycle,flash_recycle">
                <sw>wo</sw>
                <hw>ro</hw>
                <default unresolvedDef="2">0010</default>
             </field>
          </reg>
-         <reg heading="1.3.1.2" child_no="2" id="tab190.5172352307287306" name="boot_flash1" uid="2018-10-11T11:09:09.049+05:30d14e155" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1,PCIe_LINK1_CORE.flash_memory.boot_flash1,flash_memory.boot_flash1,boot_flash1" hwmapaddr="56" csize="4" offset="4" caddress="4" address="0x1C4" endaddress="0x1C7" size="4" default="0x00086416" sw="rw ro" hw="rw ro wo">
+         <reg heading="1.3.1.2" child_no="2" id="tab190.5172352307287306" name="boot_flash1" uid="2019-01-04T17:24:51.678+05:30d14e155" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1,PCIe_LINK1_CORE.flash_memory.boot_flash1,flash_memory.boot_flash1,boot_flash1" hwmapaddr="142" csize="4" offset="4" caddress="4" address="0x1C4" endaddress="0x1C7" size="4" default="0x00086416" sw="rw ro" hw="rw ro wo">
             <config>
                <regwidth>32</regwidth>
                <busdomains>
-                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x1C4" endaddress="0x1C7" size="4"/>
+                  <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="4" address="0x1C4" endaddress="0x1C7" size="4"/>
                </busdomains>
             </config>
-            <field id="tab130.9057852334965949" offset="7:0" name="flash_field0" uid="2018-10-11T11:09:09.049+05:30d14e159" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field0,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field0,flash_memory.boot_flash1.flash_field0,boot_flash1.flash_field0,flash_field0">
+            <field id="tab130.9057852334965949" offset="7:0" name="flash_field0" uid="2019-01-04T17:24:51.678+05:30d14e159" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field0,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field0,flash_memory.boot_flash1.flash_field0,boot_flash1.flash_field0,flash_field0">
                <sw>rw</sw>
                <hw>rw</hw>
                <default unresolvedDef="22">00010110</default>
             </field>
-            <field id="tab140.3808094415357859" offset="15:10" name="flash_field1" uid="2018-10-11T11:09:09.049+05:30d14e166" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field1,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field1,flash_memory.boot_flash1.flash_field1,boot_flash1.flash_field1,flash_field1">
+            <field id="tab140.3808094415357859" offset="15:10" name="flash_field1" uid="2019-01-04T17:24:51.678+05:30d14e166" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field1,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field1,flash_memory.boot_flash1.flash_field1,boot_flash1.flash_field1,flash_field1">
                <sw>ro</sw>
                <hw>ro</hw>
                <default unresolvedDef="25">011001</default>
             </field>
-            <field id="tab150.8025054222269561" offset="25:19" name="flash_field2" uid="2018-10-11T11:09:09.049+05:30d14e173" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field2,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field2,flash_memory.boot_flash1.flash_field2,boot_flash1.flash_field2,flash_field2">
+            <field id="tab150.8025054222269561" offset="25:19" name="flash_field2" uid="2019-01-04T17:24:51.678+05:30d14e173" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field2,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field2,flash_memory.boot_flash1.flash_field2,boot_flash1.flash_field2,flash_field2">
                <sw>rw</sw>
                <hw>wo</hw>
                <default unresolvedDef="1">0000001</default>
             </field>
-            <field id="tab160.0494367761421185" offset="31:30" name="flash_field3" uid="2018-10-11T11:09:09.049+05:30d14e180" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field3,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field3,flash_memory.boot_flash1.flash_field3,boot_flash1.flash_field3,flash_field3">
+            <field id="tab160.0494367761421185" offset="31:30" name="flash_field3" uid="2019-01-04T17:24:51.678+05:30d14e180" keypath="TopC.PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field3,PCIe_LINK1_CORE.flash_memory.boot_flash1.flash_field3,flash_memory.boot_flash1.flash_field3,boot_flash1.flash_field3,flash_field3">
                <sw>ro</sw>
                <hw>wo</hw>
                <default unresolvedDef="0">00</default>
@@ -214,17 +214,17 @@
       </section>
    </block>
    <sequences>
-      <sequence name="Status_EEPROM" sid="1:0" eid="seq_ip_0.7711235071171936" orig_path="sample_sequence.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\sample_sequence.idsng" level="1" uid="2018-10-11T11:09:10.097+05:30d24e216">
+      <sequence name="Status_EEPROM" sid="1:0" eid="seq_ip_0.7711235071171936" orig_path="sample_sequence.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\sample_sequence.idsng" level="1" uid="2019-01-04T17:24:52.938+05:30d24e216">
          <doc/>
          <arguments>
-            <value doc="" sid="4:0" eid="seq_arg0.7711235071171936" uid="2018-10-11T11:09:09.049+05:30d14e191" svDataType="integer" cDataType="int" UvmDataType="int" name="arg">2</value>
+            <value doc="" sid="4:0" eid="seq_arg0.7711235071171936" uid="2019-01-04T17:24:51.678+05:30d14e191" svDataType="integer" cDataType="int" UvmDataType="int" name="arg">2</value>
          </arguments>
          <constants>
-            <value doc="" sid="7:0" eid="seq_const0.7711235071171936" uid="2018-10-11T11:09:09.049+05:30d14e194" svDataType="integer" cDataType="int" UvmDataType="int" name="const1">3</value>
-            <value doc="" sid="7:0" eid="seq0.6680795443126246" uid="2018-10-11T11:09:09.049+05:30d14e196" svDataType="integer" cDataType="int" UvmDataType="int" name="const2">4</value>
+            <value doc="" sid="7:0" eid="seq_const0.7711235071171936" uid="2019-01-04T17:24:51.678+05:30d14e194" svDataType="integer" cDataType="int" UvmDataType="int" name="const1">3</value>
+            <value doc="" sid="7:0" eid="seq0.6680795443126246" uid="2019-01-04T17:24:51.678+05:30d14e196" svDataType="integer" cDataType="int" UvmDataType="int" name="const2">4</value>
          </constants>
          <variables>
-            <value doc="" sid="10:0" eid="seq_var0.7711235071171936" uid="2018-10-11T11:09:09.049+05:30d14e199" svDataType="integer" cDataType="int" UvmDataType="int" name="var1">
+            <value doc="" sid="10:0" eid="seq_var0.7711235071171936" uid="2019-01-04T17:24:51.678+05:30d14e199" svDataType="integer" cDataType="int" UvmDataType="int" name="var1">
                <EXPRESSION>
                   <EXPRESSION type="number">5</EXPRESSION>
                </EXPRESSION>
@@ -232,11 +232,11 @@
             </value>
          </variables>
          <seqsteps>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e234" sid="15:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e234" sid="15:0">
                <ASSIGNMENT command="write" eid="seq_cmd0.7711235071171936">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e41" fieldDefault="00000000" regSize="32" regDefault="0x00000001" fieldSize="8" field_offset="23:16" field_sw="rw" field_hw="rw" field_default="00000000" reg_address="0x190">PCIe_LINK0.boot_rom.boot_rom_mem1</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e41" fieldDefault="00000000" regSize="32" regDefault="0x00000001" fieldSize="8" field_offset="23:16" field_sw="rw" field_hw="rw" field_default="00000000" reg_address="0x190">PCIe_LINK0.boot_rom.boot_rom_mem1</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -247,11 +247,11 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e248" sid="16:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e248" sid="16:0">
                <ASSIGNMENT command="write" eid="seq0.8716360791470711">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e30" regDefault="0x00000001" reg_sw="rw" reg_hw="rw" reg_default="0x00000001" reg_address="0x190">PCIe_LINK0.boot_rom</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e30" regDefault="0x00000001" reg_sw="rw" reg_hw="rw" reg_default="0x00000001" reg_address="0x190">PCIe_LINK0.boot_rom</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -262,7 +262,7 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e262" sid="17:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e262" sid="17:0">
                <TEMPCAL tempVarName="var1">
                   <EXPRESSION>
                      <EXPRESSION type="number">5</EXPRESSION>
@@ -272,7 +272,7 @@
                <ASSIGNMENT command="write" eid="seq0.43279294699478366" write_mem="true">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e64" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="15:0" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x194">PCIe_LINK0_CORE.flash_mem.flash_mem0</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e64" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="15:0" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x194">PCIe_LINK0_CORE.flash_mem.flash_mem0</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -283,11 +283,11 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e276" sid="18:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e276" sid="18:0">
                <ASSIGNMENT command="write" eid="seq0.9006375728267974" write_mem="true" write_mem_last="true">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e71" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="31:16" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x194">PCIe_LINK0_CORE.flash_mem.flash_mem1</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e71" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="31:16" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x194">PCIe_LINK0_CORE.flash_mem.flash_mem1</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -298,11 +298,11 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e290" sid="19:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e290" sid="19:0">
                <ASSIGNMENT command="write" eid="seq0.6288369435500022">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e30" regDefault="0x00000001" reg_sw="rw" reg_hw="rw" reg_default="0x00000001" reg_address="0x190">PCIe_LINK0.boot_rom</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e30" regDefault="0x00000001" reg_sw="rw" reg_hw="rw" reg_default="0x00000001" reg_address="0x190">PCIe_LINK0.boot_rom</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -313,7 +313,7 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e304" sid="20:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e304" sid="20:0">
                <EXPRESSION>
                   <SUBROUTINE name="Shadow_EEPROM" command="call" eid="seq0.7604797298380178">
                      <doc/>
@@ -321,11 +321,11 @@
                   </SUBROUTINE>
                </EXPRESSION>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e312" sid="21:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e312" sid="21:0">
                <ASSIGNMENT command="write" eid="seq0.25351692748083954">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e30" regDefault="0x00000001" reg_sw="rw" reg_hw="rw" reg_default="0x00000001" reg_address="0x190">PCIe_LINK0.boot_rom</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e30" regDefault="0x00000001" reg_sw="rw" reg_hw="rw" reg_default="0x00000001" reg_address="0x190">PCIe_LINK0.boot_rom</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -338,24 +338,24 @@
             </row>
          </seqsteps>
       </sequence>
-      <sequence name="Shadow_EEPROM" sid="22:0" eid="seq_ip_0.9998104555716337" orig_path="sample_sequence.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\sample_sequence.idsng" level="1" uid="2018-10-11T11:09:10.097+05:30d24e326">
+      <sequence name="Shadow_EEPROM" sid="22:0" eid="seq_ip_0.9998104555716337" orig_path="sample_sequence.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\sample_sequence.idsng" level="1" uid="2019-01-04T17:24:52.938+05:30d24e326">
          <doc/>
          <arguments>
-            <value doc="" sid="25:0" eid="seq_arg0.9998104555716337" uid="2018-10-11T11:09:09.049+05:30d14e266" svDataType="integer" cDataType="int" UvmDataType="int" name="pack">10</value>
-            <value doc="" sid="25:0" eid="seq0.8971165163503859" uid="2018-10-11T11:09:09.049+05:30d14e268" svDataType="integer" cDataType="int" UvmDataType="int" name="chik">12</value>
+            <value doc="" sid="25:0" eid="seq_arg0.9998104555716337" uid="2019-01-04T17:24:51.678+05:30d14e266" svDataType="integer" cDataType="int" UvmDataType="int" name="pack">10</value>
+            <value doc="" sid="25:0" eid="seq0.8971165163503859" uid="2019-01-04T17:24:51.678+05:30d14e268" svDataType="integer" cDataType="int" UvmDataType="int" name="chik">12</value>
          </arguments>
          <constants>
-            <value doc="" sid="28:0" eid="seq_const0.9998104555716337" uid="2018-10-11T11:09:09.049+05:30d14e271" svDataType="integer" cDataType="int" UvmDataType="int" name="constant">15</value>
-            <value doc="" sid="28:0" eid="seq0.6966679117366603" uid="2018-10-11T11:09:09.049+05:30d14e273" svDataType="integer" cDataType="int" UvmDataType="int" name="real_const">13</value>
+            <value doc="" sid="28:0" eid="seq_const0.9998104555716337" uid="2019-01-04T17:24:51.678+05:30d14e271" svDataType="integer" cDataType="int" UvmDataType="int" name="constant">15</value>
+            <value doc="" sid="28:0" eid="seq0.6966679117366603" uid="2019-01-04T17:24:51.678+05:30d14e273" svDataType="integer" cDataType="int" UvmDataType="int" name="real_const">13</value>
          </constants>
          <variables>
-            <value doc="" sid="31:0" eid="seq_var0.9998104555716337" uid="2018-10-11T11:09:09.049+05:30d14e276" svDataType="integer" cDataType="int" UvmDataType="int" name="variable1">
+            <value doc="" sid="31:0" eid="seq_var0.9998104555716337" uid="2019-01-04T17:24:51.678+05:30d14e276" svDataType="integer" cDataType="int" UvmDataType="int" name="variable1">
                <EXPRESSION>
                   <EXPRESSION type="number">12</EXPRESSION>
                </EXPRESSION>
                <oldValue>12</oldValue>
             </value>
-            <value doc="" sid="32:0" eid="seq0.7803842886283191" uid="2018-10-11T11:09:09.049+05:30d14e278" svDataType="integer" cDataType="int" UvmDataType="int" name="variable2">
+            <value doc="" sid="32:0" eid="seq0.7803842886283191" uid="2019-01-04T17:24:51.678+05:30d14e278" svDataType="integer" cDataType="int" UvmDataType="int" name="variable2">
                <EXPRESSION>
                   <EXPRESSION type="number">9</EXPRESSION>
                </EXPRESSION>
@@ -363,11 +363,11 @@
             </value>
          </variables>
          <seqsteps>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e352" sid="37:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e352" sid="37:0">
                <ASSIGNMENT command="write" eid="seq_cmd0.9998104555716337" write_mem="true">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e87" fieldDefault="0000000000000001" regSize="32" regDefault="0x00000001" fieldSize="16" field_offset="15:0" field_sw="rw" field_hw="rw" field_default="0000000000000001" reg_address="0x1B0">rx_buffer0.es_rx_buffer0</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e87" fieldDefault="0000000000000001" regSize="32" regDefault="0x00000001" fieldSize="16" field_offset="15:0" field_sw="rw" field_hw="rw" field_default="0000000000000001" reg_address="0x1B0">rx_buffer0.es_rx_buffer0</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -378,11 +378,11 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e366" sid="38:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e366" sid="38:0">
                <ASSIGNMENT command="write" eid="seq0.9968099542344493" write_mem="true" write_mem_last="true">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e94" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000001" fieldSize="16" field_offset="31:16" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x1B0">rx_buffer0.es_rx_buffer1</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e94" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000001" fieldSize="16" field_offset="31:16" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x1B0">rx_buffer0.es_rx_buffer1</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -393,11 +393,11 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e380" sid="39:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e380" sid="39:0">
                <ASSIGNMENT command="write" eid="seq0.31967596925211217" write_mem="true">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e105" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="15:0" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x1B4">rx_buffer1.es_rx_buffer0</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e105" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="15:0" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x1B4">rx_buffer1.es_rx_buffer0</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -408,11 +408,11 @@
                   </RHS>
                </ASSIGNMENT>
             </row>
-            <row busName="default" uid="2018-10-11T11:09:10.097+05:30d24e394" sid="40:0">
+            <row busName="default" uid="2019-01-04T17:24:52.938+05:30d24e394" sid="40:0">
                <ASSIGNMENT command="write" eid="seq0.3517811379225573" write_mem="true" write_mem_last="true">
                   <LHS>
                      <EXPRESSION>
-                        <EXPRESSION type="id" uniqueId="2018-10-11T11:09:09.049+05:30d14e112" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="31:16" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x1B4">rx_buffer1.es_rx_buffer1</EXPRESSION>
+                        <EXPRESSION type="id" uniqueId="2019-01-04T17:24:51.678+05:30d14e112" fieldDefault="0000000000000000" regSize="32" regDefault="0x00000000" fieldSize="16" field_offset="31:16" field_sw="rw" field_hw="rw" field_default="0000000000000000" reg_address="0x1B4">rx_buffer1.es_rx_buffer1</EXPRESSION>
                      </EXPRESSION>
                   </LHS>
                   <doc/>
@@ -430,8 +430,6 @@
             <seq_outputs>
                <firmware>true <multioutput>false</multioutput>
                </firmware>
-               <uvm>true <multioutput>false</multioutput>
-               </uvm>
             </seq_outputs>
             <uvm>
                <datatype>
@@ -490,22 +488,16 @@
             <matlab>
                <datatype>
                   <inlinefunction>int</inlinefunction>
-                  <arguments>integer</arguments>
-                  <constant>integer</constant>
-                  <variable>integer</variable>
+                  <arguments/>
+                  <constant/>
+                  <variable/>
                </datatype>
-               <templatename oid="0">default</templatename>
-               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
-               <read oid="0">REG_READ(memory_name,%a)</read>
-               <fieldtemplatename oid="0">default</fieldtemplatename>
-               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
-               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
-               <timeunit1>1</timeunit1>
-               <timeunit2>ns</timeunit2>
-               <timeprecision1>1</timeprecision1>
-               <timeprecision2>ns</timeprecision2>
-               <maxnesting>1</maxnesting>
-               <nameformat>%s</nameformat>
+               <timeunit1/>
+               <timeunit2>s</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
                <mout/>
             </matlab>
             <csv>

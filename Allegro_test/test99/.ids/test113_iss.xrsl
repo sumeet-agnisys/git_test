@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<chip heading="1" child_no="1" name="chip_name" id="2:1" uid="2018-10-16T17:40:24.335+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="29" csize="6" address="0x0" endaddress="0x5" size="6">
+<chip heading="1" child_no="1" id="tab_chip0.5064813646467089" name="chip_name" uid="2019-01-21T11:28:28.86+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="22" csize="6" address="0x0" endaddress="0x5" size="6">
    <config>
       <variants>
          <variant name="none" isselected="true">
@@ -7,106 +7,109 @@
   variant property.</doc>
          </variant>
       </variants>
-      <regwidth>8</regwidth>
-      <buswidth>8</buswidth>
-      <addressunit>8</addressunit>
+      <regwidth>32</regwidth>
+      <buswidth>32</buswidth>
+      <addressunit>16</addressunit>
       <busdomains>
-         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x5" size="6"/>
+         <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x0" endaddress="0x5" size="6"/>
       </busdomains>
    </config>
-   <block heading="1.1" child_no="1" name="b1" id="3:2" uid="2018-10-16T17:40:24.335+05:30d14e13" keypath="chip_name.b1,b1" hwmapaddr="30" max_reg_size="16" csize="2" offset="0" caddress="0" address="0x0" endaddress="0x1" size="2">
+   <block heading="1.1" child_no="1" id="sep_row2" name="b1" uid="2019-01-21T11:28:28.86+05:30d14e13" keypath="chip_name.b1,b1" hwmapaddr="23" max_reg_size="16" csize="2" offset="0" caddress="0" address="0x0" endaddress="0x1" size="2">
       <config>
          <busdomains>
-            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x1" size="2"/>
+            <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x0" endaddress="0x1" size="2"/>
          </busdomains>
       </config>
-      <reg heading="1.1.1" child_no="1" name="rg1" id="4:3" uid="2018-10-16T17:40:24.335+05:30d14e15" keypath="chip_name.b1.rg1,b1.rg1,rg1" hwmapaddr="31" csize="2" offset="0" caddress="0" address="0x0" endaddress="0x1" size="2" default="0x0000" sw="rw" hw="rw">
+      <reg heading="1.1.1" child_no="1" id="sep_row3" name="rg1" uid="2019-01-21T11:28:28.86+05:30d14e15" keypath="chip_name.b1.rg1,b1.rg1,rg1" hwmapaddr="24" csize="2" offset="0" caddress="0" address="0x0" endaddress="0x1" size="2" default="0x0000" sw="rw" hw="rw">
          <config>
             <regwidth>16</regwidth>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x0" endaddress="0x1" size="2"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x0" endaddress="0x1" size="2"/>
             </busdomains>
          </config>
-         <field name="f1" offset="0:7" id="5:5" uid="2018-10-16T17:40:24.335+05:30d14e19" keypath="chip_name.b1.rg1.f1,b1.rg1.f1,rg1.f1,f1">
+         <field id="sep_row4" offset="0:7" name="f1" uid="2019-01-21T11:28:28.86+05:30d14e19" keypath="chip_name.b1.rg1.f1,b1.rg1.f1,rg1.f1,f1">
+            <sw>rw</sw>
+            <hw>rw</hw>
             <default unresolvedDef="0">00000000</default>
-            <sw>rw</sw>
-            <hw>rw</hw>
+            <doc>NICE WORK</doc>
          </field>
-         <field name="f2" offset="8:10" id="6:5" uid="2018-10-16T17:40:24.335+05:30d14e26" keypath="chip_name.b1.rg1.f2,b1.rg1.f2,rg1.f2,f2">
-            <default unresolvedDef="0">000</default>
+         <field id="row0.5159828591155398" offset="8:10" name="f2" uid="2019-01-21T11:28:28.86+05:30d14e28" keypath="chip_name.b1.rg1.f2,b1.rg1.f2,rg1.f2,f2">
             <sw>rw</sw>
             <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
          </field>
-         <field name="f3" offset="14:12" id="7:5" uid="2018-10-16T17:40:24.335+05:30d14e33" keypath="chip_name.b1.rg1.f3,b1.rg1.f3,rg1.f3,f3">
-            <default unresolvedDef="0">000</default>
+         <field id="row0.715420557850871" offset="14:12" name="f3" uid="2019-01-21T11:28:28.86+05:30d14e35" keypath="chip_name.b1.rg1.f3,b1.rg1.f3,rg1.f3,f3">
             <sw>rw</sw>
             <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
          </field>
       </reg>
    </block>
-   <block heading="1.2" child_no="2" name="b2" id="8:2" uid="2018-10-16T17:40:24.335+05:30d14e40" keypath="chip_name.b2,b2" hwmapaddr="32" max_reg_size="16" csize="4" offset="2" caddress="2" address="0x2" endaddress="0x5" size="4">
+   <block heading="1.2" child_no="2" id="row0.5808945058727519" name="b2" uid="2019-01-21T11:28:28.86+05:30d14e42" keypath="chip_name.b2,b2" hwmapaddr="25" max_reg_size="16" csize="4" offset="2" caddress="2" address="0x2" endaddress="0x5" size="4">
       <config>
          <busdomains>
-            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0x2" endaddress="0x5" size="4"/>
+            <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="2" address="0x2" endaddress="0x5" size="4"/>
          </busdomains>
       </config>
-      <reg heading="1.2.1" child_no="1" name="rg1" id="9:3" uid="2018-10-16T17:40:24.335+05:30d14e42" keypath="chip_name.b2.rg1,b2.rg1,rg1" hwmapaddr="33" csize="2" offset="0" caddress="0" address="0x2" endaddress="0x3" size="2" default="0x0000" sw="rw" hw="rw">
+      <reg heading="1.2.1" child_no="1" id="row0.1467825584898963" name="rg1" uid="2019-01-21T11:28:28.86+05:30d14e44" keypath="chip_name.b2.rg1,b2.rg1,rg1" hwmapaddr="26" csize="2" offset="0" caddress="0" address="0x2" endaddress="0x3" size="2" default="0x0000" sw="rw" hw="rw">
          <config>
             <regwidth>16</regwidth>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x2" endaddress="0x3" size="2"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x2" endaddress="0x3" size="2"/>
             </busdomains>
          </config>
-         <field name="f1" offset="0:7" id="10:5" uid="2018-10-16T17:40:24.335+05:30d14e46" keypath="chip_name.b2.rg1.f1,b2.rg1.f1,rg1.f1,f1">
+         <field id="row0.8955326836264456" offset="0:7" name="f1" uid="2019-01-21T11:28:28.86+05:30d14e48" keypath="chip_name.b2.rg1.f1,b2.rg1.f1,rg1.f1,f1">
+            <sw>rw</sw>
+            <hw>rw</hw>
             <default unresolvedDef="0">00000000</default>
-            <sw>rw</sw>
-            <hw>rw</hw>
+            <doc>NICE WORK</doc>
          </field>
-         <field name="f2" offset="8:10" id="11:5" uid="2018-10-16T17:40:24.335+05:30d14e53" keypath="chip_name.b2.rg1.f2,b2.rg1.f2,rg1.f2,f2">
-            <default unresolvedDef="0">000</default>
+         <field id="row0.9021720492268972" offset="8:10" name="f2" uid="2019-01-21T11:28:28.86+05:30d14e57" keypath="chip_name.b2.rg1.f2,b2.rg1.f2,rg1.f2,f2">
             <sw>rw</sw>
             <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
          </field>
-         <field name="f3" offset="14:12" id="12:5" uid="2018-10-16T17:40:24.335+05:30d14e60" keypath="chip_name.b2.rg1.f3,b2.rg1.f3,rg1.f3,f3">
-            <default unresolvedDef="0">000</default>
+         <field id="row0.6670997253806283" offset="14:12" name="f3" uid="2019-01-21T11:28:28.86+05:30d14e64" keypath="chip_name.b2.rg1.f3,b2.rg1.f3,rg1.f3,f3">
             <sw>rw</sw>
             <hw>rw</hw>
+            <default unresolvedDef="0">000</default>
          </field>
       </reg>
-      <section heading="1.2.2" child_no="2" name="ref_sub_blk" id="13:2" refnodetype="section" link="b2" type="subblock" uid="2018-10-16T17:40:24.335+05:30d14e67" keypath="chip_name.b2.ref_sub_blk,b2.ref_sub_blk,ref_sub_blk" keypathdown="ref_sub_blk.rg1,rg1" hwmapaddr="34" max_reg_size="16" csize="2" offset="2" caddress="2" address="0x4" endaddress="0x5" size="2">
+      <section heading="1.2.2" child_no="2" id="tab_ref0.734708395519107" name="ref_sub_blk" link="b2" type="subblock" refnodetype="section" uid="2019-01-21T11:28:28.86+05:30d14e71" keypath="chip_name.b2.ref_sub_blk,b2.ref_sub_blk,ref_sub_blk" keypathdown="ref_sub_blk.rg1,rg1" hwmapaddr="27" max_reg_size="16" csize="2" offset="2" caddress="2" address="0x4" endaddress="0x5" size="2">
          <config>
             <busdomains>
-               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0x4" endaddress="0x5" size="2"/>
+               <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="2" address="0x4" endaddress="0x5" size="2"/>
             </busdomains>
          </config>
          <doc/>
-         <reg heading="1.2.2.1" child_no="1" name="rg1" id="9:3" uid="2018-10-16T17:40:24.335+05:30d14e70" keypath="chip_name.b2.ref_sub_blk.rg1,b2.ref_sub_blk.rg1,ref_sub_blk.rg1,rg1" hwmapaddr="35" csize="2" offset="0" caddress="0" address="0x4" endaddress="0x5" size="2" default="0x0000" sw="rw" hw="rw">
+         <reg heading="1.2.2.1" child_no="1" id="row0.1467825584898963" name="rg1" uid="2019-01-21T11:28:28.86+05:30d14e74" keypath="chip_name.b2.ref_sub_blk.rg1,b2.ref_sub_blk.rg1,ref_sub_blk.rg1,rg1" hwmapaddr="28" csize="2" offset="0" caddress="0" address="0x4" endaddress="0x5" size="2" default="0x0000" sw="rw" hw="rw">
             <config>
                <regwidth>16</regwidth>
                <busdomains>
-                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x4" endaddress="0x5" size="2"/>
+                  <busdomain name="default_map" bus="WISHBONE" addressUnit="16" offset="0" address="0x4" endaddress="0x5" size="2"/>
                </busdomains>
             </config>
-            <field name="f1" offset="0:7" id="10:5" uid="2018-10-16T17:40:24.335+05:30d14e74" keypath="chip_name.b2.ref_sub_blk.rg1.f1,b2.ref_sub_blk.rg1.f1,ref_sub_blk.rg1.f1,rg1.f1,f1">
+            <field id="row0.8955326836264456" offset="0:7" name="f1" uid="2019-01-21T11:28:28.86+05:30d14e78" keypath="chip_name.b2.ref_sub_blk.rg1.f1,b2.ref_sub_blk.rg1.f1,ref_sub_blk.rg1.f1,rg1.f1,f1">
+               <sw>rw</sw>
+               <hw>rw</hw>
                <default unresolvedDef="0">00000000</default>
-               <sw>rw</sw>
-               <hw>rw</hw>
+               <doc>NICE WORK</doc>
             </field>
-            <field name="f2" offset="8:10" id="11:5" uid="2018-10-16T17:40:24.335+05:30d14e81" keypath="chip_name.b2.ref_sub_blk.rg1.f2,b2.ref_sub_blk.rg1.f2,ref_sub_blk.rg1.f2,rg1.f2,f2">
-               <default unresolvedDef="0">000</default>
+            <field id="row0.9021720492268972" offset="8:10" name="f2" uid="2019-01-21T11:28:28.86+05:30d14e87" keypath="chip_name.b2.ref_sub_blk.rg1.f2,b2.ref_sub_blk.rg1.f2,ref_sub_blk.rg1.f2,rg1.f2,f2">
                <sw>rw</sw>
                <hw>rw</hw>
+               <default unresolvedDef="0">000</default>
             </field>
-            <field name="f3" offset="14:12" id="12:5" uid="2018-10-16T17:40:24.335+05:30d14e88" keypath="chip_name.b2.ref_sub_blk.rg1.f3,b2.ref_sub_blk.rg1.f3,ref_sub_blk.rg1.f3,rg1.f3,f3">
-               <default unresolvedDef="0">000</default>
+            <field id="row0.6670997253806283" offset="14:12" name="f3" uid="2019-01-21T11:28:28.86+05:30d14e94" keypath="chip_name.b2.ref_sub_blk.rg1.f3,b2.ref_sub_blk.rg1.f3,ref_sub_blk.rg1.f3,rg1.f3,f3">
                <sw>rw</sw>
                <hw>rw</hw>
+               <default unresolvedDef="0">000</default>
             </field>
          </reg>
       </section>
    </block>
    <sequences>
-      <sequence name="seq_name" sid="1:0" eid="seq0.7855171944133339" orig_path="test113.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\test113.idsng" level="1" uid="2018-10-16T17:40:25.234+05:30d24e110">
+      <sequence name="seq_name" sid="1:0" eid="seq0.7855171944133339" orig_path="test113.idsng" refpath="C:\Users\Anupam\Documents\GitHub\git_test\Allegro_test\test99\test113.idsng" level="1" uid="2019-01-21T11:28:29.578+05:30d24e116">
          <doc/>
          <arguments/>
          <constants/>
@@ -118,8 +121,6 @@
             <seq_outputs>
                <firmware>true <multioutput>false</multioutput>
                </firmware>
-               <uvm>true <multioutput>false</multioutput>
-               </uvm>
             </seq_outputs>
             <uvm>
                <datatype>
@@ -178,22 +179,16 @@
             <matlab>
                <datatype>
                   <inlinefunction>int</inlinefunction>
-                  <arguments>integer</arguments>
-                  <constant>integer</constant>
-                  <variable>integer</variable>
+                  <arguments/>
+                  <constant/>
+                  <variable/>
                </datatype>
-               <templatename oid="0">default</templatename>
-               <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
-               <read oid="0">REG_READ(memory_name,%a)</read>
-               <fieldtemplatename oid="0">default</fieldtemplatename>
-               <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
-               <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
-               <timeunit1>1</timeunit1>
-               <timeunit2>ns</timeunit2>
-               <timeprecision1>1</timeprecision1>
-               <timeprecision2>ns</timeprecision2>
-               <maxnesting>1</maxnesting>
-               <nameformat>%s</nameformat>
+               <timeunit1/>
+               <timeunit2>s</timeunit2>
+               <timeprecision1/>
+               <timeprecision2>s</timeprecision2>
+               <maxnesting/>
+               <nameformat/>
                <mout/>
             </matlab>
             <csv>

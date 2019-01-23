@@ -312,7 +312,7 @@ var alphabets='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 $(document).ready(function(){
     bindJSONObj();
-
+    document.getElementById("scroller").style="display:none";	
     ids_json = JSON.parse(idsobjects);
 
     $('body').not("#autocomplete-list").click(function() {
@@ -870,7 +870,6 @@ function findString(str) {
         }
     }
     else if (navigator.appName.indexOf("Microsoft") != -1) {
-
         /* EXPLORER-SPECIFIC CODE*/
         if (TRange != null) {
             TRange.collapse(false);
@@ -1238,7 +1237,9 @@ function insertSeq(){
     cmd.id="cmd"+random_Num;
     cmd.getElementsByClassName("edited")[0].id="seq_cmd"+random_Num;
 
-    pasteHtmlAtCaret(addstrToCaret(element));
+    $("#seqdivcontainer").append("<br/>");
+    document.getElementById("seqdivcontainer").appendChild(element);
+//    pasteHtmlAtCaret(addstrToCaret(element));
     load_ips(element);
 }
 
@@ -2409,7 +2410,9 @@ function KeyPress(e) {
                 $(idsclass[i]).removeAttr('style');
                 $(idsclass[i]).find("[style]").removeAttr('style');	/*reset style attribute becouse whenever copy paste done, browser set default width location
 				and it ruin the style*/		
-
+                if(idsclass[i].classList.contains("seq")){
+                    idsclass[i].setAttribute('oncontextmenu','openseqmenu(event);');
+                }
             }
         }
 
@@ -2422,6 +2425,13 @@ function KeyPress(e) {
             {
                 idsclass[i].setAttribute("onclick","setCurrRow(this)");
                 idsclass[i].setAttribute("onkeyup","setCurrRow(this)");
+            }
+        }
+        
+        var refpath= document.getElementById("seqdivcontainer").getElementsByClassName("refpath");
+        if(typeof(refpath!=='undefined'&&refpath!==null)){
+            for(var i = 0; i < refpath.length; i++){
+                refpath[i].setAttribute('onkeydown','insertSeqCmdRow(event,this);');
             }
         }
 
@@ -2446,6 +2456,7 @@ function KeyPress(e) {
             for(var i = 0; i < field.length; i++){
                 random_Num=Math.random();
                 field[i].setAttribute('id','tab'+i+random_Num);
+                field[i].setAttribute('oncontextmenu','openregmenu(event);');
             }
         }
 
@@ -2584,6 +2595,15 @@ function saveConfig(configstr){
         alert("Err saveConfig : "+e.message);
     }
 
+}
+
+function navigateHierarchy(h){
+    jump(h);
+    var anchor=document.getElementsByName(h)[0];
+    while(anchor.tagName.toUpperCase()!=="TABLE"){
+        anchor=anchor.parentNode;
+    }
+    $(anchor).effect("highlight", {color:"#fab492"}, 1000);
 }
 
 /*@JAVAFX*/
