@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings>
+  <company>Agnisys, Inc.</company>
+  <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>
+  <log>true</log>
+  <outdir>ids</outdir>
+  <outputs>
+    <yaml>false</yaml>
+    <reg2d>false</reg2d>
+    <mem_dump>false</mem_dump>
+    <ivs>false</ivs>
+    <arv>false</arv>
+    <special_reg></special_reg>
+    <cmsis>false</cmsis>
+    <uvm>false</uvm>
+    <perl>false</perl>
+    <python>false</python>
+    <cpp>false</cpp>
+    <vheader>false</vheader>
+    <vhdheader>false</vhdheader>
+    <formal>false</formal>
+    <pdf>false</pdf>
+    <ovm>false</ovm>
+    <vmm>false</vmm>
+    <iss_firmware>false</iss_firmware>
+    <iss_csv>false</iss_csv>
+    <iss_html>false</iss_html>
+    <iss_sv>false</iss_sv>
+    <iss_uvm>false</iss_uvm>
+    <iss_matlab>false</iss_matlab>
+    <header>false</header>
+    <xrsl>false</xrsl>
+    <word>false</word>
+    <rdl>true</rdl>
+    <erm>false</erm>
+    <ivs>false</ivs>
+    <svheader>false</svheader>
+    <svg>false</svg>
+    <datasheet>false</datasheet>
+    <customcsv>false</customcsv>
+    <customxml>false</customxml>
+    <csharp>false</csharp>
+    <sv>false</sv>
+  </outputs>
+  <rtl_wire>false</rtl_wire>
+  <limit_toc></limit_toc>
+  <lowpower>false</lowpower>
+  <auto_sequence></auto_sequence>
+  <interrupt></interrupt>
+  <mbd></mbd>
+  <arv_assertion></arv_assertion>
+  <memtechmapping>false</memtechmapping>
+  <sv_w_intf></sv_w_intf>
+  <sv_wo_intf></sv_wo_intf>
+  <uvm_env></uvm_env>
+  <hdlpath>false</hdlpath>
+  <coverage>false</coverage>
+  <arv_coverage>false</arv_coverage>
+  <illegalbins>false</illegalbins>
+  <arv_constraint>false</arv_constraint>
+  <mem_dump_path>C:\Users\Agnisys56\Desktop\workspace\allegro_work\Reg_Map_Mem_Dump\TBU_Memory.txt</mem_dump_path>
+  <bus>proprietary</bus>
+  <reg_width>32</reg_width>
+  <bus_width>32</bus_width>
+  <unit>16</unit>
+  <block_size>256</block_size>
+  <chip_size></chip_size>
+  <board_size></board_size>
+  <c_type></c_type>
+  <big_endian>false</big_endian>
+  <little_endian>false</little_endian>
+  <template_dir>C:\Users\Agnisys56\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>
+  <check_only>false</check_only>
+  <preserve_names>true</preserve_names>
+  <addr_sort>false</addr_sort>
+  <seqconfig>
+    <output>
+      <seq_outputs/>
+      <uvm>
+        <datatype>
+          <inlinefunction>int</inlinefunction>
+          <arguments>int</arguments>
+          <constant>int</constant>
+          <variable>int</variable>
+        </datatype>
+        <regmodel oid="0">default1</regmodel>
+        <write oid="0">write(status, %d, .parent(this))</write>
+        <read oid="0">read(status, %lhs, .parent(this))</read>
+        <regmodel oid="1">default1</regmodel>
+        <write oid="1">write(status, %d, .parent(this))</write>
+        <read oid="1">read(status, %lhs, .parent(this))</read>
+        <timemultiplier>100</timemultiplier>
+        <maxnesting>1</maxnesting>
+        <consolidated>false</consolidated>
+        <nameformat>%s</nameformat>
+        <mout></mout>
+      </uvm>
+      <sv>
+        <datatype>
+          <inlinefunction>int</inlinefunction>
+          <arguments>integer</arguments>
+          <constant>integer</constant>
+          <variable>integer</variable>
+        </datatype>
+        <bus oid="0">default</bus>
+        <write oid="0">write_mirror(%a, %d, 0, 0)</write>
+        <read oid="0">read_mirror(%a)</read>
+        <bus oid="1">default</bus>
+        <write oid="1">write_mirror(%a, %d, 0, 0)</write>
+        <read oid="1">read_mirror(%a)</read>
+        <timeunit1>1</timeunit1>
+        <timeunit2>ns</timeunit2>
+        <timeprecision1>1</timeprecision1>
+        <timeprecision2>ns</timeprecision2>
+        <maxnesting>1</maxnesting>
+        <consolidated>false</consolidated>
+        <nameformat>%s</nameformat>
+        <mout></mout>
+      </sv>
+      <firmware>
+        <datatype>
+          <inlinefunction>int</inlinefunction>
+          <arguments>int</arguments>
+          <constant>int</constant>
+          <variable>int</variable>
+        </datatype>
+        <templatename oid="0">default</templatename>
+        <write oid="0">REG_WRITE(%a,%d)</write>
+        <read oid="0">REG_READ(%a)</read>
+        <templatename oid="1">default</templatename>
+        <write oid="1">REG_WRITE(%a,%d)</write>
+        <read oid="1">REG_READ(%a)</read>
+        <fieldtemplatename oid="0">default</fieldtemplatename>
+        <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+        <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>
+        <fieldtemplatename oid="1">default</fieldtemplatename>
+        <fieldwrite oid="1">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>
+        <fieldread oid="1">FIELD_READ(%a,%m,%lsb)</fieldread>
+        <timemultiplier>100</timemultiplier>
+        <maxnesting>1</maxnesting>
+        <consolidated>false</consolidated>
+        <nameformat>%s</nameformat>
+        <mout></mout>
+      </firmware>
+      <matlab>
+        <datatype>
+          <inlinefunction>int</inlinefunction>
+          <arguments>integer</arguments>
+          <constant>integer</constant>
+          <variable>integer</variable>
+        </datatype>
+        <templatename oid="0">default</templatename>
+        <write oid="0">REG_WRITE(memory_name,%a,%d)</write>
+        <read oid="0">REG_READ(memory_name,%a)</read>
+        <templatename oid="1">default</templatename>
+        <write oid="1">REG_WRITE(memory_name,%a,%d)</write>
+        <read oid="1">REG_READ(memory_name,%a)</read>
+        <fieldtemplatename oid="0">default</fieldtemplatename>
+        <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+        <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+        <fieldtemplatename oid="1">default</fieldtemplatename>
+        <fieldwrite oid="1">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>
+        <fieldread oid="1">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>
+        <timeunit1>1</timeunit1>
+        <timeunit2>ns</timeunit2>
+        <timeprecision1>1</timeprecision1>
+        <timeprecision2>ns</timeprecision2>
+        <maxnesting>1</maxnesting>
+        <nameformat>%s</nameformat>
+        <mout></mout>
+      </matlab>
+      <csv>
+        <commands>
+          <isscmd oid="0">wait</isscmd>
+          <cmd oid="0">WAIT</cmd>
+          <isscmd oid="1">write_1_clr</isscmd>
+          <cmd oid="1">WRITE_CLR</cmd>
+          <isscmd oid="2">write_1_set</isscmd>
+          <cmd oid="2">WRITE_SET</cmd>
+          <isscmd oid="3">write</isscmd>
+          <cmd oid="3">WRITE</cmd>
+          <isscmd oid="4">switch</isscmd>
+          <cmd oid="4">SWITCH</cmd>
+          <isscmd oid="5">wait</isscmd>
+          <cmd oid="5">WAIT</cmd>
+          <isscmd oid="6">write_1_clr</isscmd>
+          <cmd oid="6">WRITE_CLR</cmd>
+          <isscmd oid="7">write_1_set</isscmd>
+          <cmd oid="7">WRITE_SET</cmd>
+          <isscmd oid="8">write</isscmd>
+          <cmd oid="8">WRITE</cmd>
+          <isscmd oid="9">switch</isscmd>
+          <cmd oid="9">SWITCH</cmd>
+        </commands>
+        <headers>
+          <issheader oid="0">address</issheader>
+          <header oid="0">address</header>
+          <issheader oid="1">description</issheader>
+          <header oid="1">description</header>
+          <issheader oid="2">step</issheader>
+          <header oid="2">step</header>
+          <issheader oid="3">value</issheader>
+          <header oid="3">value</header>
+          <issheader oid="4">command</issheader>
+          <header oid="4">command</header>
+          <issheader oid="5">address</issheader>
+          <header oid="5">address</header>
+          <issheader oid="6">description</issheader>
+          <header oid="6">description</header>
+          <issheader oid="7">step</issheader>
+          <header oid="7">step</header>
+          <issheader oid="8">value</issheader>
+          <header oid="8">value</header>
+          <issheader oid="9">command</issheader>
+          <header oid="9">command</header>
+          <issheader oid="10">address</issheader>
+          <header oid="10">address</header>
+          <issheader oid="11">description</issheader>
+          <header oid="11">description</header>
+          <issheader oid="12">step</issheader>
+          <header oid="12">step</header>
+          <issheader oid="13">value</issheader>
+          <header oid="13">value</header>
+          <issheader oid="14">command</issheader>
+          <header oid="14">command</header>
+          <issheader oid="15">address</issheader>
+          <header oid="15">address</header>
+          <issheader oid="16">description</issheader>
+          <header oid="16">description</header>
+          <issheader oid="17">step</issheader>
+          <header oid="17">step</header>
+          <issheader oid="18">value</issheader>
+          <header oid="18">value</header>
+          <issheader oid="19">command</issheader>
+          <header oid="19">command</header>
+          <issheader oid="20">address</issheader>
+          <header oid="20">address</header>
+          <issheader oid="21">description</issheader>
+          <header oid="21">description</header>
+          <issheader oid="22">step</issheader>
+          <header oid="22">step</header>
+          <issheader oid="23">value</issheader>
+          <header oid="23">value</header>
+          <issheader oid="24">command</issheader>
+          <header oid="24">command</header>
+          <issheader oid="25">address</issheader>
+          <header oid="25">address</header>
+          <issheader oid="26">description</issheader>
+          <header oid="26">description</header>
+          <issheader oid="27">step</issheader>
+          <header oid="27">step</header>
+          <issheader oid="28">value</issheader>
+          <header oid="28">value</header>
+          <issheader oid="29">command</issheader>
+          <header oid="29">command</header>
+          <issheader oid="30">address</issheader>
+          <header oid="30">address</header>
+          <issheader oid="31">description</issheader>
+          <header oid="31">description</header>
+          <issheader oid="32">step</issheader>
+          <header oid="32">step</header>
+          <issheader oid="33">value</issheader>
+          <header oid="33">value</header>
+          <issheader oid="34">command</issheader>
+          <header oid="34">command</header>
+          <issheader oid="35">address</issheader>
+          <header oid="35">address</header>
+          <issheader oid="36">description</issheader>
+          <header oid="36">description</header>
+          <issheader oid="37">step</issheader>
+          <header oid="37">step</header>
+          <issheader oid="38">value</issheader>
+          <header oid="38">value</header>
+          <issheader oid="39">command</issheader>
+          <header oid="39">command</header>
+          <issheader oid="40">address</issheader>
+          <header oid="40">address</header>
+          <issheader oid="41">description</issheader>
+          <header oid="41">description</header>
+          <issheader oid="42">step</issheader>
+          <header oid="42">step</header>
+          <issheader oid="43">value</issheader>
+          <header oid="43">value</header>
+          <issheader oid="44">command</issheader>
+          <header oid="44">command</header>
+          <issheader oid="45">address</issheader>
+          <header oid="45">address</header>
+          <issheader oid="46">description</issheader>
+          <header oid="46">description</header>
+          <issheader oid="47">step</issheader>
+          <header oid="47">step</header>
+          <issheader oid="48">value</issheader>
+          <header oid="48">value</header>
+          <issheader oid="49">command</issheader>
+          <header oid="49">command</header>
+          <issheader oid="50">address</issheader>
+          <header oid="50">address</header>
+          <issheader oid="51">description</issheader>
+          <header oid="51">description</header>
+          <issheader oid="52">step</issheader>
+          <header oid="52">step</header>
+          <issheader oid="53">value</issheader>
+          <header oid="53">value</header>
+          <issheader oid="54">command</issheader>
+          <header oid="54">command</header>
+          <issheader oid="55">address</issheader>
+          <header oid="55">address</header>
+          <issheader oid="56">description</issheader>
+          <header oid="56">description</header>
+          <issheader oid="57">step</issheader>
+          <header oid="57">step</header>
+          <issheader oid="58">value</issheader>
+          <header oid="58">value</header>
+          <issheader oid="59">command</issheader>
+          <header oid="59">command</header>
+          <issheader oid="60">address</issheader>
+          <header oid="60">address</header>
+          <issheader oid="61">description</issheader>
+          <header oid="61">description</header>
+          <issheader oid="62">step</issheader>
+          <header oid="62">step</header>
+          <issheader oid="63">value</issheader>
+          <header oid="63">value</header>
+          <issheader oid="64">command</issheader>
+          <header oid="64">command</header>
+          <issheader oid="65">address</issheader>
+          <header oid="65">address</header>
+          <issheader oid="66">description</issheader>
+          <header oid="66">description</header>
+          <issheader oid="67">step</issheader>
+          <header oid="67">step</header>
+          <issheader oid="68">value</issheader>
+          <header oid="68">value</header>
+          <issheader oid="69">command</issheader>
+          <header oid="69">command</header>
+          <issheader oid="70">address</issheader>
+          <header oid="70">address</header>
+          <issheader oid="71">description</issheader>
+          <header oid="71">description</header>
+          <issheader oid="72">step</issheader>
+          <header oid="72">step</header>
+          <issheader oid="73">value</issheader>
+          <header oid="73">value</header>
+          <issheader oid="74">command</issheader>
+          <header oid="74">command</header>
+          <issheader oid="75">address</issheader>
+          <header oid="75">address</header>
+          <issheader oid="76">description</issheader>
+          <header oid="76">description</header>
+          <issheader oid="77">step</issheader>
+          <header oid="77">step</header>
+          <issheader oid="78">value</issheader>
+          <header oid="78">value</header>
+          <issheader oid="79">command</issheader>
+          <header oid="79">command</header>
+          <issheader oid="80">address</issheader>
+          <header oid="80">address</header>
+          <issheader oid="81">description</issheader>
+          <header oid="81">description</header>
+          <issheader oid="82">step</issheader>
+          <header oid="82">step</header>
+          <issheader oid="83">value</issheader>
+          <header oid="83">value</header>
+          <issheader oid="84">command</issheader>
+          <header oid="84">command</header>
+          <issheader oid="85">address</issheader>
+          <header oid="85">address</header>
+          <issheader oid="86">description</issheader>
+          <header oid="86">description</header>
+          <issheader oid="87">step</issheader>
+          <header oid="87">step</header>
+          <issheader oid="88">value</issheader>
+          <header oid="88">value</header>
+          <issheader oid="89">command</issheader>
+          <header oid="89">command</header>
+          <issheader oid="90">address</issheader>
+          <header oid="90">address</header>
+          <issheader oid="91">description</issheader>
+          <header oid="91">description</header>
+          <issheader oid="92">step</issheader>
+          <header oid="92">step</header>
+          <issheader oid="93">value</issheader>
+          <header oid="93">value</header>
+          <issheader oid="94">command</issheader>
+          <header oid="94">command</header>
+          <issheader oid="95">address</issheader>
+          <header oid="95">address</header>
+          <issheader oid="96">description</issheader>
+          <header oid="96">description</header>
+          <issheader oid="97">step</issheader>
+          <header oid="97">step</header>
+          <issheader oid="98">value</issheader>
+          <header oid="98">value</header>
+          <issheader oid="99">command</issheader>
+          <header oid="99">command</header>
+          <issheader oid="100">address</issheader>
+          <header oid="100">address</header>
+          <issheader oid="101">description</issheader>
+          <header oid="101">description</header>
+          <issheader oid="102">step</issheader>
+          <header oid="102">step</header>
+          <issheader oid="103">value</issheader>
+          <header oid="103">value</header>
+          <issheader oid="104">command</issheader>
+          <header oid="104">command</header>
+          <issheader oid="105">address</issheader>
+          <header oid="105">address</header>
+          <issheader oid="106">description</issheader>
+          <header oid="106">description</header>
+          <issheader oid="107">step</issheader>
+          <header oid="107">step</header>
+          <issheader oid="108">value</issheader>
+          <header oid="108">value</header>
+          <issheader oid="109">command</issheader>
+          <header oid="109">command</header>
+          <issheader oid="110">address</issheader>
+          <header oid="110">address</header>
+          <issheader oid="111">description</issheader>
+          <header oid="111">description</header>
+          <issheader oid="112">step</issheader>
+          <header oid="112">step</header>
+          <issheader oid="113">value</issheader>
+          <header oid="113">value</header>
+          <issheader oid="114">command</issheader>
+          <header oid="114">command</header>
+          <issheader oid="115">address</issheader>
+          <header oid="115">address</header>
+          <issheader oid="116">description</issheader>
+          <header oid="116">description</header>
+          <issheader oid="117">step</issheader>
+          <header oid="117">step</header>
+          <issheader oid="118">value</issheader>
+          <header oid="118">value</header>
+          <issheader oid="119">command</issheader>
+          <header oid="119">command</header>
+          <issheader oid="120">address</issheader>
+          <header oid="120">address</header>
+          <issheader oid="121">description</issheader>
+          <header oid="121">description</header>
+          <issheader oid="122">step</issheader>
+          <header oid="122">step</header>
+          <issheader oid="123">value</issheader>
+          <header oid="123">value</header>
+          <issheader oid="124">command</issheader>
+          <header oid="124">command</header>
+          <issheader oid="125">address</issheader>
+          <header oid="125">address</header>
+          <issheader oid="126">description</issheader>
+          <header oid="126">description</header>
+          <issheader oid="127">step</issheader>
+          <header oid="127">step</header>
+          <issheader oid="128">value</issheader>
+          <header oid="128">value</header>
+          <issheader oid="129">command</issheader>
+          <header oid="129">command</header>
+          <issheader oid="130">address</issheader>
+          <header oid="130">address</header>
+          <issheader oid="131">description</issheader>
+          <header oid="131">description</header>
+          <issheader oid="132">step</issheader>
+          <header oid="132">step</header>
+          <issheader oid="133">value</issheader>
+          <header oid="133">value</header>
+          <issheader oid="134">command</issheader>
+          <header oid="134">command</header>
+          <issheader oid="135">address</issheader>
+          <header oid="135">address</header>
+          <issheader oid="136">description</issheader>
+          <header oid="136">description</header>
+          <issheader oid="137">step</issheader>
+          <header oid="137">step</header>
+          <issheader oid="138">value</issheader>
+          <header oid="138">value</header>
+          <issheader oid="139">command</issheader>
+          <header oid="139">command</header>
+          <issheader oid="140">address</issheader>
+          <header oid="140">address</header>
+          <issheader oid="141">description</issheader>
+          <header oid="141">description</header>
+          <issheader oid="142">step</issheader>
+          <header oid="142">step</header>
+          <issheader oid="143">value</issheader>
+          <header oid="143">value</header>
+          <issheader oid="144">command</issheader>
+          <header oid="144">command</header>
+          <issheader oid="145">address</issheader>
+          <header oid="145">address</header>
+          <issheader oid="146">description</issheader>
+          <header oid="146">description</header>
+          <issheader oid="147">step</issheader>
+          <header oid="147">step</header>
+          <issheader oid="148">value</issheader>
+          <header oid="148">value</header>
+          <issheader oid="149">command</issheader>
+          <header oid="149">command</header>
+          <issheader oid="150">address</issheader>
+          <header oid="150">address</header>
+          <issheader oid="151">description</issheader>
+          <header oid="151">description</header>
+          <issheader oid="152">step</issheader>
+          <header oid="152">step</header>
+          <issheader oid="153">value</issheader>
+          <header oid="153">value</header>
+          <issheader oid="154">command</issheader>
+          <header oid="154">command</header>
+          <issheader oid="155">address</issheader>
+          <header oid="155">address</header>
+          <issheader oid="156">description</issheader>
+          <header oid="156">description</header>
+          <issheader oid="157">step</issheader>
+          <header oid="157">step</header>
+          <issheader oid="158">value</issheader>
+          <header oid="158">value</header>
+          <issheader oid="159">command</issheader>
+          <header oid="159">command</header>
+          <issheader oid="160">address</issheader>
+          <header oid="160">address</header>
+          <issheader oid="161">description</issheader>
+          <header oid="161">description</header>
+          <issheader oid="162">step</issheader>
+          <header oid="162">step</header>
+          <issheader oid="163">value</issheader>
+          <header oid="163">value</header>
+          <issheader oid="164">command</issheader>
+          <header oid="164">command</header>
+          <issheader oid="165">address</issheader>
+          <header oid="165">address</header>
+          <issheader oid="166">description</issheader>
+          <header oid="166">description</header>
+          <issheader oid="167">step</issheader>
+          <header oid="167">step</header>
+          <issheader oid="168">value</issheader>
+          <header oid="168">value</header>
+          <issheader oid="169">command</issheader>
+          <header oid="169">command</header>
+          <issheader oid="170">address</issheader>
+          <header oid="170">address</header>
+          <issheader oid="171">description</issheader>
+          <header oid="171">description</header>
+          <issheader oid="172">step</issheader>
+          <header oid="172">step</header>
+          <issheader oid="173">value</issheader>
+          <header oid="173">value</header>
+          <issheader oid="174">command</issheader>
+          <header oid="174">command</header>
+          <issheader oid="175">address</issheader>
+          <header oid="175">address</header>
+          <issheader oid="176">description</issheader>
+          <header oid="176">description</header>
+          <issheader oid="177">step</issheader>
+          <header oid="177">step</header>
+          <issheader oid="178">value</issheader>
+          <header oid="178">value</header>
+          <issheader oid="179">command</issheader>
+          <header oid="179">command</header>
+        </headers>
+        <timemultiplier>100</timemultiplier>
+        <maxnesting>1</maxnesting>
+        <nameformat>%s</nameformat>
+      </csv>
+    </output>
+  </seqconfig>
+</settings>

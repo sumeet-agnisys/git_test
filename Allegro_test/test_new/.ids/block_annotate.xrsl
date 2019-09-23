@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block heading="1" child_no="1" id="tab10.1802991834319052" name="block_name" uid="2019-01-24T17:06:25.696+05:30d14e1" keypath="block_name" offset="0" caddress="0" hwmapaddr="1" csize="256" diff_regwidth="true" address="0x000" endaddress="0xFF" size="256">
+   <config>
+      <blocksize>256</blocksize>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <buswidth>32</buswidth>
+      <regwidth>32</regwidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0xFF" size="256"/>
+      </busdomains>
+   </config>
+   <section heading="1.1" child_no="1" id="tab20.36155618832870795" name="reggroup_name" uid="2019-01-24T17:06:25.696+05:30d14e15" keypath="block_name.reggroup_name,reggroup_name" keypathdown="reggroup_name.reg_name1.reg_name223.reg_name33,reg_name1,reg_name223,reg_name33" hwmapaddr="2" max_reg_size="32" csize="8" offset="0" caddress="0" address="0x000" endaddress="0x7" size="8">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x7" size="8"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="tab30.2330167313706596" name="reg_name1" uid="2019-01-24T17:06:25.696+05:30d14e17" keypath="block_name.reggroup_name.reg_name1,reggroup_name.reg_name1,reg_name1" hwmapaddr="3" csize="2" offset="0" caddress="0" address="0x000" endaddress="0x1" size="2" default="0x0000" sw="rw" hw="rw">
+         <config>
+            <regwidth>16</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x000" endaddress="0x1" size="2"/>
+            </busdomains>
+         </config>
+         <field id="tab00.8749380647731715" offset="15:0" name="F" uid="2019-01-24T17:06:25.696+05:30d14e21" keypath="block_name.reggroup_name.reg_name1.F,reggroup_name.reg_name1.F,reg_name1.F,F">
+            <sw>rw</sw>
+            <hw>rw</hw>
+            <default unresolvedDef="0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.2" child_no="2" id="tab50.6897564821364475" name="reg_name223" uid="2019-01-24T17:06:25.696+05:30d14e28" keypath="block_name.reggroup_name.reg_name223,reggroup_name.reg_name223,reg_name223" hwmapaddr="4" csize="2" offset="2" caddress="2" address="0x002" endaddress="0x3" size="2" default="0x0000" sw="rw" hw="ro">
+         <config>
+            <regwidth>16</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="2" address="0x002" endaddress="0x3" size="2"/>
+            </busdomains>
+         </config>
+         <field id="tab10.48610363628161113" offset="15:0" name="fx" uid="2019-01-24T17:06:25.696+05:30d14e32" keypath="block_name.reggroup_name.reg_name223.fx,reggroup_name.reg_name223.fx,reg_name223.fx,fx">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000000</default>
+         </field>
+      </reg>
+      <reg heading="1.1.3" child_no="3" id="tab70.9200737683940423" name="reg_name33" uid="2019-01-24T17:06:25.696+05:30d14e39" keypath="block_name.reggroup_name.reg_name33,reggroup_name.reg_name33,reg_name33" hwmapaddr="5" csize="4" offset="4" caddress="4" address="0x004" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x004" endaddress="0x7" size="4"/>
+            </busdomains>
+         </config>
+         <field id="tab20.1593076160522896" offset="31:0" name="f" uid="2019-01-24T17:06:25.696+05:30d14e43" keypath="block_name.reggroup_name.reg_name33.f,reggroup_name.reg_name33.f,reg_name33.f,f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000000000000000000000000</default>
+         </field>
+      </reg>
+   </section>
+   <emptyspace heading="1.2" child_no="2" address="0x8" endaddress="0xFF">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" address="0x8" endaddress="0xFF"/>
+         </busdomains>
+      </config>
+   </emptyspace>
+</block>

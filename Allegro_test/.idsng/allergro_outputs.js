@@ -7,6 +7,7 @@ $(document).ready(function(){
             var weight_cell=row.find("td.weight");
             calculateWeight(lsb,decimal,weight_cell)
         });
+         $(this).attr('contenteditable','true');
     }); 
 });
 

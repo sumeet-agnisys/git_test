@@ -1,0 +1,720 @@
+<CMD> idsbatch -reset C:\Users\Agnisys56\Documents\GitHub\git_test\Allegro_test2\test3\test5.idsng -config_file C:\Users\Agnisys56\Documents\GitHub\git_test\Allegro_test2\.idsng\idsngconfig.xml -dir C:\Users\Agnisys56\Desktop\outputs -debug    CHECK IDS_TEMPLATES AMBA AVALON OCP PROPRIETARY AMBA_AXI AMBA3AHBLITE AMBA_APB WB XRSL IPXACT SYSTEMRDL CMSIS VERILOG SV VHDL UVM OVM VMM ERM IVSEXCELOUT PERL_DS PYTHON_DS SVHEADER CHEADER MISRAC HTML SVG PDF PDFALT2 WORD2007 WORD2010 ROWO MBD ALIAS LOCK COUNTER SCS PARAM ADVD PREPROCESSOR DATASHEET SIGNALS SYSTEMC VHDLALT2 CSHARP SHAREPOINT IDS_TURBO PROPERTY_HINT RTL_SYSC UVM_SYSC VP_SYSC CUSTOM_XML INTERRUPT CONSTRAINT CUSTOM_CIRCUIT SHADOW INDIRECT CPP CUSTOMCSV FIFO STRUCT SEQUENCE_FIRMWARE SEQUENCE_UVM SEQUENCE SEQUENCE_CSV SEQUENCE_VERILOG SEQUENCE_HTML ARV FORMAL OUT_THIRD_PARTY_D SEQUENCE_MATLAB IDS_DIFF YAML 
+Input file type set to 'null'.
+File w/ extension idsng found.
+Infered Input file type is 'html.
+INFO: Output(s) will be generated in 'C:\Users\Agnisys56\Desktop\outputs'.
+Backdoor License is avaialble :true
+Setting IDSBatch install path = 'null'.
+Reading from config file C:\Users\Agnisys56\Documents\GitHub\git_test\Allegro_test2\.idsng\idsngconfig.xml
+Parse setting from string = <?xml version="1.0" encoding="UTF-8"?>
+
+<settings> 
+  <company>Agnisys, Inc.</company>  
+  <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>  
+  <log>true</log>  
+  <outdir>C:\Users\Agnisys56\Desktop\outputs</outdir>  
+  <outputs> 
+    <yaml>false</yaml>  
+    <reg2d>true</reg2d>  
+    <mem_dump>true</mem_dump>  
+    <htmlalt3>true</htmlalt3>  
+    <ivs>false</ivs>  
+    <arv>false</arv>  
+    <special_reg/>  
+    <cmsis>false</cmsis>  
+    <uvm>false</uvm>  
+    <perl>false</perl>  
+    <python>false</python>  
+    <cpp>false</cpp>  
+    <vheader>false</vheader>  
+    <vhdheader>false</vhdheader>  
+    <formal>false</formal>  
+    <pdf>false</pdf>  
+    <ovm>false</ovm>  
+    <vmm>false</vmm>  
+    <iss_firmware>false</iss_firmware>  
+    <iss_csv>false</iss_csv>  
+    <iss_html>false</iss_html>  
+    <iss_sv>false</iss_sv>  
+    <iss_uvm>false</iss_uvm>  
+    <iss_matlab>false</iss_matlab>  
+    <header>false</header>  
+    <xrsl>false</xrsl>  
+    <word>false</word>  
+    <rdl>false</rdl>  
+    <erm>false</erm>  
+    <ivs>false</ivs>  
+    <svheader>false</svheader>  
+    <svg>false</svg>  
+    <datasheet>false</datasheet>  
+    <customcsv>false</customcsv>  
+    <customxml>false</customxml>  
+    <csharp>false</csharp>  
+    <sv>false</sv> 
+  </outputs>  
+  <rtl_wire>false</rtl_wire>  
+  <limit_toc/>  
+  <lowpower>false</lowpower>  
+  <auto_sequence/>  
+  <interrupt/>  
+  <mbd/>  
+  <arv_assertion/>  
+  <memtechmapping>false</memtechmapping>  
+  <sv_w_intf/>  
+  <sv_wo_intf/>  
+  <uvm_env/>  
+  <hdlpath>false</hdlpath>  
+  <coverage>false</coverage>  
+  <arv_coverage>false</arv_coverage>  
+  <illegalbins>false</illegalbins>  
+  <arv_constraint>false</arv_constraint>  
+  <bus>proprietary</bus>  
+  <reg_width>32</reg_width>  
+  <bus_width>256</bus_width>  
+  <unit>8</unit>  
+  <block_size/>  
+  <chip_size/>  
+  <board_size/>  
+  <c_type/>  
+  <big_endian>false</big_endian>  
+  <little_endian>false</little_endian>  
+  <template_dir>C:\Users\Agnisys56\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>  
+  <check_only>false</check_only>  
+  <preserve_names>true</preserve_names>  
+  <addr_sort>true</addr_sort>  
+  <seqconfig> 
+    <output> 
+      <seq_outputs/>  
+      <uvm> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <regmodel oid="0">default</regmodel>  
+        <write oid="0">write(status, %d, .parent(this))</write>  
+        <read oid="0">read(status, %lhs, .parent(this))</read>  
+        <regmodel oid="1">default</regmodel>  
+        <write oid="1">write(status, %d, .parent(this))</write>  
+        <read oid="1">read(status, %lhs, .parent(this))</read>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>false</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </uvm>  
+      <sv> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>integer</arguments>  
+          <constant>integer</constant>  
+          <variable>integer</variable> 
+        </datatype>  
+        <bus oid="0">default</bus>  
+        <write oid="0">write_mirror(%a, %d, 0, 0)</write>  
+        <read oid="0">read_mirror(%a)</read>  
+        <bus oid="1">default</bus>  
+        <write oid="1">write_mirror(%a, %d, 0, 0)</write>  
+        <read oid="1">read_mirror(%a)</read>  
+        <timeunit1>1</timeunit1>  
+        <timeunit2>ns</timeunit2>  
+        <timeprecision1>1</timeprecision1>  
+        <timeprecision2>ns</timeprecision2>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>false</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </sv>  
+      <firmware> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <templatename oid="0">default</templatename>  
+        <write oid="0">REG_WRITE(%a,%d)</write>  
+        <read oid="0">REG_READ(%a)</read>  
+        <templatename oid="1">default</templatename>  
+        <write oid="1">REG_WRITE(%a,%d)</write>  
+        <read oid="1">REG_READ(%a)</read>  
+        <fieldtemplatename oid="0">default</fieldtemplatename>  
+        <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>  
+        <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>  
+        <fieldtemplatename oid="1">default</fieldtemplatename>  
+        <fieldwrite oid="1">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>  
+        <fieldread oid="1">FIELD_READ(%a,%m,%lsb)</fieldread>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>false</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </firmware>  
+      <matlab> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>integer</arguments>  
+          <constant>integer</constant>  
+          <variable>integer</variable> 
+        </datatype>  
+        <templatename oid="0">default</templatename>  
+        <write oid="0">REG_WRITE(memory_name,%a,%d)</write>  
+        <read oid="0">REG_READ(memory_name,%a)</read>  
+        <templatename oid="1">default</templatename>  
+        <write oid="1">REG_WRITE(memory_name,%a,%d)</write>  
+        <read oid="1">REG_READ(memory_name,%a)</read>  
+        <fieldtemplatename oid="0">default</fieldtemplatename>  
+        <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>  
+        <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>  
+        <fieldtemplatename oid="1">default</fieldtemplatename>  
+        <fieldwrite oid="1">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>  
+        <fieldread oid="1">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>  
+        <timeunit1>1</timeunit1>  
+        <timeunit2>ns</timeunit2>  
+        <timeprecision1>1</timeprecision1>  
+        <timeprecision2>ns</timeprecision2>  
+        <maxnesting>1</maxnesting>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </matlab>  
+      <csv> 
+        <commands> 
+          <isscmd oid="0">call</isscmd>  
+          <cmd oid="0">CALL</cmd>  
+          <isscmd oid="1">wait</isscmd>  
+          <cmd oid="1">WAIT</cmd>  
+          <isscmd oid="2">write_1_clr</isscmd>  
+          <cmd oid="2">WRITE_CLR</cmd>  
+          <isscmd oid="3">write_1_set</isscmd>  
+          <cmd oid="3">WRITE_SET</cmd>  
+          <isscmd oid="4">write</isscmd>  
+          <cmd oid="4">WRITE</cmd>  
+          <isscmd oid="5">switch</isscmd>  
+          <cmd oid="5">SWITCH</cmd>  
+          <isscmd oid="6">call</isscmd>  
+          <cmd oid="6">CALL</cmd>  
+          <isscmd oid="7">wait</isscmd>  
+          <cmd oid="7">WAIT</cmd>  
+          <isscmd oid="8">write_1_clr</isscmd>  
+          <cmd oid="8">WRITE_CLR</cmd>  
+          <isscmd oid="9">write_1_set</isscmd>  
+          <cmd oid="9">WRITE_SET</cmd>  
+          <isscmd oid="10">write</isscmd>  
+          <cmd oid="10">WRITE</cmd>  
+          <isscmd oid="11">switch</isscmd>  
+          <cmd oid="11">SWITCH</cmd> 
+        </commands>  
+        <headers> 
+          <issheader oid="0">address</issheader>  
+          <header oid="0">address</header>  
+          <issheader oid="1">description</issheader>  
+          <header oid="1">description</header>  
+          <issheader oid="2">step</issheader>  
+          <header oid="2">step</header>  
+          <issheader oid="3">value</issheader>  
+          <header oid="3">value</header>  
+          <issheader oid="4">command</issheader>  
+          <header oid="4">command</header>  
+          <issheader oid="5">address</issheader>  
+          <header oid="5">address</header>  
+          <issheader oid="6">description</issheader>  
+          <header oid="6">description</header>  
+          <issheader oid="7">step</issheader>  
+          <header oid="7">step</header>  
+          <issheader oid="8">value</issheader>  
+          <header oid="8">value</header>  
+          <issheader oid="9">command</issheader>  
+          <header oid="9">command</header> 
+        </headers>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <nameformat>%s</nameformat> 
+      </csv> 
+    </output> 
+  </seqconfig> 
+</settings>
+
+Debug: Default Settings extracted from external conf. : <?xml version="1.0" encoding="UTF-8"?>
+<settings> 
+  <company>Agnisys, Inc.</company>  
+  <copyright>***** Copyright 2018 All Rights Reserved. *****</copyright>  
+  <log>true</log>  
+  <outdir>C:\Users\Agnisys56\Desktop\outputs</outdir>  
+  <outputs> 
+    <yaml>false</yaml>  
+    <reg2d>true</reg2d>  
+    <mem_dump>true</mem_dump>  
+    <htmlalt3>true</htmlalt3>  
+    <ivs>false</ivs>  
+    <arv>false</arv>  
+    <special_reg/>  
+    <cmsis>false</cmsis>  
+    <uvm>false</uvm>  
+    <perl>false</perl>  
+    <python>false</python>  
+    <cpp>false</cpp>  
+    <vheader>false</vheader>  
+    <vhdheader>false</vhdheader>  
+    <formal>false</formal>  
+    <pdf>false</pdf>  
+    <ovm>false</ovm>  
+    <vmm>false</vmm>  
+    <iss_firmware>false</iss_firmware>  
+    <iss_csv>false</iss_csv>  
+    <iss_html>false</iss_html>  
+    <iss_sv>false</iss_sv>  
+    <iss_uvm>false</iss_uvm>  
+    <iss_matlab>false</iss_matlab>  
+    <header>false</header>  
+    <xrsl>false</xrsl>  
+    <word>false</word>  
+    <rdl>false</rdl>  
+    <erm>false</erm>  
+    <ivs>false</ivs>  
+    <svheader>false</svheader>  
+    <svg>false</svg>  
+    <datasheet>false</datasheet>  
+    <customcsv>false</customcsv>  
+    <customxml>false</customxml>  
+    <csharp>false</csharp>  
+    <sv>false</sv> 
+  </outputs>  
+  <rtl_wire>false</rtl_wire>  
+  <limit_toc/>  
+  <lowpower>false</lowpower>  
+  <auto_sequence/>  
+  <interrupt/>  
+  <mbd/>  
+  <arv_assertion/>  
+  <memtechmapping>false</memtechmapping>  
+  <sv_w_intf/>  
+  <sv_wo_intf/>  
+  <uvm_env/>  
+  <hdlpath>false</hdlpath>  
+  <coverage>false</coverage>  
+  <arv_coverage>false</arv_coverage>  
+  <illegalbins>false</illegalbins>  
+  <arv_constraint>false</arv_constraint>  
+  <bus>proprietary</bus>  
+  <reg_width>32</reg_width>  
+  <bus_width>256</bus_width>  
+  <unit>8</unit>  
+  <block_size/>  
+  <chip_size/>  
+  <board_size/>  
+  <c_type/>  
+  <big_endian>false</big_endian>  
+  <little_endian>false</little_endian>  
+  <template_dir>C:\Users\Agnisys56\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet</template_dir>  
+  <check_only>false</check_only>  
+  <preserve_names>true</preserve_names>  
+  <addr_sort>true</addr_sort>  
+  <seqconfig> 
+    <output> 
+      <seq_outputs/>  
+      <uvm> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <regmodel oid="0">default</regmodel>  
+        <write oid="0">write(status, %d, .parent(this))</write>  
+        <read oid="0">read(status, %lhs, .parent(this))</read>  
+        <regmodel oid="1">default</regmodel>  
+        <write oid="1">write(status, %d, .parent(this))</write>  
+        <read oid="1">read(status, %lhs, .parent(this))</read>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>false</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </uvm>  
+      <sv> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>integer</arguments>  
+          <constant>integer</constant>  
+          <variable>integer</variable> 
+        </datatype>  
+        <bus oid="0">default</bus>  
+        <write oid="0">write_mirror(%a, %d, 0, 0)</write>  
+        <read oid="0">read_mirror(%a)</read>  
+        <bus oid="1">default</bus>  
+        <write oid="1">write_mirror(%a, %d, 0, 0)</write>  
+        <read oid="1">read_mirror(%a)</read>  
+        <timeunit1>1</timeunit1>  
+        <timeunit2>ns</timeunit2>  
+        <timeprecision1>1</timeprecision1>  
+        <timeprecision2>ns</timeprecision2>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>false</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </sv>  
+      <firmware> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>int</arguments>  
+          <constant>int</constant>  
+          <variable>int</variable> 
+        </datatype>  
+        <templatename oid="0">default</templatename>  
+        <write oid="0">REG_WRITE(%a,%d)</write>  
+        <read oid="0">REG_READ(%a)</read>  
+        <templatename oid="1">default</templatename>  
+        <write oid="1">REG_WRITE(%a,%d)</write>  
+        <read oid="1">REG_READ(%a)</read>  
+        <fieldtemplatename oid="0">default</fieldtemplatename>  
+        <fieldwrite oid="0">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>  
+        <fieldread oid="0">FIELD_READ(%a,%m,%lsb)</fieldread>  
+        <fieldtemplatename oid="1">default</fieldtemplatename>  
+        <fieldwrite oid="1">FIELD_WRITE(%a,%d,%m,%lsb)</fieldwrite>  
+        <fieldread oid="1">FIELD_READ(%a,%m,%lsb)</fieldread>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <consolidated>false</consolidated>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </firmware>  
+      <matlab> 
+        <datatype> 
+          <inlinefunction>int</inlinefunction>  
+          <arguments>integer</arguments>  
+          <constant>integer</constant>  
+          <variable>integer</variable> 
+        </datatype>  
+        <templatename oid="0">default</templatename>  
+        <write oid="0">REG_WRITE(memory_name,%a,%d)</write>  
+        <read oid="0">REG_READ(memory_name,%a)</read>  
+        <templatename oid="1">default</templatename>  
+        <write oid="1">REG_WRITE(memory_name,%a,%d)</write>  
+        <read oid="1">REG_READ(memory_name,%a)</read>  
+        <fieldtemplatename oid="0">default</fieldtemplatename>  
+        <fieldwrite oid="0">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>  
+        <fieldread oid="0">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>  
+        <fieldtemplatename oid="1">default</fieldtemplatename>  
+        <fieldwrite oid="1">FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)</fieldwrite>  
+        <fieldread oid="1">FIELD_READ(memory_name,%a,%msb,%lsb)</fieldread>  
+        <timeunit1>1</timeunit1>  
+        <timeunit2>ns</timeunit2>  
+        <timeprecision1>1</timeprecision1>  
+        <timeprecision2>ns</timeprecision2>  
+        <maxnesting>1</maxnesting>  
+        <nameformat>%s</nameformat>  
+        <mout/> 
+      </matlab>  
+      <csv> 
+        <commands> 
+          <isscmd oid="0">call</isscmd>  
+          <cmd oid="0">CALL</cmd>  
+          <isscmd oid="1">wait</isscmd>  
+          <cmd oid="1">WAIT</cmd>  
+          <isscmd oid="2">write_1_clr</isscmd>  
+          <cmd oid="2">WRITE_CLR</cmd>  
+          <isscmd oid="3">write_1_set</isscmd>  
+          <cmd oid="3">WRITE_SET</cmd>  
+          <isscmd oid="4">write</isscmd>  
+          <cmd oid="4">WRITE</cmd>  
+          <isscmd oid="5">switch</isscmd>  
+          <cmd oid="5">SWITCH</cmd>  
+          <isscmd oid="6">call</isscmd>  
+          <cmd oid="6">CALL</cmd>  
+          <isscmd oid="7">wait</isscmd>  
+          <cmd oid="7">WAIT</cmd>  
+          <isscmd oid="8">write_1_clr</isscmd>  
+          <cmd oid="8">WRITE_CLR</cmd>  
+          <isscmd oid="9">write_1_set</isscmd>  
+          <cmd oid="9">WRITE_SET</cmd>  
+          <isscmd oid="10">write</isscmd>  
+          <cmd oid="10">WRITE</cmd>  
+          <isscmd oid="11">switch</isscmd>  
+          <cmd oid="11">SWITCH</cmd> 
+        </commands>  
+        <headers> 
+          <issheader oid="0">address</issheader>  
+          <header oid="0">address</header>  
+          <issheader oid="1">description</issheader>  
+          <header oid="1">description</header>  
+          <issheader oid="2">step</issheader>  
+          <header oid="2">step</header>  
+          <issheader oid="3">value</issheader>  
+          <header oid="3">value</header>  
+          <issheader oid="4">command</issheader>  
+          <header oid="4">command</header>  
+          <issheader oid="5">address</issheader>  
+          <header oid="5">address</header>  
+          <issheader oid="6">description</issheader>  
+          <header oid="6">description</header>  
+          <issheader oid="7">step</issheader>  
+          <header oid="7">step</header>  
+          <issheader oid="8">value</issheader>  
+          <header oid="8">value</header>  
+          <issheader oid="9">command</issheader>  
+          <header oid="9">command</header> 
+        </headers>  
+        <timemultiplier>100</timemultiplier>  
+        <maxnesting>1</maxnesting>  
+        <nameformat>%s</nameformat> 
+      </csv> 
+    </output> 
+  </seqconfig> 
+</settings>
+Requested setting : outputs
+Returning valuereg2d mem_dump htmlalt3 
+Requested setting : tcloutputs
+Returning valuenull
+Requested setting : c_type
+Returning valuenull
+Requested setting : bus
+Returning valueproprietary
+Requested setting : company
+Returning valueAgnisys, Inc.
+Requested setting : copyright
+Returning value***** Copyright 2018 All Rights Reserved. *****
+Requested setting : unit
+Returning value8
+Requested setting : little_endian
+Returning valuefalse
+Requested setting : big_endian
+Returning valuefalse
+Requested setting : board_size
+Returning valuenull
+Requested setting : chip_size
+Returning valuenull
+Requested setting : block_size
+Returning valuenull
+Requested setting : reg_width
+Returning value32
+Requested setting : bus_width
+Returning value256
+Requested setting : debug
+Returning valuenull
+Requested setting : verbose
+Returning valuenull
+Requested setting : ddnr
+Returning valuenull
+Requested setting : distributed_decode_n_readback
+Returning valuenull
+Requested setting : preserve_names
+Returning valuetrue
+Requested setting : hdlpath
+Returning valuefalse
+Requested setting : import
+Returning valuenull
+Requested setting : illegalbins
+Returning valuefalse
+Requested setting : lowpower
+Returning valuefalse
+Requested setting : coverage
+Returning valuefalse
+Requested setting : arv_coverage
+Returning valuefalse
+Requested setting : arv_constraint
+Returning valuefalse
+Requested setting : arv_assertion
+Returning valuenull
+Requested setting : rtl_wire
+Returning valuefalse
+Requested setting : no_lint_warn
+Returning valuenull
+Requested setting : noheirarchy
+Returning valuenull
+Requested setting : svinterface
+Returning valuenull
+Requested setting : memtechmapping
+Returning valuefalse
+Requested setting : if
+Returning valuenull
+Requested setting : if_header
+Returning valuenull
+Requested setting : if_verilog
+Returning valuenull
+Requested setting : if_uvm
+Returning valuenull
+Requested setting : if_pdf
+Returning valuenull
+Requested setting : if_svheader
+Returning valuenull
+Requested setting : if_ipxact
+Returning valuenull
+Requested setting : if_ctests
+Returning valuenull
+Requested setting : if_sysc
+Returning valuenull
+Requested setting : if_html
+Returning valuenull
+Requested setting : ltoc
+Returning valuenull
+Requested setting : addr_sort
+Returning valuetrue
+Requested setting : no_formatting
+Returning valuenull
+Requested setting : c_api
+Returning valuenull
+Requested setting : c_tests
+Returning valuenull
+Requested setting : check_only
+Returning valuefalse
+Requested setting : template_dir
+Returning valueC:\Users\Agnisys56\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet
+Requested setting : template_file
+Returning valuenull
+Requested setting : top_element
+Returning valuenull
+Requested setting : sheet_name
+Returning valuenull
+Requested setting : ipxact_comp
+Returning valuenull
+*********************************************************************************************
+                    Generated By : IDSBATCH VER -  6.16.4.7 
+*********************************************************************************************
+Debug: Start processing...
+Reading input html file 'C:\Users\Agnisys56\Documents\GitHub\git_test\Allegro_test2\test3\test5.idsng'..
+Transforming html to IDS xml format..
+Start reading html file...
+Converting html to xHtml...
+Create xml dom... 
+Start converting html to IDSXML...... 
+register Size->12
+start parseing  RegSpec
+Start Traversing All tables....
+Table class name-: tocTable
+Table class name-: chip
+Table class name-: block
+Table class name-: reg
+Table class name-: fields
+Table class name-: section
+Table class name-: reg
+Table class name-: fields
+Table class name-: reg
+Table class name-: fields
+Table class name-: endreggroup
+Table class name-: reg
+Table class name-: fields
+stop parsing RegSpec 
+ Start parsing secquence Spec
+stop parsing secquence Spec 
+stop converting html to IDSXML...... 
+#########################################    Normal Xrsl  Start    #######################################
+<?xml version="1.0" encoding="UTF-8"?>
+<chip id="tab10.6233198392532604" name="chip_name"><block id="tab20.13309769635240754" name="test5"><reg id="tab30.7373782713258809" name="reg_name4444"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab00.9742246280916386" offset="0:31" name="rw"><sw>ro</sw><hw>ro</hw><default>0</default><doc>reth</doc></field></reg><section id="tab50.751064320473461" name="reggroup_name"><reg id="tab60.47082147571791455" name="reg_name2"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab10.4382337177193042" offset="15:0" name="f"><sw>rw</sw><hw>ro</hw><default>0</default><doc>thisdsdafa</doc></field></reg><reg id="tab80.37289913255562335" name="reg_name3"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab20.9559140123081595" offset="15:0" name="f2"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></section><reg id="tab110.9563986779585699" name="reg_name"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab30.5091223542128207" offset="15:0" name="f"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></block><config><regwidth>32</regwidth><addressunit>8</addressunit></config></chip>
+#########################################     Normal Xrsl End     ################################
+#########################################    Refferd Xrsl  Start    #######################################
+<?xml version="1.0" encoding="UTF-8"?>
+<chip id="tab10.6233198392532604" name="chip_name"><block id="tab20.13309769635240754" name="test5"><reg id="tab30.7373782713258809" name="reg_name4444"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab00.9742246280916386" offset="0:31" name="rw"><sw>ro</sw><hw>ro</hw><default>0</default><doc>reth</doc></field></reg><section id="tab50.751064320473461" name="reggroup_name"><reg id="tab60.47082147571791455" name="reg_name2"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab10.4382337177193042" offset="15:0" name="f"><sw>rw</sw><hw>ro</hw><default>0</default><doc>thisdsdafa</doc></field></reg><reg id="tab80.37289913255562335" name="reg_name3"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab20.9559140123081595" offset="15:0" name="f2"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></section><reg id="tab110.9563986779585699" name="reg_name"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab30.5091223542128207" offset="15:0" name="f"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></block><config><regwidth>32</regwidth><addressunit>8</addressunit></config></chip>
+#########################################     Refferd Xrsl End     ################################
+Updating intermediate xrsl with configuration..
+update doc w/ conf doc = 
+Extract conf from input xml using path = /chip/config
+Conf elem found in input xml = org.dom4j.tree.DefaultElement@44a12113 [Element: <config attributes: []/>]
+Debug : config already exists in the final given xml. Will update if required.
+Validating xml   = <?xml version="1.0" encoding="UTF-8"?>
+<chip id="tab10.6233198392532604" name="chip_name"><block id="tab20.13309769635240754" name="test5"><reg id="tab30.7373782713258809" name="reg_name4444"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab00.9742246280916386" offset="0:31" name="rw"><sw>ro</sw><hw>ro</hw><default>0</default><doc>reth</doc></field></reg><section id="tab50.751064320473461" name="reggroup_name"><reg id="tab60.47082147571791455" name="reg_name2"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab10.4382337177193042" offset="15:0" name="f"><sw>rw</sw><hw>ro</hw><default>0</default><doc>thisdsdafa</doc></field></reg><reg id="tab80.37289913255562335" name="reg_name3"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab20.9559140123081595" offset="15:0" name="f2"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></section><reg id="tab110.9563986779585699" name="reg_name"><config><regwidth>32</regwidth></config><doc> </doc><field id="tab30.5091223542128207" offset="15:0" name="f"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></block><config><variants><variant name="none" isselected="true"><doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc></variant></variants><regwidth>32</regwidth><buswidth>256</buswidth><addressunit>8</addressunit></config></chip>
+Validating intermediate xrsl file..
+Annotating intermediate xrsl file..
+BatchURIResolver: Using file : img/xrsl/matrix4annotation.xsl
+BatchURIResolver: Using file : img/xrsl/matrix4properties.xsl
+BatchURIResolver: Using file : img/xrsl/xrsl-util.xsl
+BatchURIResolver: Using file : img/xrsl/addressAndSizeCalc_utils.xsl
+BatchURIResolver: Using file : img/xrsl/exslt/math/functions/power/math.power.xsl
+BatchURIResolver: Using file : img/xrsl/exslt/math/functions/power/math.power.template.xsl
+BatchURIResolver: Using file : img/xrsl/input_params.xsl
+BatchURIResolver: Using file : img/xrsl/math_utils.xsl
+BatchURIResolver: Using file : img/xrsl/util.xsl
+INFO : The Annotated intermediate xrsl ..
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip heading="1" child_no="1" id="tab10.6233198392532604" name="chip_name" uid="2019-02-01T17:37:57.369+05:30d14e1" keypath="chip_name" offset="0" caddress="0" hwmapaddr="164" csize="16" address="0x00" endaddress="0xF" size="16">
+   <config>
+      <variants>
+         <variant name="none" isselected="true">
+            <doc>'none' variant states including all templates which are not assigned any 
+  variant property.</doc>
+         </variant>
+      </variants>
+      <regwidth>32</regwidth>
+      <buswidth>256</buswidth>
+      <addressunit>8</addressunit>
+      <busdomains>
+         <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00" endaddress="0xF" size="16"/>
+      </busdomains>
+   </config>
+   <block heading="1.1" child_no="1" id="tab20.13309769635240754" name="test5" uid="2019-02-01T17:37:57.369+05:30d14e13" keypath="chip_name.test5,test5" hwmapaddr="165" max_reg_size="32" csize="16" offset="0" caddress="0" address="0x00" endaddress="0xF" size="16">
+      <config>
+         <busdomains>
+            <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00" endaddress="0xF" size="16"/>
+         </busdomains>
+      </config>
+      <reg heading="1.1.1" child_no="1" id="tab30.7373782713258809" name="reg_name4444" uid="2019-02-01T17:37:57.369+05:30d14e15" keypath="chip_name.test5.reg_name4444,test5.reg_name4444,reg_name4444" hwmapaddr="166" csize="4" offset="0" caddress="0" address="0x00" endaddress="0x3" size="4" default="0x00000000" sw="ro" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x00" endaddress="0x3" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tab00.9742246280916386" offset="0:31" name="rw" uid="2019-02-01T17:37:57.369+05:30d14e20" keypath="chip_name.test5.reg_name4444.rw,test5.reg_name4444.rw,reg_name4444.rw,rw">
+            <sw>ro</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">00000000000000000000000000000000</default>
+            <doc>reth</doc>
+         </field>
+      </reg>
+      <section heading="1.1.2" child_no="2" id="tab50.751064320473461" name="reggroup_name" uid="2019-02-01T17:37:57.369+05:30d14e29" keypath="chip_name.test5.reggroup_name,test5.reggroup_name,reggroup_name" keypathdown="reggroup_name.reg_name2.reg_name3,reg_name2,reg_name3" hwmapaddr="167" max_reg_size="32" csize="8" offset="4" caddress="4" address="0x04" endaddress="0xB" size="8">
+         <config>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x04" endaddress="0xB" size="8"/>
+            </busdomains>
+         </config>
+         <reg heading="1.1.2.1" child_no="1" id="tab60.47082147571791455" name="reg_name2" uid="2019-02-01T17:37:57.369+05:30d14e31" keypath="chip_name.test5.reggroup_name.reg_name2,test5.reggroup_name.reg_name2,reggroup_name.reg_name2,reg_name2" hwmapaddr="168" csize="4" offset="0" caddress="0" address="0x04" endaddress="0x7" size="4" default="0x00000000" sw="rw" hw="ro">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="0" address="0x04" endaddress="0x7" size="4"/>
+               </busdomains>
+            </config>
+            <doc/>
+            <field id="tab10.4382337177193042" offset="15:0" name="f" uid="2019-02-01T17:37:57.369+05:30d14e36" keypath="chip_name.test5.reggroup_name.reg_name2.f,test5.reggroup_name.reg_name2.f,reggroup_name.reg_name2.f,reg_name2.f,f">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">0000000000000000</default>
+               <doc>thisdsdafa</doc>
+            </field>
+         </reg>
+         <reg heading="1.1.2.2" child_no="2" id="tab80.37289913255562335" name="reg_name3" uid="2019-02-01T17:37:57.369+05:30d14e45" keypath="chip_name.test5.reggroup_name.reg_name3,test5.reggroup_name.reg_name3,reggroup_name.reg_name3,reg_name3" hwmapaddr="169" csize="4" offset="4" caddress="4" address="0x08" endaddress="0xB" size="4" default="0x00000000" sw="rw" hw="ro">
+            <config>
+               <regwidth>32</regwidth>
+               <busdomains>
+                  <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="4" address="0x08" endaddress="0xB" size="4"/>
+               </busdomains>
+            </config>
+            <doc/>
+            <field id="tab20.9559140123081595" offset="15:0" name="f2" uid="2019-02-01T17:37:57.369+05:30d14e50" keypath="chip_name.test5.reggroup_name.reg_name3.f2,test5.reggroup_name.reg_name3.f2,reggroup_name.reg_name3.f2,reg_name3.f2,f2">
+               <sw>rw</sw>
+               <hw>ro</hw>
+               <default unresolvedDef="0">0000000000000000</default>
+            </field>
+         </reg>
+      </section>
+      <reg heading="1.1.3" child_no="3" id="tab110.9563986779585699" name="reg_name" uid="2019-02-01T17:37:57.369+05:30d14e57" keypath="chip_name.test5.reg_name,test5.reg_name,reg_name" hwmapaddr="170" csize="4" offset="12" caddress="12" address="0x0C" endaddress="0xF" size="4" default="0x00000000" sw="rw" hw="ro">
+         <config>
+            <regwidth>32</regwidth>
+            <busdomains>
+               <busdomain name="default_map" bus="CUSTOM" addressUnit="8" offset="12" address="0x0C" endaddress="0xF" size="4"/>
+            </busdomains>
+         </config>
+         <doc/>
+         <field id="tab30.5091223542128207" offset="15:0" name="f" uid="2019-02-01T17:37:57.369+05:30d14e62" keypath="chip_name.test5.reg_name.f,test5.reg_name.f,reg_name.f,f">
+            <sw>rw</sw>
+            <hw>ro</hw>
+            <default unresolvedDef="0">0000000000000000</default>
+         </field>
+      </reg>
+   </block>
+</chip>
+Stage 1 finished. Initial pre-prossing complete.
+Outputs selected to be generated = []
+IDSBatch exiting now

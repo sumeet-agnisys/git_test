@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chip name="chip" id="2:2"><config><regwidth>32</regwidth><buswidth>256</buswidth><addressunit>8</addressunit><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants></config><block name="Block1" id="3:2" count="2">
+   <doc>
+      <HDIV>
+         <SPAN STYLE="font-size: 9; font-family: Calibri; "> </SPAN>
+      </HDIV>
+   </doc>
+<reg name="Reg1" id="4:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="F" id="4:7">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="Reg2" id="5:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <field offset="31:0" name="F" id="5:7">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+</reg></block><ref instname="direct_regmap_inst" link="direct_regmap" orig_path="Direct_regmap_dg.docx" xrsl_path="C:\Users\Agnisys56\Desktop\workspace\.ids\Direct_regmap_dg.xrsl" path="C:\Users\Agnisys56\Desktop\workspace\.ids\Direct_regmap_dg.xrsl" absolutepath="C:\Users\Agnisys56\Desktop\workspace\.ids\Direct_regmap_dg.xrsl" id="6:2" refednode="block"/></chip>
