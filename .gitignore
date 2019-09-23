@@ -1,3 +1,6 @@
 *.js
 *.css
 *.htm
+.idsng
+.ids
+*.htm.bak
