@@ -1,7 +1,6 @@
 *.js
 *.css
 *.htm
-/*.htm
 *.idsng
 **.idsng
 **/*.idsng
