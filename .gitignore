@@ -3,4 +3,5 @@
 *.htm
 /*.htm
 *.idsng
-/Allegro_test3/*.idsng
+**.idsng
+**/*.idsng
