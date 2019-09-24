@@ -1,6 +1,6 @@
 *.js
 *.css
-*.htm
 .idsng
 .ids
-*.htm.bak
+.~$*.htm
+*.bak
