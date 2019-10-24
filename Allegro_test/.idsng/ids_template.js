@@ -893,10 +893,14 @@ $(document).ready(function () {
     document.getElementById("backhidder").addEventListener("click", function () {
         hidetemplate();
     });
-    document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].addEventListener("keydown", function (e) {            //spreadsheetKeyEventHandler()
-        reCalculate(e);
-        rePosition();
-    });
+
+    try {
+        document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].addEventListener("keydown", function (e) {            //spreadsheetKeyEventHandler()
+            reCalculate(e);
+            rePosition();
+        });
+    } catch (e) {
+    }
 
 
     initilizeParamEvents();
@@ -1152,26 +1156,34 @@ $(document).ready(function () {
     var diff_counter = 0;
     try {
         $(".diff").each(function () {
-            if (this.tagName!== 'TR') {
-                $(this).append("<a class='diffnavi' name=\"gotodiff" + diff_counter + "\"></a>");
+            if (this.tagName === 'TR' || this.tagName === 'TBODY') {
+
+            } else {
+                var line = $(this).attr("data-line");
+                $(this).append("<a data-aline='" + line + "' class='diffnavi' name=\"gotodiff" + diff_counter + "\"></a>");
                 diff_counter++;
             }
         });
-        $("#btnprev").on("click", function () {
-            if (diff_index > -1) {
-                diff_index--;
-                var goto = $(".diffnavi")[diff_index].getAttribute("name");
-                window.location.href = "#" + goto;
+        $("#btnprev").on("click", function (e) {
+            try {
+                if (diff_index > -1) {
+                    diff_index--;
+                    naviDiff(diff_index, e);
+                }
+            } catch (e) {
             }
+            return false;
         });
-        $("#btnnext").on("click", function () {
-            var len = $(".diffnavi").length;
-            if (diff_index < len - 1) {
-                diff_index++;
-
-                var goto = $(".diffnavi")[diff_index].getAttribute("name");
-                window.location.href = "#" + goto;
+        $("#btnnext").on("click", function (e) {
+            try {
+                var len = $(".diffnavi").length;
+                if (diff_index < len - 1) {
+                    diff_index++;
+                    naviDiff(diff_index, e);
+                }
+            } catch (e) {
             }
+            return false;
         });
     } catch (e) {
     }
@@ -1190,6 +1202,38 @@ $(document).ready(function () {
 
     setscollpos();
 });
+
+
+function naviDiff(diff_index, e) {
+    var goto = $(".diffnavi")[diff_index].getAttribute("name");
+    window.location.href = "#" + goto;
+
+    var isSrc = "other";
+
+    try {
+        isSrc = e.target.parentNode.getAttribute("data-type");
+    } catch (e) {
+    }
+
+    callLineNavi($(".diffnavi")[diff_index].getAttribute("data-aline"), false, isSrc);
+    window.scrollTo(window.scrollX, window.scrollY - 40);
+    setDiffHighlight($(".diffnavi")[diff_index]);
+}
+
+function setDiffHighlight(obj) {
+    if (document.getElementById("highlighter") !== null) {
+        document.getElementById("highlighter").remove();
+    }
+    $(obj).append("<div id='highlighter' class='highlight'></div>");
+}
+
+//@FXML
+function callLineNavi(linenum, isnext, type) {
+    try {
+        clickController.navigatemerge(linenum, isnext, type);
+    } catch (e) {
+    }
+}
 
 
 function loadDefaultHis() {
@@ -1240,8 +1284,9 @@ function setscollpos() {
             console.log("error setup scroll pos to spread : " + e.message);
         }
     } else {
-        //alert("--scrollpos : " + scrollpos);
-        window.scrollTo(0, scrollpos);
+        if (scrollpos) {
+            window.scrollTo(0, scrollpos);
+        }
     }
 }
 
@@ -1266,6 +1311,15 @@ function getscrollpos() {
 function setscrollpos(val) {
     $("body").scrollTop(val);
     scrollpos = val;
+}
+
+function setWindowScrollPos(val) {
+    var scr = parseInt(val);
+    window.scrollTo(0, scr);
+    $("body").scrollTop(scr);
+
+    $("#datacenter1").text(scr);
+
 }
 
 function setregdivscrollpos(val) {
