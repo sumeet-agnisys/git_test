@@ -3,7 +3,7 @@
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
    <div id="abstract"> 
     <label id="lblcompact"></label> 
-    <label id="datacenter1">0</label> 
+    <label id="datacenter1"></label> 
     <label id="datacenter2"></label> 
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
@@ -59,6 +59,12 @@
       </tr> 
       <tr> 
        <td colspan="6" class="fieldtd"> 
+        <div id="autocomplete-list" class="autocomplete-items" style="left: 35%; max-height: 109.5625px; overflow: auto; display: none;"> 
+         <div title="read writable"> 
+          <strong>rw</strong> 
+          <input type="hidden" value="rw"> 
+         </div> 
+        </div> 
         <table class="fields idsTemp" id="tab0.10814855400392276" oncontextmenu="openregmenu(event);"> 
          <tbody> 
           <tr class="label"> 
