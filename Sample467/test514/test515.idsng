@@ -71,7 +71,7 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">register 12222 adasd</td> 
+           <td title="field name" class="fieldname">register 12222 adasdjcjkzxc</td> 
            <td title="software access" class="sw">fdsfsd</td> 
            <td title="hardware access" class="hw">fdsf</td> 
            <td title="default" class="default">fdsf</td> 
