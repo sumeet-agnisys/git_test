@@ -71,7 +71,7 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">register 1</td> 
+           <td title="field name" class="fieldname">register 12222</td> 
            <td title="software access" class="sw">fdsfsd</td> 
            <td title="hardware access" class="hw">fdsf</td> 
            <td title="default" class="default">fdsf</td> 
@@ -127,7 +127,7 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab_field0.34988994883709634" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname"><br></td> 
+           <td title="field name" class="fieldname">2dwedwe</td> 
            <td title="software access" class="sw"><br></td> 
            <td title="hardware access" class="hw"></td> 
            <td title="default" class="default"><br></td> 
