@@ -94,10 +94,10 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">fx</td> 
+           <td title="field name" class="fieldname"><br></td> 
            <td title="software access" class="sw"><br></td> 
            <td title="hardware access" class="hw"></td> 
-           <td title="default" class="default"><br></td> 
+           <td title="default" class="default">9</td> 
            <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
           </tr> 
          </tbody> 
