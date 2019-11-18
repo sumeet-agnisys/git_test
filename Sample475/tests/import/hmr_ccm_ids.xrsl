@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><block name="hmr_ccm" id="3:2" intr.irq_per_channel="true" reset_type="$ASYNC_RESET ? async:sync"><doc>
+   <list type="param">
+      <value name="$ASYNC_RESET" doc="Parameter (Uses $ notation)" private="0">0</value>
+   </list>
+</doc><config><regwidth>32</regwidth><buswidth>32</buswidth><addressunit>8</addressunit><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants></config>
+   <doc> </doc>
+<signals name="reset_signals" id="4:2">
+   <signal name="fint_rstn" direction="in" id="4:6"/>
+</signals><reg name="host_cmdq_base_addr_lo" id="5:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Lower 32-bits of the 64-bit host address of the FPGA command queue  . </doc>
+   <field offset="31:0" name="value" id="5:7">
+      <doc>Lower command queue address value</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cmdq_base_addr_hi" id="6:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Upper 32-bits of the 64-bit host address of the FPGA command queue. NOTE: The command queue address must be address aligned according to its size, in other words (host_cmdq_base_addr &amp; host_cmdq_size == 0) </doc>
+   <field offset="31:0" name="value" id="6:7">
+      <doc>Upper command queue address value</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cmdq_size" id="7:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Host command queue size (in units of command slots which are 16 bytes each)  </doc>
+   <field offset="16:0" name="value" id="7:7">
+      <doc>Number of command slots in host FPGA command queue. For NVMe compatibility, this is a 0's based value.  NOTE: The ONLY legal values for this field are the following:\n0x3F: 64 command slots\n0x7F: 128 command slots\n0xFF: 256 command slots\n0x1FF: 512 command slots\n0x3FF: 1024 command slots\n0x7FF: 2048 command slots\n0xFFF: 4096 command slots\n0x1FFF: 8192 command slots\n0x3FFF: 16384 command slots\n0x7FFF: 32768 command slots\n0xFFFF: 65536 command slots\n0x1FFFF: 131072 command slots</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:17" name="reserved" id="7:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cplq_base_addr_lo" id="8:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Lower 32-bits of the 64-bit host address of the FPGA completion queue </doc>
+   <field offset="31:0" name="value" id="8:7">
+      <doc>Lower completion queue address value</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cplq_base_addr_hi" id="9:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Upper 32-bits of the 64-bit host address of the FPGA completion queue. NOTE: The completion queue address must be address aligned according to its size, in other words (host_cplq_base_addr &amp; host_cplq_size == 0) .</doc>
+   <field offset="31:0" name="value" id="9:7">
+      <doc>Upper completion queue address value</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cplq_size" id="10:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>FPGA completion queue size (in units of completion slots which are 8 bytes each)  </doc>
+   <field offset="16:0" name="value" id="10:7">
+      <doc>Number of completion slots in host FPGA completion queue. For NVMe compatibility, this is a 0's based value.  NOTE: The ONLY legal values for this field are the following:0x3F: 64 completion slots\n0x7F: 128 completion slots\n0xFF: 256 completion slots\n0x1FF: 512 completion slots\n0x3FF: 1024 completion slots\n0x7FF: 2048 completion slots\n0xFFF: 4096 completion slots\n0x1FFF: 8192 completion slots\n0x3FFF: 16384 completion slots\n0x7FFF: 32768 completion slots\n0xFFFF: 65536 completion slots\n0x1FFFF: 131072 completion slots</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:17" name="reserved" id="10:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cmdq_tail_doorbell" id="11:2" reg.hw_wp="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Command queue  tail doorbell (in units of command slots).  </doc>
+   <field offset="16:0" name="value" id="11:7">
+      <doc>New write pointer value (in units of command slots) of the command queue.</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:17" name="reserved" id="11:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="host_cplq_head_doorbell" id="12:2" reg.hw_wp="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Completion queue  head doorbell (in units of completion slots).  </doc>
+   <field offset="16:0" name="value" id="12:7">
+      <doc>New read pointer value (in units of completion slots) of the FPGA completion queue.</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:17" name="reserved" id="12:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="max_host_cmdq_size" id="13:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Maximum command queue size supported (in units of command slots).</doc>
+   <field offset="31:0" name="value" id="13:7">
+      <doc>Maximum command queue size value supported by the FPGA. For NVMe compatibility, this is a 0's based value.</doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="max_host_cplq_size" id="14:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Maximum completion queue size supported (in units of completion slots).</doc>
+   <field offset="31:0" name="value" id="14:7">
+      <doc>Maximum completion queue size value supported by the FPGA. For NVMe compatibility, this is a 0's based value.</doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="fpga_cmd_queue_size" id="15:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Size of the on-chip FPGA command queue (in units of command slots).</doc>
+   <field offset="12:0" name="value" id="15:7">
+      <doc>Size of the command FIFO implemented on the FPGA</doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:13" name="reserved" id="15:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="fpga_sgl_queue_size" id="16:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Size of each individual on-chip FPGA SGL queue (in units of SGL slots).</doc>
+   <field offset="9:0" name="value" id="16:7">
+      <doc>Size of individual DMA SGL queue implemented in FPGA (SGL slots units). There are 2 SGL queue (SRC/DST) per DMA channel.</doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:10" name="reserved" id="16:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="fpga_sta_queue_size" id="17:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Size of each individual on-chip FPGA STA queue (in units of SGL slots).</doc>
+   <field offset="9:0" name="value" id="17:7">
+      <doc>Size of individual DMA STA queue implemented in FPGA (STA slots units). There is one STA queue per DMA channel.</doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:10" name="reserved" id="17:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ccm_cmn_fint_sts" id="18:2" rtl.reg_enb="false" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM Common Fatal Interrupt Status register </doc>
+   <field offset="0" name="b0" id="18:7" intr.status="ccm_cmn_fatal_0">
+      <doc> \nIllegal host command queue size</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="b1" id="18:8" intr.status="ccm_cmn_fatal_1">
+      <doc> \nUnaligned host command queue address</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="b2" id="18:9" intr.status="ccm_cmn_fatal_2">
+      <doc> \nIllegal host completion queue size</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="b3" id="18:10" intr.status="ccm_cmn_fatal_3">
+      <doc> \nUnaligned host completion queue address</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="b4" id="18:11" intr.status="ccm_cmn_fatal_4">
+      <doc> \nIllegal Command Queue Tail Doorbell Value</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="b5" id="18:12" intr.status="ccm_cmn_fatal_5">
+      <doc> \nIllegal Completion Queue Head Doorbell Value</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="b6" id="18:13" intr.status="ccm_cmn_fatal_6">
+      <doc> \nUnsupported command</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="b7" id="18:14" intr.status="ccm_cmn_fatal_7">
+      <doc> \nCommand dispatch error (illegal command parameters)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="b8" id="18:15" intr.status="ccm_cmn_fatal_8">
+      <doc> \nCCM FIFO overflow error (Check ccm_ovfl_sts register for details)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="b9" id="18:16" intr.status="ccm_cmn_fatal_9">
+      <doc> \nCCM FIFO underflow error (Check ccm_udfl_sts register for details)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="b10" id="18:17" intr.status="ccm_cmn_fatal_10">
+      <doc> \nBuffer queue doorbell value should not have any bit set in [31:16] (16-bit value only allowed)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:11" name="reserved" id="18:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_cmn_fint_en" id="19:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM Common Fatal Interrupt Enable register  </doc>
+   <field offset="0" name="b0" id="19:7" intr.enable="ccm_cmn_fatal_0">
+      <doc> \nIllegal host command queue size</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="1" name="b1" id="19:8" intr.enable="ccm_cmn_fatal_1">
+      <doc> \nUnaligned host command queue address</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="2" name="b2" id="19:9" intr.enable="ccm_cmn_fatal_2">
+      <doc> \nIllegal host completion queue size</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="3" name="b3" id="19:10" intr.enable="ccm_cmn_fatal_3">
+      <doc> \nUnaligned host completion queue address</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="4" name="b4" id="19:11" intr.enable="ccm_cmn_fatal_4">
+      <doc> \nIllegal Command Queue Tail Doorbell Value</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="5" name="b5" id="19:12" intr.enable="ccm_cmn_fatal_5">
+      <doc> \nIllegal Completion Queue Head Doorbell Value</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="6" name="b6" id="19:13" intr.enable="ccm_cmn_fatal_6">
+      <doc> \nUnsupported command</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="7" name="b7" id="19:14" intr.enable="ccm_cmn_fatal_7">
+      <doc> \nCommand dispatch error (illegal command parameters)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="8" name="b8" id="19:15" intr.enable="ccm_cmn_fatal_8">
+      <doc> \nCCM FIFO overflow error (Check ccm_ovfl_sts register for details)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="9" name="b9" id="19:16" intr.enable="ccm_cmn_fatal_9">
+      <doc> \nCCM FIFO underflow error (Check ccm_udfl_sts register for details)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="10" name="b10" id="19:17" intr.enable="ccm_cmn_fatal_10">
+      <doc> \nBuffer queue doorbell value should not have any bit set in [31:16] (16-bit value only allowed)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="31:11" name="reserved" id="19:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_cmn_fint_post" id="20:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM Common Fatal Interrupt Post register\nThis is used to inject interrupts. There will be a pulse when field written to 1 and input to allow hardware to clear the field.  </doc>
+   <field offset="0" name="b0" id="20:7" intr.post="ccm_cmn_fatal_0" rtl.hw_clear="true">
+      <doc> \nIllegal host command queue size</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="b1" id="20:8" intr.post="ccm_cmn_fatal_1" rtl.hw_clear="true">
+      <doc> \nUnaligned host command queue address</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="b2" id="20:9" intr.post="ccm_cmn_fatal_2" rtl.hw_clear="true">
+      <doc> \nIllegal host completion queue size</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="b3" id="20:10" intr.post="ccm_cmn_fatal_3">
+      <doc> ; rtl.hw_clear=true\nUnaligned host completion queue address</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="b4" id="20:11" intr.post="ccm_cmn_fatal_4" rtl.hw_clear="true">
+      <doc> \nIllegal Command Queue Tail Doorbell Value</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="b5" id="20:12" intr.post="ccm_cmn_fatal_5" rtl.hw_clear="true">
+      <doc> \nIllegal Completion Queue Head Doorbell Value</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="b6" id="20:13" intr.post="ccm_cmn_fatal_6" rtl.hw_clear="true">
+      <doc> \nUnsupported command</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="b7" id="20:14" intr.post="ccm_cmn_fatal_7" rtl.hw_clear="true">
+      <doc> \nCommand dispatch error (illegal command parameters)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="b8" id="20:15" intr.post="ccm_cmn_fatal_8" rtl.hw_clear="true">
+      <doc> \nCCM FIFO overflow error (Check ccm_ovfl_sts register for details)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="b9" id="20:16" intr.post="ccm_cmn_fatal_9" rtl.hw_clear="true">
+      <doc> \nCCM FIFO underflow error (Check ccm_udfl_sts register for details)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="b10" id="20:17" intr.post="ccm_cmn_fatal_10" rtl.hw_clear="true">
+      <doc> \nBuffer queue doorbell value should not have any bit set in [31:16] (16-bit value only allowed)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:11" name="reserved" id="20:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep0_fint_sts" id="21:2" rtl.reg_enb="false" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM EP0 Fatal Interrupt Status register </doc>
+   <field offset="0" name="b0" id="21:7" intr.status="ccm_ep0_fatal_0">
+      <doc> \nDMA Channel 0 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="b1" id="21:8" intr.status="ccm_ep0_fatal_1">
+      <doc> \nDMA Channel 0 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="b2" id="21:9" intr.status="ccm_ep0_fatal_2">
+      <doc> \nDMA Channel 0 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="b3" id="21:10" intr.status="ccm_ep0_fatal_3">
+      <doc> \nDMA Channel 1 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="b4" id="21:11" intr.status="ccm_ep0_fatal_4">
+      <doc> \nDMA Channel 1 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="b5" id="21:12" intr.status="ccm_ep0_fatal_5">
+      <doc> \nDMA Channel 1 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="b6" id="21:13" intr.status="ccm_ep0_fatal_6">
+      <doc> \nDMA Channel 2 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="b7" id="21:14" intr.status="ccm_ep0_fatal_7">
+      <doc> \nDMA Channel 2 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="b8" id="21:15" intr.status="ccm_ep0_fatal_8">
+      <doc> \nDMA Channel 2 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="b9" id="21:16" intr.status="ccm_ep0_fatal_9">
+      <doc> \nDMA Channel 3 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="b10" id="21:17" intr.status="ccm_ep0_fatal_10">
+      <doc> \nDMA Channel 3 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="11" name="b11" id="21:18" intr.status="ccm_ep0_fatal_11">
+      <doc> \nDMA Channel 3 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="12" name="b12" id="21:19" intr.status="ccm_ep0_fatal_12">
+      <doc> \nAXI slave read error (illegal CCM access or unimplemented space)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="13" name="b13" id="21:20" intr.status="ccm_ep0_fatal_13">
+      <doc> \nAXI slave write error (illegal CCM access or unimplemented space)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="14" name="b14" id="21:21" intr.status="ccm_ep0_fatal_14">
+      <doc> \nAXI write response error received from DMA slave interface</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="15" name="b15" id="21:22" intr.status="ccm_ep0_fatal_15">
+      <doc> \nAXI read response error received from DMA slave interface</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="16" name="b16" id="21:23" intr.status="ccm_ep0_fatal_16">
+      <doc> \nDMA Channel 0 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="17" name="b17" id="21:24" intr.status="ccm_ep0_fatal_17">
+      <doc> \nDMA Channel 1 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="18" name="b18" id="21:25" intr.status="ccm_ep0_fatal_18">
+      <doc> \nDMA Channel 2 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="19" name="b19" id="21:26" intr.status="ccm_ep0_fatal_19">
+      <doc> \nDMA Channel 3 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:20" name="reserved" id="21:27">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep0_fint_en" id="22:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM EP0 Fatal Interrupt Enable register  </doc>
+   <field offset="0" name="b0" id="22:7" intr.enable="ccm_ep0_fatal_0">
+      <doc> \nDMA Channel 0 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="1" name="b1" id="22:8" intr.enable="ccm_ep0_fatal_1">
+      <doc> \nDMA Channel 0 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="2" name="b2" id="22:9" intr.enable="ccm_ep0_fatal_2">
+      <doc> \nDMA Channel 0 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="3" name="b3" id="22:10" intr.enable="ccm_ep0_fatal_3">
+      <doc> \nDMA Channel 1 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="4" name="b4" id="22:11" intr.enable="ccm_ep0_fatal_4">
+      <doc> \nDMA Channel 1 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="5" name="b5" id="22:12" intr.enable="ccm_ep0_fatal_5">
+      <doc> \nDMA Channel 1 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="6" name="b6" id="22:13" intr.enable="ccm_ep0_fatal_6">
+      <doc> \nDMA Channel 2 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="7" name="b7" id="22:14" intr.enable="ccm_ep0_fatal_7">
+      <doc> \nDMA Channel 2 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="8" name="b8" id="22:15" intr.enable="ccm_ep0_fatal_8">
+      <doc> \nDMA Channel 2 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="9" name="b9" id="22:16" intr.enable="ccm_ep0_fatal_9">
+      <doc> \nDMA Channel 3 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="10" name="b10" id="22:17" intr.enable="ccm_ep0_fatal_10">
+      <doc> \nDMA Channel 3 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="11" name="b11" id="22:18" intr.enable="ccm_ep0_fatal_11">
+      <doc> \nDMA Channel 3 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="12" name="b12" id="22:19" intr.enable="ccm_ep0_fatal_12">
+      <doc> \nAXI slave read error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="13" name="b13" id="22:20" intr.enable="ccm_ep0_fatal_13">
+      <doc> \nAXI slave write error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="14" name="b14" id="22:21" intr.enable="ccm_ep0_fatal_14">
+      <doc> \nAXI write response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="15" name="b15" id="22:22" intr.enable="ccm_ep0_fatal_15">
+      <doc> \nAXI read response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="16" name="b16" id="22:23" intr.enable="ccm_ep0_fatal_16">
+      <doc> \nDMA Channel 0 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="17" name="b17" id="22:24" intr.enable="ccm_ep0_fatal_17">
+      <doc> \nDMA Channel 1 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="18" name="b18" id="22:25" intr.enable="ccm_ep0_fatal_18">
+      <doc> \nDMA Channel 2 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="19" name="b19" id="22:26" intr.enable="ccm_ep0_fatal_19">
+      <doc> \nDMA Channel 3 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="31:20" name="reserved" id="22:27">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep0_fint_post" id="23:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM EP0 Fatal Interrupt Enable register  </doc>
+   <field offset="0" name="b0" id="23:7" intr.post="ccm_ep0_fatal_0" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="b1" id="23:8" intr.post="ccm_ep0_fatal_1" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="b2" id="23:9" intr.post="ccm_ep0_fatal_2" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="b3" id="23:10" intr.post="ccm_ep0_fatal_3" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="b4" id="23:11" intr.post="ccm_ep0_fatal_4" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="b5" id="23:12" intr.post="ccm_ep0_fatal_5" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="b6" id="23:13" intr.post="ccm_ep0_fatal_6" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="b7" id="23:14" intr.post="ccm_ep0_fatal_7" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="b8" id="23:15" intr.post="ccm_ep0_fatal_8" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="b9" id="23:16" intr.post="ccm_ep0_fatal_9" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="b10" id="23:17" intr.post="ccm_ep0_fatal_10" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="11" name="b11" id="23:18" intr.post="ccm_ep0_fatal_11" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="12" name="b12" id="23:19" intr.post="ccm_ep0_fatal_12" rtl.hw_clear="true">
+      <doc> \nAXI slave read error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="13" name="b13" id="23:20" intr.post="ccm_ep0_fatal_13" rtl.hw_clear="true">
+      <doc> \nAXI slave write error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="14" name="b14" id="23:21" intr.post="ccm_ep0_fatal_14" rtl.hw_clear="true">
+      <doc> \nAXI write response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="15" name="b15" id="23:22" intr.post="ccm_ep0_fatal_15" rtl.hw_clear="true">
+      <doc> \nAXI read response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="16" name="b16" id="23:23" intr.post="ccm_ep0_fatal_16" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="17" name="b17" id="23:24" intr.post="ccm_ep0_fatal_17" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="18" name="b18" id="23:25" intr.post="ccm_ep0_fatal_18" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="19" name="b19" id="23:26" intr.post="ccm_ep0_fatal_19" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:20" name="reserved" id="23:27">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep1_fint_sts" id="24:2" rtl.reg_enb="false" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM EP1 Fatal Interrupt Status register </doc>
+   <field offset="0" name="b0" id="24:7" intr.status="ccm_ep1_fatal_0">
+      <doc> \nDMA Channel 0 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="b1" id="24:8" intr.status="ccm_ep1_fatal_1">
+      <doc> \nDMA Channel 0 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="b2" id="24:9" intr.status="ccm_ep1_fatal_2">
+      <doc> \nDMA Channel 0 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="b3" id="24:10" intr.status="ccm_ep1_fatal_3">
+      <doc> \nDMA Channel 1 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="b4" id="24:11" intr.status="ccm_ep1_fatal_4">
+      <doc> \nDMA Channel 1 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="b5" id="24:12" intr.status="ccm_ep1_fatal_5">
+      <doc> \nDMA Channel 1 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="b6" id="24:13" intr.status="ccm_ep1_fatal_6">
+      <doc> \nDMA Channel 2 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="b7" id="24:14" intr.status="ccm_ep1_fatal_7">
+      <doc> \nDMA Channel 2 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="b8" id="24:15" intr.status="ccm_ep1_fatal_8">
+      <doc> \nDMA Channel 2 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="b9" id="24:16" intr.status="ccm_ep1_fatal_9">
+      <doc> \nDMA Channel 3 internal error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="b10" id="24:17" intr.status="ccm_ep1_fatal_10">
+      <doc> \nDMA Channel 3 source error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="11" name="b11" id="24:18" intr.status="ccm_ep1_fatal_11">
+      <doc> \nDMA Channel 3 destination error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="12" name="b12" id="24:19" intr.status="ccm_ep1_fatal_12">
+      <doc> \nAXI slave read error (illegal CCM access or unimplemented space)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="13" name="b13" id="24:20" intr.status="ccm_ep1_fatal_13">
+      <doc> \nAXI slave write error (illegal CCM access or unimplemented space)</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="14" name="b14" id="24:21" intr.status="ccm_ep1_fatal_14">
+      <doc> \nAXI write response error received from DMA slave interface</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="15" name="b15" id="24:22" intr.status="ccm_ep1_fatal_15">
+      <doc> \nAXI read response error received from DMA slave interface</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="16" name="b16" id="24:23" intr.status="ccm_ep1_fatal_16">
+      <doc> \nDMA Channel 0 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="17" name="b17" id="24:24" intr.status="ccm_ep1_fatal_17">
+      <doc> \nDMA Channel 1 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="18" name="b18" id="24:25" intr.status="ccm_ep1_fatal_18">
+      <doc> \nDMA Channel 2 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="19" name="b19" id="24:26" intr.status="ccm_ep1_fatal_19">
+      <doc> \nDMA Channel 3 monitor error</doc>
+      <sw>r/w1c</sw>
+      <hw>rw</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:20" name="reserved" id="24:27">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep1_fint_en" id="25:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM EP1 Fatal Interrupt Enable register  </doc>
+   <field offset="0" name="b0" id="25:7" intr.enable="ccm_ep1_fatal_0">
+      <doc> \nDMA Channel 0 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="1" name="b1" id="25:8" intr.enable="ccm_ep1_fatal_1">
+      <doc> \nDMA Channel 0 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="2" name="b2" id="25:9" intr.enable="ccm_ep1_fatal_2">
+      <doc> \nDMA Channel 0 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="3" name="b3" id="25:10" intr.enable="ccm_ep1_fatal_3">
+      <doc> \nDMA Channel 1 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="4" name="b4" id="25:11" intr.enable="ccm_ep1_fatal_4">
+      <doc> \nDMA Channel 1 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="5" name="b5" id="25:12" intr.enable="ccm_ep1_fatal_5">
+      <doc> \nDMA Channel 1 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="6" name="b6" id="25:13" intr.enable="ccm_ep1_fatal_6">
+      <doc> \nDMA Channel 2 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="7" name="b7" id="25:14" intr.enable="ccm_ep1_fatal_7">
+      <doc> \nDMA Channel 2 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="8" name="b8" id="25:15" intr.enable="ccm_ep1_fatal_8">
+      <doc> \nDMA Channel 2 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="9" name="b9" id="25:16" intr.enable="ccm_ep1_fatal_9">
+      <doc> \nDMA Channel 3 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="10" name="b10" id="25:17" intr.enable="ccm_ep1_fatal_10">
+      <doc> \nDMA Channel 3 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="11" name="b11" id="25:18" intr.enable="ccm_ep1_fatal_11">
+      <doc> \nDMA Channel 3 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="12" name="b12" id="25:19" intr.enable="ccm_ep1_fatal_12">
+      <doc> \nAXI slave read error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="13" name="b13" id="25:20" intr.enable="ccm_ep1_fatal_13">
+      <doc> \nAXI slave write error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="14" name="b14" id="25:21" intr.enable="ccm_ep1_fatal_14">
+      <doc> \nAXI write response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="15" name="b15" id="25:22" intr.enable="ccm_ep1_fatal_15">
+      <doc> \nAXI read response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="16" name="b16" id="25:23" intr.enable="ccm_ep1_fatal_16">
+      <doc> \nDMA Channel 0 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="17" name="b17" id="25:24" intr.enable="ccm_ep1_fatal_17">
+      <doc> \nDMA Channel 1 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="18" name="b18" id="25:25" intr.enable="ccm_ep1_fatal_18">
+      <doc> \nDMA Channel 2 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="19" name="b19" id="25:26" intr.enable="ccm_ep1_fatal_19">
+      <doc> \nDMA Channel 3 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>1</default>
+   </field>
+   <field offset="31:20" name="reserved" id="25:27">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep1_fint_post" id="26:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM EP1 Fatal Interrupt Enable register  </doc>
+   <field offset="0" name="b0" id="26:7" intr.post="ccm_ep1_fatal_0" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="b1" id="26:8" intr.post="ccm_ep1_fatal_1" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="b2" id="26:9" intr.post="ccm_ep1_fatal_2" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="b3" id="26:10" intr.post="ccm_ep1_fatal_3" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="b4" id="26:11" intr.post="ccm_ep1_fatal_4" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="b5" id="26:12" intr.post="ccm_ep1_fatal_5" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="b6" id="26:13" intr.post="ccm_ep1_fatal_6" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="b7" id="26:14" intr.post="ccm_ep1_fatal_7" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="b8" id="26:15" intr.post="ccm_ep1_fatal_8" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="b9" id="26:16" intr.post="ccm_ep1_fatal_9" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 internal error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="b10" id="26:17" intr.post="ccm_ep1_fatal_10" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 source error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="11" name="b11" id="26:18" intr.post="ccm_ep1_fatal_11" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 destination error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="12" name="b12" id="26:19" intr.post="ccm_ep1_fatal_12" rtl.hw_clear="true">
+      <doc> \nAXI slave read error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="13" name="b13" id="26:20" intr.post="ccm_ep1_fatal_13" rtl.hw_clear="true">
+      <doc> \nAXI slave write error (illegal CCM access or unimplemented space)</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="14" name="b14" id="26:21" intr.post="ccm_ep1_fatal_14" rtl.hw_clear="true">
+      <doc> \nAXI write response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="15" name="b15" id="26:22" intr.post="ccm_ep1_fatal_15" rtl.hw_clear="true">
+      <doc> \nAXI read response error received from DMA slave interface</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="16" name="b16" id="26:23" intr.post="ccm_ep1_fatal_16" rtl.hw_clear="true">
+      <doc> \nDMA Channel 0 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="17" name="b17" id="26:24" intr.post="ccm_ep1_fatal_17" rtl.hw_clear="true">
+      <doc> \nDMA Channel 1 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="18" name="b18" id="26:25" intr.post="ccm_ep1_fatal_18" rtl.hw_clear="true">
+      <doc> \nDMA Channel 2 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="19" name="b19" id="26:26" intr.post="ccm_ep1_fatal_19" rtl.hw_clear="true">
+      <doc> \nDMA Channel 3 monitor error</doc>
+      <sw>rw</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:20" name="reserved" id="26:27">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_cmn_ovfl_sts" id="27:2" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Common FIFO Overflow Status. This register logs individual overflow bits from CCM FIFOs, must be cleared along with the interrupt status register in the interrupt handler. </doc>
+   <field offset="0" name="cmd_fifo_0" id="27:7" intr.status="ccm_cmn_ovfl_0">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="cmd_fifo_1" id="27:8" intr.status="ccm_cmn_ovfl_1">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="cmd_cpl_fifo" id="27:9" intr.status="ccm_cmn_ovfl_2">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:3" name="reserved" id="27:10">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_cmn_udfl_sts" id="28:2" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Common FIFO Underflow Status. This register logs individual underflow bits from CCM FIFOs, must be cleared along with the interrupt status register in the interrupt handler. </doc>
+   <field offset="0" name="cmd_fifo_0" id="28:7" intr.status="ccm_cmn_udfl_0">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="cmd_fifo_1" id="28:8" intr.status="ccm_cmn_udfl_1">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="cmd_cpl_fifo" id="28:9" intr.status="ccm_cmn_udfl_2">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:3" name="reserved" id="28:10">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep0_ovfl_sts" id="29:2" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>EP0 FIFO Overflow Status. This register logs individual overflow bits from CCM FIFOs, must be cleared along with the interrupt status register in the interrupt handler. </doc>
+   <field offset="0" name="sta_fifo_0" id="29:7" intr.status="ccm_ep0_ovfl_0">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="sta_fifo_1" id="29:8" intr.status="ccm_ep0_ovfl_1">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="sta_fifo_2" id="29:9" intr.status="ccm_ep0_ovfl_2">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="sta_fifo_3" id="29:10" intr.status="ccm_ep0_ovfl_3">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="h2f_sid_fifo" id="29:11" intr.status="ccm_ep0_ovfl_4">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="h2f_req_fifo" id="29:12" intr.status="ccm_ep0_ovfl_5">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="f2h_sid_fifo" id="29:13" intr.status="ccm_ep0_ovfl_6">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="f2h_req_fifo" id="29:14" intr.status="ccm_ep0_ovfl_7">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="axi_wreq_fifo" id="29:15" intr.status="ccm_ep0_ovfl_8">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="axi_slv_rsp" id="29:16" intr.status="ccm_ep0_ovfl_9">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="axi_rreq_fifo" id="29:17" intr.status="ccm_ep0_ovfl_10">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:11" name="reserved" id="29:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep0_udfl_sts" id="30:2" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>EP0 FIFO Underflow Status. This register logs individual overflow bits from CCM FIFOs, must be cleared along with the interrupt status register in the interrupt handler. </doc>
+   <field offset="0" name="sta_fifo_0" id="30:7" intr.status="ccm_ep0_udfl_0">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="sta_fifo_1" id="30:8" intr.status="ccm_ep0_udfl_1">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="sta_fifo_2" id="30:9" intr.status="ccm_ep0_udfl_2">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="sta_fifo_3" id="30:10" intr.status="ccm_ep0_udfl_3">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="h2f_sid_fifo" id="30:11" intr.status="ccm_ep0_udfl_4">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="h2f_req_fifo" id="30:12" intr.status="ccm_ep0_udfl_5">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="f2h_sid_fifo" id="30:13" intr.status="ccm_ep0_udfl_6">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="f2h_req_fifo" id="30:14" intr.status="ccm_ep0_udfl_7">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="axi_wreq_fifo" id="30:15" intr.status="ccm_ep0_udfl_8">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="axi_slv_rsp" id="30:16" intr.status="ccm_ep0_udfl_9">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="axi_rreq_fifo" id="30:17" intr.status="ccm_ep0_udfl_10">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:11" name="reserved" id="30:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep1_ovfl_sts" id="31:2" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>EP1 FIFO Overflow Status. This register logs individual overflow bits from CCM FIFOs, must be cleared along with the interrupt status register in the interrupt handler. </doc>
+   <field offset="0" name="sta_fifo_0" id="31:7" intr.status="ccm_ep1_ovfl_0">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="sta_fifo_1" id="31:8" intr.status="ccm_ep1_ovfl_1">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="sta_fifo_2" id="31:9" intr.status="ccm_ep1_ovfl_2">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="sta_fifo_3" id="31:10" intr.status="ccm_ep1_ovfl_3">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="h2f_sid_fifo" id="31:11" intr.status="ccm_ep1_ovfl_4">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="h2f_req_fifo" id="31:12" intr.status="ccm_ep1_ovfl_5">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="f2h_sid_fifo" id="31:13" intr.status="ccm_ep1_ovfl_6">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="f2h_req_fifo" id="31:14" intr.status="ccm_ep1_ovfl_7">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="axi_wreq_fifo" id="31:15" intr.status="ccm_ep1_ovfl_8">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="axi_slv_rsp" id="31:16" intr.status="ccm_ep1_ovfl_9">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="axi_rreq_fifo" id="31:17" intr.status="ccm_ep1_ovfl_10">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:11" name="reserved" id="31:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_ep1_udfl_sts" id="32:2" resetsignal="fint_rstn" fint_rstn.type="sync" fint_rstn.level="low" hard_reset="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>EP1 FIFO Underflow Status. This register logs individual overflow bits from CCM FIFOs, must be cleared along with the interrupt status register in the interrupt handler. </doc>
+   <field offset="0" name="sta_fifo_0" id="32:7" intr.status="ccm_ep1_udfl_0">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="1" name="sta_fifo_1" id="32:8" intr.status="ccm_ep1_udfl_1">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="2" name="sta_fifo_2" id="32:9" intr.status="ccm_ep1_udfl_2">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="3" name="sta_fifo_3" id="32:10" intr.status="ccm_ep1_udfl_3">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="4" name="h2f_sid_fifo" id="32:11" intr.status="ccm_ep1_udfl_4">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="5" name="h2f_req_fifo" id="32:12" intr.status="ccm_ep1_udfl_5">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="6" name="f2h_sid_fifo" id="32:13" intr.status="ccm_ep1_udfl_6">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="7" name="f2h_req_fifo" id="32:14" intr.status="ccm_ep1_udfl_7">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="8" name="axi_wreq_fifo" id="32:15" intr.status="ccm_ep1_udfl_8">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="9" name="axi_slv_rsp" id="32:16" intr.status="ccm_ep1_udfl_9">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="10" name="axi_rreq_fifo" id="32:17" intr.status="ccm_ep1_udfl_10">
+      <doc> </doc>
+      <sw>r/w1c</sw>
+      <hw>wo</hw>
+      <default>0</default>
+   </field>
+   <field offset="31:11" name="reserved" id="32:18">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0</default>
+   </field>
+</reg><reg name="ccm_debug_sel" id="33:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Specifies the CCM debug register number to load into ccm_debug_sel. SW should write this register first then perform a read to \nccm_debug_reg to get the value of the specified CCM debug register.  </doc>
+   <field offset="4:0" name="value" id="33:7">
+      <doc>Specifies the debug register number to read</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:5" name="reserved" id="33:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ccm_debug_reg" id="34:2">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>Contains the value of the selected CCM debug register. This register is read and decoded by fpga-ccm-dbg utility script.</doc>
+   <field offset="31:0" name="value" id="34:7">
+      <doc>Debug register value of selected CCM debug register.</doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ccm_dp_en" id="35:2" rtl.reg_enb="false">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc>CCM Datapath control. Can enable/disable execution on any of the 16 datapaths. Useful for functional or performance debug.  </doc>
+   <field offset="15:0" name="value" id="35:7">
+      <doc>Enable bits. By default all the datapaths are enabled. Write a zero to a given bit position to disable corresponding datapath.</doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0xff</default>
+   </field>
+   <field offset="31:16" name="reserved" id="35:8">
+      <doc>Reserved</doc>
+      <sw>ro</sw>
+      <hw>na</hw>
+      <default>0x0</default>
+   </field>
+</reg><section name="host_bufq_tail_doorbell" offset="1024" depth="256" id="36:2" external="true" type="mem" >
+   <doc>Buffer queue tail doorbells (in units of buffer queue slots). There are 256 queues, so the interface is exposed as memory to update any of the 256 values. NOTE: This is a write-only interface, any read will return 0xbaadbeef read value.</doc>
+   <reg name="host_bufq_tail_doorbell" id="36:2" type="mem">
+      <config>
+         <regwidth>32</regwidth>
+      </config>
+      <field name="host_bufq_tail_doorbell" offset="31:0">
+         <sw>ro</sw>
+         <hw>rw</hw>
+         <default>0x0000</default>
+      </field>
+   </reg>
+</section></block>

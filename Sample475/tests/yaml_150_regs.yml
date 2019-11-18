@@ -1,0 +1,3601 @@
+fields :
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,4,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_0
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,0)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_0
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_0
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,17)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_1
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_1
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_1
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,9,2)
+        Category : reggroup_0/reggroup_1
+        Default : 112
+        Bus : Reg_2
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,20)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_2
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_2
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_3
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,7,1)
+        Category : reggroup_0/reggroup_1
+        Default : 36
+        Bus : Reg_3
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,4)
+        Category : reggroup_0/reggroup_1
+        Default : -11
+        Bus : Reg_3
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,20)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_4
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,2)
+        Category : reggroup_0/reggroup_1
+        Default : -52
+        Bus : Reg_4
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,2,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_4
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 10
+        Bus : Reg_5
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_5
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_5
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,9,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_6
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,4,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_6
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,8,7)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_6
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_7
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_7
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_7
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,2,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_8
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,2)
+        Category : reggroup_0/reggroup_1
+        Default : 150
+        Bus : Reg_8
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_8
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_9
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,7)
+        Category : reggroup_0/reggroup_1
+        Default : -3
+        Bus : Reg_9
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,4,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_9
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,3)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_10
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_10
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_10
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,9,0)
+        Category : reggroup_0/reggroup_1
+        Default : 159
+        Bus : Reg_11
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,4)
+        Category : reggroup_0/reggroup_1
+        Default : -1
+        Bus : Reg_11
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_11
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,17)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_12
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_12
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,0)
+        Category : reggroup_0/reggroup_1
+        Default : -1
+        Bus : Reg_12
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_13
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_13
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_13
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,9,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_14
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,8,4)
+        Category : reggroup_0/reggroup_1
+        Default : 15
+        Bus : Reg_14
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_14
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,9,2)
+        Category : reggroup_0/reggroup_1
+        Default : 39
+        Bus : Reg_15
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_15
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,5,1)
+        Category : reggroup_0/reggroup_1
+        Default : 7
+        Bus : Reg_15
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,7)
+        Category : reggroup_0/reggroup_1
+        Default : -2
+        Bus : Reg_16
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,3)
+        Category : reggroup_0/reggroup_1
+        Default : -51
+        Bus : Reg_16
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_16
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_17
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_17
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_17
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_18
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,8,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_18
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_18
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,4)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_19
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,4,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_19
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,2)
+        Category : reggroup_0/reggroup_1
+        Default : 169
+        Bus : Reg_19
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,4,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_20
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_20
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,2,2)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_20
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 61
+        Bus : Reg_21
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_21
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,8,4)
+        Category : reggroup_0/reggroup_1
+        Default : 8
+        Bus : Reg_21
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_22
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,6)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_22
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,7)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_22
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,2,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_23
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_23
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_23
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,3,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_24
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,3,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_24
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_24
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_25
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,7,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_25
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_25
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,1,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_26
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,1,1)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_26
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,5,4)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_26
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_27
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_27
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,1,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_27
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_28
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_28
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_28
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_29
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_29
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_29
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,1)
+        Category : reggroup_0/reggroup_1
+        Default : -3
+        Bus : Reg_30
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_30
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_30
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_31
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,7)
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_31
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : -2
+        Bus : Reg_31
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,4)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_32
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,1,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_32
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_32
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,9,17)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_33
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,1,0)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_33
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_33
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,6)
+        Category : reggroup_0/reggroup_1
+        Default : 12
+        Bus : Reg_34
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_34
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_34
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,3,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_35
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,6,5)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_35
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_35
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_36
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_36
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,6)
+        Category : reggroup_0/reggroup_1
+        Default : 8
+        Bus : Reg_36
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 118
+        Bus : Reg_37
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_37
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,1,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_37
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_38
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,2,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_38
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,1)
+        Category : reggroup_0/reggroup_1
+        Default : 424
+        Bus : Reg_38
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_39
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,2)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_39
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_39
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,6)
+        Category : reggroup_0/reggroup_1
+        Default : 15
+        Bus : Reg_40
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,2,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_40
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 6
+        Bus : Reg_40
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_41
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,4,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_41
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_41
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,9,3)
+        Category : reggroup_0/reggroup_1
+        Default : 12
+        Bus : Reg_42
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,5,0)
+        Category : reggroup_0/reggroup_1
+        Default : 6
+        Bus : Reg_42
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_42
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,8,1)
+        Category : reggroup_0/reggroup_1
+        Default : -39
+        Bus : Reg_43
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,8,23)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_43
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_43
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_44
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_44
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,0)
+        Category : reggroup_0/reggroup_1
+        Default : -30
+        Bus : Reg_44
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,4,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_45
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,4,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_45
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_45
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,8,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_46
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_46
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,4)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_46
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,3)
+        Category : reggroup_0/reggroup_1
+        Default : 28
+        Bus : Reg_47
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,8,3)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_47
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_47
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,3)
+        Category : reggroup_0/reggroup_1
+        Default : -42
+        Bus : Reg_48
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,2,0)
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_48
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,5,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_48
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_49
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_49
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_49
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_50
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_50
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default : 175
+        Bus : Reg_50
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,6,5)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_51
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,2,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_51
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,4,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_51
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 31
+        Bus : Reg_52
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,6)
+        Category : reggroup_0/reggroup_1
+        Default : 6
+        Bus : Reg_52
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,5,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_52
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,7)
+        Category : reggroup_0/reggroup_1
+        Default : 2
+        Bus : Reg_53
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_53
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_53
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_54
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,9,0)
+        Category : reggroup_0/reggroup_1
+        Default : 133
+        Bus : Reg_54
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_54
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,3)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_55
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_55
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,3)
+        Category : reggroup_0/reggroup_1
+        Default : -6
+        Bus : Reg_55
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_56
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,6,5)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_56
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_56
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_57
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_57
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_57
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_58
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_58
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_58
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_59
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_59
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,2)
+        Category : reggroup_0/reggroup_1
+        Default : 101
+        Bus : Reg_59
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_60
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,6,5)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_60
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,22)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_60
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,3,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_61
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,8)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_61
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,17)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_61
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_62
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_62
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,24)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_62
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_63
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,6,5)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_63
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,8,22)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_63
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,4,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_64
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,4)
+        Category : reggroup_0/reggroup_1
+        Default : -2
+        Bus : Reg_64
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,1)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_64
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_65
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,3)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_65
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_65
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 21
+        Bus : Reg_66
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_66
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_66
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_67
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_67
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,9,0)
+        Category : reggroup_0/reggroup_1
+        Default : 75
+        Bus : Reg_67
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_68
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,1,1)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_68
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,4)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_68
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,1)
+        Category : reggroup_0/reggroup_1
+        Default : -3
+        Bus : Reg_69
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,8)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_69
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_69
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,1)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_70
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_70
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_70
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_71
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,6,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_71
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_71
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,7)
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_72
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,3)
+        Category : reggroup_0/reggroup_1
+        Default : 37
+        Bus : Reg_72
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,9)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_72
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_73
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_73
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,5)
+        Category : reggroup_0/reggroup_1
+        Default : -2
+        Bus : Reg_73
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,2,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_74
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 5
+        Bus : Reg_74
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,8,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_74
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,4,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_75
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_75
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,4)
+        Category : reggroup_0/reggroup_1
+        Default : -6
+        Bus : Reg_75
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_76
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,21)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_76
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,2,2)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_76
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,2,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_77
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_77
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_77
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,4,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_78
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,0)
+        Category : reggroup_0/reggroup_1
+        Default : 4
+        Bus : Reg_78
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_78
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_79
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_79
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_79
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,22)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_80
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_80
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,2)
+        Category : reggroup_0/reggroup_1
+        Default : -1
+        Bus : Reg_80
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,1,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_81
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,1)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_81
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,1)
+        Category : reggroup_0/reggroup_1
+        Default : -3
+        Bus : Reg_81
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_82
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,0)
+        Category : reggroup_0/reggroup_1
+        Default : 2
+        Bus : Reg_82
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,0)
+        Category : reggroup_0/reggroup_1
+        Default : -6
+        Bus : Reg_82
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,5)
+        Category : reggroup_0/reggroup_1
+        Default : 2
+        Bus : Reg_83
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_83
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_83
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_84
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_84
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,4)
+        Category : reggroup_0/reggroup_1
+        Default : -20
+        Bus : Reg_84
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,3)
+        Category : reggroup_0/reggroup_1
+        Default : 2
+        Bus : Reg_85
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_85
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,1,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_85
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_86
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,1,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_86
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,6)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_86
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,2,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_87
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_87
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,0)
+        Category : reggroup_0/reggroup_1
+        Default : -6
+        Bus : Reg_87
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,3,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_88
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_88
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_88
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_89
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,0)
+        Category : reggroup_0/reggroup_1
+        Default : 160
+        Bus : Reg_89
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,4)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_89
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_90
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,1,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_90
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,3)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_90
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,2,2)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_91
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,7,5)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_91
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,2,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_91
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,5)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_92
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_92
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,1,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_92
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,3,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_93
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_93
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,2,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_93
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : -13
+        Bus : Reg_94
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,1)
+        Category : reggroup_0/reggroup_1
+        Default : 4
+        Bus : Reg_94
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_94
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,6,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_95
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_95
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,3)
+        Category : reggroup_0/reggroup_1
+        Default : 5
+        Bus : Reg_95
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,6,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_96
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,3)
+        Category : reggroup_0/reggroup_1
+        Default : 113
+        Bus : Reg_96
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,17)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_96
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_97
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,21)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_97
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_97
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_98
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,3)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_98
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,1)
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_98
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,8,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_99
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_99
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_99
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,2,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_100
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,9,7)
+        Category : reggroup_0/reggroup_1
+        Default : 2
+        Bus : Reg_100
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,2,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_100
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_101
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_101
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,20)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_101
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,3)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_102
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_102
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_102
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,5)
+        Category : reggroup_0/reggroup_1
+        Default : 10
+        Bus : Reg_103
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,4,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_103
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,3)
+        Category : reggroup_0/reggroup_1
+        Default : 7
+        Bus : Reg_103
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,9,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_104
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_104
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,3)
+        Category : reggroup_0/reggroup_1
+        Default : 4
+        Bus : Reg_104
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,2,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_105
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,7,5)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_105
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,6)
+        Category : reggroup_0/reggroup_1
+        Default : 7
+        Bus : Reg_105
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,5)
+        Category : reggroup_0/reggroup_1
+        Default : 2
+        Bus : Reg_106
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,9,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_106
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_106
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_107
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,1,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_107
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,1,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_107
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_108
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,2,16)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_108
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_108
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_109
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,5,4)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_109
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,0)
+        Category : reggroup_0/reggroup_1
+        Default : 11
+        Bus : Reg_109
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,8,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_110
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,3,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_110
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,2,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_110
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,5)
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_111
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_111
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_111
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,6,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_112
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_112
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,4)
+        Category : reggroup_0/reggroup_1
+        Default : -13
+        Bus : Reg_112
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_113
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_113
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_113
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,6)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_114
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_114
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,2,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_114
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,6,3)
+        Category : reggroup_0/reggroup_1
+        Default : -2
+        Bus : Reg_115
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,3,2)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_115
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,8,7)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_115
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,6,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_116
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,5,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_116
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,4,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_116
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,8,3)
+        Category : reggroup_0/reggroup_1
+        Default : -14
+        Bus : Reg_117
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,3)
+        Category : reggroup_0/reggroup_1
+        Default : -4
+        Bus : Reg_117
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,4)
+        Category : reggroup_0/reggroup_1
+        Default : -1
+        Bus : Reg_117
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,10,5)
+        Category : reggroup_0/reggroup_1
+        Default : -14
+        Bus : Reg_118
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_118
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_118
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,1)
+        Category : reggroup_0/reggroup_1
+        Default : 57
+        Bus : Reg_119
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,7,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_119
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,6,3)
+        Category : reggroup_0/reggroup_1
+        Default : 3
+        Bus : Reg_119
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,9,7)
+        Category : reggroup_0/reggroup_1
+        Default : -1
+        Bus : Reg_120
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_120
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,1,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_120
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,1,1)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_121
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,4)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_121
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_121
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_122
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,2,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_122
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,23)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_122
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,0)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_123
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,9,1)
+        Category : reggroup_0/reggroup_1
+        Default : 235
+        Bus : Reg_123
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,2,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_123
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_124
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,9)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_124
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,0)
+        Category : reggroup_0/reggroup_1
+        Default : 103
+        Bus : Reg_124
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_125
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,2,3)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_125
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,1)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_125
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,3)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_126
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,9,6)
+        Category : reggroup_0/reggroup_1
+        Default : -3
+        Bus : Reg_126
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_126
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,10,18)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_127
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_127
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,3,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_127
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,2,2)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_128
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,6,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_128
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,4,17)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_128
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 43
+        Bus : Reg_129
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,6)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_129
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_129
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_130
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,5,21)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_130
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,4,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_130
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default : 45
+        Bus : Reg_131
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,4,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_131
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,1,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_131
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,2,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_132
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_132
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_132
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,1)
+        Category : reggroup_0/reggroup_1
+        Default : 7
+        Bus : Reg_133
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 191
+        Bus : Reg_133
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,3,20)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_133
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_134
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,9,4)
+        Category : reggroup_0/reggroup_1
+        Default : 8
+        Bus : Reg_134
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,10,9)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_134
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,9,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_135
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,5,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_135
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_135
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,8,1)
+        Category : reggroup_0/reggroup_1
+        Default : 18
+        Bus : Reg_136
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,0)
+        Category : reggroup_0/reggroup_1
+        Default : 6
+        Bus : Reg_136
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,6,13)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_136
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_137
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,19)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_137
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,2,4)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_137
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,6,8)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_138
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_138
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,9,2)
+        Category : reggroup_0/reggroup_1
+        Default : 77
+        Bus : Reg_138
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,5,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_139
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : uint8
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_139
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,7,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_139
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,7,1)
+        Category : reggroup_0/reggroup_1
+        Default : 35
+        Bus : Reg_140
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,3,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_140
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,6)
+        Category : reggroup_0/reggroup_1
+        Default : -2
+        Bus : Reg_140
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,2,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_141
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,7,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_141
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_141
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_142
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,10,2)
+        Category : reggroup_0/reggroup_1
+        Default : 67
+        Bus : Reg_142
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,7)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_142
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,3,1)
+        Category : reggroup_0/reggroup_1
+        Default : 1
+        Bus : Reg_143
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(1,5,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_143
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,9,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_143
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(0,1,2)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_144
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,9,15)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_144
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_144
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,4,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_145
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,8,10)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_145
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,5,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_145
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_146
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_146
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : int8
+        Category : reggroup_0/reggroup_1
+        Default : 11
+        Bus : Reg_146
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,5,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_147
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : boolean
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_147
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,10,11)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_147
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,2,5)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_148
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,10,12)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_148
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(0,9,14)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_148
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_0
+        Format : fixdt(1,7,6)
+        Category : reggroup_0/reggroup_1
+        Default : 0
+        Bus : Reg_149
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_1
+        Format : fixdt(0,7,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_149
+        Description : " testing sample of idsng "
+
+    -
+        Name :  regroup_2_reg_150_field_2
+        Format : fixdt(1,7,9)
+        Category : reggroup_0/reggroup_1
+        Default :  0
+        Bus : Reg_149
+        Description : " testing sample of idsng "
+

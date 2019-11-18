@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block id="tab00.5717430098216589" name="block_name"><reg id="tab10.5571906051208833" name="reg_name"><config><regwidth>32</regwidth></config><field offset="1" name="f"><sw>rw</sw><hw>rw</hw><default>0</default></field></reg><config><regwidth>32</regwidth><addressunit>8</addressunit></config></block>

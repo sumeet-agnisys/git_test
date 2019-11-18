@@ -1,0 +1,682 @@
+fields : 
+    
+    -
+        Name : water1111
+        Format : bit
+        Category : volatile
+        Description : "new addition"
+    -  
+        Name : fire
+        Format : boolean
+        Category : volatile
+        Description : "water1 changed to fire"
+    -  
+        Name : adc_zero
+        Format : boolean
+        Category : shadow
+        Description : ""
+    -  
+        Name : afe_adcchp
+        Format : fixdt(0,2,0)
+        Category : shadow
+        Description : ""
+    -  
+        Name : water
+        Format : fixdt(0,2,0)
+        Category : volatile
+        Description : ""
+    -  
+        Name : afe_gain
+        Format : fixdt(0,2,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : afe_hallph_ext
+        Format : fixdt(0,3,0)
+        Category : volatile
+        Description : ""
+    -  
+        Name : afe_hpdrv_chop
+        Format : fixdt(0,2,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : afe_hptest_chop
+        Format : fixdt(0,2,0)
+        Category : volatile
+        Description : ""
+    -  
+        Name : afe_zero
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : afe_zero_cm
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : afe_zero_config
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : asil_ftt
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : bg_adc_ref_err_max
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : bw_sel
+        Format : fixdt(0,3,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : hall_dis
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : hall_isel
+        Format : fixdt(1,5,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : hptest_half_scale
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : hptest_lvl
+        Format : fixdt(0,4,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lin_scalar
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint_bin_e
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint_bin_hyst
+        Format : uint8
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint_e
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint_in_inv
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint_out_inv
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint00
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint01
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint02
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint03
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint04
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint05
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint06
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint07
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint08
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint09
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint10
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint11
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint12
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint13
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint14
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint15
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : lint16
+        Format : fixdt(1,13,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : mag_in
+        Format : fixdt(1,18,2)
+        Category : volatile
+        Description : ""
+    -  
+        Name : mag_in_e
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : plin_qvo
+        Format : fixdt(1,12,-4)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : plin_sens
+        Format : fixdt(1,12,11)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : pol_c
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : pol_diag
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : pol_f
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : qo_c
+        Format : fixdt(1,18,-1)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : qotc_cld_c
+        Format : fixdt(1,12,3)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : qotc_hot_c
+        Format : fixdt(1,12,4)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : refsigmon_bg
+        Format : fixdt(0,10,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : AdcOffsetStage1
+        Format : double
+        Category : analog
+        Description : "ADC 1st integrator stage offset, in V"
+    -  
+        Name : AdcOffsetStage2
+        Format : double
+        Category : analog
+        Description : "ADC 2nd integrator stage offset, in V"
+    -  
+        Name : AdcOffsetStage3
+        Format : double
+        Category : analog
+        Description : "ADC 3rd integrator stage offset, in V"
+    -  
+        Name : afe_hpsig_phase
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : bw_sel_min
+        Format : fixdt(0,3,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : byp_adc_iir
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_bw_sel
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_clamp
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_diag_filt
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_lin
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_plin
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_tc_c
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_tc_diag
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_tc_f
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_trim_c
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_trim_diag
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_trim_f
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : byp_tsen_trim
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : clamp_h
+        Format : fixdt(0,12,-4)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : clamp_l
+        Format : fixdt(0,12,-4)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : d_reg_ldo_boost
+        Format : fixdt(0,2,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : FeAmpOffset
+        Format : double
+        Category : analog
+        Description : "Front-End Amplifier Offset (V)"
+    -  
+        Name : filt_ada_gain
+        Format : fixdt(0,3,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : hall_ref_err_max
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : HallAmpGain
+        Format : double
+        Category : analog
+        Description : "Total front-end gain from Hall plate output to ADC input in V/V, when afe_gain2x = 0"
+    -  
+        Name : HallDiagTc1
+        Format : double
+        Category : analog
+        Description : "Diagnostic signal TC, 1st order.  Diagnostic signal is multiplied by:
+1 + HallDiagTc1*DT + HallDiagTc2*DT^2 + HallDiagTc3*DT^3
+
+Note: HallDiagTc1 = 2.4e-4 is 3"
+    -  
+        Name : HallDiagTc2
+        Format : double
+        Category : analog
+        Description : "Diagnostic signal TC, 2nd order.  Diagnostic signal is multiplied by:
+1 + HallDiagTc1*DT + HallDiagTc2*DT^2 + HallDiagTc3*DT^3"
+    -  
+        Name : HallDiagTc3
+        Format : double
+        Category : analog
+        Description : "Diagnostic signal TC, 3rd order.  Diagnostic signal is multiplied by:
+1 + HallDiagTc1*DT + HallDiagTc2*DT^2 + HallDiagTc3*DT^3"
+    -  
+        Name : HallNoise
+        Format : double
+        Category : analog
+        Description : "Total input noise density as seen at output of Hall plate, in V/rtHz
+Default = 2e-08 (15 nV/rtHz)"
+    -  
+        Name : HallOffset
+        Format : double
+        Category : analog
+        Description : "Magnetic input Hall plate offset.  Offset, in Gauss, is given by
+
+HallOffset + HallOffsetTc1*DT + HallOffsetTc2*DT^2"
+    -  
+        Name : HallOffsetTc1
+        Format : double
+        Category : analog
+        Description : "Magnetic input Hall plate offset TC, 1st order.  Offset, in Gauss, is given by
+
+HallOffset + HallOffsetTc1*DT + HallOffsetTc2*DT^2"
+    -  
+        Name : HallOffsetTc2
+        Format : double
+        Category : analog
+        Description : "Magnetic input Hall plate offset TC, 2nd order.  Offset, in Gauss, is given by
+
+HallOffset + HallOffsetTc1*DT + HallOffsetTc2*DT^2"
+    -  
+        Name : HallSensNom
+        Format : double
+        Category : analog
+        Description : "Nominal Hall plate sensitivity in V/G.
+Default 1.133e-5 (will be trimmed to ~12uV/G)"
+    -  
+        Name : HallSensTc1
+        Format : double
+        Category : analog
+        Description : "Hall plate sensitivity TC, 1st order.  Hall sensitivity is multiplied by:
+1 + HallSensTc1*DT + HallSensTc2*DT^2 + HallSensTc3*DT^3"
+    -  
+        Name : HallSensTc2
+        Format : double
+        Category : analog
+        Description : "Hall plate sensitivity TC, 2nd order.  Hall sensitivity is multiplied by:
+1 + HallSensTc1*DT + HallSensTc2*DT^2 + HallSensTc3*DT^3"
+    -  
+        Name : HallSensTc3
+        Format : double
+        Category : analog
+        Description : "Hall plate sensitivity TC, 3rd order.  Hall sensitivity is multiplied by:
+1 + HallSensTc1*DT + HallSensTc2*DT^2 + HallSensTc3*DT^3"
+    -  
+        Name : HallTestSigStepSize
+        Format : double
+        Category : analog
+        Description : "LSB step size of Hall test signal, in mV.  Default = 0.75"
+    -  
+        Name : HallTrimDacStepSize
+        Format : double
+        Category : analog
+        Description : "LSB step size of Hall sensitivity trim current, in percent.
+Default = 0.375 (0.375"
+    -  
+        Name : refsigmon_en
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : refsigmon_eval_start
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : refsigmon_hall
+        Format : fixdt(0,10,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : refsigmon_sel
+        Format : fixdt(0,3,0)
+        Category : volatile
+        Description : ""
+    -  
+        Name : regref_err_max
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : sdm_order2
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : sens_c
+        Format : fixdt(1,11,11)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : sens_diag
+        Format : fixdt(0,11,11)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : sens_f
+        Format : fixdt(0,11,11)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : sensm_c
+        Format : fixdt(0,3,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc1_cld_c
+        Format : fixdt(1,11,17)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc1_cld_diag
+        Format : fixdt(1,11,17)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc1_cld_f
+        Format : fixdt(1,11,17)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc1_hot_c
+        Format : fixdt(1,11,18)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc1_hot_diag
+        Format : fixdt(1,11,18)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc1_hot_f
+        Format : fixdt(1,11,18)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc2_cld_c
+        Format : fixdt(1,10,23)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc2_cld_f
+        Format : fixdt(1,10,23)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc2_hot_c
+        Format : fixdt(1,10,25)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : senstc2_hot_f
+        Format : fixdt(1,10,25)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : spdiag_en
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : spdiag_in
+        Format : fixdt(1,18,2)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : spdiag_in_e
+        Format : boolean
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : spdiag_rate
+        Format : fixdt(0,2,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : spdiag_single
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : temp_in
+        Format : fixdt(1,12,3)
+        Category : volatile
+        Description : ""
+    -  
+        Name : temp_in_e
+        Format : boolean
+        Category : volatile
+        Description : ""
+    -  
+        Name : TempSensBgOffsetPhase0
+        Format : double
+        Category : analog
+        Description : "Offset of bandgap circuit in temp sensor when in chop phase 0, in V"
+    -  
+        Name : TempSensBgOffsetPhase1
+        Format : double
+        Category : analog
+        Description : "Offset of bandgap circuit in temp sensor when in chop phase 0, in V"
+    -  
+        Name : TempSensBgOffsetPhase2
+        Format : double
+        Category : analog
+        Description : "Offset of bandgap circuit in temp sensor when in chop phase 2, in V"
+    -  
+        Name : TempSensBgOffsetPhase3
+        Format : double
+        Category : analog
+        Description : "Offset of bandgap circuit in temp sensor when in chop phase 3, in V"
+    -  
+        Name : TempSensIntegOffset
+        Format : double
+        Category : analog
+        Description : "Offset of integrator circuit in temp sensor, in V"
+    -  
+        Name : TempSensOffsetErr
+        Format : double
+        Category : analog
+        Description : ""
+    -  
+        Name : TempSensSlopeErr
+        Format : double
+        Category : analog
+        Description : ""
+    -  
+        Name : toff
+        Format : fixdt(1,5,1)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : tsen_chop_cfg
+        Format : fixdt(0,2,0)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : tslp
+        Format : fixdt(1,7,8)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : tzero
+        Format : fixdt(1,7,1)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : vos_f
+        Format : fixdt(1,14,-1)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : vostc_cld_f
+        Format : fixdt(1,12,4)
+        Category : eeprom/shadow
+        Description : ""
+    -  
+        Name : vostc_hot_f
+        Format : fixdt(1,12,5)
+        Category : eeprom/shadow
+        Description : ""
+
+
+

@@ -1,0 +1,34 @@
+fields :
+
+    -  
+        Name : ff
+        Format : 13
+        Category : reggroup_name11/abc 
+        Default : 0 
+        Bus : reg_name 
+        Description : 
+
+    -  
+        Name : fq
+        Format : 5
+        Category : reggroup_name11 /sss
+        Default : rw 
+        Bus : reg_name1 
+        Description : 
+
+    -  
+        Name : dd
+        Format : 1
+        Category : reggroup_name 
+        Default : 0 
+        Bus : reg_name 
+        Description : 
+
+    -  
+        Name : rw
+        Format : 1
+        Category : reggroup_name 
+        Default : 0 
+        Bus : reg_name 
+        Description : 
+
