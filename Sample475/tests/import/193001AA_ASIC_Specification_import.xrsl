@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<block name="reg_map" offset="0" id="2:2" output_file_name="reg_map" module_name="reg_map" reset_type="async" rtl.byte_enable="true" u_field_names="true" u_use_eeprom="true" gen_pin_complex_functions="false" lock_bitmask="true"><config>
+      <blocksize>256</blocksize>
+   <regwidth>32</regwidth><buswidth>32</buswidth><regbits>6</regbits><blockbits>0</blockbits><chipbits>0</chipbits><addressunit>32</addressunit><variants><variant name="none" isselected="true">
+         <doc>'none' variant states including all templates which are not assigned any variant property.</doc>
+      </variant></variants></config>
+   
+   <doc> </doc>
+<section name="volatile" offset="0" id="3:2"><reg name="status_0" external="true" id="4:2" no_reg_hw_reset_test="true" no_reg_bit_bash_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="3:0" name="dsc_major" id="4:9" hdl_path="wrapper.u_dig_top.dsc_major_dft">
+      <doc>Major Die Source Code \nThis position will be selected once the shadow registers have loaded.\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="7:4" name="dsc_minor" id="4:10" hdl_path="wrapper.u_dig_top.dsc_minor_dft">
+      <doc>Minor Die Source Code \nThis position will be selected once the shadow registers have loaded.\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15:8" name="dsc_rtl" id="4:11" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_dsc_rtl_tieoffs.dsc_rtl">
+      <doc>RTL Die Source Code \nThis position will be selected once the shadow registers have loaded.\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ee_cfg" id="5:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_cfg_" no_reg_bit_bash_test="true" no_reg_access_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="ee_erase" id="5:10" hdl_path="ee_erase_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>Setting this bit will perform an ERASE operation only on the EEPROM the next time an EEPROM address is written. It is self-clearing when the ERASE operation is complete.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="ee_prog" id="5:11" hdl_path="ee_prog_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>Setting this bit will perform a PROGRAM operation only on the EEPROM the next time an EEPROM address is written. ee_erase has precedence, so if it is set this bit is ignored. It is self-clearing when the PROGRAM operation is complete.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="3:2" name="ee_block_mode" id="5:12" hdl_path="ee_block_mode_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>00: Single Word Write Access\n01: Odd Word Write Access (address ignored)\n10: Even Word Write Access (address ignored)\n11: All Word Write Access  (address ignored)\nThis field only affects write operations.\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="6:4" name="ee_vread" id="5:13" hdl_path="ee_vread_q">
+      <doc>VREAD EEPROM setting per EEPROM V2.0 spec\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="7" name="ee_force_sbe" id="5:14" hdl_path="ee_force_sbe_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>Forces a single bit error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8" name="ee_force_dbe" id="5:15" hdl_path="ee_force_dbe_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>Forces a multi bit error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="ee_dis_ecc" id="5:16" hdl_path="ee_dis_ecc_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>0: Correct Single bit errors when they occur\n1: Do not correct single bit errors when they occur. Prevents single-bit and dual-bit error flags from being set.\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="10" name="ee_no_ecc" id="5:17" hdl_path="ee_no_ecc_q">
+      <doc>0: Upper bits of EEPROM are written with calculated ECC bits. \n1: ECC is disabled. No ECC calculation or correction will occur. Upper bits of EEPROM are written with data bits from ser_data.  Upper bits of read return upper bits from EEPROM.  \n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11" name="ee_raw_ecc" id="5:18" hdl_path="ee_raw_ecc_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>0: ECC bits encode error information\n\s\s\s\sECC bit 2: 1 if single bit error, 0 if no error\n\s\s\s\sECC bit 3: 1 if double bit error, 0 if not error\n\s\s\s\sAll other ECC bits are always 0\n1: ECC bits return the ECC code (top bits in EEPROM) \n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12" name="ee_en_override" id="5:19" hdl_path="ee_en_override_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>0: Normal operation\n1: Force ee_en output high\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="14:13" name="ee_override" id="5:20" hdl_path="ee_override_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>00: Normal operation\n01: Force ee_rd output high\n10: Force ee_er output high\n11: Force ee_pr output high\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15" name="ee_force_reload" id="5:21" hdl_path="ee_force_reload_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>Write to a 1 to reload all shadow registers with EEPROM values. If the noload ids_top input or ee_noload is set the reload will not occur. This bit is self-clearing after reload is completed.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="16" name="ee_noload" id="5:22" hdl_path="ee_noload_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>When set shadow will not update when EEPROM is written\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="17" name="ee_abort" id="5:23" hdl_path="ee_abort_q" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+      <doc>When set the EEPROM controller will abort the current action return to idle. This is only possible on designs with non-blocking EEPROM writes. Those with the define EEPROM_WRITE_BLOCKS set in ids_user_defs should not include this field. \n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ee_status0" id="6:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_status0_" no_reg_hw_reset_test="true" no_reg_bit_bash_test="true" no_reg_access_test="true" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="ee_dbe_flag" id="6:10" hdl_path="ee_dbe_flag_q">
+      <doc>Set if a dual bit error has occurred. This bit is clear on read.  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="ee_sbe_flag" id="6:11" hdl_path="ee_sbe_flag_q">
+      <doc>Set if a single bit error has occurred. This bit is clear on read.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="2" name="ee_err" id="6:12" hdl_path="ee_err_q">
+      <doc>Error flag, goes high when an error occurs during an EEPROM write\n </doc>
+      <sw>rc</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="7:3" name="ee_err_status" id="6:13" hdl_path="ee_err_status_q">
+      <doc>Status of when the last EEPROM error.\nBit 4: \n0 - error occurred during erase\n1 - error occurred during program\nBit 3: \n0 - error occurred during Ramp Up\n1 - error occurred during Ramp Down\nBit 2: Program Pulse value\nBit 1: hlat value\nBit 0: llat value\n </doc>
+      <sw>ro</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="10:8" name="ee_addr" id="6:14" hdl_path="ee_addr_q">
+      <doc>Contains the address for an EEPROM access, On a write or a read to EEPROM this register is updated with the access address. \n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x4</default>
+   </field>
+   <field offset="16:11" name="ee_ecc" id="6:15" hdl_path="ee_ecc_q">
+      <doc>Contains the ECC for an EEPROM access. On a write this register contains the written ECC, on a read this register contains the read ECC. \n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ee_status1" id="7:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_status1_" no_reg_bit_bash_test="true" no_reg_access_test="true" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="25:0" name="ee_data" id="7:10" hdl_path="ee_data_q">
+      <doc>Contains the data for an EEPROM access. \nOn a write this register contains the written data\nOn a read this register contains the read data. \n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ee_pat_test" id="8:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_pat_test_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="pat_test_start" id="8:10" hdl_path="pat_test_start_q">
+      <doc>Write to 1 to start pattern check testing. If EE_LOOP is low, this bit will self-clear when the last address is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="2:1" name="pat_test_status" id="8:11" hdl_path="pat_test_status_q">
+      <doc>Bits are cleared after a read or reset.\n\s\s00: Reset condition (no result from pat testing)\n\s\s01: Pass, no failure detected during pat testing\n\s\s10: Fail, failure detected during pat testing\n\s\s11: Running, pat test is still running\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4:3" name="pat_test_pattern" id="8:12" hdl_path="pat_test_pattern_q">
+      <doc>Defines the pattern that will be checked when reading the EEPROM.\n00: all zeros\n01: all ones\n10: checker-board starting with zero ("010101.")\n11: checker-board starting with one ("101010.")\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ee_mar_test" id="9:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_mar_test_" lock="(shadow_opt_2.lock_t &amp; shadow_opt_2.lock_a &amp; shadow_opt_2.lock_c &amp; shadow_opt_2.lock_o &amp; shadow_opt_2.lock_s &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="margin_start" id="9:10" hdl_path="margin_start_q">
+      <doc>Write to 1 to start margin testing. If EE_LOOP is low, this bit will self-clear when the last EEPROM address is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="margin_no_max" id="9:11" hdl_path="margin_no_max_q">
+      <doc>0: Max reference voltage will be used during margin testing\n1: Max voltage reference will be skipped during margin testing\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="2" name="margin_no_min" id="9:12" hdl_path="margin_no_min_q">
+      <doc>0: Min reference voltage will be used during margin testing\n1: Min voltage reference will be skipped during margin testing\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4:3" name="margin_status" id="9:13" hdl_path="margin_status_q">
+      <doc>Bits are cleared after a read or reset.\n\s\s00: Reset condition (no result from margin testing)\n\s\s01: Pass, no failure detected during margin testing\n\s\s10: Fail, failure detected during margin testing\n\s\s11: Running, margin test is still running\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="5" name="margin_min_max_fail" id="9:14" hdl_path="margin_min_max_fail_q">
+      <doc>If margining fails, this bit indicates if the min or max reference failed.\n0: Min margining failed.\n1: Max margining failed.\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ee_test_cfg" id="10:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_ee_test_cfg_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="ee_loop" id="10:10" hdl_path="ee_loop_q">
+      <doc>0: Test completes at final address or fail\n1: Test loops until MARGIN_START is written low or fail. \n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="ee_use_test_addr" id="10:11" hdl_path="ee_use_test_addr_q">
+      <doc>0: No effect\n1: Uses EE_TST_ADDR as the start address for margin/pattern test. \nIf EE_LOOP is set, this bit is ignored and the starting address is always 0x0\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4:2" name="ee_test_addr" id="10:12" hdl_path="ee_test_addr_q">
+      <doc>If USE_TST_ADDR is set, then margining or check testing will start at this address. If the test fails, this will contain the failing address. \n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="mux_control" id="11:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_mux_control_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="rma_mux1_override_en" id="11:10" hdl_path="rma_mux1_override_en_q">
+      <doc>0: Normal MUX operation\n1: MUX control driven directly by register values\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="2:1" name="rma_mux1_override_dig" id="11:11" hdl_path="rma_mux1_override_dig_q">
+      <doc>00: Output driven to Logic-Low\n01: If MUX disabled: Mandatory | If MUX enabled: Invalid\n10: Output driven by Analog\n11: Output driven to Logic-High\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8:3" name="rma_mux1_override_ctrl" id="11:12" hdl_path="rma_mux1_override_ctrl_q">
+      <doc>0: Unreferenced i.e. floating\n1: MUX driven by DAC\n2: Differential signal referenced to Mid-Scale\n4: Single Ended signal referenced to VPOS (VPOS-input)\n8: Single Ended signal referenced to VNEG (VNEG-input)\n16: No signal: Output driven to Mid-Scale\n34: Differential signal referenced to 0 V\nAll Other Values: Invalid\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="rma_mux2_override_en" id="11:13" hdl_path="rma_mux2_override_en_q">
+      <doc>0: Normal MUX operation\n1: MUX control driven directly by register values\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11:10" name="rma_mux2_override_dig" id="11:14" hdl_path="rma_mux2_override_dig_q">
+      <doc>00: Output driven to Logic-Low\n01: If MUX disabled: Mandatory | If MUX enabled: Invalid\n10: Output driven by Analog\n11: Output driven to Logic-High\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="17:12" name="rma_mux2_override_ctrl" id="11:15" hdl_path="rma_mux2_override_ctrl_q">
+      <doc>0: Unreferenced i.e. floating\n1: MUX driven by DAC\n2: Differential signal referenced to Mid-Scale\n4: Single Ended signal referenced to VPOS (VPOS-input)\n8: Single Ended signal referenced to VNEG (VNEG-input)\n16: No signal: Output driven to Mid-Scale\n34: Differential signal referenced to 0 V\nAll Other Values: Invalid\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="test_control" id="12:2" coverage="on" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_test_control_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="11:0" name="rma_dac_direct" id="12:10" hdl_path="rma_dac_direct_q">
+      <doc>DAC Direct\nAllows diagnostic DAC to be driven directly from a register.\nNOTE: drives both mux1 and mux2 DACS.\nNOTE: Muxes mux be set to rma_dac_direct_r position\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12" name="rma_pulse_train_en" id="12:11" hdl_path="rma_pulse_train_en_q">
+      <doc>Enable Pulse Train\nSetting this bit causes the controller to continuously transmit back-to-back pulses of the type specified by rma_pulse_train_sel (see below). \nNOTE: The time interval between pulses will be the minimum as specified by the selected protocol. \nNOTE: The pulse width will obey any optional parameter (e.g. Allegro "N" vs "W" opt_fwd_width)\nNOTE: rma_force_highspeed can be enabled to get the high-speed variant of each pulse.\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15:13" name="rma_pulse_train_sel" id="12:12" hdl_path="rma_pulse_train_sel_q">
+      <doc>Pulse Train Select\nOptions 0-4 include the 45us off time. Options 5-7 have a 0.3us off time (1 clock cycle). Options 6-7 do not result in safe state currents, so icc_en and icc_im are set to 1 during the pulse.\n0 = Forward\n1 = Reverse\n2 = Forward (EL)\n3 = Reverse (EL)\n4 = Warning\n5 = Standstill\n6 = Critical Fail\n7 = Soft Fail\n2 = Non-Direction\n3 = Kefico Diag Flag\n4 = Critical\n5 = Soft Fail\n6 = Half Diag-Bit\n7 = RESERVED\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="asil_diag" id="13:2" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.volatile_asil_diag_" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="1:0" name="force_asil_diag_fe_l" id="13:9" hdl_path="force_asil_diag_fe_l_q">
+      <doc>Force front-end error left\nThis option is OR'd with the force_asil_diag_fe_l, which is why there is no output coupling (see bug 7657)\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="3:2" name="force_asil_diag_fe_r" id="13:10" hdl_path="force_asil_diag_fe_r_q" output_coupling="true">
+      <doc>Force front-end error right\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="5:4" name="force_asil_diag_sdm1" id="13:11" hdl_path="force_asil_diag_sdm1_q">
+      <doc>Force filter saturation left error\n0x = Force disabled\n10 = Override SDM input with zeros\n11 = Override SDM input with ones\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="7:6" name="force_asil_diag_sdm2" id="13:12" hdl_path="force_asil_diag_sdm2_q">
+      <doc>Force filter saturation right error\n0x = Force disabled\n10 = Override SDM input with zeros\n11 = Override SDM input with ones\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8" name="force_asil_diag_vreg" id="13:13" hdl_path="force_asil_diag_vreg_q" output_coupling="true">
+      <doc>Force analog voltage regulator error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="force_asil_diag_vregd" id="13:14" hdl_path="force_asil_diag_vregd_q" output_coupling="true">
+      <doc>Force digital voltage regulator error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="10" name="force_asil_diag_ibias" id="13:15" hdl_path="force_asil_diag_ibias_q" output_coupling="true">
+      <doc>Force IBIAS error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11" name="force_asil_diag_im" id="13:16" hdl_path="force_asil_diag_im_q" output_coupling="true">
+      <doc>Force ICC 14 mA Comparator Error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12" name="force_asil_diag_hdrive" id="13:17" hdl_path="force_asil_diag_hdrive_q" output_coupling="true">
+      <doc>Force HDRIVE drive error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13" name="force_asil_diag_ob" id="13:18" hdl_path="force_asil_diag_ob_q">
+      <doc>Force Output Block error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="14" name="force_asil_diag_overfreq" id="13:19" hdl_path="force_asil_diag_overfreq_q">
+      <doc>Force overfrequency error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15" name="force_asil_diag_collision" id="13:20" hdl_path="force_asil_diag_collision_q">
+      <doc>Force pulse collision error\n </doc>
+      <sw>rw</sw>
+      <hw>ro</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch1_idiff" external="true" id="14:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch1_idiff" id="14:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_sdm_filter.idiff">
+      <doc>Channel 1 I-Diff\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch1_npeak" external="true" id="15:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch1_npeak" id="15:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_peak_tracking.npeak">
+      <doc>Channel 1 N-Peak\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch1_ppeak" external="true" id="16:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch1_ppeak" id="16:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_peak_tracking.ppeak">
+      <doc>Channel 1 P-Peak\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch1_pk_pk" external="true" id="17:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch1_pk_pk" id="17:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_1.u_peak_tracking.pk_pk_r">
+      <doc>Channel 1 Peak-to-Peak\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch2_idiff" external="true" id="18:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch2_idiff" id="18:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_sdm_filter.idiff">
+      <doc>Channel 2 I-Diff\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch2_npeak" external="true" id="19:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch2_npeak" id="19:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_peak_tracking.npeak">
+      <doc>Channel 2 N-Peak\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch2_ppeak" external="true" id="20:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch2_ppeak" id="20:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_peak_tracking.ppeak">
+      <doc>Channel 2 P-Peak\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="ch2_pk_pk" external="true" id="21:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="15:0" name="ch2_pk_pk" id="21:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_controller.u_channel_2.u_peak_tracking.pk_pk_r">
+      <doc>Channel 2 Peak-to-Peak\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="unlock" external="true" id="22:2" no_reg_hw_reset_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="unlock" id="22:9" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.unlock">
+      <doc>Unlock\n </doc>
+      <sw>ro</sw>
+      <hw>wo</hw>
+      <default>0x0</default>
+   </field>
+</reg></section><section name="shadow" offset="128" id="24:2"><reg name="shadow_trim_0" id="25:2" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.shadow_shadow_trim_0_" u_shadow_address="0x34" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="4:0" name="trim_osc" id="25:9" registered="false" hdl_path="trim_osc_in">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9:5" name="trim_icc_low" id="25:10" hdl_path="trim_icc_low_q" output_coupling="true">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13:10" name="trim_icc_high" id="25:11" hdl_path="trim_icc_high_q" output_coupling="true">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="18:14" name="trim_sens" id="25:12" hdl_path="trim_sens_q" output_coupling="true">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="22:19" name="trim_mag_tc" id="25:13" hdl_path="trim_mag_tc_q" output_coupling="true">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="24:23" name="trim_icc_tc" id="25:14" hdl_path="trim_icc_tc_q" output_coupling="true">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25" name="ibias_diag_analog_en" id="25:15" hdl_path="ibias_diag_analog_en_q" output_coupling="true">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="shadow_opt_0" id="26:2" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.shadow_shadow_opt_0_" u_shadow_address="0x35" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="opt_sag_timer_disable" id="26:9" hdl_path="opt_sag_timer_disable_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="opt_sag_timer_run_disable" id="26:10" hdl_path="opt_sag_timer_run_disable_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="3:2" name="rma_out_mode_default" id="26:11" hdl_path="rma_out_mode_default_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4" name="rma_mux_to_outpin" id="26:12" hdl_path="rma_mux_to_outpin_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11:5" name="rma_mux1_default" id="26:13" hdl_path="rma_mux1_default_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="18:12" name="rma_mux1_twowire_default" id="26:14" hdl_path="rma_mux1_twowire_default_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25:19" name="rma_mux2_position" id="26:15" hdl_path="rma_mux2_position_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="shadow_opt_1" id="27:2" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top.u_ids_top.u_reg_map.shadow_shadow_opt_1_" u_shadow_address="0x36" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="3:0" name="opt_lockout_sel" id="27:9" hdl_path="opt_lockout_sel_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="6:4" name="opt_lockout_hyst_sel" id="27:10" hdl_path="opt_lockout_hyst_sel_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8:7" name="opt_warn_level_sel" id="27:11" hdl_path="opt_warn_level_sel_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="opt_warn_run_en" id="27:12" hdl_path="opt_warn_run_en_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="10" name="opt_warn_cal_en" id="27:13" hdl_path="opt_warn_cal_en_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11" name="opt_el_en" id="27:14" hdl_path="opt_el_en_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12" name="opt_fwd_width" id="27:15" hdl_path="opt_fwd_width_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13" name="opt_dir_sel" id="27:16" hdl_path="opt_dir_sel_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="14" name="opt_ch_wd_dis" id="27:17" hdl_path="opt_ch_wd_dis_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15" name="opt_standstill_en" id="27:18" hdl_path="opt_standstill_en_q">
+      <doc>See EEPROM Section\n  </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="16" name="opt_pk_update_sel" id="27:19" hdl_path="opt_pk_update_sel_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="17" name="asil_fe_diag_en" id="27:20" hdl_path="asil_fe_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="18" name="asil_vreg_diag_en" id="27:21" hdl_path="asil_vreg_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="19" name="asil_ibias_diag_en" id="27:22" hdl_path="asil_ibias_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="20" name="asil_hdrive_diag_en" id="27:23" hdl_path="asil_hdrive_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="21" name="asil_ob_diag_en" id="27:24" hdl_path="asil_ob_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="22" name="asil_overfreq_diag_en" id="27:25" hdl_path="asil_overfreq_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="23" name="asil_sat_diag_en" id="27:26" hdl_path="asil_sat_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="24" name="asil_collision_diag_en" id="27:27" hdl_path="asil_collision_diag_en_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25" name="asil_en" id="27:28" hdl_path="asil_en_q">
+      <doc>ASIL Global Enable\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="shadow_opt_2" id="28:2" hdl_path="wrapper.u_dig_top.u_controller_bist_top.u_controller_top." u_shadow_address="0x37" lock="(shadow_opt_2.lock_t &amp; !unlock.unlock)" no_reg_bit_bash_test="true">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="lock_bd" id="28:9" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_lock_bd_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="lock_t" id="28:10" hdl_path="lock_t_in" registered="false" lock1="shadow_opt_2.lock_t &amp; !unlock.unlock">
+      <doc>See EEPROM Section\n </doc>
+      <sw>w1</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="2" name="lock_a" id="28:11" hdl_path="lock_a_in" registered="false" lock1="shadow_opt_2.lock_a">
+      <doc>See EEPROM Section\n </doc>
+      <sw>w1</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="3" name="lock_c" id="28:12" hdl_path="lock_c_in" registered="false" lock1="shadow_opt_2.lock_c">
+      <doc>See EEPROM Section\n </doc>
+      <sw>w1</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4" name="lock_o" id="28:13" hdl_path="lock_o_in" registered="false" lock1="shadow_opt_2.lock_o">
+      <doc>See EEPROM Section\n </doc>
+      <sw>w1</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="5" name="lock_s" id="28:14" hdl_path="lock_s_in" registered="false" lock1="shadow_opt_2.lock_s">
+      <doc>See EEPROM Section\n </doc>
+      <sw>w1</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="6" name="out_2wire" id="28:15" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_out_2wire_in" registered="false">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8:7" name="opt_thresh_monitor_cnt" id="28:16" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_thresh_monitor_cnt_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="opt_thresh_monitor_dis" id="28:17" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_thresh_monitor_dis_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12:10" name="opt_lockout_startup_standstill_lor" id="28:18" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_lockout_startup_standstill_lor_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13" name="opt_force_asil_diag_sample" id="28:19" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_opt_force_asil_diag_sample_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="14" name="rma_spare_0" id="28:20" output_coupling="true" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_rma_spare_0_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15" name="rma_spare_1" id="28:21" output_coupling="true" hdl_path="u_ids_top.u_reg_map.shadow_shadow_opt_2_rma_spare_1_q">
+      <doc>See EEPROM Section\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg></section><section name="eeprom" offset="192" external="true" id="30:2" no_reg_hw_reset_test="true" wr_rd_valids="true">
+   <doc> \n</doc>
+<reg name="factory_0" id="31:2" hdl_path="u_eeprom_top.eeprom_array.mem[0]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="25:0" name="factory_0" id="31:9">
+      <doc>reserved for factory production use</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="31:10">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="factory_1" id="32:2" hdl_path="u_eeprom_top.eeprom_array.mem[1]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="25:0" name="factory_1" id="32:9">
+      <doc>reserved for factory production use</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="32:10">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="factory_2" id="33:2" hdl_path="u_eeprom_top.eeprom_array.mem[2]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="25:0" name="factory_2" id="33:9">
+      <doc>reserved for factory production use</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="33:10">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="factory_3" id="34:2" hdl_path="u_eeprom_top.eeprom_array.mem[3]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="25:0" name="factory_3" id="34:9">
+      <doc>reserved for factory production use</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="34:10">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="trim_0" id="35:2" hdl_path="u_eeprom_top.eeprom_array.mem[4]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="4:0" name="trim_osc" id="35:9">
+      <doc>Oscillator Trim</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9:5" name="trim_icc_low" id="35:10">
+      <doc>ICC Low Trim</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13:10" name="trim_icc_high" id="35:11">
+      <doc>ICC High Trim</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="18:14" name="trim_sens" id="35:12">
+      <doc>Sensitivity Trim</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="22:19" name="trim_mag_tc" id="35:13">
+      <doc>Magnetic Temperature Compensation</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="24:23" name="trim_icc_tc" id="35:14">
+      <doc>ICC Temperature Compensation</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25" name="ibias_diag_analog_en" id="35:15">
+      <doc>Enables Ibias diagnostic in analog\n0 = Ibias diagnostic ingored in analog\n\s\s\s\s\s\s\s1 =  ibias diagnostic causes immediate 3.5mA safe state.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="35:16">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="opt_0" id="36:2" hdl_path="u_eeprom_top.eeprom_array.mem[5]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="opt_sag_timer_disable" id="36:9">
+      <doc>SAG Timer Watchdog Disable\nResets the controller after 0.5 s if there is no activity on the output.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="opt_sag_timer_run_disable" id="36:10">
+      <doc>SAG Timer Watchdog in Running Mode Disable\nDisables the SAG Timer Watchdog in Running Mode</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="3:2" name="rma_out_mode_default" id="36:11">
+      <doc>Default Output Mode at Power-up\nNOTE: Overridden by out_2wire when out_2wire is set to 'one'\n00 = switching enabled, mux enabled\n01 = switching disabled, mux enabled\n1x = switching disabled, mux disabled</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4" name="rma_mux_to_outpin" id="36:12">
+      <doc>Routes mux output signal to output pin\n0: mux signal only to mux pad\n1: mux signal routed to output pin</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11:5" name="rma_mux1_default" id="36:13">
+      <doc>Default MUX Position at Power-up for Mux1\nThis position will be selected once the shadow registers have loaded.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="18:12" name="rma_mux1_twowire_default" id="36:14">
+      <doc>Default MUX Position at Power-up for Mux1 Two-Wire\nThis position will be selected once the shadow registers have loaded.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25:19" name="rma_mux2_position" id="36:15">
+      <doc>MUX Position for Mux2\nThe secondary MUX (Mux2) does not respond to DMA commands. The position is exclusively selected via the shadow for this EEPROM field.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="36:16">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="opt_1" id="37:2" hdl_path="u_eeprom_top.eeprom_array.mem[6]" lock="shadow_opt_2.lock_a">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="3:0" name="opt_lockout_sel" id="37:9">
+      <doc>Lockout Level Select\nGauss level at which lockout is enabled. \nLockout is enabled at the lockout level minus the lockout hysteresis (see opt_lockout_hyst_sel below). \nLockout is disable at the lockout level plus the lockout hysteresis (see opt_lockout_hyst_sel below)\n\nSteps: (10 - 40 G in 2 G steps)\n0 = 10 G\n1 = 12 G\n.\n14 = 38 G\n15 = 0 G (NOTE: This position effectively disables lockout)</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="6:4" name="opt_lockout_hyst_sel" id="37:10">
+      <doc>Lockout Hysteresis Select\nHysteresis range around the lockout level (see opt_lockout_sel above)\n\nSteps:\n0 = ±2 G\n1 = ±4 G\n2 = ±6 G\n3 = ±8 G\n4 = ±10 G\n5 = ±12 G\n6 = ±14 G\n7 = ±0 G (NOTE: This position effectively disabled lockout hysteresis)</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8:7" name="opt_warn_level_sel" id="37:11">
+      <doc>Warning Level Select\n0 = 1.5 x Lockout Release\n1 = 2.0 x Lockout Release\n2 = 27.5 G\n3 = RESERVED</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="opt_warn_run_en" id="37:12">
+      <doc>Low-Field Warning Enable\n0 = low-field warning disabled\n1 = low-field warning enabled (5x Lockout Release)</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="10" name="opt_warn_cal_en" id="37:13">
+      <doc>Startup Warning Enable\n0 = startup warning pulse disable\n1 = startup warning pulse enable</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="11" name="opt_el_en" id="37:14">
+      <doc>EL Pulse Enable\n0 = EL pulses disabled\n1 = EL pulses enabled</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12" name="opt_fwd_width" id="37:15">
+      <doc>Direction Select\n0 = 90 µs\n1 = 45 µs</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13" name="opt_dir_sel" id="37:16">
+      <doc>Direction Select\nConfigures the direction by swapping the two channels internally\n0 = Forward: pin 2  1\n1 = Forward: pin 1  2\n0 = Channel 1 = Left Channel,   Channel 2 = Right Channel\n1 = Channel 1 = Right Channel, Channel 2 = Left Channel\n\nIn both configurations: \nFWD = Channel 1 lags Channel 2\nREV  = Channel 1 leads Cannel 2</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="14" name="opt_ch_wd_dis" id="37:17">
+      <doc>Channel Watchdog Disable\n0 = channel watchdog enable\n1 = channel watchdog disable</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15" name="opt_standstill_en" id="37:18">
+      <doc>Standstill Pulse Enable\n0 = standstill pulses disabled\n1 = standstill pulses enabled</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="16" name="opt_pk_update_sel" id="37:19">
+      <doc>Inward Update Select for Running Mode\n0 = bounded\n\s\s\s\s\s\s\s1= aggressive</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="17" name="asil_fe_diag_en" id="37:20">
+      <doc>ASIL Diagnostic Enable \nEnables Front End Diagnostics\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="18" name="asil_vreg_diag_en" id="37:21">
+      <doc>ASIL Diagnostic Enable \nEnables Voltage Regulator Diagnostic\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="19" name="asil_ibias_diag_en" id="37:22">
+      <doc>ASIL Diagnostic Enable \nEnables Bias Current Diagnostic\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="20" name="asil_hdrive_diag_en" id="37:23">
+      <doc>ASIL Diagnostic Enable \nEnables Hall Drive Diagnostic\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="21" name="asil_ob_diag_en" id="37:24">
+      <doc>ASIL Diagnostic Enable \nEnables Output Block Diagnostic Right\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="22" name="asil_overfreq_diag_en" id="37:25">
+      <doc>ASIL Diagnostic Enable \nEnables Over Frequency Diagnostic\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="23" name="asil_sat_diag_en" id="37:26">
+      <doc>ASIL Diagnostic Enable \nEnables Filter Saturation Diagnostic\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="24" name="asil_collision_diag_en" id="37:27">
+      <doc>ASIL Diagnostic Enable \nEnables Pulse Collsion Diagnostic\nNOTE: If the global ASIL enable bit is not set, this bit will have no effect.</doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25" name="asil_en" id="37:28">
+      <doc>ASIL Global Enable\nPrevents device from going into safe-state </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="37:29">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg><reg name="opt_2" id="38:2" hdl_path="u_eeprom_top.eeprom_array.mem[7]">
+   <config>
+      <regwidth>32</regwidth>
+   </config>
+   <doc> </doc>
+   <field offset="0" name="lock_bd" id="38:9" lock="shadow_opt_2.lock_a">
+      <doc>Lock Backdoor Unlock \n\s- Disables the backdoor unlock (makes all locks final)\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="1" name="lock_t" id="38:10" lock="shadow_opt_2.lock_t &amp; (shadow_opt_2.lock_bd | !unlock.unlock)">
+      <doc>Lock Test Modes\n\s- Disables access to the Allegro Test Modes and registers\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="2" name="lock_a" id="38:11" lock="shadow_opt_2.lock_a">
+      <doc>Allegro EEPROM Lock\n\s- Locks access to: \nAllegro factory traceability registers\nAllegro factory trim registers\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="3" name="lock_c" id="38:12" lock="shadow_opt_2.lock_c">
+      <doc>Customer EEPROM Lock\n\s- Locks access to the customer portion of the EEPROM\nNote: Does not include the other customer accessible lock bits or the customer scratch register.\nNOTE: This lock is not used on this device.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="4" name="lock_o" id="38:13" lock="shadow_opt_2.lock_o">
+      <doc>Lock OEM End-of-Line Target Profiling Test Mode Access\nNOTE: This lock is not used on this device.\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="5" name="lock_s" id="38:14" lock="shadow_opt_2.lock_s">
+      <doc>Customer EEPROM Scratch Area Lock\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="6" name="out_2wire" id="38:15" lock="shadow_opt_2.lock_a &amp; (shadow_opt_2.lock_bd | !unlock.unlock)">
+      <doc>Sets the Default Output Mode\n0 = output determined by "outmode":\n(ee_out_mode_default at power-up, otherwise tm_outmode)\n1 = operational output ("mission-mode")\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="8:7" name="opt_thresh_monitor_cnt" id="38:16" lock="shadow_opt_2.lock_a">
+      <doc>Threshold Monitor Count\nnumber of threshold monitor transitions, without threshold transitions, that will result in a soft reset\n\nSteps:\n0 = 2 counts (DON'T USE THIS SETTING!)\n1 = 4 counts\n2 = 8 counts\n3 = 15 counts\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="9" name="opt_thresh_monitor_dis" id="38:17" lock="shadow_opt_2.lock_a">
+      <doc>Threshold Monitor Disable\ndisables the threshold monitor\n0 = enabled\n1 = disabled\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="12:10" name="opt_lockout_startup_standstill_lor" id="38:18" lock="shadow_opt_2.lock_a">
+      <doc>Denso LOR Option\n0 = 1x the configured LOR (effectively disables the feature)\n1 = 2x the configured LOR\n2 = 4x the configured LOR\n3 = 6x the configured LOR\n4 = 8x the configured LOR\n5 = 10x the configured LOR\n6 = 12x the configured LOR\n7 = 14x the configured LOR\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="13" name="opt_force_asil_diag_sample" id="38:19" lock="shadow_opt_2.lock_a">
+      <doc>Force ASIL Diag for Samples\ncauses front end fault (left channel)\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="14" name="rma_spare_0" id="38:20" lock="shadow_opt_2.lock_a">
+      <doc>Spare Allegro Trim Bit\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="15" name="rma_spare_1" id="38:21" lock="shadow_opt_2.lock_a">
+      <doc>Spare Allegro Trim Bit\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="25:16" name="unused_0" id="38:22" lock="shadow_opt_2.lock_a">
+      <doc>Unused\n </doc>
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+   <field offset="31:26" name="ecc" id="38:23">
+      <sw>rw</sw>
+      <hw>rw</hw>
+      <default>0x0</default>
+   </field>
+</reg></section></block>

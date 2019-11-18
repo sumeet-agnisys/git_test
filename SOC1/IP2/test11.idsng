@@ -1,0 +1,369 @@
+<html><head> 
+  <title>		Agnisys Register Spec	</title>    
+  <link id="ids_style_template" rel="stylesheet" type="text/css" href=".idsng/ids_template.css">
+  <script id="jqueryLib" src=".idsng/jquery-3.2.1.min.js"></script>
+  <script id="ids_js" src=".idsng/ids_template.js"></script>
+ </head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+  <div class="maindiv"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="mlHintContainer" style="display:none"> 
+     <a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
+     <h4>Machine Learning hints :</h4> 
+     <p id="mlHintPara"></p> 
+    </div> 
+    <div class="spectoolbar"> 
+     <button onclick="click_btnprop()" id="btnprop">Hide Prop</button> 
+     <button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
+    </div> 
+    <br> 
+    <h3>IDS Register Specification</h3> 
+    <br> 
+    <br> 
+    <div class="tocClass" readonly="true"></div> 
+    <br> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab00.4141876006323555"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="block name" class="name">block_name</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table contenteditable="false" onclick="tabClick(this);" class="reg idsTemp" id="tab10.8135595201636981"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg_name</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div> </td> 
+       <td class="regwidth hideWidth">32</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <div id="autocomplete-list" class="autocomplete-items" style="left: 35%; display: none;"> 
+         <div title="read writable"> 
+          <strong>rw</strong> 
+          <input type="hidden" value="rw"> 
+         </div> 
+        </div> 
+        <table class="fields idsTemp" id="tab20.7785952327133921"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab_field0.7444949731558348" class="field edited"> 
+           <td class="bits">1</td> 
+           <td class="fieldname">f</td> 
+           <td class="sw">rw</td> 
+           <td class="hw"></td> 
+           <td class="default">0</td> 
+           <td class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+   </div> 
+   <div id="param_main" style="display:none"> 
+    <div id="divyml"> 
+     <label>Yaml Source : </label> 
+     <label id="lblyml"></label> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false"></div> 
+   </div> 
+   <div id="seqdivcontainer" style="display:none"> 
+    <h2>Sequences</h2> 
+   </div> 
+   <div id="config" style="display:none"> 
+    <!--?xml version="1.0" encoding="UTF-8"?--> 
+    <settings> 
+     <company>
+       Agnisys, Inc. 
+     </company> 
+     <copyright>
+       ***** Copyright 2016 All Rights Reserved. ***** 
+     </copyright> 
+     <log>
+       false 
+     </log> 
+     <outdir>
+       output 
+     </outdir> 
+     <outputs>
+       true 
+      <htmlalt2>
+        false 
+      </htmlalt2> 
+      <ivs>
+        false 
+      </ivs> 
+      <arv>
+        false 
+      </arv> 
+      <special_reg></special_reg> 
+      <cmsis>
+        false 
+      </cmsis> 
+      <uvm>
+        false 
+      </uvm> 
+      <perl>
+        false 
+      </perl> 
+      <python>
+        false 
+      </python> 
+      <cpp>
+        false 
+      </cpp> 
+      <vheader>
+        false 
+      </vheader> 
+      <vhdheader>
+        false 
+      </vhdheader> 
+      <formal>
+        false 
+      </formal> 
+      <pdf>
+        false 
+      </pdf> 
+      <rtl2001>
+        false 
+      </rtl2001> 
+      <ovm>
+        false 
+      </ovm> 
+      <vmm>
+        false 
+      </vmm> 
+      <iss_firmware>
+        false 
+      </iss_firmware> 
+      <iss_csv>
+        false 
+      </iss_csv> 
+      <iss_html>
+        false 
+      </iss_html> 
+      <iss_sv>
+        false 
+      </iss_sv> 
+      <iss_uvm>
+        false 
+      </iss_uvm> 
+      <header>
+        false 
+      </header>true 
+      <xrsl>
+        true 
+      </xrsl> 
+      <rdl>
+        false 
+      </rdl> 
+      <erm>
+        false 
+      </erm> 
+      <ivsxml>
+        false 
+      </ivsxml> 
+      <svheader>
+        false 
+      </svheader> 
+      <svg>
+        false 
+      </svg> 
+      <datasheet>
+        false 
+      </datasheet> 
+      <customcsv>
+        false 
+      </customcsv> 
+      <customxml>
+        false 
+      </customxml> 
+      <csharp>
+        false 
+      </csharp> 
+      <sv>
+        false 
+      </sv> 
+     </outputs> 
+     <rtl_wire>
+       false 
+     </rtl_wire> 
+     <limit_toc></limit_toc> 
+     <lowpower>
+       false 
+     </lowpower> 
+     <auto_sequence></auto_sequence> 
+     <interrupt></interrupt> 
+     <mbd></mbd> 
+     <arv_assertion></arv_assertion> 
+     <memtechmapping>
+       false 
+     </memtechmapping> 
+     <sv_w_intf></sv_w_intf> 
+     <sv_wo_intf></sv_wo_intf> 
+     <uvm_env></uvm_env> 
+     <hdlpath>
+       false 
+     </hdlpath> 
+     <arv_coverage>
+       false 
+     </arv_coverage> 
+     <coverage>
+       false 
+     </coverage> 
+     <illegalbins>
+       false 
+     </illegalbins> 
+     <arv_constraint>
+       false 
+     </arv_constraint> 
+     <bus>
+       proprietary 
+     </bus> 
+     <reg_width>
+       8 
+     </reg_width> 
+     <bus_width>
+       8 
+     </bus_width> 
+     <unit>
+       8 
+     </unit> 
+     <block_size>
+       4096 
+     </block_size> 
+     <chip_size></chip_size> 
+     <board_size></board_size> 
+     <c_type></c_type> 
+     <big_endian>
+       false 
+     </big_endian> 
+     <little_endian>
+       false 
+     </little_endian> 
+     <check_only>
+       false 
+     </check_only> 
+     <seqconfig> 
+      <output> 
+       <seq_outputs> 
+        <uvm> 
+         <datatype> 
+          <inlinefunction>
+            int 
+          </inlinefunction> 
+          <arguments></arguments> 
+          <constant></constant> 
+          <variable></variable> 
+         </datatype> 
+         <timemultiplier></timemultiplier> 
+         <maxnesting></maxnesting> 
+         <consolidated>
+           false 
+         </consolidated> 
+         <nameformat></nameformat> 
+         <mout></mout> 
+        </uvm> 
+        <sv> 
+         <datatype> 
+          <inlinefunction>
+            int 
+          </inlinefunction> 
+          <arguments></arguments> 
+          <constant></constant> 
+          <variable></variable> 
+         </datatype> 
+         <timeunit1></timeunit1> 
+         <timeunit2>
+           s 
+         </timeunit2> 
+         <timeprecision1></timeprecision1> 
+         <timeprecision2>
+           s 
+         </timeprecision2> 
+         <maxnesting></maxnesting> 
+         <consolidated>
+           false 
+         </consolidated> 
+         <nameformat></nameformat> 
+         <mout></mout> 
+        </sv> 
+        <firmware> 
+         <datatype> 
+          <inlinefunction>
+            int 
+          </inlinefunction> 
+          <arguments></arguments> 
+          <constant></constant> 
+          <variable></variable> 
+         </datatype> 
+         <timemultiplier></timemultiplier> 
+         <maxnesting></maxnesting> 
+         <consolidated>
+           false 
+         </consolidated> 
+         <nameformat></nameformat> 
+         <mout></mout> 
+        </firmware> 
+        <csv> 
+         <commands> 
+          <headers> 
+           <timemultiplier></timemultiplier> 
+           <maxnesting></maxnesting> 
+           <nameformat></nameformat> 
+          </headers> 
+         </commands> 
+        </csv> 
+       </seq_outputs></output> 
+     </seqconfig> 
+    </settings> 
+   </div> 
+  </div> 
+ 
+</body></html>
