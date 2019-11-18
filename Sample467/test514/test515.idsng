@@ -3,7 +3,7 @@
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
    <div id="abstract"> 
     <label id="lblcompact"></label> 
-    <label id="datacenter1"></label> 
+    <label id="datacenter1">0</label> 
     <label id="datacenter2"></label> 
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
@@ -71,7 +71,7 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">dzfdscxzcdcdasdczcxzc</td> 
+           <td title="field name" class="fieldname">dfdsffs</td> 
            <td title="software access" class="sw">fdsfsd</td> 
            <td title="hardware access" class="hw">fdsf</td> 
            <td title="default" class="default">fdsf</td> 
