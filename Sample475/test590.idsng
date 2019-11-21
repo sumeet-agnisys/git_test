@@ -15,12 +15,6 @@
     <br> 
     <br> 
     <br> 
-    <br> 
-    <br> 
-    <br> 
-    <br> 
-    <br> 
-    <br> 
     <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab0.030517844283368345"> 
      <tbody> 
       <tr> 
@@ -111,6 +105,30 @@
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0</td> 
            <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" oncontextmenu="openregmenu(event)" id="field0.0006068785236457153"> 
+           <td class="bits" title="bits">2</td> 
+           <td class="fieldname" title="field name">f4</td> 
+           <td class="sw thirdCell" title="software access"></td> 
+           <td class="hw thirdCell" title="hardware access"></td> 
+           <td title="default" class="default"></td> 
+           <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" oncontextmenu="openregmenu(event)" id="field0.04822291521058597"> 
+           <td class="bits" title="bits">3</td> 
+           <td class="fieldname" title="field name">f5</td> 
+           <td class="sw thirdCell" title="software access"></td> 
+           <td class="hw thirdCell" title="hardware access"></td> 
+           <td title="default" class="default"></td> 
+           <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" oncontextmenu="openregmenu(event)" id="field0.6710416788897231"> 
+           <td class="bits" title="bits">4</td> 
+           <td class="fieldname" title="field name">f6</td> 
+           <td class="sw thirdCell" title="software access"></td> 
+           <td class="hw thirdCell" title="hardware access"></td> 
+           <td title="default" class="default"></td> 
+           <td onkeydown="insertNewRow(event,this);" class="desc fielddesc" title="description"></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -410,9 +428,18 @@ desc:" id="regdrag1423176347" data-header="" data-name="Reg0" data-offset="" dat
             <td class="droptarget" title="7 bit"></td> 
             <td class="droptarget" title="6 bit"></td> 
             <td class="droptarget" title="5 bit"></td> 
-            <td class="droptarget" title="4 bit"></td> 
-            <td class="droptarget" title="3 bit"></td> 
-            <td class="droptarget" title="2 bit"></td> 
+            <td class="droptarget" title="4 bit" colspan="1" style="background-color: #d4e0e2"><p id="dragtar4" data-id="field0.6710416788897231" data-size="1" data-name="f6" data-sw="" data-hw="" data-default="" data-desc="" draggable="true" class="dragtarget" title="f6 - 1
+sw access : 
+hw access : 
+default :  ">f6</p></td> 
+            <td class="droptarget" title="3 bit" colspan="1" style="background-color: #d4e0e2"><p id="dragtar3" data-id="field0.04822291521058597" data-size="1" data-name="f5" data-sw="" data-hw="" data-default="" data-desc="" draggable="true" class="dragtarget" title="f5 - 1
+sw access : 
+hw access : 
+default :  ">f5</p></td> 
+            <td class="droptarget" title="2 bit" colspan="1" style="background-color: #d4e0e2"><p id="dragtar2" data-id="field0.0006068785236457153" data-size="1" data-name="f4" data-sw="" data-hw="" data-default="" data-desc="" draggable="true" class="dragtarget" title="f4 - 1
+sw access : 
+hw access : 
+default :  ">f4</p></td> 
             <td class="droptarget" title="1 bit" colspan="1" style="background-color: #d4e0e2"><p id="dragtar1" data-id="dragtar-121976422" data-size="1" data-name="adc_zero" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="adc_zero - 1
 sw access : rw
 hw access : ro
@@ -477,15 +504,15 @@ desc:" id="regdrag-122433001" data-header="" data-name="Reg1" data-offset="" dat
             <td class="droptarget" title="15 bit"></td> 
             <td class="droptarget" title="14 bit"></td> 
             <td class="droptarget" title="13 bit"></td> 
-            <td class="droptarget" title="10 bit" colspan="3" style="background-color: #d4e0e2"><p id="dragtar4" data-id="dragtar714117824" data-size="3" data-name="afe_hallph_ext" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_hallph_ext - 3
+            <td class="droptarget" title="10 bit" colspan="3" style="background-color: #d4e0e2"><p id="dragtar7" data-id="dragtar714117824" data-size="3" data-name="afe_hallph_ext" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_hallph_ext - 3
 sw access : rw
 hw access : rw
 default : 0 ">afe_hallph_ext</p></td> 
-            <td class="droptarget" title="2 bit" colspan="8" style="background-color: #d4e0e2"><p id="dragtar3" data-id="dragtar-225680098" data-size="8" data-name="afe_gain_v_s" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_gain_v_s - 8
+            <td class="droptarget" title="2 bit" colspan="8" style="background-color: #d4e0e2"><p id="dragtar6" data-id="dragtar-225680098" data-size="8" data-name="afe_gain_v_s" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_gain_v_s - 8
 sw access : rw
 hw access : rw
 default : 0 ">afe_gain_v_s</p></td> 
-            <td class="droptarget" title="0 bit" colspan="2" style="background-color: #d4e0e2"><p id="dragtar2" data-id="dragtar960781159" data-size="2" data-name="afe_adcchp_v_s" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_adcchp_v_s - 2
+            <td class="droptarget" title="0 bit" colspan="2" style="background-color: #d4e0e2"><p id="dragtar5" data-id="dragtar960781159" data-size="2" data-name="afe_adcchp_v_s" data-sw="rw" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_adcchp_v_s - 2
 sw access : rw
 hw access : rw
 default : 0 ">afe_adcchp_v_s</p></td> 
@@ -549,11 +576,11 @@ desc:" id="regdrag589421286" data-header="" data-name="Reg2" data-offset="" data
             <td class="droptarget" title="11 bit"></td> 
             <td class="droptarget" title="10 bit"></td> 
             <td class="droptarget" title="9 bit"></td> 
-            <td class="droptarget" title="6 bit" colspan="3" style="background-color: #d4e0e2"><p id="dragtar6" data-id="dragtar-235813186" data-size="3" data-name="afe_hallph_ext" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_hallph_ext - 3
+            <td class="droptarget" title="6 bit" colspan="3" style="background-color: #d4e0e2"><p id="dragtar9" data-id="dragtar-235813186" data-size="3" data-name="afe_hallph_ext" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_hallph_ext - 3
 sw access : rw
 hw access : ro
 default : 0 ">afe_hallph_ext</p></td> 
-            <td class="droptarget" title="0 bit" colspan="6" style="background-color: #d4e0e2"><p id="dragtar5" data-id="dragtar2022485732" data-size="6" data-name="afe_chop_ph_v_e" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_chop_ph_v_e - 6
+            <td class="droptarget" title="0 bit" colspan="6" style="background-color: #d4e0e2"><p id="dragtar8" data-id="dragtar2022485732" data-size="6" data-name="afe_chop_ph_v_e" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="afe_chop_ph_v_e - 6
 sw access : rw
 hw access : ro
 default : 0 ">afe_chop_ph_v_e</p></td> 
