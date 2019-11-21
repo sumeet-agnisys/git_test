@@ -12,37 +12,6 @@
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
-    <table contenteditable="false" id="toc" class="tocTable idsTemp" border="2"> 
-     <tbody> 
-      <tr> 
-       <th colspan="4" title="add toc" class="tocheader" contenteditable="true" align="center" id="busname">Table of Content</th> 
-      </tr> 
-      <tr id="headings"> 
-       <th class="heading">heading </th> 
-       <th class="component">component </th> 
-       <th class="default">default </th> 
-       <th class="address"> address </th> 
-      </tr> 
-      <tr id="replace"> 
-       <td id="index">1</td> 
-       <td id="component"><a href="#1test">test</a></td> 
-       <td id="default"></td> 
-       <td id="address"> 0x0 - 0x3</td> 
-      </tr> 
-      <tr id="replace"> 
-       <td id="index">1.1</td> 
-       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1reggroup_name">reggroup_name</a></td> 
-       <td id="default"></td> 
-       <td id="address"> 0x0 - 0x3</td> 
-      </tr> 
-      <tr id="replace"> 
-       <td id="index">1.1.1</td> 
-       <td id="component">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1.1reg_name">reg_name</a></td> 
-       <td id="default">0x00000000</td> 
-       <td id="address"> 0x0</td> 
-      </tr> 
-     </tbody> 
-    </table> 
     <br> 
     <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab00.16973978993087158"> 
      <tbody> 
@@ -107,7 +76,7 @@
        <td colspan="6" class="border"></td> 
       </tr> 
       <tr> 
-       <td colspan="6" class="fieldtd">  
+       <td colspan="6" class="fieldtd"> 
         <table class="fields idsTemp" id="tab00.19208874050371405" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="label"> 
@@ -157,7 +126,7 @@
       <tbody> 
        <tr> 
         <td class="paramname paramnameheader">Address</td> 
-        <td class="paramname paramnameheader" style="border: 1px solid grey;">Register<br>Name</td> 
+        <td class="paramname paramnameheader">Register<br>Name</td> 
         <td>bit<br>31</td> 
         <td>bit<br>30</td> 
         <td>bit<br>29</td> 
@@ -193,32 +162,32 @@
        </tr> 
       </tbody> 
      </table> 
-     <table id="tab10.832043565856431" data-header="" data-name="reggroup_name" data-offset="" data-addr="" data-desc="" data-prop="" class="reggroup"> 
+     <table id="tab10.832043565856431" data-header="1.1" data-name="reggroup_name" data-offset="" data-addr="0x0" data-desc="" data-prop="" class="reggroup"> 
       <tbody> 
        <tr> 
-        <td class="paramname"></td> 
-        <td class="paramname" style="border: 1px solid grey;">reggroup_name</td> 
+        <td class="paramname">0x0</td> 
+        <td class="paramname">reggroup_name</td> 
         <td></td> 
        </tr> 
       </tbody> 
      </table> 
      <table title="reg_name:32
 prop:
-desc:" id="tab20.9731033302146492" data-header="" data-name="reg_name" data-offset="" data-addr="" data-def="" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+desc:" id="tab20.9731033302146492" data-header="1.1.1" data-name="reg_name" data-offset="" data-addr="0x0" data-def="0x00000000" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
       <tbody> 
        <tr> 
-        <td class="paramname" rowspan="2"></td> 
-        <td class="regname paramname" rowspan="2" style="border: 1px solid grey;">reg_name</td> 
+        <td class="paramname" rowspan="2">0x0</td> 
+        <td class="regname paramname" rowspan="2">reg_name</td> 
        </tr> 
        <tr> 
         <td> 
          <table data-reg-type="tab10.832043565856431" class="regtab"> 
           <tbody> 
            <tr> 
-            <td class="droptarget" title="0 bit" colspan="32" style="background-color: #d4e0e2"><p id="dragtar0" data-id="tab00.35222869503655074" data-size="32" data-name="" data-sw="" data-hw="" data-default="" data-desc="" draggable="true" class="dragtarget" title=" - 32
-sw access : 
-hw access : 
-default :  ">[]</p></td> 
+            <td class="droptarget" title="0 bit" colspan="32" style="background-color: #d4e0e2"><p id="dragtar0" data-id="tab00.35222869503655074" data-size="32" data-name="gf" data-sw="rw" data-hw="rw" data-default="" data-desc="" draggable="true" class="dragtarget" title="gf - 32
+sw access : rw
+hw access : rw
+default :  ">gf</p></td> 
            </tr> 
           </tbody> 
          </table></td> 
@@ -229,7 +198,7 @@ default :  ">[]</p></td>
       <tbody> 
        <tr> 
         <td class="paramname"></td> 
-        <td class="paramname" style="border: 1px solid grey;">end section</td> 
+        <td class="paramname">end section</td> 
         <td></td> 
        </tr> 
       </tbody> 
