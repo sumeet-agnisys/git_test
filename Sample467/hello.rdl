@@ -1,6 +1,1 @@
 /***********Agnisys Inc. *************/
-addrmap aaaa {
-    reg ac {
-        hw = rw;
-    };
-};
