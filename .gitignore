@@ -1,6 +1,5 @@
 *.js
 *.css
-<<<<<<< master_beta
 .idsng
 .ids
 .~$*.htm
@@ -10,7 +9,3 @@
 *\.ids
 *\.~$*.htm
 *\.diff
-=======
-*.htm
-*.htm
->>>>>>> 59266ac rgg
