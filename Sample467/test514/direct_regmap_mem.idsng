@@ -8,7 +8,7 @@
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
    </div> 
-   <div id="regdivcontainer" contenteditable="true" style="display:none"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
@@ -715,7 +715,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[0];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -800,7 +800,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[1];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -877,7 +877,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[2];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -954,7 +954,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[3];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1015,7 +1015,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[4];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1100,7 +1100,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[5];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1185,7 +1185,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[6];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1326,7 +1326,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[7];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1395,7 +1395,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[8];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1464,7 +1464,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[9];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1541,7 +1541,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[10];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1618,7 +1618,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[11];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1695,7 +1695,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[12];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1772,7 +1772,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[13];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1849,7 +1849,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[14];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -1926,7 +1926,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[15];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2003,7 +2003,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[16];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2080,7 +2080,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[17];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2157,7 +2157,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[18];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2234,7 +2234,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[19];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2311,7 +2311,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[20];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2388,7 +2388,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[21];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2465,7 +2465,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[22];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2574,7 +2574,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[23];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2723,7 +2723,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[24];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2896,7 +2896,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[25];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -2981,7 +2981,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[26];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3050,7 +3050,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[27];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3119,7 +3119,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[28];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3180,7 +3180,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.factory_eeprom_lock_wr) ;<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.factory_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[29];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3249,7 +3249,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[30];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3318,7 +3318,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock= (pok_brg_reg.ee_vbrg_lock| access.customer_eeprom_lock_wr);<br>lock_r=(pok_brg_reg.ee_vbrg_lock | access.customer_eeprom_lock_rd);<br>hdl_path=u_eeprom.eeprom_array.mem[31];<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3407,7 +3407,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x04;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3430,7 +3430,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x2</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>trimming=true;<br>hdl_path=u_dig_top.u_trim_mngr.u_trim_bits_bb_dev_trim.trim_data_ltch;<br>}<br>bb trim<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>trimming=true;<br>hdl_path=u_dig_top.u_trim_mngr.u_trim_bits_bb_dev_trim.trim_data_ltch;<br>}<br>bb trim<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_154" class="field edited"> 
            <td title="bits" class="bits">10:3</td> 
@@ -3438,7 +3438,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x80</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>trimming=true;<br>hdl_path=u_dig_top.u_trim_mngr.u_trim_bits_dig_osc_trim_vd.trim_data_ltch;<br>}<br>oscillator trimming<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>trimming=true;<br>hdl_path=u_dig_top.u_trim_mngr.u_trim_bits_dig_osc_trim_vd.trim_data_ltch;<br>}<br>oscillator trimming<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_153" class="field edited"> 
            <td title="bits" class="bits">2:0</td> 
@@ -3446,7 +3446,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x3</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>trimming=true;<br>hdl_path=u_dig_top.u_trim_mngr.u_trim_bits_bg_trim_vd.trim_data_ltch;<br>}<br>bandgap trimming<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>trimming=true;<br>hdl_path=u_dig_top.u_trim_mngr.u_trim_bits_bg_trim_vd.trim_data_ltch;<br>}<br>bandgap trimming<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -3476,7 +3476,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x05;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3545,7 +3545,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x06;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3584,7 +3584,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>VPOS_BRG regulator current limiting feature enable signal<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>VPOS_BRG regulator current limiting feature enable signal<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_165" class="field edited"> 
            <td title="bits" class="bits">10</td> 
@@ -3616,7 +3616,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Butterworth filter BW configuration<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Butterworth filter BW configuration<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_161" class="field edited"> 
            <td title="bits" class="bits">4:3</td> 
@@ -3624,7 +3624,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x3</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Configures bandwidth of low-pass filter in AFE_ADC reference block<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Configures bandwidth of low-pass filter in AFE_ADC reference block<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_160" class="field edited"> 
            <td title="bits" class="bits">2</td> 
@@ -3632,7 +3632,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Enable for 8MHz used to generate main clock for AFE_ADC and chop clocks for AFE_AMPs and AFE_ADC<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Enable for 8MHz used to generate main clock for AFE_ADC and chop clocks for AFE_AMPs and AFE_ADC<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_159" class="field edited"> 
            <td title="bits" class="bits">1:0</td> 
@@ -3640,7 +3640,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Defines chopping frequency for AFE<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Defines chopping frequency for AFE<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -3670,7 +3670,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x07;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3731,7 +3731,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x08;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3792,7 +3792,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x09;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3853,7 +3853,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x0a;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3914,7 +3914,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x0b;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -3975,7 +3975,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0xc;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4036,7 +4036,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0xd;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4097,7 +4097,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0xe;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4158,7 +4158,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0xf;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4219,7 +4219,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x10;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4280,7 +4280,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x11;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4341,7 +4341,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x12;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4402,7 +4402,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x13;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4463,7 +4463,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x14;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4524,7 +4524,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x15;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4585,7 +4585,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x16;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4678,7 +4678,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x17;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4811,7 +4811,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x18;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -4850,7 +4850,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>DAC miller compensation<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>DAC miller compensation<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_226" class="field edited"> 
            <td title="bits" class="bits">13</td> 
@@ -4968,7 +4968,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x19;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5007,7 +5007,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>OVD rising threshold:<br>00: 5.8V<br>01: 6.3V<br>10: 6.8V<br>11: 7.3V<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>OVD rising threshold:<br>00: 5.8V<br>01: 6.3V<br>10: 6.8V<br>11: 7.3V<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5037,7 +5037,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x1a;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5090,7 +5090,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x1b;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5143,7 +5143,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x1c;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5196,7 +5196,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x1d;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5219,7 +5219,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>general purpose factory data<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>general purpose factory data<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5249,7 +5249,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x1e;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5272,7 +5272,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>general purpose customer data<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>general purpose customer data<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5302,7 +5302,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>u_shadow_address=0x1f;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5383,7 +5383,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">coverage=on;<br>lock_r=access.customer_register_lock_rd;<br>lock=access.factory_register_lock_wr;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5406,7 +5406,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>The default value of this bit defines the ON/OFF state of this feature. <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>The default value of this bit defines the ON/OFF state of this feature. <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_252" class="field edited"> 
            <td title="bits" class="bits">17</td> 
@@ -5414,7 +5414,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Setting this bit will perform an ERASE operation on the EEPROM. <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Setting this bit will perform an ERASE operation on the EEPROM. <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_251" class="field edited"> 
            <td title="bits" class="bits">16</td> 
@@ -5422,7 +5422,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Setting this bit will perform a PROGRAM operation only on the EEPROM. If ERASE is set, this bit is ignored.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Setting this bit will perform a PROGRAM operation only on the EEPROM. If ERASE is set, this bit is ignored.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_250" class="field edited"> 
            <td title="bits" class="bits">15</td> 
@@ -5430,7 +5430,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation <br>1: Disables update of the shadow registers. Overrides reload bit.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation <br>1: Disables update of the shadow registers. Overrides reload bit.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_249" class="field edited"> 
            <td title="bits" class="bits">14</td> 
@@ -5438,7 +5438,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation<br>1: Force ee_en output high <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation<br>1: Force ee_en output high <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_248" class="field edited"> 
            <td title="bits" class="bits">13:12</td> 
@@ -5446,7 +5446,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>00: Normal operation<br>01: Force ee_rd output high<br>10: Force ee_er output high<br>11: Force ee_pr output high<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>00: Normal operation<br>01: Force ee_rd output high<br>10: Force ee_er output high<br>11: Force ee_pr output high<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_247" class="field edited"> 
            <td title="bits" class="bits">11</td> 
@@ -5454,7 +5454,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Terminates any EEPROM write transaction immediately. Leaves the EEPROM ready for a new transaction. <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Terminates any EEPROM write transaction immediately. Leaves the EEPROM ready for a new transaction. <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_246" class="field edited"> 
            <td title="bits" class="bits">10</td> 
@@ -5462,7 +5462,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Disabled.<br>1: Force a Multi bit error during read (inverts bits 1:0).<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Disabled.<br>1: Force a Multi bit error during read (inverts bits 1:0).<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_245" class="field edited"> 
            <td title="bits" class="bits">9</td> 
@@ -5470,7 +5470,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Disabled.<br>1: Force a Single bit error during read (inverts bit 0). Takes precedence over FORCE_DBE. <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Disabled.<br>1: Force a Single bit error during read (inverts bit 0). Takes precedence over FORCE_DBE. <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_244" class="field edited"> 
            <td title="bits" class="bits">8</td> 
@@ -5478,7 +5478,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: ECC bits encode error information<br>&nbsp;&nbsp;&nbsp;&nbsp;ecc bit 2: 1 if single bit error, 0 if no error<br>&nbsp;&nbsp;&nbsp;&nbsp;ecc bit 3: 1 if double bit error, 0 if not error<br>&nbsp;&nbsp;&nbsp;&nbsp;All other ecc bits are always 0<br>1: ecc bits return the ECC code (top bits in eeprom) <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: ECC bits encode error information<br>&nbsp;&nbsp;&nbsp;&nbsp;ecc bit 2: 1 if single bit error, 0 if no error<br>&nbsp;&nbsp;&nbsp;&nbsp;ecc bit 3: 1 if double bit error, 0 if not error<br>&nbsp;&nbsp;&nbsp;&nbsp;All other ecc bits are always 0<br>1: ecc bits return the ECC code (top bits in eeprom) <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_243" class="field edited"> 
            <td title="bits" class="bits">7</td> 
@@ -5486,7 +5486,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Correct Single bit errors when they occur<br>1: Do not correct single bit errors<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Correct Single bit errors when they occur<br>1: Do not correct single bit errors<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_242" class="field edited"> 
            <td title="bits" class="bits">6</td> 
@@ -5494,7 +5494,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Upper bits of EEPROM is written with ECC bits. <br>1: EEPROM is written with all bits of raw data. During a read, all bits of raw data is returned.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Upper bits of EEPROM is written with ECC bits. <br>1: EEPROM is written with all bits of raw data. During a read, all bits of raw data is returned.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_241" class="field edited"> 
            <td title="bits" class="bits">5:4</td> 
@@ -5502,7 +5502,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>output_coupling_function=direct;<br>}<br>00: Single Word Write Access<br>01: Odd Word Write Access (address ignored)<br>10: Even Word Write Access (address ignored)<br>11: All Word Write Access (address ignored)<br>This field only affects write operations.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>output_coupling_function=direct;<br>}<br>00: Single Word Write Access<br>01: Odd Word Write Access (address ignored)<br>10: Even Word Write Access (address ignored)<br>11: All Word Write Access (address ignored)<br>This field only affects write operations.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_240" class="field edited"> 
            <td title="bits" class="bits">3:1</td> 
@@ -5510,7 +5510,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>output_coupling_function=direct;<br>}<br>EEPROM read voltage for cell margining. Refer to EEPROM V3.0 SPEC.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>output_coupling_function=direct;<br>}<br>EEPROM read voltage for cell margining. Refer to EEPROM V3.0 SPEC.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_239" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -5518,7 +5518,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>When set the chip will initiate a Shadow Reload. This bit will clear when complete. </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>When set the chip will initiate a Shadow Reload. This bit will clear when complete.</td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5548,7 +5548,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">coverage=on;<br>lock_r=access.customer_register_lock_rd;<br>lock=access.factory_register_lock_wr;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5571,7 +5571,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Holds the cp_dac at its maximum value defined by cp_dac_max_val until it is written back to 1'b0 on an ERASE or PROGRAM Only operation.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Holds the cp_dac at its maximum value defined by cp_dac_max_val until it is written back to 1'b0 on an ERASE or PROGRAM Only operation.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_258" class="field edited"> 
            <td title="bits" class="bits">10:9</td> 
@@ -5579,7 +5579,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Selects the ramp up time for the charge pump. <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Selects the ramp up time for the charge pump. <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_257" class="field edited"> 
            <td title="bits" class="bits">8:7</td> 
@@ -5587,7 +5587,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Selects the ramp down time for the charge pump.<br>&nbsp; </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Selects the ramp down time for the charge pump.<br>&nbsp;</td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_256" class="field edited"> 
            <td title="bits" class="bits">6:2</td> 
@@ -5603,7 +5603,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation<br>1: The value in CP_DAC drives the cp_dac[5:0] output.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation<br>1: The value in CP_DAC drives the cp_dac[5:0] output.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_254" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -5611,7 +5611,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation.<br>1: Force cp_en output high.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>0: Normal operation.<br>1: Force cp_en output high.<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5641,7 +5641,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">coverage=on;<br>u_lock=factory_register_lock_wr;<br>lock=access.factory_register_lock_wr;<br>clock_enable=true;<br>no_reg_hw_reset_test=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5672,7 +5672,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_ids_external_read=true;<br>}<br>Latched and held high when a SBE has occurred.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_ids_external_read=true;<br>}<br>Latched and held high when a SBE has occurred.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_264" class="field edited"> 
            <td title="bits" class="bits">18:13</td> 
@@ -5742,7 +5742,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock_r=access.customer_register_lock_rd;<br>lock=access.factory_register_lock_wr;<br>clock_enable=true;<br>no_reg_hw_reset_test=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5795,7 +5795,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">coverage=on;<br>lock_r=access.customer_register_lock_rd;<br>lock=access.customer_register_lock_wr;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5826,7 +5826,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">If USE_TST_ADDR is set, then margining or pattern test will start at this address. If the test fails, this will contain the failing address. </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">If USE_TST_ADDR is set, then margining or pattern test will start at this address. If the test fails, this will contain the failing address.</td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_273" class="field edited"> 
            <td title="bits" class="bits">6</td> 
@@ -5842,7 +5842,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">If margining fails, this bit indicates if the min or max reference failed.<br>0: Min margining failed.<br>1: Max margining failed. </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">If margining fails, this bit indicates if the min or max reference failed.<br>0: Min margining failed.<br>1: Max margining failed.</td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_271" class="field edited"> 
            <td title="bits" class="bits">4:3</td> 
@@ -5874,7 +5874,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Write to 1 to start margin testing. If EE_LOOP is low, this bit will self clear when address 0xB is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Write to 1 to start margin testing. If EE_LOOP is low, this bit will self clear when address 0xB is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5904,7 +5904,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">coverage=on;<br>lock_r=access.customer_register_lock_rd;<br>lock=access.factory_register_lock_wr;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -5927,7 +5927,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">Defines the pattern that will be checked when reading the EEPROM.<br>00: All 0s<br>01: All 1s<br>10: Checker board starting at 0x0 with '010101.'<br>11: Checker board starting at 0x0 with '101010.' </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">Defines the pattern that will be checked when reading the EEPROM.<br>00: All 0s<br>01: All 1s<br>10: Checker board starting at 0x0 with '010101.'<br>11: Checker board starting at 0x0 with '101010.'</td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_277" class="field edited"> 
            <td title="bits" class="bits">2:1</td> 
@@ -5935,7 +5935,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_ids_external_read=true;<br>}<br>&nbsp;&nbsp;00: Reset condition (no result from pat testing)<br>&nbsp;&nbsp;01: Pass, no failure detected during pat testing<br>&nbsp;&nbsp;10: Fail, failure detected during pat testing<br>&nbsp;&nbsp;11: Running, pat test is still running <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_ids_external_read=true;<br>}<br>&nbsp;&nbsp;00: Reset condition (no result from pat testing)<br>&nbsp;&nbsp;01: Pass, no failure detected during pat testing<br>&nbsp;&nbsp;10: Fail, failure detected during pat testing<br>&nbsp;&nbsp;11: Running, pat test is still running <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_276" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -5943,7 +5943,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Write to 1 to start pattern check testing. If EE_LOOP is low, this bit will self clear when address 0xB is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail. </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>u_block_volatile_output=true;<br>}<br>Write to 1 to start pattern check testing. If EE_LOOP is low, this bit will self clear when address 0xB is reached. If EE_LOOP is high, this bit must be written to 0 to stop test. This bit always clears on a fail.</td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -5973,7 +5973,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6004,7 +6004,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_bist_ctrlr.u_bist_support.lbist_pass1_fail0;<br>registered=false;<br>}<br>LBIST pass.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_bist_ctrlr.u_bist_support.lbist_pass1_fail0;<br>registered=false;<br>}<br>LBIST pass.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_283" class="field edited"> 
            <td title="bits" class="bits">4</td> 
@@ -6012,7 +6012,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_bist_ctrlr.u_bist_support.bist_done;<br>registered=false;<br>}<br>BIST done. When '1', LBIST and ABIST has finished.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_bist_ctrlr.u_bist_support.bist_done;<br>registered=false;<br>}<br>BIST done. When '1', LBIST and ABIST has finished.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_282" class="field edited"> 
            <td title="bits" class="bits">3</td> 
@@ -6020,7 +6020,7 @@
            <td title="software access" class="sw">wo</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_dft_bist_start_q;<br>registered=false;<br>}<br>BIST start. When '1', LBIST and then ABIST start (depending on lbist_e and abist_e EEPROM/Shadow fields).<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_dft_bist_start_q;<br>registered=false;<br>}<br>BIST start. When '1', LBIST and then ABIST start (depending on lbist_e and abist_e EEPROM/Shadow fields).<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_281" class="field edited"> 
            <td title="bits" class="bits">2</td> 
@@ -6028,7 +6028,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_scan_mngr.dly_fault_r;<br>registered=false;<br>}<br>Delay fault enable.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_scan_mngr.dly_fault_r;<br>registered=false;<br>}<br>Delay fault enable.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_280" class="field edited"> 
            <td title="bits" class="bits">1</td> 
@@ -6036,7 +6036,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_scan_mngr.iddq_mode_r;<br>registered=false;<br>}<br>Iddq mode enable.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_scan_mngr.iddq_mode_r;<br>registered=false;<br>}<br>Iddq mode enable.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_279" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -6044,7 +6044,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_scan_mngr.scan_mode_r2;<br>registered=false;<br>}<br>Scan mode enable.<br>When is read, always returns '0'.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_scan_mngr.scan_mode_r2;<br>registered=false;<br>}<br>Scan mode enable.<br>When is read, always returns '0'.<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6074,7 +6074,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>u_special_register=true;<br>no_reg_hw_reset_test=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6097,7 +6097,7 @@
            <td title="software access" class="sw">wo</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_access_key_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_access_key_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_297" class="field edited"> 
            <td title="bits" class="bits">11</td> 
@@ -6105,7 +6105,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_customer_writable_eeprom_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_customer_writable_eeprom_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_296" class="field edited"> 
            <td title="bits" class="bits">10</td> 
@@ -6113,7 +6113,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_customer_writable_register_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic. <br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_customer_writable_register_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic. <br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_295" class="field edited"> 
            <td title="bits" class="bits">9</td> 
@@ -6121,7 +6121,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_register_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_register_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_294" class="field edited"> 
            <td title="bits" class="bits">8</td> 
@@ -6129,7 +6129,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_register_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_register_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_293" class="field edited"> 
            <td title="bits" class="bits">7</td> 
@@ -6137,7 +6137,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_register_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_register_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_292" class="field edited"> 
            <td title="bits" class="bits">6</td> 
@@ -6145,7 +6145,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_register_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_register_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_291" class="field edited"> 
            <td title="bits" class="bits">5</td> 
@@ -6153,7 +6153,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_eeprom_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_eeprom_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_290" class="field edited"> 
            <td title="bits" class="bits">4</td> 
@@ -6161,7 +6161,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_eeprom_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_eeprom_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_289" class="field edited"> 
            <td title="bits" class="bits">3</td> 
@@ -6169,7 +6169,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_eeprom_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_eeprom_lock_rd_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_288" class="field edited"> 
            <td title="bits" class="bits">2</td> 
@@ -6177,7 +6177,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_eeprom_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_eeprom_lock_wr_q;<br>registered=false;<br>}<br>Mem Lock logic.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_287" class="field edited"> 
            <td title="bits" class="bits">1</td> 
@@ -6185,7 +6185,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_access_q;<br>registered=false;<br>}<br>Customer access enabled. This field is also part of the access code when is written, i.e. the access key is 32 bits wide.<br>0 = Customer closed.<br>1 = Customer open.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_customer_access_q;<br>registered=false;<br>}<br>Customer access enabled. This field is also part of the access code when is written, i.e. the access key is 32 bits wide.<br>0 = Customer closed.<br>1 = Customer open.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_286" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -6193,7 +6193,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_access_q;<br>registered=false;<br>}<br>Factory access enabled. This field is also part of the access code when is written, i.e. the access key is 32 bits wide.<br>0 = Factory closed.<br>1 = Factory open.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_access_factory_access_q;<br>registered=false;<br>}<br>Factory access enabled. This field is also part of the access code when is written, i.e. the access key is 32 bits wide.<br>0 = Factory closed.<br>1 = Factory open.<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6223,7 +6223,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock_r=access.customer_register_lock_rd;<br>u_special_register=true;<br>no_reg_access_test=true;<br>no_reg_bit_bash_test=true;<br>no_reg_hw_reset_test=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6246,7 +6246,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.pok_brg_h;<br>}<br>pok_brg_h comparator level<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.pok_brg_h;<br>}<br>pok_brg_h comparator level<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_300" class="field edited"> 
            <td title="bits" class="bits">1</td> 
@@ -6254,7 +6254,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x1</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.pok_brg_l;<br>}<br>pok_brg_l comparator level </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.pok_brg_l;<br>}<br>pok_brg_l comparator level</td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_299" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -6262,7 +6262,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.ee_vbrg_lock;<br>}<br>Used as lock for additional lock for eeprom<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.ee_vbrg_lock;<br>}<br>Used as lock for additional lock for eeprom<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6292,7 +6292,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>u_special_register=true;<br>no_reg_access_test=true;<br>no_reg_bit_bash_test=true;<br>no_reg_hw_reset_test=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6315,7 +6315,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_dsc_die_source_code_in;<br>registered=false;<br>input_coupling=true;<br>}<br>DSC value (Rev_letter_1, Rev_letter_0, Part_number).<br>[29:25]: Revision letter 1.<br>[24:20]: Revision letter 0.<br>[19:0]: 6-digits part number.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_dsc_die_source_code_in;<br>registered=false;<br>input_coupling=true;<br>}<br>DSC value (Rev_letter_1, Rev_letter_0, Part_number).<br>[29:25]: Revision letter 1.<br>[24:20]: Revision letter 0.<br>[19:0]: 6-digits part number.<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6345,7 +6345,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6392,7 +6392,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>hdl_path=u_dig_top.u_dft_wrapper.u_unbistable_regs.manch_comm_e_r;<br>}<br>Allows continues Manchester R/W commands with the analog output being disabled without overdriving the output pin nor OVLO signaling.<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>registered=false;<br>hdl_path=u_dig_top.u_dft_wrapper.u_unbistable_regs.manch_comm_e_r;<br>}<br>Allows continues Manchester R/W commands with the analog output being disabled without overdriving the output pin nor OVLO signaling.<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_303" class="field edited"> 
            <td title="bits" class="bits">14:0</td> 
@@ -6430,7 +6430,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6483,7 +6483,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_special_register=true;<br>no_reg_hw_reset_test=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6506,7 +6506,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_lbist_final_misr_exp_lbist_exp_misr_final_q;<br>registered=false;<br>}<br>Expected 32-bits LBIST signature<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_lbist_final_misr_exp_lbist_exp_misr_final_q;<br>registered=false;<br>}<br>Expected 32-bits LBIST signature<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6536,7 +6536,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>u_special_register=true;<br>no_reg_hw_reset_test=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6559,7 +6559,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_lbist_final_misr_calc_lbist_calc_misr_final_q;<br>registered=false;<br>}<br>Calculated 32-bits LBIST signature<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_mem_ctrlr.u_direct_regmap.volatile_lbist_final_misr_calc_lbist_calc_misr_final_q;<br>registered=false;<br>}<br>Calculated 32-bits LBIST signature<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6589,7 +6589,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.customer_register_lock_wr;<br>lock_r=access.customer_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6612,7 +6612,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.int_err;<br>registered=false;<br>}<br>interpolator failure<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.int_err;<br>registered=false;<br>}<br>interpolator failure<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_316" class="field edited"> 
            <td title="bits" class="bits">5</td> 
@@ -6620,7 +6620,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.brdg_err;<br>registered=false;<br>}<br>Bridge error<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.brdg_err;<br>registered=false;<br>}<br>Bridge error<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_315" class="field edited"> 
            <td title="bits" class="bits">4</td> 
@@ -6628,7 +6628,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.oor_err;<br>registered=false;<br>}<br>Input signal out of range error<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.oor_err;<br>registered=false;<br>}<br>Input signal out of range error<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_314" class="field edited"> 
            <td title="bits" class="bits">3</td> 
@@ -6636,7 +6636,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.otmp_err;<br>registered=false;<br>}<br>Overtemperature error<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.otmp_err;<br>registered=false;<br>}<br>Overtemperature error<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_313" class="field edited"> 
            <td title="bits" class="bits">2</td> 
@@ -6644,7 +6644,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.utmp_err;<br>registered=false;<br>}<br>Undertemperature error<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.utmp_err;<br>registered=false;<br>}<br>Undertemperature error<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_312" class="field edited"> 
            <td title="bits" class="bits">1</td> 
@@ -6652,7 +6652,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.ovd_err;<br>registered=false;<br>}<br>Overvoltage error<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.ovd_err;<br>registered=false;<br>}<br>Overvoltage error<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_311" class="field edited"> 
            <td title="bits" class="bits">0</td> 
@@ -6660,7 +6660,7 @@
            <td title="software access" class="sw">rc</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.uvd_err;<br>registered=false;<br>}<br>Undervoltage error<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_error_reg.uvd_err;<br>registered=false;<br>}<br>Undervoltage error<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6690,7 +6690,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6759,7 +6759,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6820,7 +6820,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6881,7 +6881,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6904,7 +6904,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_diagnostics_abe_dac_readback;<br>registered=false;<br>}<br>Calculated compensation value on ADC<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_diagnostics_abe_dac_readback;<br>registered=false;<br>}<br>Calculated compensation value on ADC<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6934,7 +6934,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -6965,7 +6965,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_adc_comp;<br>registered=false;<br>}<br>Calculated compensation value on ADC<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_adc_comp;<br>registered=false;<br>}<br>Calculated compensation value on ADC<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -6995,7 +6995,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7018,7 +7018,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_comp;<br>}<br>Calculated compensation value on main pressure<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_comp;<br>}<br>Calculated compensation value on main pressure<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7048,7 +7048,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7071,7 +7071,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_dac_comp;<br>}<br>Calculated compensation value on DAC<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_dac_comp;<br>}<br>Calculated compensation value on DAC<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7101,7 +7101,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7124,7 +7124,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_adc_b1;<br>}<br>Calculated intermediate compensation value on ADC (b1)<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_adc_b1;<br>}<br>Calculated intermediate compensation value on ADC (b1)<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_330" class="field edited"> 
            <td title="bits" class="bits">14:0</td> 
@@ -7132,7 +7132,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_adc_b0;<br>}<br>Calculated intermediate compensation value on ADC (b0)<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_adc_b0;<br>}<br>Calculated intermediate compensation value on ADC (b0)<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7162,7 +7162,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7185,7 +7185,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_dac_b1;<br>}<br>Calculated intermediate compensation value on DAC (b1)<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_dac_b1;<br>}<br>Calculated intermediate compensation value on DAC (b1)<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_332" class="field edited"> 
            <td title="bits" class="bits">14:0</td> 
@@ -7193,7 +7193,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_dac_b0;<br>}<br>Calculated intermediate compensation value on DAC (b0)<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_dac_b0;<br>}<br>Calculated intermediate compensation value on DAC (b0)<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7223,7 +7223,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7246,7 +7246,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x00000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b0;<br>}<br>pressure intermediate compensation value B0<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b0;<br>}<br>pressure intermediate compensation value B0<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7276,7 +7276,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7299,7 +7299,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x00000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b1;<br>}<br>pressure intermediate compensation value B1<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b1;<br>}<br>pressure intermediate compensation value B1<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7329,7 +7329,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7352,7 +7352,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x00000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b2;<br>}<br>pressure intermediate compensation value B2<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b2;<br>}<br>pressure intermediate compensation value B2<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7382,7 +7382,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7405,7 +7405,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x00000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b3;<br>}<br>pressure intermediate compensation value B3<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_b3;<br>}<br>pressure intermediate compensation value B3<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7435,7 +7435,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7458,7 +7458,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_comp_clamped;<br>}<br>pressure clamped compensation value<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_main_comp_clamped;<br>}<br>pressure clamped compensation value<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7488,7 +7488,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7511,7 +7511,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_tt_scaled;<br>}<br>TinyTemp scaled value<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_tt_scaled;<br>}<br>TinyTemp scaled value<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7541,7 +7541,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7564,7 +7564,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x00000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_diagnostics_adc_filt_decimator_out;<br>}<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_diagnostics_adc_filt_decimator_out;<br>}<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7594,7 +7594,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7617,7 +7617,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x00000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_directs_pressure;<br>}<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_directs_pressure;<br>}<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_341" class="field edited"> 
            <td title="bits" class="bits">12:0</td> 
@@ -7625,7 +7625,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_directs_temp;<br>}<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_directs_temp;<br>}<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7655,7 +7655,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7708,7 +7708,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7731,7 +7731,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>AFE amplifiers sleep<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>AFE amplifiers sleep<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_347" class="field edited"> 
            <td title="bits" class="bits">1</td> 
@@ -7739,7 +7739,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>ADC sleep<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>ADC sleep<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_346" class="field edited"> 
            <td title="bits" class="bits">2</td> 
@@ -7747,7 +7747,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>ADC reference sleep<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>ADC reference sleep<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_345" class="field edited"> 
            <td title="bits" class="bits">3</td> 
@@ -7763,7 +7763,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Tinytemp sleep<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>output_coupling=true;<br>}<br>Tinytemp sleep<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7793,7 +7793,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7862,7 +7862,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7885,7 +7885,7 @@
            <td title="software access" class="sw">wo</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_in_compcore_dft_dft_temp_force;<br>}<br>Forced temperature<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_in_compcore_dft_dft_temp_force;<br>}<br>Forced temperature<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7915,7 +7915,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br>rwpair=sl_dft_temp;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -7938,7 +7938,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x000</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_tt_comp;<br>}<br>Calculated compensation value on TinyTemp<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.u_functional_top.u_dig_simulink.ids_out_results_tt_comp;<br>}<br>Calculated compensation value on TinyTemp<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -7968,7 +7968,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> </td> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -8021,7 +8021,7 @@
        <td colspan="6" title="add properties" class="propclass" contenteditable="true">lock=access.factory_register_lock_wr;<br>lock_r=access.factory_register_lock_rd;<br>clock_enable=true;<br>no_reg_bit_bash_test=true;<br>no_reg_access_test=true;<br>no_reg_hw_reset_test=true;<br>u_special_register=true;<br>registered=false;<br></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"> <br>State of input pads</td> 
+       <td colspan="6" title="add description here" class="desc descclass"><br>State of input pads</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -8044,7 +8044,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_test1_din_vd;<br>}<br>Test1 input<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_test1_din_vd;<br>}<br>Test1 input<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_357" class="field edited"> 
            <td title="bits" class="bits">1</td> 
@@ -8052,7 +8052,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_test2_din_vd;<br>}<br>Test2 input<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_test2_din_vd;<br>}<br>Test2 input<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_356" class="field edited"> 
            <td title="bits" class="bits">2</td> 
@@ -8060,7 +8060,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_vn_din_vd;<br>}<br>VN input<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_vn_din_vd;<br>}<br>VN input<br></td> 
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field_355" class="field edited"> 
            <td title="bits" class="bits">3</td> 
@@ -8068,7 +8068,7 @@
            <td title="software access" class="sw">ro</td> 
            <td title="hardware access" class="hw">wo</td> 
            <td title="default" class="default">0x0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_vp_din_vd;<br>}<br>VP input<br> </td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{<br>hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_vp_din_vd;<br>}<br>VP input<br></td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -8087,7 +8087,7 @@
     <br> 
     <br>  
    </div> 
-   <div id="param_main" style="display:block" oncontextmenu="maincontextcall(event);"> 
+   <div id="param_main" style="display:none" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
@@ -13171,10 +13171,10 @@ desc : { hdl_path=u_dig_top.u_dft_wrapper.u_scan_wrapper.pad_test1_din_vd; } Tes
       </tbody> 
      </table> 
     </div>  
-   </div>  
+   </div> 
    <div id="idsng_config" data-id="config0.46272396494414225" style="display:none">
      &lt;settings&gt;&lt;company&gt;Allegro Microsystems&lt;/company&gt;&lt;copyright&gt;***** Copyright 2019 All Rights Reserved. *****&lt;/copyright&gt;&lt;log&gt;false&lt;/log&gt;&lt;cmdpanel&gt;&lt;/cmdpanel&gt;&lt;output_dir&gt;..\..\..\dig_top\mmap\mmap_dir\rtl&lt;/output_dir&gt;&lt;outputs&gt;&lt;yaml&gt;false&lt;/yaml&gt;&lt;reg2d&gt;false&lt;/reg2d&gt;&lt;mem_dump&gt;false&lt;/mem_dump&gt;&lt;vhdheader&gt;false&lt;/vhdheader&gt;&lt;verilog&gt;false&lt;/verilog&gt;&lt;verilog2001&gt;true&lt;/verilog2001&gt;&lt;vheader&gt;false&lt;/vheader&gt;&lt;ivs&gt;false&lt;/ivs&gt;&lt;arv&gt;false&lt;/arv&gt;&lt;formal&gt;false&lt;/formal&gt;&lt;special_reg&gt;&lt;/special_reg&gt;&lt;cmsis&gt;false&lt;/cmsis&gt;&lt;uvm&gt;true&lt;/uvm&gt;&lt;perl&gt;false&lt;/perl&gt;&lt;python&gt;false&lt;/python&gt;&lt;cpp&gt;false&lt;/cpp&gt;&lt;pdf&gt;false&lt;/pdf&gt;&lt;ovm&gt;false&lt;/ovm&gt;&lt;vmm&gt;false&lt;/vmm&gt;&lt;iss_firmware&gt;false&lt;/iss_firmware&gt;&lt;iss_csv&gt;false&lt;/iss_csv&gt;&lt;iss_html&gt;false&lt;/iss_html&gt;&lt;iss_sv&gt;false&lt;/iss_sv&gt;&lt;iss_uvm&gt;false&lt;/iss_uvm&gt;&lt;iss_matlab&gt;false&lt;/iss_matlab&gt;&lt;iss_infact&gt;false&lt;/iss_infact&gt;&lt;iss_perspec&gt;false&lt;/iss_perspec&gt;&lt;xrsl&gt;false&lt;/xrsl&gt;&lt;word&gt;false&lt;/word&gt;&lt;rdl&gt;false&lt;/rdl&gt;&lt;erm&gt;false&lt;/erm&gt;&lt;ivs&gt;false&lt;/ivs&gt;&lt;svheader&gt;false&lt;/svheader&gt;&lt;svg&gt;false&lt;/svg&gt;&lt;customcsv&gt;false&lt;/customcsv&gt;&lt;datasheet&gt;false&lt;/datasheet&gt;&lt;csharp&gt;false&lt;/csharp&gt;&lt;sv&gt;true&lt;/sv&gt;&lt;/outputs&gt;&lt;rtl_wire&gt;true&lt;/rtl_wire&gt;&lt;limit_toc&gt;&lt;/limit_toc&gt;&lt;lowpower&gt;false&lt;/lowpower&gt;&lt;auto_sequence&gt;&lt;/auto_sequence&gt;&lt;interrupt&gt;&lt;/interrupt&gt;&lt;mbd&gt;&lt;/mbd&gt;&lt;arv_assertion&gt;&lt;/arv_assertion&gt;&lt;memtechmapping&gt;false&lt;/memtechmapping&gt;&lt;sv_w_intf&gt;&lt;/sv_w_intf&gt;&lt;sv_wo_intf&gt;&lt;/sv_wo_intf&gt;&lt;uvm_env&gt;&lt;/uvm_env&gt;&lt;hdlpath&gt;true&lt;/hdlpath&gt;&lt;coverage&gt;false&lt;/coverage&gt;&lt;arv_coverage&gt;false&lt;/arv_coverage&gt;&lt;illegalbins&gt;false&lt;/illegalbins&gt;&lt;arv_constraint&gt;false&lt;/arv_constraint&gt;&lt;bus&gt;proprietary&lt;/bus&gt;&lt;reg_width&gt;32&lt;/reg_width&gt;&lt;bus_width&gt;32&lt;/bus_width&gt;&lt;unit&gt;32&lt;/unit&gt;&lt;block_size&gt;0x80&lt;/block_size&gt;&lt;chip_size&gt;0x80&lt;/chip_size&gt;&lt;board_size&gt;0x80&lt;/board_size&gt;&lt;c_type&gt;hwint&lt;/c_type&gt;&lt;big_endian&gt;false&lt;/big_endian&gt;&lt;little_endian&gt;true&lt;/little_endian&gt;&lt;template_dir&gt;C:\Users\Anupam\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet&lt;/template_dir&gt;&lt;check_only&gt;true&lt;/check_only&gt;&lt;preserve_names&gt;true&lt;/preserve_names&gt;&lt;addr_sort&gt;false&lt;/addr_sort&gt;&lt;seqconfig&gt;&lt;output&gt;&lt;seq_outputs/&gt;&lt;uvm&gt;&lt;datatype&gt;&lt;inlinefunction&gt;int&lt;/inlinefunction&gt;&lt;arguments&gt;int&lt;/arguments&gt;&lt;constant&gt;int&lt;/constant&gt;&lt;variable&gt;int&lt;/variable&gt;&lt;returntype&gt;int&lt;/returntype&gt;&lt;/datatype&gt;&lt;regmodel oid="0"&gt;default&lt;/regmodel&gt;&lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt;&lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt;&lt;timemultiplier&gt;100&lt;/timemultiplier&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;consolidated&gt;false&lt;/consolidated&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/uvm&gt;&lt;sv&gt;&lt;datatype&gt;&lt;inlinefunction&gt;int&lt;/inlinefunction&gt;&lt;arguments&gt;int&lt;/arguments&gt;&lt;constant&gt;int&lt;/constant&gt;&lt;variable&gt;int&lt;/variable&gt;&lt;/datatype&gt;&lt;bus oid="0"&gt;default&lt;/bus&gt;&lt;write oid="0"&gt;write_mirror(%a, %d, 0, 0)&lt;/write&gt;&lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt;&lt;timeunit1&gt;1&lt;/timeunit1&gt;&lt;timeunit2&gt;ns&lt;/timeunit2&gt;&lt;timeprecision1&gt;1&lt;/timeprecision1&gt;&lt;timeprecision2&gt;ns&lt;/timeprecision2&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;consolidated&gt;false&lt;/consolidated&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/sv&gt;&lt;firmware&gt;&lt;datatype&gt;&lt;inlinefunction&gt;int&lt;/inlinefunction&gt;&lt;arguments&gt;int&lt;/arguments&gt;&lt;constant&gt;int&lt;/constant&gt;&lt;variable&gt;int&lt;/variable&gt;&lt;returntype&gt;int&lt;/returntype&gt;&lt;/datatype&gt;&lt;templatename oid="0"&gt;default&lt;/templatename&gt;&lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt;&lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt;&lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt;&lt;fieldwrite oid="0"&gt;FIELD_WRITE(%a,%d,%m,%lsb)&lt;/fieldwrite&gt;&lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt;&lt;timemultiplier&gt;100&lt;/timemultiplier&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;consolidated&gt;false&lt;/consolidated&gt;&lt;consolidated_r&gt;false&lt;/consolidated_r&gt;&lt;guardband&gt;false&lt;/guardband&gt;&lt;structure&gt;0&lt;/structure&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/firmware&gt;&lt;matlab&gt;&lt;datatype&gt;&lt;inlinefunction&gt;integer&lt;/inlinefunction&gt;&lt;arguments&gt;integer&lt;/arguments&gt;&lt;constant&gt;integer&lt;/constant&gt;&lt;variable&gt;integer&lt;/variable&gt;&lt;/datatype&gt;&lt;templatename oid="0"&gt;default&lt;/templatename&gt;&lt;write oid="0"&gt;REG_WRITE(memory_name,%a,%d)&lt;/write&gt;&lt;read oid="0"&gt;REG_READ(memory_name,%a)&lt;/read&gt;&lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt;&lt;fieldwrite oid="0"&gt;FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)&lt;/fieldwrite&gt;&lt;fieldread oid="0"&gt;FIELD_READ(memory_name,%a,%msb,%lsb)&lt;/fieldread&gt;&lt;timeunit1&gt;1&lt;/timeunit1&gt;&lt;timeunit2&gt;ns&lt;/timeunit2&gt;&lt;timeprecision1&gt;1&lt;/timeprecision1&gt;&lt;timeprecision2&gt;ns&lt;/timeprecision2&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/matlab&gt;&lt;csv&gt;&lt;commands&gt;&lt;isscmd oid="0"&gt;call&lt;/isscmd&gt;&lt;cmd oid="0"&gt;CALL&lt;/cmd&gt;&lt;isscmd oid="1"&gt;wait&lt;/isscmd&gt;&lt;cmd oid="1"&gt;WAIT&lt;/cmd&gt;&lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt;&lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt;&lt;isscmd oid="3"&gt;write_1_set&lt;/isscmd&gt;&lt;cmd oid="3"&gt;WRITE_SET&lt;/cmd&gt;&lt;isscmd oid="4"&gt;write&lt;/isscmd&gt;&lt;cmd oid="4"&gt;WRITE&lt;/cmd&gt;&lt;isscmd oid="5"&gt;switch&lt;/isscmd&gt;&lt;cmd oid="5"&gt;SWITCH&lt;/cmd&gt;&lt;/commands&gt;&lt;headers&gt;&lt;issheader oid="0"&gt;address&lt;/issheader&gt;&lt;header oid="0"&gt;address&lt;/header&gt;&lt;issheader oid="1"&gt;description&lt;/issheader&gt;&lt;header oid="1"&gt;description&lt;/header&gt;&lt;issheader oid="2"&gt;step&lt;/issheader&gt;&lt;header oid="2"&gt;step&lt;/header&gt;&lt;issheader oid="3"&gt;value&lt;/issheader&gt;&lt;header oid="3"&gt;value&lt;/header&gt;&lt;issheader oid="4"&gt;command&lt;/issheader&gt;&lt;header oid="4"&gt;command&lt;/header&gt;&lt;/headers&gt;&lt;timemultiplier&gt;100&lt;/timemultiplier&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;/csv&gt;&lt;/output&gt;&lt;/seqconfig&gt;&lt;/settings&gt; 
-   </div> 
+   </div>  
   </div> 
  </body>
 </html>
