@@ -1,0 +1,461 @@
+<html><head> 
+  <title>		Agnisys Register Spec	</title>     
+  <link id="ids_style_template" rel="stylesheet" type="text/css" href="..\.idsng/ids_template.css">
+  <script id="jqueryLib" src="..\.idsng/jquery-3.2.1.min.js"></script>
+  <script id="ids_js" src="..\.idsng/ids_template.js"></script>
+ </head> 
+ <body class="mainBody" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+  <div class="maindiv"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="mlHintContainer" style="display:none"> 
+     <a title="close window" id="mlHintClose" href="#" onclick="closehint();">x</a> 
+     <h4>Machine Learning hints :</h4> 
+     <p id="mlHintPara">end program</p> 
+    </div> 
+    <div class="spectoolbar"> 
+     <button onclick="click_btnprop()" id="btnprop">Show Prop</button> 
+     <button onclick="click_btndesc()" id="btndesc">Hide Desc</button> 
+    </div> 
+    <br> 
+    <h3>IDS Register Specification</h3> 
+    <div class="tocClass" readonly="true"></div> 
+    <br> 
+    <table contenteditable="false" id="tab00.35541278734270376" class="tocTable idsTemp" border="2" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr> 
+       <th colspan="4" title="add toc" class="tocheader" contenteditable="true" align="center" id="busname">Table of Content</th> 
+      </tr> 
+      <tr id="headings"> 
+       <th>heading </th> 
+       <th>component </th> 
+       <th>default </th> 
+       <th> address </th> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1</td> 
+       <td id="component"><a href="#1">block_name</a></td> 
+       <td id="default"></td> 
+       <td id="address"> 0x0 - 0x7</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.1</td> 
+       <td id="component">&nbsp;&nbsp;<a href="#1.1">reg_name</a></td> 
+       <td id="default">0x00000002</td> 
+       <td id="address"> 0x0</td> 
+      </tr> 
+      <tr id="replace"> 
+       <td id="index">1.2</td> 
+       <td id="component">&nbsp;&nbsp;<a href="#1.2">reg_name1</a></td> 
+       <td id="default">0x02400000</td> 
+       <td id="address"> 0x4</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table contenteditable="false" class="block idsTemp" onclick="tabClick(this)" id="tab10.9944933733238261"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1"></a><font size="3" color="blue">1</font></td> 
+       <td title="block name" class="name">block_name</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACeSURBVHjaYvz//z8DJYCJgULAYpAw6f+/f/8ZmJgYwQJ///1jYGZiYriwII8RWSFIHVYDQERKvAuK4LzFe7HalpaAqm7Wgj0QA7ABXDYSHQYwL4BodO9QNxBBxMJl+xiYGJnggYgLgPyMAUDpABfWj5/4H588CLMQ61S80UgsSIp1xohuFnJtJsoFyNGHyyDqRCOxAFsSZ6Q0OwMEGAB3Z2M39J265AAAAABJRU5ErkJggg"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0x0</label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass" style="display: none;"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass" style="display: table-cell;"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab20.803889094423106"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.1"></a><font size="3" color="blue">1.1</font></td> 
+       <td title="reg name" class="name">reg_name</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x0</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000002</label> 
+        </div> </td> 
+       <td class="regwidth hideWidth">32</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass" contenteditable="true" style="display: none;"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass" style="display: table-cell;"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab00.752769042066826" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits</td> 
+           <td class="lblfieldname">name</td> 
+           <td class="lblsw">s/w</td> 
+           <td class="lblhw">h/w</td> 
+           <td class="lbldefault">default</td> 
+           <td class="lbldesc">description</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" id="dragtar1819306997" data-id="dragtar18" onclick="setCurrRow(this)" class="field edited"> 
+           <td class="bits">0</td> 
+           <td class="fieldname">x</td> 
+           <td class="sw">ro</td> 
+           <td class="hw">rw</td> 
+           <td class="default">0</td> 
+           <td class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" id="dragtar1327593220" data-id="dragtar19" onclick="setCurrRow(this)" class="field edited"> 
+           <td class="bits">2:1</td> 
+           <td class="fieldname">y</td> 
+           <td class="sw">wo</td> 
+           <td class="hw">rw</td> 
+           <td class="default">1</td> 
+           <td class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <ol> 
+     <li>When a new IP is added, the reg template doesn't have any fields. Then if user clicks on Param View, and then clicks back to Register View, then there is no empty field row. Now there is no way to add a field.&nbsp;<br></li> 
+     <li>Cntrl-Space should list out the possible options like in {cntl-space should list all properties. Cntrl-space in s/w and h/w field should list all possible values.<br></li> 
+     <li>List of options is not always working</li> 
+     <li>Spell checking should work (like in word).</li> 
+     <li>In pop-up box - Error messages need to be fixed. msg="..." &lt;br&gt; ... &lt;/br&gt;</li> 
+     <li>The error messages that show up on a template can also be shown as a Call-out</li> 
+     <li>Can we paste images from the System Clip-board so that the copy-paste works.</li> 
+     <li>31:0 field1, 1:0 filed2 why is this causing a field overlap error.</li> 
+     <li>Are the register templates controlled by a css file for users to change what they look like?</li> 
+     <li>How to insert a row as the first row in the register template?</li>
+     <li>When you go to param view and come back, it does not retain the order in which the fields were added in the register template. It actually makes them low to high bits. (this is low priority)</li>
+     <li>When deleting a folder, it says "deleting file".</li>
+     <li>We should integrate SoC-enterprise code in this!! Is that possible?</li>
+     <li>We need a design hierarchy view for registers and for Headings. Example - how Word has Index, and IDSWord shows Register hierarchy, or ISS shows design hint.</li>
+     <li>Description should not be center justified, it should be left &nbsp;justified.</li>
+    </ol> 
+    <div> 
+     <br> 
+     <table contenteditable="false" onclick="tabClick(this)" class="reg idsTemp" id="tab40.6706799942326394"> 
+      <tbody> 
+       <tr> 
+        <td class="header readOnly"><a name="1.2"></a><font size="3" color="blue">1.2</font></td> 
+        <td title="reg name" class="name">reg_name1</td> 
+        <td title="offset" class="offset" colspan="2"></td> 
+        <td class="specImage"><img title="Register" alt="Register" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFWSURBVHja1JNdUoMwEMc3gM744EX0CF6iXsZXPY9Tq97Gj1ptRynfpKVQCCHbTWhLeebJzCSzf0h+5L+7MESEIcOCgWMwwLm+fRjm4WZ0h49fJY6nGU6mKV6N7vH1k+PzR4yT98Dopzef4ohmYvTL9xrHs62JHQ3JgwRUnYNqKgMNeQyIDSAooyOeAGM2RbbR8eIP7PPL1oJeZpEHFlaUEGkeLn7XdIAOs9ad6xWknT2EdJZADXkHWLqCvl6DUi1gHnDazI42f4IcdLkPJZ8tKrBtuwNEYQxKCsCmBQgvA3aSJ+FnPUDsx8CcbQdIVyVZaGi2nuc5gU4abL6p4bThio0EaVUdIOQFWErRbDeJlderVL1a9gBhWoJg0tzSAGRVwJn2vPe9SeCYA71mnB0vpJ2jEiZfOnZSuABn7YJ+Lw/tWfv9di2XPS25uy+oLtS//5l2AgwAgHLTw4hIPJYAAAAASUVORK5CYII"></td> 
+        <td class="address addCell readOnly"> 
+         <div class="splitVer setBorder" title="address"> 
+          <label class="label">address|</label> 
+          <label class="addrvalue">0x4</label> 
+         </div> 
+         <div class="splitVer" title="Default"> 
+          <label class="label">default |</label> 
+          <label class="defvalue">0x02400000</label> 
+         </div> </td> 
+        <td class="regwidth hideWidth">32</td> 
+       </tr> 
+       <tr> 
+        <td colspan="6" title="add properties" class="propclass" contenteditable="true" style="display: none;"></td> 
+       </tr> 
+       <tr> 
+        <td colspan="6" title="add description here" class="desc descclass" style="display: table-cell;"></td> 
+       </tr> 
+       <tr> 
+        <td colspan="6" class="border"></td> 
+       </tr> 
+       <tr> 
+        <td colspan="6" class="fieldtd"> 
+         <table class="fields idsTemp" id="tab10.2138439653675518" onclick="tabClick(this)"> 
+          <tbody> 
+           <tr class="label"> 
+            <td class="ddregbits">bits</td> 
+            <td class="lblfieldname">name</td> 
+            <td class="lblsw">s/w</td> 
+            <td class="lblhw">h/w</td> 
+            <td class="lbldefault">default</td> 
+            <td class="lbldesc">description</td> 
+           </tr> 
+           <tr onkeyup="setCurrRow(this)" id="dragtar239866673" data-id="dragtar21" onclick="setCurrRow(this)" class="field edited"> 
+            <td class="bits">31:10</td> 
+            <td class="fieldname">aaa</td> 
+            <td class="sw">ro</td> 
+            <td class="hw">wo</td> 
+            <td class="default">0</td> 
+            <td class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+           </tr> 
+           <tr onkeyup="setCurrRow(this)" id="dragtar-1925628630" data-id="dragtar20" onclick="setCurrRow(this)" class="field edited"> 
+            <td class="bits">1:0</td> 
+            <td class="fieldname">xyz</td> 
+            <td class="sw">ro</td> 
+            <td class="hw">wo</td> 
+            <td class="default">9</td> 
+            <td class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <br> 
+     <br> 
+    </div> 
+    <div>
+      16. We need a way to archive and share projects. 
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     17. Git needs to be integrated into the tool so that its easy to use. But we can't integrate everything - only useful things at first.
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     18. The menus need to be enabled based on the view, others should be disabled.
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     19. Additional buttons need to be build just like IDSWord (e.g. Import, Trig buffer Reg, ...)
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     20. I feel we should have additional help in this project so that we can speed up the development. If we don't do it quickly enough we will loose and no one will use it. See what happened with DVi - it hasn't gained traction yet. We should target by April end to have this fully functioning, ready for people to use. Please sort the lists and prioritize them
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+    </div> 
+    <div> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+    </div> 
+   </div> 
+   <div id="param_main" style="display:none"> 
+    <div id="divyml"> 
+     <label>Yamal Source : </label> 
+     <label id="lblyml"></label> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false"> 
+     <br> 
+     <table id="tab20.464943448743648" data-header="1.1" data-name="reg_name" data-offset="" data-addr="0x0" data-def="0x00000002" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="regname" contenteditable="true">reg_name</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="" class="regtab"> 
+          <tbody> 
+           <tr class="regheader"> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+           </tr> 
+           <tr> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget" colspan="2" style="background-color: #d4e0e2;"><p id="dragtar19" data-id="dragtar-786547865" data-size="2" data-name="y" data-sw="wo" data-hw="rw" data-default="1" data-desc="" draggable="true" class="dragtarget" title="y : 2">y</p></td> 
+            <td class="droptarget" colspan="1" style="background-color: #d4e0e2;"><p id="dragtar18" data-id="dragtar-426964996" data-size="1" data-name="x" data-sw="ro" data-hw="rw" data-default="0" data-desc="" draggable="true" class="dragtarget" title="x : 1">x</p></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+     <br> 
+     <table id="tab40.05417951005218513" data-header="1.2" data-name="reg_name1" data-offset="" data-addr="0x4" data-def="0x00000009" data-desc="" data-prop="" data-size="32" class="regcontainer"> 
+      <tbody> 
+       <tr> 
+        <td class="regname" contenteditable="true">reg_name1</td> 
+       </tr> 
+       <tr> 
+        <td> 
+         <table data-reg-type="" class="regtab"> 
+          <tbody> 
+           <tr class="regheader"> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+            <td></td> 
+           </tr> 
+           <tr> 
+            <td class="droptarget" colspan="0" style="background-color: white;"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget" colspan="10" style="background-color: rgb(212, 224, 226);"><p id="dragtar20" data-id="dragtar1431724779" data-size="10" data-name="xyz" data-sw="ro" data-hw="wo" data-default="9" data-desc="" draggable="true" class="dragtarget" title="xyz : 10">xyz</p></td> 
+            <td class="droptarget" colspan="2" style="background-color: rgb(212, 224, 226);"><p id="dragtar21" data-id="dragtar-474666696" data-size="2" data-name="aaa" data-sw="ro" data-hw="wo" data-default="0" data-desc="" draggable="true" class="dragtarget" title="aaa : 2" style="opacity: 1;">aaa</p></td> 
+            <td class="droptarget" style=""></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+            <td class="droptarget"></td> 
+           </tr> 
+          </tbody> 
+         </table></td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+   </div> 
+   <div id="seqdivcontainer" style="display:none"> 
+    <h2>Sequences</h2> 
+   </div> 
+  </div> 
+ 
+</body></html>

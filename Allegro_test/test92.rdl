@@ -1,1 +1,13 @@
 /***********Agnisys Inc. *************/
+addrmap block1{
+    reg {
+        field {
+            sw=rw;
+            hw=rw;
+        
+            
+        } f1[2];
+        
+    } reg1;
+    
+};
