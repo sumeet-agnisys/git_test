@@ -1,0 +1,1237 @@
+.param_update_span_meta{
+    display: none;
+}
+
+
+#paramcontainer .param_locked_register{
+    background-color: #879394 !important;
+}
+
+.ace_search {
+    background-color: #ddd;
+    border: 1px solid #cbcbcb;
+    border-top: 0 none;
+    max-width: 297px;
+    overflow: hidden;
+    margin: 0;
+    padding: 4px;
+    padding-right: 6px;
+    padding-bottom: 0;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    white-space: normal;
+}
+.ace_searchbtn_close {
+    border-radius: 50%;
+    border: 0 none;
+    color: #656565;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-family: Arial;
+    font-size: 16px;
+    height: 14px;
+    line-height: 16px;
+    margin: 5px 1px 9px 5px;
+    padding: 0;
+    text-align: center;
+    width: 14px;
+}
+.ace_search.right {
+    border-radius: 0px 0px 0px 5px;
+    border-right: 0 none;
+    right: 0;
+}
+
+.ace_search_form, .ace_replace_form {
+    border-radius: 3px;
+    border: 1px solid #cbcbcb;
+    float: left;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+
+.ace_search_field {
+    background-color: white;
+    border-right: 1px solid #cbcbcb;
+    border: 0 none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: 22px;
+    outline: 0;
+    padding: 0 7px;
+    width: 214px;
+    margin: 0;
+}
+
+.ace_searchbtn {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 27px;
+}
+
+.ace_searchbtn, .ace_replacebtn {
+    background: #fff;
+    border: 0 none;
+    border-left: 1px solid #dcdcdc;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 22px;
+    margin: 0;
+    position: relative;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.ace_searchbtn:last-child, .ace_replacebtn:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.ace_search_options {
+    margin-bottom: 3px;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ace_button {
+    margin-left: 2px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0.7;
+    border: 1px solid rgba(100,100,100,0.23);
+    padding: 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: black;
+}
+
+.ace_search_options {
+    margin-bottom: 3px;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ace_editor {
+    position: relative;
+    overflow: hidden;
+    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    direction: ltr;
+}
+
+.ace_button {
+    margin-left: 2px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0.7;
+    border: 1px solid rgba(100,100,100,0.23);
+    padding: 1px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: black;
+}
+
+.ace_button.checked {
+    border-color: #3399ff;
+    opacity: 1;
+}
+
+.replaceall{
+    min-width: 30px;
+}
+
+.param_block{
+    display:none !important;
+}
+
+.highlight{
+    position: absolute;
+    z-index: 99;
+    height: 8px;
+    width: 14%;
+    background-color: red;
+}
+
+#a_src_diff_file{
+    font-size: 11px;;
+}
+
+.diffnavi{
+    display:block;
+}
+
+.diffnavbtn{
+    font-size: 10px;
+    border-radius: 2px;
+}
+
+#difftoolbar{
+    position: fixed;
+    background-color: burlywood;
+    margin-top: -10px;
+    padding: 3px;
+    margin-left: -18px;
+    z-index:99;
+}
+
+.iframe_div{
+    height: 100%;
+    width: -webkit-fill-available;
+}
+
+.diff_div{
+    width: 50%;
+    background-color: grey;
+    float: left;
+
+}
+
+.diff{
+    background-color:#feffbb !important;
+}
+
+.menu_cell{
+    border: 1px solid grey !important;
+    min-width: 90px !important;
+}
+
+
+.param_menu_header{
+    font-size: 11px;
+    padding: 4px;
+    cursor: move;
+    z-index: 10;
+    border: 1px solid #a5a2a2;
+}
+
+.toolbar td{
+    border: 1px solid grey !important;
+}
+
+.sub_menu{
+    display: none;
+    position: absolute;
+    background: #cacaca;
+}
+
+.sub_menu table{
+    font-size: 11px;
+    width:10px !important;
+    padding: 0px;
+    height: 10px;
+    border: 1px solid #b1b1b1;
+    background:white !important;
+}
+
+.sub_menu table input{
+    font-size: 10px !important;
+    height: fit-content;
+}
+
+.param_menu{
+    display: none;
+    position: absolute;
+}
+
+.param_menu input{
+    font-size: 10px !important;
+    height: fit-content;
+    width: auto;
+}
+
+.param_menu textarea{
+    width: auto;
+    height: auto;
+}
+
+.param_menu button{
+    font-size: 10px;
+    float: right;
+    margin-left: 2px;
+}
+
+.param_menu td{
+    border: none;
+}
+
+#lblyml{
+    font-size: 12px;
+}
+
+#abstract{
+    display: none;
+}
+
+td.active{
+    border:1px solid blue;background-color:#e9eff8;
+}
+
+
+#divtoolbar{
+    margin-bottom: 1%;
+}
+
+#divtoolbar button{
+    font-size: 10px;
+    float: right;
+}
+
+.disbtd{
+    background-color: #f1f1f1;
+    border: 1px solid #d6d6d6 !important;
+}
+.paramname{
+    width: 11%;    
+}
+
+.paramnameheader{
+    font-weight: bold;
+}
+
+#scroller{
+    border: 1px solid black;
+    position: fixed;
+    z-index: 99;
+    background-color: #d2cdcd;
+    opacity: .8;
+    left: 92%;
+    border-collapse: collapse;
+}
+#scroller img{
+    width: 22px;
+    height: 14px;
+}
+
+
+div#idsexcelcontainer table.exeltable td {
+    border: 1px solid #cacaca;
+    padding: 5px;
+    margin: 0px;
+    -webkit-user-modify: read-write;
+    vertical-align: top;
+    text-align: left;
+}
+
+.spec_head{
+    color: grey;
+}
+
+#regdivcontainer table.idsTemp td{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+
+
+
+#selectable tr.ui-selecting { background: #FECA40; }
+#selectable tr.ui-selected { background: #F39814; color: white; }
+
+div#idsexcelcontainer tr.rowheader td{
+    text-align: center;
+    font-size: 12px;
+}
+
+.leftheader {
+    text-align: center !important;
+    width: 20;
+    background-color: #c2d9e9;
+    font-size: 12px;
+}
+
+#exceltemplate a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#ahidetemp{
+    position: absolute;
+    top: 0px;
+    left: 93%;
+    border: 1px solid #656464;
+    border-radius: 12px;
+    width: 18px;
+    text-align: center;
+    background: #ff1818;
+    color: white;
+    font-weight: bold;
+}
+
+#submenucopy{
+    top:29%;
+}
+.idsmenu a:hover {background-color: #ddd}
+.idsmenu a, .submenu a {
+    color: black;
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+
+.idsmenu{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+
+
+
+.context-menu:hover{
+    background-color: red;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    top: 74%;
+    left: 100%;
+    width: 100%
+}
+
+
+#backhidder{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #afafaf;
+    opacity: 0.5;
+    display: block;
+    z-index: -1;
+}
+#exceltemplate{
+    display: block;
+    position: absolute;
+    z-index: 99;
+    top: 5%;
+    left: 34%;
+    background-color: #ffffff;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    height: 80%}
+#exceltemplate td{
+    padding: 8px !important;
+}
+#exceltemplate th{
+    padding: 8px !important;
+}
+
+#spreadsheetcontainer{
+    overflow: scroll;
+    height: 92%;
+}
+
+.colheader{
+    padding: 0px !important;
+}
+
+#idsexcelcontainer{
+}
+
+div#idsexcelcontainer table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid grey;
+    width: 100%;
+    font-size: 14px;
+}
+div#idsexcelcontainer #exceltemplate td {
+    border:1px solid #cacaca;
+    padding: 5px;
+    margin: 0px;
+    /*-webkit-user-modify: read-write;*/
+    vertical-align: top;
+    text-align: left;
+}
+
+div#idsexcelcontainer div.col {
+    resize: horizontal;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+    display:block;
+    cursor: pointer;
+}
+
+div#idsexcelcontainer div.row {
+    resize: vertical;
+    overflow: auto;
+    width: 28px;
+    margin: 0px;
+    padding: 0px;
+    display:block;
+    cursor: pointer;
+}
+
+div#idsexcelcontainer td div {
+    border: 0;
+    width: auto;
+    height: auto;
+    min-height: 20px;
+    min-width: 20px;
+}
+.rowheader{
+    -webkit-user-modify: read-only;
+    background-color: #C2D9E9;
+    padding: 0px !important;
+}
+.row{
+    -webkit-user-modify: read-only;
+    background-color: #C2D9E9;
+}
+.col input[type=radio], .row input[type=checkbox]{
+    height: 10px;
+    width: 12px;
+}
+.exeltable a{
+    font-size: 12px;
+}
+
+/************************************************************************param view start**********************************************************************/
+.seqcmd{
+    width: 25%
+}
+
+.seqcmdval{
+    width: 15%;
+}
+
+.seqcmddesc{
+    width: 18%;
+}
+
+.seqcmdrefpath{
+    width: 14%;
+}
+
+#regdivcontainer {
+    outline: none;
+}
+
+.dragtarget {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    /*user-select: all;*/
+}
+
+.overflow {
+    width: 10em;
+    outline: 1px solid #000;
+    margin: 0 0 2em 0;
+    /**			* Required properties to achieve text-overflow			*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.droptarget {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.regtab {
+    table-layout: fixed;
+    border: 1px solid #aaaaaa;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.regtab td {
+    border: 1px solid #aaaaaa;
+    text-align: center;
+}
+
+.dragtarget1 {
+    background-color: #d4e0e2;
+    height: 100%;
+    width: 100%;
+}
+
+.regtab tr.regheader td {
+    background-color: black;
+    height: 3px;
+}
+
+.regcontainer {
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #aaaa;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+    font-family: serif;
+}
+
+.regcontainer td {
+    border: 1px solid grey;
+}
+
+.regcontainer .header {
+    width: 90px;
+}
+
+.reggroup, .endreggroupparam {
+    border: 1px solid #aaaa;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+    font-family: serif;
+    width: 100%;
+    background-color: #70979d;
+    color: white;
+}
+
+.reggroup td {
+    border: 1px solid grey;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.menu {
+    width: 150px;
+    box-shadow: 3px 3px 5px #888888;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: fixed;
+    display: none;
+}
+
+.menu-item {
+    height: 20px;
+}
+
+.menu-item:hover {
+    background-color: #6CB5FF;
+    cursor: pointer;
+}
+
+#diffview {
+    height: 300px;
+    width: 180px;
+    border: 1px solid black;
+    float: left;
+    padding: 2px;
+}
+
+.difftab {
+    float: left;
+    border: 1px solid black;
+    width: 90px;
+}	
+/************************************************************************param view end***********************************************************************/
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: absolute;
+    /*display: inline-block;*/;
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type=text] {
+    background-color: #f1f1f1;
+    /*width: 100%;*/;
+}
+
+input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    opacity: 0.9;
+}
+
+.autocomplete-items div {
+    padding: 5px;
+    /*
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    */
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+
+.autocomplete-items::-webkit-scrollbar {
+    width: 2px;
+}
+
+.autocomplete-items::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.autocomplete-items::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+#mlHintClose {
+    float: right;
+    margin-top: -2%;
+    margin-right: -9%;
+    font-size: 20px;
+}
+
+#mlHintContainer {
+    border: 1px solid grey;
+    width: 15%;
+    position: fixed;
+    margin-top: 12%;
+    margin-left: 66%;
+    padding: 0px 20px 2px 8px;
+    font-family: serif;
+    font-size: 12px;
+    box-shadow: 1px 1px grey;
+    background-color: white;
+    z-index: 99;
+
+}
+
+#seqdivcontainer {
+    -webkit-user-modify: read-write;
+    outline: none;
+}
+
+.seq {
+    width: 100% !important;
+    margin-left: 0px !important;
+}
+
+.seq td{
+    padding-left: 0px;
+}
+
+.seq table td{
+    padding-left: 5px;
+}
+
+.seq table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 0px !important;
+}
+
+.command .lblvalue {
+    width: 5%;
+}
+
+.hintcls {
+    width: 200px;
+    height: 46px;
+    position: absolute;
+    margin-left: 208px;
+}
+
+.disablecell {
+    background-color: #e4e4e4;
+    -webkit-user-modify: read-only !important;
+}
+
+.refpathtd {
+    padding: 0;
+    padding-left: 0 !important;
+}
+
+.refpathtab {
+    width: 100% !important;
+    margin-left: 0 !important;
+    border: none;
+    box-shadow: none;
+}
+
+.lblrefname {
+    width: 8%;
+}
+
+.lblpath {
+    width: 7%;
+}
+
+.lbltype {
+    width: 8%;
+}
+
+.reftype {
+    width: 17%;
+    -webkit-user-modify: read-write;
+}
+
+.lblfieldname {
+    width: 30%;
+}
+
+.fields {
+    width: 100% !important;
+    position: relative;
+    margin-left: 0px !important;
+    border: none;
+    box-shadow: none;
+}
+
+.fieldtd {
+    padding: 0;
+    padding-left: 0 !important;
+}
+
+.emptyspace{
+    background-color: white;
+}
+
+.ddregbits {
+    width: 6%;
+}
+
+.lblsw {
+    width: 6%;
+}
+
+.lblhw {
+    width: 6%;
+}
+
+.lbldefault {
+    width: 10%;
+}
+
+.spectoolbar {
+    background-color: #d6d5d5;
+    float: right;
+    -webkit-user-modify: read-only;
+    padding: 2px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.spectoolbar button {
+    font-family: -webkit-body;
+    font-size: 11px;
+}
+
+.maindiv {
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    min-height: 500px;
+    box-shadow: 1px 1px 1px grey;
+    width: 96%;
+    float:left;
+}
+
+.mainBody {
+    background-color: lightgrey;
+}
+
+.signals {
+}
+
+.hideWidth {
+    color: transparent;
+    width: 0%;
+    display: none;
+}
+
+
+.enumname {
+    width: 60% !important;
+}
+
+.param {
+}
+
+.phead{
+    font-weight: bold;
+}
+
+.regcontainer td{
+    padding-left: 0px;
+}
+
+.tocTable {
+    text-align: left !important;
+    table-layout: auto !important;
+    background-color: #ecebeb;
+    word-break: break-all;
+}
+.tocTable th.heading{
+    width: 17%;
+}
+.tocTable th.component{
+    width: 29%;    
+}
+.tocTable th.default{
+    width: 19%;
+}
+.tocTable th.address{
+    width: 33%;
+}
+
+.tocTable #default{
+    word-break:break-word;
+}
+
+table.tocTable th {
+    padding-left: 5px;
+}
+
+table.tocTable td {
+    padding-left: 5px;
+}
+
+.arg{
+    box-shadow: none!important;
+}
+.arg .header{
+    background-color: #e2edf4;
+}
+
+.const{
+    box-shadow: none!important;
+}
+.const .header{
+    background-color: #e2edf4;
+}
+
+.var{
+    box-shadow: none !important;
+}
+.var .header{
+    background-color: #e2edf4;
+}
+
+.header {
+    width: 80px;
+    background-color: #C2D9E9;
+}
+
+.name {
+    width: 16%;
+    -webkit-user-modify: read-write;
+}
+
+.offset {
+    width: 7%;
+    -webkit-user-modify: read-write;
+}
+
+.add {
+    font-size: 9px !important;
+    background-color: #C2D9E9;
+    width: 176px;
+    height: 24px !important;
+}
+
+.img {
+    width: 25px;
+}
+
+.descclass {
+    width: 485px;
+    height: 18px !important;
+    -webkit-user-modify: read-write;
+}
+
+.desc{
+    text-align: left;
+}
+
+
+
+.propclass {
+    width: 485px;
+    height: 18px !important;
+    -webkit-user-modify: read-write;
+    background-color: #d1e4f5;
+    text-align: left;
+}
+
+.tocheader {
+    height: 18px !important;
+    -webkit-user-modify: read-only;
+    background-color: #C2D9E9;
+    /*color change*/;
+}
+
+.size {
+    width: 75px;
+}
+
+.fieldname {
+    width: 150px;
+}
+
+.default {
+    width: 105px;
+}
+
+.defvalue{
+    word-break: break-all;
+}
+
+.sw {
+    width: 75px;
+}
+
+.hw {
+    width: 75px;
+}
+
+.refname {
+    -webkit-user-modify: read-write;
+    width: 22%;
+}
+
+.refpath {
+    -webkit-user-modify: read-write;
+}
+
+.fielddesc {
+    /*width: 150px;*/;
+}
+
+
+.endreggroup {
+    text-align: center;
+    width: 495px;
+}
+
+textArea {
+    width: 98%;
+    height: 14px;
+    font-size: 11px;
+}
+
+.specImage {
+    width: 30px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.wideWidthName {
+    width: 173px;
+}
+
+.address {
+    width: 15%;
+}
+
+.enumblank{
+    width: 14%;
+}
+
+.propInput {
+    background-color: #ECD0BF;
+    border: none;
+}
+
+.descInput {
+    background-color: white;
+}
+
+.disabletemplate{
+    background-color: #e2e2e2;
+}
+
+.setreadonly{
+    -webkit-user-modify:read-only !important;
+}
+
+.label {
+    background-color: #98BAD3;
+}
+
+label {
+}
+
+.readOnly {
+    background-color: #C2D9E9;
+}
+
+.addCell {
+    text-align: left;
+}
+
+.thirdCell {
+    width: 100%;
+}
+
+.dropDownBitSize {
+    width: 100%;
+    font-size: 11px;
+}
+
+.idsTemp {
+    width: 88%;
+    -webkit-user-modify: read-only;
+    box-shadow: rgb(128, 128, 128) 1px 1px 1px;
+}
+
+.idsTemp tr.edited > td {
+    -webkit-user-modify: read-write;
+}
+
+.editable{
+    -webkit-user-modify: read-write;
+}
+
+.splitVer {
+    height: 10px;
+    font-size: 9px;
+}
+
+.setBorder {
+    border-bottom: 1px solid grey;
+}
+
+input {
+    border: none;
+    font-size: 12px;
+    /*
+    width: 98%;
+    height: 100%;
+    */
+}
+
+table.idsTemp {
+    border-collapse: collapse;
+    margin-left: 5%;
+    font-family: serif;
+    font-size: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    table-layout: fixed;
+    box-shadow: 1px 1px grey;
+}
+
+td {
+    height: 15px;
+}
+
+table.idsTemp, th, td {
+    border: 1px solid grey;
+    word-wrap: break-word;
+    padding-left: 5px;
+}
+
+.bits {
+    width: 80px;
+}
+
+.border {
+    background-color: #6791B0;
+    height: 4px;
+}
+#div_right_pane {
+    float: right;
+    width: 13%;
+    vertical-align: top;
+    overflow: auto;
+    max-height: 100%;       
+    right: 0px;
+    top: 22px;
+    position: fixed;
+}
+
+#div_param_diff_container{
+    font-size: 12px;
+}
+.minmax { 
+    position: fixed;
+    top: 2px;
+    right: 0px;
+}
+
+
+.maindiv.minmaindiv {
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+    min-height: 500px;
+    box-shadow: 1px 1px 1px grey;
+    width: 82%;
+}
