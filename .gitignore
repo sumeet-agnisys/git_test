@@ -1,0 +1,11 @@
+*.js
+*.css
+.idsng
+.ids
+.~$*.htm
+*.bak
+*\*.js
+*\*.css
+*\.ids
+*\.~$*.htm
+*\.diff
