@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<block id="tab0.7773234813988984" name="chipname"><section id="tab0.0694831553022992" name="test68" offset="0"><reg id="tab0.1806000367678513" name="regname" offset="0"><config><regwidth>32</regwidth></config><field id="field_5" offset="31:10" name="f1"><sw>rw</sw><hw>ro</hw><default>0</default></field></reg></section><config><variants><variant name="none" isselected="true"><doc>'none' variant states including all templates which are not assigned any 
-  variant property.</doc></variant></variants><regwidth>8</regwidth><buswidth>8</buswidth><addressunit>8</addressunit><blocksize>4096</blocksize></config></block>
