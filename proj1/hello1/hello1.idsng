@@ -135,7 +135,7 @@
        <td colspan="5" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass"></td> 
+       <td colspan="5" title="add description here" class="desc descclass">{</td> 
       </tr> 
      </tbody> 
     </table> 
@@ -185,7 +185,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{registered=false}</td> 
           </tr> 
          </tbody> 
         </table></td> 
