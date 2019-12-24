@@ -4,8 +4,3 @@
 .ids
 .~$*.htm
 *.bak
-*\*.js
-*\*.css
-*\.ids
-*\.~$*.htm
-*\.diff
