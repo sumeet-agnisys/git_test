@@ -8,7 +8,7 @@
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
    </div> 
-   <div id="regdivcontainer" contenteditable="true" style="display:none"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
@@ -123,95 +123,15 @@
     <br> 
     <br>  
    </div> 
-   <div id="param_main" style="display:block" oncontextmenu="maincontextcall(event);"> 
+   <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
     <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"> 
-     <br> 
-     <table class="regcontainer" style="border: 1px solid grey;"> 
-      <tbody> 
-       <tr> 
-        <td class="paramname paramnameheader">Address</td> 
-        <td class="paramname paramnameheader">Register<br>Name</td> 
-        <td>bit<br>31</td> 
-        <td>bit<br>30</td> 
-        <td>bit<br>29</td> 
-        <td>bit<br>28</td> 
-        <td>bit<br>27</td> 
-        <td>bit<br>26</td> 
-        <td>bit<br>25</td> 
-        <td>bit<br>24</td> 
-        <td>bit<br>23</td> 
-        <td>bit<br>22</td> 
-        <td>bit<br>21</td> 
-        <td>bit<br>20</td> 
-        <td>bit<br>19</td> 
-        <td>bit<br>18</td> 
-        <td>bit<br>17</td> 
-        <td>bit<br>16</td> 
-        <td>bit<br>15</td> 
-        <td>bit<br>14</td> 
-        <td>bit<br>13</td> 
-        <td>bit<br>12</td> 
-        <td>bit<br>11</td> 
-        <td>bit<br>10</td> 
-        <td>bit<br>9</td> 
-        <td>bit<br>8</td> 
-        <td>bit<br>7</td> 
-        <td>bit<br>6</td> 
-        <td>bit<br>5</td> 
-        <td>bit<br>4</td> 
-        <td>bit<br>3</td> 
-        <td>bit<br>2</td> 
-        <td>bit<br>1</td> 
-        <td>bit<br>0</td> 
-       </tr> 
-      </tbody> 
-     </table> 
-     <table title="reha:32
-prop:
-desc:" id="tab0.9167619036088236" data-header="1.1" data-name="reha" data-offset="" data-addr="0x0" data-def="0x00000000" data-desc="" data-prop="" data-size="32" class="regcontainer" style="border: 1px solid grey;"> 
-      <tbody> 
-       <tr> 
-        <td class="paramname" rowspan="2">0x0</td> 
-        <td class="regname paramname" rowspan="2">reha</td> 
-       </tr> 
-       <tr> 
-        <td> 
-         <table data-reg-type="" class="regtab"> 
-          <tbody> 
-           <tr> 
-            <td class="droptarget" title="31 bit"></td>
-            <td class="droptarget" title="30 bit" style="border: 1px solid grey;"></td>
-            <td class="droptarget" title="29 bit" style="border: 1px solid grey;"></td>
-            <td class="droptarget" title="28 bit" style="border: 1px solid grey;"><p id="dragtar0.8605663669637437" style="background-color: rgb(212, 224, 226); opacity: 1;" data-id="tab_field0.8133832245149825" data-size="1" data-name="kwel" data-sw="rw" data-hw="ro" data-default="0" data-desc="" draggable="true" class="dragtarget" title="kwel 1
-sw access : rw
-hw access : ro
-default : 0
-desc:">kwel</p></td>
-            <td class="droptarget" title="27 bit"></td>
-            <td class="droptarget" title="26 bit" style="border: 1px solid grey;"></td>
-            <td class="droptarget" title="25 bit" colspan="10" style="background-color: rgb(212, 224, 226); border: 1px solid grey;"><p id="dragtar0" data-id="field" data-size="10" data-name="hha" data-sw="rw" data-hw="ro" data-default="0" data-desc="knfmk.d,.s" draggable="true" class="dragtarget" title="hha:10
-sw:rw
-hw:ro
-def:0
-desc:knfmk.d,.s">hha</p></td> 
-            <td class="droptarget" title="15 bit" colspan="16" style="background-color: #d4e0e2"><p id="dragtar1" data-id="field0.576061444198565" data-size="16" data-name="uywhkjk" data-sw="r/wc" data-hw="wo" data-default="0" data-desc=":Lfiuldkh" draggable="true" class="dragtarget" title="uywhkjk - 16
-sw access : r/wc
-hw access : wo
-default : 0
-desc : :Lfiuldkh ">uywhkjk</p></td> 
-           </tr> 
-          </tbody> 
-         </table></td> 
-       </tr> 
-      </tbody> 
-     </table> 
     </div>   
    </div> 
-   <div id="seqdivcontainer" style="display:none"> 
+   <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">Sequences</b> 
     </div> 
