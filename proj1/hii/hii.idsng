@@ -105,7 +105,7 @@
        <td colspan="6" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass">{repeat=10}</td> 
+       <td colspan="6" title="add description here" class="desc descclass"><br></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
