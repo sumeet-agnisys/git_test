@@ -63,7 +63,7 @@
        <td colspan="5" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">{repeat=10}</td> 
+       <td colspan="5" title="add description here" class="desc descclass"><br></td> 
       </tr> 
      </tbody> 
     </table> 
@@ -135,7 +135,7 @@
        <td colspan="5" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">{</td> 
+       <td colspan="5" title="add description here" class="desc descclass"><br></td> 
       </tr> 
      </tbody> 
     </table> 
