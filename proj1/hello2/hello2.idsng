@@ -52,7 +52,7 @@
        <td colspan="6" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"></td> 
+       <td colspan="6" title="add description here" class="desc descclass">{clock_enable=true}</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
