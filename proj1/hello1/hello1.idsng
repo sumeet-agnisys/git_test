@@ -63,7 +63,7 @@
        <td colspan="5" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass"></td> 
+       <td colspan="5" title="add description here" class="desc descclass">{repeat=10}</td> 
       </tr> 
      </tbody> 
     </table> 
@@ -89,7 +89,7 @@
        <td colspan="6" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"></td> 
+       <td colspan="6" title="add description here" class="desc descclass"><br></td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -135,12 +135,12 @@
        <td colspan="5" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass"></td> 
+       <td colspan="5" title="add description here" class="desc descclass">{</td> 
       </tr> 
      </tbody> 
     </table> 
     <br> 
-    <br>  
+    <br> 
     <table data-width="32" onclick="tabClick(this);" class="reg idsTemp" id="tab_reg320.1092896097500784"> 
      <tbody> 
       <tr> 
@@ -162,7 +162,7 @@
        <td colspan="6" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass">{counter=incr}</td> 
+       <td colspan="6" title="add description here" class="desc descclass">{external=true}</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -185,7 +185,7 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{registered=false}</td> 
           </tr> 
          </tbody> 
         </table></td> 
