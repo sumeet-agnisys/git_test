@@ -1,477 +1,118 @@
 /*************************************************************************param view start*********************************************************************/
-const REG_DIV_CONTAINER = "regdivcontainer";
-const PARAM_DIV_CONTAINER = "param_main";
-const PARAM_DIFF_CONTAINER_ID = "div_param_diff_container";
-const PARAM_CONTAINER = "paramcontainer";
-const SEQ_DIV_CONTAINER = "seqdivcontainer";
-const SPREAD_DIV_CONTAINER = "idsexcelcontainer";
-const REGHISTORY = "reghistory";
-const PARAMHISTORY = "paramhistory";
-const SEQHISTORY = "seqhistory";
-const SPREADHISTORY = "spreadhistory";
-const FILE_ID = "data-file-id";
-const DIV_HISTORY = "divhistory";
-const HISTORY_SIZE = 50;
-const REGHIST = "reghist";
-const PAMHIST = "pamhist";
-const SEQHIST = "seqhist";
-const SPREHIST = "sprehist";
-const encrypt1 = "$#&&#";
-const encrypt2 = "#$&&$";
-const REG_META_DATA = "reg_meta_data";
+var REG_DIV_CONTAINER="regdivcontainer";
+var PARAM_DIV_CONTAINER="param_main";
+var SEQ_DIV_CONTAINER="seqdivcontainer";
+var SPREAD_DIV_CONTAINER="idsexcelcontainer";
 
+/*
+function showParamView() {
+    document.getElementById("paramcontainer").style.display = "block";
+    document.getElementById(REG_DIV_CONTAINER).style.display = "none";
+}
 
+function hideregview() {
+    document.getElementById("paramcontainer").style.display = "block";
+    document.getElementById(REG_DIV_CONTAINER).style.display = "none";
+}
 
-var regHistoryArraay = [];
-var regHistoryArr = [];
-var regHistoryIndex = 0;
-var paramHistoryArr = [];
-var paramHistoryIndex = 0;
-var paramDiffPane = [];
-var paramDiffPaneIndex = 0;
-var seqHistoryArr = [];
-var seqHistoryIndex = 0;
-var spreadHistoryArr = [];
-var spreadHistoryIndex = 0;
-var isundofirsttimeclicked = true;
+function updateParamView(str) {
+    document.getElementById(REG_DIV_CONTAINER).innerHTML = str;
+}
 
-//var bodyArr = {};
-//var index = 0;
-var testob = [];
-var testcounter = 0;
-var histJson = {};
-histJson.data = new Array();
+function regviewupdate(str) {
+    document.getElementById(REG_DIV_CONTAINER).innerHTML = str;
+    document.getElementById("paramcontainer").style.display = "none";
+    document.getElementById(REG_DIV_CONTAINER).style.display = "block";
+}
+*/
+/*
+var menuDisplayed = false;
+var menuBox = null;
+*/
+/*
+function clearall() {
+    document.getElementById("paramcontainer").innerHTML = "";
+    document.getElementById("regdivcontainer").innerHTML = "";
+}
+*/
+var bodyArr = {};
+var index = 0;
 
 function addIntoHistory() {
-    /*
-     try {
-     $('#regmenu').css({'display': 'none'});
-     $('.param_menu').css({'display': 'none'});
-     $('#seqmenu').css({'display': 'none'});
-     } catch (e) {
-     }
-     */
-    if (isRegViewOn()) {
-        if (regHistoryArraay[regHistoryIndex - 1] !== document.getElementById(REG_DIV_CONTAINER).innerHTML) {
-            var dochis = document.cloneNode(true);
-            $(dochis).find("#regmenu").css({'display': 'none'});
-
-            try {
-                $(dochis).find("#table_context_menu").css({'display': 'none'});
-            } catch (e) {
-            }
-
-            regHistoryArraay[regHistoryIndex] = $(dochis).find("#" + REG_DIV_CONTAINER).html();
-            regHistoryIndex++;
-        }
-    } else if (isParamViewOn()) {
-        if (paramHistoryArr[paramHistoryIndex - 1] !== document.getElementById(PARAM_DIV_CONTAINER).innerHTML) {
-            var dochis = document.cloneNode(true);
-            $(dochis).find(".param_menu").css({'display': 'none'});
-            paramHistoryArr[paramHistoryIndex] = $(dochis).find("#" + PARAM_DIV_CONTAINER).html();
-            paramHistoryIndex++;
-
-            try {
-                paramDiffPane[paramDiffPaneIndex] = $(dochis).find("#" + PARAM_DIFF_CONTAINER_ID).html();
-                paramDiffPaneIndex++;
-            } catch (e) {
-            }
-        }
-    } else if (isSeqViewOn()) {
-        if (seqHistoryArr[seqHistoryIndex - 1] !== document.getElementById(SEQ_DIV_CONTAINER).innerHTML) {
-            seqHistoryArr[seqHistoryIndex] = document.getElementById(SEQ_DIV_CONTAINER).innerHTML;
-            seqHistoryIndex++;
-        }
-    } else if (isSpreadViewOn()) {
-        if (spreadHistoryArr[spreadHistoryIndex - 1] !== document.getElementById(SPREAD_DIV_CONTAINER).innerHTML) {
-            var dochis = document.cloneNode(true);
-            $(dochis).find("#seqmenu").css({'display': 'none'});
-            spreadHistoryArr[spreadHistoryIndex] = $(dochis).find("#" + SPREAD_DIV_CONTAINER).html();
-            spreadHistoryIndex++;
-        }
-    }
-
+    bodyArr[index] = document.body.innerHTML;
+    index++;
 }
 
-
-//@FXML
-function undo() {
-    if (isRegViewOn()) {
-        if (typeof (regHistoryArraay[regHistoryIndex - 1]) !== 'undefined' && regHistoryArraay[regHistoryIndex - 1] !== null) {
-            regHistoryIndex--;
-            document.getElementById(REG_DIV_CONTAINER).innerHTML = regHistoryArraay[regHistoryIndex];
+function KeyPress(e) {
+    var evtobj = window.event ? event : e; /*undo*/
+    if (evtobj.keyCode === 90 && evtobj.ctrlKey) {
+        if (typeof(bodyArr[index - 1]) !== 'undefined' && bodyArr[index - 1] !== null) {
+            index--;
+            document.body.innerHTML = bodyArr[index];
         }
-    } else if (isParamViewOn()) {
-        if (typeof (paramHistoryArr[paramHistoryIndex - 1]) !== 'undefined' && paramHistoryArr[paramHistoryIndex - 1] !== null) {
-            paramHistoryIndex--;
-            document.getElementById(PARAM_DIV_CONTAINER).innerHTML = paramHistoryArr[paramHistoryIndex];
+        return false;
+    } /*redo*/
+    else if (evtobj.keyCode === 89 && evtobj.ctrlKey) {
+        if (typeof(bodyArr[index + 1]) !== 'undefined' && bodyArr[index + 1] !== null) {
+            index++;
+            document.body.innerHTML = bodyArr[index];
         }
-
-        try {
-            if (typeof (paramDiffPane[paramDiffPaneIndex - 1]) !== 'undefined' && paramDiffPane[paramDiffPaneIndex - 1] !== null) {
-                paramDiffPaneIndex--;
-                document.getElementById(PARAM_DIFF_CONTAINER_ID).innerHTML = paramDiffPane[paramDiffPaneIndex];
-            }
-        } catch (e) {
-
-        }
-
-    } else if (isSeqViewOn()) {
-        if (typeof (seqHistoryArr[seqHistoryIndex - 1]) !== 'undefined' && seqHistoryArr[seqHistoryIndex - 1] !== null) {
-            seqHistoryIndex--;
-            document.getElementById(SEQ_DIV_CONTAINER).innerHTML = seqHistoryArr[seqHistoryIndex];
-        }
-    } else if (isSpreadViewOn()) {
-        if (typeof (spreadHistoryArr[spreadHistoryIndex - 1]) !== 'undefined' && spreadHistoryArr[spreadHistoryIndex - 1] !== null) {
-            spreadHistoryIndex--;
-            document.getElementById(SPREAD_DIV_CONTAINER).innerHTML = spreadHistoryArr[spreadHistoryIndex];
-        }
-    }
-    updatelostEvents();
-    return false;
-}
-
-function redo() {
-    if (isRegViewOn()) {
-        if (typeof (regHistoryArraay[regHistoryIndex + 1]) !== 'undefined' && regHistoryArraay[regHistoryIndex + 1] !== null) {
-            regHistoryIndex++;
-            document.getElementById(REG_DIV_CONTAINER).innerHTML = regHistoryArraay[regHistoryIndex];
-        }
-    } else if (isParamViewOn()) {
-        if (typeof (paramHistoryArr[paramHistoryIndex ]) !== 'undefined' && paramHistoryArr[paramHistoryIndex ] !== null) {
-            document.getElementById(PARAM_DIV_CONTAINER).innerHTML = paramHistoryArr[paramHistoryIndex];
-            paramHistoryIndex++;
-        }
-
-        try {
-            if (typeof (paramDiffPane[paramDiffPaneIndex ]) !== 'undefined' && paramDiffPane[paramDiffPaneIndex ] !== null) {
-                document.getElementById(PARAM_DIFF_CONTAINER_ID).innerHTML = paramDiffPane[paramDiffPaneIndex];
-                paramDiffPaneIndex++;
-            }
-        } catch (e) {
-            console.log("error redo diff pane : " + e.message);
-        }
-
-    } else if (isSeqViewOn()) {
-        if (typeof (seqHistoryArr[seqHistoryIndex + 1]) !== 'undefined' && seqHistoryArr[seqHistoryIndex + 1] !== null) {
-            seqHistoryIndex++;
-            document.getElementById(SEQ_DIV_CONTAINER).innerHTML = seqHistoryArr[seqHistoryIndex];
-        }
-    } else if (isSpreadViewOn()) {
-        if (typeof (spreadHistoryArr[spreadHistoryIndex + 1]) !== 'undefined' && spreadHistoryArr[spreadHistoryIndex + 1] !== null) {
-            spreadHistoryIndex++;
-            document.getElementById(SPREAD_DIV_CONTAINER).innerHTML = spreadHistoryArr[spreadHistoryIndex];
-        }
-    }
-
-    /*
-     if (typeof (bodyArr[index + 1]) !== 'undefined' && bodyArr[index + 1] !== null) {
-     index++;
-     document.body.innerHTML = bodyArr[index];
-     }
-     */
-    updatelostEvents();
-    return false;
-}
-
-
-function getFileID() {
-    var file_id;
-    try {
-        file_id = document.getElementsByTagName("body")[0].getAttribute(FILE_ID);
-        if (!file_id || file_id === null) {
-            file_id = Math.random();
-            document.getElementsByTagName("body")[0].setAttribute(FILE_ID, file_id);
-        }
-    } catch (e) {
-        file_id = Math.random();
-    }
-    return file_id;
-}
-
-function getRegHistoryID() {
-    try {
-        return REGHISTORY + getFileID();
-    } catch (e) {
-        return REGHISTORY;
+        return false;
     }
 }
+document.onkeydown = KeyPress;
 
-function getParamHistoryID() {
-    try {
-        return PARAMHISTORY + getFileID();
-    } catch (e) {
-        return PARAMHISTORY;
-    }
-}
-
-function getSeqHistoryID() {
-    try {
-        return SEQHISTORY + getFileID();
-    } catch (e) {
-        return SEQHISTORY;
-    }
-}
-
-function getSpreadHistoryID() {
-    try {
-        return SPREADHISTORY + getFileID();
-    } catch (e) {
-        return SPREADHISTORY;
-    }
-}
-
-function clearLocalStorage() {
-    /*    localStorage.removeItem(getRegHistoryID());
-     localStorage.removeItem(getParamHistoryID());
-     localStorage.removeItem(getSeqHistoryID());
-     localStorage.removeItem(getSpreadHistoryID());
-     */
-}
-
-function getHistory() {
-    try {
-        var reghis = document.getElementsByClassName(REGHIST);//document.querySelector('#' + DIV_HISTORY + ' .reghist'); //document.getElementsByClass("reghist")[0].getElementsByTagName("p");
-        if (reghis !== null) {
-            for (var i = 0; i < reghis.length; i++) {
-                regHistoryArraay[i] = decryptHtml(reghis[i].innerText);
-            }
-            regHistoryIndex = regHistoryArraay.length;
-            isundofirsttimeclicked = false;
-        }
-
-        var paramhis = document.getElementsByClassName(PAMHIST);// document.querySelector('#' + DIV_HISTORY + '.paramhist');
-        if (paramhis !== null) {
-            for (var i = 0; i < paramhis.length; i++) {
-                paramHistoryArr[i] = decryptHtml(paramhis[i].innerText);
-            }
-            paramHistoryIndex = paramHistoryArr.length;
-            isundofirsttimeclicked = false;
-        }
-
-        var seqhis = document.getElementsByClassName(SEQHIST);// document.querySelector('#' + DIV_HISTORY + '.paramhist');
-        if (seqhis !== null) {
-            for (var i = 0; i < seqhis.length; i++) {
-                seqHistoryArr[i] = decryptHtml(seqhis[i].innerText);
-            }
-            seqHistoryIndex = seqHistoryArr.length;
-            isundofirsttimeclicked = false;
-        }
-
-        var seqhis = document.getElementsByClassName(SEQHIST);// document.querySelector('#' + DIV_HISTORY + '.paramhist');
-        if (seqhis !== null) {
-            for (var i = 0; i < seqhis.length; i++) {
-                seqHistoryArr[i] = decryptHtml(seqhis[i].innerText);
-            }
-            seqHistoryIndex = seqHistoryArr.length;
-            isundofirsttimeclicked = false;
-        }
-
-        try {
-            var ele = document.getElementById(DIV_HISTORY);
-            ele.parentNode.removeChild(ele);
-            // clickController.savefile();
-            alert("SAVEFILE");// important to remove history
-
-        } catch (e) {
-        }
-
-    } catch (e) {
-    }
-}
-
-function removeHistory() {
-    try {
-        var ele = document.getElementById(DIV_HISTORY);
-        ele.parentNode.removeChild(ele);
-    } catch (e) {
-    }
-}
-
-function setHistory() {
-    try {
-        //set history tag
-        var divhist = document.getElementById(DIV_HISTORY);
-        if (divhist === null) {
-            var abstract = document.getElementById("abstract");
-            if (abstract) {
-            } else {
-                abstract = document.createElement("div");
-                abstract.setAttribute("id", "abstract");
-                document.getElementsByClassName("maindiv")[0].appendChild(abstract);
-            }
-            divhist = $("#abstract").append("<div id=" + DIV_HISTORY + "></div>");
-            divhist = document.getElementById(DIV_HISTORY);
-        }
-        $(divhist).html("");
-        var regtag = document.createElement("div");
-        regtag.setAttribute("class", "reghistory");
-
-        var paramtag = document.createElement("div");
-        paramtag.setAttribute("class", "paramhist");
-
-        var seqtag = document.createElement("div");
-        seqtag.setAttribute("class", "seqhistory");
-
-        var spreadtag = document.createElement("div");
-        spreadtag.setAttribute("class", "spreadhistory");
-
-
-        //set reg history
-        for (var i = 0; i < regHistoryArraay.length; i++) {
-            var ptag = document.createElement("div");
-            ptag.setAttribute("class", REGHIST);
-            ptag.innerHTML = encryptHtml(regHistoryArraay[i]);
-            regtag.appendChild(ptag);
-        }
-        divhist.appendChild(regtag);
-        //alert("--reghist len : " + divhist.innerHTML);
-        //set param history
-        for (var i = 0; i < paramHistoryArr.length; i++) {
-            var ptag = document.createElement("div");
-            ptag.setAttribute("class", PAMHIST);
-            ptag.innerHTML = encryptHtml(paramHistoryArr[i]);
-            paramtag.appendChild(ptag);
-        }
-        divhist.appendChild(paramtag);
-
-        for (var i = 0; i < seqHistoryArr.length; i++) {
-            var ptag = document.createElement("div");
-            ptag.setAttribute("class", SEQHIST);
-            ptag.innerHTML = encryptHtml(seqHistoryArr[i]);
-            seqtag.appendChild(ptag);
-        }
-        divhist.appendChild(seqtag);
-
-        for (var i = 0; i < spreadHistoryArr.length; i++) {
-            var ptag = document.createElement("div");
-            ptag.setAttribute("class", SPREHIST);
-            ptag.innerHTML = encryptHtml(spreadHistoryArr[i]);
-            spreadtag.appendChild(ptag);
-        }
-        divhist.appendChild(spreadtag);
-
-
-    } catch (e) {
-    }
-}
-
-function encryptHtml(str) {
-    try {
-        str = str.replace(/</g, '$#&&#');
-        return str;
-        //str = str.replace(/>/g, encrypt2);
-        //return str.replace(/</g, encrypt1).replace(/>/g, encrypt2);
-    } catch (e) {
-    }
-}
-function decryptHtml(str) {
-    try {
-        str = str.replace(/\$#&&#/g, '<');
-        return str;
-        //str = str.replace(/encrypt2/g, ">");
-        //return str.replace(/encrypt1/g, "<").replace(/encrypt2/g, ">");
-    } catch (e) {
-    }
-}
-
-function isRegViewOn() {
-    if (document.getElementById(REG_DIV_CONTAINER).style.display === "block") {
-        return true;
-    }
-    return false;
-}
-
-function isParamViewOn() {
-    if (document.getElementById(PARAM_DIV_CONTAINER).style.display === "block") {
-        return true;
-    }
-    return false;
-}
-
-function isSeqViewOn() {
-    if (document.getElementById(SEQ_DIV_CONTAINER).style.display === "block") {
-        return true;
-    }
-    return false;
-}
-
-function isSpreadViewOn() {
-    if (document.getElementById(SPREAD_DIV_CONTAINER).style.display === "block") {
-        return true;
-    }
-    return false;
-}
-
+function writeparam(str) {
+    document.getElementById("paramcontainer").innerHTML = str;
+    document.getElementById("paramcontainer").style.display = "block";
+    addIntoHistory();
+} 
 var regsource;
-function initilizeParamEvents() {
+
+function initilizeParamEvents(){
 
     /* Events fired on the drag target */
-    /*    document.getElementById("paramcontainer").addEventListener("dragstart", function (event) {*/
-
-    $(document).on("dragstart", "#paramcontainer", function () {
-        addIntoHistory();
-        /* The dataTransfer.setData() method sets the data type and the value of the dragged data*/
+    document.getElementById("paramcontainer").addEventListener("dragstart", function(event) { /* The dataTransfer.setData() method sets the data type and the value of the dragged data*/		
         event.dataTransfer.setData("Text", event.target.id); /* Output some text when starting to drag the p element					document.getElementById("demo").innerHTML = "Started to drag the p element.";*/ /* Change the opacity of the draggable element*/
         event.target.style.opacity = "0.4"; /*event.target.style.backgroundColor="transparent";*/ /*console.log("drag target="+event.target.id);*/
-        /*
-         try {
-         document.getElementById("scroller").style = "display:block";
-         } catch (e) {
-         }
-         */
+        try{
+            document.getElementById("scroller").style="display:block";		
+        }
+        catch(e){}
     }); /* While dragging the p element, change the color of the output text				this event fire when drag starts.				event.target have source element object*/
-    /*document.getElementById("paramcontainer").addEventListener("drag", function (event) { */
-    $(document).on("drag", "#paramcontainer", function () {
-        /*document.getElementById("demo").style.color = "red";*/
+    document.getElementById("paramcontainer").addEventListener("drag", function(event) { /*document.getElementById("demo").style.color = "red";*/
         event.target.parentElement.style.backgroundColor = "white";
         regsource = event; /*console.log("source index="+regsource.target.parentElement.cellIndex);*/
-    });
-
-    /* Output some text when finished dragging the p element and reset the opacity*/
-    /*    document.getElementById("paramcontainer").addEventListener("dragend", function (event) { */
-    $(document).on("dragend", "#paramcontainer", function () {
-        /*document.getElementById("demo").innerHTML = "Finished dragging the p element.";*/
+    }); /* Output some text when finished dragging the p element and reset the opacity*/
+    document.getElementById("paramcontainer").addEventListener("dragend", function(event) { /*document.getElementById("demo").innerHTML = "Finished dragging the p element.";*/
         event.target.style.opacity = "1";
-        addIntoHistory();
-    });
-
-    /* Events fired on the drop target */ /* When the draggable p element enters the droptarget, change the DIVS's border style*/
-    /*    document.getElementById("paramcontainer").addEventListener("dragenter", function (event) {*/
-    $(document).on("dragenter", "#paramcontainer", function () {
-        if (event.target.className === "droptarget") {
+    }); /* Events fired on the drop target */ /* When the draggable p element enters the droptarget, change the DIVS's border style*/
+    document.getElementById("paramcontainer").addEventListener("dragenter", function(event) {
+        if (event.target.className == "droptarget") {
             event.target.style.border = "2px solid red";
         }
-    });
-
-    /* By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element*/
-    /*    document.getElementById("param_main").addEventListener("dragover", function (event) {*/
-    $(document).on("dragover", "#param_main", function () {
+    }); /* By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element*/
+    document.getElementById("param_main").addEventListener("dragover", function(event) {
         event.preventDefault();
-        if (event.target.id === "scr_down") {
-            window.scrollBy(0, 20);
-        } else if (event.target.id === "scr_up") {
-            window.scrollBy(0, -20);
+        if(event.target.id=="scr_down"){
+            window.scrollBy(0,20);
         }
-    });
-
-    /* When the draggable p element leaves the droptarget, reset the DIVS's border style*/
-    /*    document.getElementById("paramcontainer").addEventListener("dragleave", function (event) {*/
-    $(document).on("dragleave", "#paramcontainer", function () {
-        if (event.target.className === "droptarget") {
+        else if(event.target.id=="scr_up"){
+            window.scrollBy(0,-20);
+        }
+    }); /* When the draggable p element leaves the droptarget, reset the DIVS's border style*/
+    document.getElementById("paramcontainer").addEventListener("dragleave", function(event) {
+        if (event.target.className == "droptarget") {
             event.target.style.border = "";
         }
-    });
-
-    /* On drop - Prevent the browser default handling of the data (default is open as link on drop)   Reset the color of the output text and DIV's border color   Get the dragged data with the dataTransfer.getData() method   The dragged data is the id of the dragged element ("drag1")   Append the dragged element into the drop element*/
-    /*    document.getElementById("paramcontainer").addEventListener("drop", function (event) {*/
-    $(document).on("drop", "#paramcontainer", function () {
-        event.preventDefault();
-        try {
-            document.getElementById("scroller").style = "display:none";
-        } catch (e) {
+    }); /* On drop - Prevent the browser default handling of the data (default is open as link on drop)   Reset the color of the output text and DIV's border color   Get the dragged data with the dataTransfer.getData() method   The dragged data is the id of the dragged element ("drag1")   Append the dragged element into the drop element*/
+    document.getElementById("paramcontainer").addEventListener("drop", function(event) {
+        event.preventDefault();	
+        try{
+            document.getElementById("scroller").style="display:none";
         }
-        if (event.target.className === "droptarget") {
+        catch(e){}
+        if (event.target.className == "droptarget") {
             try {
                 var vali = validateCell(event);
                 if (vali) {
@@ -479,7 +120,6 @@ function initilizeParamEvents() {
                     event.target.style.border = "";
                     regsource.target.style.backgroundColor = "#d4e0e2";
                 } else { /*document.getElementById("demo").style.color = "";*/
-                    var parent_source = regsource.target.closest("tr");
                     event.target.style.border = ""; /*var data = event.dataTransfer.getData("Text");*/
                     var data = event.dataTransfer.getData("Text");
                     event.target.appendChild(document.getElementById(data));
@@ -492,10 +132,10 @@ function initilizeParamEvents() {
                     var reversecell = 0;
                     for (i = cellindex + 1; i < range; i++) {
                         temp = event.target.closest("tr").cells[cellindex + 1];
-                        if ((typeof (temp) === "undefined" || temp === null)) {
+                        if ((typeof(temp) === "undefined" || temp === null)) {
                             reversecell++;
                             temp = event.target.closest("tr").cells[cellindex - reversecell].innerHTML.trim();
-                            if (temp === '') {
+                            if (temp == '') {
                                 event.target.closest("tr").cells[cellindex - reversecell].remove();
                             }
                         } else {
@@ -505,11 +145,11 @@ function initilizeParamEvents() {
                             } else {
                                 reversecell++;
                                 temp = event.target.closest("tr").cells[cellindex - reversecell + 1].getElementsByTagName("p")[0];
-                                if ((typeof (temp) !== "undefined" || temp !== null)) {
+                                if ((typeof(temp) !== "undefined" || temp !== null)) {
                                     var iiid = temp.id;
                                     if (iiid === regsource.target.id) {
                                         var j;
-                                        var delindex = cellindex - reversecell;
+                                        var delindex = cellindex - reversecell ;
                                         var counter = 0;
                                         for (j = i; j < range; j++) {
                                             event.target.closest("tr").cells[delindex - counter].remove();
@@ -518,18 +158,17 @@ function initilizeParamEvents() {
                                         break;
                                     }
                                 } /*										temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();										console.log("--reverseTtemp="+temp+"--index="+(cellindex-reversecell));										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell+1].innerHTML.trim());										console.log("--reverseTtemp="+temp+"--index="+event.target.closest("tr").cells[cellindex-reversecell-2].innerHTML.trim());*/
-                                if (temp === '') {
+                                if (temp == '') {
                                     event.target.closest("tr").cells[cellindex - reversecell].remove();
                                 }
                             }
                         } /*								if((typeof(temp) === "undefined" || temp === null)||((typeof(temp) === "undefined" || temp === null)&&																					 temp==='')){									event.target.closest("tr").cells[cellindex+1].remove();cell index remain same after deletion, hence it is fixed index deletion								}								else if(temp!==''){									reversecell++;									temp=event.target.closest("tr").cells[cellindex-reversecell].innerHTML.trim();									if(temp==''){										event.target.closest("tr").cells[cellindex-reversecell].remove();									}								}								*/
                     }
-
-                    updateBits(parent_source);
                 }
             } catch (ex) {
                 console.log("Error dop event : " + ex.message);
             }
+            addIntoHistory();
         } else {
             regsource.target.style.backgroundColor = "#d4e0e2";
         }
@@ -537,14 +176,7 @@ function initilizeParamEvents() {
 }
 function validateCell(src) {
     var cellindex = src.target.cellIndex;
-
-    var target = regsource.target;
-    /*
-     if (target.classList.contains("droptarget")) {
-     target = target.getElementsByTagName("p")[0];
-     }
-     */
-    var d = target.getAttribute("data-size");
+    var d = regsource.target.getAttribute("data-size");
     var data = parseInt(d);
     var range = data + cellindex;
     console.log("--cellindex=" + cellindex);
@@ -563,13 +195,14 @@ function validateCell(src) {
     for (i = cellindex; i < range; i++) {
         if (!iteratebackword) {
             currcell = src.target.closest("tr").cells[i];
-            if ((typeof (currcell) === "undefined" || currcell === null)) {
+            console.log("--i=" + i + "--currcell=" + currcell);
+            if ((typeof(currcell) === "undefined" || currcell === null)) {
                 console.log("cell not exist");
                 iscellavail = false;
             } else {
                 if (currcell.innerHTML.trim() != "") {
                     descId = currcell.getElementsByTagName("p")[0];
-                    if ((typeof (descId) !== "undefined" && descId !== null)) {
+                    if ((typeof(descId) !== "undefined" && descId !== null)) {
                         if (descId.id === srcId) {
                             iscellavail = true;
                             break;
@@ -592,19 +225,19 @@ function validateCell(src) {
             console.log("--index=" + previndex);
             currcell = src.target.closest("tr").cells[previndex];
             console.log("--i=" + i + "--currcell=" + currcell);
-            if ((typeof (currcell) === "undefined" || currcell === null)) {
+            if ((typeof(currcell) === "undefined" || currcell === null)) {
                 console.log("cell not exist");
                 iscellavail = false;
                 break;
             } else {
-                console.log("--class exist=" + currcell.classList.contains("droptarget"));
-                if (!currcell.classList.contains("droptarget")) {
+                console.log("--class exist="+ currcell.classList.contains("droptarget"));
+                if(!currcell.classList.contains("droptarget")){
                     iscellavail = false;
                     break;
                 }
-                if (currcell.innerHTML.trim() !== "") {
+                if (currcell.innerHTML.trim() != "") {
                     descId = currcell.getElementsByTagName("p")[0];
-                    if ((typeof (descId) !== "undefined" || descId !== null)) {
+                    if ((typeof(descId) !== "undefined" || descId !== null)) {
                         if (descId.id === srcId) {
                             iscellavail = true;
                             break;
@@ -661,1190 +294,240 @@ var showDesc = "Show Desc";
 var hideDesc = "Hide Desc";
 var curr_row;
 var curr_row_signal;
-var query = "";
+var query="";
 var random_Num;
-var isTabFocus = false;
+var isTabFocus=false;
 var tabToolbar;
-var clipboard_tab = null;
+var clipboard_tab=null;
 var tempTable;
-var isrowselected = false;
-var curr_row_obj = null;
-var isFileSaved = true;
-var DESC_CLS_OBJ_LIST = [];
+var isrowselected=false;
+var curr_row_obj=null;
+var isFileSaved=true;
+var DESC_CLS_OBJ_LIST=[];
 var ids_json;
 var clickedEl = null;
-var selected_rows = [];
-var alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var scrollpos = 0;
+var selected_rows=[];
+var alphabets='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-var diff_index = -1;
 
-$(document).ready(function () {
+$(document).ready(function(){
     bindJSONObj();
+
     ids_json = JSON.parse(idsobjects);
 
-    $(document).on('change', '#maindivcontainer', function () {
-        console.log("--call changs");
+    $('body').not("#autocomplete-list").click(function() {
+        $('#autocomplete-list').hide();
     });
 
-    $('#aReloadseq').on('click', function () {
-        refreashpage();
-    });
-
-    $('#aReloadReg').on('click', function () {
-        refreashpage();
-    });
-
-    $('body').not("#autocomplete-list").click(function () {
-        hideHints();
-        //$('#autocomplete-list').hide();
-    });
-
-    $('body').on('focusin', '.desc', function () {
-        var isobfound = false;
-        for (var ob in DESC_CLS_OBJ_LIST) {
-            if (DESC_CLS_OBJ_LIST[ob] === this) {
-                isobfound = true;
+    $('body').on('focusin', '.desc', function() {
+        var isobfound=false;
+        for(var ob in DESC_CLS_OBJ_LIST){
+            if(DESC_CLS_OBJ_LIST[ob]===this){
+                isobfound=true;				
                 break;
             }
         }
-        if (!isobfound) {
+        if(!isobfound){
             DESC_CLS_OBJ_LIST.push(this);
-            autocomplete(this, idsprop);
-        }
+            autocomplete(this,idsprop);
+        }		
     });
 
-    $('body').on('focusin', '.propclass', function () {
-        var isobfound = false;
-        for (var ob in DESC_CLS_OBJ_LIST) {
-            if (DESC_CLS_OBJ_LIST[ob] === this) {
-                isobfound = true;
+    $('body').on('focusin', '.propclass', function() {
+        var isobfound=false;
+        for(var ob in DESC_CLS_OBJ_LIST){
+            if(DESC_CLS_OBJ_LIST[ob]===this){
+                isobfound=true;				
                 break;
             }
         }
-        if (!isobfound) {
+        if(!isobfound){
             DESC_CLS_OBJ_LIST.push(this);
-            autocomplete(this, idsprop);
+            autocomplete(this,idsprop);
         }
     });
 
-    $('body').on('focusin', '.sw', function () {
-        var isobfound = false;
-        for (var ob in DESC_CLS_OBJ_LIST) {
-            if (DESC_CLS_OBJ_LIST[ob] === this) {
-                isobfound = true;
+    $('body').on('focusin', '.sw', function() {
+        var isobfound=false;
+        for(var ob in DESC_CLS_OBJ_LIST){
+            if(DESC_CLS_OBJ_LIST[ob]===this){
+                isobfound=true;				
                 break;
             }
         }
-        if (!isobfound) {
+        if(!isobfound){
             DESC_CLS_OBJ_LIST.push(this);
-            autocomplete(this, ids_sw_access);
+            autocomplete(this,ids_sw_access);
         }
     });
 
-    $('body').on('focusout', '.sw', function () {
-        hideHints();
-    });
-
-    $('body').on('focusin', '.hw', function () {
-        var isobfound = false;
-        for (var ob in DESC_CLS_OBJ_LIST) {
-            if (DESC_CLS_OBJ_LIST[ob] === this) {
-                isobfound = true;
+    $('body').on('focusin', '.hw', function() {
+        var isobfound=false;
+        for(var ob in DESC_CLS_OBJ_LIST){
+            if(DESC_CLS_OBJ_LIST[ob]===this){
+                isobfound=true;				
                 break;
             }
         }
-        if (!isobfound) {
+        if(!isobfound){
             DESC_CLS_OBJ_LIST.push(this);
-            autocomplete(this, ids_hw_access);
+            autocomplete(this,ids_hw_access);
         }
-    });
-    $('body').on('focusout', '.hw', function () {
-        hideHints();
     });
 
-
-    $(document).on('focusin', '.cmdname', function () {
-        var isobfound = false;
-        for (var ob in DESC_CLS_OBJ_LIST) {
-            if (DESC_CLS_OBJ_LIST[ob] === this) {
-                isobfound = true;
-                break;
-            }
-        }
-        if (!isobfound) {
-            DESC_CLS_OBJ_LIST.push(this);
-            autocomplete(this, ids_command_hints);
-        }
-    });
-    $(document).on('focusout', '.cmdname', function () {
-        hideHints();
-    });
     /*evt.keyCode==80&&evt.altKey*/
 
-    $('.fieldname').keyup(function () {
-        var value = $(this).val();
-        if (value !== "") {
-            if (!/^[a-zA-Z][a-z0-9._\-]*$/.test(value)) {
-                console.log("Error not valid");
-                return false;
-            }
-        }
+    $('.fieldname').keyup(function(){	
+        var value=$(this).val();		
+        if(value!==""){			
+            if(!/^[a-zA-Z][a-z0-9._\-]*$/.test(value)){	
+                console.log("Error not valid");			
+                return false;			
+            }		
+        }	
+    });	
+
+    $('.descInput').keyup(function(){		
+        auto_grow(this);	
+    });	
+
+    $('.propInput').keyup(function(){		
+        auto_grow(this);	
     });
 
-    $('.descInput').keyup(function () {
-        auto_grow(this);
+    document.getElementById("idsexcelcontainer").addEventListener("click",function(event){
+        $('#excelmenu').css({'display':'none'});
     });
 
-    $('.propInput').keyup(function () {
-        auto_grow(this);
+    $('#idsexcelcontainer').on('click', 'td', function() {      
+        initilizeCursorPosForSpread($(this));
     });
 
-    try {
-        document.getElementById("idsexcelcontainer").addEventListener("click", function (event) {
-            $('#excelmenu').css({'display': 'none'});
-        });
-
-        $('#idsexcelcontainer').on('click', 'td', function () {
-            initilizeCursorPosForSpread($(this));
-            addIntoHistory();
-        });
-    } catch (e) {
-    }
-
-    try {
-        $(document).on("click", "#regdivcontainer", function () {
-            $('#regmenu').css({'display': 'none'});
-            $('.idsmenu').css({'display': 'none'});
-        });
-    } catch (e) {
-    }
-
-
-    $(document).on("click", "#seqdivcontainer", function () {
-        $('#seqmenu').css({'display': 'none'});
+    document.getElementById("regdivcontainer").addEventListener("click",function(event){
+        $('#regmenu').css({'display':'none'});
     });
 
-//    document.getElementById("spreadsheetcontainer").addEventListener("mousedown", function (event) {
-//        //right click
-//        if (event.button === 2) {
-//            clickedEl = event.target;
-//        }
-//    }, true);
-    $(document).on("mousedown", "#spreadsheetcontainer", function (event) {
+    document.getElementById("seqdivcontainer").addEventListener("click",function(event){
+        $('#seqmenu').css({'display':'none'});
+    });
+
+    document.getElementById("spreadsheetcontainer").addEventListener("mousedown", function(event){
         //right click
-        if (event.button === 2) {
+        if(event.button == 2) { 
             clickedEl = event.target;
         }
+    }, true);
+
+
+    $("#menucopy").hover(function(){
+        var x=event.pageX;
+        var spreadwidth=$( "#spreadsheetcontainer" ).width();
+        if((spreadwidth-x)<100){
+            $("#submenucopy").css("left", "-100%");	
+        }
+        else{
+            $("#submenucopy").css("left", "100%");	
+        }
+
+        $("#submenucopy").css("display", "block");
+    }, function(){
+        $("#submenucopy").css("display", "none");
     });
 
-
-//    $("#menucopy").hover(function () {
-//        var x = event.pageX;
-//        var spreadwidth = $("#spreadsheetcontainer").width();
-//        if ((spreadwidth - x) < 100) {
-//            $("#submenucopy").css("left", "-100%");
-//        } else {
-//            $("#submenucopy").css("left", "100%");
-//        }
-//
-//        $("#submenucopy").css("display", "block");
-//    }, function () {
-//        $("#submenucopy").css("display", "none");
-//    });
-    $(document).on({
-        mouseenter: function () {
-            //stuff to do on mouse enter
-            var x = event.pageX;
-            var spreadwidth = $("#spreadsheetcontainer").width();
-            if ((spreadwidth - x) < 100) {
-                $("#submenucopy").css("left", "-100%");
-            } else {
-                $("#submenucopy").css("left", "100%");
-            }
-
-            $("#submenucopy").css("display", "block");
-        },
-        mouseleave: function () {
-            //stuff to do on mouse leave
-            $("#submenucopy").css("display", "none");
+    $("#menudeleteexcel").hover(function(event){
+        var x=event.pageX;
+        var spreadwidth=$( "#spreadsheetcontainer" ).width();
+        if((spreadwidth-x)<100){
+            $("#submenudelete").css("left", "-100%");	
         }
-    }, "#menucopy");
-
-
-    $(document).on({
-        mouseenter: function () {
-            //stuff to do on mouse enter
-            var x = event.pageX;
-            var spreadwidth = $("#spreadsheetcontainer").width();
-            if ((spreadwidth - x) < 100) {
-                $("#submenudelete").css("left", "-100%");
-            } else {
-                $("#submenudelete").css("left", "100%");
-            }
-            $("#submenudelete").css("display", "block");
-        },
-        mouseleave: function () {
-            //stuff to do on mouse leave
-            $("#submenudelete").css("display", "none");
+        else{
+            $("#submenudelete").css("left", "100%");
         }
-    }, "#menudeleteexcel");
+        $("#submenudelete").css("display", "block");
+    }, function(){
+        $("#submenudelete").css("display", "none");
+    });
 
-//    $("#menudeleteexcel").hover(function (event) {
-//        var x = event.pageX;
-//        var spreadwidth = $("#spreadsheetcontainer").width();
-//        if ((spreadwidth - x) < 100) {
-//            $("#submenudelete").css("left", "-100%");
-//        } else {
-//            $("#submenudelete").css("left", "100%");
-//        }
-//        $("#submenudelete").css("display", "block");
-//    }, function () {
-//        $("#submenudelete").css("display", "none");
-//    });
-
-    $(".submenu").hover(function () {
+    $(".submenu").hover(function(){
         $(this).css("display", "block");
-    }, function () {
+    }, function(){
         $(this).css("display", "none");
     });
 
-    document.getElementById("backhidder").addEventListener("click", function () {
-        hidetemplate();
+    document.getElementById("backhidder").addEventListener("click",function(e){ hidetemplate()});
+    document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].addEventListener("keydown",function(e){            //spreadsheetKeyEventHandler()
+        reCalculate(e);
+        rePosition();
     });
 
-    try {
-        document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].addEventListener("keydown", function (e) {            //spreadsheetKeyEventHandler()
-            reCalculate(e);
-            rePosition();
-        });
-    } catch (e) {
-    }
+    /*
+    $( "#selectable" ).selectable({
+        selected: function() {
+            //var result = $( "#result" ).empty();
+            selected_rows=[];
 
+            $( ".ui-selected", this ).each(function() {
 
+                var index = $( "#selectable tr" ).index( this );
+                if(index>-1){
+                    selected_rows.push(index);
+                }
+                //result.append( ( index + 1 ) );
+                //result.append( " ," );
+            });
+        }
+    });
+
+    $("#selectable").on('click','td',function(source) { 
+        var source = event.target || event.srcElement;
+        try{
+            placeCaretAtEnd(source);
+        }catch(e){alert("Err "+e.message);}
+        $('#excelmenu').css({'display':'none'});
+    });
+*/
     initilizeParamEvents();
 
-    /* scroll up and down in param view event
-     document.getElementById("scr_up").addEventListener("click", function (e) {
-     window.scrollBy(0, -20);
-     });
-     document.getElementById("scr_down").addEventListener("click", function (e) {
-     window.scrollBy(0, 20);
-     });
-     */
-
-    /*addcontextmenu();*/
-
-    /*reg menu work*/
-    var current_reg;
-    var temp_current_reg;
-    $(document).on("mouseover", ".regcontainer", function () {
-        openlockicon(this, document.getElementById("param_menu_lock_reg").getElementsByTagName("i")[0]);
-        var pos = $(this).position();
-        var y = pos.top - 12;
-        var x = pos.left + 15;
-        $('#param_reg_menu').css({'display': 'block', 'left': x, 'top': y});
-        $(this).css("border", "1px solid red");
-        temp_current_reg = this;
+    document.getElementById("scr_up").addEventListener("click",function(e){ 
+        window.scrollBy(0,-20);
     });
 
-    $(document).on("mouseout", ".regcontainer", function () {
-        $("#param_reg_menu").css("display", "none");
-        $(this).css("border", "1px solid grey");
+    document.getElementById("scr_down").addEventListener("click",function(e){ 
+        window.scrollBy(0,20);
     });
-
-    $(document).on("mouseover", "#param_reg_menu", function () {
-        $('#param_reg_menu').css({'display': 'block'});
-    });
-    $(document).on("mouseout", "#param_reg_menu", function () {
-        $("#param_reg_menu").css("display", "none");
-    });
-
-    try {
-        $(document).on("click", "#param_menu_lock_reg", function () {
-            click_lock_reg(temp_current_reg, document.getElementById("param_menu_lock_reg").getElementsByTagName("i")[0]);
-        });
-    } catch (e) {
-    }
-
-
-    /*work for empty cell*/
-    var current_field;
-    var open_current_field;
-    $(document).on("mouseover", ".droptarget", function () {
-        if ($(this).hasClass("disbtd")) {
-            return false;
-        }
-        var pos = $(this).position();
-        var y = pos.top - 18;
-        var x = pos.left;
-        $('#param_cell_menu').css({'display': 'block', 'left': x, 'top': y});
-        $(this).css("border", "1px solid red");
-        current_field = this;
-    });
-
-    $(document).on("mouseout", ".droptarget", function () {
-        $("#param_cell_menu").css("display", "none");
-        $(this).css("border", "1px solid grey");
-    });
-
-    $(document).on("mouseover", "#param_cell_menu", function () {
-        $('#param_cell_menu').css({'display': 'block'});
-    });
-    $(document).on("mouseout", "#param_cell_menu", function () {
-        $("#param_cell_menu").css("display", "none");
-    });
-
-    /*work for param cell*/
-    var temp_target_cell;
-    var target_cell;
-    $(document).on("mouseover", ".dragtarget", function (event) {
-        openlockicon(this, document.getElementById("param_menu_lock_param").getElementsByTagName("i")[0]);
-        var pos = $(this).position();
-        var y = pos.top - 12;
-        var x = pos.left - 50;
-        $('#param_field_toolbar').css({'display': 'block', 'left': x, 'top': y});
-        temp_target_cell = this;
-        event.preventDefault();
-        return false;
-    });
-
-    $(document).on("mouseout", ".dragtarget", function (event) {
-        $("#param_field_toolbar").css("display", "none");
-        event.preventDefault();
-        return false;
-    });
-
-    $(document).on("mouseover", "#param_field_toolbar", function () {
-        $("#param_field_toolbar").css("display", "block");
-    });
-
-    $(document).on("mouseout", "#param_field_toolbar", function () {
-        $('#param_field_toolbar').css({'display': 'none'});
-    });
-
-    try {
-        $(document).on("click", "#param_menu_lock_param", function () {
-            click_lock_reg(temp_target_cell, document.getElementById("param_menu_lock_param").getElementsByTagName("i")[0]);
-            return false;
-        });
-    } catch (e) {
-    }
-
-    /*open popup menu to edit into field (param)*/
-    $(document).on("click", "#param_field_toolbar_edit", function () {
-        var pos = $(this).position();
-        var ya = event.pageX;
-        var xa = event.pageY;
-        $('#param_field_edit_menu').css({'display': 'block', 'left': ya, 'top': xa + 30});
-        $("#param_cell_add").css("display", "none");
-        $("#param_create_reg").css("display", "none");
-        $("#param_edit_reg").css("display", "none");
-
-        target_cell = temp_target_cell;
-        editparam(target_cell);
-        return false;
-    });
-
-    $(document).on("click", "#param_field_edit_menu_close", function () {
-        $('#param_field_edit_menu').css({'display': 'none'});
-    });
-
-    $(document).on("click", "#param_field_edit_menu_update", function () {
-        var isupdate = updateparam_param(target_cell);
-        if (isupdate) {
-            $('#param_field_edit_menu').css({'display': 'none'});
-        }
-    });
-
-    /*delete field(param)*/
-    $(document).on("click", "#param_field_toolbar_delete", function () {
-        deleteparam(temp_target_cell);
-        return false;
-    });
-
-    /*copy param*/
-    $(document).on("click", "#param_field_toolbar_cp", function () {
-        copyparam(temp_target_cell);
-        return false;
-    });
-
-    /*cut param*/
-    $(document).on("click", "#param_field_toolbar_cut", function () {
-        cutparam(temp_target_cell);
-        return false;
-    });
-
-    /*event call to paste field(param)*/
-    $(document).on("click", "#editparamcellpaste", function () {
-        pasteparam(current_field);
-        return false;
-    });
-
-    /*copy param register*/
-    $(document).on("click", "#copyparamreg", function () {
-        copyparamreg(temp_current_reg);
-        return false;
-    });
-
-    /*cut param register*/
-    $(document).on("click", "#cutparamreg", function () {
-        cutparamreg(temp_current_reg);
-        return false;
-    });
-
-    /*paste param register*/
-    $(document).on("click", "#pasteparamreg", function () {
-        pasteparamreg(temp_current_reg);
-        return false;
-    });
-
-
-    /*open popup box to add new register*/
-    $(document).on("click", "#addparamreg", function () {
-        var x = event.pageX;
-        var y = event.pageY + 25;
-        current_reg = temp_current_reg;
-        $('#param_create_reg').css({'display': 'block', 'left': x, 'top': y});
-        $('#param_field_edit_menu').css({'display': 'none'});
-        $("#param_cell_add").css("display", "none");
-        $("#param_edit_reg").css("display", "none");
-        return false;
-    });
-
-    $(document).on("click", "#btnparamregclose", function () {
-        $("#param_create_reg").css("display", "none");
-    });
-
-    $(document).on("click", "#btnparamregclose", function () {
-        $("#param_create_reg").css("display", "none");
-    });
-
-    $(document).on("click", "#btnparamregcreate", function () {
-        createparamreg(current_reg);
-    });
-
-    /*delete register*/
-    $(document).on("click", "#deleteparamreg", function () {
-        current_reg = temp_current_reg;
-        deleteparamreg(current_reg);
-        return false;
-    });
-
-    /*open popup to edit register*/
-    $(document).on("click", "#editparamreg", function () {
-        var x = event.pageX;
-        var y = event.pageY + 25;
-        $("#param_edit_reg").css({'display': 'block', 'left': x, 'top': y});
-
-
-        $("#param_cell_add").css({'display': 'none'});
-        $('#param_field_edit_menu').css({'display': 'none'});
-        $("#param_create_reg").css("display", "none");
-
-
-        current_reg = temp_current_reg;
-        addparamreg(current_reg);
-        return false;
-    });
-
-    $(document).on("click", "#btnparamregeditclose", function () {
-        $("#param_edit_reg").css("display", "none");
-        $('#param_field_edit_menu').css({'display': 'none'});
-        $("#param_cell_add").css("display", "none");
-        $("#param_create_reg").css("display", "none");
-    });
-
-    /*update register*/
-    $(document).on("click", "#btnparamregeditupdate", function () {
-        updateparam(current_reg);
-    });
-
-
-
-    /*open popup to add new field(param)*/
-    $(document).on("click", "#addparamcelladd", function () {
-        var x = event.pageX;
-        var y = event.pageY + 25;
-
-        $("#param_cell_add").css({'display': 'block', 'left': x, 'top': y});
-        $('#param_field_edit_menu').css({'display': 'none'});
-        $("#param_create_reg").css("display", "none");
-        $("#param_edit_reg").css("display", "none");
-
-        open_current_field = current_field;
-        openaddfieldmenu(open_current_field);
-        return false;
-    });
-
-    $(document).on("click", "#param_cell_add_close", function () {
-        $("#param_cell_add").css("display", "none");
-    });
-
-    /*add new field (param)*/
-    $(document).on("click", "#param_cell_add_add", function () {
-
-        var is = addparamfield(open_current_field);
-        if (is) {
-            $("#param_cell_add").css("display", "none");
-        }
-    });
-
-    $(document).on("click", "#maindivcontainer", function () {
-        /*hideallparampopupmenu();*/
-    });
-
-    try {
-        //navigation arrow event on field class
-        $(document).on("keydown", ".field", function (e) {
-            switch (e.keyCode) {
-                case 38:
-                    scrollFieldCells(e, false);
-                    break;
-                case 40:
-                    scrollFieldCells(e, true);
-                    break;
-            }
-        });
-    } catch (e) {
-    }
-
-    try {
-        //navigation arrow event on field class
-        $(document).on("keydown", ".sig_row", function (e) {
-            switch (e.keyCode) {
-                case 38:
-                    scrollFieldCells(e, false);
-                    break;
-                case 40:
-                    scrollFieldCells(e, true);
-                    break;
-            }
-        });
-    } catch (e) {
-    }
-
-    var diff_counter = 0;
-    try {
-        $(".diff").each(function () {
-            if (this.tagName === 'TR' || this.tagName === 'TBODY') {
-
-            } else {
-                var line = $(this).attr("data-line");
-                $(this).append("<a data-aline='" + line + "' class='diffnavi' name=\"gotodiff" + diff_counter + "\"></a>");
-                diff_counter++;
-            }
-        });
-        $("#btnprev").on("click", function (e) {
-            try {
-                if (diff_index > -1) {
-                    diff_index--;
-                    naviDiff(diff_index, e);
-                }
-            } catch (e) {
-            }
-            return false;
-        });
-        $("#btnnext").on("click", function (e) {
-            try {
-                var len = $(".diffnavi").length;
-                if (diff_index < len - 1) {
-                    diff_index++;
-                    naviDiff(diff_index, e);
-                }
-            } catch (e) {
-            }
-            return false;
-        });
-    } catch (e) {
-    }
-
-    try {
-        $(".aSearchCase").on("click", function () {
-            setSearchOptions(this);
-        });
-    } catch (e) {
-    }
-
-    try {
-        //set param_main div container event
-        $("#" + PARAM_CONTAINER).on("click", function () {
-            try {
-                //to highlight search in param view, it has to be editable. so we are making it editable true and when click on paramdiv, make editable false
-                if (document.getElementById(PARAM_DIV_CONTAINER).style.display === 'block') {
-                    document.getElementById(PARAM_CONTAINER).setAttribute("contenteditable", "false");
-                    var ptags = document.getElementById(PARAM_CONTAINER).getElementsByTagName("p");
-                    for (var i = 0; i < ptags.length; i++) {
-                        ptags[i].setAttribute("draggable", "true");
-                    }
-                }
-            } catch (e) {
-            }
-        });
-    } catch (e) {
-    }
-
-    try {
-        var btns = document.getElementsByClassName("ace_replacebtn");
-        var isdisabled = false;
-        if (document.getElementById(PARAM_DIV_CONTAINER).style.display === 'block') {
-            isdisabled = true;
-        }
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].disabled = isdisabled;
-        }
-    } catch (e) {
-    }
-
-    dragElement(document.getElementById("param_field_edit_menu"));
-    dragElement(document.getElementById("param_edit_reg"));
-    dragElement(document.getElementById("param_cell_add"));
-    dragElement(document.getElementById("param_create_reg"));
-
-    //loadDefaultHis();
-    /*
-     try {
-     $("#ace_search_find").click(function () {
-     document.getElementById("ace_search_find").removeAttribute("readonly");
-     });
-     $("#ace_search_replace").click(function () {
-     document.getElementById("ace_search_replace").removeAttribute("readonly");
-     });
-     } catch (e) {
-     }
-     */
-    try {
-        $(document).on("click", "#param_create_reg", function () {
-            console.log("keypress menu");
-        });
-
-    } catch (e) {
-
-    }
-
-    try {
-        $(document).on("click", ".param_update_input_diff", function () {
-            var res = paramUpdate(this.parentNode, this.checked);
-            if (res) {
-                if (this.checked) {
-                    $(this).attr('checked', 'checked');
-                } else {
-                    $(this).removeAttr('checked');
-                }
-            }
-            addIntoHistory();
-            return res;
-        });
-
-    } catch (e) {
-
-    }
-
-    try {
-        $(document).on("click", ".param_update_select_all", function () {
-            param_update_selectAll_click(this);
-            addIntoHistory();
-        });
-    } catch (e) {
-
-    }
-
-    try {
-        $(document).on("click", ".param_update_add_all", function () {
-            param_update_All_appendMode_click(this, "added");
-            addIntoHistory();
-        });
-    } catch (e) {
-
-    }
-
-    try {
-        $(document).on("click", ".param_update_update_all", function () {
-            param_update_All_appendMode_click(this, "updated");
-            addIntoHistory();
-        });
-    } catch (e) {
-
-    }
-
-    try {
-        $(document).on("click", ".param_update_delete_all", function () {
-            param_update_All_appendMode_click(this, "deleted");
-            addIntoHistory();
-        });
-    } catch (e) {
-
-    }
-
-    try {
-        $(document).on("click", ".param_update_filter_default", function () {
-            if (this.checked) {
-                $(this).attr('checked', 'checked');
-                $(this).prop('checked', 'checked');
-            } else {
-                $(this).removeAttr('checked');
-            }
-        });
-        $(document).on("click", ".param_update_filter_desc", function () {
-            if (this.checked) {
-                $(this).attr('checked', 'checked');
-                $(this).prop('checked', 'checked');
-            } else {
-                $(this).removeAttr('checked');
-            }
-        });
-    } catch (e) {
-
-    }
-
-    try {
-        $("body").on('DOMSubtreeModified', "#" + PARAM_CONTAINER, function () {
-            try {
-                clickController.setUnsaveSymbolJS();
-            } catch (e) {
-            }
-        });
-
-
-    } catch (e) {
-    }
-
-    getHistory();
-
-    addIntoHistory();
-
-    setscollpos();
-
-    var sequrl = "127.0.0.1:8000";
-    $(document).on("focusout", ".seqin", function () {
-        var data = $(this).html();
-        if (data == "")
-        {
-        } else {
-            var seq = $(this);
-            var url = "http://" + sequrl + "/generate/";
-            $.ajax({
-                type: "GET",
-                url: url,
-                data: {sentence: data},
-                success: function (data1) {
-                    // console.log(data1.time_taken);
-                    //  $("#output").html(data1.Translation);
-                    //$(this).closest(".seqout").html(data1.Translation);
-                    $(seq).prev("td.seqout").html(data1.translation);
-
-                },
-                error: function (data1) {
-                    // console.log(data1.responseText);
-                },
-                //complete:function(data1){
-                //console.log(data1);
-                //},
-            });
-        }
-        // var textdata = $(this).val();
-        // $(this).parent("td").html(textdata);
-        //$(this).remove();
-    });
-    $(".iconRefreshSeq").removeClass("rotate");
-    $(document).on("click", ".iconRefreshSeq", function () {
-        var refButton = $(this);
-        $(this).toggleClass("rotate");
-        var data = $(this).html();
-        var seq = $(this);
-        var url = "http://" + sequrl + "/read_file/";
-        //$(refButton).css({'transform': 'rotate(360deg)'});
-        try {
-            $.ajax({
-                type: "GET",
-                url: url,
-                data: {filepath: clickController.getCurrentFile()},
-                success: function (data1) {
-                    console.log(data1.message);
-                    //  $("#output").html(data1.Translation);
-                    //$(this).closest(".seqout").html(data1.Translation);
-                    //$(seq).prev("td.seqout").html(data1.Translation);
-                    if (data1.message == "SUCCESS") {
-                        refButton.removeClass("rotate");
-                    } else {
-                        refButton.removeClass("rotate");
-                    }
-                    $(refButton).css({'transform': 'rotate(360deg)'});
-                },
-                error: function (data1) {
-                    //sconsole.log(data1.responseText);
-                    refButton.removeClass("rotate");
-                    $(refButton).css({'transform': 'rotate(360deg)'});
-                },
-                //complete:function(data1){
-                //console.log(data1);
-                //},
-            });
-        } catch (e) {
-            refButton.removeClass("rotate");
-            $(refButton).css({'transform': 'rotate(360deg)'});
-        }
-    }
-    );
-
-    try {
-        $(document).on("contextmenu", ".custom_table td", function (event) {
-            open_table_context_menu(event);
-            current_custom_cell = event.target;
-            return false;
-        });
-    } catch (e) {
-
-    }
 
 });
 
 
-var current_custom_cell;
-function insertTable(col, row, height, width) {
-    var str = "";
-    var rowstr = "";
-    for (var i = 0; i < row; i++) {
-        for (var j = 0; j < col; j++) {
-            rowstr = rowstr + "<td></td>";
-        }
-        rowstr = "<tr>" + rowstr + "</tr>";
-    }
-    str = "<table style='width:" + width + ";height:" + height + ";' class='custom_table'>" + rowstr + "</table>";
-    insertElementToCurrentPos(str);
-    addIntoHistory();
+/*
+function placeCaretAtEnd(el) {
+    console.log("--click on cell");
+	el.focus();
+	if (typeof window.getSelection != "undefined"
+		&& typeof document.createRange != "undefined") {
+		var range = document.createRange();
+		range.selectNodeContents(el);
+		range.collapse(false);
+		var sel = window.getSelection();
+		sel.removeAllRanges();
+		sel.addRange(range);
+	} else if (typeof document.body.createTextRange != "undefined") {
+		var textRange = document.body.createTextRange();
+		textRange.moveToElementText(el);
+		textRange.collapse(false);
+		textRange.select();
+	}
 }
+*/
 
-function open_table_context_menu(event) {
-    event.preventDefault();
-    var x = event.pageX;
-    var y = event.pageY;
-    createCustomContextMenuIsNotExist();
-    var table_context_menu = document.getElementById("table_context_menu");
-    $(table_context_menu).css({'display': 'block', 'left': x, 'top': y});
-    curr_row_obj = event.target.parentNode;
-    event.preventDefault();
-    return false;
-}
-
-function createCustomContextMenuIsNotExist() {
-    var table_context_menu = document.getElementById("table_context_menu");
-    if (!table_context_menu) {
-        var reg_meta_data = document.getElementById(REG_META_DATA);
-        if (!reg_meta_data) {
-            reg_meta_data = createElementFromHTML("<div id='" + REG_META_DATA + "'></div>");
-            $("#" + REG_DIV_CONTAINER).append(reg_meta_data);
-        }
-        table_context_menu = "<div id='table_context_menu' class='idsmenu' style='display:none'>\n\
-                             <a onclick='customInsertRow(true);'>insert row below</a><a onclick='customInsertRow(false);'>insert row above</a>\n\
-<a onclick='customInsertColumn(true);'>insert column right</a><a onclick='customInsertColumn(false);'>insert column left</a><a onclick='customDeleteRow();'>delete Row</a>\n\
-<a onclick='customDeleteColumn();'>delete column</a></div>";
-        table_context_menu = createElementFromHTML(table_context_menu);
-        $(reg_meta_data).append(table_context_menu);
-    }
-}
-
-function customDeleteRow() {
-    var obj = current_custom_cell;
-    if (obj.tagName.toUpperCase() === "TD") {
-        var row = obj.parentNode;
-        $(row).remove();
-        addIntoHistory();
-    }
-}
-
-function customDeleteColumn() {
-    var obj = current_custom_cell;
-    if (obj.tagName.toUpperCase() === "TD") {
-        var cellIndex = obj.cellIndex;
-        var tab = obj.parentNode;
-
-        while (tab.tagName.toUpperCase() !== "TABLE") {
-            tab = tab.parentNode;
-        }
-
-        var rows = tab.getElementsByTagName("tr");
-        for (var i = 0; i < rows.length; i++) {
-            var cells = rows[i].getElementsByTagName("td");
-            for (var j = 0; j < cells.length; j++) {
-                if (cells[j].cellIndex === cellIndex) {
-                    $(cells[j]).remove();
-                    break;
-                }
-            }
-        }
-        addIntoHistory();
-    }
-}
-
-function customInsertRow(isbelow) {
-    var obj = current_custom_cell;
-    if (obj.tagName.toUpperCase() === "TD") {
-        var row = obj.parentNode;
-        var new_row = row.cloneNode(true);
-        var cells = new_row.getElementsByTagName("td");
-        for (var i = 0; i < cells.length; i++) {
-            $(cells[i]).text("");
-        }
-        if (isbelow) {
-            row.after(new_row);
-        } else {
-            row.parentNode.insertBefore(new_row, row);
-        }
-        addIntoHistory();
-    }
-}
-
-function customInsertColumn(isRight) {
-    var obj = current_custom_cell;
-    if (obj.tagName.toUpperCase() === "TD") {
-        var cellIndex = obj.cellIndex;
-        var tab = obj.parentNode;
-
-        while (tab.tagName.toUpperCase() !== "TABLE") {
-            tab = tab.parentNode;
-        }
-
-        var rows = tab.getElementsByTagName("tr");
-        for (var i = 0; i < rows.length; i++) {
-            var cells = rows[i].getElementsByTagName("td");
-            for (var j = 0; j < cells.length; j++) {
-                if (cells[j].cellIndex === cellIndex) {
-                    var new_tab = createElementFromHTML("<table><tr><td></td></tr></table>");
-                    var cell = new_tab.getElementsByTagName("td")[0].cloneNode(true);
-                    if (isRight) {
-                        cells[j].after(cell);
-                    } else {
-                        cells[j].parentNode.insertBefore(cell, cells[j]);
-                    }
-                    break;
-                }
-            }
-        }
-        addIntoHistory();
-    }
-}
-
-function getIPLicBlockCount() {
-    var blocks = document.getElementsByClassName("block");
-    var gpoi_count = 0;
-    for (var i = 0; i < blocks.length; i++) {
-        if (blocks[i].getAttribute("data-meta-agni_lib") !== null) {
-            gpoi_count++;
-        }
-    }
-    return gpoi_count;
-}
-
-function naviDiff(diff_index, e) {
-    var goto = $(".diffnavi")[diff_index].getAttribute("name");
-    window.location.href = "#" + goto;
-
-    var isSrc = "other";
-
-    try {
-        isSrc = e.target.parentNode.getAttribute("data-type");
-    } catch (e) {
-    }
-
-    callLineNavi($(".diffnavi")[diff_index].getAttribute("data-aline"), false, isSrc);
-    window.scrollTo(window.scrollX, window.scrollY - 40);
-    setDiffHighlight($(".diffnavi")[diff_index]);
-}
-
-function setDiffHighlight(obj) {
-    if (document.getElementById("highlighter") !== null) {
-        document.getElementById("highlighter").remove();
-    }
-    $(obj).append("<div id='highlighter' class='highlight'></div>");
-}
-
-//@FXML
-function callLineNavi(linenum, isnext, type) {
-    try {
-        clickController.navigatemerge(linenum, isnext, type);
-    } catch (e) {
-    }
-}
-
-
-function loadDefaultHis() {
-    try {
-        var tempob = localStorage.getItem(getRegHistoryID());
-        if (tempob !== null && tempob !== "") {
-            regHistoryArraay = JSON.parse(tempob);
-            regHistoryIndex = regHistoryArraay.length;
-            isundofirsttimeclicked = false;
-            console.log("---prev his1 : " + regHistoryIndex);
-        }
-        var tempobparam = localStorage.getItem(getParamHistoryID());
-        if (tempobparam !== null && tempobparam !== "") {
-            paramHistoryArr = JSON.parse(tempobparam);
-            isundofirsttimeclicked = false;
-            paramHistoryIndex = paramHistoryArr.length;
-        }
-        console.log("--sqid on load : " + getSeqHistoryID());
-        var tempobseq = localStorage.getItem(getSeqHistoryID());
-        if (tempobseq !== null && tempobseq !== "") {
-            seqHistoryArr = JSON.parse(tempobseq);
-            isundofirsttimeclicked = false;
-            seqHistoryIndex = seqHistoryArr.length;
-        }
-        var tempobspread = localStorage.getItem(getSpreadHistoryID());
-        if (tempobspread !== null && tempobspread !== "") {
-            spreadHistoryArr = JSON.parse(tempobspread);
-            isundofirsttimeclicked = false;
-            spreadHistoryIndex = spreadHistoryArr.length;
-        }
-    } catch (e) {
-        console.log("err in load def " + e.message);
-    }
-}
-
-function hideHints() {
-    $('#autocomplete-list').hide();
-}
-
-function setscollpos() {
-    if (document.getElementById("param_main").style.display === "block") {
-        scrollpos = $("#datacenter2").text();
-    } else {
-        scrollpos = $("#datacenter1").text();
-    }
-
-    if (scrollpos.startsWith("spread")) {
-        try {
-            var pos = parseInt(scrollpos.split(":")[1]);
-            $("#spreadsheetcontainer").scrollTop(pos);
-        } catch (e) {
-            console.log("error setup scroll pos to spread : " + e.message);
-        }
-    } else {
-        if (scrollpos) {
-            if ('scrollRestoration' in window.history) {
-                window.history.scrollRestoration = 'manual'
-            }
-            window.scrollTo(0, scrollpos);
-            $('body').animate({scrollTop: scrollpos}, 1);
-        }
-    }
-    return false;
-}
-
-function getscrollpos() {
-    var scrolly = null;
-    try {
-        if (document.getElementById("regdivcontainer").style.display === "block") {
-            scrolly = "reg:" + window.scrollY;
-        } else if (document.getElementById("param_main").style.display === "block") {
-            scrolly = "param:" + window.scrollY;
-        } else if (document.getElementById("idsexcelcontainer").style.display === "block") {
-            scrolly = "spread:" + $("#spreadsheetcontainer").scrollTop();// window.scrollY;
-        } else if (document.getElementById("seqdivcontainer").style.display === "block") {
-            scrolly = "seq:" + window.scrollY;
-        }
-    } catch (e) {
-        console.log("error getscrollpos : " + e.message);
-    }
-    return scrolly;
-}
-
-function setscrollpos(val) {
-    $("body").scrollTop(val);
-    scrollpos = val;
-}
-
-function setWindowScrollPos(val) {
-    var scr = parseInt(val);
-    window.scrollTo(0, scr);
-    $("body").scrollTop(scr);
-
-    $("#datacenter1").text(scr);
-
-}
-
-function setregdivscrollpos(val) {
-    $("body").scrollTop(val);
-}
-
-function createElementFromHTML(htmlString) {
-    var div = document.createElement('div');
-    div.innerHTML = htmlString.trim();
-
-    // Change this to div.childNodes to support multiple top-level nodes
-    return div.firstChild;
-}
-
-
-function openparamregcontextmenu() {
-    console.log("--open context for param reg");
-
-}
-
-function maindivcontextcall(event) {
-    console.log("--call maindivcontextcall");
-    //event.preventDefault();
-    return false;
-}
-
-function param_maincontextcall() {
-    console.log("--call param_maincontextcall");
-    //event.preventDefault();
-    return false;
-}
-
-function paramcontainercontextcall() {
-    console.log("--call paramcontainercontextcall");
-    //event.preventDefault();
-    return false;
-}
-
-
-function create_proj() {
-    try {
-        clickController.createProj();
-    } catch (e) {
-
-    }
-}
-
-function open_proj() {
-    try {
-        clickController.open_proj();
-    } catch (e) {
-
-    }
-}
-
-function create_ip() {
-    try {
-        clickController.createIp();
-    } catch (e) {
-
-    }
-}
-
-function openBrowser(url) {
-    try {
-        clickController.openBrowser(url);
-    } catch (e) {
-
-    }
-}
-
-function scrollToTop() {
-
-}
-
-
-$(document).bind("click", function (event) {
+$(document).bind("click", function(event) {
     /*document.getElementById("rmenu").className = "hide";*/
 });
 
-function hintlistner(event) {
-    if (event.keyCode === 13) {
-        var val = document.getElementById("inputhint").value;
-        document.getElementById("divhint").closest("td").append(" " + val);
+function hintlistner(event){
+    if(event.keyCode==13){
+        var val=document.getElementById("inputhint").value;
+        document.getElementById("divhint").closest("td").append(" "+val);
         document.getElementById("divhint").remove();
     }
 }
@@ -1854,8 +537,8 @@ function mouseX(evt) {
         return evt.pageX;
     } else if (evt.clientX) {
         return evt.clientX + (document.documentElement.scrollLeft ?
-                document.documentElement.scrollLeft :
-                document.body.scrollLeft);
+                              document.documentElement.scrollLeft :
+                              document.body.scrollLeft);
     } else {
         return null;
     }
@@ -1866,94 +549,95 @@ function mouseY(evt) {
         return evt.pageY;
     } else if (evt.clientY) {
         return evt.clientY + (document.documentElement.scrollTop ?
-                document.documentElement.scrollTop :
-                document.body.scrollTop);
+                              document.documentElement.scrollTop :
+                              document.body.scrollTop);
     } else {
         return null;
     }
 }
 
 function insertNewTabRow(evt, obj) {
-    if (evt.keyCode === 9) {
-        while (obj.tagName.toUpperCase() !== "DIV") {
+    if(evt.keyCode===9){
+        console.log('n='+obj.tagName.toUpperCase());
+        while(obj.tagName.toUpperCase() !== "DIV") {
+            console.log('n='+obj.tagName.toUpperCase());
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'field');
-        row.setAttribute('oncontextmenu', 'openregmenu(event);');
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','field');		
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'bits');
-        input = document.createElement("input");
-        input.setAttribute('style', 'width:88%');
-        var rowdel = document.createElement("a");
-        rowdel.innerText = 'x';
-        rowdel.setAttribute('title', 'delete this row');
-        rowdel.setAttribute('style', 'color:red');
-        rowdel.setAttribute('onclick', 'deleteRow(this);');
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'bits');     
+        input=document.createElement("input");
+        input.setAttribute('style','width:88%');
+        var rowdel=document.createElement("a");
+        rowdel.innerText='x';
+        rowdel.setAttribute('title','delete this row');
+        rowdel.setAttribute('style','color:red');
+        rowdel.setAttribute('onclick','deleteRow(this);');
         cell.appendChild(rowdel);
         cell.appendChild(input);
 
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'fieldname');
-        input = document.createElement("input");
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'fieldname');  
+        input=document.createElement("input");
         cell.appendChild(input);
 
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'sw thirdCell');
-        input = document.createElement("input");
+        cell=row.insertCell(2);
+        cell.setAttribute('class','sw thirdCell');
+        input=document.createElement("input");
         cell.appendChild(input);
 
 
-        cell = row.insertCell(3);
-        cell.setAttribute('class', 'hw thirdCell');
-        input = document.createElement("input");
+        cell=row.insertCell(3);
+        cell.setAttribute('class','hw thirdCell');
+        input=document.createElement("input");
         cell.appendChild(input);
 
 
-        cell = row.insertCell(4);
-        cell.setAttribute('onkeydown', "insertNewRow(event,this);");
-        cell.setAttribute('class', 'default');
-        input = document.createElement("input");
+        cell=row.insertCell(4);
+        cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+        cell.setAttribute('class','default');
+        input=document.createElement("input");
         cell.appendChild(input);
 
     }
     /*add property row*/
-    else if (evt.keyCode === 80 && evt.altKey) {
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+    else if(evt.keyCode==80&&evt.altKey){
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('colspan', '5');
-        cell.setAttribute('onkeydown', "insertNewRow(event,this);");
-        cell.setAttribute('class', 'propclass');
+        cell=row.insertCell(0);		
+        cell.setAttribute('colspan', '5');    
+        cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+        cell.setAttribute('class','propclass');
         console.log('add prop');
-        input = document.createElement("textarea");
-        input.setAttribute('class', 'propInput');
+        input=document.createElement("textarea");  
+        input.setAttribute('class','propInput');
         cell.appendChild(input);
 
     }
 }
 
 
-$('.field').click(function () {
+$('.field').click(function(){
     var row_index = $(this).parent().index();
     var col_index = $(this).index();
 });
@@ -1979,7 +663,7 @@ function selectElementContents(el) {
 }
 
 function selectElementContents2(el) {
-    var elemen = document.getElementById(el);
+    var elemen=document.getElementById(el);
     var body = document.body, range, sel;
     if (document.createRange && window.getSelection) {
         range = document.createRange();
@@ -2000,103 +684,158 @@ function selectElementContents2(el) {
 }
 
 
-var isrowselected = false;
-var prevTab = null;
+var isrowselected=false;
+var prevTab=null;
 
-function mainbodyclick() {
-    //addIntoHistory();
-}
+function mainbodyclick(){}
 
-function tabClick(ele) {
+function tabClick(ele){
     /*
-     if(prevTab!=null){
-     $(prevTab).removeAttr('style');
-     }
-     if(isrowselected){
-     isrowselected=false;
-     }
-     else{
-     clsTab=ele.id;
-     $(ele).attr('style','box-shadow:rgb(67, 134, 239) 2px 2px 1px');
-     
-     curr_row_obj=null;
-     
-     
-     prevTab=ele;
-     }
-     */
+				if(prevTab!=null){
+					$(prevTab).removeAttr('style');
+				}
+				if(isrowselected){
+					isrowselected=false;
+				}
+				else{
+					clsTab=ele.id;
+					$(ele).attr('style','box-shadow:rgb(67, 134, 239) 2px 2px 1px');
 
+					curr_row_obj=null;
+
+
+					prevTab=ele;
+				}
+				*/
+
+}		
+
+function setCurrRowSignal(currnRow){
+    curr_row_signal=currnRow.rowIndex;
 }
 
-function setCurrRowSignal(currnRow) {
-    curr_row_signal = currnRow.rowIndex;
+var isCut=false;
+
+
+var copyClipBoardTab;
+function copyIDSTab(){	
+    isCut=false;
+    /*clipboard_tab=document.getElementById(clsTab);*/
+    copyClipBoardTab=$(document.getElementById(clsTab)).prop('outerHTML');
+}
+function pasteIDSTab(){
+    try{
+        addIntoHistory();
+        var tab="<table contenteditable='false' class='reg idsTemp' id='tab1' style='box-shadow: rgb(128, 128, 128) 1px 1px 1px;'><tbody><tr ><td class='header readOnly'>hell</td><td title='egister name' class='name' contenteditable='false'></td><td title='offset' class='offset'></td><td class='address addCell readOnly'><div class='splitVer setBorder' title='Address'><label class='label'>Address |</label><label></label></div><div class='splitVer' title='Default'><label class='label'>Default |</label><label></label></div> </td></tr><tr><td colspan='5' title='add properties' class='propclass prop'></td></tr>";
+        document.execCommand("insertHTML", false, copyClipBoardTab);	
+
+
+        if(isCut==true){
+            selectElementContents(document.getElementById(clsTab));
+            document.execCommand('delete');
+            isCut=false;
+        }
+        clipboard_tab=null;
+
+        setTabID();
+    }
+    catch(e){
+        alert("Err paste : "+e.message);
+    }
+}
+function cutIDSTab(){
+    isCut=true;
+    clipboard_tab=clsTab;
+
+    copyClipBoardTab=$(document.getElementById(clsTab)).prop('outerHTML');
 }
 
-
-//@FXML
-function deleteHtml() {
+function copy(){
+    var p=document.execCommand('copy'); 
+}
+function cut(){
+    document.execCommand('cut');
+}
+function CopyStr(){
+    var p=document.execCommand('copy'); 
+}
+function paste(){
     addIntoHistory();
-    document.execCommand('delete');
+    var p=document.execCommand('paste');
+}
+function undo(){
+    var p=document.execCommand('undo');
+}
+function redo(){
+    document.execCommand('redo');
+}
+function deleteHtml(){
+    addIntoHistory();	
+    var p=document.execCommand('delete');
 }
 
-function setBold() {
+function selectAllStr(){
+    var p=document.execCommand('selectAll', false, null);
+}
+
+function setBold(){
     document.execCommand('bold');
 }
-function setItalic() {
+function setItalic(){
     document.execCommand('italic');
 }
-function setUnderline() {
+function setUnderline(){
     document.execCommand('underline');
 }
 
-function setAlignLeft() {
+function setAlignLeft(){
     document.execCommand('justifyLeft');
 }
 
-function setAlignRight() {
+function setAlignRight(){
     document.execCommand('justifyRight');
 }
-function setAlignCenter() {
+function setAlignCenter(){
     document.execCommand('justifyCenter');
 }
-function setAlignFull() {
+function setAlignFull(){
     document.execCommand('justifyFull');
 }
 
 
-function setOrderedList() {
+function setOrderedList(){
     document.execCommand('insertOrderedList');
 }
-function setUnOrderedList() {
+function setUnOrderedList(){
     document.execCommand('insertUnorderedList');
 }
 
-function setStrikeThrough() {
+function setStrikeThrough(){
     document.execCommand('strikeThrough');
 }
-function setSubscript() {
+function setSubscript(){
     document.execCommand('subscript');
 }
-function setSuperscript() {
+function setSuperscript(){
     document.execCommand('superscript');
 }
 
-function setIncreaseSize() {
+function setIncreaseSize(){
     document.execCommand('increaseFontSize');
 }
-function setDecreaseSize() {
+function setDecreaseSize(){
     document.execCommand('decreaseFontSize');
 }
 
-function setFontName(fontName) {
+function setFontName(fontName){
     document.execCommand("fontName", false, fontName);
 }
 
-function setFormatsName(formatsName) {
-    document.execCommand("formatBlock", false, formatsName);
+function setFormatsName(formatsName){
+    document.execCommand("formatBlock", false, formatsName);	
 }
 
-function setFontSize(fontSize) {
+function setFontSize(fontSize){
     document.execCommand("fontSize", false, fontSize);
 }
 
@@ -2104,7 +843,7 @@ function setFontSize(fontSize) {
 function insertHTML(img) {
     var id = "rand" + Math.random();
     img = "<img src=\"" + img + "\" id=" + id + ">";
-    if (document.all) {
+    if(document.all) {
         var range = document.selection.createRange();
         range.pasteHTML(img);
         range.collapse(false);
@@ -2113,13 +852,11 @@ function insertHTML(img) {
         document.execCommand("insertHTML", false, img);
     }
     return document.getElementById(id);
-}
-;
+};
 
 var TRange = null;
 function findString(str) {
-    if (parseInt(navigator.appVersion) < 4)
-        return;
+    if (parseInt(navigator.appVersion) < 4) return;
     var strFound;
     if (window.find) {
 
@@ -2127,14 +864,15 @@ function findString(str) {
         strFound = self.find(str);
         if (!strFound) {
             strFound = self.find(str, 0, 1);
-            while (self.find(str, 0, 1))
-                continue
-        } else {
+            while (self.find(str, 0, 1)) continue
+        } else {            
             return true;
         }
-    } else if (navigator.appName.indexOf("Microsoft") !== -1) {
+    }
+    else if (navigator.appName.indexOf("Microsoft") != -1) {
+
         /* EXPLORER-SPECIFIC CODE*/
-        if (TRange !== null) {
+        if (TRange != null) {
             TRange.collapse(false);
             strFound = TRange.findText(str);
             if (strFound) {
@@ -2142,7 +880,7 @@ function findString(str) {
                 return true;
             }
         }
-        if (TRange === null || strFound === 0) {
+        if (TRange == null || strFound == 0) {
             TRange = self.document.body.createTextRange();
             strFound = TRange.findText(str);
             if (strFound) {
@@ -2150,904 +888,674 @@ function findString(str) {
                 return true;
             }
         }
-    } else if (navigator.appName === "Opera") {
+    }
+    else if (navigator.appName == "Opera") {
         return false;
     }
     return false;
 }
 
-function findReplaceString(str, newStr) {
+function findReplaceString(str,newStr) {
 
     //get active div id
     var active_div;
-    if (document.getElementById(REG_DIV_CONTAINER).style.display === 'block') {
-        active_div = REG_DIV_CONTAINER;
-    } else if (document.getElementById(SEQ_DIV_CONTAINER).style.display === 'block') {
-        active_div = SEQ_DIV_CONTAINER;
-    } else if (document.getElementById(SPREAD_DIV_CONTAINER).style.display === 'block') {
-        active_div = SPREAD_DIV_CONTAINER;
+    if(document.getElementById(REG_DIV_CONTAINER).style.display=='block'){
+        active_div=REG_DIV_CONTAINER;
+    }else if(document.getElementById(SEQ_DIV_CONTAINER).style.display=='block'){
+        active_div=SEQ_DIV_CONTAINER;
+    }else if(document.getElementById(SPREAD_DIV_CONTAINER).style.display=='block'){
+        active_div=SPREAD_DIV_CONTAINER;
     }
 
-    if (active_div) {
+    if(active_div){
         addIntoHistory();
-        /*
-         var parentnode = window.getSelection().baseNode.parentNode;
-         var isvalid = false;
-         if (document.getElementById(active_div).contains(parentnode)) {
-         isvalid = true;
-         }*/
-        isvalid = true;
-        while (findString(str)) {
-            if (isvalid) {
-                var sel = window.getSelection();
-                var range = sel.getRangeAt(0);
+        var parentnode=window.getSelection().baseNode.parentNode;
+        var isvalid=false;
+        if(document.getElementById(active_div).contains(parentnode)){
+            isvalid=true;   
+        }
+        while(findString(str)){            
+            if(isvalid){
+                var sel=window.getSelection();
+                var range=sel.getRangeAt(0);
                 range.deleteContents();
-                range.insertNode(document.createTextNode(newStr));
+                range.insertNode( document.createTextNode(newStr) );                
             }
         }
 
-    }
-}
-
-function openSearchWindow() {
-    document.getElementsByClassName("ace_search")[0].style.display = "block";
-    $("#ace_search_find").focus();
-}
-
-function openCloseWindow() {
-    document.getElementsByClassName("ace_search")[0].style.display = "none";
-}
-
-function setSearchOptions(obj) {
-    try {
-        var casespane = obj.getElementsByTagName("span")[0]; //document.getElementsByTagName();
-        if (casespane.classList.contains("checked")) {
-            casespane.classList.remove("checked");
-        } else {
-            casespane.classList.add("checked");
-        }
-    } catch (e) {
+        addIntoHistory();
     }
 }
 
 
-function replacestr() {
-    var newStr = document.getElementById("ace_search_replace").value;
-    if (newStr !== "") {
-
-        var wordwarpNotselected = false;
-        try {
-            if (!document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.contains("checked")) {
-                //add word wrap becouse it find in complete document
-                document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.add("checked");
-                wordwarpNotselected = true;
-            }
-        } catch (e) {
-        }
-
-        try {
-            var isSel = findstr(false);
-            if (isSel) {
-                var sel = window.getSelection();
-                var range = sel.getRangeAt(0);
-                var container = range.startContainer;
-                if (container.className !== "ace_search_form") { //ignore where element not need to search in
-                    addIntoHistory();
-                    range.deleteContents();
-                    range.insertNode(document.createTextNode(newStr));
-                }
-            }
-        } catch (e) {
-        } finally {
-            if (wordwarpNotselected) {
-                document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.remove("checked");
-            }
-        }
-    }
-}
-
-function replacestrAll() {
-    var newStr = document.getElementById("ace_search_replace").value;
-    if (newStr !== "") {
-        var wordwarpNotselected = false;
-        try {
-            if (!document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.contains("checked")) {
-                //add word wrap becouse it find in complete document
-                document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.add("checked");
-                wordwarpNotselected = true;
-            }
-        } catch (e) {
-        }
+var clsTab=null;
 
 
-        try {
-            while (findstr(false)) {
-                try {
-                    var sel = window.getSelection();
-                    var range = sel.getRangeAt(0);
-                    var container = range.startContainer;
-
-                    if (container.className === "ace_search_form") { //ignore where element not need to search in
-                        break;
-                    } else {
-                        addIntoHistory();
-                        range.deleteContents();
-                        range.insertNode(document.createTextNode(newStr));
-                    }
-                } catch (e) {
-                }
-            }
-        } catch (e) {
-        } finally {
-            if (wordwarpNotselected) {
-                document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.remove("checked");
-            }
-        }
-    }
-}
-
-
-function findstr(isbackward) {
-
-    try {
-        //to highlight search in param view, it has to be editable. so we are making it editable true and when click on paramdiv, make editable false
-        if (document.getElementById(PARAM_DIV_CONTAINER).style.display === 'block') {
-            document.getElementById(PARAM_CONTAINER).setAttribute("contenteditable", "true");
-            var ptags = document.getElementById(PARAM_CONTAINER).getElementsByTagName("p");
-            for (var i = 0; i < ptags.length; i++) {
-                ptags[i].setAttribute("draggable", "false");
-            }
-
-        }
-    } catch (e) {
-    }
-
-    var aString = document.getElementById("ace_search_find").value;
-    var aCaseSensitive = false;
-    var aBackwards = false;
-    var aWrapAround = false;
-    var aWholeWord = false;
-    var aSearchInFrames = true;
-    var aShowDialog = true;
-
-    try {
-        if (document.getElementById("ace_search_wrap").getElementsByTagName("span")[0].classList.contains("checked")) {
-            aWrapAround = true;
-        }
-        if (document.getElementById("ace_search_casesensitive").getElementsByTagName("span")[0].classList.contains("checked")) {
-            aCaseSensitive = true;
-        }
-        /*
-         if (document.getElementById("ace_search_whole").getElementsByTagName("span")[0].classList.contains("checked")) {
-         aWholeWord = true;
-         }
-         */
-        aBackwards = isbackward;
-    } catch (e) {
-    }
-
-    var result = window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
-            aWholeWord, aSearchInFrames, aShowDialog);
-    return result;
-}
-
-var clsTab = null;
-
-
-function deleteRow(obj) {
-    curr_row_obj = obj;
+function deleteRow(obj){
+    curr_row_obj=obj;	
 }
 
 
 
 
 /*@JAVAFX*/
-function setTabID() {
+function setTabID(){
     var idsTables = document.getElementsByClassName("idsTemp");
-    for (var i = 0; i < idsTables.length; i++)
+    for(var i = 0; i < idsTables.length; i++)
     {
-        random_Num = Math.random();
+        random_Num=Math.random();
         /*idsTables[i].setAttribute('id','tab'+i);*/
-        idsTables[i].setAttribute('id', 'tab' + i + random_Num);
+        idsTables[i].setAttribute('id','tab'+i+random_Num);
     }
     var field = document.getElementsByClassName("field");
-    for (var i = 0; i < field.length; i++)
+    for(var i = 0; i < field.length; i++)
     {
-        random_Num = Math.random();
-        field[i].setAttribute('id', 'tabf' + i + random_Num);
+        random_Num=Math.random();
+        field[i].setAttribute('id','tabf'+i+random_Num);
     }
     var edited = document.getElementsByClassName("edited");
-    for (var i = 0; i < edited.length; i++)
+    for(var i = 0; i < edited.length; i++)
     {
-        random_Num = Math.random();
-        edited[i].setAttribute('id', 'tabed' + i + random_Num);
+        random_Num=Math.random();
+        edited[i].setAttribute('id','tabed'+i+random_Num);
     }
 }
 
 /*JAVAFX*/
-function setSpreadsheetID() {
-    try {
-        var idsTables = document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
-        for (var i = 0; i < idsTables.length; i++)
+function setSpreadsheetID(){
+    try{
+        var  idsTables=document.getElementById("spreadsheetcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
+        for(var i = 0; i < idsTables.length; i++)
         {
-            random_Num = Math.random();
+            random_Num=Math.random();
             /*idsTables[i].setAttribute('id','tab'+i);*/
-            idsTables[i].setAttribute('id', 'tab' + i + random_Num);
+            idsTables[i].setAttribute('id','tab'+i+random_Num);
         }
-    } catch (e) {
     }
+    catch(e){}
 }
 
 
-function getFirstClass(classArry) {
+function getFirstClass(classArry){
     return classArry.split(' ')[0];
 }
 
 function auto_grow(element) {
     element.style.height = "5px";
-    element.style.height = (element.scrollHeight) + "px";
+    element.style.height = (element.scrollHeight)+"px";
 }
 
 var parser = new DOMParser();
 
 function htmlToElements(html) {
-    var doc;
-    doc = parser.parseFromString(html, "text/html");
+    var doc = parser.parseFromString(html, "text/html");
     return doc.getElementsByClassName("idsTemp")[0];
     /*
-     var template = document.createElement('template');
-     template.innerHTML = html;
-     return template.childNodes[0];
-     */
+	var template = document.createElement('template');
+	template.innerHTML = html;
+	return template.childNodes[0];
+	*/
 }
 
-function addstrToCaret(element) {
-    return "<br>" + element.outerHTML + "<br>";
+function addstrToCaret(element){
+    return "<br>"+element.outerHTML+"<br>";
 }
 
-function getRandomNum() {
-    return Math.random().replace(".", "_");
+function getRandomNum(){
+    return Math.random().replace(".","_");
 }
 
-function insertSystem() {
+function insertSystem(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.system);
-    element.id = 'tab_system' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.system);
+    element.id='tab_system'+random_Num;
+    /*query="<table contenteditable='false' class='system idsTemp' onclick='tabClick(this)' id='tab_system"+random_Num+"'><tbody><tr><td class='header readOnly' style='width:105px;'></td><td title='system name' class='name wideWidthName'>system_name</td><td class='specImage'><img title='System' alt='System' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue' title='address'></label></td></tr><tr><td colspan='5'  title='add properties' class='propclass'></td></tr><tr><td colspan='5' title='add description here' class='desc descclass'></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertBoard() {
+function insertBoard(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.board);
-    element.id = 'tab_board' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.board);
+    element.id='tab_board'+random_Num;
+    /*query="<table contenteditable='false' class='board idsTemp' onclick='tabClick(this)' id='tab_board"+random_Num+"'> <tbody><tr><td class='header readOnly' style='width:105px;'></td><td title='board name' class='name wideWidthName'>board_name</td>     <td class='specImage'><img title='Board' alt='Board' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue' title='address'></label></td></tr><tr ><td colspan='5' title='add properties'  class='propclass'></td></tr><tr ><td colspan='5' title='add description here' class='desc descclass'></td></tr></tbody></table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertElementToCurrentPos(ele) {
-    addIntoHistory();
-    var element = createElementFromHTML(ele);
-    pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 
-}
-
-function insertChip() {
+function insertChip(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
+    random_Num=Math.random();
 
-    var element = htmlToElements(ids_json.chip);
+    var element=htmlToElements(ids_json.chip);
     /*var element=$.parseHTML(ids_json.chip);*/
 
-    element.id = 'tab_chip' + random_Num;
+    element.id='tab_chip'+random_Num;
+    /*query="<table contenteditable='false' class='chip idsTemp' onclick='tabClick(this)' id='tab_chip"+random_Num+"'><tbody><tr><td class='header readOnly'></td> <td title='chip name' class='name'>chip_name</td><td title='offset' class='offset'></td><td class='specImage'><img title='Chip' alt='Chip' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue' title='address'></label></td></tr><tr><td colspan='5' title='add properties'  class='propclass'></td></tr><tr><td colspan='5' title='add description here' class='desc descclass'></td></tr></tbody></table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertBlock() {
+function insertBlock(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
+    random_Num=Math.random();
 
-    var element = htmlToElements(ids_json.block);
-    element.id = 'tab_block' + random_Num;
+    var element=htmlToElements(ids_json.block);
+    element.id='tab_block'+random_Num;
+    /*query="<br><table contenteditable='false' class='block idsTemp' onclick='tabClick(this)' id='tab_block"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='block name' class='name'>block_name</td><td title='offset' class='offset'></td><td class='specImage'><img title='Block' alt='Block' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue' title='address'></label></td></tr><tr><td colspan='5' title='add properties' class='propclass'></td></tr><tr><td colspan='5' title='add description here' class='desc descclass'></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertRegGroup() {
+function insertRegGroup(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reggroup);
-    var endreggroup = htmlToElements(ids_json.endreggroup);
-    element.id = 'tab_reggroup' + random_Num;
-    endreggroup.id = 'tab_endreggroup' + random_Num;
-    query = "<br>" + element.outerHTML + "<br><br><br><br>" + endreggroup.outerHTML + "<br>";
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reggroup);
+    var endreggroup=htmlToElements(ids_json.endreggroup);
+    element.id='tab_reggroup'+random_Num;
+    endreggroup.id='tab_endreggroup'+random_Num;
+    query="<br>"+element.outerHTML+"<br><br><br><br>"+endreggroup.outerHTML+"<br>";
+    /*query="<table contenteditable='false' class='section idsTemp' onclick='tabClick(this)' id='tab_section"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td class='name' title='reg group name'>reggroup_name</td><td title='offset' class='offset'></td><td class='specImage'><img title='RegGroup' alt='RegGrou[]' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue' title='address'></label></td></tr><tr><td colspan='5' title='add properties'  class='propclass'></td></tr><tr><td colspan='5' title='add description here' class='desc descclass'></td></tr></tbody> </table><br><br><br><br><table class='endreggroup idsTemp' id='tab1'><tbody><tr class='label'><td>End RegGroup</td></tbody></table> <br><br>";*/
     pasteHtmlAtCaret(query);
-    addIntoHistory();
 }
 
-function insertReg() {
-    addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reg);
-    element.id = 'tab_reg' + random_Num;
 
-    var field = element.getElementsByClassName("fields")[0];
-    field.id = "tab_fields" + random_Num;
-    var f = element.getElementsByClassName("field")[0];
-    f.id = "tab_field" + random_Num;
+
+function insertReg(imgPath){
+    addIntoHistory();
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reg);
+    element.id='tab_reg'+random_Num;
+
+    var field=element.getElementsByClassName("fields")[0];
+    field.id="tab_fields"+random_Num;
+    var f=element.getElementsByClassName("field")[0];
+    f.id="tab_field"+random_Num;	
+    /*query="<br><table contenteditable='false' onclick='tabClick(this);' class='reg idsTemp' id='tab_reg"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='reg name' class='name'>reg_name</td><td title='offset' class='offset' colspan='2'></td><td class='specImage'><img title='Register' alt='Register' src="+imgPath+"></td><td class='address addCell readOnly' ><div class='splitVer setBorder' title='address'><label class='label'>address|</label><label class='addrvalue'></label></div><div class='splitVer' title='Default'><label class='label'>default |</label><label class='defvalue'></label></div> </td> <td class='regwidth hideWidth'>32</td></tr><tr><td colspan='6' title='add properties' class='propclass' contenteditable='true'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr><tr><td colspan='6' class='border'></td></tr><tr><td colspan='6' class='fieldtd'><table class='fields idsTemp' id='tab_reg_field"+random_Num+"'><tr class='label'><td class='ddregbits'>bits</td><td class='lblfieldname'>name</td><td class='lblsw'>s/w</td><td class='lblhw'>h/w</td><td class='lbldefault'>default</td><td class='lbldesc'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' id='field"+random_Num+"' class='field edited'><td title='bits' class='bits'></td><td title='field name' class='fieldname' ><br></td><td title='software access' class='sw'><br></td><td title='hardware access' class='hw'></td><td title='default' class='default'><br></td><td title='description' class='desc fielddesc' onkeydown='insertNewRow(event,this);'></td></tr></table></td></tr></tbody></table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
-    element.focus();
 }
 
-function insertReg8() {
+function insertReg8(imgPath){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reg8);
-    element.id = 'tab_reg8' + random_Num;
-    var field = element.getElementsByClassName("fields")[0];
-    field.id = "tab_fields" + random_Num;
-    var f = element.getElementsByClassName("field")[0];
-    f.id = "tab_field" + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reg8);
+    element.id='tab_reg8'+random_Num;
+    var field=element.getElementsByClassName("fields")[0];
+    field.id="tab_fields"+random_Num;
+    var f=element.getElementsByClassName("field")[0];
+    f.id="tab_field"+random_Num;	
+
+    /*query="<br><div><table contenteditable='false' onclick='tabClick(this);' class='reg idsTemp' id='tab_reg"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='reg name' class='name'>reg_name</td><td title='offset' class='offset' colspan='2'></td><td class='specImage'><img title='8 bits register' alt='Register' src="+imgPath+"></td><td class='address addCell readOnly' ><div class='splitVer setBorder' title='address'><label class='label'>address|</label><label class='addrvalue'></label></div><div class='splitVer' title='Default'><label class='label'>default |</label><label class='defvalue'></label></div> </td><td class='regwidth hideWidth'>8</td></tr><tr><td colspan='6' title='add properties' class='propclass' contenteditable='true'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr><tr><td colspan='6' class='border'></td></tr><tr><td colspan='6' class='fieldtd'><table class='fields idsTemp' id='tab_reg_field"+random_Num+"'><tr class='label'><td class='ddregbits'>bits</td><td class='lblfieldname'>name</td><td class='lblsw'>s/w</td><td class='lblhw'>h/w</td><td class='lbldefault'>default</td><td class='lbldesc'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' id='field"+random_Num+"' class='field edited'><td title='bits' class='bits'>7:0</td><td title='field name' class='fieldname' ><br></td><td title='software access' class='sw'><br></td><td title='hardware access' class='hw'></td><td title='default' class='default'><br></td><td title='description' class='desc fielddesc' onkeydown='insertNewRow(event,this);'></td></tr></table></td></tr></tbody></table></div><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
-    element.focus();
 }
-function insertReg16() {
+function insertReg16(imgPath){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reg16);
-    element.id = 'tab_reg16' + random_Num;
-    var field = element.getElementsByClassName("fields")[0];
-    field.id = "tab_fields" + random_Num;
-    var f = element.getElementsByClassName("field")[0];
-    f.id = "tab_field" + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reg16);
+    element.id='tab_reg16'+random_Num;
+    var field=element.getElementsByClassName("fields")[0];
+    field.id="tab_fields"+random_Num;
+    var f=element.getElementsByClassName("field")[0];
+    f.id="tab_field"+random_Num;	
+
+    /*query="<br><div><table contenteditable='false' onclick='tabClick(this);' class='reg idsTemp' id='tab_reg"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='reg name' class='name'>reg_name</td><td title='offset' class='offset' colspan='2'></td><td class='specImage'><img title='16 bits register' alt='Register' src="+imgPath+"></td><td class='address addCell readOnly' ><div class='splitVer setBorder' title='address'><label class='label'>address|</label><label class='addrvalue'></label></div><div class='splitVer' title='Default'><label class='label'>default |</label><label class='defvalue'></label></div> </td> <td class='regwidth hideWidth'>16</td></tr><tr><td colspan='6' title='add properties' class='propclass' contenteditable='true'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr><tr><td colspan='6' class='border'></td></tr><tr><td colspan='6' class='fieldtd'><table class='fields idsTemp' id='tab_reg_field"+random_Num+"'><tr class='label'><td class='ddregbits'>bits</td><td class='lblfieldname'>name</td><td class='lblsw'>s/w</td><td class='lblhw'>h/w</td><td class='lbldefault'>default</td><td class='lbldesc'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' id='field"+random_Num+"' class='field edited'><td title='bits' class='bits'>15:0</td><td title='field name' class='fieldname' ><br></td><td title='software access' class='sw'><br></td><td title='hardware access' class='hw'></td><td title='default' class='default'><br></td><td title='description' class='desc fielddesc' onkeydown='insertNewRow(event,this);'></td></tr></table></td></tr></tbody></table></div><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
-function insertReg32() {
+function insertReg32(imgPath){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reg32);
-    element.id = 'tab_reg32' + random_Num;
-    var field = element.getElementsByClassName("fields")[0];
-    field.id = "tab_fields" + random_Num;
-    var f = element.getElementsByClassName("field")[0];
-    f.id = "tab_field" + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reg32);
+    element.id='tab_reg32'+random_Num;
+    var field=element.getElementsByClassName("fields")[0];
+    field.id="tab_fields"+random_Num;
+    var f=element.getElementsByClassName("field")[0];
+    f.id="tab_field"+random_Num;	
+
+    /*query="<br><div><table contenteditable='false' onclick='tabClick(this);' class='reg idsTemp' id='tab_reg"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='reg name' class='name'>reg_name</td><td title='offset' class='offset' colspan='2'></td><td class='specImage'><img title='32 bits register' alt='Register' src="+imgPath+"></td><td class='address addCell readOnly' ><div class='splitVer setBorder' title='address'><label class='label'>address|</label><label class='addrvalue'></label></div><div class='splitVer' title='Default'><label class='label'>default |</label><label class='defvalue'></label></div> </td> <td class='regwidth hideWidth'>32</td></tr><tr><td colspan='6' title='add properties' class='propclass' contenteditable='true'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr><tr><td colspan='6' class='border'></td></tr><tr><td colspan='6' class='fieldtd'><table class='fields idsTemp' id='tab_reg_field"+random_Num+"'><tr class='label'><td class='ddregbits'>bits</td><td class='lblfieldname'>name</td><td class='lblsw'>s/w</td><td class='lblhw'>h/w</td><td class='lbldefault'>default</td><td class='lbldesc'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' id='field"+random_Num+"' class='field edited'><td title='bits' class='bits'>31:0</td><td title='field name' class='fieldname' ><br></td><td title='software access' class='sw'><br></td><td title='hardware access' class='hw'></td><td title='default' class='default'><br></td><td title='description' class='desc fielddesc' onkeydown='insertNewRow(event,this);'></td></tr></table></td></tr></tbody></table></div><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
-function insertReg64() {
+function insertReg64(imgPath){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reg64);
-    element.id = 'tab_reg64' + random_Num;
-    var field = element.getElementsByClassName("fields")[0];
-    field.id = "tab_fields" + random_Num;
-    var f = element.getElementsByClassName("field")[0];
-    f.id = "tab_field" + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reg64);
+    element.id='tab_reg64'+random_Num;
+    var field=element.getElementsByClassName("fields")[0];
+    field.id="tab_fields"+random_Num;
+    var f=element.getElementsByClassName("field")[0];
+    f.id="tab_field"+random_Num;	
+    /*query="<br><div><table contenteditable='false' onclick='tabClick(this);' class='reg idsTemp' id='tab_reg"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='reg name' class='name'>reg_name</td><td title='offset' class='offset' colspan='2'></td><td class='specImage'><img title='64 bits register' alt='Register' src="+imgPath+"></td><td class='address addCell readOnly' ><div class='splitVer setBorder' title='address'><label class='label'>address|</label><label class='addrvalue'></label></div><div class='splitVer' title='Default'><label class='label'>default |</label><label class='defvalue'></label></div> </td> <td class='regwidth hideWidth'>64</td></tr><tr><td colspan='6' title='add properties' class='propclass' contenteditable='true'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr><tr><td colspan='6' class='border'></td></tr><tr><td colspan='6' class='fieldtd'><table class='fields idsTemp' id='tab_reg_field"+random_Num+"'><tr class='label'><td class='ddregbits'>bits</td><td class='lblfieldname'>name</td><td class='lblsw'>s/w</td><td class='lblhw'>h/w</td><td class='lbldefault'>default</td><td class='lbldesc'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' id='field"+random_Num+"' class='field edited'><td title='bits' class='bits'>63:0</td><td title='field name' class='fieldname' ><br></td><td title='software access' class='sw'><br></td><td title='hardware access' class='hw'></td><td title='default' class='default'><br></td><td title='description' class='desc fielddesc' onkeydown='insertNewRow(event,this);'></td></tr></table></td></tr></tbody></table></div><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
-function insertReg128() {
+function insertReg128(imgPath){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.reg128);
-    element.id = 'tab_reg128' + random_Num;
-    var field = element.getElementsByClassName("fields")[0];
-    field.id = "tab_fields" + random_Num;
-    var f = element.getElementsByClassName("field")[0];
-    f.id = "tab_field" + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.reg128);
+    element.id='tab_reg128'+random_Num;
+    var field=element.getElementsByClassName("fields")[0];
+    field.id="tab_fields"+random_Num;
+    var f=element.getElementsByClassName("field")[0];
+    f.id="tab_field"+random_Num;	
+
+    /*query="<br><div><table contenteditable='false' onclick='tabClick(this);' class='reg idsTemp' id='tab_reg"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='reg name' class='name'>reg_name</td><td title='offset' class='offset' colspan='2'></td><td class='specImage'><img title='128 bits register' alt='Register' src="+imgPath+"></td><td class='address addCell readOnly' ><div class='splitVer setBorder' title='address'><label class='label'>address|</label><label class='addrvalue'></label></div><div class='splitVer' title='Default'><label class='label'>default |</label><label class='defvalue'></label></div> </td> <td class='regwidth hideWidth'>128</td></tr><tr><td colspan='6' title='add properties' class='propclass' contenteditable='true'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr><tr><td colspan='6' class='border'></td></tr><tr><td colspan='6' class='fieldtd'><table class='fields idsTemp' id='tab_reg_field"+random_Num+"'><tr class='label'><td class='ddregbits'>bits</td><td class='lblfieldname'>name</td><td class='lblsw'>s/w</td><td class='lblhw'>h/w</td><td class='lbldefault'>default</td><td class='lbldesc'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' id='field"+random_Num+"' class='field edited'><td title='bits' class='bits'>127:0</td><td title='field name' class='fieldname' ><br></td><td title='software access' class='sw'><br></td><td title='hardware access' class='hw'></td><td title='default' class='default'><br></td><td title='description' class='desc fielddesc' onkeydown='insertNewRow(event,this);'></td></tr></table></td></tr></tbody></table></div><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertRef() {
+function insertRef(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.ref);
-    element.id = 'tab_ref' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.ref);
+    element.id='tab_ref'+random_Num;
+    /*query="<table class='ref idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_ref"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='ref name' class='name' colspan='2'>ref_name</td><td title='offset' class='offset'></td><td class='specImage'><img title='instance' alt='instance' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue'></label></td></tr><tr><td colspan='6' class='refpathtd'> <table class='refpathtab idsTemp'> <tbody><tr><td class='label lblrefname'>name</td><td class='refname'></td><td class='label path lblrefname' width='50'>path</td><td class='refpath'></td><td class='label lbltype'>type</td><td class='reftype addCell'></td></tr></tbody></table> </td>      </tr> <tr><td colspan='6' title='add properties' class='propclass'></td></tr><tr><td colspan='6' title='add description here' class='descclass'></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertMemory() {
+function insertMemory(imgPath){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.memory);
-    element.id = 'tab_memory' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.memory);
+    element.id='tab_memory'+random_Num;
+    /*query="<table class='mem idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_mem"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='memory name' class='name' colspan='2'>memory_name</td><td title='offset' class='offset'></td><td class='specImage' style='width:36px'><img title='memory' alt='memory' src="+imgPath+"></td><td class='address addCell readOnly'><label class='label'>address|</label><label class='addrvalue'></label></td></tr><tr><td class='label'>depth</td><td class='depth' contenteditable='true'></td><td class='label'>width</td><td class='width' contenteditable='true'></td><td class='label'>default</td><td class='default address addCell' contenteditable='true'></td></tr><tr><td colspan='6' title='add properties' class='propclass'></td></tr><tr><td colspan='6' title='add description here' class='desc descclass'></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertEnum() {
+function insertEnum(){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.enum1);
-    element.id = 'tab_enum' + random_Num;
-    var enum_row = element.getElementsByClassName("edited")[0];
-    enum_row.id = 'enum' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.enum1);
+    element.id='tab_enum'+random_Num;
+    var enum_row=element.getElementsByClassName("edited")[0];
+    enum_row.id='enum'+random_Num;
+    /*query="<table class='enum idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_enum"+random_Num+"'> <tbody><tr><td class='header readOnly'></td><td title='enum name' class='name'>enum_name</td><td class='address addCell readOnly'><label class='label'>address |</label><label></label></td></tr><tr><td class='label'>mnemonic name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='m_name'></td><td class='value'></td><td title='add description here' class='desc enumdesc' onkeydown='insertEnumRow(event,this);'></td></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertGenSeq() {
+function insertDefine(){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.genSequence);
-    element.id = 'tab_seq' + random_Num;
-    var step_row = element.getElementsByClassName("edited")[0];
-    step_row.id = 'sequence' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.define);
+    element.id='tab_define'+random_Num;
+    var define_row=element.getElementsByClassName("edited")[0];
+    define_row.id='def'+random_Num;
+    /*query="<table class='param idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_def"+random_Num+"'><tbody><tr><td class='label'>define name</td><td class='label'>value</td><td class='label'>description</td><td class='label'>private</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='value'></td><td title='add description here' class='desc'></td><td class='private' onkeydown='insertDefineRow(event,this);'></td></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertDefine() {
+function insertVariant(){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.define);
-    element.id = 'tab_define' + random_Num;
-    var define_row = element.getElementsByClassName("edited")[0];
-    define_row.id = 'def' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.variant);
+    element.id='tab_variant'+random_Num;
+    var var_row=element.getElementsByClassName("edited")[0];
+    var_row.id='var'+random_Num;
+    /*query="<table class='variant idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_var"+random_Num+"'> <tbody><tr><td class='label'>variant name</td><td class='label'>value</td><td class='label'>description</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='value'></td><td title='add description here' class='desc' onkeydown='insertVariantRow(event,this);'></td></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertVariant() {
+function insertBusDomain(){	
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.variant);
-    element.id = 'tab_variant' + random_Num;
-    var var_row = element.getElementsByClassName("edited")[0];
-    var_row.id = 'var' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.busdomain);
+    element.id='tab_busdomain'+random_Num;
+    var bus_row=element.getElementsByClassName("edited")[0];
+    bus_row.id='bus'+random_Num;
+    /*query="<table class='busdomain idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_bus"+random_Num+"'><tbody><tr><td class='label'>bus domain name</td><td class='label'>address unit</td><td class='label'>description</td><td class='label'>bus</td></tr><tr onkeyup='setCurrRow(this);' onclick='setCurrRow(this);' class='edited'><td class='name'></td><td class='unit'></td><td title='add description here' class='desc'></td><td class='bus' onkeydown='insertBusRow(event,this);'></td></td></tr></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertBusDomain() {
+function insertSignals(imgPath){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.busdomain);
-    element.id = 'tab_busdomain' + random_Num;
-    var bus_row = element.getElementsByClassName("edited")[0];
-    bus_row.id = 'bus' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.signal);
+    element.id='tab_signal'+random_Num;
+    var singal_row=element.getElementsByClassName("edited")[0];
+    singal_row.id='sig'+random_Num;
+    /*query="<table class='signals idsTemp' contenteditable='false' onclick='tabClick(this)' id='tab_bus"+random_Num+"'><tbody><tr><td class='header readOnly'></td><td title='signal name' class='name'>signal_name</td><td class='specImage'><img title='signals' alt='signals' src="+imgPath+"></td><td class='addCell readOnly'></td></tr><tr><td colspan='4' class='border'></td></tr><tr ><td class='label'>name</td><td class='label'>port type</td><td colspan='2' class='label'>description</td></tr><tr onclick='setCurrRow(this);' onkeydown='setCurrRow(this);' class='edited'><td class='name'></td><td class='direction'></td><td colspan='2' title='add description here' class='desc signaldesc' onkeydown='insertNewRowSignals(event,this);'></td></td></tbody> </table><br>";*/
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
 }
 
-function insertSignals(imgPath) {
+function insertSeq(){
     addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.signal);
-    element.id = 'tab_signal' + random_Num;
-    var singal_row = element.getElementsByClassName("edited")[0];
-    singal_row.id = 'sig' + random_Num;
+    random_Num=Math.random();
+    var element=htmlToElements(ids_json.sequence);
+    element.id='tab_sequence'+random_Num;
+
+    element.getElementsByClassName("seqip")[0].getElementsByClassName("edited")[0].id="seq_ip_"+random_Num;
+    element.getElementsByClassName("seqip")[0].getElementsByClassName("ip")[0].innerHTML=getCurrentDocumentPath();
+
+
+    var arg=element.getElementsByClassName("arg")[0];
+    arg.id="arg"+random_Num;
+    arg.getElementsByClassName("edited")[0].id="seq_arg"+random_Num;
+
+    var cons=element.getElementsByClassName("const")[0];
+    cons.id="cons"+random_Num;
+    cons.getElementsByClassName("edited")[0].id="seq_const"+random_Num;
+
+    var vari=element.getElementsByClassName("var")[0];
+    vari.id="var"+random_Num;
+    vari.getElementsByClassName("edited")[0].id="seq_var"+random_Num;
+
+    var cmd=element.getElementsByClassName("command")[0];
+    cmd.id="cmd"+random_Num;
+    cmd.getElementsByClassName("edited")[0].id="seq_cmd"+random_Num;
+
     pasteHtmlAtCaret(addstrToCaret(element));
-    addIntoHistory();
-}
-
-function insertSeq() {
-    addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.sequence);
-    element.id = 'tab_sequence' + random_Num;
-
-    element.getElementsByClassName("seqip")[0].getElementsByClassName("edited")[0].id = "seq_ip_" + random_Num;
-    element.getElementsByClassName("seqip")[0].getElementsByClassName("ip")[0].innerHTML = getCurrentDocumentPath();
-
-
-    var arg = element.getElementsByClassName("arg")[0];
-    arg.id = "arg" + random_Num;
-    arg.getElementsByClassName("edited")[0].id = "seq_arg" + random_Num;
-
-    var cons = element.getElementsByClassName("const")[0];
-    cons.id = "cons" + random_Num;
-    cons.getElementsByClassName("edited")[0].id = "seq_const" + random_Num;
-
-    var vari = element.getElementsByClassName("var")[0];
-    vari.id = "var" + random_Num;
-    vari.getElementsByClassName("edited")[0].id = "seq_var" + random_Num;
-
-    var cmd = element.getElementsByClassName("command")[0];
-    cmd.id = "cmd" + random_Num;
-    cmd.getElementsByClassName("edited")[0].id = "seq_cmd" + random_Num;
-
-    $("#seqdivcontainer").append("<br/>");
-    document.getElementById("seqdivcontainer").appendChild(element);
-    $("#seqdivcontainer").append("<br/>");
-    //    pasteHtmlAtCaret(addstrToCaret(element));
     load_ips(element);
-    addIntoHistory();
 }
 
-function insertChkr() {
-    addIntoHistory();
-    random_Num = Math.random();
-    var element = htmlToElements(ids_json.checker);
-    element.id = 'tab_chk' + random_Num;
-    element.getElementsByClassName("checker_ip")[0].getElementsByClassName("edited")[0].id = "chk_ip_" + random_Num;
-    element.getElementsByClassName("checker_ip")[0].getElementsByClassName("ip")[0].innerHTML = getCurrentDocumentPath();
-    var arg = element.getElementsByClassName("checker_arg")[0];
-    arg.id = "chk_arg" + random_Num;
-    arg.getElementsByClassName("edited")[0].id = "chk_arg" + random_Num;
-
-    var cons = element.getElementsByClassName("checker_const")[0];
-    cons.id = "chk_cons" + random_Num;
-    cons.getElementsByClassName("edited")[0].id = "chk_const" + random_Num;
-
-    var vari = element.getElementsByClassName("checker_var")[0];
-    vari.id = "chk_var" + random_Num;
-    vari.getElementsByClassName("edited")[0].id = "chk_var" + random_Num;
-
-
-    var assign = element.getElementsByClassName("checker_assign")[0];
-    assign.id = "chk_assign" + random_Num;
-    assign.getElementsByClassName("edited")[0].id = "chk_assign" + random_Num;
-
-    var event = element.getElementsByClassName("checker_event")[0];
-
-    event.id = "chk_evnt" + random_Num;
-    event.getElementsByClassName("edited")[0].id = "chk_evnt" + random_Num;
-
-    $("#checkerdivcontainer").append("<br/>");
-    document.getElementById("checkerdivcontainer").appendChild(element);
-    $("#checkerdivcontainer").append("<br/>");
-    //    pasteHtmlAtCaret(addstrToCaret(element));
-    load_ips(element);
-    addIntoHistory();
+function reloadPage(){
+    var v=location.reload();
 }
 
-function refreashpage() {
-    $('#excelmenu').css({'display': 'none'});
-    $('#regmenu').css({'display': 'none'});
-    $('#regmenuparam').css({'display': 'none'});
-    var issaved = clickController.savepagewithalert();
-    if (issaved) {
-        location.reload();
-    }
-}
-
-function reloadPage() {
-    location.reload();
-}
-
-function refreshPage() {
-    $('#excelmenu').css({'display': 'none'});
-    $('#regmenu').css({'display': 'none'});
-    $('#regmenuparam').css({'display': 'none'});
+function refreshPage(){
+    $('#excelmenu').css({'display':'none'});
     clickController.savepage();
-    location.reload();
+    reloadPage();
 }
 
-function pasteHtmlAtCaret(html) {
-    //addIntoHistory();
+function pasteHtmlAtCaret( html ) {
+    addIntoHistory();
     var sel, range;
-    if (window.getSelection) {
+    if ( window.getSelection ) {
         sel = window.getSelection();
-        if (sel.getRangeAt && sel.rangeCount) {
-            range = sel.getRangeAt(0);
+        if ( sel.getRangeAt && sel.rangeCount ) {
+            range = sel.getRangeAt( 0 );
             range.deleteContents();
 
-            var el = document.createElement("div");
+            var el = document.createElement( "div" );
             el.innerHTML = html;
             var frag = document.createDocumentFragment(),
-                    node, lastNode;
-            while ((node = el.firstChild)) {
-                lastNode = frag.appendChild(node);
+                node, lastNode;
+            while ( ( node = el.firstChild ) ) {
+                lastNode = frag.appendChild( node );
             }
-            range.insertNode(frag);
+            range.insertNode( frag );
 
-            if (lastNode) {
+            if ( lastNode ) {
                 range = range.cloneRange();
-                range.setStartAfter(lastNode);
-                range.collapse(true);
+                range.setStartAfter( lastNode );
+                range.collapse( true );
                 sel.removeAllRanges();
-                sel.addRange(range);
+                sel.addRange( range );
             }
         }
-    } else if (document.selection && document.selection.type !== "Control") {
-        document.selection.createRange().pasteHTML(html);
+    } else if ( document.selection && document.selection.type != "Control" ) {
+        document.selection.createRange().pasteHTML( html );
     }
 }
 
-function insertBusRow(evt, obj) {
+function insertBusRow(evt, obj){
     addIntoHistory();
     /* tab press*/
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeyup', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited bus_row');
-        row.setAttribute('id', 'bus' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeyup','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited bus_row');
+        row.setAttribute('id','bus'+Math.random());
         var cell;
 
-        cell = row.insertCell(0);
+        cell=row.insertCell(0);
+        cell.setAttribute('class', "name");  
+
+
+        cell=row.insertCell(1);
+        cell.setAttribute('class', "unit"); 
+
+
+
+        cell=row.insertCell(2);
+        cell.setAttribute('class', "desc"); 
+
+
+        cell=row.insertCell(3);
+        cell.setAttribute('class', "bus"); 
+        cell.setAttribute('onkeydown',"insertBusRow(event,this);");
+
+
+    }
+}
+
+function insertVariantRow(evt, obj){
+    addIntoHistory();
+    /* tab press*/
+    if(evt.keyCode===9){
+
+        while(obj.tagName.toUpperCase() !== "TABLE") {
+            obj = obj.parentNode;
+        }
+
+
+
+        var table = document.getElementById(obj.id);
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeyup','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited var_row');
+        row.setAttribute('id','var'+Math.random());
+        var cell;
+
+        cell=row.insertCell(0);
+        cell.setAttribute('class', "name"); 
+
+
+        cell=row.insertCell(1);
+        cell.setAttribute('class', "value"); 
+
+
+        cell=row.insertCell(2);
+        cell.setAttribute('class', "desc"); 
+        cell.setAttribute('onkeydown',"insertVariantRow(event,this);");
+
+
+    }
+}
+
+function insertDefineRow(evt, obj){
+    addIntoHistory();
+    /* tab press*/
+    if(evt.keyCode===9){
+
+        while(obj.tagName.toUpperCase() !== "TABLE") {
+            obj = obj.parentNode;
+        }
+
+
+
+        var table = document.getElementById(obj.id);
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeyup','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited def_row');
+        row.setAttribute('id','def'+Math.random());
+        var cell;
+
+        cell=row.insertCell(0);
         cell.setAttribute('class', "name");
 
+        cell=row.insertCell(1);
+        cell.setAttribute('class', "value"); 
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', "unit");
-
-
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', "desc");
+        cell=row.insertCell(2);
+        cell.setAttribute('class', "desc"); 
 
 
-        cell = row.insertCell(3);
-        cell.setAttribute('class', "bus");
-        cell.setAttribute('onkeydown', "insertBusRow(event,this);");
-
+        cell=row.insertCell(3);
+        cell.setAttribute('class', "private"); 
+        cell.setAttribute('onkeydown',"insertDefineRow(event,this);");
 
     }
 }
 
-function insertVariantRow(evt, obj) {
+function insertEnumRow(evt,obj){
     addIntoHistory();
     /* tab press*/
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
-
-
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeyup', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited var_row');
-        row.setAttribute('id', 'var' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeyup','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited enum_row');	
+        row.setAttribute('id','enum'+Math.random());
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', "name");
+        cell=row.insertCell(0);
+        cell.setAttribute('class', "m_name");  
 
+        cell=row.insertCell(1);
+        cell.setAttribute('class', "value"); 
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', "value");
+        cell=row.insertCell(2);
+        cell.setAttribute('class', "desc enumdesc"); 
+        cell.setAttribute('onkeydown',"insertEnumRow(event,this);");
 
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', "desc");
-        cell.setAttribute('onkeydown', "insertVariantRow(event,this);");
-
-
-    }
+    }	
 }
 
-function insertDefineRow(evt, obj) {
+function insertNewRowSignals(evt,obj){
     addIntoHistory();
     /* tab press*/
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeyup', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited def_row');
-        row.setAttribute('id', 'def' + Math.random());
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', "name");
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', "value");
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', "desc");
-
-
-        cell = row.insertCell(3);
-        cell.setAttribute('class', "private");
-        cell.setAttribute('onkeydown', "insertDefineRow(event,this);");
-
-    }
-}
-
-function insertEnumRow(evt, obj) {
-    addIntoHistory();
-    /* tab press*/
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeyup', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited enum_row');
-        row.setAttribute('id', 'enum' + Math.random());
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', "m_name");
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', "value");
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', "desc enumdesc");
-        cell.setAttribute('onkeydown', "insertEnumRow(event,this);");
-
-    }
-}
-
-function insertSeqStepRow(evt, obj) {
-    addIntoHistory();
-    /* tab press*/
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeyup', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited step_row');
-        row.setAttribute('id', 'sequence' + Math.random());
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', "seq_step seqout");
-        cell.setAttribute('colspan', '2');
-
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', "desc seqdesc seqin");
-        cell.setAttribute('colspan', '4');
-
-        cell.setAttribute('onkeydown', "insertSeqStepRow(event,this);");
-
-    }
-}
-
-function insertNewRowSignals(evt) {
-    addIntoHistory();
-    /* tab press*/
-    if (evt.keyCode === 9) {
-        var cell = evt.target;
-        var table = cell;
-
-
-        while (table.tagName.toUpperCase() !== "TABLE") {
-            table = table.parentNode;
-        }
-        insertsignalrow(table, cell.parentNode);
-    }
-    /*add property row*/
-    else if (evt.keyCode === 80 && evt.altKey) {
-        /*
-         while (obj.tagName.toUpperCase() !== "TABLE") {
-         obj = obj.parentNode;
-         }
-         
-         var table = document.getElementById(obj.id);
-         var row = table.insertRow(parseInt(curr_row) + 1);
-         row.setAttribute('onkeydown', 'setCurrRow(this)');
-         row.setAttribute('onclick', "setCurrRow(this)");
-         var input;
-         var cell;
-         
-         cell = row.insertCell(0);
-         
-         cell.setAttribute('colspan', '4');
-         cell.setAttribute('onkeydown', "insertNewRowSignals(event,this);");
-         cell.setAttribute('class', 'propclass');
-         */
-    }
-
-
-}
-
-function deletecurrrow(obj) {
-    $(obj).closest("tr").remove();
-}
-var multirow = [];
-function setCurrRow(currnRow) {
-
-    curr_row = currnRow.rowIndex;
-    curr_row_obj = currnRow;
-    isrowselected = true;
-    if (window.event.ctrlKey && window.event.which == 1) {
-        ismultiple = true;
-        toggleRow(curr_row_obj, false);
-    } else {
-        //  curr_row_obj.classList.remove("selectedRow");
-        var tbody2 = $(curr_row_obj.parentNode);
-        tbody = $(tbody2).find("tr.selectedRow");
-        for (let item of tbody) {
-            item.classList.remove("selectedRow");
-        }
-    }
-}
-$(document).click(function () {
-    if (!window.event.ctrlKey) {
-        selectedList = $("tr.selectedRow");
-        for (let item of selectedList) {
-            item.classList.remove("selectedRow");
-        }
-    }
-});
-$(document).on("mouseenter", ".field,.def_row,.sig_row", function (event) {
-    event.preventDefault();
-
-    if (window.event.ctrlKey && window.event.which == 1) {
-        curr_row_obj = this;
-        ismultiple = true;
-        toggleRow(curr_row_obj, true);
-    }
-});
-function toggleRow(curr_row_obj, mouseenterevent) {
-    if (curr_row_obj.classList.contains("selectedRow") && !mouseenterevent) {
-        curr_row_obj.classList.remove("selectedRow")
-    } else {
-        curr_row_obj.classList.add("selectedRow");
-    }
-
-}
-function insertSeqCmdRow(evt, obj) {
-    addIntoHistory();
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'seq' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class',"edited sig_row");
+        row.setAttribute('id','sig'+Math.random());
 
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'cmdname');
+        cell=row.insertCell(0);
+        cell.setAttribute('class', "name"); 
+        /*input=document.createElement("input");      
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'step');
-        var str = create_reg_arr(document.getElementById("regdivcontainer"));
-        autocomplete(cell, str);
+		cell.appendChild(input);
+		*/
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'seqvalue');
-        autocomplete(cell, str);
-
-        cell = row.insertCell(3);
-        cell.setAttribute('class', 'seqdesc');
+        cell=row.insertCell(1);
+        cell.setAttribute('class', "direction");
+        /*input=document.createElement("input");
+		cell.appendChild(input);
+		*/
 
 
-        cell = row.insertCell(4);
-        cell.setAttribute('class', 'refpath');
-        cell.setAttribute('onkeydown', "insertSeqCmdRow(event,this);");
+        cell=row.insertCell(2);
+        cell.setAttribute('onkeydown',"insertNewRowSignals(event,this);");
+        cell.setAttribute('colspan','2');
+        cell.setAttribute('class', "desc signaldesc"); 
+        /*input=document.createElement("input");		
+		cell.appendChild(input);*/
+    }
+    /*add property row*/
+    else if(evt.keyCode==80&&evt.altKey){
+        while(obj.tagName.toUpperCase() !== "TABLE") {
+            obj = obj.parentNode;
+        }
+
+        var table = document.getElementById(obj.id);
+        var row = table.insertRow(parseInt(curr_row)+1);
+        /*var row = table.insertRow(parseInt(curr_row_signal)+1);*/
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        var input;
+        var cell;
+
+        cell=row.insertCell(0);
+
+        cell.setAttribute('colspan', '4');    
+        cell.setAttribute('onkeydown',"insertNewRowSignals(event,this);");
+        cell.setAttribute('class','propclass');		
+    }
+
+
+}
+
+function deleteElement(){
+    try{
+        addIntoHistory();
+        if(curr_row_obj){
+            deletecurrrow(curr_row_obj);
+            curr_row_obj=null;
+        }
+        else{
+            if(clsTab!=null){
+                selectElementContents(document.getElementById(clsTab));
+                document.execCommand('delete');
+            }
+        }
+
+    }
+    catch(e){alert('Err (delete) : '+e.message);}
+}
+
+function deletecurrrow(obj){
+    $(obj).closest("tr").remove();
+}
+
+function setCurrRow(currnRow){
+    curr_row=currnRow.rowIndex;
+    curr_row_obj=currnRow;
+    isrowselected=true;
+}
+
+function insertSeqCmdRow(evt, obj) {
+    addIntoHistory();
+    if(evt.keyCode===9){
+
+        while(obj.tagName.toUpperCase() !== "TABLE") {
+            obj = obj.parentNode;
+        }
+
+
+        var table = document.getElementById(obj.id);
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');	
+        row.setAttribute('id','seq'+Math.random());
+
+        var input;
+        var cell;
+
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'cmdname');     
+
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'step');  
+        var str=create_reg_arr(document.getElementById("regdivcontainer"));
+        autocomplete(cell,str);
+
+        cell=row.insertCell(2);
+        cell.setAttribute('class', 'seqvalue');  
+        autocomplete(cell,str);
+
+        cell=row.insertCell(3);
+        cell.setAttribute('class', 'seqdesc');  
+
+
+        cell=row.insertCell(4);
+        cell.setAttribute('class','refpath');
+        cell.setAttribute('onkeydown',"insertSeqCmdRow(event,this);");	
 
 
 
@@ -3061,71 +1569,71 @@ function insertSeqCmdRow_menu() {
 
     var table = curr_row_obj;
 
-    while (table.tagName.toUpperCase() !== "TABLE") {
+    while(table.tagName.toUpperCase() !== "TABLE") {
         table = table.parentNode;
     }
 
 
-    var row = table.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'seq' + Math.random());
+    var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+    row.setAttribute('onkeydown','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited');	
+    row.setAttribute('id','seq'+Math.random());
 
     var input;
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'cmdname');
+    cell=row.insertCell(0);		
+    cell.setAttribute('class', 'cmdname');     
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'step');
-    var str = create_reg_arr(document.getElementById("regdivcontainer"));
-    autocomplete(cell, str);
+    cell=row.insertCell(1);
+    cell.setAttribute('class', 'step');  
+    var str=create_reg_arr(document.getElementById("regdivcontainer"));
+    autocomplete(cell,str);
 
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'seqvalue');
-    autocomplete(cell, str);
+    cell=row.insertCell(2);
+    cell.setAttribute('class', 'seqvalue');  
+    autocomplete(cell,str);
 
-    cell = row.insertCell(3);
-    cell.setAttribute('class', 'seqdesc');
+    cell=row.insertCell(3);
+    cell.setAttribute('class', 'seqdesc');  
 
 
-    cell = row.insertCell(4);
-    cell.setAttribute('class', 'refpath');
-    cell.setAttribute('onkeydown', "insertSeqCmdRow(event,this);");
+    cell=row.insertCell(4);
+    cell.setAttribute('class','refpath');
+    cell.setAttribute('onkeydown',"insertSeqCmdRow(event,this);");	
 
 }
 
 function insertSeqConstRow(evt, obj) {
     addIntoHistory();
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'seq' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');	
+        row.setAttribute('id','seq'+Math.random());
 
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'constname');
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'constname');     
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'value');  
 
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'seqdesc');
-        cell.setAttribute('onkeydown', "insertSeqConstRow(event,this);");
+        cell=row.insertCell(2);
+        cell.setAttribute('class','seqdesc');
+        cell.setAttribute('onkeydown',"insertSeqConstRow(event,this);");				
     }
 
 }
@@ -3134,62 +1642,63 @@ function insertSeqConstRow_menu() {
     addIntoHistory();
     var table = curr_row_obj;
 
-    while (table.tagName.toUpperCase() !== "TABLE") {
+    while(table.tagName.toUpperCase() !== "TABLE") {
         table = table.parentNode;
     }
 
 
-    var row = table.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
+    var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
 
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'seq' + Math.random());
+    row.setAttribute('onkeydown','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited');	
+    row.setAttribute('id','seq'+Math.random());
 
+    var input;
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'constname');
+    cell=row.insertCell(0);		
+    cell.setAttribute('class', 'constname');     
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
+    cell=row.insertCell(1);
+    cell.setAttribute('class', 'value');  
 
 
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'seqdesc');
-    cell.setAttribute('onkeydown', "insertSeqConstRow(event,this);");
+    cell=row.insertCell(2);
+    cell.setAttribute('class','seqdesc');
+    cell.setAttribute('onkeydown',"insertSeqConstRow(event,this);");				
 
 }
 
 function insertSeqArgRow(evt, obj) {
     addIntoHistory();
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'seq' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');	
+        row.setAttribute('id','seq'+Math.random());
 
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'argname');
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'argname');     
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'value');  
 
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'seqdesc');
-        cell.setAttribute('onkeydown', "insertSeqArgRow(event,this);");
+        cell=row.insertCell(2);
+        cell.setAttribute('class','seqdesc');
+        cell.setAttribute('onkeydown',"insertSeqArgRow(event,this);");				
     }
 
 }
@@ -3198,63 +1707,63 @@ function insertSeqArgRow_menu() {
     addIntoHistory();
     var table = curr_row_obj;
 
-    while (table.tagName.toUpperCase() !== "TABLE") {
+    while(table.tagName.toUpperCase() !== "TABLE") {
         table = table.parentNode;
     }
 
 
-    var row = table.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
+    var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
 
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'seq' + Math.random());
+    row.setAttribute('onkeydown','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited');	
+    row.setAttribute('id','seq'+Math.random());
 
     var input;
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'argname');
+    cell=row.insertCell(0);		
+    cell.setAttribute('class', 'argname');     
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
+    cell=row.insertCell(1);
+    cell.setAttribute('class', 'value');  
 
 
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'seqdesc');
-    cell.setAttribute('onkeydown', "insertSeqArgRow(event,this);");
+    cell=row.insertCell(2);
+    cell.setAttribute('class','seqdesc');
+    cell.setAttribute('onkeydown',"insertSeqArgRow(event,this);");				
 
 }
 
 function insertSeqVarnameRow(evt, obj) {
     addIntoHistory();
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'seq' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');	
+        row.setAttribute('id','seq'+Math.random());
 
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'varname');
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'varname');     
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'value');  
 
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'seqdesc');
-        cell.setAttribute('onkeydown', "insertSeqVarnameRow(event,this);");
+        cell=row.insertCell(2);
+        cell.setAttribute('class','seqdesc');
+        cell.setAttribute('onkeydown',"insertSeqVarnameRow(event,this);");				
     }
 
 }
@@ -3263,879 +1772,443 @@ function insertSeqVarnameRow_menu() {
     addIntoHistory();
     var table = curr_row_obj;
 
-    while (table.tagName.toUpperCase() !== "TABLE") {
+    while(table.tagName.toUpperCase() !== "TABLE") {
         table = table.parentNode;
     }
-    var row = table.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
+    var row = table.insertRow(parseInt(curr_row_obj.rowIndex)+1);
 
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'seq' + Math.random());
+    row.setAttribute('onkeydown','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited');	
+    row.setAttribute('id','seq'+Math.random());
 
     var input;
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'varname');
+    cell=row.insertCell(0);		
+    cell.setAttribute('class', 'varname');     
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
+    cell=row.insertCell(1);
+    cell.setAttribute('class', 'value');  
 
 
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'seqdesc');
-    cell.setAttribute('onkeydown', "insertSeqVarnameRow(event,this);");
+    cell=row.insertCell(2);
+    cell.setAttribute('class','seqdesc');
+    cell.setAttribute('onkeydown',"insertSeqVarnameRow(event,this);");				
 
 }
 
 function insertSeqRow_deletethis(evt, obj) {
     addIntoHistory();
-    if (evt.keyCode === 9) {
+    if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'seq' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');	
+        row.setAttribute('id','seq'+Math.random());
 
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'seqname');
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'seqname');     
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'value');  
 
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'seqdesc');
-        cell.setAttribute('onkeydown', "insertSeqRow(event,this);");
+        cell=row.insertCell(2);
+        cell.setAttribute('class','seqdesc');
+        cell.setAttribute('onkeydown',"insertSeqRow(event,this);");				
     }
 
 }
 
 
-function insertseqrow() {
-    var obj = curr_row_obj;
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
+function insertseqrow(){
+    var obj=curr_row_obj;
+    while(obj.tagName.toUpperCase()!="TABLE"){
+        obj=obj.parentNode;
     }
 
 
-    var clslist = obj.classList;
+    var clslist=obj.classList;
 
-    if (clslist.contains("command")) {
+    if(clslist.contains("command")){
         insertSeqCmdRow_menu();
-    } else if (clslist.contains("var")) {
+    }
+    else if(clslist.contains("var")){
         insertSeqVarnameRow_menu();
     }
-    if (clslist.contains("const")) {
+    if(clslist.contains("const")){
         insertSeqConstRow_menu();
     }
-    if (clslist.contains("arg")) {
+    if(clslist.contains("arg")){
         insertSeqArgRow_menu();
     }
 
 }
 
-// insert checker rosw
-
-function insertCheckerCmdRow(evt, obj) {
-    addIntoHistory();
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'chk' + Math.random());
-
-        var input;
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'name');
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'event');
-//        var str = create_reg_arr(document.getElementById("regdivcontainer"));
-//        autocomplete(cell, str);
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'step');
-        var str = create_reg_arr(document.getElementById("regdivcontainer"));
-        autocomplete(cell, str);
-
-        cell = row.insertCell(3);
-        cell.setAttribute('class', 'checkerdesc');
-        cell.setAttribute('onkeydown', "insertCheckerCmdRow(event,this);");
-    }
-
-}
-
-function insertCheckerCmdRow_menu() {
-    addIntoHistory();
-
-
-    var table = curr_row_obj;
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
-    }
-
-
-    var table = document.getElementById(obj.id);
-    var row = table.insertRow(parseInt(curr_row) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'chk' + Math.random());
-
-    var input;
-    var cell;
-
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'name');
-
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'event');
-//        var str = create_reg_arr(document.getElementById("regdivcontainer"));
-//        autocomplete(cell, str);
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'step');
-    var str = create_reg_arr(document.getElementById("regdivcontainer"));
-    autocomplete(cell, str);
-
-    cell = row.insertCell(3);
-    cell.setAttribute('class', 'checkerdesc');
-    cell.setAttribute('onkeydown', "insertCheckerCmdRow(event,this);");
-
-}
-
-function insertchkConstRow(evt, obj) {
-    addIntoHistory();
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'chk' + Math.random());
-
-        var input;
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'constname');
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
-
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'checkerdesc');
-        cell.setAttribute('onkeydown', "insertchkConstRow(event,this);");
-    }
-
-}
-
-function insertchkConstRow_menu() {
-    addIntoHistory();
-    var table = curr_row_obj;
-
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
-    }
-
-
-    var table = document.getElementById(obj.id);
-    var row = table.insertRow(parseInt(curr_row) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'chk' + Math.random());
-
-    var input;
-    var cell;
-
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'constname');
-
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
-
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'checkerdesc');
-    cell.setAttribute('onkeydown', "insertchkConstRow(event,this);");
-
-}
-
-function insertchkArgRow(evt, obj) {
-    addIntoHistory();
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'chk' + Math.random());
-
-        var input;
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'argname');
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
-
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'checkerdesc');
-        cell.setAttribute('onkeydown', "insertchkArgRow(event,this);");
-    }
-
-}
-
-function insertChkArgRow_menu() {
-    addIntoHistory();
-    var table = curr_row_obj;
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
-    }
-
-    var table = document.getElementById(obj.id);
-    var row = table.insertRow(parseInt(curr_row) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'chk' + Math.random());
-
-    var input;
-    var cell;
-
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'argname');
-
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
-
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'checkerdesc');
-    cell.setAttribute('onkeydown', "insertchkArgRow(event,this);");
-
-
-}
-
-function insertChkVarnameRow(evt, obj) {
-    addIntoHistory();
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'chk' + Math.random());
-
-        var input;
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'varname');
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
-
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'checkerdesc');
-        cell.setAttribute('onkeydown', "insertChkVarnameRow(event,this);");
-    }
-
-}
-
-function insertChkVarnameRow_menu() {
-    addIntoHistory();
-    var table = curr_row_obj;
-
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
-    }
-
-
-    var table = document.getElementById(obj.id);
-    var row = table.insertRow(parseInt(curr_row) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'chk' + Math.random());
-
-    var input;
-    var cell;
-
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'varname');
-
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
-
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'checkerdesc');
-    cell.setAttribute('onkeydown', "insertChkVarnameRow(event,this);");
-}
-
-
-function insertChkAssignRow(evt, obj) {
-    addIntoHistory();
-    if (evt.keyCode === 9) {
-
-        while (obj.tagName.toUpperCase() !== "TABLE") {
-            obj = obj.parentNode;
-        }
-
-
-        var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
-        row.setAttribute('id', 'chk' + Math.random());
-
-        var input;
-        var cell;
-
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'name');
-
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'value');
-
-
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'checkerdesc');
-        cell.setAttribute('onkeydown', "insertChkAssignRow(event,this);");
-    }
-
-}
-
-function insertChkVarnameRow_menu() {
-    addIntoHistory();
-    var table = curr_row_obj;
-
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
-    }
-
-
-    var table = document.getElementById(obj.id);
-    var row = table.insertRow(parseInt(curr_row) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', 'chk' + Math.random());
-
-    var input;
-    var cell;
-
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'name');
-
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'value');
-
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'checkerdesc');
-    cell.setAttribute('onkeydown', "insertChkAssignRow(event,this);");
-}
-
-
-
-
-
 /*  insert new row for reg field */
-function insertcommonreg() {
+function insertcommonreg(){
     addIntoHistory();
-    var rowtab = curr_row_obj;
-    while (rowtab.tagName.toUpperCase() !== "TABLE") {
+    var rowtab=curr_row_obj;
+    while(rowtab.tagName.toUpperCase() !== "TABLE") {
         rowtab = rowtab.parentNode;
     }
 
-    if (rowtab.classList.contains("fields")) {
+    if(rowtab.classList.contains("fields")){
         insertfieldRow(rowtab);
-    } else if (rowtab.classList.contains("enum")) {
-        insertenumrow(rowtab);
-    } else if (rowtab.classList.contains("param")) {
-        insertparamrow(rowtab);
-    } else if (rowtab.classList.contains("busdomain")) {
-        insertbusdomainrow(rowtab);
-    } else if (rowtab.classList.contains("signals_inner")) {
-        insertsignalrow(rowtab, curr_row_obj);
     }
-    return false;
+    else if(rowtab.classList.contains("enum")){
+        insertenumrow(rowtab);
+    }
+    else if(rowtab.classList.contains("param")){
+        insertparamrow(rowtab);
+    }
+    else if(rowtab.classList.contains("busdomain")){
+        insertbusdomainrow(rowtab);
+    }
+    else if(rowtab.classList.contains("signals")){
+        insertsignalrow(rowtab);
+    }
 }
 
-function insertsignalrow(rowtab, curr_row_obj) {
-    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', "edited sig_row");
-    row.setAttribute('id', 'sig' + Math.random());
+function insertsignalrow(rowtab){
+    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+    row.setAttribute('onkeydown','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class',"edited sig_row");
+    row.setAttribute('id','sig'+Math.random());
 
+    var input;
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', "name");
-    /*input=document.createElement("input");
-     
-     cell.appendChild(input);
-     */
+    cell=row.insertCell(0);
+    cell.setAttribute('class', "name"); 
+    /*input=document.createElement("input");      
 
-    cell = row.insertCell(1);
+		cell.appendChild(input);
+		*/
+
+    cell=row.insertCell(1);
     cell.setAttribute('class', "direction");
     /*input=document.createElement("input");
-     cell.appendChild(input);
-     */
+		cell.appendChild(input);
+		*/
 
 
-    cell = row.insertCell(2);
-    cell.setAttribute('onkeydown', "insertNewRowSignals(event,this);");
-    cell.setAttribute('class', "desc signaldesc");
+    cell=row.insertCell(2);
+    cell.setAttribute('onkeydown',"insertNewRowSignals(event,this);");
+    cell.setAttribute('colspan','2');
+    cell.setAttribute('class', "desc signaldesc"); 
 }
 
-function insertbusdomainrow(rowtab) {
-    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
-    row.setAttribute('onkeyup', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited bus_row');
-    row.setAttribute('id', 'bus' + Math.random());
+function insertbusdomainrow(rowtab){
+    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+    row.setAttribute('onkeyup','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited bus_row');
+    row.setAttribute('id','bus'+Math.random());
     var cell;
 
-    cell = row.insertCell(0);
+    cell=row.insertCell(0);
+    cell.setAttribute('class', "name");  
+
+
+    cell=row.insertCell(1);
+    cell.setAttribute('class', "unit"); 
+
+
+
+    cell=row.insertCell(2);
+    cell.setAttribute('class', "desc"); 
+
+
+    cell=row.insertCell(3);
+    cell.setAttribute('class', "bus"); 
+    cell.setAttribute('onkeydown',"insertBusRow(event,this);");
+}
+
+function insertparamrow(rowtab){
+    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+    row.setAttribute('onkeyup','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited def_row');
+    row.setAttribute('id','def'+Math.random());
+    var cell;
+
+    cell=row.insertCell(0);
     cell.setAttribute('class', "name");
 
+    cell=row.insertCell(1);
+    cell.setAttribute('class', "value"); 
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', "unit");
-
-
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', "desc");
+    cell=row.insertCell(2);
+    cell.setAttribute('class', "desc"); 
 
 
-    cell = row.insertCell(3);
-    cell.setAttribute('class', "bus");
-    cell.setAttribute('onkeydown', "insertBusRow(event,this);");
+    cell=row.insertCell(3);
+    cell.setAttribute('class', "private"); 
+    cell.setAttribute('onkeydown',"insertDefineRow(event,this);");
 }
 
-function insertparamrow(rowtab) {
-    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
-    row.setAttribute('onkeyup', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited def_row');
-    row.setAttribute('id', 'def' + Math.random());
+function insertenumrow(rowtab){
+    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+    row.setAttribute('onkeyup','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','edited enum_row');	
+    row.setAttribute('id','enum'+Math.random());
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', "name");
+    cell=row.insertCell(0);
+    cell.setAttribute('class', "m_name");  
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', "value");
+    cell=row.insertCell(1);
+    cell.setAttribute('class', "value"); 
 
-    cell = row.insertCell(2);
-    cell.setAttribute('class', "desc");
-
-
-    cell = row.insertCell(3);
-    cell.setAttribute('class', "private");
-    cell.setAttribute('onkeydown', "insertDefineRow(event,this);");
+    cell=row.insertCell(2);
+    cell.setAttribute('class', "desc enumdesc"); 
+    cell.setAttribute('onkeydown',"insertEnumRow(event,this);");
 }
 
-function insertenumrow(rowtab) {
-    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
-    row.setAttribute('onkeyup', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'edited enum_row');
-    row.setAttribute('id', 'enum' + Math.random());
+function insertfieldRow(rowtab) {	
+    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex)+1);
+    row.setAttribute('onkeydown','setCurrRow(this)');
+    row.setAttribute('onclick',"setCurrRow(this)");
+    row.setAttribute('class','field edited');	
+    row.setAttribute('id','field'+Math.random());
+
+    var input;
     var cell;
 
-    cell = row.insertCell(0);
-    cell.setAttribute('class', "m_name");
+    cell=row.insertCell(0);		
+    cell.setAttribute('class', 'bits'); 
+    cell.setAttribute('title', 'bits'); 
 
-    cell = row.insertCell(1);
-    cell.setAttribute('class', "value");
-
-    cell = row.insertCell(2);
-    cell.setAttribute('class', "desc enumdesc");
-    cell.setAttribute('onkeydown', "insertEnumRow(event,this);");
-}
-
-function insertfieldRow(rowtab) {
-    var row = rowtab.insertRow(parseInt(curr_row_obj.rowIndex) + 1);
-    row.setAttribute('onkeydown', 'setCurrRow(this)');
-    row.setAttribute('onclick', "setCurrRow(this)");
-    row.setAttribute('class', 'field edited');
-    row.setAttribute('id', 'field' + Math.random());
-
-    var cell;
-
-    cell = row.insertCell(0);
-    cell.setAttribute('class', 'bits');
-    cell.setAttribute('title', 'bits');
-
-    cell = row.insertCell(1);
-    cell.setAttribute('class', 'fieldname');
-    cell.setAttribute('title', 'field name');
+    cell=row.insertCell(1);
+    cell.setAttribute('class', 'fieldname');  
+    cell.setAttribute('title', 'field name'); 
 
 
-    cell = row.insertCell(2);
-    cell.setAttribute('class', 'sw thirdCell');
-    cell.setAttribute('title', 'software access');
+    cell=row.insertCell(2);
+    cell.setAttribute('class','sw thirdCell');
+    cell.setAttribute('title', 'software access'); 
 
-    cell = row.insertCell(3);
-    cell.setAttribute('class', 'hw thirdCell');
-    cell.setAttribute('title', 'hardware access');
+    cell=row.insertCell(3);
+    cell.setAttribute('class','hw thirdCell');
+    cell.setAttribute('title', 'hardware access'); 
 
-    cell = row.insertCell(4);
-    cell.setAttribute('title', 'default');
-    cell.setAttribute('class', 'default');
+    cell=row.insertCell(4);
+    cell.setAttribute('title', 'default'); 
+    cell.setAttribute('class','default');
 
-    cell = row.insertCell(5);
-    cell.setAttribute('onkeydown', "insertNewRow(event,this);");
-    cell.setAttribute('class', 'desc fielddesc');
-    cell.setAttribute('title', 'description');
+    cell=row.insertCell(5);
+    cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+    cell.setAttribute('class','desc fielddesc');
+    cell.setAttribute('title', 'description'); 
 
-    hookEvents(cell, idsprop);
+    hookEvents(cell,idsprop);
 
 }
 
-function deletefieldrow() {
+function deletefieldrow(){
     curr_row_obj.remove();
 }
 
 var fieldrow;
-var insertfieldrow;
-var iscut = false;
-var ismultiple = false;
-var multiTrStringValue = "";
-//function copyfieldrow() {
-//    fieldrow = curr_row_obj;
-//    insertfieldrow = fieldrow.cloneNode(true);
-//
-//    iscut = false;
-//}
-//function cutfieldrow() {
-//    fieldrow = curr_row_obj;
-//    insertfieldrow = fieldrow.cloneNode(true);
-//    addIntoHistory();
-//    fieldrow.parentNode.removeChild(fieldrow);
-//    iscut = true;
-//}
-//
-//function pastefieldrow() {
-//    addIntoHistory();
-//    if (fieldrow) {
-//
-//        try {
-//            var parent_row = curr_row_obj.parentNode;
-//            var pasted_row = curr_row_obj.cloneNode(true);
-//            pasted_row.setAttribute("id", "field" + Math.random());
-//            pasted_row.innerHTML = insertfieldrow.innerHTML;
-//            parent_row.insertBefore(pasted_row, curr_row_obj.nextSibling);
-//            if (iscut) {
-//                fieldrow.remove();
-//                fieldrow = null;
-//            }
-//        } catch (e) {
-//            alert("error in paste row : " + e.message);
-//            if (fieldrow.parentNode.parentNode.classList.toString() === curr_row_obj.parentNode.parentNode.classList.toString()) {
-//                alert("--copy into : " + fieldrow.parentNode.parentNode.classList + "  ---copy from : " + curr_row_obj.parentNode.parentNode.classList);
-//            }
-//        }
-//    }
-//}
-function copyfieldrow() {
-    if (ismultiple) {
-        // var tbody = curr_row_obj.parentNode.children;
-        var tbody2 = $(curr_row_obj.parentNode);
-        tbody = $(tbody2).find("tr.selectedRow");
-        for (let item of tbody) {
-            multiTrString(item);
-        }
-        copyToClipboard(multiTrStringValue);
-        ismultiple = false;
-        multiTrStringValue = "";
-    } else {
-        fieldrow = curr_row_obj;
-        insertfieldrow = fieldrow.cloneNode(true);
-        copyToClipboard($(insertfieldrow).html());
-    }
-    iscut = false;
+var iscut=false;
+function copyfieldrow(){
+    fieldrow=curr_row_obj;
+    iscut=false;
+}
+function cutfieldrow(){
+    fieldrow=curr_row_obj;
+    iscut=true;
 }
 
-function multiTrString(item) {
-    if (item.classList.contains("selectedRow")) {
-        item.classList.remove("selectedRow");
-        var dummynode = item.cloneNode(true);
-        multiTrStringValue += dummynode.outerHTML;
-        //  alert(multiTrStringValue);
-
-    }
-}
-function copyToClipboard(text) {
-    var input = document.createElement('input');
-    input.setAttribute('value', text);
-    document.body.appendChild(input);
-    input.select();
-    var result = document.execCommand('copy');
-    document.body.removeChild(input);
-    return result;
-}
-function cutfieldrow() {
-    if (ismultiple) {
-        // var tbody = curr_row_obj.parentNode.children;
-        var tbody2 = $(curr_row_obj.parentNode);
-        tbody = $(tbody2).find("tr.selectedRow");
-        for (let item of tbody) {
-            multiTrString(item);
-            item.remove();
-        }
-        copyToClipboard(multiTrStringValue);
-
-        ismultiple = false;
-        multiTrStringValue = "";
-    } else {
-
-        fieldrow = curr_row_obj;
-        insertfieldrow = fieldrow.cloneNode(true);
-        copyToClipboard($(insertfieldrow).html());
-        fieldrow.parentNode.removeChild(fieldrow);
-    }
+function pastefieldrow(){
     addIntoHistory();
-    iscut = true;
-}
+    if(fieldrow){
+        var newrow=fieldrow.cloneNode(true);
+        try{
+            fieldrow.parentNode.insertBefore(newrow,curr_row_obj.nextSibling);
+            if(iscut){
+                fieldrow.remove();
+                fieldrow=null;
+            }
+        }catch(e){
+            console.log("error in paste row : "+e.message);
+            if(fieldrow.parentNode.parentNode.classList.toString()===curr_row_obj.parentNode.parentNode.classList.toString()){
+                console.log("--copy into : "+fieldrow.parentNode.parentNode.classList+"  ---copy from : "+curr_row_obj.parentNode.parentNode.classList);	
+            }
 
-function pastefieldrow() {
-    addIntoHistory();
-
-
-    try {
-        var tbody = document.createElement("tbody");
-//        var doc = new DOMParser().parseFromString(clickController.pasteContent(), "text/xml");
-//        alert(new DOMParser().parseFromString(clickController.pasteContent(), "text/xml"));
-        tbody.innerHTML = clickController.pasteContent();
-        // alert(tbody.childElementCount);
-        for (let item of tbody.children) {
-            //  alert(item.outerHTML);
-            var parent_row = curr_row_obj.parentNode;
-            var pasted_row = curr_row_obj.cloneNode(true);
-            pasted_row.setAttribute("id", "field" + Math.random());
-            pasted_row.innerHTML = item.outerHTML;
-            parent_row.insertBefore(pasted_row, curr_row_obj.nextSibling);
-            curr_row_obj = pasted_row;
-        }
-        if (iscut) {
-            fieldrow.remove();
-            fieldrow = null;
-        }
-    } catch (e) {
-        //   alert("error in paste row : " + e.message);
-        if (fieldrow.parentNode.parentNode.classList.toString() === curr_row_obj.parentNode.parentNode.classList.toString()) {
-            //   alert("--copy into : " + fieldrow.parentNode.parentNode.classList + "  ---copy from : " + curr_row_obj.parentNode.parentNode.classList);
         }
     }
-
 }
 
 /*  insert new row for reg field */
 function insertNewRow(evt, obj) {
     addIntoHistory();
-    if (evt.keyCode === 9 && evt.shiftKey) {
+    if(evt.keyCode===9&&evt.shiftKey){
     }
     /*add field row*/
-    else if (evt.keyCode === 9) {
+    else if(evt.keyCode===9){
 
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'field edited');
-        row.setAttribute('oncontextmenu', 'openregmenu(event)');
-        row.setAttribute('id', 'field' + Math.random());
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','field edited');	
+        row.setAttribute('id','field'+Math.random());
 
         var input;
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('class', 'bits');
-        cell.setAttribute('title', 'bits');
+        cell=row.insertCell(0);		
+        cell.setAttribute('class', 'bits'); 
+        cell.setAttribute('title', 'bits'); 
 
         /*				input=document.createElement("input");
-         input.setAttribute('style','width:88%');*/
+				input.setAttribute('style','width:88%');*/
         /*
-         var rowdel=document.createElement("a");
-         rowdel.innerText='x';
-         rowdel.setAttribute('title','delete this row');
-         rowdel.setAttribute('style','color:red');
-         rowdel.setAttribute('onclick','deleteRow(this);');
-         cell.appendChild(rowdel);
-         */
+				var rowdel=document.createElement("a");
+				rowdel.innerText='x';
+				rowdel.setAttribute('title','delete this row');
+				rowdel.setAttribute('style','color:red');
+				rowdel.setAttribute('onclick','deleteRow(this);');
+				cell.appendChild(rowdel);
+				*/
 
 
-        cell = row.insertCell(1);
-        cell.setAttribute('class', 'fieldname');
-        cell.setAttribute('title', 'field name');
+        cell=row.insertCell(1);
+        cell.setAttribute('class', 'fieldname');  
+        cell.setAttribute('title', 'field name'); 
 
 
-        cell = row.insertCell(2);
-        cell.setAttribute('class', 'sw thirdCell');
-        cell.setAttribute('title', 'software access');
+        cell=row.insertCell(2);
+        cell.setAttribute('class','sw thirdCell');
+        cell.setAttribute('title', 'software access'); 
         /*input=document.createElement("input");
-         cell.appendChild(input);*/
+				cell.appendChild(input);*/
 
 
-        cell = row.insertCell(3);
-        cell.setAttribute('class', 'hw thirdCell');
-        cell.setAttribute('title', 'hardware access');
+        cell=row.insertCell(3);
+        cell.setAttribute('class','hw thirdCell');
+        cell.setAttribute('title', 'hardware access'); 
         /*input=document.createElement("input");
-         cell.appendChild(input);*/
+				cell.appendChild(input);*/
 
 
-        cell = row.insertCell(4);
-        cell.setAttribute('title', 'default');
-        cell.setAttribute('class', 'default');
+        cell=row.insertCell(4);
+        cell.setAttribute('title', 'default'); 
+        cell.setAttribute('class','default');
 
-        cell = row.insertCell(5);
-        cell.setAttribute('onkeydown', "insertNewRow(event,this);");
-        cell.setAttribute('class', 'desc fielddesc');
-        cell.setAttribute('title', 'description');
+        cell=row.insertCell(5);
+        cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+        cell.setAttribute('class','desc fielddesc');
+        cell.setAttribute('title', 'description'); 
 
-        hookEvents(cell, idsprop);
+        hookEvents(cell,idsprop);
     }
     /*add property row*/
-    else if (evt.keyCode === 80 && evt.altKey) {
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+    else if(evt.keyCode==80&&evt.altKey){
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('colspan', '6');
-        cell.setAttribute('onkeydown', "insertNewRow(event,this);");
-        cell.setAttribute('class', 'propclass');
-        cell.setAttribute('title', 'property');
+        cell=row.insertCell(0);		
+        cell.setAttribute('colspan', '6');    
+        cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+        cell.setAttribute('class','propclass');
+        cell.setAttribute('title', 'property'); 
 
         /*
-         input=document.createElement("textarea");
-         input.setAttribute('class','propInput');
-         cell.appendChild(input);*/
+				input=document.createElement("textarea");  
+				input.setAttribute('class','propInput');
+				cell.appendChild(input);*/
 
     }
 
     /*add description row*/
-    else if (evt.keyCode === 68 && evt.altKey) {
-        while (obj.tagName.toUpperCase() !== "TABLE") {
+    else if(evt.keyCode==68&&evt.altKey){
+        while(obj.tagName.toUpperCase() !== "TABLE") {
             obj = obj.parentNode;
         }
 
 
         var table = document.getElementById(obj.id);
-        var row = table.insertRow(parseInt(curr_row) + 1);
-        row.setAttribute('onkeydown', 'setCurrRow(this)');
-        row.setAttribute('onclick', "setCurrRow(this)");
-        row.setAttribute('class', 'edited');
+        var row = table.insertRow(parseInt(curr_row)+1);
+        row.setAttribute('onkeydown','setCurrRow(this)');
+        row.setAttribute('onclick',"setCurrRow(this)");
+        row.setAttribute('class','edited');
         var cell;
 
-        cell = row.insertCell(0);
-        cell.setAttribute('colspan', '6');
-        cell.setAttribute('onkeydown', "insertNewRow(event,this);");
-        cell.setAttribute('class', 'desc descclass');
-        cell.setAttribute('title', 'description');
+        cell=row.insertCell(0);
+        cell.setAttribute('colspan', '6');    
+        cell.setAttribute('onkeydown',"insertNewRow(event,this);");
+        cell.setAttribute('class','desc descclass');
+        cell.setAttribute('title', 'description'); 
 
         /*
-         input=document.createElement("textarea");
-         input.setAttribute('class','descInput');
-         cell.appendChild(input);*/
+				input=document.createElement("textarea");  
+				input.setAttribute('class','descInput');
+				cell.appendChild(input);*/
 
     }
 
-    /*call ML from here*/
-    if (evt.keyCode === 32 && evt.ctrlKey) {
-        /*
-         var txt = event.target.innerText;
-         var mlhint = "";
-         try {
-         
-         mlhint = clickController.showMLHint(txt);
-         setTimeout(function () {
-         console.log("--txt=" + txt);
-         document.getElementById('mlHintContainer').setAttribute('style', 'display:block');
-         document.getElementById('mlHintPara').innerText = mlhint;
-         
-         }, 1000);
-         
-         
-         } catch (e) {
-         alert("Err call java : " + e.message);
-         }
-         */
+    /*call ML from here*/			
+    if(evt.keyCode==32&& evt.ctrlKey){		
+
+        var txt=event.target.innerText;
+        var mlhint="";
+        try{
+
+            mlhint=clickController.showMLHint(txt);
+            /*alert("Machine Learning working...");*/
+            setTimeout(function(){
+                /*pasteHtmlAtCaret("<div id='divhint' class='hintcls'><input id='inputhint' onkeydown='hintlistner(event);' value='"+mlhint+"' type='text'></div>");*/
+                console.log("--txt="+txt);
+                document.getElementById('mlHintContainer').setAttribute('style','display:block');
+                document.getElementById('mlHintPara').innerText=mlhint;
+
+                /*
+						document.getElementById("inputhint").focus();
+						document.getElementById("inputhint").select();*/
+            }, 1000);
+
+
+        }catch(e){alert("Err call java : "+e.message);}
+
 
     }
 
 }
 
-function setHintText(str) {
-    document.getElementById("inputhint").value = str;
+function setHintText(str){
+    document.getElementById("inputhint").value=str;
 }
 
-function setCaretToPos(input, pos) {
+function setCaretToPos (input, pos) {
     setSelectionRange(input, pos, pos);
 }
 
@@ -4144,7 +2217,8 @@ function setSelectionRange(input, selectionStart, selectionEnd) {
         console.log("--click on input");
         input.focus();
         input.setSelectionRange(selectionStart, selectionEnd);
-    } else if (input.createTextRange) {
+    }
+    else if (input.createTextRange) {
         var range = input.createTextRange();
         range.collapse(true);
         range.moveEnd('character', selectionEnd);
@@ -4154,84 +2228,89 @@ function setSelectionRange(input, selectionStart, selectionEnd) {
 }
 
 
-function click_hideProp() {
-    var cols = document.getElementsByClassName('propclass');
-    var txtVal = document.getElementById('btnPropHide').innerHTML;
-    if (txtVal === hideProp) {
-        for (i = 0; i < cols.length; i++) {
-            cols[i].style.display = 'none';
+function click_hideProp(){
+    var cols =     document.getElementsByClassName('propclass');
+    var txtVal=document.getElementById('btnPropHide').innerHTML;
+    if(txtVal==hideProp){
+        for(i=0; i<cols.length; i++) {
+            cols[i].style.display =    'none';
         }
-        document.getElementById('btnPropHide').innerHTML = showProp;
-    } else if (txtVal === showProp) {
-        for (i = 0; i < cols.length; i++) {
-            cols[i].style.display = 'table-cell';
+        document.getElementById('btnPropHide').innerHTML=showProp;
+    }
+    else if(txtVal==showProp){
+        for(i=0; i<cols.length; i++) {
+            cols[i].style.display =    'table-cell';
         }
-        document.getElementById('btnPropHide').innerHTML = hideProp;
+        document.getElementById('btnPropHide').innerHTML=hideProp;
     }
 }
 
-var display = "table-cell";
-function hideprop() {
-    display = "none";
+var display="table-cell";
+function hideprop(){
+    display="none";
 }
-function showprop() {
-    display = "table-cell";
+function showprop(){
+    display="table-cell";
 }
-function resetview() {
-    $('.propclass').css("display", "table-cell");
+function resetview(){
+    $('.propclass').css("display","table-cell");	
 }
 
-function click_btnprop() {
-    if ($("#lblcompact").text() === 'show') {
-        $('.propclass').css("display", "none");
-        $('.descclass').css("display", "none");
-        $("#lblcompact").text('hide');
-    } else {
-        $('.propclass').css("display", "table-cell");
-        $('.descclass').css("display", "table-cell");
-        $("#lblcompact").text('show');
+function click_btnprop(){
+    if($("#btnprop").html()==hideProp){
+        $('.propclass').css("display","none");
+        $('.descclass').css("display","none");
+        $("#btnprop").html(showProp);
+    }
+    else{
+        $('.propclass').css("display","table-cell");
+        $('.descclass').css("display","table-cell");
+        $("#btnprop").html(hideProp);
     }
 }
 
-function click_btndesc() {
-    if ($("#btndesc").html() === hideDesc) {
-        $('.descclass').css("display", "none");
+function click_btndesc(){
+    if($("#btndesc").html()==hideDesc){
+        $('.descclass').css("display","none");
         $("#btndesc").html(showDesc);
-    } else {
-        $('.descclass').css("display", "table-cell");
+    }
+    else{
+        $('.descclass').css("display","table-cell");
         $("#btndesc").html(hideDesc);
     }
 }
 
-function IDS_PROPHIDE() {
-    $('.propclass').css("display", "none");
+function IDS_PROPHIDE(){
+    $('.propclass').css("display","none");
     hideprop();
 }
 
-function IDS_PROPSHOW() {
-    $('.propclass').css("display", "table-cell");
+function IDS_PROPSHOW(){
+    $('.propclass').css("display","table-cell");
     showprop();
 }
 
-function IDS_DESCSHOW() {
-    try {
-        var cols = document.getElementsByClassName('descclass');
-        for (i = 0; i < cols.length; i++) {
-            cols[i].style.display = 'table-cell';
+function IDS_DESCSHOW(){
+    try{		
+        var cols =     document.getElementsByClassName('descclass');
+        for(i=0; i<cols.length; i++) {
+            cols[i].style.display =    'table-cell';
         }
-    } catch (E) {
-        console.log('Err ' + E.message);
+    }
+    catch(E){
+        console.log('Err '+E.message);
     }
 }
 
-function IDS_DESCHIDE() {
-    try {
-        var cols = document.getElementsByClassName('descclass');
-        for (i = 0; i < cols.length; i++) {
-            cols[i].style.display = 'none';
+function IDS_DESCHIDE(){
+    try{
+        var cols =     document.getElementsByClassName('descclass');	
+        for(i=0; i<cols.length; i++) {
+            cols[i].style.display =    'none';
         }
-    } catch (E) {
-        console.log("Err hideDesc " + E.message);
+    }
+    catch(E){
+        console.log("Err hideDesc "+E.message);
     }
 }
 
@@ -4239,212 +2318,184 @@ function IDS_DESCHIDE() {
 
 
 
-function click_hideDesc() {
-    var cols = document.getElementsByClassName('descclass');
-    var txtVal = document.getElementById('btnDescHide').innerHTML;
-    if (txtVal === hideDesc) {
-        for (i = 0; i < cols.length; i++) {
-            cols[i].style.display = 'none';
+function click_hideDesc(){
+    var cols =     document.getElementsByClassName('descclass');
+    var txtVal=document.getElementById('btnDescHide').innerHTML;
+    if(txtVal==hideDesc){
+        for(i=0; i<cols.length; i++) {
+            cols[i].style.display =    'none';
         }
-        document.getElementById('btnDescHide').innerHTML = showDesc;
-    } else if (txtVal === showDesc) {
-        for (i = 0; i < cols.length; i++) {
-            cols[i].style.display = 'table-cell';
+        document.getElementById('btnDescHide').innerHTML=showDesc;
+    }
+    else if(txtVal==showDesc){
+        for(i=0; i<cols.length; i++) {
+            cols[i].style.display =    'table-cell';
         }
-        document.getElementById('btnDescHide').innerHTML = hideDesc;
+        document.getElementById('btnDescHide').innerHTML=hideDesc;
     }
 }
 
-function printMsg(msg) {
+function printMsg(msg){
     /*document.getElementById('para').innerHTML =msg;*/
 }
 
-function fontColorChange(color) {
+function fontColorChange(color){
     console.log('change color');
     document.execCommand('foreColor', false, color);
 }
-function printDoc() {
+function printDoc(){
     window.print();
 
 }
 
-function updatelostEvents() {
-    var cells = document.getElementById(SEQ_DIV_CONTAINER).getElementsByClassName("step");
-    for (var i = 0; i < cells.length; i++) {
-        var str = create_reg_arr(document.getElementById("regdivcontainer"));
-        autocomplete(cells[i], str);
-    }
-}
-
-
 /*key press event listner to catch and handle key event*/
-var bodyArr = {};
-var index = 0;
-var historycounter = 0;
+var bodyArr={};
+var index=0;
 function KeyPress(e) {
 
-    var evtobj = window.event ? event : e;
+    var evtobj = window.event? event : e;
 
     /*undo*/
-    if (evtobj.keyCode === 90 && evtobj.ctrlKey) {
-        if (isundofirsttimeclicked) {
-            addIntoHistory();
+    if (evtobj.keyCode === 90 && evtobj.ctrlKey) {		
+        var disp=document.getElementById("idsexcelcontainer").style.display;
+
+        if(typeof(bodyArr[index-1])!=='undefined'&&bodyArr[index-1]!==null){
+            index--;
+            document.body.innerHTML=bodyArr[index];
         }
-        undo();
-        isundofirsttimeclicked = false;
+
+        if(disp=="block"){
+            /*alert("Please save file ( ctrl+s ) and refresh (by right click outside from spreadsheet)");*/
+        }
+
         return false;
     }
-
     /*redo*/
-    else if (evtobj.keyCode === 89 && evtobj.ctrlKey) {
-        if (isundofirsttimeclicked) {
-            addIntoHistory();
+    else  if (evtobj.keyCode === 89 && evtobj.ctrlKey) {
+        if(typeof(bodyArr[index+1])!=='undefined'&&bodyArr[index+1]!==null){
+            index++;
+            document.body.innerHTML=bodyArr[index];
         }
-        redo();
-        isundofirsttimeclicked = false;
         return false;
     }
 
     /*paste ctrl+v*/
-    else if (evtobj.keyCode === 86 && evtobj.ctrlKey) {
+    else  if (evtobj.keyCode === 86 && evtobj.ctrlKey) {
         myClick();
         function myClick() {
             setTimeout(
-                    function () {
-                        updateEvents();
-                    }, 500);
+                function() {
+                    updateEvents();
+                }, 500);
         }
 
     }
-    /*space key press*/
-    else if (evtobj.keyCode === 32) {
+    else{
         addIntoHistory();
-    }
-    /*enter key press*/
-    else if (evtobj.keyCode === 13) {
-        addIntoHistory();
-    } else if (evtobj.keyCode === 17) {
-    }
-    /* down arrow*/
-    else if (evtobj.keyCode === 40) {
-        try {
-            /*
-             e.preventDefault();
-             var currscroll = parseInt(getscrollpos().split(":")[1]);
-             setscrollpos(currscroll + 20);
-             */
-        } catch (e) {
-        }
-    }
-    /* up arrow*/
-    else if (evtobj.keyCode === 38) {
-        try {
-            /*
-             e.preventDefault();
-             var currscroll = parseInt(getscrollpos().split(":")[1]);
-             setscrollpos(currscroll - 20);
-             */
-        } catch (e) {
-        }
-    } else {
-        isundofirsttimeclicked = true;
-        /*console.log("--add into history");*/
-        /*
-         if (historycounter > 6) {
-         addIntoHistory();
-         historycounter = 0;
-         }
-         historycounter++;
-         */
     }
 
-    /*when copy/cut paste done, html only copies html tag but not event like "onclick.." so we need to update these event whenever copy occures.
-     this is only a temporary solution and we need to find a better solution for this*/
-    function updateEvents() {
+    /*when copy/cut paste done, html only copies html tag but not event like "onclick.." so we need to update these event whenever copy occures. 
+	this is only a temporary solution and we need to find a better solution for this*/
+    function updateEvents(){
         console.log('update event call');
 
         var idsclass = document.getElementsByClassName("idsTemp");
-        if (typeof (idsclass !== 'undefined' && idsclass !== null)) {
-            for (var i = 0; i < idsclass.length; i++)
+        if(typeof(idsclass!=='undefined'&&idsclass!==null)){
+            for(var i = 0; i < idsclass.length; i++)
             {
-                idsclass[i].setAttribute("onclick", "tabClick(this)");
-                random_Num = Math.random();
-                idsclass[i].setAttribute('id', 'tab' + i + random_Num);
+                idsclass[i].setAttribute("onclick","tabClick(this)");
+                random_Num=Math.random();
+                idsclass[i].setAttribute('id','tab'+i+random_Num);
                 $(idsclass[i]).removeAttr('style');
                 $(idsclass[i]).find("[style]").removeAttr('style');	/*reset style attribute becouse whenever copy paste done, browser set default width location
-                 and it ruin the style*/
-                if (idsclass[i].classList.contains("seq")) {
-                    idsclass[i].setAttribute('oncontextmenu', 'openseqmenu(event);');
-                }
+				and it ruin the style*/		
+
             }
         }
 
 
 
 
-        idsclass = document.getElementsByClassName("edited");
-        if (typeof (idsclass !== 'undefined' && idsclass !== null)) {
-            for (var i = 0; i < idsclass.length; i++)
+        idsclass=document.getElementsByClassName("edited");
+        if(typeof(idsclass!=='undefined'&&idsclass!==null)){
+            for(var i = 0; i < idsclass.length; i++)
             {
-                idsclass[i].setAttribute("onclick", "setCurrRow(this)");
-                idsclass[i].setAttribute("onkeyup", "setCurrRow(this)");
+                idsclass[i].setAttribute("onclick","setCurrRow(this)");
+                idsclass[i].setAttribute("onkeyup","setCurrRow(this)");
             }
         }
 
-        var refpath = document.getElementById("seqdivcontainer").getElementsByClassName("refpath");
-        if (typeof (refpath !== 'undefined' && refpath !== null)) {
-            for (var i = 0; i < refpath.length; i++) {
-                refpath[i].setAttribute('onkeydown', 'insertSeqCmdRow(event,this);');
-            }
-        }
-
-        idsclass = document.getElementsByClassName("fielddesc");
-        if (typeof (idsclass !== 'undefined' && idsclass !== null)) {
-            for (var i = 0; i < idsclass.length; i++)
+        idsclass=document.getElementsByClassName("fielddesc");
+        if(typeof(idsclass!=='undefined'&&idsclass!==null)){
+            for(var i = 0; i < idsclass.length; i++)
             {
-                idsclass[i].setAttribute("onkeydown", "insertNewRow(event,this)");
+                idsclass[i].setAttribute("onkeydown","insertNewRow(event,this)");
             }
         }
 
-        var fields = document.getElementsByClassName("fields");
-        if (typeof (fields !== 'undefined' && fields !== null)) {
-            for (var i = 0; i < fields.length; i++) {
-                random_Num = Math.random();
-                fields[i].setAttribute('id', 'tab' + i + random_Num);
+        var fields= document.getElementsByClassName("fields");
+        if(typeof(fields!=='undefined'&&fields!==null)){
+            for(var i = 0; i < fields.length; i++){
+                random_Num=Math.random();
+                fields[i].setAttribute('id','tab'+i+random_Num);
             }
         }
 
-        var field = document.getElementsByClassName("field");
-        if (typeof (field !== 'undefined' && field !== null)) {
-            for (var i = 0; i < field.length; i++) {
-                random_Num = Math.random();
-                field[i].setAttribute('id', 'tab' + i + random_Num);
-                field[i].setAttribute('oncontextmenu', 'openregmenu(event);');
+        var field= document.getElementsByClassName("field");
+        if(typeof(field!=='undefined'&&field!==null)){
+            for(var i = 0; i < field.length; i++){
+                random_Num=Math.random();
+                field[i].setAttribute('id','tab'+i+random_Num);
             }
         }
 
-        idsclass = document.getElementsByClassName("private");
-        if (typeof (idsclass !== 'undefined' && idsclass !== null)) {
-            for (var i = 0; i < idsclass.length; i++) {
-                idsclass[i].setAttribute("onkeydown", "insertDefineRow(event,this)");
+        idsclass= document.getElementsByClassName("private");
+        if(typeof(idsclass!=='undefined'&&idsclass!==null)){
+            for(var i = 0; i < idsclass.length; i++){
+                idsclass[i].setAttribute("onkeydown","insertDefineRow(event,this)");
             }
         }
 
-        idsclass = document.getElementsByClassName("enumdesc");
-        if (typeof (idsclass !== 'undefined' && idsclass !== null)) {
-            for (var i = 0; i < idsclass.length; i++) {
-                idsclass[i].setAttribute("onkeydown", "insertEnumRow(event,this)");
+        idsclass= document.getElementsByClassName("enumdesc");
+        if(typeof(idsclass!=='undefined'&&idsclass!==null)){
+            for(var i = 0; i < idsclass.length; i++){
+                idsclass[i].setAttribute("onkeydown","insertEnumRow(event,this)");
             }
         }
 
-        idsclass = document.getElementsByClassName("signaldesc");
-        if (typeof (idsclass !== 'undefined' && idsclass !== null)) {
-            for (var i = 0; i < idsclass.length; i++) {
-                idsclass[i].setAttribute("onkeydown", "insertNewRowSignals(event,this)");
-            }
+        idsclass= document.getElementsByClassName("signaldesc");
+        if(typeof(idsclass!=='undefined'&&idsclass!==null)){
+            for(var i = 0; i < idsclass.length; i++){
+                idsclass[i].setAttribute("onkeydown","insertNewRowSignals(event,this)");
+            }	
         }
     }
 
+}
+
+function insertTabSpace(){
+    document.execCommand('insertHTML', false, "&emsp;");	
+}
+
+function addIntoHistory(){
+    bodyArr[index]=document.body.innerHTML;
+    index++;
+}
+
+function showSearchTab(){
+    $('#divSearch').css('display','block');
+}
+function hideSearchTab(){
+    $('#divSearch').css('display','none');
+}
+
+function click_findString(){
+    var str=$('#inputsearch').val();
+    findString(str);
+}
+
+function click_replaceString(){
+    findReplaceString(document.getElementById('inputsearch'),document.getElementById('inputreplace'));	
 }
 
 function walk(el, fn) {
@@ -4460,229 +2511,228 @@ function textNode(txt) {
     return document.createTextNode(txt);
 }
 
-function openfile(obj) {
-    try {
-        var file = $(obj).text();
+function openfile(obj){	
+    try{
+        var file=$(obj).text();
         clickController.openFile(file);
-    } catch (e) {
     }
+    catch(e){
+        alert('err openfile : '+e.message);
+    }	
 }
 
-function openFindWindow(event) {
-    try {
+function openFindWindow(event){
+    try{
         location.reload();
         clickController.openFind();
-    } catch (e) {
+    }
+    catch(e){
+        alert('err : '+e.message);
     }
 }
 
-function unSetUnsaved() {
-    try {
+function unSetUnsaved(){
+    try{
 
         clickController.setUnsaveSymbol();
-    } catch (e) {
+    }
+    catch(e){
+        alert('err unSetUnsaved : '+e.message);
     }
 }
 
-function unSetsaved() {
-    try {
+function unSetsaved(){
+    try{
         clickController.setSaveSymbol();
-    } catch (e) {
     }
+    catch(e){
+        alert('err unSetSaved : '+e.message);
+    }
+}
+
+function test_replace(){
+    var val=document.getElementById('testDiv').innerText.replace("input","HELLO");
+    document.getElementById('testDiv').innerText=val;
 }
 
 document.onkeydown = KeyPress;
 
-function closehint() {
-    document.getElementById('mlHintContainer').setAttribute("style", "display:none");
+function closehint(){
+    document.getElementById('mlHintContainer').setAttribute("style","display:none");
 }
 
-function removeelement(classname) {
-    $("." + classname).remove();
+function removeelement(classname){
+    $("."+classname).remove();
 }
 
-function saveConfig(configstr) {
-    var config = document.getElementById("config");
-    try {
-        if (config) {
+function saveConfig(configstr){
+    var config=document.getElementById("config");
+    try{
+        if(config){
+            alert("configfound");
             config.remove();
         }
-        config = document.getElementsByClassName("maindiv")[0].appendChild("div");
-        config.id = "config";
-        config.style = "display:none";
-        config.innerHTML = configstr;
-    } catch (e) {
-
-    }
-
-}
-
-function navigateHierarchy(h) {
-    jump(h);
-    var anchor = document.getElementsByName(h)[0];
-    while (anchor.tagName.toUpperCase() !== "TABLE") {
-        anchor = anchor.parentNode;
-    }
-    $(anchor).effect("highlight", {color: "#fab492"}, 1000);
-}
-
-/*@JAVAFX Console jump*/
-function jumpFromAnotherHTML(h) {
-    try {
-        var idschecks = document.getElementsByClassName("idscheck");
-        for (var i = 0; i < idschecks.length; i++) {
-            if (idschecks[i].getAttribute("name") === h) {
-                var top = $(idschecks[i]).offset().top;
-                window.scrollTo(0, top);
-            } else {
-            }
+        else{
+            alert("not configfound");
         }
-    } catch (e) {
-
+        config=document.getElementsByClassName("maindiv")[0].appendChild("div");
+        config.id="config";
+        config.style="display:none";
+        config.innerHTML=configstr;
+    }
+    catch(e){
+        alert("Err saveConfig : "+e.message);
     }
 
 }
 
 /*@JAVAFX*/
-function jump(h) {
-    location.href = '#' + h;
-    try {
-        var ele = document.getElementsByName(h + "")[0];
-        if (document.getElementById(REG_DIV_CONTAINER).contains(ele) && document.getElementById(REG_DIV_CONTAINER).style.display !== 'block') {
+function jump(h){
+    location.href ='#'+h;   
+
+    try{
+        var ele=document.getElementsByName(h+"")[0];    
+        if(document.getElementById(REG_DIV_CONTAINER).contains(ele)&&document.getElementById(REG_DIV_CONTAINER).style.display!='block'){
             //check if reg comes from sequ/param then you can simply switch but if it comes from spreadsheep then to prevent data loss allow user to manually go to reg view becouse we do parasing.
-            if (document.getElementById(SEQ_DIV_CONTAINER).style.display === 'block' || document.getElementById(PARAM_DIV_CONTAINER).style.display === 'block') {
-                document.getElementById(REG_DIV_CONTAINER).style.display = 'block';
-                document.getElementById(SEQ_DIV_CONTAINER).style.display = 'none';
-                document.getElementById(SPREAD_DIV_CONTAINER).style.display = 'none';
-                document.getElementById(PARAM_DIV_CONTAINER).style.display = 'none';
-            } else {
-                alert(msg_switch_to_reg);
-            }
-        } else if (document.getElementById(SEQ_DIV_CONTAINER).contains(ele) && document.getElementById(SEQ_DIV_CONTAINER).style.display !== 'block') {
-            document.getElementById(REG_DIV_CONTAINER).style.display = 'none';
-            document.getElementById(SEQ_DIV_CONTAINER).style.display = 'block';
-            document.getElementById(SPREAD_DIV_CONTAINER).style.display = 'none';
-            document.getElementById(PARAM_DIV_CONTAINER).style.display = 'none';
-        } else if (document.getElementById(SPREAD_DIV_CONTAINER).contains(ele) && document.getElementById(SPREAD_DIV_CONTAINER).style.display !== 'block') {
-            if (document.getElementById(SEQ_DIV_CONTAINER).style.display === 'block' || document.getElementById(PARAM_DIV_CONTAINER).style.display === 'block') {
-                document.getElementById(REG_DIV_CONTAINER).style.display = 'none';
-                document.getElementById(SEQ_DIV_CONTAINER).style.display = 'none';
-                document.getElementById(SPREAD_DIV_CONTAINER).style.display = 'block';
-                document.getElementById(PARAM_DIV_CONTAINER).style.display = 'none';
-            } else {
-                alert(msg_switch_to_spreadsheet);
+            if(document.getElementById(SEQ_DIV_CONTAINER).style.display=='block'||document.getElementById(PARAM_DIV_CONTAINER).style.display=='block'){
+                document.getElementById(REG_DIV_CONTAINER).style.display='block';
+                document.getElementById(SEQ_DIV_CONTAINER).style.display='none';
+                document.getElementById(SPREAD_DIV_CONTAINER).style.display='none';
+                document.getElementById(PARAM_DIV_CONTAINER).style.display='none';
+            }else{
+                alert("Please switch to Register View to see error");
             }
         }
-    } catch (e) {
+        else if(document.getElementById(SEQ_DIV_CONTAINER).contains(ele)&&document.getElementById(SEQ_DIV_CONTAINER).style.display!='block'){
+            document.getElementById(REG_DIV_CONTAINER).style.display='none';
+            document.getElementById(SEQ_DIV_CONTAINER).style.display='block';
+            document.getElementById(SPREAD_DIV_CONTAINER).style.display='none';
+            document.getElementById(PARAM_DIV_CONTAINER).style.display='none';
+        }
+        else if(document.getElementById(SPREAD_DIV_CONTAINER).contains(ele)&&document.getElementById(SPREAD_DIV_CONTAINER).style.display!='block'){
+            if(document.getElementById(SEQ_DIV_CONTAINER).style.display=='block'||document.getElementById(PARAM_DIV_CONTAINER).style.display=='block'){
+                document.getElementById(REG_DIV_CONTAINER).style.display='none';
+                document.getElementById(SEQ_DIV_CONTAINER).style.display='none';
+                document.getElementById(SPREAD_DIV_CONTAINER).style.display='block';
+                document.getElementById(PARAM_DIV_CONTAINER).style.display='none';
+            }
+            else{
+                alert("Please switch to Spreadsheet View to see error");
+            }       
+        }
+    }catch(e){
         //alert("err jump : "+e.message);
     }
 }
 
 /*GUI check starts here*/
 /*@JAVAFX*/
-const name_regex = /^\s*[\\$]?[a-zA-Z][a-zA-Z0-9 _]*\s*/;
-function runGUICheck() {
-    var errorlist = "";
-    var errorconter = 0;
+function runGUICheck(){
+    var errorlist="";
+    var errorconter=0;
     resetAllChecks();
 
-    //checkTop(); TODO temporary disabled not working properly
+    checkTop();
     checkRegTemplate();
     checkCommon();
     checkMem();
     checkSeqTemplate();
 
-    if ($.trim(errorlist) !== "") {
-        var verrorlist = "{error: [" + errorlist + "]}";
+
+
+
+    if($.trim(errorlist)!=""){
+        var verrorlist="{error: ["+errorlist+"]}";
         alert(verrorlist);
-        return verrorlist;
+        return true;
     }
 
-    function addErrJson(msg, td) {
+    function addErrJson(msg,td){
 
-        var id = "target" + errorconter;
-        $(td).append("<a class='idscheck' name='" + id + "'></a>");
-        $(td).css('border', '2px solid red');
+        var id="target"+errorconter;
+        $(td).append("<a class='idscheck' name='"+id+"'></a>");	
+        $(td).css('border','2px solid red');
 
-        if (errorlist === "") {
-            errorlist = "{id:" + id + ",msg:" + msg + "}";
-        } else {
-            errorlist = errorlist + ",{id:" + id + ",msg:" + msg + "}";
+        if(errorlist==""){
+            errorlist="{id:"+id+",msg:"+msg+"}";
+        }
+        else{		
+            errorlist=errorlist+",{id:"+id+",msg:"+msg+"}";
         }
         errorconter++;
     }
 
-    function checkRegTemplate() {
+    function checkRegTemplate(){
 
 
-        $("table.reg td.fieldname").each(function (i) {
-            if (!$(this).text().match(name_regex)) {
-                addErrJson(msg_f_name_invalid, this);
+        $("table.reg td.fieldname").each(function(i){
+            if($(this).text()==""){
+                addErrJson("Error-G  field name should not be empty",this);
             }
         });
 
-        $("table.reg td.bits").each(function (i) {
+        $("table.reg td.bits").each(function(i){
             /*
-             if($(this).text()==""){
-             addErrJson("Error-G register bits should not by empty",this);
-             }
-             */
-            if (!$(this).text().match(/\s*(^[\d]+$)|(^[\d]+\:[\d])/)) {
-                addErrJson(msg_f_bits_invalid, this);
+			if($(this).text()==""){
+				addErrJson("Error-G register bits should not by empty",this);
+			}
+			*/
+            if(!$(this).text().match(/\s*(^[\d]+$)|(^[\d]+\:[\d])/)){
+                addErrJson("Error-G invalid register bits value",this);
+            }			
+        });
+
+        $("table.reg td.sw").each(function(i){
+            if($(this).text()==""){
+                addErrJson("Error-G register sw access should not by empty",this);
             }
         });
 
-        $("table.reg td.sw").each(function (i) {
-            if ($(this).text() === "") {
-                addErrJson(msg_sw_invalid, this);
-            }
-        });
+    }	
 
-    }
-
-    function checkCommon() {
-        $("table.idsTemp td.offset").each(function (i) {
+    function checkCommon(){
+        $("table.idsTemp td.offset").each(function(i){
             /*if(($(this).text()!="")&&(!$(this).text().match(/\s*(^\`h[a-fA-F0-9]+$)|(^[\$][a-zA-Z][a-zA-Z0-9_]*)|(^[\d]+$)|(^0(x|X)([\d]|[a-fA-F])+$)/))){*/
-            if (($(this).text() !== "") && (!$(this).text().match(/\s*(^\`h[a-fA-F0-9]+$)|(^[\$][a-zA-Z][a-zA-Z0-9_]*)|(^[\d_]+$)|(^0(x|X)([\d_]|[a-fA-F_])+$)/))) {
-                addErrJson(msg_offset_invalid, this);
+            if(($(this).text()!="")&&(!$(this).text().match(/\s*(^\`h[a-fA-F0-9]+$)|(^[\$][a-zA-Z][a-zA-Z0-9_]*)|(^[\d_]+$)|(^0(x|X)([\d_]|[a-fA-F_])+$)/))){
+                addErrJson("Error-G Invalid offset value",this);
             }
         });
 
         /*
-         $("table.idsTemp td.default").each(function(i){
-         if($(this).text()==""){
-         addErrJson("Error-G  default value should not be empty",this);
-         }
-         });*/
+		$("table.idsTemp td.default").each(function(i){
+			if($(this).text()==""){			
+				addErrJson("Error-G  default value should not be empty",this);
+			}
+		});*/
 
-        $("table.idsTemp td.name").each(function (i) {
-            if (!$(this).text().match(name_regex)) {
-                addErrJson(msg_temp_name_valid, this);
+        $("table.idsTemp td.name").each(function(i){
+            if(!$(this).text().match(/^\s*[\\$]?[a-zA-Z][a-zA-Z0-9 _]*\s*/)){
+                addErrJson("Error-G template name should be valid",this);
             }
         });
 
-        $("table.ref td.refname").each(function (i) {
-            if (!$(this).text().match(/^[\\$]?[a-zA-Z][a-zA-Z0-9 _]*/)) {
-                addErrJson(msg_ref_name_valid, this);
-            }
-        });
-    }
-
-    function checkMem() {
-        $("table.mem td.depth").each(function (i) {
-            if ($(this).text() === "") {
-                addErrJson(msg_depth_empty, this);
-            }
-        });
-
-        $("table.mem td.width").each(function (i) {
-            if ($(this).text() === "") {
-                addErrJson(msg_width_empty, this);
+        $("table.ref td.refname").each(function(i){
+            if(!$(this).text().match(/^[\\$]?[a-zA-Z][a-zA-Z0-9 _]*/)){
+                addErrJson("Error-G ref instance name should be valid",this);
             }
         });
     }
 
-    function resetAllChecks() {
+    function checkMem(){
+        $("table.mem td.depth").each(function(i){
+            if($(this).text()==""){			
+                addErrJson("Error-G  depth value should not be empty",this);
+            }
+        });
+
+        $("table.mem td.width").each(function(i){
+            if($(this).text()==""){			
+                addErrJson("Error-G  width value should not be empty",this);
+            }
+        });
+    }
+
+    function resetAllChecks(){
 
         $("table.idsTemp td.default").removeAttr("style");
         $("table.reg td.fieldname").removeAttr("style");
@@ -4703,40 +2753,41 @@ function runGUICheck() {
         $(".idscheck").remove();
 
         $(".idsTemp td.name").removeAttr("style");
-        errorconter = 0;
-        errorlist = "";
+        errorconter=0;
+        errorlist="";
     }
 
-    function checkSeqTemplate() {
+    function checkSeqTemplate(){
 
 
-        $("table.seq td.seqname").each(function (i) {
-            if ($(this).text() === "") {
-                addErrJson(msg_seq_name_empty, this);
+        $("table.seq td.seqname").each(function(i){
+            if($(this).text()==""){
+                addErrJson("Error-G  sequence name must not be empty",this);
             }
-        });
+        });	
 
-        $("table.seq td.ip").each(function (i) {
-            if ($(this).text() === "") {
-                addErrJson(msg_seq_name_empty, this);
+        $("table.seq td.ip").each(function(i){
+            if($(this).text()==""){
+                addErrJson("Error-G  sequence IP must not be empty",this);
             }
-        });
+        });	
 
     }
-    function checkTop() {
-        try {
 
-            $(".idsTemp").each(function (i) {
-                var cls = $(this).attr("class").split(" ");
-                for (var i = 0; i < cls.length; i++) {
-                    if (cls[i] === "block" || cls[i] === "chip" || cls[i] === "system" || cls[i] === "board" || cls[i] === "section" || cls[i] === "reg" || cls[i] === "ref" ||
-                            cls[i] === "mem" || cls[i] === "enum" || cls[i] === "param" || cls[i] === "variant" || cls[i] === "busdomain" || cls[i] === "signals") {
+    function checkTop(){
+        try{
 
-                        if (cls[i] === "reg" || cls[i] === "section" || cls[i] === "ref" ||
-                                cls[i] === "mem" || cls[i] === "enum" || cls[i] === "param" || cls[i] === "variant" || cls[i] === "busdomain" || cls[i] === "signals") {
-                            addErrJson(msg_top_missing, this.getElementsByClassName("name")[0]);
+            $(".idsTemp").each(function(i){
+                var cls=$(this).attr("class").split(" ");
+                for(var i=0;i<cls.length;i++){
+                    if(cls[i]==="block"||cls[i]==="chip"||cls[i]==="system"||cls[i]==="board"||cls[i]==="section"||cls[i]==="reg"||cls[i]==="ref"||
+                       cls[i]==="mem"||cls[i]==="enum"||cls[i]==="param"||cls[i]==="variant"||cls[i]==="busdomain"||cls[i]==="signals"){
+
+                        if(cls[i]==="reg"||cls[i]==="section"||cls[i]==="ref"||
+                           cls[i]==="mem"||cls[i]==="enum"||cls[i]==="param"||cls[i]==="variant"||cls[i]==="busdomain"||cls[i]==="signals"){
+                            addErrJson("Error-G  Top is missing! Top must be a chip or block",this.getElementsByClassName("name")[0]);
                         }
-                        return "";
+                        return false;
                     }
                 }
             });
@@ -4744,12 +2795,12 @@ function runGUICheck() {
 
 
 
-        } catch (e) {
-            return e.message;
+        }catch(e){
+            alert("Err checkTop : "+e.message);
         }
     }
 
-    return "";
+    return false;
 }
 /*GUI checks ends here*/
 
@@ -4759,25 +2810,25 @@ function runGUICheck() {
 
 var carpos;
 
-function hookEvents(ele) {
-    autocomplete(ele, idsprop);
+function hookEvents(ele){
+    autocomplete(ele,idsprop);
 }
 
 function getCaretPosition(editableDiv) {
     var caretPos = 0,
-            sel, range;
+        sel, range;
     if (window.getSelection) {
         sel = window.getSelection();
         if (sel.rangeCount) {
             range = sel.getRangeAt(0);
 
-            if (range.commonAncestorContainer.parentNode === editableDiv) {
+            if (range.commonAncestorContainer.parentNode == editableDiv) {
                 caretPos = range.endOffset;
             }
         }
     } else if (document.selection && document.selection.createRange) {
         range = document.selection.createRange();
-        if (range.parentElement() === editableDiv) {
+        if (range.parentElement() == editableDiv) {
             var tempEl = document.createElement("span");
             editableDiv.insertBefore(tempEl, editableDiv.firstChild);
             var tempRange = range.duplicate();
@@ -4790,19 +2841,19 @@ function getCaretPosition(editableDiv) {
 }
 
 function placeCaretAtEnd(el) {
-    if (typeof window.getSelection !== "undefined"
-            && typeof document.createRange !== "undefined") {
+    if (typeof window.getSelection != "undefined"
+        && typeof document.createRange != "undefined") {
         var range = document.createRange();
         var sel = window.getSelection();
-        try {
+        try{
             range.setStart(el, 1);
-        } catch (e) {
+        }catch(e){
             range.setStart(el, 0);
         }
         range.collapse(true);
         sel.removeAllRanges();
-        sel.addRange(range);
-    } else if (typeof document.body.createTextRange !== "undefined") {
+        sel.addRange(range);       
+    } else if (typeof document.body.createTextRange != "undefined") {
         var textRange = document.body.createTextRange();
         textRange.moveToElementText(el);
         textRange.collapse(false);
@@ -4810,205 +2861,113 @@ function placeCaretAtEnd(el) {
     }
 }
 
-function checkvalidprop(inp) {
-    carpos = getCaretPosition(inp);
-    var txt = inp.innerText.trim();
-    var val = "";
-    var td_type = "";
-    try {
-        td_type = inp.getAttribute("class").split(" ")[0];
-    } catch (e) {
-    }
+function checkvalidprop(inp){
+    carpos=getCaretPosition(inp);
+    var txt=inp.innerText;
+    var val="";
+    var td_type="";
+    try{
+        td_type=inp.getAttribute("class").split(" ")[0];
+    }catch(e){}
 
 
-    try {
-        if (td_type === "propclass" || td_type === "step" || td_type === "sw" || td_type === "hw" || td_type === "seqvalue"
-                || td_type === "cmdname") {
-            for (var i = carpos - 1; i >= 0; i--) {
-                if (txt.charAt(i) === ";" || txt.charAt(i) === "{") {
-                    return val.replace("{", "").trim();
+    try{
+        if(td_type=="propclass"||td_type=="step"||td_type=="sw"||td_type=="hw"||td_type=="seqvalue"){
+            for (var i = carpos-1; i >=0; i--) {
+                if(txt.charAt(i)===";"||txt.charAt(i)==="{"){
+                    return val.replace("{","").trim();
                 }
-                val = txt.charAt(i) + val;
+                val=txt.charAt(i)+val;
             }
-        } else {
+        }
+        else{
 
-            var curly_found = false;
-            for (var i = carpos - 1; i >= 0; i--) {
+            var curly_found=false;
+            for (var i = carpos-1; i >=0; i--) {
 
-                if (txt.charAt(i) === "{") {
-                    curly_found = true;
-                    break;
-                } else if (txt.charAt(i) === "}") {
-                    curly_found = false;
-                    break;
+                if(txt.charAt(i)==="{"){
+                    curly_found=true;break;
+                }
+                else if(txt.charAt(i)==="}"){
+                    curly_found=false;break;
                 }
             }
-            if (curly_found) {
-                for (var i = carpos - 1; i >= 0; i--) {
-                    if (txt.charAt(i) === ";" || txt.charAt(i) === "{") {
-                        return val.replace("{", "").trim();
+            if(curly_found){
+                for (var i = carpos-1; i >=0; i--) {
+                    if(txt.charAt(i)===";"||txt.charAt(i)==="{"){
+                        return val.replace("{","").trim();
                     }
-                    val = txt.charAt(i) + val;
+                    val=txt.charAt(i)+val;
                 }
             }
         }
-    } catch (e) {
-        console.log("Err (checkvalidprop) : " + e.message);
-    }
+    }catch(e){
+        console.log("Err (checkvalidprop) : "+e.message);
+    }				
     return val;
 }
 
-function scrollFieldCells(e, isdown) {
-    try {
-        if (document.getElementById("autocomplete-list") && document.getElementById("autocomplete-list").childNodes.length > 0) {
-            /*if hint box is already open then block this function for hinting work*/
-            e.preventDefault();
-            return false;
-        }
-        var cell = e.target;
-        var cellindex = parseInt(cell.cellIndex);
-        var tab = cell;
-        var row = cell;
-
-        while (row.tagName.toUpperCase() !== "TR") {
-            row = row.parentNode;
-        }
-
-        while (tab.tagName.toUpperCase() !== "TABLE") {
-            tab = tab.parentNode;
-        }
-
-        if (isdown) {
-            tab.rows[row.rowIndex + 1].cells[cellindex ].focus();
-            e.preventDefault();
-        } else {
-            tab.rows[row.rowIndex - 1].cells[cellindex].focus();
-            e.preventDefault();
-        }
-
-    } catch (e) {
-    }
-}
 
 function autocomplete(inp, arr) {
-    var SHOW_ALL = false;
+
 
     /*arr=idsprop;*/
     /*the autocomplete function takes two arguments,
-     the text field element and an array of possible autocompleted values:*/
+  the text field element and an array of possible autocompleted values:*/
     var currentFocus;
     /*execute a function when someone writes in the text field:*/
-    inp.addEventListener("input", function (e) {
-        inputcodeinnercall(e);
-    });
+    inp.addEventListener("input", function(e) {
 
 
-    inp.addEventListener("keydown", function (e) {
-        var x = document.getElementById(this.id + "autocomplete-list");
-        if (x)
-            x = x.getElementsByTagName("div");
-
-        if (e.keyCode === 40) {
-            /*If the arrow DOWN key is pressed,
-             increase the currentFocus variable:*/
-            currentFocus++;
-
-            /*and and make the current item more visible:*/
-            addActive(x);
-            var autolist = document.getElementById("autocomplete-list");
-            if (autolist) {
-                e.preventDefault();
-                autolist.scrollTop = autolist.scrollTop + 20;
-            }
-            //			console.log("--scroll pos="+document.getElementById("autocomplete-list").scrollTop);
-
-        } else if (e.keyCode === 38) {
-            /*If the arrow UP key is pressed,
-             decrease the currentFocus variable:*/
-            currentFocus--;
-            /*and and make the current item more visible:*/
-            addActive(x);
-            var autolist = document.getElementById("autocomplete-list");
-            if (autolist) {
-                e.preventDefault();
-                autolist.scrollTop = autolist.scrollTop - 20;
-            }
-        } else if (e.keyCode === 13) {
-            /*If the ENTER key is pressed, prevent the form from being submitted,*/
-            if (currentFocus > -1) {
-                e.preventDefault();
-                /*and simulate a click on the "active" item:*/
-
-                if (x)
-                    x[currentFocus].click();
-                //var carpost = getCaretPosition(inp);
-
-                placeCaretAtEnd(inp);
-            }
-        } else if (e.keyCode === 27) {
-
-            var x = document.getElementsByClassName("autocomplete-items");
-            for (var i = 0; i < x.length; i++) {
-                x[i].parentNode.removeChild(x[i]);
-            }
-        }
-        /*on ctrl+space show all hints*/
-        if (e.keyCode === 32 && e.ctrlKey) {
-            SHOW_ALL = true;
-            inputcodeinnercall(e);
-        } else {
-            SHOW_ALL = false;
-        }
-    });
-
-    function inputcodeinnercall(e) {
-
-        var a, b, i, val = inp.innerText.trim();
+        var a, b, i, val = inp.innerText;
         /*close any already open lists of autocompleted values*/
         closeAllLists();
-
-        if (!val && !SHOW_ALL) {
-            return false;
-        }
+        if (!val) { return false;}
         currentFocus = -1;
         /*create a DIV element that will contain the items (values):*/
         a = document.createElement("DIV");
 
-        var rect = e.target.getBoundingClientRect();
+        var rect=e.target.getBoundingClientRect();
 
         a.setAttribute("id", e.target.id + "autocomplete-list");
         a.setAttribute("class", "autocomplete-items");
 
-        var nodetype = "";
-        try {
-            nodetype = e.target.parentNode.parentNode.parentNode.getAttribute("class").split(" ")[0];
-        } catch (e) {
+        var nodetype="";
+        try{
+            nodetype=e.target.parentNode.parentNode.parentNode.getAttribute("class").split(" ")[0];
         }
+        catch(e){}
 
 
         /*set hint location here*/
-        if (nodetype === "reg" || nodetype === "block") {
+        if(nodetype=="reg"||nodetype=="block"){
             /*console.log("clientx1=="+window.getSelection().getRangeAt(0).startOffset);
-             var offset_cor=(parseInt(window.getSelection().getRangeAt(0).startOffset)*4)+215;
-             */
-            a.setAttribute("style", "left:38%;");
-        } else if (nodetype === "fields") {
-            var cur_node = e.target.getAttribute("class").split(" ")[0];
-            if (cur_node === "sw") {
+			var offset_cor=(parseInt(window.getSelection().getRangeAt(0).startOffset)*4)+215;
+			*/
+            a.setAttribute("style","left:38%;");
+        }
+        else if(nodetype=="fields"){
+            var cur_node=e.target.getAttribute("class").split(" ")[0];
+            if(cur_node=="sw"){
                 a.setAttribute("style", "left:35%;");
-            } else if (cur_node === "hw") {
-                a.setAttribute("style", "left:44%");
-            } else {
+            }
+            else if(cur_node=="hw"){
+                a.setAttribute("style", "left:44%");	
+            }
+            else{
                 a.setAttribute("style", "right:60px");
             }
-        } else if (nodetype === "command") {
-            var cur_node = e.target.getAttribute("class").split(" ")[0];
-            if (cur_node === "step") {
+        }
+        else if(nodetype=="command"){
+            var cur_node=e.target.getAttribute("class").split(" ")[0];
+            if(cur_node=="step"){
                 a.setAttribute("style", "left:29%");
-            } else if (cur_node === "seqvalue") {
-                a.setAttribute("style", "left:48%");
             }
-        } else {
+            else if(cur_node=="seqvalue"){
+                a.setAttribute("style", "left:48%");
+            }	
+        }		
+        else{
             /*a.setAttribute("style", "left: 29%;");*/
         }
 
@@ -5016,139 +2975,168 @@ function autocomplete(inp, arr) {
         e.target.parentNode.after(a);
 
 
-        var hintoffsetHeight = $(a).offset().top;
+        var hintoffsetHeight=$(a).offset().top;
         var offsetHeight = document.getElementById('regdivcontainer').offsetHeight;//$(document).height();
-        hintoffsetHeight = offsetHeight - (hintoffsetHeight);
-        var attr = a.getAttribute("style") + ";max-height:" + hintoffsetHeight + "px;overflow:auto";
-        a.setAttribute("style", attr);
-        //console.log("test--");
-        /*
-         setTimeout(
-         function () {
-         }, 19000);
-         
-         setTimeout(function() {
-         // Whatever you want to do after the wait
-         },500);
-         */
+        hintoffsetHeight=offsetHeight-(hintoffsetHeight);
+        var attr=a.getAttribute("style")+";max-height:"+hintoffsetHeight+"px;overflow:auto";
+        a.setAttribute("style",attr);
 
-        var checkvalid = checkvalidprop(inp);
+        var checkvalid=checkvalidprop(inp);
         /*console.log("--nodetype="+nodetype);*/
 
-
-        if (checkvalid === "" && !SHOW_ALL) {
+        if(checkvalid==""){
             return;
         }
 
-        var is_not_dot = false;
+        var is_not_dot=false;
+        if(nodetype=="command"){
 
-        if (nodetype === "command" && e.target.classList.contains("step")) {
-
-            if (checkvalid.indexOf(".") > -1) {
-                arr = rebind_reg_arr(checkvalid, regdivcontainer);
-                is_not_dot = true;
-                var checkarr = checkvalid.split(".");
-                checkvalid = checkarr[checkarr.length - 1];
-            } else {
-                arr = create_reg_arr(regdivcontainer);
+            if(checkvalid.indexOf(".")>-1){
+                arr=rebind_reg_arr(checkvalid,regdivcontainer);
+                is_not_dot=true;
+                var checkarr=checkvalid.split(".");
+                checkvalid=checkarr[checkarr.length-1];
             }
+            else{
+                arr=create_reg_arr(regdivcontainer);
+            }			/*
+			if(checkvalid.endsWith(".")){
+				arr=rebind_reg_arr(checkvalid,regdivcontainer);
+				is_not_dot=true;
+			}
+			else{
+				arr=create_reg_arr(regdivcontainer);
+			}
+			*/
+        }
+        else{
+
         }
 
-
         /*var start=parseInt(val.indexOf(checkvalid));*/
-        var curpost = getCaretPosition(inp);
+        var curpost=getCaretPosition(inp);
         var start;
-        start = curpost - checkvalid.length;
-        var end = curpost;
-        val = checkvalid;
-        if (SHOW_ALL) {
-            /*for each item in the array...*/
-            for (var key in arr) {
-                /*check if the item starts with the same letters as the text field value:*/
+        start=curpost-checkvalid.length;
+        var end=curpost;
+        val=checkvalid;
+
+        /*for each item in the array...*/
+        for(var key in arr){
+            /*check if the item starts with the same letters as the text field value:*/
+            if (key.substr(0, val.length).toUpperCase() == val.toUpperCase()||val.endsWith(".")) {
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
                 /*make the matching letters bold:*/
-                b.innerHTML += key
+                b.innerHTML = "<strong>" + key.substr(0, val.length) + "</strong>";
+                b.innerHTML += key.substr(val.length);
                 b.setAttribute("title", arr[key]);
                 /*insert a input field that will hold the current array item's value:*/
                 b.innerHTML += "<input type='hidden' value='" + key + "'>";
                 /*execute a function when someone clicks on the item value (DIV element):*/
-                b.addEventListener("click", function (e) {
-                    /*insert the value for the autocomplete text field:*/
-                    var str3 = inp.innerText.substring(0, start) + e.target.getElementsByTagName("input")[0].value + inp.innerText.substring(end, inp.innerText.length);
+                b.addEventListener("click", function(e) {
+                    /*insert the value for the autocomplete text field:*/								
+                    var str3=inp.innerText.substring(0, start)+e.target.getElementsByTagName("input")[0].value+inp.innerText.substring(end, inp.innerText.length);
 
-                    inp.innerText = str3;
-                    //closeAllLists();
+                    inp.innerText =str3;
+                    closeAllLists();
 
                 });
                 a.appendChild(b);
-
-            }
-            //SHOW_ALL=false;
-        } else {
-            /*for each item in the array...*/
-            for (var key in arr) {
-                /*check if the item starts with the same letters as the text field value:*/
-                if (key.substr(0, val.length).toUpperCase() === val.toUpperCase() || val.endsWith(".")) {
-                    /*create a DIV element for each matching element:*/
-                    b = document.createElement("DIV");
-                    /*make the matching letters bold:*/
-                    b.innerHTML = "<strong>" + key.substr(0, val.length) + "</strong>";
-                    b.innerHTML += key.substr(val.length);
-                    b.setAttribute("title", arr[key]);
-                    /*insert a input field that will hold the current array item's value:*/
-                    b.innerHTML += "<input type='hidden' value='" + key + "'>";
-                    /*execute a function when someone clicks on the item value (DIV element):*/
-                    b.addEventListener("click", function (e) {
-                        /*insert the value for the autocomplete text field:*/
-                        var str3 = inp.innerText.substring(0, start) + e.target.getElementsByTagName("input")[0].value + inp.innerText.substring(end, inp.innerText.length);
-
-                        inp.innerText = str3;
-                        closeAllLists();
-
-                    });
-                    a.appendChild(b);
-                }
             }
         }
-        return true;
-    }
+    });
 
-    function rebind_reg_arr(key, regcontain) {
-        var dot_arr = key.split(".");
-        var last_request = dot_arr[dot_arr.length - 2];
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
 
-        var str = {};
-        var ids_temps = regcontain.getElementsByClassName("name");
+        if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+            currentFocus++;
+            e.preventDefault();
+            /*and and make the current item more visible:*/
+            addActive(x);
+            var carpost=getCaretPosition(inp);
+            document.getElementById("autocomplete-list").scrollTop=document.getElementById("autocomplete-list").scrollTop+20;
+            //			console.log("--scroll pos="+document.getElementById("autocomplete-list").scrollTop);
+
+        } else if (e.keyCode == 38) { 
+            /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+            e.preventDefault();
+
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+            document.getElementById("autocomplete-list").scrollTop=document.getElementById("autocomplete-list").scrollTop-20;
+        }
+        else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            if (currentFocus > -1) {
+                e.preventDefault();
+                /*and simulate a click on the "active" item:*/
+
+                if (x) x[currentFocus].click();
+                var carpost=getCaretPosition(inp);
+
+                placeCaretAtEnd(inp);
+            }
+        }
+
+        else if (e.keyCode == 27) {
+
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                x[i].parentNode.removeChild(x[i]);
+            }
+        }
+
+        /*on ctrl+space show all hints*/
+        if(e.keyCode==32&& e.ctrlKey){	
+            alert("Use Dot (.) to get list of all hints");
+        }
+    });
+
+
+    function rebind_reg_arr(key,regcontain){
+        var dot_arr=key.split(".");
+        var last_request=dot_arr[dot_arr.length-2];
+
+        var str={};
+        var ids_temps=regcontain.getElementsByClassName("name");
         var search_ele;
 
-        for (var i = 0; i < ids_temps.length; i++) {
-            if (ids_temps[i].innerText === last_request) {
-                search_ele = ids_temps[i].parentElement.parentElement.parentElement;
+        for(var i=0; i<ids_temps.length;i++){
+            if(ids_temps[i].innerText==last_request){
+                search_ele=ids_temps[i].parentElement.parentElement.parentElement;
             }
         }
 
         /*var cls=ids_temps[0].parentElement.parentElement.parentElement.getAttribute("class").split(" ")[0];*/
-        var key_find_name = "name";
+        var key_find_name="name";
         var ids_temps;
-        var clss = search_ele.getAttribute("class").split(" ")[0];
-        if (clss === "reg") {
-            key_find_name = "fieldname";
-            ids_temps = search_ele.getElementsByClassName(key_find_name);
-        } else if (clss === "section") {
-            ids_temps = get_section_reglist(search_ele, regcontain);
-        } else if (clss === "block") {
-            ids_temps = get_block_reglist(search_ele, regcontain);
-        } else if (clss === "chip") {
-            ids_temps = get_chip_blocklist(search_ele, regcontain);
+        var clss=search_ele.getAttribute("class").split(" ")[0];
+        if(clss=="reg"){
+            key_find_name="fieldname";
+            ids_temps=search_ele.getElementsByClassName(key_find_name);
+        }
+        else if(clss=="section"){
+            ids_temps=get_section_reglist(search_ele,regcontain);
+        }
+        else if(clss=="block"){
+            ids_temps=get_block_reglist(search_ele,regcontain);
+        }
+        else if(clss=="chip"){
+            ids_temps=get_chip_blocklist(search_ele,regcontain);
         }
 
-        var str = {};
-        for (var i = 0; i < ids_temps.length; i++) {
-            try {
-                str[ids_temps[i].innerText] = ids_temps[i].innerText;
-            } catch (e) {
+        var str={};
+        for(var i=0; i<ids_temps.length;i++){
+            try{
+                str[ids_temps[i].innerText]=ids_temps[i].innerText;
             }
+            catch(e){}
         }
 
         return str;
@@ -5156,25 +3144,21 @@ function autocomplete(inp, arr) {
 
     function addActive(x) {
         /*a function to classify an item as "active":*/
-        if (!x)
-            return false;
+        if (!x) return false;
         /*start by removing the "active" class on all items:*/
         removeActive(x);
-        if (currentFocus >= x.length)
-            currentFocus = 0;
-        if (currentFocus < 0)
-            currentFocus = (x.length - 1);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
         /*add class "autocomplete-active":*/
         x[currentFocus].classList.add("autocomplete-active");
     }
 
     function closeAllLists(elmnt) {
         /*close all autocomplete lists in the document,
-         except the one passed as an argument:*/
-
+    except the one passed as an argument:*/
         var x = document.getElementsByClassName("autocomplete-items");
         for (var i = 0; i < x.length; i++) {
-            if (elmnt !== x[i] && elmnt !== inp) {
+            if (elmnt != x[i] && elmnt != inp) {
                 x[i].parentNode.removeChild(x[i]);
             }
         }
@@ -5190,93 +3174,159 @@ function autocomplete(inp, arr) {
 }
 
 /*IDS property list*/
+var idsprop_old = {"clock_edge":"Specifies the clock edge used for implementing registers","repeat":"Repeat a template N number of times",
+                   "counter":"This specifies whether the counter will be incrementing or decrementing","size":"Specifies the size of the template",
+                   "offset":"The value specifies the offset with respect to the container",
+                   "external":"to implement the template outside the generated RTL.",
+                   "variant":"Specifies the name of the Variant that the template is in.",
+                   "ref":"To reference the signals present in other blocks",
+                   "Refvariant":"Specifies the name of the Variant that is referred from the referred file",
+                   "override":"used to override the defines/parameters of the included document with the values of the respective parameters/defines in the current document",
+                   "reg_hw":"Specify the hw access for register","reg_sw":"Specify the sw access for register","reg_default":"Specify the default value for register",
+                   "doc":"Used to add description","addr_sort":"Property to sort the unordered registers",
+                   "display_name":"Property to expand array element with name indexing",
+                   "is_rsv":"Reserves the space in the memory","output_file_name":"Creates the output file in the name assigned to this property",
+                   "vhdl.arch(vhdl.arch)":"Used to change the architecture name of the block/chip",
+                   "vhdl.entity":"Changes the name of the entity in the VHDL output","vhdl.package":"Changes the name of the generated VHDL package",
+                   "module_name":"Changes the name of the module in the verilog output",
+                   "rtl.clock_name(default_clock_name)":"To customize clock name",
+                   "registered":"Indicates whether to register the signal coming into the generated module is from the hardware side. Hardware access must be set to writeable.",
+                   "rb_valid_stages":"Additional register stages to be added to the valid signal (rd_data_valid) on the read back path from the generated block",
+                   "rb_data_stages":"Additional register stages to be added to the data signal (rd_data) on the read back path from the generated block",
+                   "rtl.byte_enable":"To exclude/include bytenable signal in case of Proprietary bus",
+                   "rtl.name_format":"Required for formating of signal.","addr_decode_stages":"Additional register stages to be added to the decode signal",
+                   "wr_stb_stages":"To add the stages in write strobe","rd_stb_stages":"To add the stages in read strobe",
+                   "next":"It describes next input value of field.","buffer_trig":"used to specify a field of any register as a trigger",
+                   "external_intf_stages":"To remove the flops from the external output signal in vhdl",
+                   "cdc.clock":"Add Clock Domain Crossing synchronizers to the field signals",
+                   "we":"To change write enable of specific field.","reg_wprot":"To protect the register from the SW ( AXI bus) side",
+                   "reg_rprot":"To protect the register to read its value from the SW (AXI bus) side",
+                   "reg_prot":"To protect the register  from the SW (APB bus) side",
+                   "sharedextbus":"To configure all external registers to share a common bus",
+                   "rtl.hw_enb":"Create an input enable signal on the hardware interface when the field is HW writable '<reg>_<field>_in_enb'",
+                   "rtl.reg_enb":"Create an output signal '<reg>_enb' on the hardware interface if SW access of the register is writable irrespective of the HW access",
+                   "rtl.precedence":"To prioritize HW/SW for write operation","virtual":"To specify an indirect address map",
+                   "rtl.axi4_prot":"For '0' assignment to protection signals in IDS generated RTL",
+                   "out_enb_stages":"To add the stages in out enb port",
+                   "sw_bit_enable":"Refers the ability to enable write operation to a register/field bits via register/field bits given in the value of property",
+                   "rtl.bit_enable":"Bit enabled addressing refers to ability to read and write to an individual bit field in a register via software bus interface. A 'bitenable' signal is introduced which is a vector of length equal to regwidth",
+                   "byte_addressing":"No description found","avalon_noburst":"To remove bursting from avalon bus.",
+                   "wr_rd_valids":"New property that create write and read valids on register inside external reggroup",
+                   "addressing":"To alignment of address for registers with different register width.",
+                   "counter.incr.val":"This specifies the value by which the counter is incremented",
+                   "counter.decr.val":"This specifies the value by which the counter is decremented",
+                   "counter.incr.sat":"This specifies the value after which the incrementing counter will not  increment",
+                   "counter.decr.sat":"This specifies the value after which the decrementing counter will stop decrementing",
+                   "counter.incr.thld":"Threshold counters are inferred to contain an output which designates whether the counter's value exceeds the threshold.",
+                   "counter.decr.thld":"Threshold counters are inferred to contain an output which designates whether the counter’s value is lower the threshold.",
+                   "counter.sat":"This specifies that the counter is saturated and the saturation by default is 2^(number of bits) if the counter.decr.sat or counter.incr.sat is not specified",
+                   "counter.signal":"This is used to control the increment and decrement events of a counter. It is an Active-High event.",
+                   "counter.sw.wr":"This specifies that the counter is incrementing/decrementing for write operation from SW interface.",
+                   "counter.sw.rd":"This specifies that the counter is incrementing/decrementing for read operation from SW interface.",
+                   "counter.precedence":"This property is used to change the sequence of precedence for all three type of counters.",
+                   "counter.hw.enb":"To specify enable signal for HW write","counter.sw.wr.enb":"To specify enable signal for SW write",
+                   "counter.sw.rd.enb":"To specify enable for SW read",
+                   "intr.in":"intr.in is used to specify name of one or multi bit interrupt input signal that needs to be simply ORed ,not registered in flip flops ",
+                   "intr.out":"intr.out specifies the name of the output interrupt signal,to translate it into RTL",
+                   "intr.status":"Identifies the status register for the interrupt logic","intr.enable":"Identifies the enable register for the interrupt logic",
+                   "intr.irq_bit":"The ORed value of all the interrupt channel after enable control logic can be registered and is stored in a field.Output interrupt signal specified in property intr.out is registered in this field",
+                   "intr.detect":"intr.detect is used to specify the detection circuitry for input interupt signal registered in any of register/field identified as status or pending",
+                   "intr.post":"int.post is used to register software driven interrupts",
+                   "intr.mask":"intr.mask is used to specify the mask register for the interrupt logic",
+                   "halt.enable":"enables the halt signal to propagate to CPU",
+                   "halt.mask":"Halt mask bit corresponding to Status register bit decides that those halt signals will not be allowed to propagate to main halt signal",
+                   "intr.nonsticky":"intr.nonsticky property defines a nonsticky interrupt. The associated interrupt field shall not be locked",
+                   "intr.irq_per_channel":"To generate per channel Interrupt output"
 
-var ids_sw_access = {"a0": "", "a1": "", "ro": "readonly", "wo": "writeonly", "w0t": "write 0 to toggle", "w0c": "write 0 to clear", "ws": "sw write to set", "wc": "sw write to clear",
-    "wcrs": "sw write to clear, sw read to set", "wrs": "sw writable, sw read to set", "wrc": "sw writable, sw read to clear",
-    "w0crs": "sw write zero to clear, sw read to set", "w0src": "sw write to set, sw read to clear", "w1src": "sw write one to set,  sw read to clear",
-    "wsrc": "sw write to set, sw read to clear", "w1crs": "sw write one to clear, sw read to set", "r/wc": "write to clear",
-    "w0s": "write zero to set", "w1s": "write one to set", "w1t": "write one to toggle", "w1c": "write one to clear", "rw": "read writable",
-    "r/w0s": "sw readable, sw write zero to set", "r/w1s": "sw readable, sw write one to set", "r/w1c": "sw readable, sw write one to clear",
-    "r/w0c": "sw readable, sw write zero to clear", "r/wc": "sw readable, sw write to clear", "r/ws": "sw readable, sw write to set",
-    "r/w1t": "sw readable, sw write one to toggle", "r/w0t": "sw readable, sw write zero to toggle", "rc": "", "rs": ""};
+                  };
 
-var ids_hw_access = {"ro": "", "wo": "", "rw": ""};
+var ids_sw_access={"a0":"","a1":"","ro":"readonly","wo":"writeonly","w0t":"write 0 to toggle","w0c":"write 0 to clear","ws":"sw write to set","wc":"sw write to clear",
+                   "wcrs":"sw write to clear, sw read to set","wrs":"sw writable, sw read to set","wrc":"sw writable, sw read to clear",
+                   "w0crs":"sw write zero to clear, sw read to set","w0src":"sw write to set, sw read to clear","w1src":"sw write one to set,  sw read to clear",
+                   "wsrc":"sw write to set, sw read to clear","w1crs":"sw write one to clear, sw read to set","r/wc":"write to clear",
+                   "w0s":"write zero to set","w1s":"write one to set","w1t":"write one to toggle","w1c":"write one to clear","rw":"read writable",
+                   "r/w0s":"sw readable, sw write zero to set","r/w1s":"sw readable, sw write one to set","r/w1c":"sw readable, sw write one to clear",
+                   "r/w0c":"sw readable, sw write zero to clear","r/wc":"sw readable, sw write to clear","r/ws":"sw readable, sw write to set",
+                   "r/w1t":"sw readable, sw write one to toggle","r/w0t":"sw readable, sw write zero to toggle","rc":"","rs":""};
 
-var ids_command_hints = {write: "", call: "", switch : "", wait: "", if : "", for : "", assert: ""};
+var ids_hw_access={"ro":"","wo":"","rw":""};
 
-function bindJSONObj() {
+function bindJSONObj(){
 
-    try {
-        var doc = document.getElementsByClassName("ip")[0];
-        if (doc) {
-            var ip_name = doc.innerText.trim().split(".")[0];
-            var document_name = getDocumentName().replace(".~$", "").split(".")[0];
+    try{
+        var doc=document.getElementsByClassName("ip")[0];
+        if(doc){
+            var ip_name=doc.innerText.trim().split(".")[0];
+            var document_name=getDocumentName().replace(".~$","").split(".")[0];
             var regdiv;
-            if (document_name === ip_name || getDocumentName() === ip_name) {
-                regdiv = document.getElementById("regdivcontainer");
-                var refdiv = document.getElementById("refdiv");
-                if (refdiv) {
-                    refdiv.innerHTML = "";
+            if(document_name==ip_name||getDocumentName()==ip_name){
+                regdiv=document.getElementById("regdivcontainer");
+                var refdiv=document.getElementById("refdiv");
+                if(refdiv){
+                    refdiv.innerHTML="";
                 }
-            } else {
-                regdiv = document.getElementById("refdiv");
+            }
+            else{
+                regdiv=document.getElementById("refdiv");
             }
 
-            regdivcontainer = regdiv;
+            regdivcontainer=regdiv;
 
-            if (regdiv) {
-                var str = {};
-                str = create_reg_arr(regdiv);
-                var steps = document.getElementsByClassName("step");
-                for (var i = 0; i < steps.length; i++) {
-                    autocomplete(steps[i], str);
+            if(regdiv){
+                var str={};
+                str=create_reg_arr(regdiv);
+                var steps=document.getElementsByClassName("step");
+                for(var i=0;i<steps.length;i++){
+                    autocomplete(steps[i],str);
                 }
 
-                var cmdvalue = document.getElementsByClassName("seqvalue");
-                for (var i = 0; i < cmdvalue.length; i++) {
-                    autocomplete(cmdvalue[i], str);
+                var cmdvalue=document.getElementsByClassName("seqvalue");
+                for(var i=0;i<cmdvalue.length;i++){
+                    autocomplete(cmdvalue[i],str);
                 }
             }
         }
-    } catch (e) {
     }
+    catch(e){}
 }
 
-function getCurrentDocumentPath() {
-    var p = getDocumentName().replace(".~$", "").split(".")[0];
-    return p + ".idsng";
+function getCurrentDocumentPath(){
+    var p=getDocumentName().replace(".~$","").split(".")[0];
+    return p+".idsng";
 }
-function create_reg_arr(regdiv) {
-    var ids_temps = regdiv.getElementsByClassName("idsTemp");
-    var str = {};
-    for (var i = 0; i < ids_temps.length; i++) {
-        try {
-            str[ids_temps[i].getElementsByClassName("name")[0].innerText] = ids_temps[i].getElementsByClassName("name")[0].innerText;
-        } catch (e) {
+function create_reg_arr(regdiv){
+    var ids_temps=regdiv.getElementsByClassName("idsTemp");
+    var str={};
+    for(var i=0; i<ids_temps.length;i++){
+        try{
+            str[ids_temps[i].getElementsByClassName("name")[0].innerText]=ids_temps[i].getElementsByClassName("name")[0].innerText;
+        }
+        catch(e){
         }
     }
 
     return str;
 }
 
-function get_section_reglist(section, refele) {
+function get_section_reglist(section,refele){
     console.log("call section");
-    var tab_list = refele.getElementsByClassName("idsTemp");
-    var reg_list = [];
-    var start_reg = false;
+    var tab_list=refele.getElementsByClassName("idsTemp");
+    var reg_list=[];
+    var start_reg=false;
     var clss;
     /*iterate on every idstemplate table*/
-    for (var i = 0; i < tab_list.length; i++) {
+    for(var i=0;i<tab_list.length;i++){
         /*get the requested table*/
-        if (tab_list[i].getAttribute("id") === section.getAttribute("id")) {
-            start_reg = true;
+        if(tab_list[i].getAttribute("id")==section.getAttribute("id")){
+            start_reg=true;
             continue;
         }
-        if (start_reg) {
-            clss = tab_list[i].getAttribute("class").split(" ")[0];
-            if (clss === "endreggroup") {
+        if(start_reg){
+            clss=tab_list[i].getAttribute("class").split(" ")[0];
+            if(clss=="endreggroup"){
                 break;
-            } else if (clss === "reg") {
+            }
+            else if(clss=="reg"){
                 reg_list.push(tab_list[i].getElementsByClassName("name")[0]);
             }
         }
@@ -5284,30 +3334,33 @@ function get_section_reglist(section, refele) {
     return reg_list;
 }
 
-function get_block_reglist(block, refele) {
-    var tab_list = refele.getElementsByClassName("idsTemp");
-    var reg_list = [];
-    var start_reg = false;
-    var isreg_group_found = false;
+function get_block_reglist(block,refele){
+    var tab_list=refele.getElementsByClassName("idsTemp");
+    var reg_list=[];
+    var start_reg=false;
+    var isreg_group_found=false;
     var clss;
     /*iterate on every idstemplate table*/
-    for (var i = 0; i < tab_list.length; i++) {
+    for(var i=0;i<tab_list.length;i++){
         /*get the requested table*/
-        if (tab_list[i].getAttribute("id") === block.getAttribute("id")) {
-            start_reg = true;
+        if(tab_list[i].getAttribute("id")==block.getAttribute("id")){
+            start_reg=true;
             continue;
         }
-        if (start_reg) {
-            clss = tab_list[i].getAttribute("class").split(" ")[0];
-            if (clss === "block") {
+        if(start_reg){
+            clss=tab_list[i].getAttribute("class").split(" ")[0];
+            if(clss=="block"){
                 break;
-            } else if (clss === "section") {
+            }
+            else if(clss=="section"){
                 reg_list.push(tab_list[i].getElementsByClassName("name")[0]);
-                isreg_group_found = true;
-            } else if (clss === "endreggroup") {
-                isreg_group_found = false;
-            } else if (clss === "reg") {
-                if (!isreg_group_found) {
+                isreg_group_found=true;
+            }
+            else if(clss=="endreggroup"){
+                isreg_group_found=false;
+            }
+            else if(clss=="reg"){
+                if(!isreg_group_found){
                     /*console.log("--regname="+tab_list[i].getElementsByClassName("name")[0].innerText);*/
                     reg_list.push(tab_list[i].getElementsByClassName("name")[0]);
                 }
@@ -5317,22 +3370,22 @@ function get_block_reglist(block, refele) {
     return reg_list;
 }
 
-function get_chip_blocklist(block, refele) {
-    var tab_list = refele.getElementsByClassName("idsTemp");
-    var reg_list = [];
-    var start_reg = false;
+function get_chip_blocklist(block,refele){
+    var tab_list=refele.getElementsByClassName("idsTemp");
+    var reg_list=[];
+    var start_reg=false;
     /*iterate on every idstemplate table*/
-    for (var i = 0; i < tab_list.length; i++) {
+    for(var i=0;i<tab_list.length;i++){
         /*get the requested table*/
-        if (tab_list[i].getAttribute("id") === block.getAttribute("id")) {
-            start_reg = true;
+        if(tab_list[i].getAttribute("id")==block.getAttribute("id")){
+            start_reg=true;
             continue;
         }
-        if (start_reg) {
-            if (tab_list[i].getAttribute("class").split(" ")[0] === "chip") {
+        if(start_reg){
+            if(tab_list[i].getAttribute("class").split(" ")[0]=="chip"){
                 break;
             }
-            if (tab_list[i].getAttribute("class").split(" ")[0] === "block") {
+            if(tab_list[i].getAttribute("class").split(" ")[0]=="block"){
                 /*console.log("--regname="+tab_list[i].getElementsByClassName("name")[0].innerText);*/
                 reg_list.push(tab_list[i].getElementsByClassName("name")[0]);
             }
@@ -5341,35 +3394,34 @@ function get_chip_blocklist(block, refele) {
     return reg_list;
 }
 
-function getDocumentName() {
+function getDocumentName(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
     return page;
 }
 
-function load_ips(obj) {
-    try {
-        var refelement = document.getElementById("refdiv");
-        if (refelement) {
+function load_ips(obj){
+    try{
+        var refelement=document.getElementById("refdiv");
+        if(refelement){
             refelement.parentElement.removeChild(refelement);
             console.log("--ref element deleted !");
         }
-    } catch (e) {
-        console.log("Err load_ips : " + e.message);
+    }
+    catch(e){
+        console.log("Err load_ips : "+e.message);
     }
 
 
-    var ip_name = obj.innerText.trim();
-    var document_name = getDocumentName().split(".")[0];
-    if (document_name === ip_name || getDocumentName() === ip_name) {
+    var ip_name=obj.innerText.trim();
+    var document_name=getDocumentName().split(".")[0];
+    if(document_name==ip_name||getDocumentName()==ip_name){
         /*regdivcontainer=document.getElementById("regdivcontainer");*/
         bindJSONObj();
-    } else {
-        try {
-            clickController.getRegIPs(ip_name);
-            bindJSONObj();
-        } catch (e) {
-        }
+    }
+    else{
+        var getReg=clickController.getRegIPs(ip_name);
+        bindJSONObj();
     }
 
 }
@@ -5379,47 +3431,78 @@ var regdivcontainer;
 
 /*****************************************Excel work starts from here*******************************************************/
 
-
-function spreadsheetKeyEventHandler() {
+function dotheneedful(sibling,start) {
+    if (sibling != null) {
+        console.log("--dothe needfull");
+        start.focus();		
+        sibling.focus();
+        start = sibling;
+    }
 }
 
-function getAlphabetsForColumn(index) {
-    var alphas = alphabets.split('');
+function spreadsheetKeyEventHandler(e) {
+    /*console.log("key handler call");
+    e = e || window.event;
+    var start= event.target || event.srcElement;
+    console.log("start : "+start.nodeName);
+    if (e.keyCode == '38') {
+        // up arrow
+        var idx = start.cellIndex;
+        var nextrow = start.parentElement.previousElementSibling;
+        if (nextrow != null) {
+            var sibling = nextrow.cells[idx];
+            dotheneedful(sibling,start);
+        }
+    } else if (e.keyCode == '40') {
+        // down arrow
+        var idx = start.cellIndex;
+        var nextrow = start.parentElement.nextElementSibling;
+        if (nextrow != null) {
+            var sibling = nextrow.cells[idx];
+            dotheneedful(sibling,start);
+        }
+    } 
+    */
+}
 
-    var num = index;
-    var finalAlpa = "";
-    while (num > -1) {
-        if (num > 24) {
-            finalAlpa = finalAlpa + alphas[0];
-            num = num - 25;
-        } else {
-            finalAlpa = finalAlpa + alphas[num];
-            num = -1;
+function getAlphabetsForColumn(index){
+    var alphas=alphabets.split('');
+
+    var num=index;
+    var finalAlpa="";
+    while(num>-1){
+        if(num>24){
+            finalAlpa=finalAlpa+alphas[0];
+            num=num-25;
+        }else{
+            finalAlpa=finalAlpa+alphas[num];
+            num=-1;
         }
     }
     return finalAlpa;
 }
 
-function insertcolright() {
+function insertcolright(obj){
     addIntoHistory();
-    while (clickedEl.tagName.toUpperCase() !== "TD") {
+    while(clickedEl.tagName.toUpperCase() !== "TD") {
         clickedEl = clickedEl.parentNode;
     }
-    var col_num = clickedEl.cellIndex;
-    while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+    var col_num=clickedEl.cellIndex;
+    while(clickedEl.tagName.toUpperCase() !== "TABLE") {
         clickedEl = clickedEl.parentNode;
     }
-    var table = clickedEl;
+    var table=clickedEl;
 
-    var rows = table.getElementsByTagName("tr");
+    var rows=table.getElementsByTagName("tr");
 
-    for (var i = 0; i < rows.length; i++) {
+    for(var i=0;i<rows.length;i++){
         var newEl = document.createElement('td');
 
-        if (i === 0) {
+        if(i==0){
             newEl.innerHTML = '<div class="col"></div>';
-        } else {
-            newEl.setAttribute("tabindex", "0");
+        }
+        else{
+            newEl.setAttribute("tabindex","0");
         }
         table.rows[i].cells[col_num].after(newEl);
     }
@@ -5427,232 +3510,236 @@ function insertcolright() {
     addIntoHistory();
 }
 
-function insertrowbelow() {
+function insertrowbelow(obj){
     addIntoHistory();
-    while (clickedEl.tagName.toUpperCase() !== "TR") {
+    while(clickedEl.tagName.toUpperCase() !== "TR") {
         clickedEl = clickedEl.parentNode;
     }
-    var tabrow = clickedEl;
+    var tabrow=clickedEl;
 
-    while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+    while(clickedEl.tagName.toUpperCase() !== "TABLE") {
         clickedEl = clickedEl.parentNode;
     }
-    var table = clickedEl;
-    var row_num = tabrow.rowIndex;
+    var table=clickedEl;
+    var row_num=tabrow.rowIndex;
 
-    var row = table.insertRow(row_num + 1);
-    row.setAttribute('class', 'edited');
-    row.setAttribute('id', "tab" + Math.random());
-    var col_count = table.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
+    var row = table.insertRow(row_num+1);
+    row.setAttribute('class','edited');
+    row.setAttribute('id',"tab"+Math.random());
+    var col_count=table.getElementsByTagName("tr")[0].getElementsByTagName("td").length;
     var cell;
-    for (var i = 0; i < col_count; i++) {
-        cell = row.insertCell(i);
-        if (i === 0) {
-            cell.setAttribute("class", "leftheader");
-        } else {
-            cell.setAttribute("tabindex", "0");
+    for(var i=0;i<col_count;i++){
+        cell=row.insertCell(i);
+        if(i==0){
+            cell.setAttribute("class","leftheader");			 
+        }
+        else{
+            cell.setAttribute("tabindex","0");			
         }
     }
     reArrangeRowNum(table);
     addIntoHistory();
 }
 
-function reArrangeRowNum(table) {
-    var row = table.getElementsByClassName("leftheader");
-    for (var i = 0; i < row.length; i++) {
-        row[i].innerHTML = i + 1;
+function reArrangeRowNum(table){
+    var row=table.getElementsByClassName("leftheader");
+    for(var i=0;i<row.length;i++){
+        row[i].innerHTML=i+1;
     }
 }
 
-function reArrangeColNum(table) {
-    var col = table.rows[0].getElementsByTagName("td");
-    for (var i = 1; i < col.length; i++) {
-        col[i].innerHTML = getAlphabetsForColumn(i - 1);
+function reArrangeColNum(table){
+    var col=table.rows[0].getElementsByTagName("td");
+    for(var i=1;i<col.length;i++){
+        col[i].innerHTML=getAlphabetsForColumn(i-1);
     }
 }
 
-var excellastselect = document.createElement("div");
+var excellastselect=document.createElement("div");
 
 function insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-var iscopy = true;
-var row_copy_req = true;
-var copycolele = null;
-function cutrow(obj) {
-    iscopy = false;
+var iscopy=true;
+var row_copy_req=true;
+var copycolele=null;
+function cutrow(obj){
+    iscopy=false;
 }
 
-function copyrow_org(obj) {
-    row_copy_req = true;
+function copyrow_org(obj){
+    row_copy_req=true;
     /*copyrow=true;
-     while(clickedEl.tagName.toUpperCase() !== "TR") {
-     clickedEl = clickedEl.parentNode;
-     }
-     excellastselect=clickedEl.outerHTML;
-     */
-    excellastselect.innerHTML = "";
-    while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+	while(clickedEl.tagName.toUpperCase() !== "TR") {
+		clickedEl = clickedEl.parentNode;
+	}
+	excellastselect=clickedEl.outerHTML;
+	*/
+    excellastselect.innerHTML="";
+    while(clickedEl.tagName.toUpperCase() !== "TABLE") {
         clickedEl = clickedEl.parentNode;
     }
-    var table = clickedEl;
+    var table=clickedEl;
 
-    var tempTable = document.createElement("table");
-    for (var i = 0; i < selected_rows.length; i++) {
-        var tempRow = tempTable.insertRow(i);
-        tempRow.innerHTML = table.rows[selected_rows[i]].outerHTML;
+    var tempTable=document.createElement("table");
+    for(var i=0;i<selected_rows.length;i++){
+        var tempRow=tempTable.insertRow(i);
+        tempRow.innerHTML=table.rows[selected_rows[i]].outerHTML;
     }
     excellastselect.appendChild(tempTable);
 }
 
-function copyrow_org(obj) {
-    row_copy_req = true;
+function copyrow_org(obj){
+    row_copy_req=true;
     /*copyrow=true;
-     while(clickedEl.tagName.toUpperCase() !== "TR") {
-     clickedEl = clickedEl.parentNode;
-     }
-     excellastselect=clickedEl.outerHTML;
-     */
-    excellastselect.innerHTML = "";
-    while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+	while(clickedEl.tagName.toUpperCase() !== "TR") {
+		clickedEl = clickedEl.parentNode;
+	}
+	excellastselect=clickedEl.outerHTML;
+	*/
+    excellastselect.innerHTML="";
+    while(clickedEl.tagName.toUpperCase() !== "TABLE") {
         clickedEl = clickedEl.parentNode;
     }
-    var table = clickedEl;
+    var table=clickedEl;
 
-    var tempTable = document.createElement("table");
+    var tempTable=document.createElement("table");
     var selection = window.getSelection();
-    for (var i = 0; i < selected_rows.length; i++) {
-        var tempRow = tempTable.insertRow(i);
-        tempRow.innerHTML = table.rows[selected_rows[i]].outerHTML;
+    for(var i=0;i<selected_rows.length;i++){
+        var tempRow=tempTable.insertRow(i);
+        tempRow.innerHTML=table.rows[selected_rows[i]].outerHTML;
     }
     excellastselect.appendChild(tempTable);
 }
 
-var copiedrows = null;
-var iscopy = false;
-function copyrow(obj) {
-    row_copy_req = true;
-    if (copiedrows) {
-        iscopy = true;
+var copiedrows=null;
+var iscopy=false;
+function copyrow(obj){
+    row_copy_req=true;
+    if(copiedrows){
+        iscopy=true;
     }
-    SELECTED_ROW = SELECTED_ROW_TEMP;
+    SELECTED_ROW=SELECTED_ROW_TEMP;
     //SELECTED_SINGLE_ROW=SELECTED_SINGLE_ROW_TEMP;
 }
 
-function copycolumn(obj) {
-    row_copy_req = false;
-    while (clickedEl.tagName.toUpperCase() !== "TD") {
+function copycolumn(obj){
+    row_copy_req=false;
+    while(clickedEl.tagName.toUpperCase() !== "TD") {
         clickedEl = clickedEl.parentNode;
     }
-    var cellindex = clickedEl.cellIndex;
+    var cellindex=clickedEl.cellIndex;
 
 
-    while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+    while(clickedEl.tagName.toUpperCase() !== "TABLE") {
         clickedEl = clickedEl.parentNode;
     }
-    var table = clickedEl;
-    var rows = table.rows;
+    var table=clickedEl;
+    var rows=table.rows;
 
-    var temprow = document.createElement("tr");
+    var temprow=document.createElement("tr");
 
-    for (var i = 0; i < rows.length; i++) {
-        var tempcol = temprow.insertCell(i);
-        tempcol.innerHTML = rows[i].cells[cellindex].innerHTML;
+    for(var i=0;i<rows.length;i++){
+        var tempcol=temprow.insertCell(i);
+        tempcol.innerHTML=rows[i].cells[cellindex].innerHTML;
 
-        if (i > 0) {
-            tempcol.setAttribute("tabindex", "0");
+        if(i>0){
+            tempcol.setAttribute("tabindex","0");
         }
     }
-    copycolele = temprow;
-    console.log("--tempcol=" + temprow.outerHTML);
+    copycolele=temprow;
+    console.log("--tempcol="+temprow.outerHTML);
 }
 
-function copyexcelrow() {
-    try
+function copyexcelrow(){
+    try 
     {
-        iscopy = true;
+        iscopy=true;
         //var table = document.getElementById(tableID);
-        var isrowdelete = false;
+        var isrowdelete=false;
         var rowCount = table.rows.length;
-        for (var i = 0; i < rowCount; i++)
+        for(var i=0; i<rowCount; i++) 
         {
-            var row = table.rows[i];
+            var row    = table.rows[i];
             var chkbox = row.cells[0].getElementsByTagName("input")[0];
-            if (null !== chkbox && true === chkbox.checked)
+            if(null != chkbox && true == chkbox.checked) 
             {
-                var count = excelcount;
-                var c = parseInt(count) - parseInt(1);
-                if (rowCount <= 1)
+                var count =excelcount;
+                var c = parseInt(count)-parseInt(1); 
+                if(rowCount <= 1) 
                 {
-                    alert(msg_cannot_del_row);
+                    alert("Cannot delete all the rows.");
                     break;
                 }
                 table.deleteRow(i);
                 rowCount--;
                 i--;
-                excelcount = c;
-                isrowdelete = true;
+                excelcount=c;
+                isrowdelete=true;
                 /*$('#count').val(c);*/
             }
         }
         return isrowdelete;
-    } catch (e)
+    }
+    catch(e)
     {
         alert(e);
     }
     return isrowdelete;
 }
 
-function pasterow_org(obj) {
+function pasterow_org(obj){
     addIntoHistory();
-    if (row_copy_req) {
-        if (excellastselect) {
+    if(row_copy_req){
+        if(excellastselect){
 
-            while (clickedEl.tagName.toUpperCase() !== "TR") {
+            while(clickedEl.tagName.toUpperCase() !== "TR") {
                 clickedEl = clickedEl.parentNode;
             }
-            var rowindex = clickedEl.rowIndex;
-            while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+            var rowindex=clickedEl.rowIndex;
+            while(clickedEl.tagName.toUpperCase() !== "TABLE") {
                 clickedEl = clickedEl.parentNode;
             }
-            var table = clickedEl;
+            var table=clickedEl;
 
             var rowCount = table.rows.length;
-            var deleteCount = 0;
-            var index = 0;
-            var copiedRows = excellastselect.getElementsByTagName("table")[0].rows;
+            var deleteCount=0;
+            var index=0;
+            var copiedRows=excellastselect.getElementsByTagName("table")[0].rows;
 
-            for (var i = copiedRows.length - 1; i >= 0; i--) {
-                var curRow = table.insertRow(rowindex + 1);
-                curRow.innerHTML = copiedRows[i].innerHTML;
-                curRow.setAttribute("id", "row" + Math.random());
+            for(var i=copiedRows.length-1;i>=0;i--){
+                var curRow=table.insertRow(rowindex+1);
+                curRow.innerHTML=copiedRows[i].innerHTML;
+                curRow.setAttribute("id","row"+Math.random());
             }
 
             reArrangeRowNum(table);
-            excellastselect.innerHTML = "";
+            excellastselect.innerHTML="";
         }
-    } else {
-        while (clickedEl.tagName.toUpperCase() !== "TD") {
+    }
+    else {
+        while(clickedEl.tagName.toUpperCase() !== "TD") {
             clickedEl = clickedEl.parentNode;
         }
-        var col_num = clickedEl.cellIndex;
-        while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+        var col_num=clickedEl.cellIndex;
+        while(clickedEl.tagName.toUpperCase() !== "TABLE") {
             clickedEl = clickedEl.parentNode;
         }
-        var table = clickedEl;
+        var table=clickedEl;
 
-        var rows = table.getElementsByTagName("tr");
-        if (copycolele) {
-            for (var i = 0; i < rows.length; i++) {
+        var rows=table.getElementsByTagName("tr");
+        if(copycolele){
+            for(var i=0;i<rows.length;i++){
                 var newEl = document.createElement('td');
 
-                if (i == 0) {
+                if(i==0){
                     //newEl.innerHTML = '<div class="col"><input tabindex="-1" class="cellrb" name="col" type="radio"></div>';
-                } else {
-                    newEl.setAttribute("tabindex", "0");
                 }
-                newEl.innerHTML = copycolele.cells[i].innerHTML;
+                else{
+                    newEl.setAttribute("tabindex","0");
+                }
+                newEl.innerHTML=copycolele.cells[i].innerHTML;
                 table.rows[i].cells[col_num].after(newEl);
 
             }
@@ -5661,77 +3748,79 @@ function pasterow_org(obj) {
     addIntoHistory();
 }
 
-function pasterow(obj) {
+function pasterow(obj){
     addIntoHistory();
-    if (row_copy_req) {
-        while (clickedEl.tagName.toUpperCase() !== "TR") {
+    if(row_copy_req){
+        while(clickedEl.tagName.toUpperCase() !== "TR") {
             clickedEl = clickedEl.parentNode;
         }
-        var rowindex = clickedEl.rowIndex;
+        var rowindex=clickedEl.rowIndex;
 
-        while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+        while(clickedEl.tagName.toUpperCase() !== "TABLE") {
             clickedEl = clickedEl.parentNode;
         }
-        var table = clickedEl;
+        var table=clickedEl;
 
-        var spreadrowlist = document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
+        var spreadrowlist=document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
 
         var newrow;
-        if (SELECTED_ROW.length > 0) {
+        if(SELECTED_ROW.length>0){
             var curr_row;
-            for (var i = 0; i < SELECTED_ROW.length; i++) {
-                try {
-                    var sel_row = SELECTED_ROW[i];
+            for(var i=0;i<SELECTED_ROW.length;i++){
+                try{
+                    var sel_row=SELECTED_ROW[i];
 
-                    for (var j = 0; j < spreadrowlist.length; j++) {//we have to iterate on every row of spreadsheet table, to get row object by id becouse id search only on document level and we have same id in spreadsheet and doc
-                        var spreadlist = spreadrowlist[j].getAttribute("id");
+                    for(var j=0;j<spreadrowlist.length;j++){//we have to iterate on every row of spreadsheet table, to get row object by id becouse id search only on document level and we have same id in spreadsheet and doc 
+                        var spreadlist=spreadrowlist[j].getAttribute("id");
 
-                        if (spreadlist && sel_row) {
-                            if (spreadlist === sel_row) {
-                                curr_row = spreadrowlist[j];
+                        if(spreadlist&&sel_row){
+                            if(spreadlist==sel_row){
+                                curr_row=spreadrowlist[j];
                                 break;
                             }
                         }
                     }
-                    if (curr_row) {
-                        newrow = curr_row.cloneNode(true);
-                        newrow.setAttribute("id", "row" + Math.random());
-                        curr_row.parentNode.insertBefore(newrow, table.rows[rowindex].nextSibling);
+                    if(curr_row){
+                        newrow=curr_row.cloneNode(true);
+                        newrow.setAttribute("id","row"+Math.random());
+                        curr_row.parentNode.insertBefore(newrow,table.rows[rowindex].nextSibling);
                         rowindex++;
-                    }
-                } catch (e) {
-                    console.log("Error (copy multiple row) : " + e.message);
+                    }                
+                }
+                catch(e){
+                    console.log("Error (copy multiple row) : "+e.message);
                 }
             }
         }
         /*else if(SELECTED_SINGLE_ROW){
-         console.log("--single row : "+SELECTED_SINGLE_ROW.getAttribute("id"));
-         }*/
+        console.log("--single row : "+SELECTED_SINGLE_ROW.getAttribute("id"));
+    }*/
 
 
         reArrangeRowNum(table);
-        iscopy = false;
-    } else {
-        while (clickedEl.tagName.toUpperCase() !== "TD") {
+        iscopy=false;
+    }else{
+        while(clickedEl.tagName.toUpperCase() !== "TD") {
             clickedEl = clickedEl.parentNode;
         }
-        var col_num = clickedEl.cellIndex;
-        while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+        var col_num=clickedEl.cellIndex;
+        while(clickedEl.tagName.toUpperCase() !== "TABLE") {
             clickedEl = clickedEl.parentNode;
         }
-        var table = clickedEl;
+        var table=clickedEl;
 
-        var rows = table.getElementsByTagName("tr");
-        if (copycolele) {
-            for (var i = 0; i < rows.length; i++) {
+        var rows=table.getElementsByTagName("tr");
+        if(copycolele){
+            for(var i=0;i<rows.length;i++){
                 var newEl = document.createElement('td');
 
-                if (i === 0) {
+                if(i==0){
                     //newEl.innerHTML = '<div class="col"><input tabindex="-1" class="cellrb" name="col" type="radio"></div>';
-                } else {
-                    newEl.setAttribute("tabindex", "0");
                 }
-                newEl.innerHTML = copycolele.cells[i].innerHTML;
+                else{
+                    newEl.setAttribute("tabindex","0");
+                }
+                newEl.innerHTML=copycolele.cells[i].innerHTML;
                 table.rows[i].cells[col_num].after(newEl);
 
             }
@@ -5741,30 +3830,30 @@ function pasterow(obj) {
     //}
 }
 
-function pasteMultipleRows(table, curr_index) {
-    try
+function pasteMultipleRows(table,curr_index){
+    try 
     {
         addIntoHistory();
-        var isrowdelete = false;
+        var isrowdelete=false;
         var rowCount = table.rows.length;
-        for (var i = rowCount - 1; i >= 0; i--)
+        for(var i=rowCount-1; i>=0; i--) 
         {
-            try {
-                var row = table.rows[i];
+            try{
+                var row    = table.rows[i];
 
                 var chkbox = row.cells[0].getElementsByTagName("input")[0];
-                if (null != chkbox && true === chkbox.checked)
+                if(null != chkbox && true == chkbox.checked) 
                 {
 
-                    var row2 = table.insertRow(curr_index + 1);
-                    row2.innerHTML = row.innerHTML;
-                    isrowdelete = true;
+                    var row2=table.insertRow(curr_index+1);
+                    row2.innerHTML=row.innerHTML;
+                    isrowdelete=true;
                 }
-            } catch (ee) {
-            }
+            }catch(ee){}
         }
         return isrowdelete;
-    } catch (e)
+    }
+    catch(e)
     {
         console.log(e);
     }
@@ -5772,233 +3861,214 @@ function pasteMultipleRows(table, curr_index) {
     return isrowdelete;
 }
 
-function deleterow(obj) {
+function deleterow(obj){
     addIntoHistory();
-    var spreadrowlist = document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
+    var spreadrowlist=document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].getElementsByTagName("tr");
 
-    for (var i = 0; i < SELECTED_ROW_TEMP.length; i++) {
-        try {
-            var delid = SELECTED_ROW_TEMP[i];
+    for(var i=0;i<SELECTED_ROW_TEMP.length;i++){
+        try{
+            var delid=SELECTED_ROW_TEMP[i];
             document.getElementById(SELECTED_ROW_TEMP[i]).remove();
 
 
-            for (var j = 0; j < spreadrowlist.length; j++) {//we have to iterate on every row of spreadsheet table, to get row object by id becouse id search only on document level and we have same id in spreadsheet and doc
-                var spreadlist = spreadrowlist[j].getAttribute("id");
-                var sel_row = SELECTED_ROW_TEMP[i];
-                if (spreadlist && sel_row && (spreadlist === sel_row)) {
+            for(var j=0;j<spreadrowlist.length;j++){//we have to iterate on every row of spreadsheet table, to get row object by id becouse id search only on document level and we have same id in spreadsheet and doc 
+                var spreadlist=spreadrowlist[j].getAttribute("id");
+                var sel_row=SELECTED_ROW_TEMP[i];
+                if(spreadlist&&sel_row&&(spreadlist==sel_row)){
                     spreadrowlist[j].remove();
                     break;
                 }
             }
-            if (curr_row) {
-                newrow = curr_row.cloneNode(true);
-                newrow.setAttribute("id", "row" + Math.random());
-                curr_row.parentNode.insertBefore(newrow, table.rows[rowindex].nextSibling);
+            if(curr_row){
+                newrow=curr_row.cloneNode(true);
+                newrow.setAttribute("id","row"+Math.random());
+                curr_row.parentNode.insertBefore(newrow,table.rows[rowindex].nextSibling);
                 rowindex++;
-            }
+            }    
 
-        } catch (e) {
-            console.log("Error (copy multiple row) : " + e.message);
+        }
+        catch(e){
+            console.log("Error (copy multiple row) : "+e.message);
         }
     }
 
     /*while(clickedEl.tagName.toUpperCase() !== "TABLE") {
-     clickedEl = clickedEl.parentNode;
-     }
-     var table=clickedEl;
-     
-     var rowCount = table.rows.length;
-     var deleteCount=0;
-     var index=0;
-     for(var i=0;i<selected_rows.length;i++){
-     index=selected_rows[i]-deleteCount;
-     table.deleteRow(index);
-     deleteCount++;
-     }
-     */
+        clickedEl = clickedEl.parentNode;
+    }
+    var table=clickedEl;
+
+    var rowCount = table.rows.length;
+    var deleteCount=0;
+    var index=0;
+    for(var i=0;i<selected_rows.length;i++){
+        index=selected_rows[i]-deleteCount;
+        table.deleteRow(index);
+        deleteCount++;
+    }
+    */
     reArrangeRowNum(table);
     addIntoHistory();
 }
 
 
-function deletecolumn(obj) {
+function deletecolumn(obj){
     addIntoHistory();
-    while (clickedEl.tagName.toUpperCase() !== "TD") {
+    while(clickedEl.tagName.toUpperCase() !== "TD") {
         clickedEl = clickedEl.parentNode;
     }
-    var tabcell = clickedEl;
+    var tabcell=clickedEl;
 
 
-    while (clickedEl.tagName.toUpperCase() !== "TABLE") {
+    while(clickedEl.tagName.toUpperCase() !== "TABLE") {
         clickedEl = clickedEl.parentNode;
     }
-    var table = clickedEl;
-    var exelrows = table.rows;
-    var rows = table.rows;
-    var cellindex = tabcell.cellIndex;
-    for (var i = 0; i < rows.length; i++) {
+    var table=clickedEl;
+    var exelrows=table.rows;
+    var rows=table.rows;
+    var cellindex=tabcell.cellIndex;
+    for(var i=0;i<rows.length;i++){
         rows[i].deleteCell(cellindex);
     }
     reArrangeColNum(table);
     addIntoHistory();
 }
 
-function getHTMLOfSelection() {
+function getHTMLOfSelection () {
     var range;
     if (document.selection && document.selection.createRange) {
         range = document.selection.createRange();
         return range.htmlText;
-    } else if (window.getSelection) {
+    }
+    else if (window.getSelection) {
         var selection = window.getSelection();
         if (selection.rangeCount > 0) {
             range = selection.getRangeAt(0);
             var clonedSelection = range.cloneContents();
-            SELECTED_ROW_TEMP = [];
-            for (var i = 0; i < clonedSelection.childNodes.length; i++) {
-                try {
+            SELECTED_ROW_TEMP=[];
+            for(var i=0;i<clonedSelection.childNodes.length;i++){
+                try{
                     SELECTED_ROW_TEMP.push(clonedSelection.childNodes[i].getAttribute("id"));
-                } catch (e) {
-                    console.log("error in map : " + e.message);
+                }catch(e){
+                    console.log("error in map : "+e.message);
                 }
             }
             var div = document.createElement('div');
             div.appendChild(clonedSelection);
             return div.innerHTML;
-        } else {
+        }
+        else {
             return '';
         }
-    } else {
+    }
+    else {
         return '';
     }
 }
 
-var SELECTED_ROW = [];
-var SELECTED_ROW_TEMP = [];
+var SELECTED_ROW=[];
+var SELECTED_ROW_TEMP=[];
 //var SELECTED_SINGLE_ROW;
 //
 //var SELECTED_SINGLE_ROW_TEMP;
 
-function openexcelmenu(event) {
+function openexcelmenu(event){
     event.preventDefault();
-    var temp = getHTMLOfSelection();
-    var cell = event.target;
-    while (cell.tagName.toUpperCase() !== "TR") {
+    var temp=getHTMLOfSelection();
+    var cell=event.target;
+    while(cell.tagName.toUpperCase() !== "TR") {
         cell = cell.parentNode;
     }
-    if ($.inArray(cell.getAttribute("id"), SELECTED_ROW_TEMP) < 0) {
+    if($.inArray(cell.getAttribute("id"),SELECTED_ROW_TEMP)<0){
         SELECTED_ROW_TEMP.push(cell.getAttribute("id"));
-    }
-    var x = event.pageX;
-    var y = event.pageY;
-    $('#excelmenu').css({'display': 'block', 'left': x, 'top': y});
+    }  
+    var x=event.pageX;
+    var y=event.pageY;
+    $('#excelmenu').css({'display':'block','left':x,'top':y});
 
 }
 
-function openregmenu(event) {
-    try {
-        var tab = event.target.parentNode;
-        while (tab.tagName.toUpperCase() !== "TABLE") {
-            tab = tab.parentNode;
-        }
-        if (tab.classList.contains("custom_table")) {
-            return false;
-        }
-    } catch (e) {
-
-    }
-    event.stopPropagation();
+function openregmenu(event){
     event.preventDefault();
-    var x = event.pageX;
-    var y = event.pageY;
-    $('#regmenu').css({'display': 'block', 'left': x, 'top': y});
-    curr_row_obj = event.target.parentNode;
+    var x=event.pageX;
+    var y=event.pageY;
+    $('#regmenu').css({'display':'block','left':x,'top':y});
+    curr_row_obj=event.target.parentNode;
 }
 
-function maincontextcall() {
-    $('#regmenuparam').css({'display': 'none'});
-}
-
-function openparamregmenu(event) {
-    event.preventDefault();
-    var x = event.pageX;
-    var y = event.pageY;
-    $('#regmenuparam').css({'display': 'block', 'left': x, 'top': y});
-    curr_row_obj = event.target.parentNode;
-}
-
-function openseqmenu(event) {
+function openseqmenu(event){
     var seqcls;
 
-    var obj = event.target;
-    while (obj.tagName.toUpperCase() !== "TABLE") {
-        obj = obj.parentNode;
+    var obj=event.target;
+    while(obj.tagName.toUpperCase()!="TABLE"){
+        obj=obj.parentNode;
     }
 
 
-    var clslist = obj.classList;
+    var clslist=obj.classList;
 
-    if (clslist.contains("command")) {
-        seqcls = "command";
-    } else if (clslist.contains("var")) {
-        seqcls = "var";
+    if(clslist.contains("command")){
+        seqcls="command";
     }
-    if (clslist.contains("const")) {
-        seqcls = "const";
+    else if(clslist.contains("var")){
+        seqcls="var";
     }
-    if (clslist.contains("arg")) {
-        seqcls = "arg";
+    if(clslist.contains("const")){
+        seqcls="const";
+    }
+    if(clslist.contains("arg")){
+        seqcls="arg";
     }
 
-    if (seqcls) {
+    if(seqcls){
         event.preventDefault();
-        var x = event.pageX;
-        var y = event.pageY;
-        $('#seqmenu').css({'display': 'block', 'left': x, 'top': y});
-        curr_row_obj = event.target.parentNode;
+        var x=event.pageX;
+        var y=event.pageY;
+        $('#seqmenu').css({'display':'block','left':x,'top':y});
+        curr_row_obj=event.target.parentNode;
     }
 }
 
-function hidetemplate() {
-    document.getElementById("exceltemplate").style.display = "none";
-    $("#backhidder").css("z-index", "-1")
+function hidetemplate(){
+    document.getElementById("exceltemplate").style.display="none";
+    $("#backhidder").css("z-index","-1")
 }
 
-function showTemplate() {
-    document.getElementById("exceltemplate").style.display = "block";
-    $("#backhidder").css("z-index", "0");
+function showTemplate(){
+    document.getElementById("exceltemplate").style.display="block";
+    $("#backhidder").css("z-index","0");
 }
 
-function deletetemprow(row) {
-    var rowindex = row.parentNode.parentNode.rowIndex;
-    while (row.tagName.toUpperCase() !== "TABLE") {
+function deletetemprow(row){
+    var rowindex=row.parentNode.parentNode.rowIndex;
+    while(row.tagName.toUpperCase() !== "TABLE") {
         row = row.parentNode;
     }
     row.deleteRow(rowindex);
 }
 
-function addtemprow(row) {
-    var rowindex = row.parentNode.parentNode.rowIndex;
-    while (row.tagName.toUpperCase() !== "TABLE") {
+function addtemprow(row){
+    var rowindex=row.parentNode.parentNode.rowIndex;
+    while(row.tagName.toUpperCase() !== "TABLE") {
         row = row.parentNode;
     }
 
-    var table = row;
+    var table=row;
 
-    var newrow = table.insertRow(parseInt(rowindex + 1));
-    var cell = newrow.insertCell(0);
-    cell.innerHTML = "<a href='#' onclick='addtemprow(this);' title='add row' >+</a><span> </span><a title='delete row' href='#' onclick='deletetemprow(this);' >x</a>";
+    var newrow = table.insertRow(parseInt(rowindex+1));
+    var cell=newrow.insertCell(0);
+    cell.innerHTML="<a href='#' onclick='addtemprow(this);' title='add row' >+</a><span> </span><a title='delete row' href='#' onclick='deletetemprow(this);' >x</a>";
 
     newrow.insertCell(1);
-    newrow.insertCell(2);
+    newrow.insertCell(2);	
 }
 
-function resizeexcel() {
-    var exceltab = document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable");
-    for (var i = 0; i < exceltab.length; i++) {
-        var td = exceltab[i].getElementsByTagName("td");
-        for (var j = 0; j < td.length; j++) {
-            var div = td[j].getElementsByTagName("div")[0];
-            if (div) {
+function resizeexcel(){
+    var exceltab=document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable");
+    for(var i=0;i<exceltab.length;i++){
+        var td=exceltab[i].getElementsByTagName("td");
+        for(var j=0;j<td.length;j++){
+            var div=td[j].getElementsByTagName("div")[0];
+            if(div){
                 div.style.removeProperty("width");
                 div.style.removeProperty("height");
             }
@@ -6006,49 +4076,50 @@ function resizeexcel() {
     }
 }
 
-var excelcount = 1;
+var excelcount=1;
 function deleteExcelRow(table) {
-    try
+    try 
     {
         //var table = document.getElementById(tableID);
-        var isrowdelete = false;
+        var isrowdelete=false;
         var rowCount = table.rows.length;
-        for (var i = 0; i < rowCount; i++)
+        for(var i=0; i<rowCount; i++) 
         {
-            var row = table.rows[i];
+            var row    = table.rows[i];
             var chkbox = row.cells[0].getElementsByTagName("input")[0];
-            if (null !== chkbox && true === chkbox.checked)
+            if(null != chkbox && true == chkbox.checked) 
             {
-                var count = excelcount;
-                var c = parseInt(count) - parseInt(1);
-                if (rowCount <= 1)
+                var count =excelcount;
+                var c = parseInt(count)-parseInt(1); 
+                if(rowCount <= 1) 
                 {
-                    alert(msg_cannot_del_row);
+                    alert("Cannot delete all the rows.");
                     break;
                 }
                 table.deleteRow(i);
                 rowCount--;
                 i--;
-                excelcount = c;
-                isrowdelete = true;
+                excelcount=c;
+                isrowdelete=true;
                 /*$('#count').val(c);*/
             }
         }
         return isrowdelete;
-    } catch (e)
+    }
+    catch(e)
     {
         alert(e);
     }
     return isrowdelete;
 }
 
-function deleteExcelCol(table) {
-    var cellrb = table.getElementsByClassName("cellrb");
-    for (var i = 0; i < cellrb.length; i++) {
-        if (null !== cellrb[i] && cellrb[i].checked === true) {
-            var cellInex = cellrb[i].parentNode.parentNode.cellIndex;
-            var rows = table.rows;
-            for (var i = 0; i < rows.length; i++) {
+function deleteExcelCol(table){
+    var cellrb=table.getElementsByClassName("cellrb");
+    for(var i=0;i<cellrb.length;i++){
+        if(null!=cellrb[i]&&cellrb[i].checked==true){
+            var cellInex=cellrb[i].parentNode.parentNode.cellIndex;
+            var rows=table.rows;
+            for(var i=0;i<rows.length;i++){
                 rows[i].deleteCell(cellInex);
             }
             break;
@@ -6058,97 +4129,81 @@ function deleteExcelCol(table) {
 
 //navigation arrow functionality work start
 var active = 0;
-$('#navigate td').each(function (idx) {
-    $(this).html(idx);
-});
+$('#navigate td').each(function(idx){$(this).html(idx);});
 rePosition();
 
-function initilizeCursorPosForSpread(obj) {
-    var cellIndex = $(obj).index();
-    var row = $(obj).parent();
-    var rowlength = row.find("td").length;
-    var rowIndex = row.index();
-    var cellNumber = rowIndex * (rowlength) + cellIndex;
-    active = cellNumber;
-    var active_element = document.getElementsByClassName("active")[0];
+function initilizeCursorPosForSpread(obj){
+    var cellIndex=$(obj).index();
+    var row=$(obj).parent();
+    var rowlength=row.find("td").length;
+    var rowIndex=row.index();
+    var cellNumber=rowIndex*(rowlength)+cellIndex;
+    active=cellNumber;
+    var active_element=document.getElementsByClassName("active")[0];
     rePosition();
 }
 
-var curr_cell_num = -1;
-function reCalculate(e) {
-    var rows = document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].rows.length; //$('#navigate tr').length;
+var curr_cell_num=-1;
+function reCalculate(e){
+    var rows =document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].rows.length; //$('#navigate tr').length;
     var columns = document.getElementById("idsexcelcontainer").getElementsByClassName("exeltable")[0].rows[0].cells.length;// $('#navigate tr:eq(0) td').length;
+    //alert(columns + 'x' + rows);
 
-    if (e.keyCode === 37) { //move left or wrap
-        active = (active > 0) ? active - 1 : active;
+    if (e.keyCode == 37) { //move left or wrap
+        active = (active>0)?active-1:active;
         e.preventDefault();
-    } else if (e.keyCode === 38) { // move up
-        active = (active - columns >= 0) ? active - columns : active;
+    }
+    else if (e.keyCode == 38) { // move up
+        active = (active-columns>=0)?active-columns:active;
         e.preventDefault();
-    } else if (e.keyCode === 39) { // move right or wrap
-        active = (active < (columns * rows) - 1) ? active + 1 : active;
+    }
+    else if (e.keyCode == 39) { // move right or wrap
+        active = (active<(columns*rows)-1)?active+1:active;
         e.preventDefault();
-    } else if (e.keyCode === 40) { // move down
-        active = (active + columns <= (rows * columns) - 1) ? active + columns : active;
+    }
+    else if (e.keyCode == 40) { // move down
+        active = (active+columns<=(rows*columns)-1)?active+columns:active;
         e.preventDefault();
         return false;
-    } else if (e.keyCode === 13) {
-        try {
-            if (curr_cell_num === active) {
+    }
+    else if(e.keyCode==13){
+        try{
+            if(curr_cell_num==active){
 
-            } else {
+            }else{
                 placeCaretAtEnd(document.getElementsByClassName("active")[0]);
                 e.preventDefault();
             }
-            curr_cell_num = active;
-        } catch (e) {
-            alert("err " + e.message);
+            curr_cell_num=active;
+        }catch(e){
+            alert("err "+e.message);
         }
     }
 }
 
 
-function rePosition() {
-    $('.active').removeClass('active');
+function rePosition(){
+    $('.active').removeClass('active');    
     $('#selectable_del tr td').eq(active).addClass('active');
     scrollInView();
 }
 
-function scrollInView() {
-    var target = $('#selectable_del tr td:eq(' + active + ')');
+function scrollInView(){
+    var target = $('#selectable_del tr td:eq('+active+')');
     if (target.length)
     {
         var top = target.offset().top;
 
-        $('html,body').stop().animate({scrollTop: top - 100}, 400);
+        $('html,body').stop().animate({scrollTop: top-100}, 400);
         return false;
     }
 }
 
 //navigation arrow functionality end
 
-function toggleParamDiffPanel() {
-    var mainDiv = document.getElementById("maindivcontainer");
-    var paramDivPanel = document.getElementById("div_right_pane");
-    var minMax = document.getElementById("param_minmax");
-    if (minMax.classList.contains("fa-expand")) {
-        minMax.classList.remove("fa-expand");
-        mainDiv.classList.remove("minmainDiv");
-        paramDivPanel.style.display = "none";
-    } else {
-        minMax.classList.add("fa-expand");
-        mainDiv.classList.add("minmainDiv");
-        paramDivPanel.style.display = "block";
-    }
-    if (minMax.classList.contains('fa-expand'))
-    {
-        minMax.setAttribute("title", "Collapse Diff Viewer");
-    } else {
-        minMax.setAttribute("title", "Expand Diff Viewer");
-    }
-}
 
 
 
 
 /*****************************************Excel work end here*******************************************************/
+
