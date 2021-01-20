@@ -1,0 +1,503 @@
+<html data-ids-version="7.0.0.50">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>
+		Agnisys Register Spec
+	</title>                   
+ </head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+  <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
+   <div id="abstract"> 
+    <label id="lblcompact"></label> 
+    <label id="datacenter1"></label> 
+    <label id="datacenter2"></label> 
+    <label id="datacenter3"></label> 
+    <label id="datacenter4"></label> 
+   </div> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="divtoolbar" contenteditable="false"> 
+     <b class="spec_head">IDS Register Specification</b> 
+    </div> 
+    <br> 
+    <table class="block idsTemp" onclick="tabClick(this)" id="tab00.8755327858147156"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="block name" class="name">IP1</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" class="img_block"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this)" class="reg idsTemp" id="tab10.6919147767781179"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg_name</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab00.7677814636952278" oncontextmenu="openregmenu(event);" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<i class="fas fa-sort sort sort-table"></i></td> 
+           <td class="lblfieldname">name<i class="fas fa-sort sort sort-table"></i></td> 
+           <td class="lblsw">s/w<i class="fas fa-sort sort sort-table"></i></td> 
+           <td class="lblhw">h/w<i class="fas fa-sort sort sort-table"></i></td> 
+           <td class="lbldefault">default<i class="fas fa-sort sort sort-table"></i></td> 
+           <td class="lbldesc">description<i class="fas fa-sort sort sort-table"></i></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab00.05676702035153591" class="field edited" oncontextmenu="openregmenu(event);"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">f</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br>
+    <br>
+    <table data-width="32" class="reg idsTemp" id="tab30.6279727448981597" onclick="tabClick(this)">
+     <tbody>
+      <tr>
+       <td class="header readOnly"></td>
+       <td title="reg name" class="name">reg_name2</td>
+       <td title="offset" class="offset" colspan="2"></td>
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td>
+       <td class="address addCell readOnly">
+        <div class="splitVer setBorder" title="address">
+         <label class="label">address|</label>
+         <label class="addrvalue"></label>
+        </div>
+        <div class="splitVer" title="Default">
+         <label class="label">default |</label>
+         <label class="defvalue"></label>
+        </div></td>
+      </tr>
+      <tr>
+       <td colspan="6" title="add properties" class="propclass"></td>
+      </tr>
+      <tr>
+       <td colspan="6" title="add description here" class="desc descclass"></td>
+      </tr>
+      <tr>
+       <td colspan="6" class="border"></td>
+      </tr>
+      <tr>
+       <td colspan="6" class="fieldtd">
+        <table class="fields idsTemp" id="tab10.8032594242002501" onclick="tabClick(this)">
+         <tbody>
+          <tr class="label">
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td>
+          </tr>
+          <tr id="tab10.822877523220284" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);">
+           <td title="bits" class="bits">31:0</td>
+           <td title="field name" class="fieldname">f</td>
+           <td title="software access" class="sw">rw</td>
+           <td title="hardware access" class="hw">rw</td>
+           <td title="default" class="default">0</td>
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td>
+          </tr>
+         </tbody>
+        </table></td>
+      </tr>
+     </tbody>
+    </table>
+    <br> 
+    <br>
+    <br>
+    <table data-width="32" class="reg idsTemp" id="tab50.020654728837227188" onclick="tabClick(this)">
+     <tbody>
+      <tr>
+       <td class="header readOnly"></td>
+       <td title="reg name" class="name">reg_name3</td>
+       <td title="offset" class="offset" colspan="2"></td>
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td>
+       <td class="address addCell readOnly">
+        <div class="splitVer setBorder" title="address">
+         <label class="label">address|</label>
+         <label class="addrvalue"></label>
+        </div>
+        <div class="splitVer" title="Default">
+         <label class="label">default |</label>
+         <label class="defvalue"></label>
+        </div></td>
+      </tr>
+      <tr>
+       <td colspan="6" title="add properties" class="propclass"></td>
+      </tr>
+      <tr>
+       <td colspan="6" title="add description here" class="desc descclass"></td>
+      </tr>
+      <tr>
+       <td colspan="6" class="border"></td>
+      </tr>
+      <tr>
+       <td colspan="6" class="fieldtd">
+        <table class="fields idsTemp" id="tab20.06725939439813045" onclick="tabClick(this)">
+         <tbody>
+          <tr class="label">
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td>
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td>
+          </tr>
+          <tr id="tab20.4270837297365355" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);">
+           <td title="bits" class="bits">31:0</td>
+           <td title="field name" class="fieldname">f</td>
+           <td title="software access" class="sw">rw</td>
+           <td title="hardware access" class="hw">rw</td>
+           <td title="default" class="default">0</td>
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td>
+          </tr>
+         </tbody>
+        </table></td>
+      </tr>
+     </tbody>
+    </table>
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br>  
+   </div> 
+   <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
+    <div id="divyml"> 
+     <label id="lblymlname"></label> 
+     <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>   
+   </div> 
+   <div id="seqdivcontainer" style="display:none;"> 
+    <div id="divtoolbar" contenteditable="false"> 
+     <b class="spec_head">Sequences</b> 
+    </div>  
+    <br> 
+    <table class="seq idsTemp" id="tab70.3376782317731041" oncontextmenu="openseqmenu(event);" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr> 
+       <td> 
+        <table id="tab80.7809034340770927" class="seqip idsTemp" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>sequence name</td> 
+           <td>ip</td> 
+           <td>description</td> 
+          </tr> 
+          <tr class="edited" id="seq0.7249543533376005" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)"> 
+           <td class="seqname">seq_name</td> 
+           <td title="to refresh external ref, please Click on the cell and press Tab" class="ip" onfocusout="load_ips(this);">IP1.idsng</td> 
+           <td class="seqdesc"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="tab90.40317891531877614" class="idsTemp arg" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>arguments</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9105981633985643" onkeyup="setCurrRow(this)"> 
+           <td class="argname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="tab100.8234612143883122" class="idsTemp const" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>constants</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.48381315218562915" onkeyup="setCurrRow(this)"> 
+           <td class="constname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="tab110.7948823869886171" class="idsTemp var" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>variables</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.2817966422423086" onkeyup="setCurrRow(this)"> 
+           <td class="varname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="tab120.07280839405636808" class="command idsTemp" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td class="seqcmd">command</td> 
+           <td>step</td> 
+           <td class="seqcmdval">value</td> 
+           <td class="seqcmddesc">description</td> 
+           <td class="seqcmdrefpath">refpath</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.5757947079939848" onkeyup="setCurrRow(this)"> 
+           <td class="cmdname"></td> 
+           <td class="step"></td> 
+           <td class="seqvalue"></td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+   </div> 
+   <div id="idsexcelcontainer" style="display:none" class="disable"> 
+    <div id="divtoolbar" contenteditable="false"> 
+     <b class="spec_head">IDS Register Specification</b> 
+     <button onclick="showTemplate()">Open IDS Template</button> 
+    </div> 
+    <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);" class="spreadsheetcon"></div> 
+    <div id="backhidder" style="z-index: -1;"></div> 
+    <div id="exceltemplate" style="display: none;"> 
+     <a onclick="hidetemplate()" title="close template window" id="ahidetemp">X</a> 
+     <table contenteditable="false"> 
+      <tbody> 
+       <tr style="background-color: #b9c4cc"> 
+        <th></th> 
+        <th>User Header</th> 
+        <th>IDS Identifier</th> 
+       </tr> 
+       <tr> 
+        <td> 
+         <!--<a onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a>--></td> 
+        <td class="editable">chip</td> 
+        <td>$chip_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">block</td> 
+        <td>$block_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">register</td> 
+        <td>$reg_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">field</td> 
+        <td>$field_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">sw access</td> 
+        <td>$field_sw_access</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">hw access</td> 
+        <td>$field_hw_access</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">field default</td> 
+        <td>$field_default</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bits</td> 
+        <td>$field_offset</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">description</td> 
+        <td>$desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">properties</td> 
+        <td>$prop</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">section</td> 
+        <td>$section_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">offset</td> 
+        <td>$offset</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">size</td> 
+        <td>$size</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">width</td> 
+        <td>$reg_width</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">ref</td> 
+        <td>$ref</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">refpath</td> 
+        <td>$refpath</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define name</td> 
+        <td>$define_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define value</td> 
+        <td>$define_value</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define description</td> 
+        <td>$define_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">private</td> 
+        <td>$private</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum name</td> 
+        <td>$enum_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum value</td> 
+        <td>$enum_value</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">mnemonic name</td> 
+        <td>$mnemonic_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum desc</td> 
+        <td>$enum_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">signal name</td> 
+        <td>$signal_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">port type</td> 
+        <td>$port_type</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">signal desc</td> 
+        <td>$signal_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus domain name</td> 
+        <td>$bus_domain_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">address unit</td> 
+        <td>$address_unit</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus description</td> 
+        <td>$bus_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus</td> 
+        <td>$bus</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div>  
+   </div>  
+  </div> 
+ </body>
+</html>
