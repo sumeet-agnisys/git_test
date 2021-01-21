@@ -1,9 +1,9 @@
-<html data-ids-version="7.0.0.50">
+<html data-ids-version=" 7.4.22.82 ">
  <head> 
   <meta charset="UTF-8"> 
   <title>
 		Agnisys Register Spec
-	</title>                   
+	</title>          
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
@@ -77,6 +77,60 @@
           </tr> 
           <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab00.05676702035153591" class="field edited" oncontextmenu="openregmenu(event);"> 
            <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">f1</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <table data-width="32" class="reg idsTemp" id="tab30.6279727448981597" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg_name2</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab10.8032594242002501" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr id="tab10.822877523220284" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td title="bits" class="bits">31:0</td> 
            <td title="field name" class="fieldname">f</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
@@ -89,113 +143,59 @@
      </tbody> 
     </table> 
     <br> 
-    <br>
-    <br>
-    <table data-width="32" class="reg idsTemp" id="tab30.6279727448981597" onclick="tabClick(this)">
-     <tbody>
-      <tr>
-       <td class="header readOnly"></td>
-       <td title="reg name" class="name">reg_name2</td>
-       <td title="offset" class="offset" colspan="2"></td>
-       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td>
-       <td class="address addCell readOnly">
-        <div class="splitVer setBorder" title="address">
-         <label class="label">address|</label>
-         <label class="addrvalue"></label>
-        </div>
-        <div class="splitVer" title="Default">
-         <label class="label">default |</label>
-         <label class="defvalue"></label>
-        </div></td>
-      </tr>
-      <tr>
-       <td colspan="6" title="add properties" class="propclass"></td>
-      </tr>
-      <tr>
-       <td colspan="6" title="add description here" class="desc descclass"></td>
-      </tr>
-      <tr>
-       <td colspan="6" class="border"></td>
-      </tr>
-      <tr>
-       <td colspan="6" class="fieldtd">
-        <table class="fields idsTemp" id="tab10.8032594242002501" onclick="tabClick(this)">
-         <tbody>
-          <tr class="label">
-           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td>
-          </tr>
-          <tr id="tab10.822877523220284" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);">
-           <td title="bits" class="bits">31:0</td>
-           <td title="field name" class="fieldname">f</td>
-           <td title="software access" class="sw">rw</td>
-           <td title="hardware access" class="hw">rw</td>
-           <td title="default" class="default">0</td>
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td>
-          </tr>
-         </tbody>
-        </table></td>
-      </tr>
-     </tbody>
-    </table>
     <br> 
-    <br>
-    <br>
-    <table data-width="32" class="reg idsTemp" id="tab50.020654728837227188" onclick="tabClick(this)">
-     <tbody>
-      <tr>
-       <td class="header readOnly"></td>
-       <td title="reg name" class="name">reg_name3</td>
-       <td title="offset" class="offset" colspan="2"></td>
-       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td>
-       <td class="address addCell readOnly">
-        <div class="splitVer setBorder" title="address">
-         <label class="label">address|</label>
-         <label class="addrvalue"></label>
-        </div>
-        <div class="splitVer" title="Default">
-         <label class="label">default |</label>
-         <label class="defvalue"></label>
-        </div></td>
-      </tr>
-      <tr>
-       <td colspan="6" title="add properties" class="propclass"></td>
-      </tr>
-      <tr>
-       <td colspan="6" title="add description here" class="desc descclass"></td>
-      </tr>
-      <tr>
-       <td colspan="6" class="border"></td>
-      </tr>
-      <tr>
-       <td colspan="6" class="fieldtd">
-        <table class="fields idsTemp" id="tab20.06725939439813045" onclick="tabClick(this)">
-         <tbody>
-          <tr class="label">
-           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td>
-           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td>
-          </tr>
-          <tr id="tab20.4270837297365355" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);">
-           <td title="bits" class="bits">31:0</td>
-           <td title="field name" class="fieldname">f</td>
-           <td title="software access" class="sw">rw</td>
-           <td title="hardware access" class="hw">rw</td>
-           <td title="default" class="default">0</td>
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td>
-          </tr>
-         </tbody>
-        </table></td>
-      </tr>
-     </tbody>
-    </table>
+    <br> 
+    <table data-width="32" class="reg idsTemp" id="tab50.020654728837227188" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg_name3</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab20.06725939439813045" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr id="tab20.4270837297365355" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">f</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
     <br> 
     <br> 
     <br> 
@@ -212,7 +212,7 @@
    <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">Sequences</b> 
-    </div>  
+    </div> 
     <br> 
     <table class="seq idsTemp" id="tab70.3376782317731041" oncontextmenu="openseqmenu(event);" onclick="tabClick(this)"> 
      <tbody> 
@@ -320,7 +320,7 @@
      </tbody> 
     </table> 
     <br> 
-    <br> 
+    <br>  
    </div> 
    <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar" contenteditable="false"> 
