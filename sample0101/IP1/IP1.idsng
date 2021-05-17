@@ -184,7 +184,7 @@
           </tr> 
           <tr id="tab20.7024264544942155" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">f</td> 
+           <td title="field name" class="fieldname">fhjvbhj</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0</td> 
