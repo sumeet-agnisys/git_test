@@ -130,7 +130,7 @@
           </tr> 
           <tr id="tab10.19230541228081388" class="field edited" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">f</td> 
+           <td title="field name" class="fieldname">field_name</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0</td> 
