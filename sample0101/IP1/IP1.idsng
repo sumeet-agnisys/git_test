@@ -29,7 +29,7 @@
        <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add properties" class="propclass">is_rsv=true;<br><br></td> 
+       <td colspan="5" title="add properties" class="propclass">is_rsv=true;size=0x4</td> 
       </tr> 
       <tr> 
        <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes</td> 
@@ -55,10 +55,10 @@
         </div> </td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add properties" class="propclass"></td> 
+       <td colspan="6" title="add properties" class="propclass">lock=reg_name3.f;is_rsv=true</td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"></td> 
+       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -108,10 +108,10 @@
         </div></td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add properties" class="propclass"></td> 
+       <td colspan="6" title="add properties" class="propclass">property=value</td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass"></td> 
+       <td colspan="6" title="add description here" class="desc descclass">description for reg2</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
