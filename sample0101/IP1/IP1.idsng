@@ -3,7 +3,7 @@
   <meta charset="UTF-8"> 
   <title>
 		Agnisys Register Spec
-	</title> 
+	</title>          
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
@@ -14,7 +14,7 @@
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
    </div> 
-   <div id="regdivcontainer" contenteditable="true" style="display:block">
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
@@ -32,7 +32,7 @@
        <td colspan="5" title="add properties" class="propclass">is_rsv=true;size=0x4</td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes</td> 
+       <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes changes by user 2</td> 
       </tr> 
      </tbody> 
     </table> 
@@ -58,7 +58,7 @@
        <td colspan="6" title="add properties" class="propclass">lock=reg_name3.f;is_rsv=true</td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1 new description for f1 nckjndvkjv</td> 
+       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1 new description for f1 nckjndvkjv changed by user 2</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -94,7 +94,7 @@
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
-       <td title="reg name" class="name">reg_11</td> 
+       <td title="reg name" class="name">reg_1name</td> 
        <td title="offset" class="offset" colspan="2"></td> 
        <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
        <td class="address addCell readOnly"> 
@@ -253,22 +253,14 @@
     <br> 
     <br> 
     <br> 
-    <br> 
-    <div id="regmenu" class="idsmenu"> 
-     <a onclick="insertcommonreg();">Insert Row Below</a> 
-     <a onclick="copyfieldrow()">Copy Row</a> 
-     <a onclick="cutfieldrow()">Cut Row</a> 
-     <a onclick="pastefieldrow();">Paste</a> 
-     <a onclick="deletefieldrow();">Delete Row</a> 
-     <a id="aReloadReg">Refresh</a> 
-    </div>
+    <br>  
    </div> 
    <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
-    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div> 
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
    </div> 
    <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -381,7 +373,7 @@
      </tbody> 
     </table> 
     <br> 
-    <br> 
+    <br>  
    </div> 
    <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -558,7 +550,7 @@
       </tbody> 
      </table> 
     </div> 
-   </div> 
-  </div>  
+   </div>  
+  </div> 
  </body>
 </html>
