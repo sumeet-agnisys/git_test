@@ -29,10 +29,10 @@
        <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address"></label></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add properties" class="propclass">is_rsv=true;size=0x4</td> 
+       <td colspan="5" title="add properties" class="propclass">is_rsv=true;size=0x4;external=true</td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes</td> 
+       <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes new changes</td> 
       </tr> 
      </tbody> 
     </table> 
@@ -58,7 +58,7 @@
        <td colspan="6" title="add properties" class="propclass">lock=reg_name3.f;is_rsv=true</td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1 new description for f1 nckjndvkjv</td> 
+       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1 new description for f1 nckjndvkjv new changes</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -77,24 +77,26 @@
           </tr> 
           <tr onkeyup="setCurrRow(this)" onclick="setCurrRow(this)" id="tab00.8506426640437565" class="field edited" oncontextmenu="openregmenu(event);"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">f1</td> 
+           <td title="field name" class="fieldname">field names&nbsp;</td> 
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)">this is register1</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)">this is register1 jhbchj</td> 
           </tr> 
          </tbody> 
         </table></td> 
       </tr> 
      </tbody> 
     </table> 
+    <br>
+    <br>
     <br> 
     <br> 
     <table data-width="32" class="reg idsTemp" id="tab30.9928549690420692" onclick="tabClick(this)"> 
      <tbody> 
       <tr> 
        <td class="header readOnly"></td> 
-       <td title="reg name" class="name">reg_11</td> 
+       <td title="reg name" class="name">reg_1new1</td> 
        <td title="offset" class="offset" colspan="2"></td> 
        <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
        <td class="address addCell readOnly"> 
@@ -111,7 +113,7 @@
        <td colspan="6" title="add properties" class="propclass">property=value</td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass">description for reg2</td> 
+       <td colspan="6" title="add description here" class="desc descclass">description for reg2 new changes</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -134,13 +136,15 @@
            <td title="software access" class="sw">rw</td> 
            <td title="hardware access" class="hw">rw</td> 
            <td title="default" class="default">0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)"></td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this)">New field description</td> 
           </tr> 
          </tbody> 
         </table></td> 
       </tr> 
      </tbody> 
     </table> 
+    <br>
+    <br>
     <br> 
     <br> 
     <br> 
