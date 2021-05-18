@@ -3,7 +3,7 @@
   <meta charset="UTF-8"> 
   <title>
 		Agnisys Register Spec
-	</title>          
+	</title> 
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
@@ -14,7 +14,7 @@
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
    </div> 
-   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block">
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
@@ -58,7 +58,7 @@
        <td colspan="6" title="add properties" class="propclass">lock=reg_name3.f;is_rsv=true</td> 
       </tr> 
       <tr> 
-       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1 description cjmndjvdbvjhb</td> 
+       <td colspan="6" title="add description here" class="desc descclass">Description for reg 1 new description for f1 nckjndvkjv</td> 
       </tr> 
       <tr> 
        <td colspan="6" class="border"></td> 
@@ -253,14 +253,22 @@
     <br> 
     <br> 
     <br> 
-    <br>  
+    <br> 
+    <div id="regmenu" class="idsmenu"> 
+     <a onclick="insertcommonreg();">Insert Row Below</a> 
+     <a onclick="copyfieldrow()">Copy Row</a> 
+     <a onclick="cutfieldrow()">Cut Row</a> 
+     <a onclick="pastefieldrow();">Paste</a> 
+     <a onclick="deletefieldrow();">Delete Row</a> 
+     <a id="aReloadReg">Refresh</a> 
+    </div>
    </div> 
    <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
-    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div> 
    </div> 
    <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -373,7 +381,7 @@
      </tbody> 
     </table> 
     <br> 
-    <br>  
+    <br> 
    </div> 
    <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -550,7 +558,7 @@
       </tbody> 
      </table> 
     </div> 
-   </div>  
-  </div> 
+   </div> 
+  </div>  
  </body>
 </html>
