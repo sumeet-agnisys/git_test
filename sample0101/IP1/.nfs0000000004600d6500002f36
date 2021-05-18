@@ -3,7 +3,16 @@
   <meta charset="UTF-8"> 
   <title>
 		Agnisys Register Spec
-	</title>          
+	</title> 
+  <link id="ids_style_template" rel="stylesheet" type="text/css" href="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//ids_template.css"> 
+  <link id="fontsid" rel="stylesheet" type="text/css" href="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//css/fonts.css"> 
+  <script id="jqueryLib" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//jquery-3.2.1.min.js"></script> 
+  <script id="ids_prop" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//prop.js"></script> 
+  <script id="ids_js" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//ids_template.js"></script> 
+  <script id="param_js" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//ids_param.js"></script> 
+  <script id="ids_js" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//ids_template.json"></script> 
+  <script id="jquery12" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//jquery-1.12.4.js"></script> 
+  <script id="jqueryui" src="file:////home/vishal/IDSNextGen-linux-7.4.0.0/ids_templates//jquery-ui.js"></script> 
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
@@ -32,7 +41,7 @@
        <td colspan="5" title="add properties" class="propclass">is_rsv=true;size=0x4</td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes changes by user 2 again by user 2 by vkjdbvkjdf</td> 
+       <td colspan="5" title="add description here" class="desc descclass">new description added by Vishal by added by linux os new user agaian changes changes by user 2 again by user 2</td> 
       </tr> 
      </tbody> 
     </table> 
@@ -118,6 +127,7 @@
       </tr> 
       <tr> 
        <td colspan="6" class="fieldtd"> 
+        <div id="autocomplete-list" class="autocomplete-items" style="right: 60px; max-height: 403.0625px; overflow: auto; display: none;"></div>
         <table class="fields idsTemp" id="tab10.8946377663502647" onclick="tabClick(this)"> 
          <tbody> 
           <tr class="label"> 
@@ -253,14 +263,200 @@
     <br> 
     <br> 
     <br> 
-    <br>  
+    <br> 
+    <div id="regmenu" class="idsmenu" style="display: none;"> 
+     <a onclick="insertcommonreg();">Insert Row Below</a> 
+     <a onclick="copyfieldrow()">Copy Row</a> 
+     <a onclick="cutfieldrow()">Cut Row</a> 
+     <a onclick="pastefieldrow();">Paste</a> 
+     <a onclick="deletefieldrow();">Delete Row</a> 
+     <a id="aReloadReg">Refresh</a> 
+    </div> 
    </div> 
    <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
-    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div> 
+    <div id="param_abstract"> 
+     <div id="param_reg_menu" class="param_menu toolbar" style="display: none;"> 
+      <table bgcolor="#FFFFFF" border="0.5"> 
+       <tbody> 
+        <tr> 
+         <td title="Add register"><a href="#" id="addparamreg"><i class="fa fa-plus fa-xs" aria-hidden="true"></i></a></td> 
+         <td title="Edit register"><a href="#" id="editparamreg"><i class="fas fa-edit fa-xs" aria-hidden="true"></i></a></td> 
+         <td title="Delete register"><a href="#" id="deleteparamreg"><i class="fa fa-trash fa-xs" aria-hidden="true"></i></a></td> 
+         <td title="Copy register"><a href="#" id="copyparamreg"><i class="fas fa-copy" aria-hidden="true"></i></a></td> 
+         <td title="Cut register"><a href="#" id="cutparamreg"><i class="fas fa-cut" aria-hidden="true"></i></a></td> 
+         <td title="Paste"><a href="#" id="pasteparamreg"><i class="fas fa-paste fa-xs" aria-hidden="true"></i></a></td> 
+         <td style="display: none;" title="lock register from updating"><a href="#" id="param_menu_lock_reg"><i class="fa fa-unlock fa-xs" aria-hidden="true"></i></a></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_cell_add" class="param_menu sub_menu" style="display: none"> 
+      <div id="param_cell_addheader" class="param_menu_header">
+        Add Parameter 
+      </div> 
+      <table> 
+       <tbody> 
+        <tr> 
+         <td>Name</td> 
+         <td id="param_cell_add_name" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td>Bits</td> 
+         <td id="param_cell_add_bits" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td>Sw</td> 
+         <td id="param_cell_add_sw" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td>Hw</td> 
+         <td id="param_cell_add_hw" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td>Default</td> 
+         <td id="param_cell_add_def" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td>Desc</td> 
+         <td id="param_cell_add_desc" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td title="Close" colspan="2"> <button id="param_cell_add_close" title="Close window">Close</button> <button id="param_cell_add_add" title="Add Param">Add</button> </td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_cell_menu" class="param_menu toolbar" style="display: none;"> 
+      <table bgcolor="#FFFFFF" border="0.5"> 
+       <tbody> 
+        <tr> 
+         <td><a href="#" id="addparamcelladd" title="Add new"><i class="fa fa-plus fa-xs" aria-hidden="true"></i></a></td> 
+         <td><a href="#" id="editparamcellpaste" title="Paste"><i class="fas fa-paste fa-xs" aria-hidden="true"></i></a></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_create_reg" class="param_menu sub_menu" style="display: none;"> 
+      <div id="param_create_regheader" class="param_menu_header">
+        Add Register 
+      </div> 
+      <table> 
+       <tbody> 
+        <tr> 
+         <td>Name</td> 
+         <td id="param_create_reg_name" contenteditable="true" class="menu_cell" title="register name"></td> 
+        </tr> 
+        <tr> 
+         <td>Size</td> 
+         <td id="param_create_reg_size" contenteditable="true" class="menu_cell" title="register size"></td> 
+        </tr> 
+        <tr> 
+         <td>Prop</td> 
+         <td id="param_create_reg_prop" contenteditable="true" class="menu_cell" title="property"></td> 
+        </tr> 
+        <tr> 
+         <td>Desc</td> 
+         <td id="param_create_reg_desc" contenteditable="true" class="menu_cell" title="description"></td> 
+        </tr> 
+        <tr> 
+         <td colspan="2"> <button id="btnparamregclose" title="Close window">Close</button> <button id="btnparamregcreate" title="Add New Register">Add</button> </td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_edit_reg" class="param_menu sub_menu" style="display: none;"> 
+      <div id="param_edit_regheader" class="param_menu_header">
+        Update Register 
+      </div> 
+      <table> 
+       <tbody> 
+        <tr> 
+         <td>Reg name</td> 
+         <td id="param_edit_reg_name" contenteditable="true" class="menu_cell">reg_name</td> 
+        </tr> 
+        <tr> 
+         <td>Size</td> 
+         <td id="param_edit_reg_size" contenteditable="true" class="menu_cell">32</td> 
+        </tr> 
+        <tr> 
+         <td>Prop</td> 
+         <td id="param_edit_reg_prop" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td>Desc</td> 
+         <td id="param_edit_reg_desc" contenteditable="true" class="menu_cell"></td> 
+        </tr> 
+        <tr> 
+         <td colspan="2"> <button id="btnparamregeditclose" title="Close window">Close</button> <button id="btnparamregeditupdate" title="Update register">Update</button></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_field_edit_menu" class="param_menu sub_menu" style="display: none;"> 
+      <div id="param_field_edit_menuheader" class="param_menu_header">
+        Update Parameter 
+      </div> 
+      <table> 
+       <tbody> 
+        <tr> 
+         <td>Name</td> 
+         <td id="param_field_edit_menu_name" class="menu_cell" contenteditable="true" title="param name">f</td> 
+        </tr> 
+        <tr> 
+         <td>Size</td> 
+         <td id="param_field_edit_menu_bits" class="menu_cell" contenteditable="true" title="param size">32</td> 
+        </tr> 
+        <tr> 
+         <td>Sw</td> 
+         <td id="param_field_edit_menu_sw" class="menu_cell" contenteditable="true" title="sw access">rw</td> 
+        </tr> 
+        <tr> 
+         <td>Hw</td> 
+         <td id="param_field_edit_menu_hw" class="menu_cell" contenteditable="true" title="hw access"></td> 
+        </tr> 
+        <tr> 
+         <td>Default</td> 
+         <td id="param_field_edit_menu_def" class="menu_cell" contenteditable="true" title="default value">0</td> 
+        </tr> 
+        <tr> 
+         <td>Desc</td> 
+         <td id="param_field_edit_menu_desc" class="menu_cell" contenteditable="true" title="description"></td> 
+        </tr> 
+        <tr> 
+         <td colspan="2"> <button id="param_field_edit_menu_close" title="Close window">Close</button> <button id="param_field_edit_menu_update" title="Update Param">Update</button> </td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_field_menu" class="param_menu"> 
+      <table> 
+       <tbody> 
+        <tr> 
+         <td><a href="#" id="addparamfieldadd">+</a></td> 
+         <td><a href="#" id="editparamfieldpaste">P</a></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div id="param_field_toolbar" class="param_menu toolbar" style="display: none;"> 
+      <table bgcolor="#FFFFFF" border="0.5"> 
+       <tbody> 
+        <tr> 
+         <td title="Edit param"><a href="#" id="param_field_toolbar_edit"><i class="fas fa-edit fa-xs" aria-hidden="true"></i></a></td> 
+         <td title="Delete param"><a href="#" id="param_field_toolbar_delete"><i class="fa fa-trash fa-xs" aria-hidden="true"></i></a></td> 
+         <td title="Copy param"><a href="#" id="param_field_toolbar_cp"><i class="fas fa-copy" aria-hidden="true"></i></a></td> 
+         <td title="Cut param"><a href="#" id="param_field_toolbar_cut"><i class="fas fa-cut" aria-hidden="true"></i></a></td> 
+         <td title="lock param from updating"><a href="#" id="param_menu_lock_param"><i class="fa fa-unlock fa-xs" aria-hidden="true"></i></a></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+    </div> 
    </div> 
    <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -373,7 +569,15 @@
      </tbody> 
     </table> 
     <br> 
-    <br>  
+    <br> 
+    <div id="seqmenu" class="idsmenu" style="display: none;"> 
+     <a onclick="insertseqrow();">Insert Row Below</a> 
+     <a onclick="copyfieldrow()">Copy Row</a> 
+     <a onclick="cutfieldrow()">Cut Row</a> 
+     <a onclick="pastefieldrow();">Paste</a> 
+     <a onclick="deletefieldrow();">Delete Row</a> 
+     <a id="aReloadseq">Refresh</a> 
+    </div> 
    </div> 
    <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -550,7 +754,25 @@
       </tbody> 
      </table> 
     </div> 
-   </div>  
+   </div> 
+   <div class="ace_search right" style="display:none"> 
+    <button title="close window" onclick="openCloseWindow()" type="button" class="ace_searchbtn_close fa fa-times"></button> 
+    <div class="ace_search_form"> 
+     <input id="ace_search_find" class="ace_search_field" placeholder="Search for" spellcheck="false"> 
+     <button onclick="findstr(false)" title="next" type="button" class="ace_searchbtn next fa fa-angle-right"></button> 
+     <button onclick="findstr(true)" title="previous" type="button" class="ace_searchbtn prev fa fa-angle-left"></button> 
+    </div> 
+    <div class="ace_replace_form" style=""> 
+     <input id="ace_search_replace" class="ace_search_field" placeholder="Replace with" spellcheck="false"> 
+     <button onclick="replacestr()" title="replace" type="button" class="ace_replacebtn">Replace</button> 
+     <button onclick="replacestrAll()" title="replace all" type="button" class="ace_replacebtn replaceall">All</button> 
+    </div> 
+    <div class="ace_search_options"> 
+     <a id="ace_search_wrap" class="aSearchCase"><span class="ace_button" title="Wrap Around">W</span></a> 
+     <a id="ace_search_casesensitive" class="aSearchCase"><span class="ace_button" title="Case Sensitive Search">Aa</span></a> 
+     <!--<a id="ace_search_whole" class="aSearchCase"><span class="ace_button" title="Whole Word Search">\b</span></a>--> 
+    </div> 
+   </div> 
   </div> 
  </body>
 </html>
