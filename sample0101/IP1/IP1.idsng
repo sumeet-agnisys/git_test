@@ -14,7 +14,7 @@
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
    </div> 
-   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:none"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
@@ -255,14 +255,14 @@
     <br> 
     <br>  
    </div> 
-   <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
+   <div id="param_main" style="display:none" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
     <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
    </div> 
-   <div id="seqdivcontainer" style="display:none;"> 
+   <div id="seqdivcontainer" style="display:block"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">Sequences</b> 
     </div> 
@@ -279,7 +279,7 @@
            <td>description</td> 
           </tr> 
           <tr class="edited" id="seq0.7249543533376005" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)"> 
-           <td class="seqname">seq_name</td> 
+           <td class="seqname">seq_nameby_user2</td> 
            <td title="to refresh external ref, please Click on the cell and press Tab" class="ip" onfocusout="load_ips(this);">IP1.idsng</td> 
            <td class="seqdesc"></td> 
           </tr> 
@@ -299,7 +299,7 @@
            <td>description</td> 
           </tr> 
           <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.9105981633985643" onkeyup="setCurrRow(this)"> 
-           <td class="argname"></td> 
+           <td class="argname">32</td> 
            <td class="value"></td> 
            <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
           </tr> 
@@ -319,7 +319,7 @@
            <td>description</td> 
           </tr> 
           <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.48381315218562915" onkeyup="setCurrRow(this)"> 
-           <td class="constname"></td> 
+           <td class="constname">323</td> 
            <td class="value"></td> 
            <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
           </tr> 
@@ -339,7 +339,7 @@
            <td>description</td> 
           </tr> 
           <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.2817966422423086" onkeyup="setCurrRow(this)"> 
-           <td class="varname"></td> 
+           <td class="varname">244</td> 
            <td class="value"></td> 
            <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
           </tr> 
