@@ -1,0 +1,340 @@
+<html data-ids-version=" 7.8.2.8-soce-beta ">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>
+		Agnisys Register Spec
+	</title> 
+ </head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody" style="background-color:white">
+  <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+   <div id="divtoolbar" contenteditable="false"> 
+    <b class="spec_head">IDS Register Specification</b> 
+   </div> 
+   <table contenteditable="false" id="toc" class="tocTable idsTemp" border="2"> 
+    <tbody> 
+     <tr> 
+      <th colspan="4" title="add toc" class="tocheader" contenteditable="true" align="center" id="busname">Table of Content</th> 
+     </tr> 
+     <tr id="headings"> 
+      <th class="heading">heading </th> 
+      <th class="component">component </th> 
+      <th class="default">default </th> 
+      <th class="address"> address </th> 
+     </tr> 
+     <tr id="replace"> 
+      <td id="index">1</td> 
+      <td id="component"><a href="#1sample_top">sample_top</a></td> 
+      <td id="default"></td> 
+      <td id="address"> 0x0 - 0x3</td> 
+     </tr> 
+     <tr id="replace"> 
+      <td id="index">1.1</td> 
+      <td data-line="31" class='diff' id="component">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#1.1ERROR">ERROR</a></td> 
+      <td id="default">0x00000000</td> 
+      <td id="address"> 0x0</td> 
+     </tr> 
+    </tbody> 
+   </table> 
+   <br> 
+   <table class="block idsTemp" id="tab10.6542902505682425" onclick="tabClick(this)"> 
+    <tbody> 
+     <tr> 
+      <td class="header readOnly"><a name="1sample_top"></a><font size="3" color="blue">1</font></td> 
+      <td title="block name" class="name">sample_top</td> 
+      <td title="offset" class="offset"></td> 
+      <td class="specImage"><img title="Block" alt="Block" class="img_block"></td> 
+      <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0x0</label></td> 
+     </tr> 
+     <tr> 
+      <td colspan="5" title="add properties" class="propclass"></td> 
+     </tr> 
+     <tr> 
+      <td colspan="5" title="add description here" data-line="51" class='desc descclass diff'></td> 
+     </tr> 
+    </tbody> 
+   </table> 
+   <br> 
+   <div> 
+    <br> 
+   </div> 
+   <div> 
+    <table data-width="32" class="reg idsTemp" id="tab20.5603106398303187" onclick="tabClick(this)"> 
+     <tbody> 
+      <tr> 
+       <td data-line="63" class='header readOnly diff'><a name="1.1ERROR"></a><font size="3" color="blue">1.1</font></td> 
+       <td title="reg name" class="name">ERROR11</td> 
+       <td title="offset" class="offset" colspan="2">0x0000</td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label>&nbsp;&nbsp; 
+         <label class="addrvalue">0x0</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label>&nbsp;&nbsp; 
+         <label class="defvalue">0x00000000</label> 
+        </div></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" data-line="81" class='desc descclass diff'>Error indicationsbd</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab00.13540514474702225" onclick="tabClick(this)"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr class="field edited" id="tab00.5796760406629367" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td class="bits" title="bits">31</td> 
+           <td data-line="100" class='fieldname diff' title="field name">ERROR1</td> 
+           <td class="sw thirdCell" title="software access">ro</td> 
+           <td class="hw thirdCell" title="hardware access">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td class="desc fielddesc" title="description"> 
+            <div style="text-align: justify;"> 
+             <span data-line="106" class='diff' style="font-family: " times="" new="" roman",="" serif;"=""><font size="2">Error observed from Core 1nghnghn</font></span> 
+            </div></td> 
+          </tr> 
+          <tr class="field edited" id="tab10.1096504733324779" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td data-line="110" class='bits diff' title="bits">30:4</td> 
+           <td class="fieldname" title="field name">RESERVED</td> 
+           <td class="sw thirdCell" title="software access">ro</td> 
+           <td class="hw thirdCell" title="hardware access">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td class="desc fielddesc" title="description" onkeydown="insertNewRow(event,this)"><font size="2">Reserved fieldngdn</font></td> 
+          </tr> 
+          <tr class="field edited" id="tab20.41932592421825565" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td data-line="118" class='bits diff' title="bits">3</td> 
+           <td class="fieldname" title="field name">ERROR222</td> 
+           <td class="sw thirdCell" title="software access">ro</td> 
+           <td class="hw thirdCell" title="hardware access">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td class="desc fielddesc" title="description" onkeydown="insertNewRow(event,this)"> 
+            <div style="text-align: justify;"> 
+             <span data-line="125" class='diff'><font face="Calibri">Error observed from Core 2</font></span> 
+            </div></td> 
+          </tr> 
+          <tr class="field edited" id="tab30.4647350937069724" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td data-line="129" class='bits diff' title="bits">2</td> 
+           <td class="fieldname" title="field name">ERROR3eeee</td> 
+           <td class="sw thirdCell" title="software access">ro</td> 
+           <td class="hw thirdCell" title="hardware access">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td class="desc fielddesc" title="description" onkeydown="insertNewRow(event,this)"> 
+            <div> 
+             <span><font face="Comic Sans MS">Error observed from Core 3bfdbdfn</font></span> 
+            </div></td> 
+          </tr> 
+          <tr class="field edited" id="tab40.800022005992283" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td data-line="140" class='bits diff' title="bits">1</td> 
+           <td data-line="140" class='fieldname diff' title="field name">ERROR4</td> 
+           <td class="sw thirdCell" title="software access">ro</td> 
+           <td class="hw thirdCell" title="hardware access">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td class="desc fielddesc" title="description" onkeydown="insertNewRow(event,this)"> 
+            <div> 
+             <span data-line="147" class='diff'>Error observed from Core 4</span> 
+            </div></td> 
+          </tr> 
+          <tr class="field edited" id="tab50.82350552008239" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)" oncontextmenu="openregmenu(event);"> 
+           <td data-line="151" class='bits diff' title="bits">0</td> 
+           <td data-line="151" class='fieldname diff' title="field name">ERROR5</td> 
+           <td class="sw thirdCell" title="software access">ro</td> 
+           <td class="hw thirdCell" title="hardware access">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td class="desc fielddesc" title="description" onkeydown="insertNewRow(event,this)"> 
+            <div> 
+             <span>Error observed from Core 5ngnghn</span> 
+            </div></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+   </div> 
+   <br> 
+   <div> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this);" class="reg idsTemp" id="tab_reg320.2359305257025932"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="reg name" class="name">reg_name</td> 
+       <td title="offset" class="offset" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue"></label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue"></label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab_fields0.2359305257025932" oncontextmenu="openregmenu(event);"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab_field0.2359305257025932" class="field edited"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" data-line="210" class='fieldname diff'>reg1</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">rw</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+   </div> 
+  </div>
+  <div id="seqdivcontainer" style="display:block"> 
+   <div id="divtoolbar" contenteditable="false"> 
+    <b class="spec_head">Sequences</b> 
+   </div> 
+   <br> 
+   <table class="seq idsTemp" id="tab50.006323710475975131" oncontextmenu="openseqmenu(event);" onclick="tabClick(this)"> 
+    <tbody> 
+     <tr> 
+      <td> 
+       <table id="tab60.4467158017426751" class="seqip idsTemp" onclick="tabClick(this)"> 
+        <tbody> 
+         <tr class="header readOnly"> 
+          <td>sequence name</td> 
+          <td>ip</td> 
+          <td>description</td> 
+         </tr> 
+         <tr class="edited" id="seq0.8935676722913956" onclick="setCurrRow(this)" onkeyup="setCurrRow(this)"> 
+          <td data-line="242" class='seqname diff'>seq_name2</td> 
+          <td title="to refresh external ref, please Click on the cell and press Tab" class="ip" onfocusout="load_ips(this);">Test201.idsng</td> 
+          <td data-line="244" class='seqdesc diff'>Sequence name333</td> 
+         </tr> 
+        </tbody> 
+       </table></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+     </tr> 
+     <tr> 
+      <td> 
+       <table id="tab70.5750454768940023" class="idsTemp arg" onclick="tabClick(this)"> 
+        <tbody> 
+         <tr class="header readOnly"> 
+          <td>arguments</td> 
+          <td>value</td> 
+          <td>description</td> 
+         </tr> 
+         <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.09094539311028427" onkeyup="setCurrRow(this)"> 
+          <td data-line="262" class='argname diff'>arg21</td> 
+          <td data-line="262" class='value diff'>11</td> 
+          <td data-line="262" class='seqdesc diff' onkeydown="insertSeqArgRow(event,this);">description for argument1</td> 
+         </tr> 
+        </tbody> 
+       </table></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+     </tr> 
+     <tr> 
+      <td> 
+       <table id="tab80.13310422761337515" class="idsTemp const" onclick="tabClick(this)"> 
+        <tbody> 
+         <tr class="header readOnly"> 
+          <td>constants</td> 
+          <td>value</td> 
+          <td>description</td> 
+         </tr> 
+         <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.12000866899369222" onkeyup="setCurrRow(this)"> 
+          <td data-line="282" class='constname diff'>const21</td> 
+          <td class="value">1</td> 
+          <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);">desription for constants</td> 
+         </tr> 
+        </tbody> 
+       </table></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+     </tr> 
+     <tr> 
+      <td> 
+       <table id="tab90.2098456042055421" class="idsTemp var" onclick="tabClick(this)"> 
+        <tbody> 
+         <tr class="header readOnly"> 
+          <td>variables</td> 
+          <td>value</td> 
+          <td>description</td> 
+         </tr> 
+         <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.18000237630678084" onkeyup="setCurrRow(this)"> 
+          <td class="varname">var2</td> 
+          <td data-line="303" class='value diff'>3</td> 
+          <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);">description for variables&nbsp;</td> 
+         </tr> 
+        </tbody> 
+       </table></td> 
+     </tr> 
+     <tr> 
+      <td></td> 
+     </tr> 
+     <tr> 
+      <td> 
+       <table id="tab100.4090909329500384" class="command idsTemp" onclick="tabClick(this)"> 
+        <tbody> 
+         <tr class="header readOnly"> 
+          <td class="seqcmd">command</td> 
+          <td>step</td> 
+          <td class="seqcmdval">value</td> 
+          <td class="seqcmddesc">description</td> 
+          <td class="seqcmdrefpath">refpath</td> 
+         </tr> 
+         <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.48797753214346473" onkeyup="setCurrRow(this)"> 
+          <td data-line="324" class='cmdname diff'>write1</td> 
+          <td data-line="324" class='step diff'>reg</td> 
+          <td class="seqvalue">1</td> 
+          <td data-line="327" class='seqdesc diff'>description for 2</td> 
+          <td data-line="327" class='refpath diff' onkeydown="insertSeqCmdRow(event,this);">refpath id</td> 
+         </tr> 
+        </tbody> 
+       </table></td> 
+     </tr> 
+    </tbody> 
+   </table> 
+   <br> 
+   <br> 
+  </div>
+ </body>
+</html>

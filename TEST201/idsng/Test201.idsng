@@ -1,0 +1,876 @@
+<html data-ids-version=" 7.8.2.8-soce-beta ">
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>
+		Agnisys Register Spec
+	</title>          
+ </head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+  <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
+   <div id="abstract"> 
+    <label id="lblcompact"></label> 
+    <label id="datacenter1">841</label> 
+    <label id="datacenter2"></label> 
+    <label id="datacenter3"></label> 
+    <label id="datacenter4"></label> 
+   </div> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+    <div id="divtoolbar" contenteditable="false"> 
+     <b class="spec_head">IDS Register Specification</b> 
+    </div> 
+    <br> 
+    <table class="block idsTemp" onclick="tabClick(this)" id="tab0.7759965313006376" data-meta-agni_lib="timer"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1timer"></a><font size="3" color="blue">1</font></td> 
+       <td title="block name" class="name">timer</td> 
+       <td title="offset" class="offset"></td> 
+       <td class="specImage"><img title="Block" alt="Block" class="img_block"></td> 
+       <td class="address addCell readOnly"><label class="label">address|</label><label class="addrvalue" title="address">0x0</label></td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add properties" class="propclass">intr.irq_per_channel=true;</td> 
+      </tr> 
+      <tr> 
+       <td colspan="5" title="add description here" class="desc descclass"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table class="param idsTemp" onclick="tabClick(this)" id="tab0.03345604658389245" oncontextmenu="openregmenu(event);"> 
+     <tbody> 
+      <tr> 
+       <td class="label define_name">define name<span class="fas fa-sort sort sort-table"></span></td> 
+       <td class="label define_value">value<span class="fas fa-sort sort sort-table"></span></td> 
+       <td class="label define_des">description<span class="fas fa-sort sort sort-table"></span></td> 
+       <td class="label">private</td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="def_row" class="edited def_row"> 
+       <td class="name">$NUM_TIMER</td> 
+       <td class="value">2</td> 
+       <td title="add description here" class="desc"></td> 
+       <td class="private" onkeydown="insertDefineRow(event,this);">1</td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.9604140426425033" class="edited def_row"> 
+       <td class="name">$NUM_SRC</td> 
+       <td class="value">8</td> 
+       <td title="add description here" class="desc"></td> 
+       <td class="private" onkeydown="insertDefineRow(event,this);">1</td> 
+      </tr> 
+      <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.765165589166825" class="edited def_row"> 
+       <td class="name">$PRESCALER_WIDTH</td> 
+       <td class="value">32</td> 
+       <td title="add description here" class="desc"></td> 
+       <td class="private" onkeydown="insertDefineRow(event,this);">1</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table class="signals idsTemp" onclick="tabClick(this)" id="tab0.8941324850371306"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"></td> 
+       <td title="signal name" class="name">timer_signals</td> 
+       <td class="specImage"><img title="signals" alt="signals" class="img_signal"></td> 
+       <td class="addCell readOnly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add properties" class="propclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" title="add description here" class="desc descclass"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="4" class="signal_inner_td"> 
+        <table class="signals_inner" oncontextmenu="openregmenu(event);"> 
+         <tbody> 
+          <tr> 
+           <td class="label signal_name">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="label signal_port">port type<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="label signal_desc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited sig_row" data-meta-agni_lib="timer"> 
+           <td class="name">status_reset[1:0]</td> 
+           <td class="direction">input</td> 
+           <td title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event);"></td> 
+          </tr> 
+          <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited sig_row" data-meta-agni_lib="timer" id="tab0.26148873034644227"> 
+           <td class="name">result_reset[1:0]</td> 
+           <td class="direction">input</td> 
+           <td title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event);"></td> 
+          </tr> 
+          <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited sig_row" data-meta-agni_lib="timer" id="tab0.9084144081640454"> 
+           <td class="name">counter_reset[1:0]</td> 
+           <td class="direction">input</td> 
+           <td title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event);"></td> 
+          </tr> 
+          <tr onclick="setCurrRow(this);" onkeydown="setCurrRow(this);" class="edited sig_row" data-meta-agni_lib="timer" id="tab0.4889814284138678"> 
+           <td class="name">counter_start[1:0]</td> 
+           <td class="direction">input</td> 
+           <td title="add description here" class="desc signaldesc" onkeydown="insertNewRowSignals(event);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this);" class="reg idsTemp disabletemplate" id="tab0.05721862048927229" data-meta-agni_lib="timer" data-meta-editable="false"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.1control"></a><font size="3" color="blue">1.1</font></td> 
+       <td title="reg name" class="name setreadonly">control</td> 
+       <td title="offset" class="offset setreadonly" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x0</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass setreadonly">count=2;</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass setreadonly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab0.4017639559218925"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field"> 
+           <td title="bits" class="bits">0</td> 
+           <td title="field name" class="fieldname">en</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"> 
+            <hdiv> 
+             <span style="font-size: 9; font-family: Calibri; ">1:-</span> 
+             <span style="font-size: 9; font-family: Calibri; "> Enables the timer block or calculations</span> 
+             <span style="font-size: 9; font-family: Calibri; ">0:-</span> 
+             <span style="font-size: 9; font-family: Calibri; "> Disables the timer block</span> 
+             <hdiv> 
+              <hdiv> 
+              </hdiv> 
+             </hdiv> 
+            </hdiv></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.638847838959038" class="field"> 
+           <td title="bits" class="bits">2:1</td> 
+           <td title="field name" class="fieldname">mode</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"> 
+            <hdiv> 
+             <span style="font-size: 9; font-family: Calibri; ">00: running mode</span> 
+             <span style="font-size: 9; font-family: Calibri; ">01: Periodic mode with source enable</span> 
+             <span style="font-size: 9; font-family: Calibri; ">00: periodic mode without source</span> 
+             <span style="font-size: 9; font-family: Calibri; ">11: reserved</span> 
+             <hdiv> 
+              <hdiv> 
+              </hdiv> 
+             </hdiv> 
+            </hdiv></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.7188939802168778" class="field"> 
+           <td title="bits" class="bits">5:3</td> 
+           <td title="field name" class="fieldname">event_sel</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"> 
+            <hdiv> 
+             <span style="font-size: 9; font-family: Calibri; ">Legal values for running mode</span> 
+             <span style="font-size: 9; font-family: Calibri; ">000: high level</span> 
+             <span style="font-size: 9; font-family: Calibri; "> 001: low level</span> 
+             <span style="font-size: 9; font-family: Calibri; "> 010: between two high edges</span> 
+             <span style="font-size: 9; font-family: Calibri; "> 011: between two low edges</span> 
+             <span style="font-size: 9; font-family: Calibri; ">Legal values for the Periodic Mode</span> 
+             <span style="font-size: 9; font-family: Calibri; "> 100: Posedges</span> 
+             <span style="font-size: 9; font-family: Calibri; "> 101: negedges</span> 
+             <span style="font-size: 9; font-family: Calibri; "> 110: both edges</span> 
+             <hdiv> 
+              <hdiv> 
+              </hdiv> 
+             </hdiv> 
+            </hdiv></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.14253827311447032" class="field"> 
+           <td title="bits" class="bits">9:6</td> 
+           <td title="field name" class="fieldname">Src_sel</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"> 
+            <hdiv> 
+             <span style="font-size: 9; font-family: Calibri; ">To select the source on which measurement will be performed.</span> 
+             <span style="font-size: 9; font-family: Calibri; ">These act as a counter enable signals for a given timer.</span> 
+             <span style="font-size: 9; font-family: Calibri; ">If no source width is defined, then the timer will count the clock edges depending upon the prescaling value.</span> 
+             <hdiv> 
+              <hdiv> 
+              </hdiv> 
+             </hdiv> 
+            </hdiv></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this);" class="reg idsTemp disabletemplate" id="tab0.40955922282225443" data-meta-agni_lib="timer" data-meta-editable="false"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.2period"></a><font size="3" color="blue">1.2</font></td> 
+       <td title="reg name" class="name setreadonly">period</td> 
+       <td title="offset" class="offset setreadonly" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x8</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass setreadonly">count=2;</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass setreadonly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab0.36272540518615426"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">F1</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this);" class="reg idsTemp disabletemplate" id="tab0.2618484812058044" data-meta-agni_lib="timer" data-meta-editable="false"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.3result"></a><font size="3" color="blue">1.3</font></td> 
+       <td title="reg name" class="name setreadonly">result</td> 
+       <td title="offset" class="offset setreadonly" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x10</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass setreadonly">rtl.reg_enb=false;resetsignal=result_reset%d:0:sync:low;count=2;</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass setreadonly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab0.6361332322182577"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field"> 
+           <td title="bits" class="bits">31:0</td> 
+           <td title="field name" class="fieldname">data</td> 
+           <td title="software access" class="sw">ro</td> 
+           <td title="hardware access" class="hw">wo</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this);" class="reg idsTemp disabletemplate" id="tab0.10614358200962937" data-meta-agni_lib="timer" data-meta-editable="false"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.4status"></a><font size="3" color="blue">1.4</font></td> 
+       <td title="reg name" class="name setreadonly">status</td> 
+       <td title="offset" class="offset setreadonly" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x18</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass setreadonly">rtl.reg_enb=false;resetsignal=status_reset%d:0:sync:low;count=2;</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass setreadonly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab0.6632415161179381"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field"> 
+           <td title="bits" class="bits">0</td> 
+           <td title="field name" class="fieldname">overflow</td> 
+           <td title="software access" class="sw">r/w1c</td> 
+           <td title="hardware access" class="hw">wo</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.status=overflow;}</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.8461734243046645" class="field"> 
+           <td title="bits" class="bits">1</td> 
+           <td title="field name" class="fieldname">run_intr</td> 
+           <td title="software access" class="sw">r/w1c</td> 
+           <td title="hardware access" class="hw">wo</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.status=running;}</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.12131520104919136" class="field"> 
+           <td title="bits" class="bits">2</td> 
+           <td title="field name" class="fieldname">period_intr</td> 
+           <td title="software access" class="sw">r/w1c</td> 
+           <td title="hardware access" class="hw">wo</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.status=periodic;}</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.6616861929491248" class="field"> 
+           <td title="bits" class="bits">3</td> 
+           <td title="field name" class="fieldname">cfg_ch</td> 
+           <td title="software access" class="sw">r/w1c</td> 
+           <td title="hardware access" class="hw">wo</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.status=cfg;}</td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <table data-width="32" onclick="tabClick(this);" class="reg idsTemp disabletemplate" id="tab0.9547542762147997" data-meta-agni_lib="timer" data-meta-editable="false"> 
+     <tbody> 
+      <tr> 
+       <td class="header readOnly"><a name="1.5enable"></a><font size="3" color="blue">1.5</font></td> 
+       <td title="reg name" class="name setreadonly">enable</td> 
+       <td title="offset" class="offset setreadonly" colspan="2"></td> 
+       <td class="specImage"><img title="32 bits register" alt="Register" class="img_reg32"></td> 
+       <td class="address addCell readOnly"> 
+        <div class="splitVer setBorder" title="address"> 
+         <label class="label">address|</label> 
+         <label class="addrvalue">0x20</label> 
+        </div> 
+        <div class="splitVer" title="Default"> 
+         <label class="label">default |</label> 
+         <label class="defvalue">0x00000000</label> 
+        </div> </td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add properties" class="propclass setreadonly">rtl.reg_enb=false;count=2;</td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" title="add description here" class="desc descclass setreadonly"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="border"></td> 
+      </tr> 
+      <tr> 
+       <td colspan="6" class="fieldtd"> 
+        <table class="fields idsTemp" id="tab0.7903799643870443"> 
+         <tbody> 
+          <tr class="label"> 
+           <td class="ddregbits">bits<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblfieldname">name<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblsw">s/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lblhw">h/w<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldefault">default<span class="fas fa-sort sort sort-table"></span></td> 
+           <td class="lbldesc">description<span class="fas fa-sort sort sort-table"></span></td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field"> 
+           <td title="bits" class="bits">0</td> 
+           <td title="field name" class="fieldname">Over_intr_en</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">na</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.enable=overflow;}</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.041427258381466325" class="field"> 
+           <td title="bits" class="bits">1</td> 
+           <td title="field name" class="fieldname">Run_intr_en</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">na</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.enable=running;}</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.7646344973309213" class="field"> 
+           <td title="bits" class="bits">2</td> 
+           <td title="field name" class="fieldname">Period_intr_en</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">na</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.enable=periodic;}</td> 
+          </tr> 
+          <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="tab0.4659786533761733" class="field"> 
+           <td title="bits" class="bits">3</td> 
+           <td title="field name" class="fieldname">cfg</td> 
+           <td title="software access" class="sw">rw</td> 
+           <td title="hardware access" class="hw">na</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">{intr.enable=cfg;}</td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br>  
+   </div> 
+   <div id="param_main" style="display:none" oncontextmenu="maincontextcall(event);"> 
+    <div id="divyml"> 
+     <label id="lblymlname"></label> 
+     <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
+    </div> 
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
+   </div> 
+   <div id="seqdivcontainer" style="display:none"> 
+    <div id="divtoolbar" contenteditable="false"> 
+     <b class="spec_head">Sequences</b> 
+    </div> 
+    <br> 
+    <table class="seq idsTemp" id="0.8509505828241472" oncontextmenu="openseqmenu(event);"> 
+     <tbody> 
+      <tr> 
+       <td> 
+        <table id="0.6620227152357142" class="seqip idsTemp"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>sequence name</td> 
+           <td>ip</td> 
+           <td>description</td> 
+          </tr> 
+          <tr class="edited" id="seq0.4610260697228922"> 
+           <td class="seqname">seq_name<a name="seq_name"></a></td> 
+           <td title="to refresh external ref, please Click on the cell and press Tab" class="ip" onfocusout="load_ips(this);">Test201.idsng</td> 
+           <td class="seqdesc"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.3488088188339926" class="idsTemp arg"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>arguments</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.8462155816214082"> 
+           <td class="argname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqArgRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.7394102626839187" class="idsTemp const"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>constants</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.45813915897528956"> 
+           <td class="constname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqConstRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td> 
+        <table id="0.10727918338973574" class="idsTemp var"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td>variables</td> 
+           <td>value</td> 
+           <td>description</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.5385555037990902"> 
+           <td class="varname"></td> 
+           <td class="value"></td> 
+           <td class="seqdesc" onkeydown="insertSeqVarnameRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+      </tr> 
+      <tr> 
+       <td>  
+        <table id="0.6964442011364452" class="command idsTemp"> 
+         <tbody> 
+          <tr class="header readOnly"> 
+           <td class="seqcmd">command</td> 
+           <td>step</td> 
+           <td class="seqcmdval">value</td> 
+           <td class="seqcmddesc">description</td> 
+           <td class="seqcmdrefpath">refpath</td> 
+          </tr> 
+          <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="edited" id="seq0.605335834373649"> 
+           <td class="cmdname"></td> 
+           <td class="step">&nbsp;</td> 
+           <td class="seqvalue"></td> 
+           <td class="seqdesc"></td> 
+           <td class="refpath" onkeydown="insertSeqCmdRow(event,this);"></td> 
+          </tr> 
+         </tbody> 
+        </table></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br>  
+   </div> 
+   <div id="idsexcelcontainer" style="display:none" class="disable"> 
+    <div id="divtoolbar" contenteditable="false"> 
+     <b class="spec_head">IDS Register Specification</b> 
+     <button onclick="showTemplate()">Open IDS Template</button> 
+    </div> 
+    <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);" class="spreadsheetcon"></div> 
+    <div id="backhidder" style="z-index: -1;"></div> 
+    <div id="exceltemplate" style="display: none;"> 
+     <a onclick="hidetemplate()" title="close template window" id="ahidetemp">X</a> 
+     <table contenteditable="false"> 
+      <tbody> 
+       <tr style="background-color: #b9c4cc"> 
+        <th></th> 
+        <th>User Header</th> 
+        <th>IDS Identifier</th> 
+       </tr> 
+       <tr> 
+        <td> 
+         <!--<a onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a>--></td> 
+        <td class="editable">chip</td> 
+        <td>$chip_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">block</td> 
+        <td>$block_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">register</td> 
+        <td>$reg_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">field</td> 
+        <td>$field_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">sw access</td> 
+        <td>$field_sw_access</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">hw access</td> 
+        <td>$field_hw_access</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">field default</td> 
+        <td>$field_default</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bits</td> 
+        <td>$field_offset</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">description</td> 
+        <td>$desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">properties</td> 
+        <td>$prop</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">section</td> 
+        <td>$section_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">offset</td> 
+        <td>$offset</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">size</td> 
+        <td>$size</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">width</td> 
+        <td>$reg_width</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">ref</td> 
+        <td>$ref</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">refpath</td> 
+        <td>$refpath</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define name</td> 
+        <td>$define_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define value</td> 
+        <td>$define_value</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">define description</td> 
+        <td>$define_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">private</td> 
+        <td>$private</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum name</td> 
+        <td>$enum_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum value</td> 
+        <td>$enum_value</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">mnemonic name</td> 
+        <td>$mnemonic_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">enum desc</td> 
+        <td>$enum_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">signal name</td> 
+        <td>$signal_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">port type</td> 
+        <td>$port_type</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">signal desc</td> 
+        <td>$signal_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus domain name</td> 
+        <td>$bus_domain_name</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">address unit</td> 
+        <td>$address_unit</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus description</td> 
+        <td>$bus_desc</td> 
+       </tr> 
+       <tr> 
+        <td></td> 
+        <td class="editable">bus</td> 
+        <td>$bus</td> 
+       </tr> 
+      </tbody> 
+     </table> 
+    </div> 
+   </div> 
+   <div id="agni_lib_static_data" style="display:none"> 
+    <table class="agni_lib_gpio"> 
+     <tbody> 
+      <tr> 
+       <td class="name">gpio_init_out[out_pin]</td> 
+       <td class="name">gpio_init_out[ext_src_sel]</td> 
+       <td class="name">gpio_init_out[ext_src_enb]</td> 
+       <td class="name">gpio_init_in_intr_mask[inp_pin]</td> 
+       <td class="name">gpio_init_in_intr_mask[intr_enb]</td> 
+       <td class="name">gpio_init_in_intr_mask[interrupt_detection]</td> 
+       <td class="name">gpio_init_in_intr_enb[inp_pin]</td> 
+       <td class="name">gpio_init_in_intr_enb[intr_enb]</td> 
+       <td class="name">gpio_init_in_intr_enb[interrupt_detection]</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table class="agni_lib_timer"> 
+     <tbody> 
+      <tr> 
+       <td class="name">timer_reset_seq[reset_val]</td> 
+       <td class="name">timer_running_mode[timer_src_sel]</td> 
+       <td class="name">timer_running_mode[timer_prescal]</td> 
+       <td class="name">timer_running_mode[timer_event_sel]</td> 
+       <td class="name">timer_periodic_mode[timer_src_sel]</td> 
+       <td class="name">timer_periodic_mode[timer_prescal]</td> 
+       <td class="name">timer_periodic_mode[timer_event_sel]</td> 
+       <td class="name">timer_default_event[timer_src_sel]</td> 
+       <td class="name">timer_default_event[timer_en]</td> 
+       <td class="name">timer_default_event[timer_mode]</td> 
+       <td class="name">timer_default_event[timer_event_sel]</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table class="agni_lib_i2cm"> 
+     <tbody> 
+      <tr> 
+       <td class="name">i2cRead[slave_addr]</td> 
+       <td class="name">i2cRead[reg_addr]</td> 
+       <td class="name">i2cWrite[slave_addr]</td> 
+       <td class="name">i2cWrite[reg_addr]</td> 
+       <td class="name">i2cWrite[data_write]</td> 
+       <td class="name">i2cWrite[wr_intr_enb]</td> 
+       <td class="name">i2c_reset[resetVal]</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table class="agni_lib_pic"> 
+     <tbody> 
+      <tr> 
+       <td class="name">pic_non_vectored_intr_enb[intr_src]</td> 
+       <td class="name">pic_non_vectored_intr_enb[intr_enb]</td> 
+       <td class="name">pic_non_vectored_intr_enb[intr_priority]</td> 
+       <td class="name">pic_non_vectored_intr_enb[cfg_detection]</td> 
+       <td class="name">pic_non_vectored_intr_enb[cfg_phase]</td> 
+       <td class="name">pic_non_vectored_intr_mask[intr_src]</td> 
+       <td class="name">pic_non_vectored_intr_mask[intr_enb]</td> 
+       <td class="name">pic_non_vectored_intr_mask[intr_priority]</td> 
+       <td class="name">pic_non_vectored_intr_mask[cfg_phase]</td> 
+       <td class="name">pic_vectored_intr_mask[intr_src]</td> 
+       <td class="name">pic_vectored_intr_mask[intr_enb]</td> 
+       <td class="name">pic_vectored_intr_mask[intr_priority]</td> 
+       <td class="name">pic_vectored_intr_mask[intr_vect_addr]</td> 
+       <td class="name">pic_vectored_intr_mask[cfg_detection]</td> 
+       <td class="name">pic_vectored_intr_mask[cfg_phase]</td> 
+       <td class="name">pic_reset[reset_val]</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+   </div>  
+   <div id="idsng_config" data-id="config0.5586944404464024" style="display:none">
+     &lt;settings&gt;&lt;company&gt;Agnisys, Inc.&lt;/company&gt;&lt;copyright&gt;***** Copyright 2018 All Rights Reserved. *****&lt;/copyright&gt;&lt;log&gt;false&lt;/log&gt;&lt;cmdpanel&gt;&lt;/cmdpanel&gt;&lt;output_dir&gt;idsng&lt;/output_dir&gt;&lt;outputs&gt;&lt;yaml&gt;false&lt;/yaml&gt;&lt;json&gt;false&lt;/json&gt;&lt;reg2d&gt;false&lt;/reg2d&gt;&lt;mem_dump&gt;false&lt;/mem_dump&gt;&lt;vhdheader&gt;false&lt;/vhdheader&gt;&lt;verilog&gt;false&lt;/verilog&gt;&lt;verilog2001&gt;true&lt;/verilog2001&gt;&lt;vheader&gt;false&lt;/vheader&gt;&lt;ivs&gt;false&lt;/ivs&gt;&lt;arv&gt;false&lt;/arv&gt;&lt;formal&gt;false&lt;/formal&gt;&lt;special_reg&gt;&lt;/special_reg&gt;&lt;cmsis&gt;false&lt;/cmsis&gt;&lt;uvm&gt;true&lt;/uvm&gt;&lt;perl&gt;false&lt;/perl&gt;&lt;python&gt;false&lt;/python&gt;&lt;cpp&gt;false&lt;/cpp&gt;&lt;pdf&gt;false&lt;/pdf&gt;&lt;ovm&gt;false&lt;/ovm&gt;&lt;vmm&gt;false&lt;/vmm&gt;&lt;iss_firmware&gt;false&lt;/iss_firmware&gt;&lt;iss_csv&gt;false&lt;/iss_csv&gt;&lt;iss_html&gt;false&lt;/iss_html&gt;&lt;iss_sv&gt;false&lt;/iss_sv&gt;&lt;iss_uvm&gt;false&lt;/iss_uvm&gt;&lt;iss_matlab&gt;false&lt;/iss_matlab&gt;&lt;iss_infact&gt;false&lt;/iss_infact&gt;&lt;iss_perspec&gt;false&lt;/iss_perspec&gt;&lt;iss_graph&gt;false&lt;/iss_graph&gt;&lt;xrsl&gt;false&lt;/xrsl&gt;&lt;word&gt;false&lt;/word&gt;&lt;erm&gt;false&lt;/erm&gt;&lt;ivs&gt;false&lt;/ivs&gt;&lt;svheader&gt;false&lt;/svheader&gt;&lt;svg&gt;false&lt;/svg&gt;&lt;customcsv&gt;false&lt;/customcsv&gt;&lt;csharp&gt;false&lt;/csharp&gt;&lt;sv&gt;false&lt;/sv&gt;&lt;specta_av&gt;false&lt;/specta_av&gt;&lt;/outputs&gt;&lt;rtl_wire&gt;true&lt;/rtl_wire&gt;&lt;limit_toc&gt;&lt;/limit_toc&gt;&lt;lowpower&gt;false&lt;/lowpower&gt;&lt;auto_sequence&gt;&lt;/auto_sequence&gt;&lt;interrupt&gt;&lt;/interrupt&gt;&lt;mbd&gt;&lt;/mbd&gt;&lt;arv_assertion&gt;&lt;/arv_assertion&gt;&lt;memtechmapping&gt;false&lt;/memtechmapping&gt;&lt;sv_w_intf&gt;&lt;/sv_w_intf&gt;&lt;sv_wo_intf&gt;&lt;/sv_wo_intf&gt;&lt;uvm_env&gt;&lt;/uvm_env&gt;&lt;hdlpath&gt;false&lt;/hdlpath&gt;&lt;coverage&gt;false&lt;/coverage&gt;&lt;arv_coverage&gt;false&lt;/arv_coverage&gt;&lt;illegalbins&gt;false&lt;/illegalbins&gt;&lt;arv_constraint&gt;false&lt;/arv_constraint&gt;&lt;bus&gt;proprietary&lt;/bus&gt;&lt;reg_width&gt;32&lt;/reg_width&gt;&lt;bus_width&gt;32&lt;/bus_width&gt;&lt;unit&gt;8&lt;/unit&gt;&lt;block_size&gt;&lt;/block_size&gt;&lt;chip_size&gt;&lt;/chip_size&gt;&lt;board_size&gt;&lt;/board_size&gt;&lt;c_type&gt;&lt;/c_type&gt;&lt;big_endian&gt;false&lt;/big_endian&gt;&lt;little_endian&gt;false&lt;/little_endian&gt;&lt;template_dir&gt;C:\Users\Agnisys71\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet&lt;/template_dir&gt;&lt;template_dir_idsng&gt;C:\Users\Agnisys71\Documents\GitHub\IDS-NextGen\IDSNextGen\ids_templates\datasheet&lt;/template_dir_idsng&gt;&lt;check_only&gt;true&lt;/check_only&gt;&lt;preserve_names&gt;true&lt;/preserve_names&gt;&lt;addr_sort&gt;false&lt;/addr_sort&gt;&lt;seqconfig&gt;&lt;output&gt;&lt;seq_outputs&gt;&lt;firmware&gt;false&lt;multioutput&gt;false&lt;/multioutput&gt;&lt;/firmware&gt;&lt;csv&gt;false&lt;multioutput&gt;false&lt;/multioutput&gt;&lt;/csv&gt;&lt;html&gt;false&lt;multioutput&gt;false&lt;/multioutput&gt;&lt;/html&gt;&lt;sv&gt;false&lt;multioutput&gt;false&lt;/multioutput&gt;&lt;/sv&gt;&lt;uvm&gt;false&lt;multioutput&gt;false&lt;/multioutput&gt;&lt;/uvm&gt;&lt;matlab&gt;false&lt;multioutput&gt;false&lt;/multioutput&gt;&lt;/matlab&gt;&lt;iss_infact&gt;false&lt;/iss_infact&gt;&lt;iss_perspec&gt;false&lt;/iss_perspec&gt;&lt;iss_graph&gt;false&lt;/iss_graph&gt;&lt;/seq_outputs&gt;&lt;uvm&gt;&lt;datatype&gt;&lt;inlinefunction&gt;int&lt;/inlinefunction&gt;&lt;arguments&gt;int&lt;/arguments&gt;&lt;constant&gt;int&lt;/constant&gt;&lt;variable&gt;int&lt;/variable&gt;&lt;returntype&gt;int&lt;/returntype&gt;&lt;/datatype&gt;&lt;regmodel oid="0"&gt;default&lt;/regmodel&gt;&lt;write oid="0"&gt;write(status, %d, .parent(this))&lt;/write&gt;&lt;read oid="0"&gt;read(status, %lhs, .parent(this))&lt;/read&gt;&lt;timemultiplier&gt;100&lt;/timemultiplier&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;consolidated&gt;false&lt;/consolidated&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/uvm&gt;&lt;sv&gt;&lt;datatype&gt;&lt;inlinefunction&gt;int&lt;/inlinefunction&gt;&lt;arguments&gt;int&lt;/arguments&gt;&lt;constant&gt;int&lt;/constant&gt;&lt;variable&gt;int&lt;/variable&gt;&lt;/datatype&gt;&lt;bus oid="0"&gt;default&lt;/bus&gt;&lt;write oid="0"&gt;write_mirror(%a, %d, 0, 0)&lt;/write&gt;&lt;read oid="0"&gt;read_mirror(%a)&lt;/read&gt;&lt;timeunit1&gt;1&lt;/timeunit1&gt;&lt;timeunit2&gt;ns&lt;/timeunit2&gt;&lt;timeprecision1&gt;1&lt;/timeprecision1&gt;&lt;timeprecision2&gt;ns&lt;/timeprecision2&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;consolidated&gt;false&lt;/consolidated&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/sv&gt;&lt;firmware&gt;&lt;datatype&gt;&lt;inlinefunction&gt;int&lt;/inlinefunction&gt;&lt;arguments&gt;int&lt;/arguments&gt;&lt;constant&gt;int&lt;/constant&gt;&lt;variable&gt;int&lt;/variable&gt;&lt;returntype&gt;int&lt;/returntype&gt;&lt;/datatype&gt;&lt;templatename oid="0"&gt;default&lt;/templatename&gt;&lt;write oid="0"&gt;REG_WRITE(%a,%d)&lt;/write&gt;&lt;read oid="0"&gt;REG_READ(%a)&lt;/read&gt;&lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt;&lt;fieldwrite oid="0"&gt;FIELD_WRITE(%a,%d,%m,%lsb)&lt;/fieldwrite&gt;&lt;fieldread oid="0"&gt;FIELD_READ(%a,%m,%lsb)&lt;/fieldread&gt;&lt;timemultiplier&gt;100&lt;/timemultiplier&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;consolidated&gt;false&lt;/consolidated&gt;&lt;consolidated_r&gt;false&lt;/consolidated_r&gt;&lt;guardband&gt;false&lt;/guardband&gt;&lt;structure&gt;0&lt;/structure&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/firmware&gt;&lt;matlab&gt;&lt;datatype&gt;&lt;inlinefunction&gt;integer&lt;/inlinefunction&gt;&lt;arguments&gt;integer&lt;/arguments&gt;&lt;constant&gt;integer&lt;/constant&gt;&lt;variable&gt;integer&lt;/variable&gt;&lt;/datatype&gt;&lt;templatename oid="0"&gt;default&lt;/templatename&gt;&lt;write oid="0"&gt;REG_WRITE(memory_name,%a,%d)&lt;/write&gt;&lt;read oid="0"&gt;REG_READ(memory_name,%a)&lt;/read&gt;&lt;fieldtemplatename oid="0"&gt;default&lt;/fieldtemplatename&gt;&lt;fieldwrite oid="0"&gt;FIELD_WRITE(memory_name,%a,%d,%msb,%lsb)&lt;/fieldwrite&gt;&lt;fieldread oid="0"&gt;FIELD_READ(memory_name,%a,%msb,%lsb)&lt;/fieldread&gt;&lt;timeunit1&gt;1&lt;/timeunit1&gt;&lt;timeunit2&gt;ns&lt;/timeunit2&gt;&lt;timeprecision1&gt;1&lt;/timeprecision1&gt;&lt;timeprecision2&gt;ns&lt;/timeprecision2&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;mout&gt;&lt;/mout&gt;&lt;/matlab&gt;&lt;csv&gt;&lt;commands&gt;&lt;isscmd oid="0"&gt;call&lt;/isscmd&gt;&lt;cmd oid="0"&gt;CALL&lt;/cmd&gt;&lt;isscmd oid="1"&gt;wait&lt;/isscmd&gt;&lt;cmd oid="1"&gt;WAIT&lt;/cmd&gt;&lt;isscmd oid="2"&gt;write_1_clr&lt;/isscmd&gt;&lt;cmd oid="2"&gt;WRITE_CLR&lt;/cmd&gt;&lt;isscmd oid="3"&gt;write_1_set&lt;/isscmd&gt;&lt;cmd oid="3"&gt;WRITE_SET&lt;/cmd&gt;&lt;isscmd oid="4"&gt;write&lt;/isscmd&gt;&lt;cmd oid="4"&gt;WRITE&lt;/cmd&gt;&lt;isscmd oid="5"&gt;switch&lt;/isscmd&gt;&lt;cmd oid="5"&gt;SWITCH&lt;/cmd&gt;&lt;/commands&gt;&lt;headers&gt;&lt;issheader oid="0"&gt;address&lt;/issheader&gt;&lt;header oid="0"&gt;address&lt;/header&gt;&lt;issheader oid="1"&gt;description&lt;/issheader&gt;&lt;header oid="1"&gt;description&lt;/header&gt;&lt;issheader oid="2"&gt;step&lt;/issheader&gt;&lt;header oid="2"&gt;step&lt;/header&gt;&lt;issheader oid="3"&gt;value&lt;/issheader&gt;&lt;header oid="3"&gt;value&lt;/header&gt;&lt;issheader oid="4"&gt;command&lt;/issheader&gt;&lt;header oid="4"&gt;command&lt;/header&gt;&lt;/headers&gt;&lt;timemultiplier&gt;100&lt;/timemultiplier&gt;&lt;maxnesting&gt;1&lt;/maxnesting&gt;&lt;nameformat&gt;%s&lt;/nameformat&gt;&lt;/csv&gt;&lt;/output&gt;&lt;/seqconfig&gt;&lt;/settings&gt; 
+   </div> 
+  </div> 
+ </body>
+</html>
