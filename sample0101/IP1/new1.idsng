@@ -1,11 +1,11 @@
 <html data-ids-version=" 7.8.2.8-soce-beta ">
- <head> 
+ <head></head> 
+ <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody">
+   &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ======= &gt;&gt;&gt;&gt;&gt;&gt;&gt; a543b97200c2820aa1eed4d46b70dbaf678e69a3 
   <meta charset="UTF-8"> 
   <title>
 		Agnisys Register Spec
-	</title>          
- </head> 
- <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
+	</title> 
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
    <div id="abstract"> 
     <label id="lblcompact"></label> 
@@ -14,7 +14,7 @@
     <label id="datacenter3"></label> 
     <label id="datacenter4"></label> 
    </div> 
-   <div id="regdivcontainer" contenteditable="true" style="display:block"> 
+   <div id="regdivcontainer" contenteditable="true" style="display:block">
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
     </div> 
@@ -77,11 +77,11 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname">Field_name_By_Vishal</td> 
-           <td title="software access" class="sw">rw</td> 
-           <td title="hardware access" class="hw">rw</td> 
+           <td title="field name" class="fieldname">f1</td> 
+           <td title="software access" class="sw">ro</td> 
+           <td title="hardware access" class="hw">ro</td> 
            <td title="default" class="default">0</td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">new description</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">default..</td> 
           </tr> 
          </tbody> 
         </table></td> 
@@ -94,14 +94,22 @@
     <br> 
     <br> 
     <br> 
-    <br>  
+    <br> 
+    <div id="regmenu" class="idsmenu"> 
+     <a onclick="insertcommonreg();">Insert Row Below</a> 
+     <a onclick="copyfieldrow()">Copy Row</a> 
+     <a onclick="cutfieldrow()">Cut Row</a> 
+     <a onclick="pastefieldrow();">Paste</a> 
+     <a onclick="deletefieldrow();">Delete Row</a> 
+     <a id="aReloadReg">Refresh</a> 
+    </div>
    </div> 
    <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
     <div id="divyml"> 
      <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
-    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div> 
    </div> 
    <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -234,7 +242,7 @@
      </tbody> 
     </table> 
     <br> 
-    <br>  
+    <br> 
    </div> 
    <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar" contenteditable="false"> 
@@ -411,7 +419,7 @@
       </tbody> 
      </table> 
     </div> 
-   </div>  
-  </div> 
+   </div> 
+  </div>  
  </body>
 </html>
