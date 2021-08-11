@@ -1,10 +1,9 @@
-<!doctype html>
-<html>
+<html data-ids-version=" 7.16.0.53 ">
  <head> 
   <meta charset="UTF-8"> 
   <title>
 		Agnisys Register Spec
-	</title> 
+	</title>          
  </head> 
  <body class="mainBody" spellcheck="true" onclick="mainbodyclick()" contenteditable="false" id="idsBody"> 
   <div class="maindiv" id="maindivcontainer" oncontextmenu="maindivcontextcall(event);"> 
@@ -18,8 +17,8 @@
    <div id="regdivcontainer" contenteditable="true" style="display:block"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
-    </div>
-    <br>
+    </div> 
+    <br> 
     <table class="block idsTemp" onclick="tabClick(this)" id="tab0.24928757907241395"> 
      <tbody> 
       <tr> 
@@ -36,8 +35,8 @@
        <td colspan="5" title="add description here" class="desc descclass"></td> 
       </tr> 
      </tbody> 
-    </table>
-    <br>
+    </table> 
+    <br> 
     <table data-width="32" onclick="tabClick(this);" class="reg idsTemp" id="tab0.8379646748125559"> 
      <tbody> 
       <tr> 
@@ -78,38 +77,37 @@
           </tr> 
           <tr onkeyup="setCurrRow(this);" onclick="setCurrRow(this);" id="field" class="field edited"> 
            <td title="bits" class="bits">31:0</td> 
-           <td title="field name" class="fieldname"><br></td> 
-           <td title="software access" class="sw"><br></td> 
-           <td title="hardware access" class="hw"></td> 
-           <td title="default" class="default"><br></td> 
-           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);"></td> 
+           <td title="field name" class="fieldname">f1</td> 
+           <td title="software access" class="sw">ro</td> 
+           <td title="hardware access" class="hw">ro</td> 
+           <td title="default" class="default">0</td> 
+           <td title="description" class="desc fielddesc" onkeydown="insertNewRow(event,this);">default..</td> 
           </tr> 
          </tbody> 
         </table></td> 
       </tr> 
      </tbody> 
     </table> 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br>  
    </div> 
    <div id="param_main" style="display:none;" oncontextmenu="maincontextcall(event);"> 
-    <div id="divyml">
-     <label id="lblymlname"></label>
+    <div id="divyml"> 
+     <label id="lblymlname"></label> 
      <a title="open YAML file" href="#" onclick="openfile(this);" id="lblyml"></a> 
     </div> 
-    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"> 
-    </div> 
+    <div id="paramcontainer" contenteditable="false" oncontextmenu="paramcontainercontextcall(event);"></div>  
    </div> 
    <div id="seqdivcontainer" style="display:none;"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">Sequences</b> 
     </div> 
-    <br>
+    <br> 
     <table class="seq idsTemp" id="0.5510251404444474" oncontextmenu="openseqmenu(event);"> 
      <tbody> 
       <tr> 
@@ -234,231 +232,16 @@
         </table></td> 
       </tr> 
      </tbody> 
-    </table>
-    <br>
-    <br>
+    </table> 
+    <br> 
+    <br>  
    </div> 
    <div id="idsexcelcontainer" style="display:none" class="disable"> 
     <div id="divtoolbar" contenteditable="false"> 
      <b class="spec_head">IDS Register Specification</b> 
      <button onclick="showTemplate()">Open IDS Template</button> 
     </div> 
-    <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);" class="spreadsheetcon"> 
-     <table class="exeltable ui-selectable" contenteditable="false" id="selectable_del"> 
-      <tbody class="ui-selectee ui-selected"> 
-       <tr class="rowheader ui-selectee"> 
-        <td class="ui-selectee"></td> 
-        <td class="ui-selectee">A</td> 
-        <td class="ui-selectee">B</td> 
-        <td class="ui-selectee">D</td> 
-        <td class="ui-selectee">E</td> 
-        <td class="ui-selectee">F</td> 
-        <td class="ui-selectee">G</td> 
-        <td class="ui-selectee">H</td> 
-        <td class="ui-selectee">I</td> 
-        <td class="ui-selectee">J</td> 
-        <td class="ui-selectee">K</td> 
-        <td class="ui-selectee">L</td> 
-       </tr> 
-       <tr id="sep_row1" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">1</td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">chip</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">block</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">register</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">width</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">sw access</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">hw access</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">field default</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">bits</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">description</b></td> 
-        <td tabindex="0" class="ui-selectee"><b class="ui-selectee">properties</b></td> 
-       </tr> 
-       <tr id="sep_row2" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">2</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row3" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">3</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row4" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">4</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row5" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">5</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row6" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">6</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row7" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">7</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row8" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">8</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row9" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">9</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row10" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">10</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row11" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">11</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row12" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">12</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row13" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">13</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-       <tr id="sep_row14" class="edited ui-selectee"> 
-        <td class="leftheader ui-selectee">14</td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-        <td tabindex="0" class="ui-selectee"></td> 
-       </tr> 
-      </tbody> 
-     </table> 
-    </div> 
+    <div id="spreadsheetcontainer" oncontextmenu="openexcelmenu(event);" class="spreadsheetcon"></div> 
     <div id="backhidder" style="z-index: -1;"></div> 
     <div id="exceltemplate" style="display: none;"> 
      <a onclick="hidetemplate()" title="close template window" id="ahidetemp">X</a> 
@@ -470,7 +253,7 @@
         <th>IDS Identifier</th> 
        </tr> 
        <tr> 
-        <td>
+        <td> 
          <!--<a onclick="addtemprow(this);" title="add row">+</a><span> </span><a title="delete row" href="#" onclick="deletetemprow(this);">x</a>--></td> 
         <td class="editable">chip</td> 
         <td>$chip_name</td> 
@@ -628,7 +411,7 @@
       </tbody> 
      </table> 
     </div> 
-   </div> 
-  </div>  
+   </div>  
+  </div> 
  </body>
 </html>
