@@ -57,7 +57,7 @@
        <td colspan="5" title="add properties" class="propclass"></td> 
       </tr> 
       <tr> 
-       <td colspan="5" title="add description here" class="desc descclass">fnelkrngoflenogie oinfoiendolrf&nbsp;</td> 
+       <td colspan="5" title="add description here" class="desc descclass">fnelkrngoflenogie oinfoiendolrf &nbsp;c ms cjsdnkcj</td> 
       </tr> 
      </tbody> 
     </table> 
@@ -169,7 +169,7 @@
            </tr> 
            <tr onkeydown="setCurrRow(this)" onclick="setCurrRow(this)" class="field edited" oncontextmenu="openregmenu(event)" id="field0.332061562102836"> 
             <td class="bits" title="bits">1</td> 
-            <td class="fieldname" title="field name">ERROR1</td> 
+            <td class="fieldname" title="field name">ERROR12222</td> 
             <td class="sw thirdCell" title="software access">ro</td> 
             <td class="hw thirdCell" title="hardware access">rw</td> 
             <td title="default" class="default">0</td> 
